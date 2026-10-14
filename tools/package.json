@@ -1,0 +1,16 @@
+{
+  "name": "kayanos-guide-tools",
+  "private": true,
+  "type": "module",
+  "description": "Builds the KayanOS guide as PDF (XeLaTeX), DOCX and an HTML site from the same LaTeX sources.",
+  "scripts": {
+    "build": "node build.mjs",
+    "html": "node build.mjs --html-only",
+    "dev": "node serve-html.mjs",
+    "test": "node --test guide.test.mjs"
+  },
+  "dependencies": {
+    "@napi-rs/canvas": "0.1.65",
+    "docx": "9.5.1"
+  }
+}

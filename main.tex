@@ -1,0 +1,23 @@
+% =====================================================================
+%  دليل KayanOS — الملف الرئيسي
+%  يجمع الفصول فقط. التصميم في preamble.tex، والمحتوى في chapters/.
+%  لإضافة تطبيق: أنشئ chapters/NN-name.tex وأضف سطر \input له هنا.
+% =====================================================================
+\documentclass[11pt,oneside,openany]{report}
+\input{preamble}
+
+\begin{document}
+
+\makecover{\en{KayanOS} · دليل المستخدم}
+  {دليل نظام \kos}
+  {من فهم احتياجات العمل إلى التطبيق خطوة بخطوة}
+  {تشرين الأول 2026}{\en{0.3} — مسودة}{\en{RightCode}}
+
+\tableofcontents
+
+% ---- الفصول (بترتيب رحلة التأسيس) ----
+\input{chapters/01-introduction}
+\input{chapters/02-organization-setup}
+\input{chapters/03-hr}
+
+\end{document}

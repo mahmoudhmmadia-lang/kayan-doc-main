@@ -1,0 +1,192 @@
+% Chapter 1 — Meet KayanOS through your own work. Under review.
+\chapter{Meet KayanOS: from scattered work to clear work}
+\label{ch:intro}
+
+\section{What is KayanOS, and why might you need it?}
+\label{sec:intro-minute}
+Imagine employee names kept in a file, work requests in chat threads, and due dates
+in the manager's notebook. When a customer asks about a request, you have to ask
+several people to find out who is handling it and where it stopped. As the team
+grows, this searching becomes part of the daily work.
+
+\textbf{\kos} is a workspace that brings together the management of employees, tasks,
+projects, requests and files. It helps your team record work, name the person
+responsible for it, follow its status, and go back to its information according
+to each person's permissions.
+
+\begin{table}[H]
+\centering
+\caption{From a daily problem to clear use}
+\label{tab:intro-minute}
+\rcZebra
+\begin{tabularx}{\linewidth}{Y Y Y}
+\rcHeaderRow
+\thh{The problem at work} & \thh{What KayanOS offers} & \thh{The practical benefit}\\
+We do not know who is handling the work or when it is due. & Tasks with an owner, a due date and a status. & Open the task to see who is working on it and what is left.\\
+Employee and job data are scattered. & Members, positions and assignments in HR. & You know who holds each job and where they work.\\
+Requests arrive in different ways and miss information. & Forms, requests and review flows set up to fit the work. & You collect the required information and follow the request in a known place.\\
+Work documents are hard to find. & A files library and attachments linked to the work. & The team goes back to the document it needs.\\
+The manager needs a picture of how work is going. & Statuses, projects and dashboards, once they are set up. & The manager reviews the recorded work and decides what needs follow-up.\\
+\end{tabularx}
+\end{table}
+
+\textbf{What your organization needs for success:} define responsibilities, enter
+correct data, and agree on what “done” means. KayanOS lets you organize these things,
+and the team keeps the information up to date while working so that follow-up is useful.
+
+\clearpage
+\section{A simple example: a working day at Horizon}
+\label{sec:intro-entity}
+Throughout this guide we use a fictional company called \textbf{Horizon Services Co.},
+with a head office in Damascus and a branch in Aleppo. Sarah runs Human Resources,
+and Omar is an Operations Coordinator at the Aleppo Branch.
+
+A request arrives to prepare an office for a new employee. \textbf{Before the work is
+organized}, the request may stay in a chat, and the manager asks more than once: who
+is preparing the office? When will it be done? Where is the purchase invoice?
+
+\textbf{With KayanOS}, the team can work like this, once the right tools are set up:
+\begin{enumerate}
+  \item The request and its information are recorded, so it has one place that all authorized people go back to.
+  \item The manager sets out the work required from Omar, and its due date, in a clear task.
+  \item Omar updates the task status and adds the result or the required document.
+  \item The manager opens the work to review the result and follow what is not finished yet.
+\end{enumerate}
+This is an example of a way to organize work. Creating the request does not produce
+the other steps automatically; any automatic move needs to be set up in advance to
+fit your organization.
+
+\section{What will you use?}
+\begin{table}[H]
+\centering
+\caption{Start according to your responsibility}
+\label{tab:intro-roles}
+\rcZebra
+\begin{tabularx}{\linewidth}{R{3.4cm} Y Y}
+\rcHeaderRow
+\thh{Your role at work} & \thh{What you want to achieve} & \thh{Where do you start?}\\
+Business owner or manager & Understand what the system offers and choose the first work to organize. & This chapter, then a small example in one department.\\
+System setup administrator & Prepare the organization, the team accounts and the departments. & Chapter~\ref{ch:org-setup}.\\
+HR officer & Organize employees, working hours, leaves and payroll. & Chapter~\ref{ch:hr}, after the team is set up.\\
+Employee & Reach and follow their own work. & The sign-in steps below; no need to create a new organization.\\
+\end{tabularx}
+\end{table}
+
+\textbf{Choose a small start:} at Horizon we start with two employees, two jobs and one
+work schedule. We check the result, then add the rest of the team. You do not need to
+turn on every app on the first day.
+
+\clearpage
+\section{First sign-in: where do you find your work?}
+\label{sec:intro-app-map}
+\textbf{Before you start:} ask your organization's administrator for its address and how
+you sign in. The address looks like hzn.kayanos.app in our example; use your
+organization's real address. If you are setting up the organization for the first
+time, go to Chapter~\ref{ch:org-setup}.
+
+\begin{enumerate}
+  \item Open the organization's address in your browser. Choose the sign-in method your
+        administrator prepared for you: email, phone, or employee ID, then enter your sign-in details.
+  \item After signing in, make sure you are in the right organization before entering any data.
+  \item Open the “App launcher” from the home page, and choose “HR” for our exercise.
+  \item Open “Workforce”, then “Members”. This is the list of employees, not the page of one employee.
+  \item Open an employee's name to see their details. To go back, choose the page or app
+        name in the navigation path at the top of the screen. You can also use search to find work or a person you have access to.
+\end{enumerate}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{figures/screens/ch01-apps-directory.png}
+\caption{Choose the app that serves your work from the App launcher}
+\label{fig:intro-apps-directory}
+\end{figure}
+
+\textbf{Check:} you can reach the list you want and open the details of one of the items
+you are allowed to see. If the app or the edit button does not appear, ask your system
+administrator to review your permissions; your list may differ from a colleague's.
+
+\clearpage
+\section{Understand the screen names through one example}
+\label{sec:intro-concepts}
+We want the system to know that Sarah works as HR Manager in Damascus.
+These are the names you will meet, and what each one means in this example:
+
+\begin{table}[H]
+\centering
+\caption{Work language and its names in KayanOS}
+\label{tab:intro-terms}
+\rcZebra
+\begin{tabularx}{\linewidth}{R{3.4cm} Y}
+\rcHeaderRow
+\thh{Screen name} & \thh{What it means, simply}\\
+Organization & Horizon's workspace and its team accounts.\\
+Member & The person who works with us: Sarah Al-Khatib.\\
+Node (organizational unit) & The department or division: Human Resources.\\
+Location & The place of work: the head office in Damascus.\\
+Position & The job: HR Manager.\\
+Assignment & Recording that Sarah is the one who holds this job during her time at work.\\
+Role and permissions & What Sarah is allowed to see or do, such as viewing employees or editing their data.\\
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.65cm]
+  \node[entity] (asg) {Assigning Sarah\\to her job};
+  \node[entity,below right=0.7cm and 0.4cm of asg] (mem) {Sarah Al-Khatib\\Member};
+  \node[entity,below left=0.7cm and 0.4cm of asg] (pos) {HR Manager\\Position};
+  \node[entityOpt,below=of pos] (node) {Human Resources unit};
+  \draw[dependsOn] (asg.south) -- ++(0,-0.3) -| (mem.north);
+  \draw[dependsOn] (asg.south) -- ++(0,-0.3) -| (pos.north);
+  \draw[dependsOnOpt] (pos.south) -- (node.north);
+\end{tikzpicture}
+\rclegend
+\caption{Create the person's data and the job, then link them with an assignment}
+\label{fig:intro-structure}
+\end{figure}
+Read the tree from top to bottom: the assignment needs an existing person and an existing job.
+Linking the job to its department is technically optional, but it helps you know the employees of each department.
+
+\clearpage
+\section{What do you choose for each kind of work?}
+\begin{table}[H]
+\centering
+\caption{Choose the app based on what you want to achieve}
+\label{tab:intro-app-map}
+\rcZebra
+\begin{tabularx}{\linewidth}{Y Y}
+\rcHeaderRow
+\thh{I want to...} & \thh{I start from...}\\
+Know the employees and their jobs, and review their working hours. & HR.\\
+Give work to a person and follow its progress. & Tasks.\\
+Organize larger work that has a plan and linked pieces of work. & Projects.\\
+Submit a request, or review a request waiting for my decision. & The requests or approvals available in the organization.\\
+Arrange an appointment, or go back to a file or a conversation. & Calendar, the files library, or the communication tools.\\
+Prepare a form specific to the organization's work. & Builder, handled by an authorized administrator.\\
+\end{tabularx}
+\end{table}
+
+\section{How do you move from understanding to running?}
+\label{sec:intro-how-to-read}
+The next chapter guides the setup administrator to record a small team. The HR chapter
+then explains how to set its working hours and review them. Chapters on tasks and
+projects will be added to this guide later.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.4cm,stepBox/.append style={minimum width=6cm,text width=5.6cm,minimum height=0.7cm,font=\small\bfseries}]
+  \node[stepBox] (s1) {Choose work\\to organize};
+  \node[stepBox,below=of s1] (s2) {Set up the\\organization and team};
+  \node[stepBox,below=of s2] (s3) {Apply a small example};
+  \node[stepBox,below=of s3] (s4) {Check the result\\with the user};
+  \node[stepBox,below=of s4] (s5) {Extend use to\\the rest of the team};
+  \foreach \a/\b in {s1/s2,s2/s3,s3/s4,s4/s5} \draw[flowsTo] (\a) -- (\b);
+\end{tikzpicture}
+\rclegend
+\caption{Start with a small useful result, then extend the use}
+\label{fig:intro-journey}
+\end{figure}
+
+\textbf{Marks that help you as you apply this guide:} \req{} required to save, \rec{} helps you
+organize the work, \opt{} use it when needed, \gen{} filled in by the system. The Horizon
+examples are for learning; replace them with your organization's data when you apply them for real.

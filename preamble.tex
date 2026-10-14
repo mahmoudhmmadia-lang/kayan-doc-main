@@ -1,0 +1,267 @@
+% =====================================================================
+%  preamble.tex — shared design settings for the KayanOS guide
+%  Visual reference: «نموذج رايت كود - Copy.docx» (RightCode template)
+%  Build with XeLaTeX. Content lives in chapters/; never put design here
+%  into chapter files.
+% =====================================================================
+
+% ---------- Page geometry (from the template body section) ----------
+% Body: A4, top/bottom 1247tw = 2.2cm, sides 1020tw = 1.8cm,
+% header/footer distance 567tw = 1.0cm.
+\usepackage[a4paper,top=2.6cm,bottom=2.4cm,left=1.8cm,right=1.8cm,
+            headsep=0.5cm,footskip=1.0cm,headheight=1.0cm]{geometry}
+
+% ---------- Packages (order matters: polyglossia/bidi load last) ----------
+\usepackage{fontspec}
+\usepackage[table]{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc,fit,backgrounds,shapes.geometric}
+\usepackage{array,booktabs,tabularx,longtable}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage[most]{tcolorbox}
+\usepackage{caption}
+\usepackage{float} % [H] keeps a figure next to the text that explains it
+\usepackage{eso-pic}
+\usepackage{lastpage}
+\usepackage[hidelinks]{hyperref}
+\usepackage{polyglossia}
+
+% ---------- Brand colors (template + RightCode brand tokens) ----------
+\definecolor{rcPrimary}{HTML}{00696D}      % Heading 2 / accent teal
+\definecolor{rcPrimaryLight}{HTML}{4FB8AE} % cover kicker
+\definecolor{rcDark}{HTML}{052424}         % cover background
+\definecolor{rcText}{HTML}{0E1F1F}         % Normal text
+\definecolor{rcTextSecondary}{HTML}{4A6364}% Heading 5
+\definecolor{rcMuted}{HTML}{94A8A6}        % caption, header, footer
+\definecolor{rcMutedDark}{HTML}{6A8482}    % cover meta labels
+\definecolor{rcSurfaceVar}{HTML}{E5EBEB}   % cover meta values
+\definecolor{rcSurfaceElev}{HTML}{F1F5F4}  % zebra rows / boxes
+\definecolor{rcBorder}{HTML}{D6E0DF}       % hairlines
+\definecolor{rcSuccess}{HTML}{1E7F4D}\definecolor{rcSuccessBg}{HTML}{E3F4EB}
+\definecolor{rcWarning}{HTML}{A36300}\definecolor{rcWarningBg}{HTML}{FBF1DD}
+\definecolor{rcError}{HTML}{B23131}  \definecolor{rcErrorBg}{HTML}{F8E3E3}
+\definecolor{rcInfo}{HTML}{1E5C7F}   \definecolor{rcInfoBg}{HTML}{E1EEF6}
+
+% ---------- Languages and fonts ----------
+\setdefaultlanguage[numerals=maghrib]{arabic} % Western digits 0-9
+\setotherlanguage{english}
+\gappto\captionsarabic{\renewcommand{\chaptername}{الفصل}}
+
+\defaultfontfeatures{Path=fonts/,Extension=.ttf}
+% Arabic is the main font: Noto Naskh Arabic (template Normal style cs font).
+% Arabic has no italic; italic falls back to regular.
+\setmainfont{NotoNaskhArabic}[Script=Arabic,
+  UprightFont=*-Regular,BoldFont=*-Bold,ItalicFont=*-Regular,
+  BoldItalicFont=*-Bold]
+\newfontfamily\arabicfont{NotoNaskhArabic}[Script=Arabic,
+  UprightFont=*-Regular,BoldFont=*-Bold,ItalicFont=*-Regular,
+  BoldItalicFont=*-Bold]
+\newfontfamily\arabicfontsf{NotoNaskhArabic}[Script=Arabic,
+  UprightFont=*-Regular,BoldFont=*-Bold]
+\newfontfamily\arabicfonttt{NotoNaskhArabic}[Script=Arabic,
+  UprightFont=*-Regular,BoldFont=*-Bold]
+% Latin: Lora (template Normal style ascii/hAnsi font) — use \en{...}
+\newfontfamily\englishfont{Lora}[UprightFont=*-Regular,BoldFont=*-Bold,
+  ItalicFont=*-Italic,BoldItalicFont=*-BoldItalic]
+
+% Body: 11pt, line 1.15 (template docDefaults line=276), text color
+\linespread{1.15}
+\color{rcText}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt} % template Normal spacing after = 80tw
+
+% Latin terms inside Arabic text
+\newcommand{\en}[1]{\textenglish{#1}}
+\newcommand{\kos}{\en{KayanOS}}
+% Technical key (first appearance only)
+% (\textcolor, not \color: under bidi a bare \color leaks into later paragraphs)
+\newcommand{\key}[1]{{\textenglish{\small\textcolor{rcPrimary}{#1}}}}
+
+% ---------- Headings (template Heading 1/2/3) ----------
+% Heading 1: bold 24pt, text color. Heading 2: bold 18pt teal.
+% Heading 3: bold 14pt. Caption: italic 9pt muted.
+\titleformat{\chapter}[display]
+  {\bfseries\color{rcText}}
+  {\color{rcPrimaryLight}\large\chaptertitlename\ \thechapter}
+  {2pt}{\fontsize{24}{32}\selectfont}
+  [\vspace{4pt}{\color{rcPrimary}\rule{3cm}{1.2pt}}]
+\titlespacing*{\chapter}{0pt}{0pt}{18pt}
+\titleformat{\section}{\bfseries\fontsize{18}{26}\selectfont\color{rcPrimary}}
+  {\thesection}{0.6em}{}
+\titlespacing*{\section}{0pt}{14pt}{6pt}
+\titleformat{\subsection}{\bfseries\fontsize{14}{20}\selectfont\color{rcText}}
+  {\thesubsection}{0.6em}{}
+\titlespacing*{\subsection}{0pt}{10pt}{3pt}
+\titleformat{\subsubsection}{\bfseries\color{rcPrimary}}{}{0pt}{}
+
+\captionsetup{font={small,it,color=rcMuted},labelfont={bf,color=rcMuted},
+  labelsep=colon,skip=6pt}
+
+% ---------- Header & footer (template header3 / footer1) ----------
+\newcommand{\guideTitle}{دليل \kos}
+\newcommand{\guideBrand}{\en{RightCode}\ \ ·\ \ \guideTitle\ \ ·\ \ \en{rightcode.io}}
+
+\fancypagestyle{rcbody}{%
+  \fancyhf{}%
+  \renewcommand{\headrulewidth}{0pt}%
+  \renewcommand{\footrulewidth}{0pt}%
+  \fancyhead[R]{{\footnotesize\color{rcText}\guideTitle}\\[-2pt]
+                {\scriptsize\color{rcMuted}\leftmark}}%
+  \fancyhead[L]{\includegraphics[width=3.11cm,height=0.8cm]{assets/logo.png}}%
+  \fancyfoot[R]{\scriptsize\color{rcMuted}\guideBrand}%
+  \fancyfoot[L]{\scriptsize\color{rcMuted}\en{\thepage\ / \pageref{LastPage}}}%
+}
+\fancypagestyle{plain}{\pagestyle{rcbody}} % chapter opening pages too
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+
+% Page watermark: template places image3 behind body text at 40% opacity
+\newif\ifrcwatermark \rcwatermarktrue
+\AddToShipoutPictureBG{%
+  \ifrcwatermark
+    \AtPageCenter{\makebox[0pt]{\raisebox{-0.5\height}{%
+      % watermark-40.png = watermark.png pre-blended at 40% over white
+      % (PDF transparency inside shipout is unreliable across viewers)
+      \includegraphics[width=18.67cm,height=26.4cm]{assets/watermark-40.png}}}}%
+  \fi}
+
+% ---------- Cover (template first section: dark full-bleed page) ----------
+% Usage: \makecover{kicker}{title}{subtitle}{date}{version}{prepared by}
+\newcommand{\makecover}[6]{%
+  \pagenumbering{alph}% unique page anchors for the cover
+  \begin{titlepage}
+  \rcwatermarkfalse
+  \thispagestyle{empty}
+  \AddToShipoutPictureBG*{\AtPageCenter{\makebox[0pt]{\raisebox{-0.5\height}{%
+    \includegraphics[width=\paperwidth,height=\paperheight]{assets/cover-bg.png}}}}}
+  \centering
+  % template: top margin 7.2cm + 2.1cm before the kicker (page top = 2.6cm)
+  \vspace*{6.4cm}
+  {\bfseries\small\color{rcPrimaryLight}#1\par}
+  \vspace{14pt}
+  {\bfseries\fontsize{22}{36}\selectfont\color{white}#2\par}
+  \vspace{8pt}
+  {\bfseries\small\color{rcPrimaryLight}#3\par}
+  \vspace{5.2cm}
+  % Meta strip: 3 equal cells, label above value (template cover table).
+  % Drawn with TikZ: table cells reset the text color under bidi.
+  \begin{tikzpicture}[x=4.6cm]
+    \foreach \i/\lbl/\val in {0/التاريخ/{#4},-1/الإصدار/{#5},-2/أُعدّ بواسطة/{#6}}{
+      \node[font=\bfseries\fontsize{7.5}{10}\selectfont,text=rcMutedDark] at (\i,0.5) {\RL{\lbl}};
+      \node[font=\fontsize{9.5}{12}\selectfont,text=rcSurfaceVar] at (\i,0) {\RL{\val}};
+    }
+  \end{tikzpicture}
+  \vfill
+  \end{titlepage}
+  \pagenumbering{arabic}%
+  \rcwatermarktrue}
+
+% ---------- Tables (RightCode brand table style) ----------
+% Teal header band, white bold labels, zebra rows, hairline borders.
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\raggedleft\arraybackslash}X}
+\newcommand{\rcHeaderRow}{\rowcolor{rcPrimary}}
+\newcommand{\thh}[1]{\textcolor{white}{\bfseries #1}}
+\newcommand{\rcZebra}{\rowcolors{2}{white}{rcSurfaceElev}}
+\arrayrulecolor{rcBorder}
+\setlength{\arrayrulewidth}{0.4pt}
+\renewcommand{\arraystretch}{1.35}
+
+% Data-classification badges (used in every "Before you start" table)
+\newcommand{\rcbadge}[2]{\tikz[baseline=(b.base)]\node[fill=#1,text=white,
+  rounded corners=2pt,inner xsep=4pt,inner ysep=1.5pt,font=\scriptsize\bfseries](b){\RL{#2}};}
+\newcommand{\req}{\rcbadge{rcPrimary}{إلزامي تقنياً}}
+\newcommand{\rec}{\rcbadge{rcPrimaryLight}{موصى به}}
+\newcommand{\opt}{\rcbadge{rcMuted}{اختياري}}
+\newcommand{\gen}{\rcbadge{rcTextSecondary}{يولّده النظام}}
+
+% ---------- Checklists ----------
+\newlist{checklist}{itemize}{2}
+\newcommand{\rccheckbox}{\tikz[baseline=-0.25ex]\draw[rcPrimary,line width=0.9pt,
+  rounded corners=1pt](0,-0.05)rectangle(0.3,0.25);}
+\setlist[checklist]{label={\rccheckbox},
+  leftmargin=*,itemsep=2pt,topsep=4pt}
+\newtcolorbox{rcchecklist}[1][قائمة تحقق]{enhanced,breakable,
+  colback=rcSurfaceElev,colframe=rcPrimary,boxrule=0pt,
+  leftrule=0pt,rightrule=3pt,arc=2pt,
+  fonttitle=\bfseries\color{rcPrimary},coltitle=rcPrimary,
+  colbacktitle=rcSurfaceElev,title={#1},
+  left=10pt,right=10pt,top=4pt,bottom=6pt}
+
+% ---------- Callouts ----------
+\newtcolorbox{rcnote}[1][ملاحظة]{enhanced,breakable,colback=rcInfoBg,
+  colframe=rcInfo,boxrule=0pt,rightrule=3pt,arc=2pt,
+  title={#1},fonttitle=\bfseries,coltitle=rcInfo,colbacktitle=rcInfoBg}
+\newtcolorbox{rcwarn}[1][تنبيه]{enhanced,breakable,colback=rcWarningBg,
+  colframe=rcWarning,boxrule=0pt,rightrule=3pt,arc=2pt,
+  title={#1},fonttitle=\bfseries,coltitle=rcWarning,colbacktitle=rcWarningBg}
+
+% ---------- Diagram conventions (fixed for the whole guide) ----------
+% RULE: TikZ nodes are laid out left-to-right. Wrap every Arabic label in
+% \RL{...} (one \RL per line in multi-line nodes), e.g. \node[entity]{\RL{المناصب}};
+% Boxes:   solid teal = required entity/page, dashed = optional,
+%          grey fill  = generated by the system.
+% Arrows:  solid  "dependsOn"  A -> B  means "A requires B to exist first".
+%          dashed "flowsTo"    A -> B  means "the process moves from A to B".
+\tikzset{
+  rc/.style={font=\small,align=center},
+  entity/.style={rc,draw=rcPrimary,line width=0.9pt,fill=white,
+    rounded corners=3pt,minimum width=2.6cm,minimum height=0.95cm},
+  entityOpt/.style={entity,dashed,draw=rcPrimaryLight},
+  entityGen/.style={entity,draw=rcMuted,fill=rcSurfaceElev,text=rcTextSecondary},
+  stepBox/.style={rc,fill=rcPrimary,text=white,rounded corners=3pt,
+    minimum width=2.6cm,minimum height=0.95cm,font=\small\bfseries},
+  dependsOn/.style={-{Stealth[length=7pt]},line width=1pt,draw=rcPrimary},
+  dependsOnOpt/.style={dependsOn,densely dotted,draw=rcPrimaryLight},
+  flowsTo/.style={-{Latex[length=6pt,open]},line width=1pt,draw=rcTextSecondary,
+    densely dashed},
+  edgeLabel/.style={font=\scriptsize,fill=white,inner sep=1.5pt,text=rcTextSecondary},
+}
+% Legend placed under each diagram
+% Inline "depends on" arrow for running text: \dep  (e.g. التعيينات \dep{} الأعضاء)
+\newcommand{\dep}{\,\tikz[baseline=-0.6ex]\draw[dependsOn](0.55,0)--(0,0);\,}
+% Legend: items run right-to-left; each = symbol, then its label.
+\newcommand{\rclegendItem}[3]{% #1 previous anchor, #2 symbol code, #3 label
+  #2 \node[anchor=east,inner xsep=3pt] (lg) at (lgsym.west) {\RL{#3}};}
+\newcommand{\rclegend}{%
+  \par\smallskip
+  \begin{tikzpicture}[font=\footnotesize,text=rcTextSecondary]
+    \draw[dependsOn] (0,0.15) -- (0,-0.2);
+    \node[anchor=east] at (-0.25,0) {\RL{متصل: يحتاج السجل المشار إليه أولاً}};
+    \draw[dependsOnOpt] (0,-0.4) -- (0,-0.75);
+    \node[anchor=east] at (-0.25,-0.55) {\RL{منقّط: ارتباط اختياري؛ الإطار المتقطع اختياري أيضاً}};
+    \draw[flowsTo] (0,-0.95) -- (0,-1.3);
+    \node[anchor=east] at (-0.25,-1.1) {\RL{متقطع برأس مفتوح: ثم انتقل إلى الخطوة التالية}};
+  \end{tikzpicture}\par}
+
+% ---------- Lists ----------
+\setlist[itemize]{label={\color{rcPrimary}\textbullet},leftmargin=*,itemsep=1pt}
+% Numbered lists: bold teal number, no dot (a trailing dot flips side in RTL)
+\setlist[enumerate]{label={\textcolor{rcPrimary}{\bfseries\en{\arabic*}}},
+  leftmargin=*,itemsep=2pt}
+
+% ---------- Numbering: keep "1.2" left-to-right with a dot ----------
+% (polyglossia's Arabic numbering reverses the parts and uses a comma)
+% Digits in the Arabic font are shaped right-to-left, so numbers use Lora.
+\newcommand{\rcnum}[1]{\LR{\textenglish{#1}}}
+\AtBeginDocument{%
+  \renewcommand{\thesection}{\rcnum{\thechapter.\arabic{section}}}%
+  \renewcommand{\thesubsection}{\rcnum{\thechapter.\arabic{section}.\arabic{subsection}}}%
+  \renewcommand{\thetable}{\rcnum{\thechapter.\arabic{table}}}%
+  \renewcommand{\thefigure}{\rcnum{\thechapter.\arabic{figure}}}%
+}
+
+% Appendices: "الملحق أ", sections numbered 1, 2… (Latin letters would mix scripts)
+\AtBeginDocument{%
+  \gappto\appendix{%
+    \gappto\captionsarabic{\renewcommand{\appendixname}{الملحق}}%
+    \renewcommand{\appendixname}{الملحق}%
+    \renewcommand{\thechapter}{\ifcase\value{chapter}\or أ\or ب\or ج\or د\or هـ\fi}%
+    \renewcommand{\thesection}{\rcnum{\arabic{section}}}%
+    \renewcommand{\thetable}{\rcnum{\arabic{table}}}%
+    \renewcommand{\thefigure}{\rcnum{\arabic{figure}}}}%
+}
+
+\pagestyle{rcbody}

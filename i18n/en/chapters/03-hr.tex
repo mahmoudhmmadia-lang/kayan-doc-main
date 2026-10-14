@@ -1,0 +1,330 @@
+% Chapter 3 — Human Resources. Authorized draft, submitted for review after the build.
+\chapter{Human Resources}
+\label{ch:hr}
+
+\section{What problem does this app help you solve?}
+When employee, working-time and leave data are spread across different files, preparing
+payroll starts with searching and matching. The HR app brings together a person's data,
+job and working hours, and lets you review leaves and pay items in one flow.
+
+At Horizon we will work through the example of one employee: we set their job and
+working hours, review what was recorded, then check their pay before it is paid out.
+Once the example works, we repeat it for the rest of the team.
+
+\section{Who uses it, and when?}
+The setup administrator prepares people and jobs the first time. The HR officer reviews
+changes, working hours and leaves daily, and the person responsible for payroll reviews
+pay periodically. An employee sees what their permissions allow, and does not need to
+set up the salary scale or the organization's policies.
+
+\begin{table}[H]
+\centering
+\caption{Choose the result you need now}
+\label{tab:hr-map}
+\rcZebra
+\begin{tabularx}{\linewidth}{R{3cm} Y Y}
+\rcHeaderRow
+\thh{I need to...} & \thh{What the app offers} & \thh{The result I review}\\
+Know who holds a job & An assignment links the member to their position. & The person's name, the job and the work period.\\
+Set the team's working hours & A shift with days, hours and breaks. & A clear expected schedule for the employee.\\
+Understand an absence or different hours & Attendance, timesheets, leaves and corrections. & An explanation of the day before its effect is calculated.\\
+Review pay & Payroll inputs, salary slips and payrolls. & Items and amounts you can review before payment.\\
+\end{tabularx}
+\end{table}
+
+\section{Before you start: make sure the employee is in their job}
+Open “HR”, then “Workforce”, then “Assignments”. Open Sarah's assignment
+and check the member, the position and the work start date. If it does not exist, follow
+the steps in section~\ref{sec:setup-data} first. Use the same record for Sarah when her job changes later.
+
+\clearpage
+\section{Shifts: setting the expected working hours}
+\label{sec:hr-shifts}
+\textbf{A shift} sets the expected working days, hours and breaks. Create “Office Hours”
+once for the team; review the actual check-in and check-out times in attendance.
+
+\begin{table}[H]
+\centering
+\caption{Choosing the shift type}
+\label{tab:hr-shift-types}
+\rcZebra
+\begin{tabularx}{\linewidth}{R{2.4cm} Y Y}
+\rcHeaderRow
+\thh{Type} & \thh{What do you enter?} & \thh{Example}\\
+Regular & A set work period, with a break when needed. & From 09:00 to 17:00.\\
+Split & More than one work period, without overlap. & From 09:00 to 13:00, then from 16:00 to 20:00.\\
+Flexible & The required work duration in hours and minutes. & A duration of 08:00; no start and end period is set in the form.\\
+Marathon & The required work duration, as the form shows it for this type. & The guide does not assume an automatic cycle of work and rest days from the name alone.\\
+\end{tabularx}
+\end{table}
+
+\textbf{Try the Horizon example — done by the HR officer:}
+\begin{enumerate}
+  \item Open “HR”, then “Time”, then “Shifts”, and choose to add.
+        Type the name “Office Hours” and the code HZN-S-01, and choose the type “Regular”.
+  \item Select Sunday, Monday, Tuesday, Wednesday and Thursday. Choose the time zone
+        Asia/Damascus. The name, code, type and at least one working day are \req{}.
+  \item In “Work Hours”, set the start to 09:00 and the end to 17:00.
+        In “Breaks”, change the existing period to 13:00 to 13:30;
+        do not add a second period for the example. The break is \opt{} and can be deleted when not needed.
+  \item Check that “Total Hours” shows 07:30: eight hours minus half an hour.
+        The system calculates this value. Click “Save”, then open the shift from the list and check the values.
+\end{enumerate}
+
+\textbf{Other types:} add the periods of a split shift separately. Enter the duration of a flexible or
+marathon shift in hours and minutes. If saving is refused, correct the field that shows the message below it.
+
+\begin{rcnote}[A shift that crosses midnight]
+The period from 22:00 to 06:00 ends on the next day, and lasts eight hours
+before breaks. Do not make the start time equal to the end time; that does not mean a full day.
+Two periods must not overlap, and a break must not fall outside the work period.
+\end{rcnote}
+
+\textbf{When importing:} review the preview; the template asks for work hours and the duration,
+while the manual entry fields differ by type.
+
+\clearpage
+\section{How does the shift reach the employee?}
+\label{sec:hr-shift-inheritance}
+The shift may come from the assignment itself, from the position, or from the organizational unit or the location.
+“Inheritance” means using the shift set in a higher record instead of repeating it by hand.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.4cm,stepBox/.append style={minimum width=6.5cm,text width=6.1cm,minimum height=0.7cm}]
+  \node[stepBox] (a) {Assignment shift};
+  \node[stepBox,below=of a] (p) {Position shift};
+  \node[stepBox,below=of p] (n) {Unit shift, then its\\parent units};
+  \node[stepBox,below=of n] (l) {Location shift, then its\\parent locations};
+  \draw[flowsTo] (a) -- (p);
+  \draw[flowsTo] (p) -- (n);
+  \draw[flowsTo] (n) -- (l);
+\end{tikzpicture}
+\rclegend
+\caption{Order of the shift search: move to the next level only if no shift is found}
+\label{fig:hr-shift-order}
+\end{figure}
+
+Stop at the first shift found from the top. The system checks the unit and its parents before the location
+and its parents; it does not combine schedules.
+
+\begin{itemize}
+  \item Put the shared schedule on the unit or the location, and check that it appears in the assignment.
+  \item The “Override” option lets you choose a specific shift instead of the inherited one, when the field offers it.
+        “Reset” goes back to using the inherited shift.
+  \item When you change a team's schedule, review the assignments that have a specific shift; do not assume they
+        will follow the change automatically.
+\end{itemize}
+
+\textbf{Make Office Hours the schedule of Sarah's department:}
+\begin{enumerate}
+  \item Open “HR”, then “Core”, then “Nodes”.
+        Open “Human Resources” with the code HZN-HR.
+  \item In the “Shift” field, choose “Office Hours”. If the field uses an inherited
+        shift and does not accept a specific choice, use “Override”, then choose the shift and save.
+  \item Open “Workforce”, then “Positions”, then “HR Manager”.
+        Check that it is linked to the unit HZN-HR and that its shift is “Office Hours”.
+  \item Open Sarah's assignment and check the shift. If a different shift appears, check the assignment and the position
+        in the order shown in the figure; one of them may have a specific choice that takes priority over the department's shift.
+\end{enumerate}
+\textbf{Result:} Office Hours appears in Sarah's assignment. The example is a practice exercise you carry out yourself.
+
+\clearpage
+\section{Daily follow-up: what happened on the working day?}
+\label{sec:hr-time}
+Before explaining missing hours, review check-in and check-out, leave, holidays and corrections.
+Deal with the cause of the difference before reviewing pay.
+
+\textbf{Before you start:} you need an employee with an assignment and a shift, and attendance data recorded the way
+your organization uses. Creating the employee and the shift does not add past attendance entries automatically.
+\begin{table}[H]
+\centering
+\caption{Tell setup, event and result apart}
+\label{tab:hr-time}
+\rcZebra
+\begin{tabularx}{\linewidth}{R{3.2cm} Y}
+\rcHeaderRow
+\thh{Page} & \thh{What do you do there?}\\
+Timesheets & Choose the employees and the period to review the recorded working times.\\
+Attendance & Choose the month, then the day to review the attendance details. Viewing another employee needs permission.\\
+Holidays & Prepare the holiday group and its entries; a holiday can be a full day, part of a day, or a period.\\
+Leave Types & Define the reference: paid, unpaid, or partially paid with its percentage.\\
+Leaves & Record a leave event for an employee: the type, the date and the duration in the available fields.\\
+\end{tabularx}
+\end{table}
+
+\textbf{Check one day — done by the employee or an authorized administrator:}
+\begin{enumerate}
+  \item Open “HR”, then “Time”, then the attendance page. Choose the month you need.
+        The employee reviews their own attendance; the administrator chooses the other member if the system allows it.
+  \item Open a working day from the list. Compare the expected shift with the check-in and check-out times
+        and the duration shown. Note what needs explaining, such as a missing check-out.
+  \item Open “Time”, then “Timesheets” if you need to review entries over a period
+        or for a group of employees. Set the employees and the date to match the period you are checking.
+  \item If you find a shortfall, review the source of the entry with the person in charge of working hours. When there is a correction,
+        open “Attendance Corrections” and check the employee, the date and the status before treating the problem as solved.
+\end{enumerate}
+
+\textbf{Check:} you can explain the difference between the expected and the recorded time. If the screen is empty,
+check the employee, the period, the permission and the source of the entries; an empty screen alone does not prove an absence.
+
+\begin{rcnote}[The shift and the attendance policy]
+The shift sets the expected time; the attendance policy sets how lateness and overtime are handled.
+Review the organization's policy and the result; do not assume a fixed deduction or automatic overtime pay.
+\end{rcnote}
+
+\clearpage
+\section{Record the reason for an absence: holiday or leave?}
+A holiday is a day or period the organization sets, while a leave belongs to one employee. Recording the right reason
+helps the HR officer explain working hours and review their effect on pay.
+\textbf{A leave type} is a recurring rule such as “Annual (paid)”, and \textbf{a leave record}
+is an employee's use of that type on a specific date.
+
+\textbf{Prepare the type once — HR officer:}
+\begin{enumerate}
+  \item Open “HR”, then “Time”, then “Leave Types”. First search for
+        the type the organization uses, to avoid creating another copy of it.
+  \item If you are authorized to create a new type, choose to add, and type a clear name such as
+        “Annual (paid)”. Choose the right payment method, and set the percentage if the type is partially paid.
+  \item Save, then open the type from the list to check its name and payment method. Check that it is available
+        to the employee in their job settings; the type existing does not on its own give everyone an entitlement.
+\end{enumerate}
+
+\textbf{Record Sarah's leave after it is approved under the organization's procedure:}
+\begin{enumerate}
+  \item Open “Time”, then “Leaves”, and choose to add.
+  \item Choose Sarah in “Member”, and the approved type in “Leave Type”.
+        Enter the approved date and the duration in the matching day or hour fields.
+        To try a full day, use one day on an agreed working date; do not record the same day
+        once in days and again in hours.
+  \item Complete the required fields in the organization's form and save. Open the leave record again
+        and check the employee, the date, the type and the duration, then review the period when you review attendance and pay.
+\end{enumerate}
+
+\textbf{For shared holidays:} open “Time”, then “Holiday Groups”, then the group
+you need. Add the holiday with its name and date, and set a full day, part of a day, or a period.
+For part of a day, enter the hours; for a period, enter its start and end. Save, then review the
+group's details and its assignment to the departments or jobs concerned.
+
+\textbf{Check:} you can tell Sarah's leave day apart from a holiday for the whole team. If the expected
+effect does not appear, check the date, the type, its assignment and the review status; sending a leave request alone
+does not prove the leave was approved and recorded.
+
+\clearpage
+\section{The salary scale and preparing pay}
+\label{sec:hr-payroll}
+The person responsible for payroll needs to explain the amount, not just a total.
+The following flow lets you separate pay data from variable items, then calculate and review the employee's slip,
+then gather the approved slips into a payroll. The authorized administrator carries it out after the working-hours review is complete.
+
+\textbf{The salary scale} is a reference that links experience levels to seniority levels and pay values.
+If the organization uses it, open the “Salary Scale” section: prepare the “Experience Levels” group
+with its levels, raise rule and currency, then the “Seniority Levels” and the pay values linked to them.
+Save each setting, then open the “Salary Scale” page and review the values where a seniority level meets an experience level.
+A scale alone is not enough to prepare an employee's pay; also review their assignment data, pay and currency.
+
+\begin{table}[H]
+\centering
+\caption{Three similar names, three different purposes}
+\label{tab:hr-payroll}
+\rcZebra
+\begin{tabularx}{\linewidth}{R{3.3cm} Y}
+\rcHeaderRow
+\thh{Page} & \thh{Purpose}\\
+Payroll Inputs & Additions or deductions entered for the calculation, such as a bonus. Check the employee, the date and the calculation method.\\
+Salary Slips & The details of the employee's pay calculation for the period, with earning and deduction items and the resulting amount.\\
+Payrolls & Gathering the approved pay for the month and the selected employees, and following the payment data.\\
+\end{tabularx}
+\end{table}
+
+\textbf{Prepare the calculation data:}
+\begin{enumerate}
+  \item Open the employee's assignment and check the work period, the pay and the currency, and review the working hours,
+        leaves and corrections for the period you will calculate.
+  \item Open “HR”, then “Payment”, then “Payroll Inputs”. Search for
+        an existing input before adding a new bonus or deduction for the same period.
+  \item When adding, choose the employee, the date, the input type, its direction and the calculation method,
+        and enter the approved value. Save, then open the input and use “Preview calculation”
+        to review the amount. Complete the input's approval according to your permissions and the organization's procedure.
+\end{enumerate}
+
+\textbf{Result:} the pay data and variable items are ready for review. If the preview differs from what
+you expected, correct the value or the calculation method before moving on to the slip; a preview does not mean payment.
+
+\clearpage
+\section{From the employee's slip to the payroll}
+\textbf{Example flow:} review Sarah's slip first, then add it to the payroll for the required period.
+Use the pay and currency your organization has approved; the guide's examples do not set real pay.
+
+\textbf{Create and review the slip:}
+\begin{enumerate}
+  \item Open “HR”, then “Payment”, then “Salary Slips”, and click
+        “Create salary slips”.
+  \item Choose “Period end”. The eligible rows appear, and each row links a member to a position.
+        Select Sarah's row and her position. Check “Period start”; on the first slip it can be changed,
+        and the assignment start date is used by default.
+  \item Click the button that creates the drafts and shows the selected count, then open Sarah's slip.
+        If the system stops you because a draft already exists, open that draft and review it first.
+  \item Click “Calculate”. Review the period, the earning and deduction items and the amount due.
+        If the inputs changed, use “Recalculate” before approving.
+  \item Once the result matches the approved documents, click “Approve” according to your permission,
+        read the confirmation message, then confirm the approval. Go back to the list and check that the approved
+        status appears. Do not approve a slip whose items have not been explained.
+\end{enumerate}
+
+\textbf{Gather the slips into a payroll:}
+\begin{enumerate}
+  \item Open “Payment”, then “Payrolls”, and choose “Generate payroll”.
+  \item Set the month and the year, review the filters, then choose the employees you need.
+        The payroll is based on the approved slips within the selected range.
+  \item Click “Generate”, and review any conflict message with an existing payroll before going on.
+        Open the resulting payroll and check the employees, the period, the total and the status.
+\end{enumerate}
+
+\textbf{Check:} you can trace the amount in the payroll back to the employee's slip and its items.
+If an employee does not appear, check the period, the filters, the assignment and the slip status before creating new data.
+
+\begin{rcwarn}[Calculation is not payment]
+Creating pay or a payroll does not prove the money reached the employee. Review the payment status and the payment records
+according to the organization's procedure. Do not treat the practice example's figures as real pay.
+\end{rcwarn}
+
+\clearpage
+\section{Results and checks}
+\label{sec:hr-check}
+\begin{rcchecklist}[A small trial before rolling out the setup]
+\begin{checklist}
+  \item Sarah's member record is linked to her position by an assignment for the right period.
+  \item Shift HZN-S-01 shows the required days, times and time zone.
+  \item The net duration of the example shift is 07:30, and the break is inside working time.
+  \item The right shift appears in the position and the assignment; any value overriding the inherited one was reviewed.
+  \item An actual attendance day was reviewed; opening the attendance list was not enough.
+  \item Leaves and corrections belong to the intended employee and date.
+  \item If payroll was used: the items, currency and total were reviewed before approval and payment.
+\end{checklist}
+\end{rcchecklist}
+
+\begin{table}[H]
+\centering
+\caption{Common mistakes and how to fix them}
+\label{tab:hr-errors}
+\rcZebra
+\begin{tabularx}{\linewidth}{R{4.2cm} Y}
+\rcHeaderRow
+\thh{Problem} & \thh{What do you check?}\\
+The shift does not save & The name, code and working days, then overlapping periods or a break outside working time.\\
+The shift duration is less than expected & The breaks; they are subtracted from the total of the periods in regular and split shifts.\\
+An employee is on a different shift & The assignment and the position, the unit's priority over the location, and the override option.\\
+A shift cannot be deleted & It may be used in other records; check its links first.\\
+An employee does not appear in the payroll & The month, the filters, the assignment and the approved pay, and any conflict with an existing payroll.\\
+A leave does not give the expected result & Its type, payment method, date and duration, then the pay details for the period.\\
+\end{tabularx}
+\end{table}
+
+\section{How it connects to other apps}
+Tasks and projects use the people and jobs you set up here. The organization may also use
+requests to ask for or approve a leave; follow its approved flow, and do not treat sending
+a request as a completed leave record. When reviewing a project's cost, go back to the available payroll
+distribution details instead of assuming that each salary belongs to a single project.
+
+Once people and working hours are stable, the next step is following up work in the \textbf{Tasks} app.

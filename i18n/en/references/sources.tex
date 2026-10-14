@@ -1,0 +1,100 @@
+% =====================================================================
+%  Appendix: technical source references
+%  For each chapter: the files the explanation relied on, and what was checked on test2.
+% =====================================================================
+\chapter{Technical source references}
+\label{app:sources}
+
+This appendix lists the sources each chapter was built on, so the technical team can review them.
+Paths are relative to the \kos{} repository.
+
+% \srcs{a \\ b}: source paths, one per line, left-aligned and left-to-right
+\newcommand{\srcs}[1]{\LR{\parbox[t]{9.9cm}{\raggedright\footnotesize\ttfamily #1}}}
+
+\section{Chapter~\ref{ch:intro}: Introduction and concepts}
+
+{\renewcommand{\arraystretch}{1.12}\rcZebra
+\begin{longtable}{>{\raggedright\arraybackslash}p{4.8cm} >{\raggedright\arraybackslash}p{10.2cm}}
+\rcHeaderRow
+\thh{Topic} & \thh{Source}\\
+\endhead
+Business problems, value and terms & \srcs{docs/start/overview.mdx \\ docs/start/core-concepts.mdx}\\
+Permissions (resource + action + scope) & \srcs{docs/start/roles-and-access.mdx}\\
+Navigation and workspaces & \srcs{docs/start/navigate-kayanos.mdx \\ src/utils/sidebarItems.tsx \\ src/utils/navigationApps.ts \\ src/utils/dynamicApps.tsx}\\
+Arabic app names & \srcs{src/locales/ar.ts (sidebar) \\ src/locales/workNavigationA.ar.ts}\\
+Seat type & \srcs{common/seatPolicy.ts}\\
+Interface languages & \srcs{src/locales/localeSearch.ts \\ src/locales/LocaleProvider.tsx}\\
+Platforms & \srcs{capacitor.config.ts \\ desktop/package.json}\\
+Working offline & \srcs{src/offlineForms/ \\ src/offline/ \\ desktop/README.md}\\
+Entities, fields and records & \srcs{servers/shared/db/schema.generated.ts \\ (entities, entities\_fields, entities\_records)}\\
+Importing from entity lists & \srcs{src/components/Entities/EntityTablePage.tsx}\\
+Roles and the administrator role & \srcs{servers/auth/index.ts \\ supabase/migrations/ (on\_organization\_owner\_set)}\\
+\end{longtable}
+\addtocounter{table}{-1}% longtable steps the counter itself
+}
+
+\textbf{Checked on the test environment} (test2, 2026-10-13): the list of apps in the app
+launcher (figure~\ref{fig:intro-apps-directory}). The “My desk” app appeared among the built-in
+apps, and apps defined by the organization appeared too.
+
+\section{Chapter~\ref{ch:org-setup}: Creating and initializing the organization}
+
+{\renewcommand{\arraystretch}{1.12}\rcZebra
+\begin{longtable}{>{\raggedright\arraybackslash}p{4.8cm} >{\raggedright\arraybackslash}p{10.2cm}}
+\rcHeaderRow
+\thh{Topic} & \thh{Source}\\
+\endhead
+Creation steps and field validation & \srcs{src/routes/create-organization.lazy.tsx \\ src/components/Auth/CreateOrg*Step.tsx}\\
+Verification code and its validity & \srcs{servers/auth/utils/otp.ts}\\
+Subdomain rules & \srcs{servers/auth/utils/subdomain.ts}\\
+Creating the organization and the administrator member & \srcs{servers/auth/index.ts (POST /api/auth/organizations)}\\
+What is copied on creation & \srcs{supabase/migrations/\\ 20260905120000\_fix\_new\_organization\_\\ payroll\_seed\_order.sql}\\
+Organization settings and their defaults & \srcs{src/routes/settings/organization/index.lazy.tsx}\\
+Required fields and relations & \srcs{servers/shared/db/schema.generated.ts \\ temp/*.xlsx (import templates)}\\
+Import matching (code, label) & \srcs{servers/entities/importPreview.ts \\ servers/entities/importUtils.ts}\\
+Member invitations and first login & \srcs{servers/auth/memberInvitations/service.ts \\ src/routes/first-login.tsx}\\
+\end{longtable}
+\addtocounter{table}{-1}% longtable steps the counter itself
+}
+
+\textbf{Checked on the test environment} (test2, 2026-10-13): the steps of the “Create Organization” page
+and their order, the field names and values of “Organization settings”, and the “Label” column on the positions page.
+\textbf{Not tested in practice:} creating a new organization, the import screen, and invitation delivery.
+
+\section{Chapter~\ref{ch:hr}: Human Resources}
+
+{\renewcommand{\arraystretch}{1.12}\rcZebra
+\begin{longtable}{>{\raggedright\arraybackslash}p{4.8cm} >{\raggedright\arraybackslash}p{10.2cm}}
+\rcHeaderRow
+\thh{Topic} & \thh{Source}\\
+\endhead
+App pages and their paths & \srcs{src/utils/sidebarItems.tsx \\ src/components/Entities/nativeEntityPages/\\ hrPages.tsx}\\
+Shift types and field validation & \srcs{src/components/Shifts/AddEditShiftPage.tsx \\ src/components/Shifts/WorkingHoursSection.tsx \\ src/components/Shifts/BreakSection.tsx \\ temp/*.xlsx (shift template)}\\
+Shift priority and override & \srcs{src/utils/shiftInheritance.ts \\ src/components/Entities/EntityShiftField.tsx}\\
+Salary scale & \srcs{src/components/Workforce/SalaryScale/\\ SalaryScaleTable.tsx}\\
+Attendance and holidays & \srcs{src/routes/time/attendance/index.tsx \\ src/components/Time/Holidays/Holiday/\\ holidayFormSchema.ts \\ src/components/Time/AttendancePolicy/}\\
+Leave types and their fields & \srcs{servers/shared/db/schema.generated.ts \\ common/locales/ar.ts \\ src/components/Entities/nativeEntityPages/\\ hrPages.tsx}\\
+Creating payrolls and approved pay & \srcs{src/components/Payrolls/create/\\ useCreatePayrollFlow.tsx \\ src/components/Payrolls/create/\\ createPayrollCandidates.ts}\\
+Arabic names & \srcs{src/locales/ar.ts \\ common/locales/ar.ts}\\
+Creating slips, calculation and approval confirmation & \srcs{src/components/SalarySlips/\\ CreateSalarySlipsDialog.tsx \\ src/components/SalarySlips/SalarySlipItem/\\ SalarySlipActions.tsx}\\
+\end{longtable}
+\addtocounter{table}{-1}
+}
+
+\textbf{Limits of the explanation:} the details of the financial calculation and policies depend on the organization's settings.
+The explanation of the “Marathon” form is limited to the fields confirmed in the source; no shift rotation
+or automatic rest days were inferred from the type's name. The Horizon example is a practice exercise, not proof of existing data.
+
+\textbf{Checked on the test environment} (test2, 2026-10-13): the add-shift form was opened
+in Arabic, fictional data was entered, five working days were selected, and the break was changed
+with the time controls to 13:00 to 13:30 within working hours of 09:00 to
+17:00. The total showed 07:30. A screenshot of the form only was saved, with no personal data.
+The record was not saved in the organization. \textbf{Not tested in practice:} saving the shift and its inheritance,
+importing it, approving leaves, and generating or paying payroll; their explanation is based on the sources.
+
+\textbf{Additional check for version 0.3:} the “Create salary slips” action was opened on the test
+environment, and the appearance of “Period end” and its selection message before members are shown was confirmed.
+No slips were created, and calculation, approval and generation were not tested in practice.
+
+\textbf{Template versus form difference:} the shifts template marks work hours and the duration as required,
+while the form shows different fields depending on the type. The import preview was not tested for these cases.

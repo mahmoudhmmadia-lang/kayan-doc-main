@@ -1,0 +1,24 @@
+% =====================================================================
+%  KayanOS guide — English edition (HTML only)
+%  Mirrors ../../main.tex: same chapters, same order, same labels.
+%  The Arabic sources in chapters/ are the master; update this
+%  translation whenever an Arabic chapter changes.
+% =====================================================================
+\documentclass[11pt,oneside,openany]{report}
+\input{preamble}
+
+\begin{document}
+
+\makecover{\en{KayanOS} · User Guide}
+  {The \kos{} Guide}
+  {From understanding your business needs to applying them step by step}
+  {October 2026}{\en{0.3} — draft}{\en{RightCode}}
+
+\tableofcontents
+
+% ---- chapters (in the order of the setup journey) ----
+\input{chapters/01-introduction}
+\input{chapters/02-organization-setup}
+\input{chapters/03-hr}
+
+\end{document}

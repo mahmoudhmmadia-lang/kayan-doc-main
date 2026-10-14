@@ -1,0 +1,100 @@
+% =====================================================================
+%  ملحق: مراجع المصادر التقنية
+%  لكل فصل: الملفات التي اعتمد عليها الشرح، وما تحقّق منه على test2.
+% =====================================================================
+\chapter{مراجع المصادر التقنية}
+\label{app:sources}
+
+يجمع هذا الملحق المصادر التي بُني عليها كل فصل، ليتمكن الفريق التقني من مراجعتها.
+المسارات نسبية إلى مستودع \kos.
+
+% \srcs{a \\ b}: source paths, one per line, left-aligned and left-to-right
+\newcommand{\srcs}[1]{\LR{\parbox[t]{9.9cm}{\raggedright\footnotesize\ttfamily #1}}}
+
+\section{الفصل~\ref{ch:intro}: المقدمة والمفاهيم}
+
+{\renewcommand{\arraystretch}{1.12}\rcZebra
+\begin{longtable}{>{\raggedleft\arraybackslash}p{4.8cm} >{\raggedleft\arraybackslash}p{10.2cm}}
+\rcHeaderRow
+\thh{الموضوع} & \thh{المصدر}\\
+\endhead
+مشكلات العمل والقيمة والمصطلحات & \srcs{docs/start/overview.mdx \\ docs/start/core-concepts.mdx}\\
+الصلاحيات (مورد + فعل + نطاق) & \srcs{docs/start/roles-and-access.mdx}\\
+التنقل ومساحات العمل & \srcs{docs/start/navigate-kayanos.mdx \\ src/utils/sidebarItems.tsx \\ src/utils/navigationApps.ts \\ src/utils/dynamicApps.tsx}\\
+أسماء التطبيقات بالعربية & \srcs{src/locales/ar.ts (sidebar) \\ src/locales/workNavigationA.ar.ts}\\
+نوع المقعد & \srcs{common/seatPolicy.ts}\\
+لغات الواجهة & \srcs{src/locales/localeSearch.ts \\ src/locales/LocaleProvider.tsx}\\
+المنصات & \srcs{capacitor.config.ts \\ desktop/package.json}\\
+العمل دون اتصال & \srcs{src/offlineForms/ \\ src/offline/ \\ desktop/README.md}\\
+الكيانات والحقول والسجلات & \srcs{servers/shared/db/schema.generated.ts \\ (entities, entities\_fields, entities\_records)}\\
+الاستيراد من قوائم الكيانات & \srcs{src/components/Entities/EntityTablePage.tsx}\\
+الأدوار ودور المدير & \srcs{servers/auth/index.ts \\ supabase/migrations/ (on\_organization\_owner\_set)}\\
+\end{longtable}
+\addtocounter{table}{-1}% longtable steps the counter itself
+}
+
+\textbf{تحقّق على بيئة الاختبار} (\en{test2}، \en{2026-10-13}): قائمة التطبيقات في مشغّل
+التطبيقات (الشكل~\ref{fig:intro-apps-directory}). ظهر تطبيق «مكتبي» ضمن التطبيقات
+المضمّنة، وظهرت تطبيقات معرّفة من المؤسسة.
+
+\section{الفصل~\ref{ch:org-setup}: إنشاء المؤسسة والتهيئة}
+
+{\renewcommand{\arraystretch}{1.12}\rcZebra
+\begin{longtable}{>{\raggedleft\arraybackslash}p{4.8cm} >{\raggedleft\arraybackslash}p{10.2cm}}
+\rcHeaderRow
+\thh{الموضوع} & \thh{المصدر}\\
+\endhead
+خطوات الإنشاء وتحقق الحقول & \srcs{src/routes/create-organization.lazy.tsx \\ src/components/Auth/CreateOrg*Step.tsx}\\
+رمز التحقق ومدته & \srcs{servers/auth/utils/otp.ts}\\
+شروط النطاق الفرعي & \srcs{servers/auth/utils/subdomain.ts}\\
+إنشاء المؤسسة وعضو المدير & \srcs{servers/auth/index.ts (POST /api/auth/organizations)}\\
+ما يُنسخ عند الإنشاء & \srcs{supabase/migrations/\\ 20260905120000\_fix\_new\_organization\_\\ payroll\_seed\_order.sql}\\
+إعدادات المؤسسة وقيمها الافتراضية & \srcs{src/routes/settings/organization/index.lazy.tsx}\\
+الحقول الإلزامية والعلاقات & \srcs{servers/shared/db/schema.generated.ts \\ temp/*.xlsx (import templates)}\\
+مطابقة الاستيراد (الرمز، التسمية) & \srcs{servers/entities/importPreview.ts \\ servers/entities/importUtils.ts}\\
+دعوات الأعضاء وأول دخول & \srcs{servers/auth/memberInvitations/service.ts \\ src/routes/first-login.tsx}\\
+\end{longtable}
+\addtocounter{table}{-1}% longtable steps the counter itself
+}
+
+\textbf{تحقّق على بيئة الاختبار} (\en{test2}، \en{2026-10-13}): خطوات صفحة «إنشاء مؤسسة»
+وترتيبها، وأسماء حقول «إعدادات المؤسسة» وقيمها، وعمود «التسمية» في صفحة المناصب.
+\textbf{لم يُختبر عملياً:} إنشاء مؤسسة جديدة، وشاشة الاستيراد، ووصول الدعوة.
+
+\section{الفصل~\ref{ch:hr}: الموارد البشرية}
+
+{\renewcommand{\arraystretch}{1.12}\rcZebra
+\begin{longtable}{>{\raggedleft\arraybackslash}p{4.8cm} >{\raggedleft\arraybackslash}p{10.2cm}}
+\rcHeaderRow
+\thh{الموضوع} & \thh{المصدر}\\
+\endhead
+صفحات التطبيق ومساراته & \srcs{src/utils/sidebarItems.tsx \\ src/components/Entities/nativeEntityPages/\\ hrPages.tsx}\\
+أنواع الورديات والتحقق من الحقول & \srcs{src/components/Shifts/AddEditShiftPage.tsx \\ src/components/Shifts/WorkingHoursSection.tsx \\ src/components/Shifts/BreakSection.tsx \\ temp/*.xlsx (shift template)}\\
+أولوية الوردية والتجاوز & \srcs{src/utils/shiftInheritance.ts \\ src/components/Entities/EntityShiftField.tsx}\\
+سلم الرواتب & \srcs{src/components/Workforce/SalaryScale/\\ SalaryScaleTable.tsx}\\
+الحضور والعطل & \srcs{src/routes/time/attendance/index.tsx \\ src/components/Time/Holidays/Holiday/\\ holidayFormSchema.ts \\ src/components/Time/AttendancePolicy/}\\
+أنواع الإجازات وحقولها & \srcs{servers/shared/db/schema.generated.ts \\ common/locales/ar.ts \\ src/components/Entities/nativeEntityPages/\\ hrPages.tsx}\\
+إنشاء الكشوف والرواتب المعتمدة & \srcs{src/components/Payrolls/create/\\ useCreatePayrollFlow.tsx \\ src/components/Payrolls/create/\\ createPayrollCandidates.ts}\\
+الأسماء العربية & \srcs{src/locales/ar.ts \\ common/locales/ar.ts}\\
+إنشاء القسائم والاحتساب وتأكيد الاعتماد & \srcs{src/components/SalarySlips/\\ CreateSalarySlipsDialog.tsx \\ src/components/SalarySlips/SalarySlipItem/\\ SalarySlipActions.tsx}\\
+\end{longtable}
+\addtocounter{table}{-1}
+}
+
+\textbf{حدود الشرح:} تفاصيل الحساب المالي والسياسات تعتمد على إعدادات المؤسسة.
+شرح نموذج «ماراثون» يقتصر على الحقول المثبتة في المصدر؛ لم تُستنتج دورة مناوبات
+أو راحات تلقائية من اسم النوع. مثال الأفق تدريبي، وليس إثباتاً لبيانات موجودة.
+
+\textbf{تحقّق على بيئة الاختبار} (\en{test2}، \en{2026-10-13}): فُتح نموذج
+إضافة وردية باللغة العربية، وأُدخلت بيانات وهمية، واختيرت خمسة أيام عمل، وعُدّلت
+الاستراحة بأدوات الوقت إلى \en{13:00} حتى \en{13:30} داخل دوام \en{09:00} حتى
+\en{17:00}. ظهر الإجمالي \en{07:30}. حُفظت لقطة للنموذج فقط، دون بيانات شخصية.
+لم يُحفظ السجل في المؤسسة. \textbf{لم يُختبر عملياً:} حفظ الوردية ووراثتها،
+واستيرادها، واعتماد الإجازات، وتوليد الرواتب أو صرفها؛ شرحها مبني على المصادر.
+
+\textbf{تحقق إضافي للإصدار 0.3:} فُتح إجراء «إنشاء قسائم رواتب» على بيئة
+الاختبار، وتحقق ظهور «نهاية الفترة» ورسالة اختيارها قبل عرض الأعضاء.
+لم تُنشأ قسائم ولم يُختبر الاحتساب أو الاعتماد أو التوليد عملياً.
+
+\textbf{فرق القالب والنموذج:} قالب الورديات يعلّم ساعات العمل والمدة كإلزاميين،
+بينما يُظهر النموذج حقولاً مختلفة حسب النوع. لم تُختبر معاينة الاستيراد لهذه الحالات.

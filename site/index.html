@@ -1,0 +1,11 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>KayanOS Guide</title><link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<style>html{background:#05070c;color:#e6edf3;font-family:system-ui,sans-serif}a{color:#2dd4bf}body{display:grid;place-items:center;min-height:100vh;margin:0;gap:12px}</style>
+<script>
+  var l = null;
+  try { l = localStorage.getItem('kos-guide-lang'); } catch (e) {}
+  if (l !== 'ar' && l !== 'en') l = /^ar\b/i.test(navigator.language || '') ? 'ar' : 'en';
+  location.replace(l + '/index.html' + location.hash);
+</script></head>
+<body><p><a href="ar/index.html" lang="ar" dir="rtl">الدليل بالعربية</a> · <a href="en/index.html">Guide in English</a></p></body></html>

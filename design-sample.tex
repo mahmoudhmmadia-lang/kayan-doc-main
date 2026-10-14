@@ -1,0 +1,75 @@
+% Design sample — for visual review only (not part of the guide content).
+\documentclass[11pt,oneside,openany]{report}
+\input{preamble}
+
+\begin{document}
+
+\makecover{\en{KayanOS} · دليل المستخدم}
+  {دليل نظام \kos}
+  {تأسيس المؤسسة وتشغيل التطبيقات}
+  {تشرين الأول 2026}{\en{0.1} — عينة تصميم}{\en{RightCode}}
+
+\chapter{عينة التصميم}
+\label{ch:sample}
+
+\section{عنوان من المستوى الثاني}
+
+هذه فقرة عربية تجريبية لمراجعة الخط والمسافات واتجاه النص. يعتمد \kos{}
+على فكرة بسيطة: كل نوع بيانات في المؤسسة \en{(Entity)} له تعريف وحقول وصلاحيات،
+والصفحات تُبنى فوق هذه التعريفات. تظهر الأسماء الإنجليزية عند أول ذكر فقط، مثل
+المناصب \key{positions} والتعيينات \key{assignments}.
+
+\subsection{عنوان من المستوى الثالث}
+
+\begin{table}[h]
+\centering
+\caption{مثال على جدول تصنيف البيانات}
+\label{tab:sample}
+\rcZebra
+\begin{tabularx}{\linewidth}{R{3.2cm} R{3cm} Y}
+\rcHeaderRow
+\thh{البيان} & \thh{التصنيف} & \thh{ملاحظة}\\
+اسم المؤسسة & \req & يُطلب عند الإنشاء.\\
+الشعار & \opt & يمكن إضافته لاحقاً من الإعدادات.\\
+المنطقة الزمنية & \rec & تؤثر على الدوام والتقارير.\\
+رمز السجل & \gen & يُنشأ تلقائياً عند الحفظ.\\
+\end{tabularx}
+\end{table}
+
+\begin{rcchecklist}[قائمة تحقق: قبل استيراد الأعضاء]
+\begin{checklist}
+  \item أُنشئت الوحدات التنظيمية الرئيسية.
+  \item أُدخلت المواقع الجغرافية.
+  \item عُرّفت المناصب وربطت بالوحدات.
+  \item راجعت ملف \en{Excel} وتأكدت من عدم تكرار الرموز.
+\end{checklist}
+\end{rcchecklist}
+
+\begin{rcwarn}
+عند إعادة الاستيراد، حدّث السجلات الموجودة بدلاً من إنشاء نسخ مكررة.
+\end{rcwarn}
+
+\begin{figure}[h]
+\centering
+\begin{tikzpicture}[node distance=1.1cm and 1.6cm]
+  \node[entity]                       (asg) {\RL{التعيينات}};
+  \node[entity,left=of asg]           (pos) {\RL{المناصب}};
+  \node[entity,above right=0.6cm and 1.6cm of asg] (mem) {\RL{الأعضاء}};
+  \node[entity,left=of pos]           (node) {\RL{الوحدات التنظيمية}};
+  \node[entityOpt,below=0.9cm of pos] (loc) {\RL{المواقع}};
+  \node[entityGen,below right=0.6cm and 1.6cm of asg] (slip) {\RL{قسائم الرواتب}};
+  \draw[dependsOn]    (asg) -- (pos);
+  \draw[dependsOn]    (asg) -- (mem);
+  \draw[dependsOn]    (pos) -- (node);
+  \draw[dependsOnOpt] (pos) -- (loc);
+  \draw[flowsTo]      (asg) -- node[edgeLabel]{\RL{مسار الرواتب}} (slip);
+\end{tikzpicture}
+
+\vspace{6pt}\rclegend
+\caption{عينة مخطط علاقات — للتصميم فقط، العلاقات لم تُعتمد بعد}
+\label{fig:sample}
+\end{figure}
+
+انظر الجدول~\ref{tab:sample} والشكل~\ref{fig:sample}.
+
+\end{document}
