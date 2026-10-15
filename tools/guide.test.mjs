@@ -26,7 +26,7 @@ test('all chapter references resolve and diagrams carry Arabic legends',()=>{
  const source=files.map(f=>fs.readFileSync(path.join(root,f),'utf8')).join('\n');
  for(const [,label] of source.matchAll(/\\ref\{([^}]+)\}/g)) assert.ok(doc.labels.has(label),`Missing ${label}`);
  const figures=doc.blocks.filter(b=>b.tikz);
- assert.equal(figures.length,5);
+ assert.equal(figures.length,13);
  for(const figure of figures) { assert.ok(figure.tikz.includes('\\rclegend')); assert.ok(figure.caption); }
  assert.ok(doc.blocks.some(b=>b.type==='chapter' && b.label==='ch:hr'));
 });
@@ -40,7 +40,7 @@ test('built Word contains HR, Arabic language metadata, diagrams and page breaks
  assert.ok(xml.includes('<w:bidi'));
  assert.ok(xml.includes('<w:rtl'));
  assert.ok((xml.match(/<w:pageBreakBefore/g)||[]).length>=5);
- assert.equal((xml.match(/<wp:inline/g)||[]).length,8); // five diagrams + three existing screenshots
+ assert.equal((xml.match(/<wp:inline/g)||[]).length,27); // thirteen diagrams + fourteen screenshots
  assert.ok(!xml.includes('??'));
 });
 
@@ -84,6 +84,6 @@ test('built HTML site: one page per chapter, language, direction and working lin
    assert.ok(!html.includes('>??<'),`${where}: unresolved reference`);
    diagrams+=(html.match(/<svg class="diagram"/g)||[]).length;
   }
-  assert.equal(diagrams,5);
+  assert.equal(diagrams,13);
  }
 });

@@ -5,6 +5,15 @@ the RightCode Word template (`temp/نموذج رايت كود - Copy.docx`).
 
 ## Editorial purpose
 
+**Current style: less text, easier reading, more useful visuals.** Use short
+actions and compact tables. Replace repeated explanations with a diagram or a
+verified screenshot. Keep where to click, what to enter, how to save, what to
+check, and how to recover. Describe every app page briefly in priority order.
+Use readable diagram labels and captions that tell readers what to notice.
+Screenshots must come from test2, without blur or masking; label unsaved examples
+and Arabic UI screenshots shown in the English guide. Apply this to all current
+chapters and both languages, and to future chapters.
+
 Write for a business reader who has never used KayanOS. Teach the business
 problem, what the product offers, the useful result, and then the exact workflow.
 Use the same fictional company throughout. Separate initial setup from daily
@@ -18,6 +27,17 @@ Do not shorten a chapter by removing the steps a beginner needs. Keep implementa
 details and verification limitations in the technical appendix and progress log.
 
 ## Layout
+
+For each app, include a prioritized page guide after the business introduction.
+Cover every current standalone page, including those introduced in organization
+setup. Give its exact UI name and navigation section, purpose, responsible reader,
+when it matters, and expected record/result. Reconcile coverage against setup,
+navigation and page implementations; document sources in the internal appendix.
+Rank foundations before daily operations and specialist setup, explaining how the
+reader's goal changes priority. Link existing walkthroughs. Add vertical diagrams
+of the main models and their connections, distinguishing required dependencies,
+optional links and workflow order. Describe tabs as tabs, not additional pages.
+Keep Arabic and English coverage and diagrams identical in structure.
 
 - `preamble.tex` — all design settings (fonts, colors, headings, header/footer,
   tables, checklists, diagram styles). Content files never redefine design.
@@ -106,8 +126,12 @@ Menu → Compiler → XeLaTeX and Main document → `main.tex` (the included
 - Inline dependency arrow in text: `التعيينات \dep{} الأعضاء`.
 - After a `longtable`, add `\addtocounter{table}{-1}`; caption it with
   `\captionof{table}{...}` placed before the table.
-- Screenshots go in `figures/screens/` (mask personal data before saving).
+- Screenshots go in `figures/screens/` (clear originals; no blur or masking).
 - Data classification badges: `\req`, `\rec`, `\opt`, `\gen`.
 - Diagram arrows: `dependsOn` (solid) = "requires first"; `dependsOnOpt` (dotted)
   = "optional relation"; `flowsTo` (dashed,
   open head) = "process moves to". Always add `\rclegend` under a diagram.
+
+### Clear images, fewer words (2026-10-14)
+
+Use more screenshots beside the actions they explain. Capture crisp originals at 2× resolution; never blur, mask, reconstruct or invent UI. Use blank forms, sample data or framing that excludes unrelated personal fields. Replace old masked screenshots with fresh captures. Keep captions short and allow full-size viewing. Cut repeated prose while retaining every page, necessary action and verification. Apply to both languages and future app chapters.

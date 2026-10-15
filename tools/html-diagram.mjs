@@ -77,7 +77,7 @@ export function parseTikz(tikz) {
 // ---------------------------------------------------------------- layout
 
 const NODE_W = 216;
-const STEP_W = 300;
+const STEP_W = 260;
 const LINE_H = 22;
 const PAD_Y = 14;
 const GAP_X = 28;
@@ -152,7 +152,7 @@ export function renderDiagram(tikz, { dir = 'rtl', id = 'd' } = {}) {
   });
 
   const marker = (name, open) => `<marker id="${id}-${name}" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9 ${open ? '' : 'Z'}" class="dg-head dg-head-${name}"/></marker>`;
-  return `<svg class="diagram" viewBox="0 0 ${width} ${height}" width="${width}" style="max-width:${width}px" role="img" xmlns="http://www.w3.org/2000/svg">
+  return `<svg class="diagram" data-layout="${isChain ? 'flow' : 'tree'}" viewBox="0 0 ${width} ${height}" width="${width}" style="max-width:${width}px" role="img" xmlns="http://www.w3.org/2000/svg">
 <defs>${marker('dependsOn', false)}${marker('dependsOnOpt', false)}${marker('flowsTo', true)}</defs>
 ${paths.join('\n')}
 ${boxes.join('\n')}

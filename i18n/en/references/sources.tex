@@ -98,3 +98,8 @@ No slips were created, and calculation, approval and generation were not tested 
 
 \textbf{Template versus form difference:} the shifts template marks work hours and the duration as required,
 while the form shows different fields depending on the type. The import preview was not tested for these cases.
+
+
+\textbf{Page coverage, 2026-10-14:} Chapter 2 setup pages were reconciled with HR sections in src/utils/sidebarItems.tsx: two Core, four Workforce, three Salary Scale, nine Time and three Payment pages (21 total). Descriptions were checked against src/components/Entities/nativeEntityPages/hrPages.tsx, page descriptions in src/locales/ar.ts and src/locales/en.ts, and attendance labels in common/locales/ and src/locales/attendanceTerminals.ar.ts. Assignment and position relationships were checked in servers/shared/db/schema.generated.ts; salary-scale context comes from docs/ar/government-operations/salary-scale.mdx. Experience and holiday groups are pages; their internal details are not additional app pages. The commented-out days-off navigation entry is excluded. This is source verification, not a new live test of all pages.
+
+\textbf{2026-10-14:} Fresh unblurred test2 captures: unsaved forms; slip dialog cancelled without creation. Current node form requires code/name/type; leave uses start/end and calculated duration. Customized test2 navigation places Members in Core and includes additional pages; the guide inventory covers the 21 native pages.

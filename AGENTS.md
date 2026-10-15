@@ -35,10 +35,10 @@ changes (لم يبدأ / مسودة / قيد المراجعة / معتمد).
 
 ## 3. What's next
 
-Current direction (2026-10-13): the user explicitly requested revising the
-documentation approach and existing content for complete business beginners.
-Rewrite chapters 1–3 under the business-first rules below, without another outline
-approval. Rebuild both outputs and submit them for review. Do not start chapter 4.
+Current direction (2026-10-14): revise all existing chapters (1–3) in both
+languages with minimal text, simpler explanations and more explanatory diagrams
+and screenshots. This explicitly authorizes edits across these chapters without
+another outline approval. Rebuild the outputs; do not start unwritten chapters.
 
 1. On 2026-10-13 the user authorized updating chapters 1 and 2 with vertical
    diagrams and stronger Arabic support, then writing chapter 3. This authorizes
@@ -91,6 +91,36 @@ Open items carried forward (not yet verified in the live system):
   (`references/sources.tex`), never in the main text.
 
 **Style** (the user explicitly asked for this)
+- **Minimum text, maximum clarity (2026-10-14).** Prefer a short diagram or
+  screenshot plus concise actions over paragraphs. Remove repeated explanations,
+  long introductions and narration that the visual already explains. Aim for
+  one idea per sentence and one short purpose/result per page description.
+- Every visual must teach something: a navigation path, relationship, sequence,
+  input example or visible result. Use verified, clear test2 screenshots, never
+  invented UI images. Label unsaved examples and Arabic screenshots used in the
+  English guide. Keep labels readable on phones; split long node text into lines.
+- Keep the essentials: where to open, sample inputs, save/confirm, expected result,
+  and recovery. Keep all app pages in priority order; shorten descriptions instead
+  of omitting pages. Introduce shared responsibility once when possible. A diagram
+  replaces explanation, but does not replace the actions needed to complete a task.
+- **Complete app page coverage (2026-10-14).** After the business introduction,
+  name and describe every current standalone page, including foundational pages
+  introduced during organization initialization. Reconcile the setup chapter with
+  current navigation, native page implementations and UI translations; keep a
+  source-backed coverage record in the internal appendix. Do not silently omit
+  setup pages or count tabs, disabled pages or internal models as standalone pages.
+- Present pages in an explicit order of importance for the reader's goal:
+  foundational people/structure, recurring operations, then optional specialist
+  setup. Explain when priorities change (for example, payroll). For each page give
+  its exact UI name, navigation section, plain-language purpose, who uses it/when,
+  and the record or result to review. Link existing setup walkthroughs instead of
+  repeating them; page descriptions supplement the practical walkthroughs.
+- Include vertical diagrams of the app's main pages/models and their verified
+  connections. Explain each relationship in prose with the shared example.
+  Distinguish required dependencies, optional relationships and workflow sequence;
+  a workflow arrow must never imply a database relation or automatic processing.
+  Use multiple small diagrams when needed. Apply this to HR now and every future
+  app chapter, in Arabic and English, without starting the next chapter early.
 - **Business first, beginner friendly, actionable.** Start from a recognizable
   problem (lost requests, unclear responsibility, repeated employee data), explain
   the capability and its practical benefit, then teach the task. Avoid promises
@@ -135,7 +165,7 @@ Open items carried forward (not yet verified in the live system):
   explain unfamiliar terms through a concrete example, not literal translations.
 - Keep diagram text at a readable size; wrap labels into explicit Arabic lines
   rather than shrinking an entire diagram. Check every changed page in both outputs.
-- Screenshots from test2 only, with personal data masked; save them in
+- Screenshots from test2 only, without blur or masking; save them in
   `figures/screens/chNN-*.png`.
 
 **Shared example data** (use the same names and codes in every chapter)
@@ -264,3 +294,7 @@ kayanos-guide/
 ├── site/              ← generated HTML guide: ar/ and en/ (index.html + c1…c4.html), assets/
 └── kayanos-guide.pdf / .docx   ← latest outputs
 ```
+
+### Clear images, fewer words (2026-10-14)
+
+Use more screenshots beside the actions they explain. Capture crisp originals at 2× resolution; never blur, mask, reconstruct or invent UI. Use blank forms, sample data or framing that excludes unrelated personal fields. Replace old masked screenshots with fresh captures. Keep captions short and allow full-size viewing. Cut repeated prose while retaining every page, necessary action and verification. Apply to both languages and future app chapters.

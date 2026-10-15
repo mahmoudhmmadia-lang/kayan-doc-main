@@ -1584,6 +1584,11 @@ td code {
     transform: translateY(-3px) scale(1.01);
     box-shadow: 0 40px 70px -30px rgba(0, 0, 0, 0.65);
 }
+@media (max-width: 640px) {
+    .shot-btn img {
+        width: 100%;
+    }
+}
 .shot-zoom {
     position: absolute;
     top: 12px;
@@ -1614,12 +1619,22 @@ td code {
 .diagram-wrap {
     overflow-x: auto;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 }
 .diagram {
     display: block;
     height: auto;
     flex: none;
+    margin-inline: auto;
+}
+.diagram[data-layout="flow"] {
+    width: 100%;
+    flex: 0 1 auto;
+}
+@media (max-width: 680px) {
+    .diagram-card {
+        padding-inline: 10px;
+    }
 }
 .dg-node rect {
     fill: var(--surface-raised);

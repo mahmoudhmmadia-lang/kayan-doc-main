@@ -1,0 +1,227 @@
+{
+  "views": [
+    {
+      "lang": "ar",
+      "mobile": false,
+      "theme": "dark",
+      "ch": 1,
+      "steps": 7,
+      "diagrams": 4,
+      "images": 2
+    },
+    {
+      "lang": "ar",
+      "mobile": false,
+      "theme": "dark",
+      "ch": 2,
+      "steps": 10,
+      "diagrams": 3,
+      "images": 6
+    },
+    {
+      "lang": "ar",
+      "mobile": false,
+      "theme": "dark",
+      "ch": 3,
+      "steps": 11,
+      "diagrams": 6,
+      "images": 6
+    },
+    {
+      "lang": "ar",
+      "mobile": false,
+      "theme": "light",
+      "ch": 1,
+      "steps": 7,
+      "diagrams": 4,
+      "images": 2
+    },
+    {
+      "lang": "ar",
+      "mobile": false,
+      "theme": "light",
+      "ch": 2,
+      "steps": 10,
+      "diagrams": 3,
+      "images": 6
+    },
+    {
+      "lang": "ar",
+      "mobile": false,
+      "theme": "light",
+      "ch": 3,
+      "steps": 11,
+      "diagrams": 6,
+      "images": 6
+    },
+    {
+      "lang": "ar",
+      "mobile": true,
+      "theme": "dark",
+      "ch": 1,
+      "steps": 7,
+      "diagrams": 4,
+      "images": 2
+    },
+    {
+      "lang": "ar",
+      "mobile": true,
+      "theme": "dark",
+      "ch": 2,
+      "steps": 10,
+      "diagrams": 3,
+      "images": 6
+    },
+    {
+      "lang": "ar",
+      "mobile": true,
+      "theme": "dark",
+      "ch": 3,
+      "steps": 11,
+      "diagrams": 6,
+      "images": 6
+    },
+    {
+      "lang": "ar",
+      "mobile": true,
+      "theme": "light",
+      "ch": 1,
+      "steps": 7,
+      "diagrams": 4,
+      "images": 2
+    },
+    {
+      "lang": "ar",
+      "mobile": true,
+      "theme": "light",
+      "ch": 2,
+      "steps": 10,
+      "diagrams": 3,
+      "images": 6
+    },
+    {
+      "lang": "ar",
+      "mobile": true,
+      "theme": "light",
+      "ch": 3,
+      "steps": 11,
+      "diagrams": 6,
+      "images": 6
+    },
+    {
+      "lang": "en",
+      "mobile": false,
+      "theme": "dark",
+      "ch": 1,
+      "steps": 7,
+      "diagrams": 4,
+      "images": 2
+    },
+    {
+      "lang": "en",
+      "mobile": false,
+      "theme": "dark",
+      "ch": 2,
+      "steps": 10,
+      "diagrams": 3,
+      "images": 6
+    },
+    {
+      "lang": "en",
+      "mobile": false,
+      "theme": "dark",
+      "ch": 3,
+      "steps": 11,
+      "diagrams": 6,
+      "images": 6
+    },
+    {
+      "lang": "en",
+      "mobile": false,
+      "theme": "light",
+      "ch": 1,
+      "steps": 7,
+      "diagrams": 4,
+      "images": 2
+    },
+    {
+      "lang": "en",
+      "mobile": false,
+      "theme": "light",
+      "ch": 2,
+      "steps": 10,
+      "diagrams": 3,
+      "images": 6
+    },
+    {
+      "lang": "en",
+      "mobile": false,
+      "theme": "light",
+      "ch": 3,
+      "steps": 11,
+      "diagrams": 6,
+      "images": 6
+    },
+    {
+      "lang": "en",
+      "mobile": true,
+      "theme": "dark",
+      "ch": 1,
+      "steps": 7,
+      "diagrams": 4,
+      "images": 2
+    },
+    {
+      "lang": "en",
+      "mobile": true,
+      "theme": "dark",
+      "ch": 2,
+      "steps": 10,
+      "diagrams": 3,
+      "images": 6
+    },
+    {
+      "lang": "en",
+      "mobile": true,
+      "theme": "dark",
+      "ch": 3,
+      "steps": 11,
+      "diagrams": 6,
+      "images": 6
+    },
+    {
+      "lang": "en",
+      "mobile": true,
+      "theme": "light",
+      "ch": 1,
+      "steps": 7,
+      "diagrams": 4,
+      "images": 2
+    },
+    {
+      "lang": "en",
+      "mobile": true,
+      "theme": "light",
+      "ch": 2,
+      "steps": 10,
+      "diagrams": 3,
+      "images": 6
+    },
+    {
+      "lang": "en",
+      "mobile": true,
+      "theme": "light",
+      "ch": 3,
+      "steps": 11,
+      "diagrams": 6,
+      "images": 6
+    }
+  ],
+  "interactions": [
+    "screenshot lightboxes on all pages",
+    "progress and reload",
+    "language and deep link",
+    "search result navigation",
+    "theme toggle"
+  ]
+}

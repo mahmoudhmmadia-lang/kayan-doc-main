@@ -2,6 +2,14 @@
 
 الحالات: لم يبدأ · مسودة · قيد المراجعة · معتمد
 
+## التحديث الحالي: دليل مختصر ومرئي — 2026-10-14
+
+- أُعيد تحرير الفصول الثلاثة بالعربية والإنجليزية: مقدمات أقصر، عناوين مباشرة، خطوات عملية، ووصف مختصر لكل صفحة. بقيت صفحات الموارد البشرية الـ21 وترتيب أهميتها وخطوات الحفظ والتحقق والاسترداد.
+- زادت المخططات من 7 إلى 13 والصور من 3 إلى 5. أضيفت مخططات ليوم العمل والتنقل والاستيراد ومراجعة الحضور والإجازة وإعداد سلم الراتب. أُدرجت صورتا الصفحة الرئيسية ونموذج الوردية التجريبي من test2؛ وُضح أن النموذج غير محفوظ وأن صور الواجهة في النسخة الإنجليزية عربية.
+- حُدثت قواعد الكتابة في AGENTS.md وREADME.md. صارت مخططات الخطوات ملائمة للهاتف دون تمرير أفقي، مع لفّ التسميات؛ تبقى أشجار العلاقات العريضة قابلة للتمرير لقراءة الفروع.
+- نجح بناء HTML والاختبارات الخمسة الخاصة بالمصدر والمراجع والبنية والروابط والأصول. نجح اختبار Chrome للفصول الثلاثة في 24 تركيبة من اللغة والمظهر وحجم الشاشة، مع فتح الصور وتكبيرها وإغلاقها، وحفظ الإنجاز بعد التحديث، وتبديل اللغة إلى الخطوة نفسها، والبحث والتنقل وتغيير المظهر. الأدلة: `review/html/visual-verification.json` و`review/html/visual-*.png`؛ روجعت لقطات سطح المكتب والهاتف بصرياً.
+- لم يُختبر أي إجراء جديد داخل test2؛ التغيير توثيقي والصور معاد استخدامها من التحقق السابق. تعذر بناء PDF وWord لعدم توفر محرك TeX قابل للتشغيل؛ الملفان المنشوران سابقاً لا يمثلان هذه المراجعة. الفصول قيد المراجعة، ولم تُضف فصول جديدة.
+
 | # | الجزء | الملف | الحالة | ملاحظات |
 | --- | --- | --- | --- | --- |
 | 0 | عينة التصميم وإعدادات التنسيق | `design-sample.tex`, `preamble.tex` | معتمد | اعتُمدت 2026-10-13 مع الاختلافات الأربعة المقترحة |
@@ -50,6 +58,9 @@
 
 ## سجل القرارات
 
+- 2026-10-14: بطلب المستخدم، أضيف إلى فصل الموارد البشرية بالعربية والإنجليزية دليل كامل للصفحات حسب أهمية الاستخدام: 6 للأشخاص والهيكل، 9 للوقت، و6 لإعداد الرواتب والدفع. شمل الوحدات التنظيمية والنقاط الجغرافية والصفحات المقدمة في تهيئة المؤسسة، مع وصف الغرض والمستخدم والنتيجة ومسار القسم لكل صفحة. أضيف مخطط علاقات التعيين والعضو والمنصب والقسم والموقع، ومخطط مستقل لمسار مراجعة الرواتب. بقيت خطوات الفصل وروابطها الحالية، ولم يبدأ فصل المهام. حدثت قواعد AGENTS.md وREADME.md لتلزم كل فصل تطبيق لاحق بهذه التغطية والمخططات.
+- تحقق هذا التحديث: نجح بناء HTML ونجحت الاختبارات الخمسة الخاصة بالمصدر والروابط والمخططات وتطابق البنية بين اللغتين. فشل البناء الكامل لعدم توفر محرك TeX قابل للتشغيل؛ نسختا PDF وWord لم تحدثا. عدل اختبار عدد صور Word ليتطلب المخططات الجديدة، ولذلك لا تعد النسخة القديمة ناجحة لهذا التحديث. تعذر الفحص البصري: أعاد Chrome وEdge الخطأ ERR_ABORTED عند التنقل إلى الدليل المحلي، ولم تؤخذ لقطات جديدة. لا يحتاج تعديل التوثيق إلى إنشاء بيانات على test2؛ وصف الصفحات الجديدة وعلاقاتها متحقق من المصدر فقط. الفصل ما زال قيد المراجعة.
+
 - 2026-10-14: طلب المستخدم التركيز على دليل HTML حديث بهوية موقع KayanOS (ألوانه وخطوطه)، بالعربية والإنجليزية كالموقع، في صفحة واحدة بخطوات وانتقالات وتنقل مباشر. العربية هي المصدر الأساسي، والإنجليزية في `i18n/en/` ببنية مطابقة. تبقى قواعد PDF وWord وLaTeX دون تغيير.
 
 - 2026-10-13: طلب المستخدم اعتماد المخططات الرأسية وتحسين دعم العربية، وأذن بكتابة فصل الموارد البشرية بعد تحديث الفصلين السابقين. الإذن لا يشمل الانتقال إلى فصل المهام.
@@ -72,3 +83,19 @@
 - تحقّق فعلي على test2: نموذج الوردية بالعربية، خمسة أيام عمل، دوام من `09:00` إلى `17:00` واستراحة من `13:00` إلى `13:30`؛ الإجمالي الظاهر `07:30`. اللقطة: `figures/screens/ch03-shift-example.png`، ببيانات وهمية ودون بيانات شخصية.
 - لم يُحفظ سجل الوردية، ولم تُختبر الوراثة أو استيراد الورديات أو اعتماد الإجازات أو حساب الرواتب وصرفها عملياً. هذه التفاصيل مستندة إلى المصدر كما يوضح الملحق. لم يتغير كود التطبيق، لذا اقتصر الاختبار الحي على سلوك النموذج المشروح.
 - أُعيد تجهيز `kayanos-guide-overleaf.zip` بمصادر الإصدار الحالي. الفصل الثالث قيد المراجعة؛ فصل المهام لم يبدأ.
+
+## Clear screenshots update — 2026-10-14
+
+- Updated all three existing chapters in Arabic and English: 14 screenshots (previously 5), plus 13 diagrams. Replaced all three referenced masked screenshots with fresh clear captures. No blur or masking in the current guide images.
+- Captured test2 workspace/app menus, HR page cards, blank location/node/position/member/assignment forms, leave type/leave/payroll input forms, and the salary-slip dialog at 2× resolution. Forms were not saved; the slip dialog was cancelled.
+- Shortened role/page descriptions and captions; retained the 21 native HR pages and required actions. Updated node requirements and leave dates to match visible forms. Noted customized navigation in the source appendix.
+- Updated AGENTS.md and README.md: more clear images, fewer words, short captions, blank/sample forms and full-size viewing for current/future chapters. Mobile screenshots use the available width.
+- Verification: HTML build passed; 5 focused tests passed. Real browser verification passed all 24 language/viewport/theme/chapter combinations, every screenshot lightbox, per-step overflow, search, progress persistence and language navigation. Visual evidence: review/html/clear-images-desktop.png and clear-images-mobile.png.
+- Documentation-only change: no application behavior changed. Live checks covered forms and navigation, not saving records or running payroll. PDF/Word remain outdated because the local TeX engine is unavailable; their tests and visual validation were not claimed.
+
+## HR page overviews — 2026-10-15
+- Replaced the second column in all three HR page tables with concise explanations of what each page offers, in Arabic and English (21 pages).
+- Rebuilt HTML; focused output checks passed for both languages, all rows and new headings.
+- Existing guide tests fail on chapter-one language structure differences and diagram counts (11 versus 13), outside this copy edit.
+- Browser verification blocked: local headless Chrome exits with GPU process failure. PDF/Word rebuild blocked by unavailable TeX tools. No screenshots or PDF/Word validation claimed.
+- Documentation-only edit; no test2 application interaction was needed.
