@@ -33,7 +33,7 @@
 
 جهّز أسماء الأقسام والمواقع والوظائف والموظفين.
 
-\textbf{الرمز:} معرّف ثابت، مثل \en{HZN-HR}. \textbf{النطاق الفرعي:} جزء العنوان، مثل \en{hzn} في \en{hzn.kayanos.app}.
+\textbf{الرمز:} معرّف ثابت، مثل \en{HZN-HR}. \textbf{النطاق الفرعي:} جزء من عنوان المؤسسة، مثل \en{hzn} في \en{hzn.kayanos.app}.
 
 \begin{table}[H]
 \centering
@@ -46,7 +46,7 @@
 بريد إلكتروني أو رقم هاتف & \req & يصله رمز التحقق.\\
 اسم المؤسسة & \req & يمكن كتابته بأكثر من لغة.\\
 النطاق الفرعي & \req & عنوان المؤسسة، مثل \en{hzn}.\\
-البلد وعدد الموظفين & \req & عدد الموظفين تقديري (فئة).\\
+البلد وعدد الموظفين & \req & اختر الفئة التي تضم العدد التقريبي للموظفين.\\
 اسم المدير & \req & صاحب الحساب الأول.\\
 كلمة مرور المدير & \opt & إن تُركت فارغة يصلك رمز لتعيينها لاحقاً.\\
 الشعار & \opt & صورة حتى \en{5} ميغابايت.\\
@@ -60,7 +60,7 @@
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.62\linewidth]{figures/screens/ch02-create-org.png}
+\includegraphics[width=0.95\linewidth]{figures/screens/ch02-create-org-ar.png}
 \caption{صفحة «إنشاء مؤسسة»: الخطوات الأربع في الأعلى}
 \label{fig:setup-create-screen}
 \end{figure}
@@ -86,7 +86,7 @@
 \begin{tabularx}{\linewidth}{Y Y}
 \rcHeaderRow
 \thh{جاهز بعد الإنشاء} & \thh{عليك إدخاله}\\
-حسابك كعضو، مع دور «المدير». & النقاط الجغرافية (المواقع).\\
+حسابك ضمن الأعضاء، بدور «المدير». & النقاط الجغرافية (المواقع).\\
 الأدوار الأساسية. & الوحدات التنظيمية.\\
 التطبيقات وتعريفات الكيانات. & المناصب.\\
 العملات وقوالب الحالات. & الأعضاء والتعيينات والورديات.\\
@@ -96,7 +96,7 @@
 \section{2. إعدادات المؤسسة}
 \label{sec:setup-settings}
 
-\textbf{المسار:} الإعدادات / الإدارة / إعدادات المؤسسة.
+\textbf{المسار:} «الإعدادات» / «الإدارة» / «إعدادات المؤسسة».
 
 \begin{table}[H]
 \centering
@@ -107,7 +107,7 @@
 \rcHeaderRow
 \thh{الإعداد} & \thh{القيمة الافتراضية} & \thh{لماذا يهم؟}\\
 المنطقة الزمنية الافتراضية & \en{UTC} & تحدد أوقات الدوام والمواعيد والتقارير.\\
-اللغة الافتراضية & \en{English} & لغة الواجهة للأعضاء الجدد.\\
+اللغة الافتراضية & الإنجليزية & لغة الواجهة للأعضاء الجدد.\\
 يوم بداية الأسبوع & الاثنين & يؤثر على التقويم والتقارير الأسبوعية.\\
 الشعار واللون الأساسي & — & هوية المؤسسة في الواجهة (اختياري).\\
 \end{tabularx}
@@ -138,31 +138,31 @@
 
 \begin{itemize}
   \item التعيين يحتاج إلى عضو ومنصب محفوظين.
-  \item ربط المنصب بالقسم والموقع اختياري ومُنصح به؛ جهّزهما أولاً.
+  \item ربط المنصب بالقسم والموقع اختياري وموصى به؛ جهّزهما أولاً.
   \item أنشئ الوحدة أو الموقع الأب قبل التابع.
   \item الوردية اختيارية هنا؛ شرحها في القسم~\ref{sec:hr-shifts}.
 \end{itemize}
 
-\section{ أضف أول موظف}
+\section{أضف أول موظف}
 \label{sec:setup-data}
 
 \subsection{الموقع والقسم}
 
 \begin{enumerate}
-  \item افتح الموارد البشرية / الأساسية / النقاط الجغرافية. أضف \en{HZN-DAM}، «المقر الرئيسي، دمشق». أكمل النوع والبلد والمحافظة والمدينة والعنوان؛ احفظ وتحقق من ظهوره.
-  \item من الأساسية / الوحدات التنظيمية، أضف «الإدارة العامة» برمز \en{HZN-GM} واختر النوع واحفظ. أضف «الموارد البشرية» برمز \en{HZN-HR}، واختر الإدارة العامة وحدةً أم، ثم احفظ.
+  \item افتح «الموارد البشرية» / الأساسية / النقاط الجغرافية. أضف \en{HZN-DAM}، «المقر الرئيسي، دمشق». أكمل النوع والبلد والمحافظة والمدينة والعنوان؛ احفظ وتحقق من ظهوره.
+  \item من الأساسية / الوحدات التنظيمية، أضف «الإدارة العامة» برمز \en{HZN-GM} واختر النوع واحفظ. أضف «الموارد البشرية» برمز \en{HZN-HR}، واختر الإدارة العامة وحدةً أماً، ثم احفظ.
 \end{enumerate}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.45\linewidth]{figures/screens/ch02-location-fields.png}
+\includegraphics[width=0.95\linewidth]{figures/screens/ch02-location-fields-ar.png}
 \caption{الموقع: الرمز والعنوان}
 \label{fig:setup-location-fields}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.45\linewidth]{figures/screens/ch02-node-fields.png}
+\includegraphics[width=0.95\linewidth]{figures/screens/ch02-node-fields-ar.png}
 \caption{الوحدة: النوع والوحدة الأم}
 \label{fig:setup-node-fields}
 \end{figure}
@@ -177,21 +177,21 @@
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.45\linewidth]{figures/screens/ch02-position-fields.png}
+\includegraphics[width=0.95\linewidth]{figures/screens/ch02-position-fields-ar.png}
 \caption{المنصب: الوحدة والموقع والوردية}
 \label{fig:setup-positions}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.45\linewidth]{figures/screens/ch02-member-fields.png}
-\caption{العضو: رقم الموظف والتواصل والمقعد}
+\includegraphics[width=0.95\linewidth]{figures/screens/ch02-member-fields-ar.png}
+\caption{العضو: ملف موظف تجريبي وبياناته الأساسية}
 \label{fig:setup-member-fields}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.45\linewidth]{figures/screens/ch02-assignment-fields.png}
+\includegraphics[width=0.95\linewidth]{figures/screens/ch02-assignment-fields-ar.png}
 \caption{التعيين: العضو والمنصب والفترة}
 \label{fig:setup-assignment-fields}
 \end{figure}
@@ -205,7 +205,7 @@
 \rcZebra
 \begin{tabularx}{\linewidth}{R{3.3cm} R{4.8cm} Y}
 \rcHeaderRow
-\thh{الصفحة} & \thh{إلزامي} & \thh{مُنصح به}\\
+\thh{الصفحة} & \thh{إلزامي} & \thh{موصى به}\\
 النقاط الجغرافية & الرمز، الاسم، النوع، البلد، المحافظة، المدينة، العنوان & يتبع لـ (الموقع الأب)\\
 الوحدات التنظيمية & الرمز، الاسم، النوع & الوحدة الأم\\
 المناصب & الرمز، الاسم & الوحدة، الموقع\\
@@ -216,7 +216,7 @@
 
 لا تكرر الرمز داخل القائمة أو تغيّره عند تصحيح الاسم.
 
-\subsection{استيراد Excel}
+\subsection{الاستيراد من ملف إكسل}
 \label{sec:setup-import}
 
 بديل للإدخال اليدوي. جرّب صفاً واحداً أولاً.
@@ -239,7 +239,7 @@
 
 
 \begin{rcwarn}[تحديث أم سجل جديد؟]
-الرمز الموجود يحدّث السجل. رمز جديد ينشئ سجلاً جديداً؛ لا تغيّر الرموز لتصحيح البيانات. الصفوف المكررة في الملف تُتجاهل.
+استخدام رمز موجود يحدّث سجله. واستخدام رمز جديد ينشئ سجلاً جديداً؛ لا تغيّر الرموز لتصحيح البيانات. الصفوف المكررة في الملف تُتجاهل.
 \end{rcwarn}
 
 \subsection{دخول الموظف}
@@ -284,9 +284,9 @@
   \item المنطقة الزمنية واللغة الافتراضية مضبوطتان.
   \item كل وحدة تتبع وحدتها الأم الصحيحة.
   \item كل منصب مرتبط بوحدته وموقعه.
-  \item كل عضو له تعيين واحد على الأقل.
+  \item لكل موظف تريد ربطه بوظيفة تعيين واحد على الأقل.
   \item يظهر لكل منصب «الأعضاء النشطون» الذين يشغلونه.
-  \item عضو تجريبي استلم الدعوة ودخل بنجاح.
+  \item تسلّم الموظف التجريبي الدعوة وسجّل الدخول بنجاح.
 \end{checklist}
 \end{rcchecklist}
 

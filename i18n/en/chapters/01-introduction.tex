@@ -81,8 +81,8 @@ Start with two employees, two jobs and one shift. Check, then expand.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch01-workspaces-clear.png}
-\caption{Open HR or All workspaces (Arabic interface)}
+\includegraphics[width=0.95\linewidth]{figures/screens/ch01-workspaces-clear-en.png}
+\caption{Open HR or All workspaces}
 \label{fig:intro-home}
 \end{figure}
 
@@ -104,51 +104,10 @@ Start with two employees, two jobs and one shift. Check, then expand.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch01-apps-clear.png}
-\caption{Choose an app (Arabic interface)}
+\includegraphics[width=0.95\linewidth]{figures/screens/ch01-apps-clear-en.png}
+\caption{Choose an app}
 \label{fig:intro-apps-directory}
 \end{figure}
-
-\textbf{Check:} open a member you can access. Return using the top navigation path. If an app or edit button is missing, ask the administrator to check permissions.
-
-\section{Names to know}
-\label{sec:intro-concepts}
-
-\begin{table}[H]
-\centering
-\caption{Work language and its names in KayanOS}
-\label{tab:intro-terms}
-\rcZebra
-\begin{tabularx}{\linewidth}{R{3.4cm} Y}
-\rcHeaderRow
-\thh{Screen name} & \thh{What it means, simply}\\
-Organization & Horizon's workspace and its team accounts.\\
-Member & The person who works with us: Sarah Al-Khatib.\\
-Node (organizational unit) & The department or division: Human Resources.\\
-Location & The place of work: the head office in Damascus.\\
-Position & The job: HR Manager.\\
-Assignment & Recording that Sarah is the one who holds this job during her time at work.\\
-Role and permissions & What Sarah is allowed to see or do, such as viewing employees or editing their data.\\
-\end{tabularx}
-\end{table}
-
-\begin{figure}[H]
-\centering
-\begin{tikzpicture}[node distance=0.65cm]
-  \node[entity] (asg) {Assigning Sarah to her\\job};
-  \node[entity,below right=0.7cm and 0.4cm of asg] (mem) {Sarah Al-Khatib Member};
-  \node[entity,below left=0.7cm and 0.4cm of asg] (pos) {HR Manager Position};
-  \node[entityOpt,below=of pos] (node) {Human Resources unit};
-  \draw[dependsOn] (asg.south) -- ++(0,-0.3) -| (mem.north);
-  \draw[dependsOn] (asg.south) -- ++(0,-0.3) -| (pos.north);
-  \draw[dependsOnOpt] (pos.south) -- (node.north);
-\end{tikzpicture}
-\rclegend
-\caption{Create the person's data and the job, then link them with an assignment}
-\label{fig:intro-structure}
-\end{figure}
-
-An assignment needs the person and job. Linking the job to a department is optional and recommended.
 
 \section{Choose an app}
 
@@ -168,26 +127,4 @@ Arrange an appointment, or go back to a file or a conversation. & Calendar, the 
 Prepare a form specific to the organization's work. & Builder, handled by an authorized administrator.\\
 \end{tabularx}
 \end{table}
-
-\section{Getting started}
-\label{sec:intro-how-to-read}
-
-\begin{figure}[H]
-\centering
-\begin{tikzpicture}[node distance=0.4cm,stepBox/.append style={minimum width=6cm,text width=5.6cm,minimum height=0.7cm,font=\small\bfseries}]
-  \node[stepBox] (s1) {Choose work to\\organize};
-  \node[stepBox,below=of s1] (s2) {Set up the\\organization and team};
-  \node[stepBox,below=of s2] (s3) {Apply a small example};
-  \node[stepBox,below=of s3] (s4) {Check the result with\\the user};
-  \node[stepBox,below=of s4] (s5) {Extend use to the rest\\of the team};
-  \foreach \a/\b in {s1/s2,s2/s3,s3/s4,s4/s5} \draw[flowsTo] (\a) -- (\b);
-\end{tikzpicture}
-\rclegend
-\caption{Start with a small useful result, then extend the use}
-\label{fig:intro-journey}
-\end{figure}
-
-Follow the steps downwards. Set up the team in Chapter~\ref{ch:org-setup}, then working time in Chapter~\ref{ch:hr}. Tasks and Projects chapters are not written yet.
-
-\req{} needed to save; \rec{} helpful; \opt{} when needed; \gen{} system-filled. Replace Horizon examples with your organization’s data.
 

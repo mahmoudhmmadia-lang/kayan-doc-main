@@ -11,7 +11,7 @@ verified screenshot. Keep where to click, what to enter, how to save, what to
 check, and how to recover. Describe every app page briefly in priority order.
 Use readable diagram labels and captions that tell readers what to notice.
 Screenshots must come from test2, without blur or masking; label unsaved examples
-and Arabic UI screenshots shown in the English guide. Apply this to all current
+with short captions. Each language uses its own interface screenshots. Apply this to all current
 chapters and both languages, and to future chapters.
 
 Write for a business reader who has never used KayanOS. Teach the business
@@ -27,6 +27,28 @@ Do not shorten a chapter by removing the steps a beginner needs. Keep implementa
 details and verification limitations in the technical appendix and progress log.
 
 ## Layout
+
+**Dedicated feature pages (2026-10-15).** Give every user-facing feature or model
+its own guide page, linked from the app overview. Use verified screenshots,
+simple vertical diagrams and brief text to explain what it is, what it is used
+for, its practical benefit, and a concrete example with actions and a visible
+result. For example, Nodes needs its own explanation of departments, their
+hierarchy and links to positions. Apply this in Arabic and English. Overview
+tables use “What this page offers” / “ماذا تقدم هذه الصفحة؟” for concise summaries.
+The dedicated-page direction supersedes the former one-HTML-page-per-chapter
+layout; preserve existing links and update navigation when implementing it.
+PDF/Word retain their approved styling, with each feature's dedicated section
+starting on a new page. Full requirements are in AGENTS.md under “A dedicated
+guide page for each feature or model”. This is the authoring direction; the
+HR now has 21 dedicated feature pages in each language, generated from
+`chapters/03-hr-features.tex` and its English counterpart. Other chapters retain
+their existing layout. The HR chapter is a directory; walkthroughs live on their dedicated feature pages.
+
+Feature sections use `sec:hr-feature-<slug>` labels. The renderer routes these to
+`hr-<slug>.html`, includes their content in search and progress, and keeps the
+same filename when switching language. The original chapter anchors remain
+available. Add feature sections after the existing HR content to preserve those
+anchors. Restart the preview server after editing renderer modules.
 
 For each app, include a prioritized page guide after the business introduction.
 Cover every current standalone page, including those introduced in organization
@@ -82,8 +104,9 @@ When you edit an Arabic chapter, make the same change in `i18n/en/`.
 ## HTML guide (Arabic + English)
 
 `site/` is a modern web guide per language in the KayanOS website theme
-(kayanos.com colours, Sora/Inter/Cairo, dark and light): a home page plus one page
-per chapter (`site/ar/c1.html` …), with chapter tabs and previous/next navigation.
+(kayanos.com colours, Sora/Inter/Cairo, dark and light): a home page, chapter
+overview/walkthrough pages (`site/ar/c1.html` …), and dedicated HR feature pages
+(`site/ar/hr-nodes.html` …), with chapter tabs and previous/next navigation.
 It is generated from the same sources: Arabic from `main.tex` + `chapters/`, English
 from `i18n/en/`, which must keep the Arabic structure exactly. Diagrams become themed
 SVG, numbered lists become step timelines, and each section is a "step" with
@@ -134,4 +157,8 @@ Menu → Compiler → XeLaTeX and Main document → `main.tex` (the included
 
 ### Clear images, fewer words (2026-10-14)
 
-Use more screenshots beside the actions they explain. Capture crisp originals at 2× resolution; never blur, mask, reconstruct or invent UI. Use blank forms, sample data or framing that excludes unrelated personal fields. Replace old masked screenshots with fresh captures. Keep captions short and allow full-size viewing. Cut repeated prose while retaining every page, necessary action and verification. Apply to both languages and future app chapters.
+Use more screenshots beside the actions they explain. Capture crisp originals at 2× resolution; never blur, mask, reconstruct or invent UI. Use blank forms or safe demo records; capture the entire page without cropping. Replace old masked screenshots with fresh captures. Keep captions short and allow full-size viewing. Cut repeated prose while retaining every page, necessary action and verification. Apply to both languages and future app chapters.
+
+### Full-page captures and Arabic editing
+
+Capture the entire real test2 page at 2×, including content in internal scroll containers. Capture each explained record tab separately. Use matching `chNN-<name>-ar.png` and `chNN-<name>-en.png` images for the same state; never substitute an English interface in Arabic. Use safe demo records without masking or cropping. Keep capture URLs, language, dimensions and dates in `review/fullpage-manifest.json`. Proofread Arabic grammar, hamzas and punctuation; quote verified interface labels with «» and keep terminology consistent.

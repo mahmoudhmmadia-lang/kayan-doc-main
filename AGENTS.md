@@ -97,8 +97,7 @@ Open items carried forward (not yet verified in the live system):
   one idea per sentence and one short purpose/result per page description.
 - Every visual must teach something: a navigation path, relationship, sequence,
   input example or visible result. Use verified, clear test2 screenshots, never
-  invented UI images. Label unsaved examples and Arabic screenshots used in the
-  English guide. Keep labels readable on phones; split long node text into lines.
+  invented UI images. Label unsaved examples; use the matching interface language in each guide. Keep labels readable on phones; split long node text into lines.
 - Keep the essentials: where to open, sample inputs, save/confirm, expected result,
   and recovery. Keep all app pages in priority order; shorten descriptions instead
   of omitting pages. Introduce shared responsibility once when possible. A diagram
@@ -218,8 +217,10 @@ generated from the same LaTeX sources; never edit `site/` by hand.
   English file. Example names: Horizon Services Co., Sarah Al-Khatib, Omar Haddad,
   Head Office Damascus, Aleppo Branch, General Management, HR Manager,
   Operations Coordinator, Office Hours. In English diagrams write plain text (no `\RL`).
-- Pages per language (`site/ar/`, `site/en/`): `index.html` (home) and **one page per
-  chapter**, `c1.html` … (the appendix too). `site/index.html` opens the saved or
+- Pages per language (`site/ar/`, `site/en/`): `index.html` (home), chapter
+  overview/walkthrough pages `c1.html` …, and 21 dedicated HR pages
+  `hr-<slug>.html`. HR feature sources are `chapters/03-hr-features.tex` and the
+  matching English file. `site/index.html` opens the saved or
   browser language. The language switch keeps the page and step (`c2.html#c2-s4`).
 
 **Page design rules** (separate chapter pages, requested 2026-10-14)
@@ -243,8 +244,12 @@ generated from the same LaTeX sources; never edit `site/` by hand.
 - Motion: scroll reveals, diagram draw-in, theme cross-fade. Always respect
   `prefers-reduced-motion`; deep links must land exactly under the top bar.
 - Stable ids: chapter `c2`, step `c2-s4`, sub-heading `c2-s4-1`, table `c2-t3`,
-  figure `c2-f1`. The prefix before the first `-` names the page (`c2.html`). They are
-  identical in both languages; do not change the scheme.
+  figure `c2-f1`. The prefix normally names the chapter page (`c2.html`). Sections
+  labelled `sec:hr-feature-<slug>` and their figures/headings use an explicit
+  route map to `hr-<slug>.html`; search, progress and navigation share that map.
+  HR feature sections follow the two overview steps (c3-s1, c3-s2); old walkthrough
+  anchors c3-s3…c3-s11 redirect through the `LEGACY` map in `tools/html-render.mjs`.
+  Their ids and filenames match across languages; do not change the scheme.
 
 ## 6. Build and verify — every time
 
@@ -286,7 +291,7 @@ kayanos-guide/
 ├── chapters/          ← one file per chapter (Arabic master)
 ├── references/        ← appendix: technical sources per chapter
 ├── i18n/en/           ← English translation for the HTML guide (same structure)
-├── figures/screens/   ← masked screenshots
+├── figures/screens/   ← full-page screenshots in both interface languages
 ├── assets/, fonts/    ← template images, Lora + Noto Naskh Arabic
 ├── web/               ← HTML theme: guide.css, guide.js, KayanOS logo
 ├── tools/             ← build.mjs, latex-parse.mjs, docx-render.mjs,
@@ -297,4 +302,76 @@ kayanos-guide/
 
 ### Clear images, fewer words (2026-10-14)
 
-Use more screenshots beside the actions they explain. Capture crisp originals at 2× resolution; never blur, mask, reconstruct or invent UI. Use blank forms, sample data or framing that excludes unrelated personal fields. Replace old masked screenshots with fresh captures. Keep captions short and allow full-size viewing. Cut repeated prose while retaining every page, necessary action and verification. Apply to both languages and future app chapters.
+Use more screenshots beside the actions they explain. Capture crisp originals at 2× resolution; never blur, mask, reconstruct or invent UI. Use blank forms or safe demo records; capture the entire page without cropping. Replace old masked screenshots with fresh captures. Keep captions short and allow full-size viewing. Cut repeated prose while retaining every page, necessary action and verification. Apply to both languages and future app chapters.
+
+### A dedicated guide page for each feature or model (2026-10-15)
+
+- Split app chapters into smaller, dedicated guide pages: each user-facing feature
+  page or model gets its own explanation page, starting with HR (for example,
+  Nodes / organizational units). A table row or a section on a long chapter page
+  does not replace this dedicated page. Keep an app overview that links to them.
+- Explain in plain language: what it is, what it is used for, the business problem
+  it solves, and when it is useful. Describe concrete benefits without invented
+  savings, usefulness scores, or unsupported promises.
+- Teach mainly through clear, verified test2 screenshots and simple vertical
+  diagrams, with short supporting text and captions. Show the page, a practical
+  example, and its relevant relationships; distinguish optional links, required
+  dependencies, and workflow steps. Do not invent relationships to fill a diagram.
+- Include where to open it, who uses it and when, essential setup or actions,
+  and the result to check. Retain the shared Horizon example and existing
+  accuracy, walkthrough, screenshot, accessibility, and verification rules.
+- For example, the Nodes page should explain an organizational unit, show how
+  departments fit into a hierarchy, illustrate a department and its parent,
+  and explain how linking positions helps organize the team.
+- Keep overview tables concise: their second column is “What this page offers”
+  (Arabic: “ماذا تقدم هذه الصفحة؟”), with a quick feature explanation, rather
+  than the former purpose/reader/result format. Link to dedicated explanations.
+- Apply the same page coverage in Arabic and English, across current and future
+  authorized app chapters. A model explained in the guide is not necessarily a
+  standalone app screen: accurately label tabs and embedded settings, and do not
+  expose internal implementation models as user-facing features.
+- This direction supersedes the HTML rule limiting content to one page per
+  chapter. When implementing the split, keep chapter overview pages, preserve
+  existing deep links, and update navigation, search, progress, language switching,
+  and tests for dedicated pages. In PDF/Word, give each feature/model a dedicated
+  section beginning on a new page while preserving the approved design.
+- HR's 21 dedicated pages are implemented and remain under review. This does not
+  authorize starting unwritten app chapters. Track further implementation and
+  verification separately in progress.md.
+
+### App overview = directory; pages = complete coverage (2026-10-15)
+
+- An app chapter page holds only: a short "what you will achieve" (result, who does
+  what, the core model diagram) and the page directory. Directory tables
+  (`tab:hr-pages-*`) render as numbered page buttons in the HTML. The pager offers
+  "Start with the pages" and the next chapter. No walkthroughs on the overview:
+  every procedure lives on the page it belongs to (shift creation and inheritance on
+  Shifts, day review on My attendance, slip steps on Salary Slips…). Never repeat it.
+- Each dedicated page shows **everything the page can hold or do**, not just the
+  basic form: a short "What do you record?" table covering every tab, section and
+  sub-record (e.g. Members: personal, contact, qualifications, conflict of interest,
+  financial, employment/attendance, account & security), then "What can you do?"
+  (special actions, views, statuses), then one diagram, steps and a check.
+  Source the inventory from `scripts/seed-entities/entities/`, the page components
+  and locales; mention shared list features (views, filters, Excel) once on the overview.
+- Feature pages link previous/next page; the last links to the next chapter or overview.
+- Wanted next: test2 screenshots of each record's full tabs (not only the blank
+  basic form), captured when browser access to test2 works.
+
+### Full-page screenshots and clear, correct Arabic (2026-10-15)
+
+- Every screenshot is a **full-page capture** of the real test2 page: the whole
+  scroll height of the list or record page, not a cropped form, dialog fragment
+  or viewport slice. For records with tabs, capture each tab the page explains
+  (one full-page image per tab when the tab changes the content).
+- The **Arabic guide uses Arabic-interface screenshots** and the English guide uses
+  English-interface screenshots of the same page and state (`chNN-<name>-ar.png`,
+  `chNN-<name>-en.png`). Capture at 2× so Arabic text is sharp; never use an
+  English-interface image in the Arabic guide.
+- Arabic must be clear and correct: proofread every Arabic sentence, caption and
+  table cell for grammar, spelling, hamzas and punctuation (Arabic comma «،» and
+  semicolon «؛»); use the exact Arabic UI labels from `src/locales/ar.ts`,
+  `common/locales/ar.ts` and the entity seeds, quoted with «»; keep one term per
+  concept across the guide; no literal translations or mixed-language sentences.
+- Use records whose data is safe to show (test2 is a test organization); do not
+  blur or mask. Where real personal rows would appear, open a test record instead.

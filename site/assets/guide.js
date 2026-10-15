@@ -13,11 +13,17 @@
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
   const all = data.steps; // every step of the guide, in order: {id, p (page), c (chapter), t, n}
   const index = new Map(all.map((s, i) => [s.id, i]));
-  const pageOf = (id) => `${id.split('-')[0]}.html`;
+  const pageOf = (id) => data.routes?.[id] ?? `${id.split('-')[0]}.html`;
 
   // Old single-page links (index.html#c2-s4) and links to another chapter's
   // step land on the right chapter page.
   const wanted = decodeURIComponent(location.hash.slice(1));
+  // Anchors of content that moved to a dedicated page (c3.html#c3-s4 → shifts).
+  const moved = data.legacy?.[`${data.page}#${wanted}`];
+  if (wanted && moved && !document.getElementById(wanted)) {
+    location.replace(moved);
+    return;
+  }
   if (wanted && !document.getElementById(wanted) && /^c\d+/.test(wanted) && pageOf(wanted) !== data.page) {
     location.replace(`${pageOf(wanted)}#${wanted}`);
     return;
@@ -310,7 +316,7 @@
   function closeLightbox() { if (!lb.hidden) lb.hidden = true; }
   document.addEventListener('click', (e) => {
     const z = e.target.closest('[data-zoom]');
-    if (z) { const img = $('img', z); lbImg.src = img.currentSrc || img.src; lbImg.alt = img.alt; lb.hidden = false; $('.lightbox-close', lb).focus(); return; }
+    if (z) { const img = $('img', z); lbImg.src = img.currentSrc || img.src; lbImg.alt = img.alt; lb.hidden = false; lb.scrollTop = 0; $('.lightbox-close', lb).focus(); return; }
     if (!lb.hidden && e.target.closest('.lightbox')) closeLightbox();
   });
 

@@ -26,7 +26,7 @@ test('all chapter references resolve and diagrams carry Arabic legends',()=>{
  const source=files.map(f=>fs.readFileSync(path.join(root,f),'utf8')).join('\n');
  for(const [,label] of source.matchAll(/\\ref\{([^}]+)\}/g)) assert.ok(doc.labels.has(label),`Missing ${label}`);
  const figures=doc.blocks.filter(b=>b.tikz);
- assert.equal(figures.length,13);
+ assert.equal(figures.length,(source.match(/\\begin\{tikzpicture\}/g)||[]).length);
  for(const figure of figures) { assert.ok(figure.tikz.includes('\\rclegend')); assert.ok(figure.caption); }
  assert.ok(doc.blocks.some(b=>b.type==='chapter' && b.label==='ch:hr'));
 });
@@ -40,7 +40,7 @@ test('built Word contains HR, Arabic language metadata, diagrams and page breaks
  assert.ok(xml.includes('<w:bidi'));
  assert.ok(xml.includes('<w:rtl'));
  assert.ok((xml.match(/<w:pageBreakBefore/g)||[]).length>=5);
- assert.equal((xml.match(/<wp:inline/g)||[]).length,27); // thirteen diagrams + fourteen screenshots
+ assert.equal((xml.match(/<wp:inline/g)||[]).length,doc.blocks.filter(b=>b.tikz||b.image).length);
  assert.ok(!xml.includes('??'));
 });
 
@@ -52,7 +52,7 @@ test('PDF build has no missing Arabic glyphs, overflow or unresolved references'
 
 // ---------------------------------------------------------------- HTML guide (site/)
 const en=loadDocument(path.join(root,'i18n/en'),{lang:'en'});
-const shape=(d)=>d.blocks.map(b=>b.type==='para'?'p':`${b.type}${b.level??''}${b.kind??''}:${b.label??''}:${b.rows?.length??''}x${b.rows?.[0]?.cells.length??''}:${b.items?.length??''}:${b.image??''}${b.tikz?'tikz':''}`);
+const shape=(d)=>d.blocks.map(b=>b.type==='para'?'p':`${b.type}${b.level??''}${b.kind??''}:${b.label??''}:${b.rows?.length??''}x${b.rows?.[0]?.cells.length??''}:${b.items?.length??''}:${(b.image??'').replace(/-(ar|en).png$/,'.png')}${b.tikz?'tikz':''}`);
 
 test('English HTML sources mirror the Arabic structure',()=>{
  const ar=shape(doc).filter(s=>s!=='p'), e=shape(en).filter(s=>s!=='p');
@@ -61,11 +61,36 @@ test('English HTML sources mirror the Arabic structure',()=>{
  for(const b of en.blocks.filter(b=>b.tikz)) assert.doesNotMatch(b.tikz,/[\u0600-\u06FF]/,'Arabic left in an English diagram');
 });
 
-test('built HTML site: one page per chapter, language, direction and working links',()=>{
+test('screenshots use matching full-page captures in each interface language',()=>{
+ const manifest=JSON.parse(fs.readFileSync(path.join(root,'review/fullpage-manifest.json'),'utf8'));
+ for(const [lang,source] of [['ar',doc],['en',en]]) {
+  for(const block of source.blocks.filter(b=>b.image)) {
+   assert.ok(block.image.endsWith(`-${lang}.png`),`Wrong screenshot language: ${block.image}`);
+   const name=path.basename(block.image,'.png'), capture=manifest[name];
+   assert.ok(capture,`Missing capture evidence: ${name}`);
+   assert.equal(new URL(capture.url).hostname,'test2.kayanos.app');
+   assert.equal(capture.lang,lang);
+   assert.equal(capture.scale,2);
+   assert.equal(capture.width,1440);
+   assert.ok(capture.height>=900);
+   const png=fs.readFileSync(path.join(root,block.image));
+   assert.equal(png.readUInt32BE(16),capture.width*2);
+   assert.equal(png.readUInt32BE(20),capture.height*2);
+  }
+  const tabs=source.blocks.filter(b=>/ch03-member-tab\d+-/.test(b.image??'')).map(b=>manifest[path.basename(b.image,'.png')]);
+  assert.equal(tabs.length,15);
+  assert.equal(new Set(tabs.map(v=>new URL(v.url).searchParams.get('tab'))).size,15,'Member tabs must show distinct content');
+ }
+});
+
+test('built HTML site: chapter and feature pages, language, direction and working links',()=>{
  for(const [lang,dir] of [['ar','rtl'],['en','ltr']]){
   const folder=path.join(root,'site',lang);
   const pages=Object.fromEntries(fs.readdirSync(folder).filter(f=>f.endsWith('.html')).map(f=>[f,fs.readFileSync(path.join(folder,f),'utf8')]));
-  assert.deepEqual(Object.keys(pages).sort(),['c1.html','c2.html','c3.html','index.html']);
+  const sourceDoc=lang==='ar'?doc:en;
+  const featureFiles=sourceDoc.blocks.filter(b=>b.label?.startsWith('sec:hr-feature-')).map(b=>`hr-${b.label.slice('sec:hr-feature-'.length)}.html`);
+  assert.equal(featureFiles.length,21);
+  assert.deepEqual(Object.keys(pages).sort(),['c1.html','c2.html','c3.html','index.html',...featureFiles].sort());
   const ids=Object.fromEntries(Object.entries(pages).map(([f,h])=>[f,new Set([...h.matchAll(/\sid="([^"]+)"/g)].map(m=>m[1]))]));
   let diagrams=0;
   for(const [file,html] of Object.entries(pages)){
@@ -84,6 +109,42 @@ test('built HTML site: one page per chapter, language, direction and working lin
    assert.ok(!html.includes('>??<'),`${where}: unresolved reference`);
    diagrams+=(html.match(/<svg class="diagram"/g)||[]).length;
   }
-  assert.equal(diagrams,13);
+  assert.equal(diagrams,sourceDoc.blocks.filter(b=>b.tikz).length);
+ }
+});
+
+test('dedicated HR pages preserve bilingual coverage, routes, media and overview links',()=>{
+ const hrShape=d=>shape({...d,blocks:d.blocks.slice(d.blocks.findIndex(b=>b.label==='sec:hr-feature-members')-1)});
+ assert.deepEqual(hrShape(doc),hrShape(en));
+ for(const lang of ['ar','en']) {
+  const folder=path.join(root,'site',lang);
+  const overview=fs.readFileSync(path.join(folder,'c3.html'),'utf8');
+  const data=JSON.parse(overview.match(/<script id="guide-data" type="application\/json">([\s\S]*?)<\/script>/)[1]);
+  const features=data.steps.filter(s=>s.p.startsWith('hr-'));
+  assert.equal(features.length,21);
+  for(const feature of features) {
+   const html=fs.readFileSync(path.join(folder,feature.p),'utf8');
+   assert.match(overview,new RegExp(`href="${feature.p}#${feature.id}"`));
+   assert.equal(data.routes[feature.id],feature.p);
+   assert.ok(data.search.some(s=>s.id===feature.id&&s.p===feature.p&&s.x.length>100));
+   assert.ok(html.includes(`data-done="${feature.id}"`));
+   assert.ok(html.includes(`../${lang==='ar'?'en':'ar'}/${feature.p}`));
+   assert.equal((html.match(/class="step reveal-step"/g)||[]).length,1);
+   assert.match(html,/<figure class="shot/);
+   assert.match(html,/<svg class="diagram"/);
+   assert.match(html,/class="steps"/);
+  }
+  // The overview keeps its two steps; old walkthrough anchors redirect to the page that now holds them.
+  for(let n=1;n<=2;n++) assert.ok(overview.includes(`id="c3-s${n}"`));
+  for(let n=3;n<=11;n++) {
+   const target=data.legacy[`c3.html#c3-s${n}`];
+   assert.ok(target,`No redirect for c3-s${n}`);
+   const [page,hash]=target.split('#');
+   assert.ok(fs.readFileSync(path.join(folder,page),'utf8').includes(`id="${hash}"`),`Broken redirect ${target}`);
+  }
+  // The overview offers every page as a button, a start button and no walkthrough steps.
+  assert.equal((overview.match(/class="page-card"/g)||[]).length,21);
+  assert.match(overview,/class="pager-card start"/);
+  assert.equal((overview.match(/class="step reveal-step"/g)||[]).length,2);
  }
 });

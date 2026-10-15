@@ -1,8 +1,10 @@
 // Renders the parsed guide (latex-parse.mjs) as a small HTML site per
 // language, in the KayanOS website theme (web/guide.css, web/guide.js):
-// index.html (home: hero + chapter cards) and one page per chapter (c1.html …).
+// index.html (home: chapter cards), chapter pages (c1.html …), and dedicated
+// HR feature pages (hr-nodes.html …), all built from the same LaTeX sources.
 // Every chapter section becomes a "step" with a stable, language-independent
-// id (c2-s3) on page c2.html, so links, progress and the language switch keep your place.
+// id (c2-s3); the route map places feature sections on their own pages so links,
+// progress and the language switch keep your place.
 
 import { arrowKinds, renderDiagram } from './html-diagram.mjs'
 import { parseInline } from './latex-parse.mjs'
@@ -32,6 +34,11 @@ export const UI = {
         next: 'التالي',
         nextChapter: 'الفصل التالي',
         prevChapter: 'الفصل السابق',
+        prevPage: 'الصفحة السابقة',
+        nextPage: 'الصفحة التالية',
+        appPages: 'كل صفحات التطبيق',
+        firstPage: 'ابدأ بالصفحات',
+        openPage: 'افتح الصفحة',
         table: 'جدول',
         figure: 'شكل',
         theme: 'تبديل المظهر',
@@ -47,6 +54,7 @@ export const UI = {
         badges: { req: 'إلزامي تقنياً', rec: 'موصى به', opt: 'اختياري', gen: 'يولّده النظام' },
         boxes: { note: 'ملاحظة', warn: 'تنبيه', check: 'قائمة تحقق' },
         zoom: 'تكبير الصورة',
+        original: 'فتح الصورة الأصلية',
         close: 'إغلاق',
         menu: 'القائمة',
         of: 'من',
@@ -82,6 +90,11 @@ export const UI = {
         next: 'Next',
         nextChapter: 'Next chapter',
         prevChapter: 'Previous chapter',
+        prevPage: 'Previous page',
+        nextPage: 'Next page',
+        appPages: 'All app pages',
+        firstPage: 'Start with the pages',
+        openPage: 'Open page',
         table: 'Table',
         figure: 'Figure',
         theme: 'Toggle theme',
@@ -97,6 +110,7 @@ export const UI = {
         badges: { req: 'Required', rec: 'Recommended', opt: 'Optional', gen: 'System-generated' },
         boxes: { note: 'Note', warn: 'Caution', check: 'Checklist' },
         zoom: 'Enlarge image',
+        original: 'Open original image',
         close: 'Close',
         menu: 'Menu',
         of: 'of',
@@ -191,8 +205,8 @@ export function structure(doc) {
 
 // Every id starts with its chapter id (c2, c2-s4, c2-t1), which names its page.
 export const pageOf = (id) => `${id.split('-')[0]}.html`
-const link = (id, page) => {
-    const target = pageOf(id)
+const link = (id, page, routes = {}) => {
+    const target = routes[id] ?? pageOf(id)
     if (target === page) return `#${id}`
     return id.includes('-') ? `${target}#${id}` : target
 }
@@ -210,7 +224,7 @@ function inline(src, ctx) {
             if (r.ref) {
                 const id = ctx.ids.get(r.ref)
                 if (!id || ctx.nolink) return `<span dir="ltr">${t}</span>` // nolink: titles inside navigation links
-                return `<a class="xref" href="${link(id, ctx.page)}" dir="ltr">${t}</a>`
+                return `<a class="xref" href="${link(id, ctx.page, ctx.routes)}" dir="ltr">${t}</a>`
             }
             if (r.mono) t = `<code>${t}</code>`
             else if (r.color === '00696D') t = `<code class="key">${t}</code>`
@@ -256,6 +270,20 @@ function renderTable(b, ctx) {
     const thead = head
         ? `<thead><tr>${head.cells.map((c) => `<th scope="col">${inline(c, ctx)}</th>`).join('')}</tr></thead>`
         : ''
+    // A page directory (first cell "Page — Section") becomes a grid of buttons
+    // that open each dedicated feature page, numbered in reading order.
+    const featureOf = (cell) => {
+        const name = plain(cell, ctx).split(' — ')[0].trim()
+        const i = ctx.features?.findIndex((f) => plain(f.title, ctx) === name) ?? -1
+        return i < 0 ? null : { feature: ctx.features[i], no: i + 1, section: plain(cell, ctx).split(' — ')[1] ?? '' }
+    }
+    const cards = b.label?.startsWith('tab:hr-pages-') ? body.map((r) => featureOf(r.cells[0])) : []
+    if (cards.length && cards.every(Boolean)) {
+        const nav = { ...ctx, nolink: true }
+        return `<figure class="page-cards reveal"${b.id ? ` id="${b.id}"` : ''}>${caption}<ol class="page-grid">${cards
+            .map(({ feature, no, section }, row) => `<li><a class="page-card" href="${link(feature.id, ctx.page, ctx.routes)}" data-toc="${feature.id}"><span class="page-card-top"><span class="page-card-no" dir="ltr">${no}</span><span class="page-card-sec">${esc(section)}</span><span class="toc-dot" aria-hidden="true"></span></span><span class="page-card-title">${inline(feature.title, nav)}</span><span class="page-card-desc">${inline(body[row].cells[1] ?? '', nav)}</span><span class="page-card-go">${esc(ctx.ui.openPage)} ${ARROW}</span></a></li>`)
+            .join('')}</ol></figure>`
+    }
     const tbody = `<tbody>${body.map((r) => `<tr>${r.cells.map((c, i) => `<td data-label="${esc(labels[i] ?? '')}">${inline(c, ctx)}</td>`).join('')}</tr>`).join('')}</tbody>`
     const cls = labels.length >= 2 && labels.length <= 3 ? 'stackable' : ''
     return `<figure class="table-card reveal"${b.id ? ` id="${b.id}"` : ''}>${caption}<div class="table-scroll"><table class="${cls}">${thead}${tbody}</table></div></figure>`
@@ -269,7 +297,7 @@ function renderFigure(b, ctx) {
     if (b.image) {
         const file = b.image.split('/').pop()
         const alt = b.caption ? plain(b.caption, ctx) : ''
-        return `<figure class="shot reveal"${id}><button class="shot-btn" type="button" data-zoom aria-label="${esc(ctx.ui.zoom)}"><img src="../assets/screens/${esc(file)}" alt="${esc(alt)}" loading="lazy" decoding="async" style="--w:${Math.round((b.imageWidth ?? 1) * 100)}%"><span class="shot-zoom">${icon('zoom')}</span></button>${cap}</figure>`
+        return `<figure class="shot reveal"${id}><button class="shot-btn" type="button" data-zoom aria-label="${esc(ctx.ui.zoom)}"><img src="../assets/screens/${esc(file)}" alt="${esc(alt)}" loading="lazy" decoding="async" style="--w:${Math.round((b.imageWidth ?? 1) * 100)}%"><span class="shot-zoom">${icon('zoom')}</span></button>${cap}<a class="shot-original" href="../assets/screens/${esc(file)}" target="_blank" rel="noopener">${esc(ctx.ui.original)}</a></figure>`
     }
     if (b.tikz) {
         const svg = renderDiagram(b.tikz, { dir: ctx.ui.dir, id: `dg${++diagramSeq}` })
@@ -361,23 +389,50 @@ ${body}
 `
 }
 
+// Old chapter-page anchors whose content moved to a dedicated page. HR once
+// held nine walkthrough steps on c3.html; each now lives on its feature page.
+const LEGACY = {
+    'c1.html#c1-s6': 'tab:intro-app-map',
+    'c1.html#c1-s7': 'sec:setup-minute',
+    'c3.html#c3-s3': 'sec:hr-feature-assignments',
+    'c3.html#c3-s4': 'sec:hr-shifts',
+    'c3.html#c3-s5': 'sec:hr-shift-inheritance',
+    'c3.html#c3-s6': 'sec:hr-feature-my-attendance',
+    'c3.html#c3-s7': 'sec:hr-feature-leaves',
+    'c3.html#c3-s8': 'sec:hr-feature-payroll-inputs',
+    'c3.html#c3-s9': 'sec:hr-feature-salary-slips',
+    'c3.html#c3-s10': 'sec:hr-pages',
+    'c3.html#c3-s11': 'ch:hr',
+}
+
 // Returns { 'index.html': html, 'c1.html': html, … } for one language.
 export function renderSite(doc, { lang, assetsVersion = '' }) {
     const ui = UI[lang]
     const { chapters, ids } = structure(doc)
-    const base = { ui, lang, ids, labels: doc.labels, colors: { rcPrimary: '00696D' } }
+    const features = chapters.flatMap(c => c.sections).filter(s => s.label?.startsWith('sec:hr-feature-'))
+    const routes = {}
+    for (const s of features) {
+        const page = `hr-${s.label.slice('sec:hr-feature-'.length)}.html`
+        routes[s.id] = page
+        const visit = blocks => blocks.forEach(b => { if (b.id) routes[b.id] = page; if (b.blocks) visit(b.blocks) })
+        visit(s.blocks)
+    }
+    const pageOf = id => routes[id] ?? `${id.split('-')[0]}.html`
+    const base = { ui, lang, ids, routes, features, labels: doc.labels, colors: { rcPrimary: '00696D' } }
     diagramSeq = 0
 
     // Render every chapter body first: it gives the step list, search index and word count.
     let totalWords = 0
     const steps = []
     const search = []
+    const sectionBodies = new Map()
     const bodies = chapters.map((c) => {
         const page = pageOf(c.id)
         const intro = c.intro.map((b) => renderBlock(b, { ...base, page, sectionId: c.id })).join('')
         search.push({ id: c.id, p: page, c: '', t: plain(c.title, base), n: c.kicker, x: '', chapter: true })
         const sections = c.sections
             .map((s) => {
+                const page = pageOf(s.id)
                 const ctx = { ...base, page, sectionId: s.id }
                 const body = s.blocks.map((b) => renderBlock(b, ctx)).join('')
                 totalWords += words(body)
@@ -406,7 +461,7 @@ export function renderSite(doc, { lang, assetsVersion = '' }) {
                             x: '',
                             sub: true,
                         })
-                return `<section class="step reveal-step" id="${s.id}" data-chapter="${c.id}" aria-labelledby="${s.id}-h">
+                const rendered = `<section class="step reveal-step" id="${s.id}" data-chapter="${c.id}" aria-labelledby="${s.id}-h">
 <header class="step-head">
   <span class="step-no" dir="ltr">${esc(s.number ?? '')}</span>
   <h2 id="${s.id}-h">${inline(s.title, ctx)}</h2>
@@ -417,6 +472,8 @@ export function renderSite(doc, { lang, assetsVersion = '' }) {
 <div class="step-body">${body}</div>
 <footer class="step-foot"><button class="done-btn" type="button" data-done="${s.id}" aria-pressed="false"><span class="done-box">${icon('tick')}</span><span class="done-off">${esc(ui.markDone)}</span><span class="done-on">${esc(ui.done)}</span></button></footer>
 </section>`
+                sectionBodies.set(s.id, rendered)
+                return routes[s.id] ? '' : rendered
             })
             .join('\n')
         return { intro, sections }
@@ -424,8 +481,15 @@ export function renderSite(doc, { lang, assetsVersion = '' }) {
 
     const data = {
         lang,
+        routes,
         ui: { copied: ui.copied, noResults: ui.noResults, resetConfirm: ui.resetConfirm, chapterDone: ui.chapterDone },
         chapters: chapters.map((c) => ({ id: c.id, p: pageOf(c.id) })),
+        legacy: Object.fromEntries(
+            Object.entries(LEGACY)
+                .map(([old, label]) => [old, ids.get(label)])
+                .filter(([, id]) => id)
+                .map(([old, id]) => [old, `${pageOf(id)}#${id}`])
+        ),
         steps,
         search,
     }
@@ -444,7 +508,7 @@ export function renderSite(doc, { lang, assetsVersion = '' }) {
             return `<article class="path-card reveal" style="--d:${i}">
 <a class="path-link" href="${page}"><span class="path-no">${esc(c.kicker)}</span>${ring(c.id)}
 <span class="path-title">${inline(c.title, { ...base, nolink: true })}</span></a>
-<ol class="path-steps">${shown.map((s) => `<li><a href="${page}#${s.id}" data-toc="${s.id}"><span class="toc-dot" aria-hidden="true"></span><span>${inline(s.title, { ...base, page: 'index.html', nolink: true })}</span></a></li>`).join('')}${more > 0 ? `<li class="path-more"><a href="${page}">+${more} ${esc(ui.moreSteps)}</a></li>` : ''}</ol>
+<ol class="path-steps">${shown.map((s) => `<li><a href="${link(s.id, 'index.html', routes)}" data-toc="${s.id}"><span class="toc-dot" aria-hidden="true"></span><span>${inline(s.title, { ...base, page: 'index.html', nolink: true })}</span></a></li>`).join('')}${more > 0 ? `<li class="path-more"><a href="${page}">+${more} ${esc(ui.moreSteps)}</a></li>` : ''}</ol>
 <div class="path-foot"><span class="path-meta">${c.sections.length} ${esc(ui.steps)}</span><a class="path-open" href="${page}">${esc(ui.open)} ${ARROW}</a></div>
 <span class="path-bar" aria-hidden="true"><span data-chapter-bar="${c.id}"></span></span>
 </article>`
@@ -481,34 +545,51 @@ export function renderSite(doc, { lang, assetsVersion = '' }) {
     })
 
     // ---- one page per chapter
-    chapters.forEach((c, ci) => {
-        const page = pageOf(c.id)
+    const views = chapters.flatMap((c, ci) => [{c, ci}, ...c.sections.filter(s => routes[s.id]).map(feature => ({c, ci, feature}))])
+    views.forEach(({c, ci, feature}) => {
+        const page = feature ? pageOf(feature.id) : pageOf(c.id)
         const ctx = { ...base, page }
         const nav = { ...ctx, nolink: true }
         const toc = chapters
             .map((x) => {
                 const here = x === c
                 return `<li class="toc-ch${here ? ' current' : ''}">
-<a class="toc-ch-link" href="${here ? `#${x.id}` : pageOf(x.id)}"${here ? ' aria-current="page"' : ''}><span class="toc-ch-no">${esc(x.number)}</span><span class="toc-ch-title">${inline(x.title, nav)}</span>${ring(x.id)}</a>
-${here ? `<ol class="toc-secs">${x.sections.map((s) => `<li><a href="#${s.id}" data-toc="${s.id}"><span class="toc-dot" aria-hidden="true"></span><span>${inline(s.title, nav)}</span></a></li>`).join('')}</ol>` : ''}
+<a class="toc-ch-link" href="${here && !feature ? `#${x.id}` : pageOf(x.id)}"${here && !feature ? ' aria-current="page"' : ''}><span class="toc-ch-no">${esc(x.number)}</span><span class="toc-ch-title">${inline(x.title, nav)}</span>${ring(x.id)}</a>
+${here ? `<ol class="toc-secs">${x.sections.map((s) => `<li><a href="${link(s.id, page, routes)}" data-toc="${s.id}"><span class="toc-dot" aria-hidden="true"></span><span>${inline(s.title, nav)}</span></a></li>`).join('')}</ol>` : ''}
 </li>`
             })
             .join('')
         const tabs = chapters
             .map(
                 (x) =>
-                    `<a class="ch-tab${x === c ? ' current' : ''}" href="${x === c ? `#${x.id}` : pageOf(x.id)}"${x === c ? ' aria-current="page"' : ''} title="${esc(plain(x.title, ctx))}"><span dir="ltr">${esc(x.number)}</span><span class="ch-tab-t">${inline(x.title, nav)}</span></a>`
+                    `<a class="ch-tab${x === c ? ' current' : ''}" href="${x === c && !feature ? `#${x.id}` : pageOf(x.id)}"${x === c && !feature ? ' aria-current="page"' : ''} title="${esc(plain(x.title, ctx))}"><span dir="ltr">${esc(x.number)}</span><span class="ch-tab-t">${inline(x.title, nav)}</span></a>`
             )
             .join('')
         const prev = chapters[ci - 1],
             next = chapters[ci + 1]
         const pager = `<nav class="chapter-pager">${prev ? `<a class="pager-card prev" href="${pageOf(prev.id)}"><small>${esc(ui.prevChapter)} · ${esc(prev.kicker)}</small><span>${inline(prev.title, nav)}</span></a>` : `<a class="pager-card prev" href="index.html"><small>${esc(ui.home)}</small><span>${title}</span></a>`}${next ? `<a class="pager-card next" href="${pageOf(next.id)}"><small>${esc(ui.nextChapter)} · ${esc(next.kicker)}</small><span>${inline(next.title, nav)}</span></a>` : ''}</nav>`
-        const { intro, sections } = bodies[ci]
+        // Feature pages: previous/next page of the same app, then the chapter
+        // overview or the next chapter at the edges. An app overview offers its
+        // first page and the next chapter.
+        const own = c.sections.filter((s) => routes[s.id])
+        const card = (cls, href, small, label) => `<a class="pager-card ${cls}" href="${href}"><small>${small}</small><span>${label}</span></a>`
+        const nextChapter = next ? card('next', pageOf(next.id), `${esc(ui.nextChapter)} · ${esc(next.kicker)}`, inline(next.title, nav)) : ''
+        let pagerHtml = pager
+        if (feature) {
+            const i = own.indexOf(feature)
+            const before = own[i - 1],
+                after = own[i + 1]
+            pagerHtml = `<nav class="chapter-pager">${before ? card('prev', link(before.id, page, routes), esc(ui.prevPage), inline(before.title, nav)) : card('prev', pageOf(c.id), esc(ui.appPages), inline(c.title, nav))}${after ? card('next', link(after.id, page, routes), esc(ui.nextPage), inline(after.title, nav)) : nextChapter || card('next', pageOf(c.id), esc(ui.appPages), inline(c.title, nav))}</nav>`
+        } else if (own.length) {
+            pagerHtml = `<nav class="chapter-pager has-start">${card('start', link(own[0].id, page, routes), `${esc(ui.firstPage)} · ${own[0].number ?? ''}`, inline(own[0].title, nav))}${nextChapter}</nav>`
+        }
+        const intro = feature ? '' : bodies[ci].intro
+        const sections = feature ? sectionBodies.get(feature.id) : bodies[ci].sections
         pages[page] = shell({
             ui,
             lang,
             page,
-            title: `${plain(c.title, ctx)} · ${ui.brand}`,
+            title: `${plain(feature?.title ?? c.title, ctx)} · ${ui.brand}`,
             description,
             data,
             assetsVersion,
@@ -524,15 +605,15 @@ ${here ? `<ol class="toc-secs">${x.sections.map((s) => `<li><a href="#${s.id}" d
   <main class="content">
     <article class="chapter${c.appendix ? ' appendix' : ''}" id="${c.id}" aria-labelledby="${c.id}-h">
       <header class="chapter-head">
-        <nav class="crumbs reveal" aria-label="${esc(ui.home)}"><a href="index.html">${esc(ui.home)}</a><span aria-hidden="true">/</span><span>${esc(c.kicker)}</span></nav>
+        <nav class="crumbs reveal" aria-label="${esc(ui.home)}"><a href="index.html">${esc(ui.home)}</a><span aria-hidden="true">/</span><a href="${pageOf(c.id)}">${inline(c.title, nav)}</a>${feature ? `<span aria-hidden="true">/</span><span>${inline(feature.title, nav)}</span>` : ''}</nav>
         <nav class="ch-tabs reveal" aria-label="${esc(ui.chapterNav)}">${tabs}</nav>
         <div class="chapter-kicker reveal"><span class="chip">${esc(c.kicker)}</span><span class="chapter-meta">${c.sections.length} ${esc(ui.steps)}</span></div>
-        <h1 id="${c.id}-h" class="chapter-title reveal">${inline(c.title, ctx)}</h1>
+        <h1 id="${c.id}-h" class="chapter-title reveal">${inline(feature?.title ?? c.title, ctx)}</h1>
         <div class="chapter-progress" aria-hidden="true"><span data-chapter-bar="${c.id}"></span></div>
       </header>
       ${intro ? `<div class="chapter-intro">${intro}</div>` : ''}
       ${sections}
-      ${pager}
+      ${pagerHtml}
     </article>
   </main>
 </div>

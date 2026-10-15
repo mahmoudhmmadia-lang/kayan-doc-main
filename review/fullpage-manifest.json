@@ -1,0 +1,992 @@
+{
+  "ch02-member-fields-ar": {
+    "file": "kayanos-guide/figures/screens/ch02-member-fields-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?returnView=table&tab=overview",
+    "lang": "ar",
+    "width": 1440,
+    "height": 959,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:36:35.447Z"
+  },
+  "ch03-member-tab1-ar": {
+    "file": "kayanos-guide/figures/screens/ch03-member-tab1-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=overview&returnView=table",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1255,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:36:44.098Z",
+    "tab": "نظرة عامة"
+  },
+  "ch03-member-tab2-ar": {
+    "file": "kayanos-guide/figures/screens/ch03-member-tab2-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=orientation&returnView=table",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1255,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:36:53.999Z",
+    "tab": "التأهيل والتوجيه"
+  },
+  "ch03-member-tab3-ar": {
+    "file": "kayanos-guide/figures/screens/ch03-member-tab3-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=personal&returnView=table",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1255,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:37:03.057Z",
+    "tab": "الشخصي"
+  },
+  "ch03-member-tab4-ar": {
+    "file": "kayanos-guide/figures/screens/ch03-member-tab4-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=contact&returnView=table",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1255,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:37:12.070Z",
+    "tab": "الاتصال"
+  },
+  "ch03-member-tab5-ar": {
+    "file": "kayanos-guide/figures/screens/ch03-member-tab5-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=qualifications&returnView=table",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1255,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:37:20.599Z",
+    "tab": "المؤهلات"
+  },
+  "ch03-member-tab6-ar": {
+    "file": "kayanos-guide/figures/screens/ch03-member-tab6-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=conflict_of_interest&returnView=table",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1255,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:37:29.423Z",
+    "tab": "تضارب المصالح"
+  },
+  "ch03-member-tab7-ar": {
+    "file": "kayanos-guide/figures/screens/ch03-member-tab7-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=financial&returnView=table",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1255,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:37:37.913Z",
+    "tab": "المالية"
+  },
+  "ch03-member-tab8-ar": {
+    "file": "kayanos-guide/figures/screens/ch03-member-tab8-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=employment&returnView=table",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1255,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:37:46.206Z",
+    "tab": "التوظيف"
+  },
+  "ch03-member-tab9-ar": {
+    "file": "kayanos-guide/figures/screens/ch03-member-tab9-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=attendance&returnView=table",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1255,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:37:54.558Z",
+    "tab": "الحضور"
+  },
+  "ch03-member-tab11-ar": {
+    "file": "kayanos-guide/figures/screens/ch03-member-tab11-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=custom%3Ahosted-email-accounts&returnView=table",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1255,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:38:11.328Z",
+    "tab": "حسابات البريد"
+  },
+  "ch03-member-tab12-ar": {
+    "file": "kayanos-guide/figures/screens/ch03-member-tab12-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=custom%3Aworked-hours-assignment&returnView=table",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1255,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:38:19.700Z",
+    "tab": "ساعات العمل"
+  },
+  "ch01-workspaces-clear-ar": {
+    "file": "kayanos-guide/figures/screens/ch01-workspaces-clear-ar.png",
+    "url": "https://test2.kayanos.app/",
+    "lang": "ar",
+    "width": 1440,
+    "height": 4438,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:47:39.085Z"
+  },
+  "ch01-apps-clear-ar": {
+    "file": "kayanos-guide/figures/screens/ch01-apps-clear-ar.png",
+    "url": "https://test2.kayanos.app/",
+    "lang": "ar",
+    "width": 1440,
+    "height": 4438,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:47:44.966Z"
+  },
+  "ch02-create-org-ar": {
+    "file": "kayanos-guide/figures/screens/ch02-create-org-ar.png",
+    "url": "https://test2.kayanos.app/create-organization",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:47:55.192Z"
+  },
+  "ch03-member-tab13-ar": {
+    "file": "kayanos-guide/figures/screens/ch03-member-tab13-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=custom%3Anotifications&returnView=table",
+    "lang": "ar",
+    "width": 1440,
+    "height": 7131,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:38:30.399Z",
+    "tab": "الإشعارات"
+  },
+  "ch03-member-tab14-ar": {
+    "file": "kayanos-guide/figures/screens/ch03-member-tab14-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=custom%3Asessions&returnView=table",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1255,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:38:38.855Z",
+    "tab": "الجلسات"
+  },
+  "ch03-member-tab15-ar": {
+    "file": "kayanos-guide/figures/screens/ch03-member-tab15-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=custom%3Atwo-step-verification&returnView=table",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1255,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:38:47.249Z",
+    "tab": "التحقق بخطوتين"
+  },
+  "ch03-member-tab16-ar": {
+    "file": "kayanos-guide/figures/screens/ch03-member-tab16-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=roles&returnView=table",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1255,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:38:55.899Z",
+    "tab": "الأدوار"
+  },
+  "ch02-position-fields-ar": {
+    "file": "kayanos-guide/figures/screens/ch02-position-fields-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/workforce/positions/add?tab=overview",
+    "lang": "ar",
+    "width": 1440,
+    "height": 926,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:48:52.943Z"
+  },
+  "ch02-assignment-fields-ar": {
+    "file": "kayanos-guide/figures/screens/ch02-assignment-fields-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/workforce/assignments/add?tab=overview",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1507,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:49:16.891Z"
+  },
+  "ch02-node-fields-ar": {
+    "file": "kayanos-guide/figures/screens/ch02-node-fields-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/nodes/add?tab=overview",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:49:40.483Z"
+  },
+  "ch02-location-fields-ar": {
+    "file": "kayanos-guide/figures/screens/ch02-location-fields-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/locations/add?tab=overview",
+    "lang": "ar",
+    "width": 1440,
+    "height": 979,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:50:04.041Z"
+  },
+  "ch03-hr-pages-clear-ar": {
+    "file": "kayanos-guide/figures/screens/ch03-hr-pages-clear-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr",
+    "lang": "ar",
+    "width": 1440,
+    "height": 3779,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:39:34.581Z"
+  },
+  "ch03-shift-example-ar": {
+    "file": "kayanos-guide/figures/screens/ch03-shift-example-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/time/shifts/add",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1201,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:39:42.181Z"
+  },
+  "ch03-leave-type-fields-ar": {
+    "file": "kayanos-guide/figures/screens/ch03-leave-type-fields-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/time/leave_types/add?tab=rules",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:50:44.780Z"
+  },
+  "ch03-leave-fields-ar": {
+    "file": "kayanos-guide/figures/screens/ch03-leave-fields-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/time/leaves/add",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:39:56.493Z"
+  },
+  "ch03-payroll-input-fields-ar": {
+    "file": "kayanos-guide/figures/screens/ch03-payroll-input-fields-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/payment/payroll_inputs/add",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1117,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:40:04.115Z"
+  },
+  "ch03-feature-groups-ar": {
+    "file": "kayanos-guide/figures/screens/ch03-feature-groups-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/workforce/groups/add?tab=member_selector%3Amembers",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:50:59.755Z"
+  },
+  "ch03-feature-seniority-levels-ar": {
+    "file": "kayanos-guide/figures/screens/ch03-feature-seniority-levels-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/salaryScale/seniority_levels/add?tab=overview",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:40:18.766Z"
+  },
+  "ch03-feature-experience-levels-ar": {
+    "file": "kayanos-guide/figures/screens/ch03-feature-experience-levels-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/salaryScale/experience_level_groups",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:40:25.952Z"
+  },
+  "ch03-feature-salary-scale-ar": {
+    "file": "kayanos-guide/figures/screens/ch03-feature-salary-scale-ar.png",
+    "url": "https://test2.kayanos.app/workforce/salary-scale",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:40:33.165Z"
+  },
+  "ch03-feature-my-attendance-ar": {
+    "file": "kayanos-guide/figures/screens/ch03-feature-my-attendance-ar.png",
+    "url": "https://test2.kayanos.app/time/attendance",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1484,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:40:41.067Z"
+  },
+  "ch03-feature-timesheets-ar": {
+    "file": "kayanos-guide/figures/screens/ch03-feature-timesheets-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/time/work_time_entries",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:40:48.343Z"
+  },
+  "ch03-feature-holiday-groups-ar": {
+    "file": "kayanos-guide/figures/screens/ch03-feature-holiday-groups-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/time/holidays_groups",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:40:55.553Z"
+  },
+  "ch03-feature-attendance-corrections-ar": {
+    "file": "kayanos-guide/figures/screens/ch03-feature-attendance-corrections-ar.png",
+    "url": "https://test2.kayanos.app/time/attendance-corrections",
+    "lang": "ar",
+    "width": 1440,
+    "height": 3786,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:41:03.960Z"
+  },
+  "ch03-feature-attendance-policy-ar": {
+    "file": "kayanos-guide/figures/screens/ch03-feature-attendance-policy-ar.png",
+    "url": "https://test2.kayanos.app/time/attendance-policy",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:41:11.187Z"
+  },
+  "ch03-feature-attendance-terminals-ar": {
+    "file": "kayanos-guide/figures/screens/ch03-feature-attendance-terminals-ar.png",
+    "url": "https://test2.kayanos.app/time/attendance-terminals",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:41:18.389Z"
+  },
+  "ch03-feature-payrolls-ar": {
+    "file": "kayanos-guide/figures/screens/ch03-feature-payrolls-ar.png",
+    "url": "https://test2.kayanos.app/payment/payrolls",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:41:25.566Z"
+  },
+  "ch03-create-slips-clear-ar": {
+    "file": "kayanos-guide/figures/screens/ch03-create-slips-clear-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/payment/salary_slips",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1900,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:41:34.332Z"
+  },
+  "ch01-workspaces-clear-en": {
+    "file": "kayanos-guide/figures/screens/ch01-workspaces-clear-en.png",
+    "url": "https://test2.kayanos.app/",
+    "lang": "en",
+    "width": 1440,
+    "height": 4438,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:48:06.734Z"
+  },
+  "ch01-apps-clear-en": {
+    "file": "kayanos-guide/figures/screens/ch01-apps-clear-en.png",
+    "url": "https://test2.kayanos.app/",
+    "lang": "en",
+    "width": 1440,
+    "height": 4438,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:48:12.525Z"
+  },
+  "ch02-create-org-en": {
+    "file": "kayanos-guide/figures/screens/ch02-create-org-en.png",
+    "url": "https://test2.kayanos.app/create-organization",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:48:22.706Z"
+  },
+  "ch02-member-fields-en": {
+    "file": "kayanos-guide/figures/screens/ch02-member-fields-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?returnView=table&tab=overview",
+    "lang": "en",
+    "width": 1440,
+    "height": 987,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:42:33.880Z"
+  },
+  "ch03-member-tab1-en": {
+    "file": "kayanos-guide/figures/screens/ch03-member-tab1-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=overview&returnView=table",
+    "lang": "en",
+    "width": 1440,
+    "height": 1283,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:42:42.087Z",
+    "tab": "Overview"
+  },
+  "ch03-member-tab2-en": {
+    "file": "kayanos-guide/figures/screens/ch03-member-tab2-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=orientation&returnView=table",
+    "lang": "en",
+    "width": 1440,
+    "height": 1283,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:42:50.304Z",
+    "tab": "Orientation"
+  },
+  "ch03-member-tab3-en": {
+    "file": "kayanos-guide/figures/screens/ch03-member-tab3-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=personal&returnView=table",
+    "lang": "en",
+    "width": 1440,
+    "height": 1283,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:42:58.574Z",
+    "tab": "Personal"
+  },
+  "ch03-member-tab4-en": {
+    "file": "kayanos-guide/figures/screens/ch03-member-tab4-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=contact&returnView=table",
+    "lang": "en",
+    "width": 1440,
+    "height": 1283,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:43:06.799Z",
+    "tab": "Contact"
+  },
+  "ch03-member-tab5-en": {
+    "file": "kayanos-guide/figures/screens/ch03-member-tab5-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=qualifications&returnView=table",
+    "lang": "en",
+    "width": 1440,
+    "height": 1283,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:43:15.097Z",
+    "tab": "Qualifications"
+  },
+  "ch03-member-tab6-en": {
+    "file": "kayanos-guide/figures/screens/ch03-member-tab6-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=conflict_of_interest&returnView=table",
+    "lang": "en",
+    "width": 1440,
+    "height": 1283,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:43:23.320Z",
+    "tab": "Conflict of Interest"
+  },
+  "ch03-member-tab7-en": {
+    "file": "kayanos-guide/figures/screens/ch03-member-tab7-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=financial&returnView=table",
+    "lang": "en",
+    "width": 1440,
+    "height": 1283,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:43:31.530Z",
+    "tab": "Financial"
+  },
+  "ch03-member-tab8-en": {
+    "file": "kayanos-guide/figures/screens/ch03-member-tab8-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=employment&returnView=table",
+    "lang": "en",
+    "width": 1440,
+    "height": 1283,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:43:39.854Z",
+    "tab": "Employment"
+  },
+  "ch03-member-tab9-en": {
+    "file": "kayanos-guide/figures/screens/ch03-member-tab9-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=attendance&returnView=table",
+    "lang": "en",
+    "width": 1440,
+    "height": 1283,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:43:48.092Z",
+    "tab": "Attendance"
+  },
+  "ch03-member-tab11-en": {
+    "file": "kayanos-guide/figures/screens/ch03-member-tab11-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=custom%3Ahosted-email-accounts&returnView=table",
+    "lang": "en",
+    "width": 1440,
+    "height": 1283,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:44:04.917Z",
+    "tab": "Email Accounts"
+  },
+  "ch03-member-tab12-en": {
+    "file": "kayanos-guide/figures/screens/ch03-member-tab12-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=custom%3Aworked-hours-assignment&returnView=table",
+    "lang": "en",
+    "width": 1440,
+    "height": 1283,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:44:13.243Z",
+    "tab": "Worked hours"
+  },
+  "ch03-member-tab13-en": {
+    "file": "kayanos-guide/figures/screens/ch03-member-tab13-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=custom%3Anotifications&returnView=table",
+    "lang": "en",
+    "width": 1440,
+    "height": 7131,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:44:23.439Z",
+    "tab": "Notifications"
+  },
+  "ch03-member-tab14-en": {
+    "file": "kayanos-guide/figures/screens/ch03-member-tab14-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=custom%3Asessions&returnView=table",
+    "lang": "en",
+    "width": 1440,
+    "height": 1283,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:44:31.788Z",
+    "tab": "Sessions"
+  },
+  "ch03-member-tab15-en": {
+    "file": "kayanos-guide/figures/screens/ch03-member-tab15-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=custom%3Atwo-step-verification&returnView=table",
+    "lang": "en",
+    "width": 1440,
+    "height": 1283,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:44:40.579Z",
+    "tab": "Two-step verification"
+  },
+  "ch03-member-tab16-en": {
+    "file": "kayanos-guide/figures/screens/ch03-member-tab16-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=roles&returnView=table",
+    "lang": "en",
+    "width": 1440,
+    "height": 1283,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:44:48.852Z",
+    "tab": "Roles"
+  },
+  "ch02-position-fields-en": {
+    "file": "kayanos-guide/figures/screens/ch02-position-fields-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/workforce/positions/add?tab=overview",
+    "lang": "en",
+    "width": 1440,
+    "height": 926,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:51:15.688Z"
+  },
+  "ch02-assignment-fields-en": {
+    "file": "kayanos-guide/figures/screens/ch02-assignment-fields-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/workforce/assignments/add?tab=overview",
+    "lang": "en",
+    "width": 1440,
+    "height": 1507,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:51:40.078Z"
+  },
+  "ch02-node-fields-en": {
+    "file": "kayanos-guide/figures/screens/ch02-node-fields-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/nodes/add?tab=overview",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:52:04.977Z"
+  },
+  "ch02-location-fields-en": {
+    "file": "kayanos-guide/figures/screens/ch02-location-fields-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/locations/add?tab=overview",
+    "lang": "en",
+    "width": 1440,
+    "height": 979,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:52:28.184Z"
+  },
+  "ch03-hr-pages-clear-en": {
+    "file": "kayanos-guide/figures/screens/ch03-hr-pages-clear-en.png",
+    "url": "https://test2.kayanos.app/apps/hr",
+    "lang": "en",
+    "width": 1440,
+    "height": 3779,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:45:27.722Z"
+  },
+  "ch03-shift-example-en": {
+    "file": "kayanos-guide/figures/screens/ch03-shift-example-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/time/shifts/add",
+    "lang": "en",
+    "width": 1440,
+    "height": 1201,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:45:35.337Z"
+  },
+  "ch03-leave-type-fields-en": {
+    "file": "kayanos-guide/figures/screens/ch03-leave-type-fields-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/time/leave_types/add?tab=rules",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:53:08.285Z"
+  },
+  "ch03-leave-fields-en": {
+    "file": "kayanos-guide/figures/screens/ch03-leave-fields-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/time/leaves/add",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:45:49.723Z"
+  },
+  "ch03-payroll-input-fields-en": {
+    "file": "kayanos-guide/figures/screens/ch03-payroll-input-fields-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/payment/payroll_inputs/add",
+    "lang": "en",
+    "width": 1440,
+    "height": 1117,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:45:57.347Z"
+  },
+  "ch03-feature-groups-en": {
+    "file": "kayanos-guide/figures/screens/ch03-feature-groups-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/workforce/groups/add?tab=member_selector%3Amembers",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:53:23.134Z"
+  },
+  "ch03-feature-seniority-levels-en": {
+    "file": "kayanos-guide/figures/screens/ch03-feature-seniority-levels-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/salaryScale/seniority_levels/add?tab=overview",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:46:11.698Z"
+  },
+  "ch03-feature-experience-levels-en": {
+    "file": "kayanos-guide/figures/screens/ch03-feature-experience-levels-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/salaryScale/experience_level_groups",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:46:19.249Z"
+  },
+  "ch03-feature-salary-scale-en": {
+    "file": "kayanos-guide/figures/screens/ch03-feature-salary-scale-en.png",
+    "url": "https://test2.kayanos.app/workforce/salary-scale",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:46:26.508Z"
+  },
+  "ch03-feature-my-attendance-en": {
+    "file": "kayanos-guide/figures/screens/ch03-feature-my-attendance-en.png",
+    "url": "https://test2.kayanos.app/time/attendance",
+    "lang": "en",
+    "width": 1440,
+    "height": 1484,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:46:34.169Z"
+  },
+  "ch03-feature-timesheets-en": {
+    "file": "kayanos-guide/figures/screens/ch03-feature-timesheets-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/time/work_time_entries",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:46:41.275Z"
+  },
+  "ch03-feature-holiday-groups-en": {
+    "file": "kayanos-guide/figures/screens/ch03-feature-holiday-groups-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/time/holidays_groups",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:46:48.404Z"
+  },
+  "ch03-feature-attendance-corrections-en": {
+    "file": "kayanos-guide/figures/screens/ch03-feature-attendance-corrections-en.png",
+    "url": "https://test2.kayanos.app/time/attendance-corrections",
+    "lang": "en",
+    "width": 1440,
+    "height": 4600,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:46:56.464Z"
+  },
+  "ch03-feature-attendance-policy-en": {
+    "file": "kayanos-guide/figures/screens/ch03-feature-attendance-policy-en.png",
+    "url": "https://test2.kayanos.app/time/attendance-policy",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:47:03.572Z"
+  },
+  "ch03-feature-attendance-terminals-en": {
+    "file": "kayanos-guide/figures/screens/ch03-feature-attendance-terminals-en.png",
+    "url": "https://test2.kayanos.app/time/attendance-terminals",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:47:10.698Z"
+  },
+  "ch03-feature-payrolls-en": {
+    "file": "kayanos-guide/figures/screens/ch03-feature-payrolls-en.png",
+    "url": "https://test2.kayanos.app/payment/payrolls",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:47:17.838Z"
+  },
+  "ch03-create-slips-clear-en": {
+    "file": "kayanos-guide/figures/screens/ch03-create-slips-clear-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/payment/salary_slips",
+    "lang": "en",
+    "width": 1440,
+    "height": 1900,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:47:26.131Z"
+  },
+  "ch02-position-fields-tab1-ar": {
+    "file": "kayanos-guide/figures/screens/ch02-position-fields-tab1-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/workforce/positions/add?tab=overview",
+    "lang": "ar",
+    "width": 1440,
+    "height": 926,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:49:01.066Z",
+    "tab": "نظرة عامة"
+  },
+  "ch02-position-fields-tab2-ar": {
+    "file": "kayanos-guide/figures/screens/ch02-position-fields-tab2-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/workforce/positions/add?tab=orientation",
+    "lang": "ar",
+    "width": 1440,
+    "height": 926,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:49:09.166Z",
+    "tab": "التأهيل والتوجيه"
+  },
+  "ch02-assignment-fields-tab1-ar": {
+    "file": "kayanos-guide/figures/screens/ch02-assignment-fields-tab1-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/workforce/assignments/add?tab=overview",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1507,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:49:25.135Z",
+    "tab": "نظرة عامة"
+  },
+  "ch02-assignment-fields-tab2-ar": {
+    "file": "kayanos-guide/figures/screens/ch02-assignment-fields-tab2-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/workforce/assignments/add?tab=orientation",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1507,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:49:33.322Z",
+    "tab": "التأهيل والتوجيه"
+  },
+  "ch02-node-fields-tab1-ar": {
+    "file": "kayanos-guide/figures/screens/ch02-node-fields-tab1-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/nodes/add?tab=overview",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:49:48.255Z",
+    "tab": "نظرة عامة"
+  },
+  "ch02-node-fields-tab2-ar": {
+    "file": "kayanos-guide/figures/screens/ch02-node-fields-tab2-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/nodes/add?tab=orientation",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:49:56.048Z",
+    "tab": "التأهيل والتوجيه"
+  },
+  "ch02-location-fields-tab1-ar": {
+    "file": "kayanos-guide/figures/screens/ch02-location-fields-tab1-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/locations/add?tab=overview",
+    "lang": "ar",
+    "width": 1440,
+    "height": 979,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:50:12.663Z",
+    "tab": "نظرة عامة"
+  },
+  "ch02-location-fields-tab2-ar": {
+    "file": "kayanos-guide/figures/screens/ch02-location-fields-tab2-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/locations/add?tab=orientation",
+    "lang": "ar",
+    "width": 1440,
+    "height": 979,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:50:21.274Z",
+    "tab": "التأهيل والتوجيه"
+  },
+  "ch02-location-fields-tab3-ar": {
+    "file": "kayanos-guide/figures/screens/ch02-location-fields-tab3-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/locations/add?tab=general_information",
+    "lang": "ar",
+    "width": 1440,
+    "height": 979,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:50:29.421Z",
+    "tab": "المعلومات الأساسية"
+  },
+  "ch02-location-fields-tab4-ar": {
+    "file": "kayanos-guide/figures/screens/ch02-location-fields-tab4-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/locations/add?tab=location_rooms",
+    "lang": "ar",
+    "width": 1440,
+    "height": 979,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:50:37.521Z",
+    "tab": "المساحات المستثمرة"
+  },
+  "ch03-leave-type-fields-tab1-ar": {
+    "file": "kayanos-guide/figures/screens/ch03-leave-type-fields-tab1-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/time/leave_types/add?tab=rules",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:50:52.524Z",
+    "tab": "القواعد"
+  },
+  "ch03-feature-groups-tab1-ar": {
+    "file": "kayanos-guide/figures/screens/ch03-feature-groups-tab1-ar.png",
+    "url": "https://test2.kayanos.app/apps/hr/workforce/groups/add?tab=member_selector%3Amembers",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:51:07.836Z",
+    "tab": "الأعضاء"
+  },
+  "ch02-position-fields-tab1-en": {
+    "file": "kayanos-guide/figures/screens/ch02-position-fields-tab1-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/workforce/positions/add?tab=overview",
+    "lang": "en",
+    "width": 1440,
+    "height": 926,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:51:24.103Z",
+    "tab": "Overview"
+  },
+  "ch02-position-fields-tab2-en": {
+    "file": "kayanos-guide/figures/screens/ch02-position-fields-tab2-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/workforce/positions/add?tab=orientation",
+    "lang": "en",
+    "width": 1440,
+    "height": 926,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:51:32.283Z",
+    "tab": "Orientation"
+  },
+  "ch02-assignment-fields-tab1-en": {
+    "file": "kayanos-guide/figures/screens/ch02-assignment-fields-tab1-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/workforce/assignments/add?tab=overview",
+    "lang": "en",
+    "width": 1440,
+    "height": 1507,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:51:48.653Z",
+    "tab": "Overview"
+  },
+  "ch02-assignment-fields-tab2-en": {
+    "file": "kayanos-guide/figures/screens/ch02-assignment-fields-tab2-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/workforce/assignments/add?tab=orientation",
+    "lang": "en",
+    "width": 1440,
+    "height": 1507,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:51:57.603Z",
+    "tab": "Orientation"
+  },
+  "ch02-node-fields-tab1-en": {
+    "file": "kayanos-guide/figures/screens/ch02-node-fields-tab1-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/nodes/add?tab=overview",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:52:12.771Z",
+    "tab": "Overview"
+  },
+  "ch02-node-fields-tab2-en": {
+    "file": "kayanos-guide/figures/screens/ch02-node-fields-tab2-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/nodes/add?tab=orientation",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:52:20.468Z",
+    "tab": "Orientation"
+  },
+  "ch02-location-fields-tab1-en": {
+    "file": "kayanos-guide/figures/screens/ch02-location-fields-tab1-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/locations/add?tab=overview",
+    "lang": "en",
+    "width": 1440,
+    "height": 979,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:52:36.338Z",
+    "tab": "Overview"
+  },
+  "ch02-location-fields-tab2-en": {
+    "file": "kayanos-guide/figures/screens/ch02-location-fields-tab2-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/locations/add?tab=orientation",
+    "lang": "en",
+    "width": 1440,
+    "height": 979,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:52:44.632Z",
+    "tab": "Orientation"
+  },
+  "ch02-location-fields-tab3-en": {
+    "file": "kayanos-guide/figures/screens/ch02-location-fields-tab3-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/locations/add?tab=general_information",
+    "lang": "en",
+    "width": 1440,
+    "height": 979,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:52:52.832Z",
+    "tab": "General Information"
+  },
+  "ch02-location-fields-tab4-en": {
+    "file": "kayanos-guide/figures/screens/ch02-location-fields-tab4-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/core/locations/add?tab=location_rooms",
+    "lang": "en",
+    "width": 1440,
+    "height": 979,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:53:01.019Z",
+    "tab": "Rooms"
+  },
+  "ch03-leave-type-fields-tab1-en": {
+    "file": "kayanos-guide/figures/screens/ch03-leave-type-fields-tab1-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/time/leave_types/add?tab=rules",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:53:15.963Z",
+    "tab": "Rules"
+  },
+  "ch03-feature-groups-tab1-en": {
+    "file": "kayanos-guide/figures/screens/ch03-feature-groups-tab1-en.png",
+    "url": "https://test2.kayanos.app/apps/hr/workforce/groups/add?tab=member_selector%3Amembers",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-15T09:53:30.870Z",
+    "tab": "Members"
+  }
+}

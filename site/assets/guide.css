@@ -1570,6 +1570,12 @@ td code {
     cursor: zoom-in;
     text-align: center;
 }
+.shot-original {
+    display: block;
+    margin-top: 8px;
+    text-align: center;
+    font-size: 0.875rem;
+}
 .shot-btn img {
     width: var(--w, 100%);
     max-width: 100%;
@@ -1800,6 +1806,106 @@ td code {
     border-color: color-mix(in srgb, var(--brand) 45%, transparent);
     color: var(--text);
 }
+/* app overview: "start with the pages" is the main call to action */
+.pager-card.start {
+    background: linear-gradient(135deg, var(--brand-strong), var(--accent));
+    border-color: transparent;
+    color: var(--on-brand);
+}
+.pager-card.start small {
+    color: var(--on-brand);
+    opacity: 0.8;
+}
+.pager-card.start:hover {
+    color: var(--on-brand);
+    box-shadow: 0 20px 44px -24px var(--brand);
+}
+
+/* app page directory: one button per dedicated page, in priority order */
+.page-cards {
+    margin: 22px 0;
+}
+.page-cards figcaption {
+    margin-bottom: 12px;
+}
+.page-grid {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    gap: 12px;
+}
+.page-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 16px 18px;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    background: linear-gradient(135deg, var(--glass-from), var(--glass-to));
+    color: var(--text);
+    transition:
+        transform 0.3s var(--ease),
+        border-color 0.3s,
+        box-shadow 0.3s;
+}
+.page-card:hover,
+.page-card:focus-visible {
+    transform: translateY(-3px);
+    border-color: color-mix(in srgb, var(--brand) 45%, transparent);
+    box-shadow: 0 18px 40px -26px var(--brand);
+    color: var(--text);
+}
+.page-card-top {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.page-card-no {
+    min-width: 26px;
+    height: 26px;
+    display: inline-grid;
+    place-items: center;
+    border-radius: 8px;
+    font-size: 12.5px;
+    font-weight: 700;
+    color: var(--brand-strong);
+    background: var(--brand-soft);
+}
+.page-card-sec {
+    flex: 1;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+.page-card-title {
+    font-weight: 700;
+    font-size: 17px;
+}
+.page-card-desc {
+    flex: 1;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+.page-card-go {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13.5px;
+    font-weight: 700;
+    color: var(--brand-strong);
+}
+.page-card-go .ic {
+    width: 16px;
+    height: 16px;
+}
+.page-card.done .toc-dot {
+    background: var(--brand);
+    border-color: var(--brand);
+}
 
 /* ---------------------------------------------------------------- floating stepper */
 .stepper {
@@ -2000,22 +2106,24 @@ td code {
     inset: 0;
     z-index: 90;
     display: grid;
-    place-items: center;
-    padding: 24px;
+    place-items: start center;
+    overflow: auto;
+    padding: 64px 24px 24px;
     background: rgb(var(--bg-rgb) / 0.9);
     backdrop-filter: blur(10px);
     cursor: zoom-out;
     animation: fade 0.25s var(--ease);
 }
 .lightbox img {
+    width: 1400px;
     max-width: min(1400px, 100%);
-    max-height: 90vh;
+    height: auto;
     border-radius: 12px;
     box-shadow: 0 40px 100px -30px #000;
     animation: pop 0.35s var(--ease);
 }
 .lightbox-close {
-    position: absolute;
+    position: fixed;
     top: 16px;
     inset-inline-end: 16px;
 }

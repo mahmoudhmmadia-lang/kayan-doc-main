@@ -26,7 +26,9 @@ function build() {
   }
 }
 
-const RELOAD = '<script>new EventSource("/__reload").onmessage=()=>location.reload()</script>';
+// Close the stream when leaving a page. Otherwise cached pages can retain the
+// browser's per-origin connections and delay images after several navigations.
+const RELOAD = '<script>(()=>{let stream;const connect=()=>{stream=new EventSource("/__reload");stream.onmessage=()=>location.reload()};connect();addEventListener("pagehide",()=>stream.close());addEventListener("pageshow",e=>{if(e.persisted)connect()})})()</script>';
 
 http.createServer((req, res) => {
   const url = decodeURIComponent(req.url.split('?')[0]);
