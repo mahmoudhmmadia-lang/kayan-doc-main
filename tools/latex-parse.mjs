@@ -65,8 +65,7 @@ function readArg(src, i) {
 
 function readCommandName(src, i) {
   // src[i] === '\\'
-  const m = /^\\([A-Za-z@]+\*?|.)/s.exec(src.slice(i));
-  return [m[1], i + m[0].length];
+  const m = /^\\([A-Za-z@]+\*?|.)/s.exec(src.slice(i));  return [m[1], i + m[0].length];
 }
 
 // Splits on a separator at brace depth 0 (separator is a literal string).
@@ -208,7 +207,7 @@ export function parseInline(src, ctx, fmt = {}) {
 //  {type:'list', kind:'bullet'|'number'|'check', items:[src]}
 //  {type:'box', kind:'note'|'warn'|'check', title, blocks}
 //  {type:'table', caption, number, cols:[{width|null}], rows:[{header, cells:[src]}]}
-//  {type:'figure', caption, number, image?, imageWidth?, tikz?}
+//  {type:'figure', caption, number, image?, imageWidth?, tikz?, note?}
 //  {type:'pagebreak'}
 
 const ENV_BOX = { rcnote: 'note', rcwarn: 'warn', rcchecklist: 'check' };
@@ -263,6 +262,9 @@ function parseFloat_(env, body, opts) {
   if (cap) out.caption = readGroup(body, cap.index + cap[0].length - 1)[0];
   const lab = /\\label\{([^}]*)\}/.exec(body);
   if (lab) out.label = lab[1];
+  // \shotnote{..}: the explanation printed directly under the image or diagram.
+  const note = /\\shotnote\{/.exec(body);
+  if (note) out.note = readGroup(body, note.index + note[0].length - 1)[0].trim();
   const tab = /\\begin\{(tabularx|tabular|longtable)\}/.exec(body);
   if (tab) {
     let i = tab.index + tab[0].length;

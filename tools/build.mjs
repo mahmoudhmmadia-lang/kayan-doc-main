@@ -22,7 +22,7 @@ const FIG = path.join(BUILD, 'fig');
 const TEX = process.env.KOS_TEX || 'tectonic';
 const PDFTOPPM = process.env.KOS_PDFTOPPM || 'pdftoppm';
 const args = new Set(process.argv.slice(2));
-const only = ['--pdf-only', '--docx-only', '--html-only'].find((a) => args.has(a));
+const only = ['--pdf-only', '--docx-only', '--html-only'].find((a) => args.has(a)) || '--html-only';
 const wantPdf = !only || only === '--pdf-only';
 const wantDocx = !only || only === '--docx-only';
 const wantHtml = !only || only === '--html-only';

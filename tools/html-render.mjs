@@ -6,12 +6,17 @@
 // id (c2-s3); the route map places feature sections on their own pages so links,
 // progress and the language switch keep your place.
 
-import { arrowKinds, renderDiagram } from './html-diagram.mjs'
+import { renderDiagram } from './html-diagram.mjs'
 import { parseInline } from './latex-parse.mjs'
 
 export const UI = {
     ar: {
         dir: 'rtl',
+        help: 'استخدام الدليل',
+        helpTitle: 'كيف تستخدم هذا الدليل؟',
+        helpFields: 'الحقول ذات النجمة (*) إلزامية. أكملها قبل الحفظ.',
+        helpDiagrams: 'اقرأ المخططات من الأعلى إلى الأسفل. في مخطط الاعتماد، جهّز السجلات المطلوبة قبل السجل الذي يعتمد عليها. سهم الخطوة التالية يوضح الترتيب؛ ولا يعني تنفيذًا آليًا إلا إذا ذُكر ذلك.',
+        helpWork: 'حدّث حالة العمل عند إنجازه. وفي الدليل، استخدم «تحديد كمنجزة» لحفظ تقدّمك في هذا المتصفح.',
         other: 'en',
         otherName: 'English',
         otherShort: 'EN',
@@ -68,6 +73,11 @@ export const UI = {
     },
     en: {
         dir: 'ltr',
+        help: 'Guide help',
+        helpTitle: 'How to use this guide',
+        helpFields: 'Fields marked with an asterisk (*) are required. Complete them before saving.',
+        helpDiagrams: 'Read diagrams from top to bottom. For dependencies, prepare the required records before the record that needs them. Next-step arrows show order; they imply automation only when explicitly stated.',
+        helpWork: 'Update work status when finished. In this guide, use “Mark as done” to save your reading progress in this browser.',
         other: 'ar',
         otherName: 'العربية',
         otherShort: 'ع',
@@ -146,6 +156,14 @@ const icon = (name, cls = 'ic') => `<svg class="${cls}" viewBox="0 0 24 24" aria
 // Groups the flat block list into chapters → sections, assigns stable ids and
 // a label → id map for \ref links.
 export function structure(doc) {
+    // Keep saved links/progress attached to the same content after removing
+    // Chapter 2's duplicated HR walkthroughs. Display numbers remain sequential.
+    const stableIds = {
+        'sec:setup-check': 'c2-s8',
+        'sec:setup-errors': 'c2-s9',
+        'sec:setup-next': 'c2-s10',
+        'tab:setup-errors': 'c2-t6',
+    }
     const chapters = []
     let appendix = false
     let ch = null,
@@ -167,7 +185,7 @@ export function structure(doc) {
         }
         if (!ch) continue
         if (b.type === 'heading' && b.level === 2) {
-            sec = { ...b, id: `${ch.id}-s${ch.sections.length + 1}`, blocks: [] }
+            sec = { ...b, id: stableIds[b.label] ?? `${ch.id}-s${ch.sections.length + 1}`, blocks: [] }
             ch.sections.push(sec)
             sub = 0
             if (b.label) ids.set(b.label, sec.id)
@@ -187,7 +205,8 @@ export function structure(doc) {
         const walk = (bs) =>
             bs.forEach((b) => {
                 if (b.type === 'table' && b.caption) {
-                    b.id = `${c.id}-t${++c.tables}`
+                    b.id = stableIds[b.label] ?? `${c.id}-t${c.tables + 1}`
+                    c.tables++
                     if (b.label) ids.set(b.label, b.id)
                 }
                 if (b.type === 'figure' && b.caption) {
@@ -274,10 +293,11 @@ function renderTable(b, ctx) {
     // that open each dedicated feature page, numbered in reading order.
     const featureOf = (cell) => {
         const name = plain(cell, ctx).split(' — ')[0].trim()
-        const i = ctx.features?.findIndex((f) => plain(f.title, ctx) === name) ?? -1
-        return i < 0 ? null : { feature: ctx.features[i], no: i + 1, section: plain(cell, ctx).split(' — ')[1] ?? '' }
+        const own = ctx.features?.filter(f => f.id.split('-')[0] === ctx.sectionId?.split('-')[0]) ?? []
+        const i = own.findIndex((f) => plain(f.title, ctx) === name)
+        return i < 0 ? null : { feature: own[i], no: i + 1, section: plain(cell, ctx).split(' — ')[1] ?? '' }
     }
-    const cards = b.label?.startsWith('tab:hr-pages-') ? body.map((r) => featureOf(r.cells[0])) : []
+    const cards = /^tab:(hr|tasks)-pages-/.test(b.label ?? '') ? body.map((r) => featureOf(r.cells[0])) : []
     if (cards.length && cards.every(Boolean)) {
         const nav = { ...ctx, nolink: true }
         return `<figure class="page-cards reveal"${b.id ? ` id="${b.id}"` : ''}>${caption}<ol class="page-grid">${cards
@@ -294,18 +314,15 @@ function renderFigure(b, ctx) {
         ? `<figcaption><span class="cap-no">${ctx.ui.figure} ${esc(b.number)}</span>${inline(b.caption, ctx)}</figcaption>`
         : ''
     const id = b.id ? ` id="${b.id}"` : ''
+    const note = b.note ? `<p class="fig-note">${inline(b.note, ctx)}</p>` : ''
     if (b.image) {
         const file = b.image.split('/').pop()
         const alt = b.caption ? plain(b.caption, ctx) : ''
-        return `<figure class="shot reveal"${id}><button class="shot-btn" type="button" data-zoom aria-label="${esc(ctx.ui.zoom)}"><img src="../assets/screens/${esc(file)}" alt="${esc(alt)}" loading="lazy" decoding="async" style="--w:${Math.round((b.imageWidth ?? 1) * 100)}%"><span class="shot-zoom">${icon('zoom')}</span></button>${cap}<a class="shot-original" href="../assets/screens/${esc(file)}" target="_blank" rel="noopener">${esc(ctx.ui.original)}</a></figure>`
+        return `<figure class="shot reveal"${id}><button class="shot-btn" type="button" data-zoom aria-label="${esc(ctx.ui.zoom)}"><img src="../assets/screens/${esc(file)}" alt="${esc(alt)}" loading="lazy" decoding="async" style="--w:${Math.round((b.imageWidth ?? 1) * 100)}%"><span class="shot-zoom">${icon('zoom')}</span></button>${cap}${note}<a class="shot-original" href="../assets/screens/${esc(file)}" target="_blank" rel="noopener">${esc(ctx.ui.original)}</a></figure>`
     }
     if (b.tikz) {
         const svg = renderDiagram(b.tikz, { dir: ctx.ui.dir, id: `dg${++diagramSeq}` })
-        const kinds = /\\rclegend/.test(b.tikz) ? arrowKinds(b.tikz) : []
-        const legend = kinds.length
-            ? `<ul class="legend">${kinds.map((k) => `<li><svg viewBox="0 0 36 10" aria-hidden="true"><line class="dg-edge dg-${k} static" x1="2" y1="5" x2="30" y2="5"/><path class="dg-head dg-head-${k}" d="${k === 'flowsTo' ? 'M27 1 L34 5 L27 9' : 'M27 1 L34 5 L27 9 Z'}"/></svg>${esc(ctx.ui.legend[k])}</li>`).join('')}</ul>`
-            : ''
-        return `<figure class="diagram-card reveal"${id}><div class="diagram-wrap">${svg}</div>${legend}${cap}</figure>`
+        return `<figure class="diagram-card reveal"${id}><div class="diagram-wrap">${svg}</div>${cap}${note}</figure>`
     }
     return ''
 }
@@ -368,6 +385,7 @@ function shell({ ui, lang, page, title, description, body, data, assetsVersion }
     ${page === 'index.html' ? '' : `<button class="icon-btn menu-btn" type="button" data-open-toc aria-label="${esc(ui.menu)}"><svg class="ic" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg></button>`}
     <a class="brand" href="index.html" aria-label="${esc(ui.brand)}"><img src="../assets/kayanos-mark.svg" alt="" width="34" height="23"><span class="brand-name">Kayan<b>OS</b></span><span class="brand-sep"></span><span class="brand-sub">${esc(ui.brand)}</span></a>
     <button class="search-btn" type="button" data-open-search><svg class="ic" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><span>${esc(ui.search)}</span><kbd dir="ltr">Ctrl K</kbd></button>
+    <a class="guide-help-link" href="index.html#guide-help">${esc(ui.help)}</a>
     <a class="lang-btn" href="../${ui.other}/${page}" data-lang-switch="${ui.other}" hreflang="${ui.other}" lang="${ui.other}">${esc(ui.otherName)}</a>
     <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-label="${esc(ui.theme)}" title="${esc(ui.theme)}"><svg class="ic sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="ic moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
   </div>
@@ -392,6 +410,22 @@ ${body}
 // Old chapter-page anchors whose content moved to a dedicated page. HR once
 // held nine walkthrough steps on c3.html; each now lives on its feature page.
 const LEGACY = {
+    'c2.html#c2-s5': 'fig:hr-models',
+    'c2.html#c2-s6': 'sec:hr-feature-members',
+    'c2.html#c2-s6-1': 'sec:hr-feature-locations',
+    'c2.html#c2-s6-2': 'sec:hr-feature-assignments',
+    'c2.html#c2-s6-3': 'sec:hr-pages',
+    'c2.html#c2-s6-4': 'sec:hr-feature-members',
+    'c2.html#c2-s7': 'ch:hr',
+    'c2.html#c2-f3': 'fig:hr-models',
+    'c2.html#c2-f4': 'fig:hr-feature-locations-screen',
+    'c2.html#c2-f5': 'fig:hr-feature-nodes-screen',
+    'c2.html#c2-f6': 'fig:hr-feature-positions-screen',
+    'c2.html#c2-f7': 'fig:hr-feature-members-screen',
+    'c2.html#c2-f8': 'fig:hr-feature-assignments-screen',
+    'c2.html#c2-f9': 'sec:hr-pages',
+    'c2.html#c2-t4': 'sec:hr-pages',
+    'c2.html#c2-t5': 'ch:hr',
     'c1.html#c1-s6': 'tab:intro-app-map',
     'c1.html#c1-s7': 'sec:setup-minute',
     'c3.html#c3-s3': 'sec:hr-feature-assignments',
@@ -409,10 +443,11 @@ const LEGACY = {
 export function renderSite(doc, { lang, assetsVersion = '' }) {
     const ui = UI[lang]
     const { chapters, ids } = structure(doc)
-    const features = chapters.flatMap(c => c.sections).filter(s => s.label?.startsWith('sec:hr-feature-'))
+    const features = chapters.flatMap(c => c.sections).filter(s => /^sec:(hr|tasks)-feature-/.test(s.label ?? ''))
     const routes = {}
     for (const s of features) {
-        const page = `hr-${s.label.slice('sec:hr-feature-'.length)}.html`
+        const [, app, slug] = s.label.match(/^sec:(hr|tasks)-feature-(.+)$/)
+        const page = `${app}-${slug}.html`
         routes[s.id] = page
         const visit = blocks => blocks.forEach(b => { if (b.id) routes[b.id] = page; if (b.blocks) visit(b.blocks) })
         visit(s.blocks)
@@ -536,6 +571,15 @@ export function renderSite(doc, { lang, assetsVersion = '' }) {
     </div>
   </div>
   <div class="paths">
+    <details class="guide-help" id="guide-help" open>
+      <summary>${esc(ui.helpTitle)}</summary>
+      <div class="guide-help-body">
+        <p>${esc(ui.helpFields)}</p>
+        <p>${esc(ui.helpDiagrams)}</p>
+        <ul class="legend">${Object.entries(ui.legend).map(([kind, label]) => `<li><svg viewBox="0 0 36 10" aria-hidden="true"><line class="dg-edge dg-${kind} static" x1="2" y1="5" x2="30" y2="5"/><path class="dg-head dg-head-${kind}" d="${kind === 'flowsTo' ? 'M27 1 L34 5 L27 9' : 'M27 1 L34 5 L27 9 Z'}"/></svg>${esc(label)}</li>`).join('')}</ul>
+        <p>${esc(ui.helpWork)}</p>
+      </div>
+    </details>
     <h2 class="paths-title reveal">${esc(ui.paths)}</h2>
     <div class="paths-grid">${cards}</div>
     <button class="reset-btn home-reset" type="button" data-reset>${esc(ui.reset)}</button>

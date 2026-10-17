@@ -8,6 +8,16 @@
   const $ = (s, el = document) => el.querySelector(s);
   const $$ = (s, el = document) => [...el.querySelectorAll(s)];
   const root = document.documentElement;
+  const showGuideHelp = () => {
+    const help = $('#guide-help');
+    if (help && location.hash === '#guide-help') help.open = true;
+  };
+  window.addEventListener('hashchange', showGuideHelp);
+  $('.guide-help-link')?.addEventListener('click', () => {
+    const help = $('#guide-help');
+    if (help) help.open = true;
+  });
+  showGuideHelp();
   const data = JSON.parse($('#guide-data').textContent);
   const ui = data.ui;
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -17,17 +27,22 @@
 
   // Old single-page links (index.html#c2-s4) and links to another chapter's
   // step land on the right chapter page.
-  const wanted = decodeURIComponent(location.hash.slice(1));
-  // Anchors of content that moved to a dedicated page (c3.html#c3-s4 → shifts).
-  const moved = data.legacy?.[`${data.page}#${wanted}`];
-  if (wanted && moved && !document.getElementById(wanted)) {
-    location.replace(moved);
-    return;
-  }
-  if (wanted && !document.getElementById(wanted) && /^c\d+/.test(wanted) && pageOf(wanted) !== data.page) {
-    location.replace(`${pageOf(wanted)}#${wanted}`);
-    return;
-  }
+  const redirectMovedAnchor = () => {
+    const wanted = decodeURIComponent(location.hash.slice(1));
+    // Anchors of content that moved to a dedicated page.
+    const moved = data.legacy?.[`${data.page}#${wanted}`];
+    if (wanted && moved && !document.getElementById(wanted)) {
+      location.replace(moved);
+      return true;
+    }
+    if (wanted && !document.getElementById(wanted) && /^c\d+/.test(wanted) && pageOf(wanted) !== data.page) {
+      location.replace(`${pageOf(wanted)}#${wanted}`);
+      return true;
+    }
+    return false;
+  };
+  window.addEventListener('hashchange', redirectMovedAnchor);
+  if (redirectMovedAnchor()) return;
 
   // ---------------------------------------------------------------- storage
   const store = {
@@ -329,6 +344,7 @@
   // ---------------------------------------------------------------- reveals
   // A deep link reveals everything up to its target before animations switch
   // on, so nothing above it is mid-transition when the page jumps there.
+  const wanted = decodeURIComponent(location.hash.slice(1));
   const hashTarget = wanted ? document.getElementById(wanted) : null;
   if (hashTarget) {
     $$('.reveal, .reveal-step').forEach((el) => {

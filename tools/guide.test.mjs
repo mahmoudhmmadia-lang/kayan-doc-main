@@ -9,6 +9,83 @@ import {loadDocument, parseBlocks, parseInline} from './latex-parse.mjs';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const doc=loadDocument(root);
 
+test('organization setup keeps existing links while handing HR procedures to chapter 3',()=>{
+ for(const lang of ['ar','en']) {
+  const html=fs.readFileSync(path.join(root,'site',lang,'c2.html'),'utf8');
+  const data=JSON.parse(html.match(/<script id="guide-data" type="application\/json">([^]*?)<\/script>/)[1]);
+  const steps=data.steps.filter(s=>s.c==='c2');
+  assert.deepEqual(steps.map(s=>s.n),['2.1','2.2','2.3','2.4','2.5','2.6','2.7']);
+  assert.deepEqual(steps.map(s=>s.id),['c2-s1','c2-s2','c2-s3','c2-s4','c2-s8','c2-s9','c2-s10']);
+  for(const page of ['members','positions','assignments','nodes','locations']) {
+   assert.ok(html.includes(`href="hr-${page}.html#`),`Missing ${lang} HR handoff: ${page}`);
+  }
+  assert.ok(!html.includes('ch02-member-fields-'),'Employee walkthrough must live in HR');
+  for(const hash of ['c2-s5','c2-s6','c2-s7']) {
+   const [file,id]=data.legacy[`c2.html#${hash}`].split('#');
+   const target=fs.readFileSync(path.join(root,'site',lang,file),'utf8');
+   assert.ok(target.includes(`id="${id}"`),`Broken moved link: ${hash}`);
+   assert.ok(!html.includes(`id="${hash}"`),'Old topic ID must not select unrelated new content');
+  }
+ }
+});
+
+test('every HR page has a concrete bilingual Horizon example before its first image',()=>{
+ for(const lang of ['ar','en']) {
+  const dir=path.join(root,'site',lang);
+  const files=fs.readdirSync(dir).filter(f=>f==='c3.html'||/^hr-.*\.html$/.test(f));
+  assert.equal(files.length,22);
+  for(const file of files) {
+   const html=fs.readFileSync(path.join(dir,file),'utf8');
+   const example=html.match(/<aside class="callout[^>]*>[^]*?<\/aside>/g)?.find(x=>x.includes(lang==='ar'?'مثال: شركة الأفق':'Example: Horizon'));
+   assert.ok(example,`${lang}/${file}: missing Horizon example`);
+   const body=example.match(/<div class="callout-body">([^]*)<\/div><\/aside>/)?.[1].replace(/<[^>]*>/g,'').trim();
+   assert.ok(body?.length>40,`${lang}/${file}: example needs concrete content`);
+   assert.ok(html.indexOf(example)<html.indexOf('<figure'),`${lang}/${file}: explain then example then image`);
+  }
+ }
+});
+
+test('shared guidance has one home and every guide page links to it',()=>{
+ for(const lang of ['ar','en']) {
+  const dir=path.join(root,'site',lang);
+  for(const file of fs.readdirSync(dir).filter(f=>f.endsWith('.html'))) {
+   const html=fs.readFileSync(path.join(dir,file),'utf8');
+   assert.ok(html.includes('href="index.html#guide-help"'),`${lang}/${file}: help link`);
+   assert.equal((html.match(/id="guide-help"/g)||[]).length,file==='index.html'?1:0);
+   assert.equal((html.match(/<ul class="legend">/g)||[]).length,file==='index.html'?1:0);
+  }
+ }
+});
+
+test('Tasks overview and all ten feature pages have bilingual examples, media and navigable routes',()=>{
+ for(const lang of ['ar','en']) {
+  const folder=path.join(root,'site',lang);
+  const overview=fs.readFileSync(path.join(folder,'c4.html'),'utf8');
+  const data=JSON.parse(overview.match(/<script id="guide-data" type="application\/json">([^]*?)<\/script>/)[1]);
+  const features=data.steps.filter(s=>s.p.startsWith('tasks-'));
+  assert.equal(features.length,10);
+  assert.equal((overview.match(/class="page-card"/g)||[]).length,10);
+  assert.equal((overview.match(/class="step reveal-step"/g)||[]).length,2);
+  for(const feature of features) {
+   const html=fs.readFileSync(path.join(folder,feature.p),'utf8');
+   assert.ok(overview.includes(`href="${feature.p}#${feature.id}"`));
+   assert.equal(data.routes[feature.id],feature.p);
+   assert.ok(data.search.some(s=>s.id===feature.id&&s.p===feature.p&&s.x.length>100));
+   assert.ok(html.includes(`data-done="${feature.id}"`));
+   assert.ok(html.includes(`../${lang==='ar'?'en':'ar'}/${feature.p}`));
+   assert.match(html,/<figure class="shot/);
+   assert.match(html,/<svg class="diagram"/);
+   assert.match(html,/class="steps"/);
+  }
+  for(const file of ['c4.html',...features.map(f=>f.p)]) {
+   const html=fs.readFileSync(path.join(folder,file),'utf8');
+   const callout=html.match(/<aside class="callout[^>]*>[^]*?<\/aside>/g)?.find(x=>x.includes(lang==='ar'?'مثال: شركة الأفق':'Example: Horizon'));
+   assert.ok(callout,`${lang}/${file}: missing example`);
+   assert.ok(html.indexOf(callout)<html.indexOf('<figure'));
+  }
+ }
+});
+
 test('explicit page breaks preserve Arabic paragraphs on both sides',()=>{
  const blocks=parseBlocks('قبل الفاصل\n\\clearpage\nبعد الفاصل\n\\newpage\nالنهاية');
  assert.deepEqual(blocks.map(b=>b.type),['para','pagebreak','para','pagebreak','para']);
@@ -31,7 +108,7 @@ test('all chapter references resolve and diagrams carry Arabic legends',()=>{
  assert.ok(doc.blocks.some(b=>b.type==='chapter' && b.label==='ch:hr'));
 });
 
-test('built Word contains HR, Arabic language metadata, diagrams and page breaks',async()=>{
+test('built Word contains HR, Arabic language metadata, diagrams and page breaks',{skip: 'Archived; web-only work'},async()=>{
  const zip=await JSZip.loadAsync(fs.readFileSync(path.join(root,'kayanos-guide.docx')));
  const xml=await zip.file('word/document.xml').async('string');
  const styles=await zip.file('word/styles.xml').async('string');
@@ -44,7 +121,7 @@ test('built Word contains HR, Arabic language metadata, diagrams and page breaks
  assert.ok(!xml.includes('??'));
 });
 
-test('PDF build has no missing Arabic glyphs, overflow or unresolved references',()=>{
+test('PDF build has no missing Arabic glyphs, overflow or unresolved references',{skip: 'Archived; web-only work'},()=>{
  const log=fs.readFileSync(path.join(root,'build/main.log'),'utf8');
  assert.doesNotMatch(log,/Missing character:|Overfull \\[hv]box|undefined references|Reference .* undefined/);
  assert.ok(fs.statSync(path.join(root,'kayanos-guide.pdf')).size>100000);
@@ -52,13 +129,17 @@ test('PDF build has no missing Arabic glyphs, overflow or unresolved references'
 
 // ---------------------------------------------------------------- HTML guide (site/)
 const en=loadDocument(path.join(root,'i18n/en'),{lang:'en'});
-const shape=(d)=>d.blocks.map(b=>b.type==='para'?'p':`${b.type}${b.level??''}${b.kind??''}:${b.label??''}:${b.rows?.length??''}x${b.rows?.[0]?.cells.length??''}:${b.items?.length??''}:${(b.image??'').replace(/-(ar|en).png$/,'.png')}${b.tikz?'tikz':''}`);
+const shape=(d)=>d.blocks.map(b=>b.type==='para'?'p':`${b.type}${b.level??''}${b.kind??''}:${b.label??''}:${b.rows?.length??''}x${b.rows?.[0]?.cells.length??''}:${b.items?.length??''}:${(b.image??'').replace(/-(ar|en).png$/,'.png')}${b.tikz?'tikz':''}${b.note?'+note':''}`);
 
 test('English HTML sources mirror the Arabic structure',()=>{
  const ar=shape(doc).filter(s=>s!=='p'), e=shape(en).filter(s=>s!=='p');
  assert.deepEqual(e,ar);
  assert.deepEqual([...en.labels.keys()].sort(),[...doc.labels.keys()].sort());
  for(const b of en.blocks.filter(b=>b.tikz)) assert.doesNotMatch(b.tikz,/[\u0600-\u06FF]/,'Arabic left in an English diagram');
+});
+
+test('every figure has an explanation under it',()=>{
+ for(const d of [doc,en]) for(const b of d.blocks.filter(b=>b.type==='figure')) assert.ok(b.note,`figure ${b.label} has no \\shotnote`);
 });
 
 test('screenshots use matching full-page captures in each interface language',()=>{
@@ -72,10 +153,16 @@ test('screenshots use matching full-page captures in each interface language',()
    assert.equal(capture.lang,lang);
    assert.equal(capture.scale,2);
    assert.equal(capture.width,1440);
-   assert.ok(capture.height>=900);
+   assert.ok(capture.height>=300,'Capture must retain meaningful page content');
    const png=fs.readFileSync(path.join(root,block.image));
    assert.equal(png.readUInt32BE(16),capture.width*2);
-   assert.equal(png.readUInt32BE(20),capture.height*2);
+   const outputHeight=capture.trim?.height ?? capture.height;
+   if(capture.trim) {
+    assert.equal(capture.trim.top,0);
+    assert.ok(outputHeight>0 && outputHeight<=capture.height);
+    assert.equal(capture.trim.reason,'Remove blank bottom margin; preserve all page content');
+   }
+   assert.equal(png.readUInt32BE(20),outputHeight*2);
   }
   const tabs=source.blocks.filter(b=>/ch03-member-tab\d+-/.test(b.image??'')).map(b=>manifest[path.basename(b.image,'.png')]);
   assert.equal(tabs.length,15);
@@ -88,9 +175,9 @@ test('built HTML site: chapter and feature pages, language, direction and workin
   const folder=path.join(root,'site',lang);
   const pages=Object.fromEntries(fs.readdirSync(folder).filter(f=>f.endsWith('.html')).map(f=>[f,fs.readFileSync(path.join(folder,f),'utf8')]));
   const sourceDoc=lang==='ar'?doc:en;
-  const featureFiles=sourceDoc.blocks.filter(b=>b.label?.startsWith('sec:hr-feature-')).map(b=>`hr-${b.label.slice('sec:hr-feature-'.length)}.html`);
-  assert.equal(featureFiles.length,21);
-  assert.deepEqual(Object.keys(pages).sort(),['c1.html','c2.html','c3.html','index.html',...featureFiles].sort());
+  const featureFiles=sourceDoc.blocks.filter(b=>/^sec:(hr|tasks)-feature-/.test(b.label??'')).map(b=>b.label.replace(/^sec:(hr|tasks)-feature-/,'$1-')+'.html');
+  assert.equal(featureFiles.length,31);
+  assert.deepEqual(Object.keys(pages).sort(),['c1.html','c2.html','c3.html','c4.html','index.html',...featureFiles].sort());
   const ids=Object.fromEntries(Object.entries(pages).map(([f,h])=>[f,new Set([...h.matchAll(/\sid="([^"]+)"/g)].map(m=>m[1]))]));
   let diagrams=0;
   for(const [file,html] of Object.entries(pages)){

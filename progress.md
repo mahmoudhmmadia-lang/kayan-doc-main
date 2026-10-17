@@ -2,6 +2,15 @@
 
 الحالات: لم يبدأ · مسودة · قيد المراجعة · معتمد
 
+## آخر تحديث — فصل المهام قيد المراجعة — 2026-10-17
+
+- بعد اعتماد المخطط، أُضيف الفصل الرابع بالعربية والإنجليزية: نظرة عامة وعشر صفحات مستقلة للدليل، مع التمييز بين صفحات التطبيق والتبويبات والنوافذ. لم يبدأ فصل المشاريع والتخطيط.
+- لكل صفحة شرح عام ثم مثال منفصل لشركة الأفق، وخطوات وتحقق ومعالجة للمشكلات. أضيفت 46 لقطة واجهة موثقة من test2، و12 مخططاً لكل لغة، مع شرح تحت كل صورة ومخطط. الصور تعرض بيانات اختبار مستقلة عن الأفق.
+- جرى توسيع مسارات صفحات الدليل والبحث والتنقل وحفظ التقدم وتبديل اللغة لدعم المهام. صُحح تعارض اسم «المجموعات» بين الموارد البشرية والمهام بربط بطاقات كل تطبيق بصفحاته وحدها. بقيت الروابط السابقة صالحة.
+- نجح بناء HTML والاختبارات النشطة الاثنا عشر؛ اختبارا المطبوعات مؤجلان حسب توجيه العمل على الويب فقط. نجحت 88 حالة متصفح للصفحات الجديدة باللغتين وعلى الهاتف وسطح المكتب وبالمظهرين. شمل التحقق فتح الصور وإغلاقها والبحث والتنقل وحفظ التقدم وتبديل اللغة والانتقال من الموارد البشرية والروابط القديمة. وبعد ضبط التفاف عناوين المخططات، نجحت 44 مراجعة إضافية لتمرير المحتوى وحدود نصوص المخططات بالخطوط العادية.
+- تحقق عملي على test2: إنشاء مهمة اختبار وفتحها بعد الحفظ، ثم تنفيذ «Start» وإعادة فتحها للتأكد من بقاء الحالة «In Progress». إنشاء مجموعة أظهر «Collection not available» عند فتحها مباشرة؛ ظهرت بطاقتها لاحقاً لكن الوصول إليها لم يُتحقق منه. لم تُرسل طلبات إلى أشخاص ولم تُعدّل إعدادات مشتركة. تفاصيل حدود الاختبار في `review/tasks-source-coverage.md`.
+- أدلة المراجعة: `review/tasks-browser-verification.json`، `review/tasks-final-visual-verification.json`، `review/tasks-product-verification.json`. لقطات نهائية مفحوصة بصرياً: `review/html/tasks-overview-en-1440.png` و`review/html/tasks-flow-ar-390.png` و`review/html/tasks-model-en-1440.png`، مع بقية لقطات اللغتين والأحجام. لم تُعدّل مخرجات PDF أو Word أو Overleaf.
+
 ## التحديث الحالي: دليل مختصر ومرئي — 2026-10-14
 
 - أُعيد تحرير الفصول الثلاثة بالعربية والإنجليزية: مقدمات أقصر، عناوين مباشرة، خطوات عملية، ووصف مختصر لكل صفحة. بقيت صفحات الموارد البشرية الـ21 وترتيب أهميتها وخطوات الحفظ والتحقق والاسترداد.
@@ -16,7 +25,7 @@
 | 1 | مقدمة سريعة | `chapters/01-introduction.tex` | قيد المراجعة | حُوّلت المخططات إلى أشجار رأسية وأُضيف شرح قراءتها 2026-10-13 |
 | 2 | إنشاء المؤسسة والتهيئة الأولية | `chapters/02-organization-setup.tex` | قيد المراجعة | كُتب 2026-10-13؛ لم يُختبر إنشاء مؤسسة ولا شاشة الاستيراد عملياً |
 | 3 | الموارد البشرية | `chapters/03-hr.tex` | قيد المراجعة | كُتب بإذن المستخدم بعد تحديث المخططات؛ يشمل الورديات والدوام والإجازات والرواتب |
-| 4 | المهام | — | لم يبدأ | |
+| 4 | المهام | `chapters/04-tasks.tex` و`chapters/04-tasks-features.tex` | قيد المراجعة | نظرة عامة وعشر صفحات بكل لغة؛ تحقق الويب وقيود اختبار التطبيق موثقة في تحديث 2026-10-17 |
 | 5 | المشاريع والتخطيط | — | لم يبدأ | |
 | 6 | التطبيقات الأخرى (فصل لكل تطبيق) | — | لم يبدأ | |
 | 7 | سيناريوهات مترابطة | — | لم يبدأ | |
@@ -135,3 +144,120 @@
 - Validation: seven focused source/HTML tests passed, including language parity, links, assets, screenshot language/provenance/pixel dimensions and distinct member tabs. Real browser checks passed 200 combinations (25 pages × 2 languages × 2 viewports × 2 themes). Full-page image scrolling, progress persistence, overview links, language switching, search and legacy-link navigation passed. Layout sweep used fallback fonts; final evidence used normal font loading.
 - Visual evidence: review/html/fullpage-hr-nodes-{ar,en}-{desktop,mobile}.png and fullpage-hr-members-ar-{desktop,mobile}.png. Inspected Arabic desktop/mobile and English desktop; corrected the long English Nodes diagram label with a line break.
 - PDF/Word rebuild attempted but blocked: tectonic is absent (ENOENT). Existing PDF/Word remain stale; the full test suite still fails its Word image-count check. Old PDF logs do not verify the current revision. The Overleaf source archive is refreshed separately, without claiming a compiled PDF. Chapters remain under review.
+
+## An explanation under every image — 2026-10-15/16
+
+- User rule (all chapters, both languages): image → its explanation → next image → its explanation; never text first and then a run of images. Recorded in AGENTS.md, README authoring rules and enforced by the test "every figure has an explanation under it".
+- New macro `\shotnote{...}` inside each figure (after `\caption`/`\label`), rendered under the image in PDF (small text), Word (paragraph after the caption) and HTML (`.fig-note` box). Taught to latex-parse, html-render, docx-render; the parity test also compares notes.
+- Wrote 80 notes × 2 languages (53 screenshots, 27 diagrams) in chapters 1–3, each from the actual ar/en screenshots or the TikZ source. Six paragraphs that only restated a figure were folded into its note (intro workday, HR model, shift order — both languages). One untested claim (group member names) softened to what the screen shows.
+- PDF fix: the tall full-page screenshots overflowed the page (5 Overfull \vbox, present with or without notes). Screenshots are now capped at 0.72\textheight (keepaspectratio); Word uses the same cap. "²" replaced by words (missing in Noto Naskh).
+- Verification: full build (Tectonic) with no errors; 10/10 tests pass; PDF pages and the Word→PDF (LibreOffice) render checked; HTML checked in a browser (ar desktop dark, ar c2 light, en mobile light, ar locations mobile dark): every figure has its note. Screenshots: review/html/notes-*.png.
+- Open label questions found while writing notes (guide text vs. screen): «النقاط الجغرافية» vs screen «المواقع»; «المستويات الوظيفية» vs «مستويات الأقدمية»; «الوحدة الأم» vs field «يتبع ل»; slip statuses «محسوبة/معتمدة» vs «محسوب/موافق عليه»; «الوحدات النشطة» vs «العقد النشطة»; duplicate images: leave-types tab1 = main screen, groups tab1 = main screen.
+# 2026-10-16 — Shared conventions and web-only updates
+
+- Added one bilingual, collapsible home-page help panel for required-field stars,
+  diagram direction/arrow meanings, work status and saved reading progress. Every
+  guide page links to it; following the link reopens a collapsed panel.
+- Removed repeated reading instructions and arrow legends from individual figures
+  and shortened generic form wording, preserving specific actions and figure notes.
+- Updated AGENTS.md and README.md: web-only work supersedes legacy print rules;
+  every screenshot needs a short, specific explanation directly underneath.
+  Default build now generates HTML only. Existing print outputs are archival.
+- Verification: HTML build passed; 9 source/web tests passed, 2 archived print
+  checks skipped. Real Chrome checks passed in Arabic/English, 1440×900 and
+  390×844, dark/light: help navigation, collapse/reopen, no horizontal overflow,
+  and notes below screenshots/diagrams. Inspected captured screenshots in
+  `review/html/`; final viewport evidence: `conventions-ar-390.png` and
+  `conventions-en-1440.png`. Browser checks used the local guide at port 4336;
+  no application behavior changed, so no test2 interaction was needed.
+
+# 2026-10-16 — Explanation first, Horizon example second
+
+- Added the bilingual editorial rule to AGENTS.md and README.md: concise general
+  explanation first, then a separate labelled Horizon example. Prioritize clear,
+  natural Arabic; keep fictional data out of definitions and screenshot notes.
+- Applied it to the introduction, setup and HR: separate setup callouts, general
+  feature descriptions and diagrams, and explicitly labelled worked examples for
+  members, positions, assignments, units, locations, groups, shifts, leaves and pay.
+  Existing page routes and section IDs are preserved.
+- HTML/source checks: 9 passed; 2 archived print checks skipped. Local Chrome
+  verification covered Arabic/English desktop/mobile, visible example callouts,
+  example deep links and language switching (which keeps the current step).
+  Screenshots: `review/html/explanation-example-{ar,en}-{390,1440}.png`.
+  No product behavior changed; verification used the local web guide, not test2.
+- Mobile review exposed cramped chapter-header branding; hide the wordmark on
+  narrow chapter pages while retaining the logo and navigation controls.
+
+# 2026-10-16 — Horizon example on every HR page
+
+- Added a concise, separate Horizon example immediately after the explanation
+  on all 21 HR feature pages and the overview, in Arabic and English. Examples
+  connect each feature to the same fictional company, people and workflow.
+- Updated AGENTS.md and README.md to require this coverage on every page,
+  including future authorized app pages; a heading or link alone is insufficient.
+- Added a regression check for all 44 rendered language/page combinations.
+  HTML build passed; 10 web/source checks passed, 2 archived print checks skipped.
+- Local Chrome verification passed on all 22 Arabic pages at mobile width and
+  all 22 English pages at desktop width: visible examples, no horizontal overflow,
+  and translated example preserved on language switch. Inspected screenshots:
+  `review/html/all-examples-ar-hr-my-attendance.png` and
+  `review/html/all-examples-en-hr-attendance-policy.png`.
+  This was guide-only verification; no test2 application behavior changed.
+
+
+## 2026-10-17 — Remove empty height from introductory figures
+
+- Added the standing rule to fit screenshot/diagram bounds to meaningful content,
+  superseding older instructions to retain empty full-page margins.
+- Figures 1.2 and 1.4: trimmed only the blank bottom area in both languages,
+  from 2880×8876 to 2880×3228; retained pixels verified identical to originals.
+  Capture manifest preserves original dimensions and records the trim separately.
+- Figure 1.3: reduced flow connector gaps from 46 to 24 pixels; the shared flow
+  layout now uses compact spacing without shrinking labels or changing tree layouts.
+- HTML build and all 10 active source/web checks passed (2 archived print checks
+  skipped). Real local Chrome checks passed in Arabic/English at 1440×900 and
+  390×844, dark/light: all three figures, screenshot zoom/close and no overflow.
+  Visual evidence: review/html/figure-1-{2,3,4}-{ar,en}-{1440,390}.png.
+- Documentation-only changes: local guide verification was appropriate; no
+  application behavior or test2 data changed. PDF/Word outputs were not rebuilt.
+
+## 2026-10-17 — Focus Chapter 2 on organization setup
+
+- Removed former sections 2.5–2.7 (HR data order, first employee walkthrough and
+  example dataset) from both languages. HR feature pages remain unchanged and
+  are the destination for these detailed explanations.
+- Aligned the opening result, three-step diagram, preparation, completion checks
+  and troubleshooting with organization creation and settings. New 2.5–2.7 are
+  setup verification, setup problems and a concise linked handoff to HR.
+- Kept existing setup/check/settings anchors stable while displaying sequential
+  section numbers. Old HR-topic and figure anchors redirect to the appropriate
+  existing HR pages; redirects also work on same-page hash changes.
+- HTML build and 11 active automated checks passed; 2 archived print tests skipped.
+  Real local Chrome verification passed for Arabic/English, desktop/mobile,
+  dark/light: HR links, checklist persistence, language switch, numbering,
+  overflow and old topic/figure redirects. Screenshots inspected:
+  review/html/chapter2-handoff-detail-en.png and chapter2-handoff-detail-ar.png.
+- Documentation-only task: verified the local guide; no test2 product changes or
+  application-flow test was needed. PDF/Word outputs were not rebuilt.
+
+## 2026-10-17 — Arabic editorial rewrite and figure explanations
+
+- Rewrote the Arabic prose of chapters 1–4, all 21 HR and 10 Tasks feature pages
+  and the appendix in professional Modern Standard Arabic: telegraphic fragments
+  became complete connected sentences; grammar, punctuation and terminology were
+  unified (المؤسسة، العضو/الموظف، المنصب، اضغط، سلم الراتب، المهام الكبرى).
+- Rewrote all 109 figure notes (Arabic and English) to explain what each figure
+  represents, why it matters and what to take from it, instead of positional
+  descriptions. Every screenshot was opened before its note was written.
+- UI-label corrections verified in locales/seeds: «البصمة اليدوية»، «موافق عليه»
+  (approved slip), «يُعفي من التأخير»، «الكود» (shift), «جميع المهام»، «الفئة/الفئات»،
+  «الحد الأدنى للراتب»; payroll-input dates all required; appendix corruption
+  (`\textbf`, `\en{`) repaired. No structure, anchors or figure order changed.
+- Added "Arabic writing and documentation quality" to AGENTS.md (and a pointer in
+  README.md and the repository root AGENTS.md).
+- HTML build and 12 active checks passed (2 archived print checks skipped). Local
+  Edge check of all 70 pages × 2 widths: every image/diagram has its note, no
+  overflow, lightbox works. Evidence: review/html/arabic-quality-*.png.
+- Open: ch02-create-org capture shows no fields; ch04-statuses capture repeats its
+  header; ch04-assignments is very tall; two leave-type images are identical; the
+  Arabic UI mixes «المشاريع»/«ملحمة» for epics and spells «ادوات البناء».

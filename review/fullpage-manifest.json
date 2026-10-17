@@ -125,7 +125,12 @@
     "width": 1440,
     "height": 4438,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:47:39.085Z"
+    "capturedAt": "2026-10-15T09:47:39.085Z",
+    "trim": {
+      "top": 0,
+      "height": 1614,
+      "reason": "Remove blank bottom margin; preserve all page content"
+    }
   },
   "ch01-apps-clear-ar": {
     "file": "kayanos-guide/figures/screens/ch01-apps-clear-ar.png",
@@ -134,7 +139,12 @@
     "width": 1440,
     "height": 4438,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:47:44.966Z"
+    "capturedAt": "2026-10-15T09:47:44.966Z",
+    "trim": {
+      "top": 0,
+      "height": 1614,
+      "reason": "Remove blank bottom margin; preserve all page content"
+    }
   },
   "ch02-create-org-ar": {
     "file": "kayanos-guide/figures/screens/ch02-create-org-ar.png",
@@ -381,7 +391,12 @@
     "width": 1440,
     "height": 4438,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:48:06.734Z"
+    "capturedAt": "2026-10-15T09:48:06.734Z",
+    "trim": {
+      "top": 0,
+      "height": 1614,
+      "reason": "Remove blank bottom margin; preserve all page content"
+    }
   },
   "ch01-apps-clear-en": {
     "file": "kayanos-guide/figures/screens/ch01-apps-clear-en.png",
@@ -390,7 +405,12 @@
     "width": 1440,
     "height": 4438,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:48:12.525Z"
+    "capturedAt": "2026-10-15T09:48:12.525Z",
+    "trim": {
+      "top": 0,
+      "height": 1614,
+      "reason": "Remove blank bottom margin; preserve all page content"
+    }
   },
   "ch02-create-org-en": {
     "file": "kayanos-guide/figures/screens/ch02-create-org-en.png",
@@ -988,5 +1008,446 @@
     "scale": 2,
     "capturedAt": "2026-10-15T09:53:30.870Z",
     "tab": "Members"
+  },
+  "ch04-create-en": {
+    "file": "kayanos-guide/figures/screens/ch04-create-en.png",
+    "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945",
+    "lang": "en",
+    "width": 1440,
+    "height": 868,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:37:58.743Z"
+  },
+  "ch04-collections-en": {
+    "file": "kayanos-guide/figures/screens/ch04-collections-en.png",
+    "url": "https://test2.kayanos.app/tasks",
+    "lang": "en",
+    "width": 1440,
+    "height": 1092,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:52:41.753Z"
+  },
+  "ch04-collection-form-en": {
+    "file": "kayanos-guide/figures/screens/ch04-collection-form-en.png",
+    "url": "https://test2.kayanos.app/tasks",
+    "lang": "en",
+    "width": 1440,
+    "height": 1092,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:52:48.422Z"
+  },
+  "ch04-board-en": {
+    "file": "kayanos-guide/figures/screens/ch04-board-en.png",
+    "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945",
+    "lang": "en",
+    "width": 1440,
+    "height": 745,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:41:51.746Z"
+  },
+  "ch04-list-en": {
+    "file": "kayanos-guide/figures/screens/ch04-list-en.png",
+    "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945",
+    "lang": "en",
+    "width": 1440,
+    "height": 816,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:41:53.613Z"
+  },
+  "ch04-checkins-en": {
+    "file": "kayanos-guide/figures/screens/ch04-checkins-en.png",
+    "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945",
+    "lang": "en",
+    "width": 1440,
+    "height": 679,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:41:55.476Z"
+  },
+  "ch04-details-en": {
+    "file": "kayanos-guide/figures/screens/ch04-details-en.png",
+    "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
+    "lang": "en",
+    "width": 1440,
+    "height": 1005,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:50:28.004Z"
+  },
+  "ch04-comments-en": {
+    "file": "kayanos-guide/figures/screens/ch04-comments-en.png",
+    "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
+    "lang": "en",
+    "width": 1440,
+    "height": 1005,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:50:58.377Z"
+  },
+  "ch04-about-en": {
+    "file": "kayanos-guide/figures/screens/ch04-about-en.png",
+    "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
+    "lang": "en",
+    "width": 1440,
+    "height": 1005,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:50:33.621Z"
+  },
+  "ch04-output-en": {
+    "file": "kayanos-guide/figures/screens/ch04-output-en.png",
+    "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
+    "lang": "en",
+    "width": 1440,
+    "height": 1005,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:50:37.157Z"
+  },
+  "ch04-challenges-en": {
+    "file": "kayanos-guide/figures/screens/ch04-challenges-en.png",
+    "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
+    "lang": "en",
+    "width": 1440,
+    "height": 1005,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:50:40.658Z"
+  },
+  "ch04-progress-en": {
+    "file": "kayanos-guide/figures/screens/ch04-progress-en.png",
+    "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
+    "lang": "en",
+    "width": 1440,
+    "height": 1005,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:50:44.273Z"
+  },
+  "ch04-emails-en": {
+    "file": "kayanos-guide/figures/screens/ch04-emails-en.png",
+    "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
+    "lang": "en",
+    "width": 1440,
+    "height": 1005,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:50:47.821Z"
+  },
+  "ch04-records-en": {
+    "file": "kayanos-guide/figures/screens/ch04-records-en.png",
+    "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
+    "lang": "en",
+    "width": 1440,
+    "height": 1005,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:50:51.348Z"
+  },
+  "ch04-relations-en": {
+    "file": "kayanos-guide/figures/screens/ch04-relations-en.png",
+    "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
+    "lang": "en",
+    "width": 1440,
+    "height": 1005,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:50:54.839Z"
+  },
+  "ch04-activity-en": {
+    "file": "kayanos-guide/figures/screens/ch04-activity-en.png",
+    "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
+    "lang": "en",
+    "width": 1440,
+    "height": 1005,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:51:01.895Z"
+  },
+  "ch04-requests-en": {
+    "file": "kayanos-guide/figures/screens/ch04-requests-en.png",
+    "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
+    "lang": "en",
+    "width": 1440,
+    "height": 1005,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:51:05.415Z"
+  },
+  "ch04-suggestions-en": {
+    "file": "kayanos-guide/figures/screens/ch04-suggestions-en.png",
+    "url": "https://test2.kayanos.app/tasks/suggestions?status=pending",
+    "lang": "en",
+    "width": 1440,
+    "height": 563,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:51:44.100Z"
+  },
+  "ch04-assignments-en": {
+    "file": "kayanos-guide/figures/screens/ch04-assignments-en.png",
+    "url": "https://test2.kayanos.app/tasks/assignments",
+    "lang": "en",
+    "width": 1440,
+    "height": 7417,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:51:58.383Z"
+  },
+  "ch04-settings-en": {
+    "file": "kayanos-guide/figures/screens/ch04-settings-en.png",
+    "url": "https://test2.kayanos.app/builder/task-settings",
+    "lang": "en",
+    "width": 1440,
+    "height": 793,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:52:14.672Z"
+  },
+  "ch04-statuses-en": {
+    "file": "kayanos-guide/figures/screens/ch04-statuses-en.png",
+    "url": "https://test2.kayanos.app/builder/status-templates",
+    "lang": "en",
+    "width": 1440,
+    "height": 8774,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:52:28.994Z"
+  },
+  "ch04-epics-en": {
+    "file": "kayanos-guide/figures/screens/ch04-epics-en.png",
+    "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945",
+    "lang": "en",
+    "width": 1440,
+    "height": 662,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:53:30.698Z"
+  },
+  "ch04-suggestions-ar": {
+    "file": "kayanos-guide/figures/screens/ch04-suggestions-ar.png",
+    "url": "https://test2.kayanos.app/tasks/suggestions?status=pending",
+    "lang": "ar",
+    "width": 1440,
+    "height": 551,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:53:43.470Z"
+  },
+  "ch04-assignments-ar": {
+    "file": "kayanos-guide/figures/screens/ch04-assignments-ar.png",
+    "url": "https://test2.kayanos.app/tasks/assignments",
+    "lang": "ar",
+    "width": 1440,
+    "height": 7417,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:54:02.908Z"
+  },
+  "ch04-settings-ar": {
+    "file": "kayanos-guide/figures/screens/ch04-settings-ar.png",
+    "url": "https://test2.kayanos.app/builder/task-settings",
+    "lang": "ar",
+    "width": 1440,
+    "height": 793,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:54:15.266Z"
+  },
+  "ch04-statuses-ar": {
+    "file": "kayanos-guide/figures/screens/ch04-statuses-ar.png",
+    "url": "https://test2.kayanos.app/builder/status-templates",
+    "lang": "ar",
+    "width": 1440,
+    "height": 8774,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:54:31.072Z"
+  },
+  "ch04-collections-ar": {
+    "file": "kayanos-guide/figures/screens/ch04-collections-ar.png",
+    "url": "https://test2.kayanos.app/tasks",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1092,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:54:48.065Z"
+  },
+  "ch04-collection-form-ar": {
+    "file": "kayanos-guide/figures/screens/ch04-collection-form-ar.png",
+    "url": "https://test2.kayanos.app/tasks",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1092,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:54:54.712Z"
+  },
+  "ch04-epics-ar": {
+    "file": "kayanos-guide/figures/screens/ch04-epics-ar.png",
+    "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945",
+    "lang": "ar",
+    "width": 1440,
+    "height": 662,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:55:14.772Z"
+  },
+  "ch04-board-ar": {
+    "file": "kayanos-guide/figures/screens/ch04-board-ar.png",
+    "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945",
+    "lang": "ar",
+    "width": 1440,
+    "height": 745,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:55:54.732Z"
+  },
+  "ch04-list-ar": {
+    "file": "kayanos-guide/figures/screens/ch04-list-ar.png",
+    "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945",
+    "lang": "ar",
+    "width": 1440,
+    "height": 816,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:56:01.027Z"
+  },
+  "ch04-checkins-ar": {
+    "file": "kayanos-guide/figures/screens/ch04-checkins-ar.png",
+    "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945",
+    "lang": "ar",
+    "width": 1440,
+    "height": 663,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:56:07.316Z"
+  },
+  "ch04-details-ar": {
+    "file": "kayanos-guide/figures/screens/ch04-details-ar.png",
+    "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1005,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:56:52.461Z"
+  },
+  "ch04-about-ar": {
+    "file": "kayanos-guide/figures/screens/ch04-about-ar.png",
+    "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1005,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:56:57.959Z"
+  },
+  "ch04-output-ar": {
+    "file": "kayanos-guide/figures/screens/ch04-output-ar.png",
+    "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1005,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:57:01.444Z"
+  },
+  "ch04-challenges-ar": {
+    "file": "kayanos-guide/figures/screens/ch04-challenges-ar.png",
+    "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1005,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:57:04.936Z"
+  },
+  "ch04-progress-ar": {
+    "file": "kayanos-guide/figures/screens/ch04-progress-ar.png",
+    "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1005,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:57:08.528Z"
+  },
+  "ch04-emails-ar": {
+    "file": "kayanos-guide/figures/screens/ch04-emails-ar.png",
+    "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1005,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:57:12.090Z"
+  },
+  "ch04-records-ar": {
+    "file": "kayanos-guide/figures/screens/ch04-records-ar.png",
+    "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1005,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:57:15.650Z"
+  },
+  "ch04-relations-ar": {
+    "file": "kayanos-guide/figures/screens/ch04-relations-ar.png",
+    "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1005,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:57:19.166Z"
+  },
+  "ch04-comments-ar": {
+    "file": "kayanos-guide/figures/screens/ch04-comments-ar.png",
+    "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1005,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:57:22.734Z"
+  },
+  "ch04-activity-ar": {
+    "file": "kayanos-guide/figures/screens/ch04-activity-ar.png",
+    "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1005,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:57:26.338Z"
+  },
+  "ch04-requests-ar": {
+    "file": "kayanos-guide/figures/screens/ch04-requests-ar.png",
+    "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1005,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:57:29.907Z"
+  },
+  "ch04-settings-epics-ar": {
+    "file": "kayanos-guide/figures/screens/ch04-settings-epics-ar.png",
+    "url": "https://test2.kayanos.app/builder/task-settings",
+    "lang": "ar",
+    "width": 1440,
+    "height": 655,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:58:02.934Z"
+  },
+  "ch04-settings-records-ar": {
+    "file": "kayanos-guide/figures/screens/ch04-settings-records-ar.png",
+    "url": "https://test2.kayanos.app/builder/task-settings",
+    "lang": "ar",
+    "width": 1440,
+    "height": 979,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:58:06.787Z"
+  },
+  "ch04-settings-relations-ar": {
+    "file": "kayanos-guide/figures/screens/ch04-settings-relations-ar.png",
+    "url": "https://test2.kayanos.app/builder/task-settings",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1355,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:58:10.735Z"
+  },
+  "ch04-settings-epics-en": {
+    "file": "kayanos-guide/figures/screens/ch04-settings-epics-en.png",
+    "url": "https://test2.kayanos.app/builder/task-settings",
+    "lang": "en",
+    "width": 1440,
+    "height": 655,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:58:33.468Z"
+  },
+  "ch04-settings-records-en": {
+    "file": "kayanos-guide/figures/screens/ch04-settings-records-en.png",
+    "url": "https://test2.kayanos.app/builder/task-settings",
+    "lang": "en",
+    "width": 1440,
+    "height": 999,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:58:37.298Z"
+  },
+  "ch04-settings-relations-en": {
+    "file": "kayanos-guide/figures/screens/ch04-settings-relations-en.png",
+    "url": "https://test2.kayanos.app/builder/task-settings",
+    "lang": "en",
+    "width": 1440,
+    "height": 1355,
+    "scale": 2,
+    "capturedAt": "2026-10-17T09:58:41.200Z"
   }
 }

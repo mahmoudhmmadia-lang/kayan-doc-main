@@ -1,3 +1,26 @@
+# KayanOS web guide
+
+Current work is **web only** (2026-10-16). Build with `cd tools && npm run html`
+and preview with `npm run dev`. The default build produces only HTML. Do not
+generate PDF, Word or Overleaf files; the print documentation below is archived.
+Shared guidance belongs once in the home page help panel. Every image needs a
+short, specific explanation directly underneath, in Arabic and English.
+
+Chapter 4, Tasks, is drafted for review in both languages: `c4.html` and ten
+`tasks-*.html` feature pages. It follows the same screenshot, example and
+navigation rules as HR. Sources live in `chapters/04-tasks*.tex` and their
+English counterparts. See `review/tasks-source-coverage.md` for application
+coverage and live-test limitations. Projects & planning has not been started.
+
+Explain each concept in general terms first, then separate the fictional scenario
+under **«مثال: شركة الأفق» / “Example: Horizon”**. Keep names and example values
+out of definitions and screenshot notes. Use concise, natural Arabic and equally
+clear English; keep both languages aligned.
+Every HR page (including the overview) needs its own concrete Horizon example
+callout after its explanation and before its first image. Use one or two short
+sentences about the relevant action and result; a link or heading alone does not
+count. Apply the same rule to future authorized app pages.
+
 # KayanOS Arabic Guide (LaTeX)
 
 Arabic, RTL user guide for KayanOS, built with XeLaTeX. Visual identity follows
@@ -127,6 +150,11 @@ Menu → Compiler → XeLaTeX and Main document → `main.tex` (the included
 
 ## Authoring rules
 
+- Every figure carries `\shotnote{...}` after its `\caption`/`\label`: a 1–3
+  sentence explanation printed directly under the image or diagram in all outputs.
+  Never stack several images without a note under each. Notes explain what the
+  figure means and why it matters, not where things sit on screen; see
+  `AGENTS.md` → *Arabic writing and documentation quality*.
 - Diagrams are vertical trees: root at the top, children below, siblings ordered
   right to left. A sequence is a single vertical branch. Add an Arabic caption,
   a compact legend, and a short explanation of the reading direction and meaning.

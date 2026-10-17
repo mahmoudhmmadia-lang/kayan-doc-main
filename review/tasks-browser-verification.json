@@ -1,0 +1,630 @@
+{
+  "cases": [
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "c4.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "tasks-collections.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "tasks-views.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "tasks-details.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "tasks-follow-up.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "tasks-relationships.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "tasks-epics.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "tasks-suggestions.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "tasks-assignments.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "tasks-settings.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "tasks-statuses.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "c4.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "tasks-collections.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "tasks-views.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "tasks-details.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "tasks-follow-up.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "tasks-relationships.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "tasks-epics.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "tasks-suggestions.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "tasks-assignments.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "tasks-settings.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "tasks-statuses.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "c4.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "tasks-collections.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "tasks-views.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "tasks-details.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "tasks-follow-up.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "tasks-relationships.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "tasks-epics.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "tasks-suggestions.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "tasks-assignments.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "tasks-settings.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "tasks-statuses.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "c4.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "tasks-collections.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "tasks-views.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "tasks-details.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "tasks-follow-up.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "tasks-relationships.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "tasks-epics.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "tasks-suggestions.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "tasks-assignments.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "tasks-settings.html",
+      "pass": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "tasks-statuses.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "c4.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "tasks-collections.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "tasks-views.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "tasks-details.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "tasks-follow-up.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "tasks-relationships.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "tasks-epics.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "tasks-suggestions.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "tasks-assignments.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "tasks-settings.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "tasks-statuses.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "c4.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "tasks-collections.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "tasks-views.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "tasks-details.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "tasks-follow-up.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "tasks-relationships.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "tasks-epics.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "tasks-suggestions.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "tasks-assignments.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "tasks-settings.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "tasks-statuses.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "c4.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "tasks-collections.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "tasks-views.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "tasks-details.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "tasks-follow-up.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "tasks-relationships.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "tasks-epics.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "tasks-suggestions.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "tasks-assignments.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "tasks-settings.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "tasks-statuses.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "c4.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "tasks-collections.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "tasks-views.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "tasks-details.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "tasks-follow-up.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "tasks-relationships.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "tasks-epics.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "tasks-suggestions.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "tasks-assignments.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "tasks-settings.html",
+      "pass": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "tasks-statuses.html",
+      "pass": true
+    }
+  ],
+  "interactions": [
+    "overview card opens Tasks collection, not HR group",
+    "progress retained on reload and language switch",
+    "next page",
+    "search result opens feature",
+    "HR last page to Tasks",
+    "legacy chapter 2 redirect",
+    "image enlargement and close"
+  ],
+  "verifiedAt": "2026-10-17T10:09:12.216Z"
+}

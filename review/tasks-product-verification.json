@@ -1,0 +1,14 @@
+{
+  "environment": "test2",
+  "task": "Guide QA — Prepare visit checklist",
+  "createdAndReopened": true,
+  "startTransition": true,
+  "reopenedStatus": "In Progress",
+  "verifiedAt": "2026-10-17T10:01:13.725Z",
+  "limits": [
+    "No assignment to another person",
+    "No requests sent",
+    "No shared configuration changes",
+    "Collection access failed after collection creation"
+  ]
+}

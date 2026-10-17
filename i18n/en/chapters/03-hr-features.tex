@@ -7,13 +7,18 @@
 
 A member is a person who works in the organization. The record is a full employee file: from identity and contact to qualifications and bank account. An assignment links the member to a job.
 
-\textbf{When is it useful?} One record for Sarah for her whole time at work; her job changes, her file stays. \textbf{Open:} HR / Workforce / Members.
+\textbf{When is it useful?} Keep one employee record even when their job changes. \textbf{Open:} HR / Workforce / Members.
+
+\begin{rcnote}[Example: Horizon]
+Horizon adds Sarah Al-Khatib with employee ID 0001. Her record stays the same when she changes jobs.
+\end{rcnote}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch02-member-fields-en.png}
-\caption{Members: demo employee record; separate from the Sarah example}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch02-member-fields-en.png}
+\caption{Demo member record, not Sarah's}
 \label{fig:hr-feature-members-screen}
+\shotnote{The member record gathers the person's main details in one panel; the starred fields here are “Employee ID”, “Name” and “Seat Type”. “Active Assignments”, “Active Positions” and “Active Nodes” (organizational units) are filled by the system from assignments, so you review them rather than enter them.}
 \end{figure}
 
 \begin{table}[H]
@@ -49,18 +54,19 @@ These are the system's default fields; your organization's administrator may cha
 \begin{figure}[H]
 \centering
 \begin{tikzpicture}[node distance=0.5cm,stepBox/.append style={minimum width=6.5cm,text width=6.1cm,minimum height=0.8cm}]
-  \node[stepBox] (a) {Sarah's record};
+  \node[stepBox] (a) {Employee record};
   \node[stepBox,below=of a] (b) {Job assignment};
   \node[stepBox,below=of b] (c) {Review job\\and period};
   \draw[flowsTo] (a) -- (b);
   \draw[flowsTo] (b) -- (c);
 \end{tikzpicture}
 \rclegend
-\caption{Steps of use; arrows do not mean automatic processing}
+\caption{Steps of use}
 \label{fig:hr-feature-members-flow}
+\shotnote{Work starts by creating the member record, then linking it to a position through an assignment, and finally reviewing the job and period in the file. The record alone does not set the employee's job; the assignment does.}
 \end{figure}
 
-\subsection{Try it and check}
+\subsection{Apply the example and check}
 
 \begin{enumerate}
   \item Open Members and search for Sarah before adding a record.
@@ -75,109 +81,124 @@ These are the system's default fields; your organization's administrator may cha
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch03-member-tab1-en.png}
-\caption{Demo employee record — Overview tab}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch03-member-tab1-en.png}
+\caption{Demo employee record: Overview tab}
 \label{fig:hr-member-tab1}
+\shotnote{The “Overview” tab is a free description of the employee and is empty in this record. What matters here is the expanded side panel: it marks every missing field as “Empty”, such as “Email” and “Phone”, so you know what is left to complete with “Edit”.}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch03-member-tab2-en.png}
-\caption{Demo employee record — Orientation tab}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch03-member-tab2-en.png}
+\caption{Demo employee record: Orientation tab}
 \label{fig:hr-member-tab2}
+\shotnote{This tab keeps the material that introduces the employee to their work, such as guides, files and links, with the target audience and type of each item. The table is empty in this demo record because nothing has been attached yet.}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch03-member-tab3-en.png}
-\caption{Demo employee record — Personal tab}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch03-member-tab3-en.png}
+\caption{Demo employee record: Personal tab}
 \label{fig:hr-member-tab3}
+\shotnote{This tab keeps the employee's personal identity and official documents in one place: personal details, then the “Passport” and “Driver License” sections with their numbers, dates and files. Family members are added one by one with “Add Family Information”.}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch03-member-tab4-en.png}
-\caption{Demo employee record — Contact tab}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch03-member-tab4-en.png}
+\caption{Demo employee record: Contact tab}
 \label{fig:hr-member-tab4}
+\shotnote{This tab holds the employee's address and “Address File”, and their phones and emails under “Contact Information”. People to call in an emergency are added with “Add Emergency Contacts”; the 0 beside the section means none are recorded yet.}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch03-member-tab5-en.png}
-\caption{Demo employee record — Qualifications tab}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch03-member-tab5-en.png}
+\caption{Demo employee record: Qualifications tab}
 \label{fig:hr-member-tab5}
+\shotnote{This tab documents the employee's education, skills, languages, trainings and past experience, so they are easy to consult when assigning work or promoting. Each list has its own add button, such as “Add Educations”, and the number beside it shows how many entries it holds.}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch03-member-tab6-en.png}
-\caption{Demo employee record — Conflict of interest tab}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch03-member-tab6-en.png}
+\caption{Demo employee record: Conflict of interest tab}
 \label{fig:hr-member-tab6}
+\shotnote{This tab records what the employee discloses about relationships that could affect their impartiality, such as “Relatives in the organization” or “Supplier Conflicts”. Add each case with the button in its list; a 0 means nothing has been disclosed.}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch03-member-tab7-en.png}
-\caption{Demo employee record — Financial tab}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch03-member-tab7-en.png}
+\caption{Demo employee record: Financial tab}
 \label{fig:hr-member-tab7}
+\shotnote{This tab brings together everything about the employee's pay: “Salary Slips”, “Deductions”, “Bonuses”, “Bank Accounts” and “Employee Insurance”. You review their financial situation from the record itself and add a missing item with its list's button, such as “Add Bank Accounts”.}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch03-member-tab8-en.png}
-\caption{Demo employee record — Employment tab}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch03-member-tab8-en.png}
+\caption{Demo employee record: Employment tab}
 \label{fig:hr-member-tab8}
+\shotnote{This tab shows the employee's job history: each assignment with its position, “Employment Type”, “Status” and dates. Check that the right position has an “Active” assignment; it is what links the member to a position and unit.}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch03-member-tab9-en.png}
-\caption{Demo employee record — Attendance tab}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch03-member-tab9-en.png}
+\caption{Demo employee record: Attendance tab}
 \label{fig:hr-member-tab9}
+\shotnote{This tab shows the employee's leave balances and the leaves taken, so you know what remains before approving a new request. Add a balance with “Add Leave Balances” and a leave with “Add Leaves”; a count of 0 means nothing is recorded yet.}
 \end{figure}
 
 
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch03-member-tab11-en.png}
-\caption{Demo employee record — Email accounts tab}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch03-member-tab11-en.png}
+\caption{Demo employee record: Email accounts tab}
 \label{fig:hr-member-tab11}
+\shotnote{Here you create a mailbox for the employee on an organization domain: type the “Local part”, pick the “Domain” and press “Create”. The mailbox needs no separate password; it uses the member's login password.}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch03-member-tab12-en.png}
-\caption{Demo employee record — Worked hours tab}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch03-member-tab12-en.png}
+\caption{Demo employee record: Worked hours tab}
 \label{fig:hr-member-tab12}
+\shotnote{This tab sets which assignment receives the worked hours calculated from attendance punches. Keep “Automatic” in most cases, or pick a specific assignment and set “Applies from”. If an assignment shows “Has no position or shift”, complete it first.}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch03-member-tab13-en.png}
-\caption{Demo employee record — Notifications tab}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch03-member-tab13-en.png}
+\caption{Demo employee record: Notifications tab}
 \label{fig:hr-member-tab13}
+\shotnote{This tab controls which notifications reach the employee and through which channels: “In-app”, “Push”, “Email” and “WhatsApp”. “Quiet hours” delays external notifications during a period you set, while “Reset all overrides” returns to the organization defaults.}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch03-member-tab14-en.png}
-\caption{Demo employee record — Sessions tab}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch03-member-tab14-en.png}
+\caption{Demo employee record: Sessions tab}
 \label{fig:hr-member-tab14}
+\shotnote{This tab shows the devices the employee has signed in from, their “Last active” time and the “Session policy”. If a device is lost or access looks unauthorized, press “Sign out everywhere”; access ends at once and the member is told by email.}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch03-member-tab15-en.png}
-\caption{Demo employee record — Two-step verification tab}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch03-member-tab15-en.png}
+\caption{Demo employee record: Two-step verification tab}
 \label{fig:hr-member-tab15}
+\shotnote{This tab shows whether two-step verification is on for the employee and lets you reset it if they lose their phone. Enter the “Reason” and press “Reset two-step verification”; this removes their authenticator app and recovery codes, signs them out everywhere and is kept in the “Audit” log.}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch03-member-tab16-en.png}
-\caption{Demo employee record — Roles tab}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch03-member-tab16-en.png}
+\caption{Demo employee record: Roles tab}
 \label{fig:hr-member-tab16}
+\shotnote{This tab lists the roles the employee holds, with the records each role applies to underneath; it tells you what they can access. The demo member here holds “Own Member” and “Own Members” on their own record only.}
 \end{figure}
 
 \clearpage
@@ -188,11 +209,16 @@ A position is a job such as HR Manager. It sets the reporting line, unit, locati
 
 \textbf{When is it useful?} Define the job once, then track who holds it or whether it is vacant. \textbf{Open:} HR / Workforce / Positions.
 
+\begin{rcnote}[Example: Horizon]
+Horizon creates the HR Manager position, HZN-P-01, and links it to HR and Head Office Damascus.
+\end{rcnote}
+
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch02-position-fields-en.png}
-\caption{Positions: Test form; not saved}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch02-position-fields-en.png}
+\caption{New position form in the test environment, unsaved}
 \label{fig:hr-feature-positions-screen}
+\shotnote{“Code” and “Name” are enough to create a position; “Manager”, “Node”, “Location” and “Shift” place it in the structure and can be completed later. “Active Members” is not entered by hand: the system fills it from assignments, so it shows “Empty” on a new form.}
 \end{figure}
 
 \begin{table}[H]
@@ -203,7 +229,7 @@ A position is a job such as HR Manager. It sets the reporting line, unit, locati
 \begin{tabularx}{\linewidth}{R{3.6cm} Y}
 \rcHeaderRow
 \thh{Field} & \thh{What do you add?}\\
-Code and Name & \req{}; for example HZN-P-01 HR Manager.\\
+Code and Name & \req{}; identify the job.\\
 Manager & The higher position; it builds the org chart tree.\\
 Job Description & Duties and responsibilities, from the list of descriptions or a new one.\\
 Node and Location & The unit and work site \opt{}.\\
@@ -230,11 +256,12 @@ Planning Context & A plan, project or program the job belongs to \opt{}.\\
   \draw[flowsTo] (b) -- (c);
 \end{tikzpicture}
 \rclegend
-\caption{Steps of use; arrows do not mean automatic processing}
+\caption{Steps of use}
 \label{fig:hr-feature-positions-flow}
+\shotnote{Define the job first, choose its unit and location, then assign an employee from Assignments. Creating the position alone assigns no one; it stays vacant until an assignment is saved.}
 \end{figure}
 
-\subsection{Try it and check}
+\subsection{Apply the example and check}
 
 \begin{enumerate}
   \item Prepare the unit and location if you want to link them. Open Positions and search for the job.
@@ -245,9 +272,10 @@ Planning Context & A plan, project or program the job belongs to \opt{}.\\
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch02-position-fields-tab2-en.png}
-\caption{Orientation tab in full; unsaved form}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch02-position-fields-tab2-en.png}
+\caption{Orientation tab in an unsaved form}
 \label{fig:hr-positions-fulltab1}
+\shotnote{This tab attaches material that introduces the job to whoever holds it, such as a duties description or work guide, as a file with “Upload” or a link with “Add Link”. The material stays tied to the job, not to a particular person; the table is empty because the form is new.}
 \end{figure}
 
 \clearpage
@@ -256,13 +284,18 @@ Planning Context & A plan, project or program the job belongs to \opt{}.\\
 
 An assignment records who holds the position, since when, and on which contract, salary and shift.
 
-\textbf{When is it useful?} When Sarah joins or moves to another job; her jobs and dates stay separate from her personal file. \textbf{Open:} HR / Workforce / Assignments.
+\textbf{When is it useful?} When an employee joins or changes jobs; assignments keep jobs and dates separate from the personal record. \textbf{Open:} HR / Workforce / Assignments.
+
+\begin{rcnote}[Example: Horizon]
+Horizon assigns Sarah to the HR Manager position, recording her start date and contract type.
+\end{rcnote}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch02-assignment-fields-en.png}
-\caption{Assignments: Test form; not saved}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch02-assignment-fields-en.png}
+\caption{New assignment form in the test environment, unsaved}
 \label{fig:hr-feature-assignments-screen}
+\shotnote{An assignment links a person to a job, so it cannot be saved without “Member” and “Position”. It is usually completed with “Start Date”, “Employment Type” and “Contract Type”, and “Status” starts as “Active”. “Termination Date” and “Paused Date” stay empty until the assignment ends or pauses.}
 \end{figure}
 
 \begin{table}[H]
@@ -300,11 +333,12 @@ Status & Active, Paused, Terminated, Finished; with the pause or termination dat
   \draw[flowsTo] (b) -- (c);
 \end{tikzpicture}
 \rclegend
-\caption{Steps of use; arrows do not mean automatic processing}
+\caption{Steps of use}
 \label{fig:hr-feature-assignments-flow}
+\shotnote{An assignment cannot be saved before the member and position exist, so prepare them first and then save it. Afterwards review its period and shift, since they set how long the employee holds the position and their working time.}
 \end{figure}
 
-\subsection{Try it and check}
+\subsection{Apply the example and check}
 
 \begin{enumerate}
   \item Prepare Sarah's record and the HR Manager position, or search for them.
@@ -315,9 +349,10 @@ Status & Active, Paused, Terminated, Finished; with the pause or termination dat
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch02-assignment-fields-tab2-en.png}
-\caption{Orientation tab in full; unsaved form}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch02-assignment-fields-tab2-en.png}
+\caption{Orientation tab in an unsaved form}
 \label{fig:hr-assignments-fulltab1}
+\shotnote{This tab attaches material for this assignment only, such as a first-weeks plan for a new employee, as a file with “Upload” or a link with “Add Link”. The assignment details themselves, such as dates and contract, stay in the side panel.}
 \end{figure}
 
 \clearpage
@@ -326,13 +361,18 @@ Status & Active, Paused, Terminated, Finished; with the pause or termination dat
 
 A node is a department or division. The “Parent” field places it in the structure tree. It is the job's reporting unit, not a work address.
 
-\textbf{When is it useful?} It keeps the structure clear as the team grows. At Horizon, HR belongs to General Management. \textbf{Open:} HR / Core / Nodes.
+\textbf{When is it useful?} It keeps department relationships clear as the team grows. \textbf{Open:} HR / Core / Nodes.
+
+\begin{rcnote}[Example: Horizon]
+Horizon adds HR, HZN-HR, under General Management. The tree shows this reporting structure.
+\end{rcnote}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch02-node-fields-en.png}
-\caption{Nodes: Test form; not saved}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch02-node-fields-en.png}
+\caption{New node form, unsaved}
 \label{fig:hr-feature-nodes-screen}
+\shotnote{“Code”, “Name” and “Type” are enough to create a unit. “Parent” sets the unit this one appears under in the tree, while “Shift” is optional.}
 \end{figure}
 
 \begin{table}[H]
@@ -344,7 +384,7 @@ A node is a department or division. The “Parent” field places it in the stru
 \rcHeaderRow
 \thh{Field} & \thh{What do you add?}\\
 Code, Name and Type & \req{}; types are defined by the organization's administrator, such as division or department.\\
-Parent & The parent unit, such as HZN-GM for HR.\\
+Parent & The unit this department belongs to.\\
 Shift & Inherited from the parent unit, or overridden with its own shift.\\
 Overview and Orientation & A description of the unit, and material that introduces it to new employees.\\
 \end{tabularx}
@@ -361,18 +401,19 @@ Overview and Orientation & A description of the unit, and material that introduc
 \begin{figure}[H]
 \centering
 \begin{tikzpicture}[node distance=0.5cm,stepBox/.append style={minimum width=6.5cm,text width=6.1cm,minimum height=0.8cm}]
-  \node[stepBox] (a) {Create General\\Management};
-  \node[stepBox,below=of a] (b) {Add HR under it};
-  \node[stepBox,below=of b] (c) {Link the HR Manager\\position};
+  \node[stepBox] (a) {Create the parent unit};
+  \node[stepBox,below=of a] (b) {Add its department};
+  \node[stepBox,below=of b] (c) {Link a position to\\the department};
   \draw[flowsTo] (a) -- (b);
   \draw[flowsTo] (b) -- (c);
 \end{tikzpicture}
 \rclegend
-\caption{Steps of use; arrows do not mean automatic processing}
+\caption{Steps of use}
 \label{fig:hr-feature-nodes-flow}
+\shotnote{The parent unit comes first because the sub-department selects it in “Parent”. A position is then linked to the department from the “Node” field on the position page, not from the unit page.}
 \end{figure}
 
-\subsection{Try it and check}
+\subsection{Apply the example and check}
 
 \begin{enumerate}
   \item Open Nodes. If General Management does not exist, add it with code HZN-GM, choose its type and save.
@@ -383,9 +424,10 @@ Overview and Orientation & A description of the unit, and material that introduc
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch02-node-fields-tab2-en.png}
-\caption{Orientation tab in full; unsaved form}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch02-node-fields-tab2-en.png}
+\caption{Orientation tab in an unsaved form}
 \label{fig:hr-nodes-fulltab1}
+\shotnote{This tab attaches material that introduces the department to new employees, such as its duties and way of working, as a file with “Upload” or a link with “Add Link”. It is optional; the unit is saved with its main fields in the side panel.}
 \end{figure}
 
 \clearpage
@@ -396,11 +438,16 @@ A location is a work site, such as an office or branch, with its address and map
 
 \textbf{When is it useful?} It separates place from unit: two units in the Damascus office, or one unit across several sites. \textbf{Open:} HR / Core / Locations.
 
+\begin{rcnote}[Example: Horizon]
+Horizon records Head Office Damascus, HZN-DAM, with its address and map point, then links the positions based there.
+\end{rcnote}
+
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch02-location-fields-en.png}
-\caption{Locations: Test form; not saved}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch02-location-fields-en.png}
+\caption{New location form in the test environment, unsaved}
 \label{fig:hr-feature-locations-screen}
+\shotnote{This form defines the work site by its name and full address, so it needs “Code”, “Name”, “Type” and the address fields from “Country” to “Address”. “Location” shows “Not set” until you place it on the map with “Map”, which is what puts the pin on the map view.}
 \end{figure}
 
 \begin{table}[H]
@@ -435,11 +482,12 @@ Rooms & Rooms: type, code, floor, capacity and area, and equipment such as a scr
   \draw[flowsTo] (b) -- (c);
 \end{tikzpicture}
 \rclegend
-\caption{Steps of use; arrows do not mean automatic processing}
+\caption{Steps of use}
 \label{fig:hr-feature-locations-flow}
+\shotnote{Define the work site first, then review its address and map point. Afterwards link it to the position from the position's “Location” field; the location alone does not say who works there.}
 \end{figure}
 
-\subsection{Try it and check}
+\subsection{Apply the example and check}
 
 \begin{enumerate}
   \item Open Locations and search for Head Office Damascus.
@@ -450,23 +498,26 @@ Rooms & Rooms: type, code, floor, capacity and area, and equipment such as a scr
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch02-location-fields-tab2-en.png}
-\caption{Orientation tab in full; unsaved form}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch02-location-fields-tab2-en.png}
+\caption{Orientation tab in an unsaved form}
 \label{fig:hr-locations-fulltab1}
+\shotnote{This tab attaches material useful to people who work at or visit the site, such as directions to the office, as a file with “Upload” or a link with “Add Link”. It is optional, like the “General Information” and “Rooms” tabs.}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch02-location-fields-tab3-en.png}
-\caption{General Information tab in full; unsaved form}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch02-location-fields-tab3-en.png}
+\caption{General Information tab in an unsaved form}
 \label{fig:hr-locations-fulltab2}
+\shotnote{This tab keeps the site's administrative details: “Ownership”, “Area” in square metres and the “Contract” file uploaded with the upload icon. All are optional, but they keep the site's documents in its record instead of somewhere else.}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch02-location-fields-tab4-en.png}
-\caption{Rooms tab in full; unsaved form}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch02-location-fields-tab4-en.png}
+\caption{Rooms tab in an unsaved form}
 \label{fig:hr-locations-fulltab3}
+\shotnote{This tab records the rooms and spaces inside the location, so you know each one's capacity and equipment. “No related records” appears because the location is new; add a space with “Add item”. The tab is optional.}
 \end{figure}
 
 \clearpage
@@ -475,13 +526,18 @@ Rooms & Rooms: type, code, floor, capacity and area, and equipment such as a scr
 
 A group is a team or committee with members from different units, without changing their jobs.
 
-\textbf{When is it useful?} For example, Horizon's office setup team, or a committee of everyone at the Aleppo Branch. \textbf{Open:} HR / Workforce / Groups.
+\textbf{When is it useful?} Bring people into a team or committee without changing their jobs. \textbf{Open:} HR / Workforce / Groups.
+
+\begin{rcnote}[Example: Horizon]
+Horizon puts Sarah and Omar in an office setup team. Their job assignments stay unchanged.
+\end{rcnote}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch03-feature-groups-en.png}
-\caption{Groups: Unsaved form in the test environment}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch03-feature-groups-en.png}
+\caption{New group form in the test environment, unsaved}
 \label{fig:hr-feature-groups-screen}
+\shotnote{The side panel defines the group by “Code”, “Name” and “Group Type”, which are required; “Description” is optional. “Group Type” matters most, because it decides whether you pick the members yourself or the system selects them by a condition.}
 \end{figure}
 
 \begin{table}[H]
@@ -509,11 +565,12 @@ Email Accounts & A shared mailbox or a mailing list for the group.\\
   \draw[flowsTo] (b) -- (c);
 \end{tikzpicture}
 \rclegend
-\caption{Steps of use; arrows do not mean automatic processing}
+\caption{Steps of use}
 \label{fig:hr-feature-groups-flow}
+\shotnote{Define the team first, choose how members join in “Group Type”, then review the member list. The membership method decides whether you add members by hand or a condition selects them.}
 \end{figure}
 
-\subsection{Try it and check}
+\subsection{Apply the example and check}
 
 \begin{enumerate}
   \item Open Groups and check that the team does not exist.
@@ -524,9 +581,10 @@ Email Accounts & A shared mailbox or a mailing list for the group.\\
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch03-feature-groups-tab1-en.png}
-\caption{Members tab in full; unsaved form}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch03-feature-groups-tab1-en.png}
+\caption{Members tab in an unsaved form}
 \label{fig:hr-groups-fulltab1}
+\shotnote{“Members” is the only tab of the group form; you choose who joins from the “Select” list. “No entities assigned to this role” means no one has been picked yet, so review the list before saving the group.}
 \end{figure}
 
 \clearpage
@@ -537,11 +595,16 @@ A shift sets the expected working days, hours and breaks. Attendance records wha
 
 \textbf{When is it useful?} One schedule for everyone with the same pattern, instead of repeating times for each employee. \textbf{Open:} HR / Time / Shifts.
 
+\begin{rcnote}[Example: Horizon]
+Horizon sets Office Hours for Sunday–Thursday, 09:00–17:00, with a half-hour break. Net work time is 07:30.
+\end{rcnote}
+
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch03-shift-example-en.png}
-\caption{Shifts: full add form; not saved}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch03-shift-example-en.png}
+\caption{Shifts: unsaved Add Shift form}
 \label{fig:hr-feature-shifts-screen}
+\shotnote{The “Add Shift” form holds the whole definition on one page: “Name” and “Code”, then the days and times. Only the days you select in “Work Days” count as working days, and the times shown are starting values you can edit. The system subtracts breaks from work hours to get “Total Hours”, which is why it reads 07:45 after a 15-minute break.}
 \end{figure}
 
 \begin{table}[H]
@@ -576,7 +639,7 @@ Total Hours & Work hours minus breaks \gen{}.\\
 \end{tabularx}
 \end{table}
 
-\subsection{Create the shift step by step}
+\subsection{Example: Horizon’s shift}
 \label{sec:hr-shifts}
 
 \begin{enumerate}
@@ -593,7 +656,7 @@ Periods must not overlap; breaks stay inside working time. 22:00–06:00 ends th
 \subsection{How the shift reaches the employee}
 \label{sec:hr-shift-inheritance}
 
-Inheritance: the employee uses the shift of a higher record instead of repeating it.
+An assignment does not need its own shift: without one, the system uses the position's shift, then the shift of its unit or location. This is called shift inheritance.
 
 \begin{figure}[H]
 \centering
@@ -607,11 +670,13 @@ Inheritance: the employee uses the shift of a higher record instead of repeating
   \draw[flowsTo] (n) -- (l);
 \end{tikzpicture}
 \rclegend
-\caption{Order of the shift search: move to the next level only if no shift is found}
+\caption{Order of the employee's shift search}
 \label{fig:hr-shift-order}
+\shotnote{The system starts at the assignment and moves to the next level only when the current one has no shift; the unit and location here are the position's. The first level with a shift wins and shifts are never combined, so setting a shift on a unit is enough for every position and assignment under it without its own shift.}
 \end{figure}
 
-Stop at the first shift found; shifts are not combined.
+
+\textbf{Example: apply the shift at Horizon.}
 
 \begin{enumerate}
   \item Open Nodes / HZN-HR. Choose “Office Hours” in “Shift”; if needed choose “Override” first, then save.
@@ -629,11 +694,16 @@ My attendance shows your calculated month: working days and holidays, and for ea
 
 \textbf{When is it useful?} Understand your day before requesting a correction. An empty day calls for checking the source; it does not prove absence. \textbf{Open:} HR / Time / My attendance.
 
+\begin{rcnote}[Example: Horizon]
+At Horizon, Sarah opens My attendance to review her shift and clock-in/out times. If a punch is missing, she checks its correction request.
+\end{rcnote}
+
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch03-feature-my-attendance-en.png}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch03-feature-my-attendance-en.png}
 \caption{My attendance: English interface in the test environment}
 \label{fig:hr-feature-my-attendance-screen}
+\shotnote{The page sums up the month in four cards — “Worked”, “Late”, “Absence” and “Make-up time” — then lists each day with its status. In this test account, “No punches” days carry “Needs a fix” and “Unpaid absence”: the system found no punches on a scheduled day and counts it as absence until it is corrected. Click any day to see how it was calculated.}
 \end{figure}
 
 \begin{table}[H]
@@ -671,8 +741,9 @@ Day page & Shift and policy, the punch timeline, “Totals for the day”, “On
   \draw[flowsTo] (s2) -- (s3);
 \end{tikzpicture}
 \rclegend
-\caption{Review one day}
+\caption{Reviewing one day}
 \label{fig:hr-day-review}
+\shotnote{The diagram orders a day review from basis to result: the expected time from the shift first, then any leave or holiday that may explain the difference, and finally the state of any correction sent. In this order, you never request a fix for a day that a recorded leave or holiday already explains.}
 \end{figure}
 
 \subsection{Try it and check}
@@ -693,11 +764,16 @@ Timesheets show the team's attendance for a day, week or month, and let you appr
 
 \textbf{When is it useful?} Reviewing the team's week, or preparing time before payroll. \textbf{Open:} HR / Time / Timesheets.
 
+\begin{rcnote}[Example: Horizon]
+Sarah reviews Horizon’s team timesheets for a month. She checks Omar’s days and total hours before investigating differences.
+\end{rcnote}
+
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch03-feature-timesheets-en.png}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch03-feature-timesheets-en.png}
 \caption{Timesheets: English interface in the test environment}
 \label{fig:hr-feature-timesheets-screen}
+\shotnote{The page puts several employees' time in one table: narrow it with filters such as “All nodes” and “All locations”, and pick its period with “Day”, “Week” or “Month”. Each employee's row compares “Total” with the expected time in “Difference” and offers “Approve”. The table is empty in this test capture, which alone does not mean attendance is missing.}
 \end{figure}
 
 \begin{table}[H]
@@ -733,8 +809,9 @@ Totals & Avg worktime, Avg delay, Total, Difference.\\
   \draw[flowsTo] (b) -- (c);
 \end{tikzpicture}
 \rclegend
-\caption{Steps of use; arrows do not mean automatic processing}
+\caption{Steps of use}
 \label{fig:hr-feature-timesheets-flow}
+\shotnote{The review starts by setting its scope, because totals and differences are calculated only for the chosen people and period. After reading the days and totals, you move to the discrepancies alone instead of checking every day one by one.}
 \end{figure}
 
 \subsection{Try it and check}
@@ -755,11 +832,16 @@ A leave type is a reusable rule, such as “Annual (paid)”: whether it is paid
 
 \textbf{When is it useful?} Define the rule once so all leaves use one classification. A type is not an employee's dated leave. \textbf{Open:} HR / Time / Leave Types.
 
+\begin{rcnote}[Example: Horizon]
+Horizon defines an Annual (paid) leave type and its balance rules, then uses it when recording Sarah’s leave.
+\end{rcnote}
+
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch03-leave-type-fields-en.png}
-\caption{Leave Types: payment and rules; not saved}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch03-leave-type-fields-en.png}
+\caption{Leave Types: unsaved new type form}
 \label{fig:hr-feature-leave-types-screen}
+\shotnote{Two required fields are enough to create a leave type: “Name” and “Payment”, which identify the type and how it is paid. The “Rules” tab defines what the leave means when attendance is calculated. Nothing is saved until you click “Create”.}
 \end{figure}
 
 \begin{table}[H]
@@ -789,8 +871,9 @@ A balance comes from a balance rule and who it is assigned to; the type alone do
   \draw[flowsTo] (b) -- (c);
 \end{tikzpicture}
 \rclegend
-\caption{Steps of use; arrows do not mean automatic processing}
+\caption{Steps of use}
 \label{fig:hr-feature-leave-types-flow}
+\shotnote{The type comes first because a balance rule is added to an existing type and a dated leave is recorded under a defined type. In between, the balance rule sets who receives a balance of this type and how much, before actual leaves begin.}
 \end{figure}
 
 \subsection{Try it and check}
@@ -805,9 +888,10 @@ A balance comes from a balance rule and who it is assigned to; the type alone do
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch03-leave-type-fields-tab1-en.png}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch03-leave-type-fields-tab1-en.png}
 \caption{Rules tab in full; unsaved form}
 \label{fig:hr-leave-types-fulltab1}
+\shotnote{This tab's switches set the leave's effect on attendance: whether it suppresses absence, counts as worked time, excuses lateness, or is an “Hourly permission”. “Leave Balance Rules” is still empty, as “No related records” shows; the first rule is added with “Add item”.}
 \end{figure}
 
 \clearpage
@@ -816,13 +900,18 @@ A balance comes from a balance rule and who it is assigned to; the type alone do
 
 A leave record applies a type to an employee between two dates and times, with a status: Pending, Approved or Rejected.
 
-\textbf{When is it useful?} Record Sarah's approved absence so it shows in her attendance and pay. A holiday is shared by the team; a leave belongs to one employee. \textbf{Open:} HR / Time / Leaves.
+\textbf{When is it useful?} Record an employee's approved absence so it shows in attendance and pay. A holiday is shared by the team; a leave belongs to one employee. \textbf{Open:} HR / Time / Leaves.
+
+\begin{rcnote}[Example: Horizon]
+After approval, Horizon records Sarah’s Annual (paid) leave with its start and end, then checks its effect on her day and pay.
+\end{rcnote}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch03-leave-fields-en.png}
-\caption{Leaves: employee, dates and status; not saved}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch03-leave-fields-en.png}
+\caption{Leaves: unsaved new leave form}
 \label{fig:hr-feature-leaves-screen}
+\shotnote{This form answers three questions: who (“Member”), under which rules (“Leave Type”) and when (“Starts At” and “Ends At”). “Status” starts at “Pending”, and the leave excuses absence only once it is set to “Approved”. “Derived Productive Minutes” is calculated by the system, which is why it shows 0 before saving.}
 \end{figure}
 
 \begin{table}[H]
@@ -856,9 +945,10 @@ The leave also appears in the member file, Attendance tab. There is no separate 
 \rclegend
 \caption{From leave type to reviewing the employee’s day}
 \label{fig:hr-leave-flow}
+\shotnote{The diagram puts approval before recording, because a leave record documents a decision already made and has no separate approval step. The task does not end at saving: it ends when the employee's day and pay show the leave counted as intended.}
 \end{figure}
 
-\subsection{Try it and check}
+\subsection{Apply the example and check}
 
 \begin{enumerate}
   \item Confirm the approval, dates and Sarah's balance. Open Leaves and search for an earlier record.
@@ -876,11 +966,16 @@ A holiday group is a shared calendar of public holidays, followed by those it is
 
 \textbf{When is it useful?} The team follows one holiday calendar, without recording each holiday as leave for every employee. \textbf{Open:} HR / Time / Holiday Groups.
 
+\begin{rcnote}[Example: Horizon]
+Horizon prepares a holiday group for Head Office Damascus, adds its dates, and checks which employees it covers.
+\end{rcnote}
+
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch03-feature-holiday-groups-en.png}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch03-feature-holiday-groups-en.png}
 \caption{Holiday Groups: English interface in the test environment}
 \label{fig:hr-feature-holiday-groups-screen}
+\shotnote{Each row is a separate holiday calendar, and “Total Days” shows its size without opening it. The test environment holds one sample group with a single day. Holidays are managed inside the group, while “New Group” creates a calendar for another set of employees.}
 \end{figure}
 
 \begin{table}[H]
@@ -912,8 +1007,9 @@ Assignee & Who follows the group: members, units or the whole organization.\\
   \draw[flowsTo] (b) -- (c);
 \end{tikzpicture}
 \rclegend
-\caption{Steps of use; arrows do not mean automatic processing}
+\caption{Steps of use}
 \label{fig:hr-feature-holiday-groups-flow}
+\shotnote{You start with the group because it holds the dates, then add the holidays, and finally review the assignees. A holiday does not appear in an employee's attendance until its group is assigned to them, directly or through their unit or the whole organization.}
 \end{figure}
 
 \subsection{Try it and check}
@@ -934,11 +1030,16 @@ This page gathers days that need fixing, such as a missing punch, so you can cor
 
 \textbf{When is it useful?} To handle the team's wrong days before payroll, instead of hunting for them day by day. \textbf{Open:} HR / Time / Attendance Corrections.
 
+\begin{rcnote}[Example: Horizon]
+At Horizon, Omar forgot to clock out. He requests a correction with the right time, then checks his day after the decision.
+\end{rcnote}
+
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch03-feature-attendance-corrections-en.png}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch03-feature-attendance-corrections-en.png}
 \caption{Attendance Corrections: English interface in the test environment}
 \label{fig:hr-feature-attendance-corrections-screen}
+\shotnote{The page works as a reviewer's worklist: each day the system flagged appears under its owner with the reason — here mostly “Scheduled to work but no check-in was recorded”. The test data holds 187 flagged days, so the “From”, “To”, “Needs action” and department filters help narrow them. Select a flag to open its day ready to correct.}
 \end{figure}
 
 \begin{table}[H]
@@ -975,8 +1076,9 @@ Request & Reason and justification, who requested it, the changes, and the appro
   \draw[flowsTo] (b) -- (c);
 \end{tikzpicture}
 \rclegend
-\caption{Steps of use; arrows do not mean automatic processing}
+\caption{Steps of use}
 \label{fig:hr-feature-attendance-corrections-flow}
+\shotnote{The diagram separates sending a correction from deciding on it: after sending, the day waits for a decision, and its result is not final until the decision is made. That is why the cycle ends by returning to the same day to confirm the result.}
 \end{figure}
 
 \subsection{Try it and check}
@@ -996,11 +1098,16 @@ An attendance policy is a set of rules that evaluates recorded time: when latene
 
 \textbf{When is it useful?} Consistent attendance review. The shift sets expected time; the policy evaluates the difference. \textbf{Open:} HR / Time / Attendance policy.
 
+\begin{rcnote}[Example: Horizon]
+Horizon’s administrator prepares an Office Hours attendance policy, tests a late arrival and reviews the simulation before activation.
+\end{rcnote}
+
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch03-feature-attendance-policy-en.png}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch03-feature-attendance-policy-en.png}
 \caption{Attendance policy: English interface in the test environment}
 \label{fig:hr-feature-attendance-policy-screen}
+\shotnote{This page decides which rules apply to each person: everyone matches exactly one policy — the highest priority first, then the policy tagged “catch-all” for the rest. The sample policy here is active and resolves to 45 people, but is tagged “No rules yet”, so no rules have been set. Below it, “Attendance correction deadline” sets how long corrections can be requested.}
 \end{figure}
 
 \begin{table}[H]
@@ -1038,8 +1145,9 @@ Status & Draft, Active with a version, Disabled; and priority: the highest match
   \draw[flowsTo] (b) -- (c);
 \end{tikzpicture}
 \rclegend
-\caption{Steps of use; arrows do not mean automatic processing}
+\caption{Steps of use}
 \label{fig:hr-feature-attendance-policy-flow}
+\shotnote{The diagram starts with the people covered because the same rules give different results for different people and shifts. The trial result comes last to reveal the rules' effect on real times before activation, that is, before they affect anyone's attendance.}
 \end{figure}
 
 \subsection{Try it and check}
@@ -1060,11 +1168,16 @@ This page connects fingerprint devices to the system. Each site has a network, a
 
 \textbf{When is it useful?} When attendance comes from a physical device. A device in the list does not prove its punches arrive. \textbf{Open:} HR / Time / Attendance terminals.
 
+\begin{rcnote}[Example: Horizon]
+Horizon maps Omar’s attendance-device user to his member record, then checks a trial punch reaches the right person.
+\end{rcnote}
+
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch03-feature-attendance-terminals-en.png}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch03-feature-attendance-terminals-en.png}
 \caption{Attendance terminals: English interface in the test environment}
 \label{fig:hr-feature-attendance-terminals-screen}
+\shotnote{KayanOS does not reach the fingerprint terminals directly: the “Attendance agent” reads them from inside the site's network and sends their punches, which are checked for duplicates before being added to work-time records. The test environment has no networks yet, so setup starts with “New network” for each site with terminals, then running the agent as its steps describe.}
 \end{figure}
 
 \begin{table}[H]
@@ -1100,8 +1213,9 @@ Settings & Import punches from a date, and automatic matching by member code or 
   \draw[flowsTo] (b) -- (c);
 \end{tikzpicture}
 \rclegend
-\caption{Steps of use; arrows do not mean automatic processing}
+\caption{Steps of use}
 \label{fig:hr-feature-attendance-terminals-flow}
+\shotnote{The diagram follows the punch's own path: the device must connect first, then each user on it is linked to a member, or their punches stay unmatched. Setup is complete only when a known punch appears on the right member's day.}
 \end{figure}
 
 \subsection{Try it and check}
@@ -1117,15 +1231,20 @@ Settings & Import punches from a date, and automatic matching by member code or 
 \section{Seniority Levels}
 \label{sec:hr-feature-seniority-levels}
 
-A seniority level is a grade in the salary scale, with a rank, two salary limits and an experience group.
+A seniority level is a grade in the salary scale. Each grade has a rank that sets its place, a minimum and maximum salary, and an experience group that defines its raises.
 
 \textbf{When is it useful?} A consistent pay reference: each position has a grade. A grade is not a person or a slip. \textbf{Open:} HR / Salary Scale / Seniority Levels.
 
+\begin{rcnote}[Example: Horizon]
+Horizon defines a job grade for the HR Manager position, with salary limits and an experience group. The grade becomes the position’s reference.
+\end{rcnote}
+
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch03-feature-seniority-levels-en.png}
-\caption{Seniority Levels: Unsaved form in the test environment}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch03-feature-seniority-levels-en.png}
+\caption{Unsaved new seniority level form}
 \label{fig:hr-feature-seniority-levels-screen}
+\shotnote{This form defines one grade of the salary scale. “Rank” sets the grade's place among the grades, and “Min Salary” is the starting point on which experience raises are built. “Experience Level Group” links the grade to the levels that become the scale's columns, so create the group before the grade.}
 \end{figure}
 
 \begin{table}[H]
@@ -1138,12 +1257,12 @@ A seniority level is a grade in the salary scale, with a rank, two salary limits
 \thh{Field} & \thh{What do you add?}\\
 Name and Code & \req{}; the code must be unique.\\
 Rank & \req{}: a unique number that orders the grades.\\
-Starting Salary and Max Salary & \req{}: the grade's first and highest salary.\\
-Experience Level Group & \req{}: the raises added to the starting salary.\\
+Min and Max Salary & \req{}: the minimum is the grade's starting salary; the maximum is its highest salary.\\
+Experience Level Group & \req{}: the raises added to the minimum salary at each experience level.\\
 \end{tabularx}
 \end{table}
 
-A position links to a seniority level. The system suggests the assignment salary from the starting salary and experience steps \gen{}.
+A position links to a seniority level. The system suggests the assignment salary from the grade's minimum salary and experience raises \gen{}.
 
 \begin{figure}[H]
 \centering
@@ -1155,15 +1274,16 @@ A position links to a seniority level. The system suggests the assignment salary
   \draw[flowsTo] (b) -- (c);
 \end{tikzpicture}
 \rclegend
-\caption{Steps of use; arrows do not mean automatic processing}
+\caption{Steps of use}
 \label{fig:hr-feature-seniority-levels-flow}
+\shotnote{A grade is not finished when it is saved: after defining it, review its row in the Salary Scale to confirm the amounts at each experience level. Only then check the suggested assignment salary, because any error in the grade carries over to it.}
 \end{figure}
 
 \subsection{Try it and check}
 
 \begin{enumerate}
   \item Prepare the experience group first. Open Seniority Levels and add the grade.
-  \item Complete name, code, rank, starting and max salary and the experience group with approved values, then save.
+  \item Complete name, code, rank, min and max salary and the experience group with approved values, then save.
 \end{enumerate}
 
 \textbf{Check:} open the Salary Scale and review the grade's row. Link the grade to the position, then review the assignment pay.
@@ -1176,11 +1296,16 @@ Here you manage experience groups: each group has ordered levels and a rule that
 
 \textbf{When is it useful?} Consistent experience steps for the salary scale. Order matters; renaming a level does not move it. \textbf{Open:} HR / Salary Scale / Experience Levels.
 
+\begin{rcnote}[Example: Horizon]
+Horizon orders experience levels within one group, then reviews their increments in the Salary Scale before using them in Sarah’s assignment.
+\end{rcnote}
+
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch03-feature-experience-levels-en.png}
-\caption{Experience Levels: full page in the test environment}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch03-feature-experience-levels-en.png}
+\caption{Experience groups list in the test environment}
 \label{fig:hr-feature-experience-levels-screen}
+\shotnote{This list gathers the organization's experience groups; each has the “Currency” its amounts use and the “Step Raise” that sets how pay increases. The test environment holds only one sample group; open a group to manage and order its levels.}
 \end{figure}
 
 \begin{table}[H]
@@ -1212,8 +1337,9 @@ Levels & Name, code and description for each level, ordered by drag and drop.\\
   \draw[flowsTo] (b) -- (c);
 \end{tikzpicture}
 \rclegend
-\caption{Steps of use; arrows do not mean automatic processing}
+\caption{Steps of use}
 \label{fig:hr-feature-experience-levels-flow}
+\shotnote{The order of levels decides how many raises accumulate at each level, so order them from least to most experienced. Then review the result in the Salary Scale, where the effect of the order and the raise on reference pay becomes visible.}
 \end{figure}
 
 \subsection{Try it and check}
@@ -1224,7 +1350,7 @@ Levels & Name, code and description for each level, ordered by drag and drop.\\
   \item In “Levels” add the levels and order them from least experienced.
 \end{enumerate}
 
-\textbf{Check:} open the Salary Scale and review the raises. Do not reorder shared levels to change one person's pay.
+\textbf{Check:} open the Salary Scale and review the raises. Do not reorder shared levels to change one person's pay, because the change affects everyone who uses them.
 
 \clearpage
 \section{Salary Scale}
@@ -1234,11 +1360,16 @@ The salary scale is a read-only table: a reference salary for each job grade and
 
 \textbf{When is it useful?} Comparing reference pay fairly. The number is a reference, not pay due. \textbf{Open:} HR / Salary Scale / Salary Scale.
 
+\begin{rcnote}[Example: Horizon]
+Horizon checks the reference amount for Sarah’s job grade and experience level, then compares it with her assignment salary and currency.
+\end{rcnote}
+
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch03-feature-salary-scale-en.png}
-\caption{Salary Scale: English interface in the test environment}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch03-feature-salary-scale-en.png}
+\caption{Salary Scale with test environment data}
 \label{fig:hr-feature-salary-scale-screen}
+\shotnote{The scale combines job grades and experience levels in one table: read the reference salary where a grade's row meets a level's column. The first level shows the grade's minimum salary as is, and later levels add the raises cumulatively. A “-” means the calculated amount is zero, as for test grades with no minimum salary.}
 \end{figure}
 
 \begin{table}[H]
@@ -1251,8 +1382,8 @@ The salary scale is a read-only table: a reference salary for each job grade and
 \thh{Part} & \thh{What does it mean?}\\
 One table per group & Each experience group has its own table and currency.\\
 Rows & Seniority levels, highest rank first.\\
-Columns & Experience levels in order; the last column is the maximum.\\
-Cell & The starting salary plus experience raises up to that level \gen{}.\\
+Columns & Experience levels in order; the last column is the grade's maximum salary.\\
+Cell & The grade's minimum salary plus experience raises up to that level \gen{}.\\
 \end{tabularx}
 \end{table}
 
@@ -1272,13 +1403,14 @@ The scale is not edited directly; change the seniority levels or experience leve
 \rclegend
 \caption{If your organization uses a salary scale}
 \label{fig:hr-scale-setup}
+\shotnote{The setup order follows the dependencies: a seniority level needs an existing experience group, and the scale is built from both. After reviewing the cells, compare the assignment's pay and currency with the reference. If your organization does not use a salary scale, skip this whole path.}
 \end{figure}
 
-\subsection{Try it and check}
+\subsection{Apply the example and check}
 
 \begin{enumerate}
   \item Prepare the experience group and its levels, then the seniority levels. Open the Salary Scale.
-  \item Find the grade and experience level and review the cell. If unexpected, check the starting salary and the raise.
+  \item Find the grade and experience level and review the cell. If unexpected, check the grade's minimum salary and the raise.
 \end{enumerate}
 
 \textbf{Check:} compare the reference with Sarah's assignment salary and currency. Arrows show setup order, not automatic payment.
@@ -1291,11 +1423,16 @@ A payroll input is a variable item for a given month, such as a bonus, deduction
 
 \textbf{When is it useful?} Every exceptional amount is recorded and traceable, instead of editing pay by hand. \textbf{Open:} HR / Payment / Payroll Inputs.
 
+\begin{rcnote}[Example: Horizon]
+Horizon records an approved bonus for Sarah with its amount and payment month, then checks its effect after calculating her slip.
+\end{rcnote}
+
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch03-payroll-input-fields-en.png}
-\caption{Payroll Inputs: complete * fields; not saved}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch03-payroll-input-fields-en.png}
+\caption{Unsaved new payroll input form}
 \label{fig:hr-feature-payroll-inputs-screen}
+\shotnote{This form records one item against an employee's assignment: “Direction” sets its effect, such as an earning or a deduction, and “Payment month” sets the month in which it is counted. Fields showing “Empty”, such as “Payable amount” and “Salary slip”, are filled by the system during calculation and approval, not by you.}
 \end{figure}
 
 \begin{table}[H]
@@ -1308,7 +1445,7 @@ A payroll input is a variable item for a given month, such as a bonus, deduction
 \thh{Field} & \thh{What do you add?}\\
 Direction and Input type & \req{}: Earning, Deduction, Employer contribution or Information only; Bonus, Deduction, Overtime, Reimbursement, Correction.\\
 Component, Assignment and Member & \req{}: the payroll component, and the same employee's assignment.\\
-Period & Earned from and to, and Payment month \req{}.\\
+Period & “Earned from”, “Earned to” and “Payment month”, all \req{}.\\
 Calculation & Fixed amount, or Quantity x rate; for overtime, hours and time classification: Day, Night, Rest-day, Holiday.\\
 Override & Override amount and reason \opt{}.\\
 Result & Calculated rate and amount, payable amount and calculation details \gen{}.\\
@@ -1318,8 +1455,8 @@ Result & Calculated rate and amount, payable amount and calculation details \gen
 \subsection{What can you do?}
 
 \begin{itemize}
-  \item “Preview calculation” prices the input from the payroll policy and compensation terms.
-  \item The input locks once an approved slip uses it. To correct it afterwards, add a new input in “Reverses input”.
+  \item “Preview calculation” prices the input from the payroll policy and compensation terms, without recording a payment.
+  \item The input locks once an approved slip uses it. To correct it afterwards, add a new input and choose the original in “Reverses input”.
 \end{itemize}
 
 \begin{figure}[H]
@@ -1332,11 +1469,12 @@ Result & Calculated rate and amount, payable amount and calculation details \gen
   \draw[flowsTo] (b) -- (c);
 \end{tikzpicture}
 \rclegend
-\caption{Steps of use; arrows do not mean automatic processing}
+\caption{Steps of use}
 \label{fig:hr-feature-payroll-inputs-flow}
+\shotnote{Recording the item is not enough on its own: the preview shows the amount that will be calculated before it reaches the slip. Its real effect appears only in the employee's salary slip after calculation, so the review ends there.}
 \end{figure}
 
-\subsection{Try it and check}
+\subsection{Apply the example and check}
 
 \begin{enumerate}
   \item After reviewing time and leave, open Payroll Inputs and search for the item to avoid duplicates.
@@ -1352,13 +1490,18 @@ Result & Calculated rate and amount, payable amount and calculation details \gen
 
 A salary slip calculates one employee's pay for a period: days, earnings, deductions and net. It moves through stages: draft, calculated, approved.
 
-\textbf{When is it useful?} Review Sarah's own calculation before the payroll, so any amount traces to its item. \textbf{Open:} HR / Payment / Salary Slips.
+\textbf{When is it useful?} Review each employee’s calculation before preparing payroll, and trace amounts to their source. \textbf{Open:} HR / Payment / Salary Slips.
+
+\begin{rcnote}[Example: Horizon]
+Horizon calculates Sarah’s slip after reviewing her attendance, leaves and payroll inputs, then checks each item before approval.
+\end{rcnote}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch03-create-slips-clear-en.png}
-\caption{Salary Slips: full page before creating slips}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch03-create-slips-clear-en.png}
+\caption{Salary slips list before creating new slips}
 \label{fig:hr-feature-salary-slips-screen}
+\shotnote{The list holds one slip per employee and period, and “Status” shows its stage: “Draft” for a slip not yet calculated, “Calculated” for one ready for review, and “Approved” for an approved slip that can no longer be edited. These rows are test slips, so use search and the filters to narrow the list to the month and employees you are reviewing.}
 \end{figure}
 
 \begin{table}[H]
@@ -1398,19 +1541,20 @@ Projects and notes & Each project's percentage and amount, and the slip notes.\\
 \rclegend
 \caption{Review path from the employee to payroll}
 \label{fig:hr-review-flow}
+\shotnote{The review follows the slip's sources: the assignment sets the pay, time and leaves set the days, and payroll inputs add the variable items. Review them before calculating, because approving a slip is final and only approved slips enter the payroll.}
 \end{figure}
 
-\subsection{Try it and check}
+\subsection{Apply the example and check}
 
 \begin{enumerate}
   \item Open Salary Slips, then “Create salary slips”.
   \item Choose “Period end”, then Sarah's row and position. Check “Period start”; the first slip starts at the assignment start and can be changed.
   \item Create the draft with the button showing the selected count, then open her slip. If a draft exists, review or delete it instead of duplicating.
   \item Choose “Calculate”. Review the days, lines and net. After changing inputs choose “Recalculate”.
-  \item When the lines are correct, choose “Approve” and confirm. Approval consumes the payroll inputs.
+  \item When the lines are correct, choose “Approve” and confirm. Approval locks the payroll inputs used in the slip.
 \end{enumerate}
 
-\textbf{Check:} the slip status is “Approved” in the list. Approval does not prove payment.
+\textbf{Check:} the slip status is “Approved” in the list. Approving a slip does not mean the salary was paid.
 
 \clearpage
 \section{Payrolls}
@@ -1420,11 +1564,16 @@ A payroll gathers a month's approved slips into one sheet, with a total per memb
 
 \textbf{When is it useful?} After checking the slips, to review, approve and export the month's pay. \textbf{Open:} HR / Payment / Payrolls.
 
+\begin{rcnote}[Example: Horizon]
+Horizon collects Sarah’s and Omar’s approved slips into the month’s payroll, then checks the people and total before approval.
+\end{rcnote}
+
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch03-feature-payrolls-en.png}
-\caption{Payrolls: English interface in the test environment}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch03-feature-payrolls-en.png}
+\caption{Payrolls list in the test environment}
 \label{fig:hr-feature-payrolls-screen}
+\shotnote{This list gathers the monthly payrolls; “Total” shows each payroll's sum and “Status” whether it is still a draft or approved. The test environment has one sample payroll in “Draft”, so it can still be reviewed before final approval. The filters help you reach the payroll of a given period or location.}
 \end{figure}
 
 \begin{table}[H]
@@ -1457,8 +1606,9 @@ Projects & Each project's percentage and amount, and a total per currency.\\
   \draw[flowsTo] (b) -- (c);
 \end{tikzpicture}
 \rclegend
-\caption{Steps of use; arrows do not mean automatic processing}
+\caption{Steps of use}
 \label{fig:hr-feature-payrolls-flow}
+\shotnote{A payroll is only as good as the slips it gathers, so review the approved slips before generating it. Then check the totals before approval, because approving a payroll cannot be undone.}
 \end{figure}
 
 \subsection{Try it and check}
@@ -1472,5 +1622,5 @@ Projects & Each project's percentage and amount, and a total per currency.\\
 \textbf{Check:} trace each amount to its slip. If an employee is missing, check the month, filters and their slip status.
 
 \begin{rcwarn}[Calculation is not payment]
-Approving the payroll only changes its status. Check the transfer and payment records under your organization's procedure.
+Approving the payroll only changes its status and transfers no money. Check the transfer and payment records under your organization's procedure.
 \end{rcwarn}

@@ -208,6 +208,7 @@ function figure(block, ctx, images) {
     children: [new ImageRun({ type: 'png', data: img.data, transformation: { width: img.width, height: img.height } })],
   })];
   if (block.caption) out.push(caption('figure', block, ctx));
+  if (block.note) out.push(para(block.note, ctx, { spacing: { before: 0, after: 240, line: 276 } }));
   return out;
 }
 
@@ -265,7 +266,10 @@ export function renderBlocks(blocks, ctx, images, opts = {}) {
 export async function imageInfo(file, widthPx) {
   const data = fs.readFileSync(file);
   const img = await loadImage(data);
-  const width = Math.min(widthPx, TEXT_W_PX);
+  // Same cap as the LaTeX figures (0.72\textheight) so a tall full-page
+  // screenshot, its caption and its note fit on one page.
+  const maxHeight = (PAGE.height - MARGIN.top - MARGIN.bottom) * PX_PER_TWIP * 0.72;
+  const width = Math.min(widthPx, TEXT_W_PX, (maxHeight * img.width) / img.height);
   return { data, width: Math.round(width), height: Math.round((img.height * width) / img.width) };
 }
 

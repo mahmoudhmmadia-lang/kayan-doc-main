@@ -1,0 +1,313 @@
+{
+  "checks": [
+    {
+      "lang": "ar",
+      "width": 1440,
+      "file": "c4.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "file": "tasks-collections.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "file": "tasks-views.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "file": "tasks-details.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "file": "tasks-follow-up.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "file": "tasks-relationships.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "file": "tasks-epics.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "file": "tasks-suggestions.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "file": "tasks-assignments.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "file": "tasks-settings.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "file": "tasks-statuses.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "file": "c4.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "file": "tasks-collections.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "file": "tasks-views.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "file": "tasks-details.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "file": "tasks-follow-up.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "file": "tasks-relationships.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "file": "tasks-epics.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "file": "tasks-suggestions.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "file": "tasks-assignments.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "file": "tasks-settings.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "file": "tasks-statuses.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "file": "c4.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "file": "tasks-collections.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "file": "tasks-views.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "file": "tasks-details.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "file": "tasks-follow-up.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "file": "tasks-relationships.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "file": "tasks-epics.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "file": "tasks-suggestions.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "file": "tasks-assignments.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "file": "tasks-settings.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "file": "tasks-statuses.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "file": "c4.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "file": "tasks-collections.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "file": "tasks-views.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "file": "tasks-details.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "file": "tasks-follow-up.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "file": "tasks-relationships.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "file": "tasks-epics.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "file": "tasks-suggestions.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "file": "tasks-assignments.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "file": "tasks-settings.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "file": "tasks-statuses.html",
+      "scrolledContent": true,
+      "diagramsNotClipped": true
+    }
+  ],
+  "verifiedAt": "2026-10-17T10:12:13.218Z"
+}

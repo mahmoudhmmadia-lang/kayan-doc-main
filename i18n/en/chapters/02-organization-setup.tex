@@ -8,32 +8,34 @@
 \section{Setup result}
 \label{sec:setup-minute}
 
-\textbf{Who:} setup administrator with HR. \textbf{Result:} Sarah is linked to her job, department and location.
+\textbf{Who:} the setup administrator handles this stage once. \textbf{Result:} the stage ends with a ready organization the administrator can sign in to, with its language, time zone and start of week set and saved.
 
-If the organization exists, review its data; do not create another copy.
+If your organization already exists, do not create another copy; review its data and complete whatever is missing.
 
 \begin{figure}[H]
 \centering
 \begin{tikzpicture}[node distance=0.45cm,stepBox/.append style={minimum width=5cm,text width=4.6cm,minimum height=0.7cm,font=\small\bfseries}]
   \node[stepBox]            (s1) {Create the\\organization};
   \node[stepBox,below=of s1] (s2) {Organization settings};
-  \node[stepBox,below=of s2] (s3) {Locations and nodes};
-  \node[stepBox,below=of s3] (s4) {Positions};
-  \node[stepBox,below=of s4] (s5) {Members};
-  \node[stepBox,below=of s5] (s6) {Assignments};
-  \foreach \a/\b in {s1/s2,s2/s3,s3/s4,s4/s5,s5/s6} \draw[flowsTo] (\a) -- (\b);
+  \node[stepBox,below=of s2] (s3) {Check sign-in\\and settings};
+  \foreach \a/\b in {s1/s2,s2/s3} \draw[flowsTo] (\a) -- (\b);
 \end{tikzpicture}
 \rclegend
-\caption{The six steps of this chapter}
+\caption{Create the organization and check its settings}
 \label{fig:setup-steps}
+\shotnote{The figure summarizes the three setup stages in order: create the organization, adjust its settings, then check sign-in and settings together. Do not move on before saving the previous stage; if your organization already exists, start at the first stage not yet done.}
 \end{figure}
 
 \section{Before you start}
 \label{sec:setup-before}
 
-Prepare department, location, job and employee names.
+Prepare the organization details, contact method and administrator account listed below. You will add team records in the HR chapter.
 
-\textbf{Code:} a fixed identifier, such as HZN-HR. \textbf{Subdomain:} the address prefix, such as hzn in hzn.kayanos.app.
+\textbf{Subdomain:} your organization’s own part of the sign-in address; it comes at the start of the address.
+
+\begin{rcnote}[Example: Horizon]
+Horizon’s subdomain is hzn, so its sign-in address is hzn.kayanos.app.
+\end{rcnote}
 
 \begin{table}[H]
 \centering
@@ -45,7 +47,7 @@ Prepare department, location, job and employee names.
 \thh{Item} & \thh{Type} & \thh{Note}\\
 Email or phone number & \req & Receives the verification code.\\
 Organization name & \req & Can be written in more than one language.\\
-Subdomain & \req & The organization's address, such as hzn.\\
+Subdomain & \req & A unique part of the sign-in address.\\
 Country and number of employees & \req & The number of employees is an estimate (a range).\\
 Admin name & \req & The owner of the first account.\\
 Admin password & \opt & If left empty, you receive a code to set it later.\\
@@ -60,9 +62,10 @@ From sign-in, choose “Create Organization”. The setup administrator does thi
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch02-create-org-en.png}
-\caption{The “Create Organization” page: the four steps at the top}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch02-create-org-en.png}
+\caption{The “Create Organization” page and its four steps}
 \label{fig:setup-create-screen}
+\shotnote{The “Create Organization” page splits the process into four consecutive steps, from “Contact” to “Organization Details”; the highlighted number marks the current step. The current step’s fields appear under the step bar, and the other steps follow in the order described in the list below.}
 \end{figure}
 
 \begin{enumerate}
@@ -85,7 +88,7 @@ Use 3–63 lowercase letters, digits or hyphens. No leading/trailing hyphen, exi
 \rcZebra
 \begin{tabularx}{\linewidth}{Y Y}
 \rcHeaderRow
-\thh{Ready after creation} & \thh{You need to enter}\\
+\thh{Ready after creation} & \thh{Add later in HR}\\
 Your account as a member, with the “Administrator” role. & Locations (places of work).\\
 The basic roles. & Nodes (organizational units).\\
 The apps and entity definitions. & Positions.\\
@@ -96,7 +99,7 @@ Currencies and status templates. & Members, assignments and shifts.\\
 \section{2. Organization settings}
 \label{sec:setup-settings}
 
-\textbf{Open:} Settings / Management / Organization settings.
+\textbf{Open:} Settings / Management / Organization settings. Review the following settings right after creating the organization, because their defaults may not suit your work.
 
 \begin{table}[H]
 \centering
@@ -113,185 +116,20 @@ Logo and primary color & — & The organization's identity in the interface (opt
 \end{tabularx}
 \end{table}
 
-For the example: choose Asia/Damascus, Arabic and your working week’s start day. Save, then reopen to check.
+Choose the time zone, language and start of the working week. Save and reopen to check.
 
-\section{Data order}
-\label{sec:setup-order}
-
-\begin{figure}[H]
-\centering
-\begin{tikzpicture}[node distance=0.7cm]
-  \node[entity] (asg) {Assignments};
-  \node[entity,below right=0.7cm and 0.5cm of asg] (mem) {Members};
-  \node[entity,below left=0.7cm and 0.5cm of asg] (pos) {Positions};
-  \node[entityOpt,below right=0.7cm and 0.1cm of pos] (node) {Nodes};
-  \node[entityOpt,below left=0.7cm and 0.1cm of pos] (loc) {Locations};
-  \draw[dependsOn] (asg.south) -- ++(0,-0.3) -| (mem.north);
-  \draw[dependsOn] (asg.south) -- ++(0,-0.3) -| (pos.north);
-  \draw[dependsOnOpt] (pos.south) -- ++(0,-0.3) -| (node.north);
-  \draw[dependsOnOpt] (pos.south) -- ++(0,-0.3) -| (loc.north);
-\end{tikzpicture}
-\rclegend
-\caption{Assignment links person and job}
-\label{fig:setup-deps}
-\end{figure}
-
-\begin{itemize}
-  \item An assignment requires a saved member and position.
-  \item Unit and location links are optional and recommended; prepare them first.
-  \item Create parent units and locations before their children.
-  \item The shift is optional here; see Section~\ref{sec:hr-shifts}.
-\end{itemize}
-
-\section{Add your first employee}
-\label{sec:setup-data}
-
-Screenshots show unsaved forms or a saved demo record; * means required. Sections may vary; search by page name.
-
-\textbf{List:} many records. \textbf{Record:} one person or job. \textbf{Field:} an entry such as a name. Select existing records in link fields.
-
-\subsection{Location and department}
-
-\begin{enumerate}
-  \item Open HR / Core / Locations. Add HZN-DAM, “Head Office, Damascus”. Complete type, country, state, city and address; save and check the list.
-  \item In Core / Nodes, add “General Management”, HZN-GM, select its type and save. Add “Human Resources”, HZN-HR, select General Management as parent, then save.
-\end{enumerate}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch02-location-fields-en.png}
-\caption{Location: code and address}
-\label{fig:setup-location-fields}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch02-node-fields-en.png}
-\caption{Node: type and parent}
-\label{fig:setup-node-fields}
-\end{figure}
-
-\subsection{Job, person and assignment}
-
-\begin{enumerate}
-  \item Workforce / Positions: add HZN-P-01, “HR Manager”. Select the unit and location above; save.
-  \item Members: add “Sarah Al-Khatib”, ID 0001, full seat. Add real contact details for a real employee; save.
-  \item Workforce / Assignments: select Sarah and the position. Enter employment type and start date; example: 2026-10-01. Save and reopen.
-\end{enumerate}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch02-position-fields-en.png}
-\caption{Position: node, location and shift}
-\label{fig:setup-positions}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch02-member-fields-en.png}
-\caption{Member: ID, contact and seat}
-\label{fig:setup-member-fields}
-\end{figure}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch02-assignment-fields-en.png}
-\caption{Assignment: member, position and dates}
-\label{fig:setup-assignment-fields}
-\end{figure}
-
-\textbf{Check:} Sarah and her position appear. If an option is missing, check that it was saved and search by code.
-
-\begin{table}[H]
-\centering
-\caption{The required fields at each step}
-\label{tab:setup-required}
-\rcZebra
-\begin{tabularx}{\linewidth}{R{3.3cm} R{4.8cm} Y}
-\rcHeaderRow
-\thh{Page} & \thh{Required} & \thh{Recommended}\\
-Locations & Code, Name, Type, Country, State, City, Address & Parent (the parent location)\\
-Nodes & Code, Name, Type & Parent\\
-Positions & Code, Name & Node, Location\\
-Members & Employee ID, Name, Seat Type & Email or Phone\\
-Assignments & Member, Position & Employment Type, Start Date\\
-\end{tabularx}
-\end{table}
-
-Keep codes unique within a list; do not change them when correcting names.
-
-\subsection{Excel import}
-\label{sec:setup-import}
-
-An alternative to manual entry. Try one row first.
-
-\begin{figure}[H]
-\centering
-\begin{tikzpicture}[node distance=0.4cm,stepBox/.append style={minimum width=6cm,text width=5.6cm,minimum height=0.7cm}]
-  \node[stepBox] (s0) {Open the list;\\download template};
-  \node[stepBox,below=of s0] (s1) {Fill one row; check\\links};
-  \node[stepBox,below=of s1] (s2) {Review preview;\\confirm};
-  \node[stepBox,below=of s2] (s3) {Open and check the\\resulting record};
-  \draw[flowsTo] (s0) -- (s1);
-  \draw[flowsTo] (s1) -- (s2);
-  \draw[flowsTo] (s2) -- (s3);
-\end{tikzpicture}
-\rclegend
-\caption{Import, then check}
-\label{fig:setup-import-flow}
-\end{figure}
-
-Fill * columns. Leave ID, Label and Active columns for the system. Copy link labels exactly from the list.
-
-\begin{rcwarn}[Update or new record?]
-An existing code updates its record. A new code creates another record; keep codes when correcting data. Duplicate rows in the file are ignored.
-\end{rcwarn}
-
-\subsection{Employee sign-in}
-\label{sec:setup-login}
-
-\begin{itemize}
-  \item With email or phone: an email/WhatsApp invitation lasts 48 hours. The employee opens it and sets a password of at least 8 characters.
-  \item Without email or phone: the administrator sets a password; the employee signs in with their employee ID.
-\end{itemize}
-
-\textbf{Check:} the employee signs in at the organization address and opens an allowed app. If the invitation is missing, check contact details and the sending channel.
-
-\section{Example data}
-\label{sec:setup-example}
-
-\begin{table}[H]
-\centering
-\caption{The example data, in order}
-\label{tab:setup-example}
-\rcZebra
-\begin{tabularx}{\linewidth}{R{3cm} R{2.6cm} Y}
-\rcHeaderRow
-\thh{Entity} & \thh{Code} & \thh{Data}\\
-Location & HZN-DAM & Head Office, Damascus\\
-Location & HZN-ALP & Aleppo Branch\\
-Node & HZN-GM & General Management\\
-Node & HZN-HR & Human Resources, under General Management\\
-Position & HZN-P-01 & HR Manager, node HZN-HR, location HZN-DAM\\
-Position & HZN-P-02 & Operations Coordinator, location HZN-ALP\\
-Member & 0001 & Sarah Al-Khatib, full seat\\
-Member & 0002 & Omar Haddad, full seat\\
-Assignment & — & Sarah \dep{} HR Manager\\
-Assignment & — & Omar \dep{} Operations Coordinator\\
-\end{tabularx}
-\end{table}
+\begin{rcnote}[Example: Horizon]
+Horizon chooses the Asia/Damascus time zone and Arabic; it sets the start of week to the day the organization has agreed on.
+\end{rcnote}
 
 \section{Check the result}
 \label{sec:setup-check}
 
 \begin{rcchecklist}[Checklist: setup complete]
 \begin{checklist}
-  \item The timezone and the default language are set.
-  \item Each node is under its correct parent node.
-  \item Each position is linked to its node and location.
-  \item Each member has at least one assignment.
-  \item Each position shows the “Active Members” who hold it.
-  \item A test member received the invitation and signed in successfully.
+  \item You can sign in at the organization address as administrator and see the correct organization name.
+  \item The time zone, default language and start of week remain correct when you reopen settings.
+  \item You have kept the sign-in address for use when adding the team later.
 \end{checklist}
 \end{rcchecklist}
 
@@ -308,14 +146,20 @@ Assignment & — & Omar \dep{} Operations Coordinator\\
 \thh{The problem} & \thh{The cause} & \thh{The fix}\\
 Subdomain rejected & In use, reserved, or contains characters that are not allowed. & Choose another name with lowercase letters and numbers.\\
 Verification code expired & 10 minutes have passed. & Ask for a new code.\\
-Importing assignments failed & The member or position does not exist, or the label is written differently. & Import members and positions first, and copy the label from the system.\\
-Duplicate data & A file was imported with new codes for existing records. & Use the same codes so the records are updated.\\
 Wrong times & The timezone is still UTC. & Change it in Organization settings.\\
-The invitation did not arrive & No email and no phone, or the 48 hours have passed. & Add the email or phone, or set a password for the member.\\
 \end{tabularx}
 \end{table}
 
-\section{Next step}
+\section{Continue with team setup}
+\label{sec:setup-next}
 
-Continue to Chapter~\ref{ch:hr}: shifts, attendance, leave and payroll.
+The organization is ready for work records. Continue to Chapter~\ref{ch:hr} to set up the team; it explains the pages, fields and practical examples.
 
+\begin{itemize}
+  \item For departments and work sites: Nodes in Section~\ref{sec:hr-feature-nodes} and Locations in Section~\ref{sec:hr-feature-locations}.
+  \item To add employees and jobs and link them: Members in Section~\ref{sec:hr-feature-members}, Positions in Section~\ref{sec:hr-feature-positions} and Assignments in Section~\ref{sec:hr-feature-assignments}.
+\end{itemize}
+
+\begin{rcnote}[Example: Horizon]
+After the organization settings are saved, Sarah starts setting up departments, locations and employee records using the HR pages. She then continues with attendance, leave and payroll as the organization needs them.
+\end{rcnote}

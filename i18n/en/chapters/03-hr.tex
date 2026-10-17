@@ -5,9 +5,13 @@
 
 \section{What you will achieve}
 
-\textbf{Result:} know who works, in which job, when they work, and how to review their leave and pay. Start with Sarah, then repeat for the team.
+\textbf{Result:} this app shows who works in the organization, in which position and when, and lets you review each employee's leave and pay.
 
 \textbf{Who does what?} HR: team and leave records. Employees: their attendance. Payroll staff: calculations. Authorized administrators: policies and devices. Tasks and projects use the same people and jobs.
+
+\begin{rcnote}[Example: Horizon]
+Horizon links Sarah and Omar to their jobs, then reviews their attendance, leave and pay. The pages below follow this same fictional team.
+\end{rcnote}
 
 \begin{figure}[H]
 \centering
@@ -23,20 +27,21 @@
   \draw[dependsOnOpt] (pos.south) -- ++(0,-0.3) -| (loc.north);
 \end{tikzpicture}
 \rclegend
-\caption{Assignment links person and job}
+\caption{An assignment links employee and position}
 \label{fig:hr-models}
+\shotnote{The figure shows that an assignment links a member to a position and is complete only when both exist, so members and positions are created before assignments. Linking a position to a node (department) and a location is optional, but it shows where the position sits in the structure and where the work happens.}
 \end{figure}
 
-Sarah is the member, HR Manager is the position, and the assignment links them. Unit and location are optional links of the position.
 
 \section{HR pages at a glance}
 \label{sec:hr-pages}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=0.95\linewidth]{figures/screens/ch03-hr-pages-clear-en.png}
-\caption{Structure and people pages}
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch03-hr-pages-clear-en.png}
+\caption{The “HR” app page}
 \label{fig:hr-pages-screen}
+\shotnote{The app page groups every HR page into sections such as “Workforce” and “Time”; a card opens its page, and “New record” adds a record directly. Choose “Records” to show record pages only, since many cards here are test forms in the test environment.}
 \end{figure}
 
 Open the pages in this order: people and structure, then time, then payroll if your organization uses it. Each page has its own illustrated explanation. \textbf{Open:} HR / section shown on the card / page.

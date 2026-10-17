@@ -87,6 +87,7 @@ export function renderDiagram(tikz, { dir = 'rtl', id = 'd' } = {}) {
   const { nodes, edges } = parseTikz(tikz);
   if (!nodes.length) return '';
   const isChain = nodes.every((n) => n.style === 'stepBox');
+  const gapY = isChain ? 24 : GAP_Y;
   const w = isChain ? STEP_W : NODE_W;
   for (const n of nodes) n.h = PAD_Y * 2 + n.lines.length * LINE_H;
 
@@ -120,8 +121,8 @@ export function renderDiagram(tikz, { dir = 'rtl', id = 'd' } = {}) {
   for (const n of nodes) { const d = depth.get(n); rowH[d] = Math.max(rowH[d] ?? 0, n.h); }
   const rowY = [];
   let y = 8;
-  for (let d = 0; d < levels; d++) { rowY[d] = y; y += rowH[d] + GAP_Y; }
-  const height = y - GAP_Y + 8;
+  for (let d = 0; d < levels; d++) { rowY[d] = y; y += rowH[d] + gapY; }
+  const height = y - gapY + 8;
   const width = slots * w + (slots - 1) * GAP_X + 16;
   for (const n of nodes) {
     const k = dir === 'rtl' ? slots - 1 - n.x : n.x;

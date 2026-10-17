@@ -4,6 +4,121 @@ Read this before touching anything in `kayanos-guide/`. It tells you what this
 project is, where it stands, what comes next, and the working rules the user
 set. `progress.md` is the live status log; this file is the standing brief.
 
+## Current direction — web only (2026-10-16; supersedes legacy output rules below)
+
+- **Tasks authorized (2026-10-17).** The user approved the chapter 4 outline.
+  Chapter 4 now has an Arabic/English overview and ten dedicated feature pages
+  (`tasks-*.html`), under review. The scope includes collections, views, task
+  details, follow-up, relationships, epics, suggestions, assignments and shared
+  task/status configuration. Distinguish embedded tabs from standalone pages.
+  Projects & planning is the next app and is not yet authorized. Earlier notes
+  saying Tasks has not started are historical; consult `progress.md`.
+  The fictional example is Sarah coordinating a Horizon Aleppo-branch visit,
+  with Omar preparing its checklist in “Horizon visits” / «زيارات الأفق».
+  The live QA task is separate. See `review/tasks-source-coverage.md` for tested
+  behavior and the collection-access limitation.
+
+- **No empty image space (2026-10-17).** Fit screenshots and diagrams to their
+  meaningful content. Never add blank canvas, excessive capture height or spacer
+  areas. Keep only a small edge margin and preserve all visible controls, labels
+  and records. Full-page means all page content, not empty space below it; trim
+  blank outer margins when necessary. This supersedes older no-cropping rules.
+  Check both languages, inline images and enlarged views on desktop and mobile.
+- **Every page needs our example (2026-10-16).** Every HR feature page and
+  overview, and every future authorized app page, must include a short, concrete
+  Horizon example in both languages. Place a separate **«مثال: شركة الأفق» /
+  “Example: Horizon”** callout immediately after the general explanation, before
+  the first screenshot. Name the relevant person, record or action and the result
+  to understand; a generic heading or link to another page is not enough. Keep
+  it to one or two clear sentences. Use the same fictional company and people;
+  never imply these records exist in test2. Keep fuller example steps later when
+  useful, without repeating the introductory explanation. Check every page for
+  coverage before finishing; do not limit examples to selected features.
+- **Explanation first, example second (2026-10-16).** Explain what the feature
+  means, why it is useful and the general action in short, plain sentences.
+  Then put the fictional Horizon scenario in a separate paragraph, callout or
+  worked-example subsection labelled **«مثال: شركة الأفق» / “Example: Horizon”**.
+  Do not mix Sarah, Omar, HZN codes or fictional values into definitions,
+  general instructions, field descriptions or screenshot notes. Keep the same
+  fictional company throughout; label example-only diagrams as examples too.
+  Practical examples may include their own numbered actions and result check.
+  A general procedure must still make sense without the example.
+- Apply this separation in both languages with matching structure. Give Arabic
+  special editorial care: natural, direct phrasing, one idea per sentence,
+  familiar words and exact UI labels. Prefer one or two short explanatory
+  sentences followed by a concise example; do not repeat the explanation in it.
+  Describe real test2 screenshots as shown, never as fictional Horizon records.
+- Work on and build the Arabic and English web guide only. Do not generate,
+  inspect, or update PDF, Word or Overleaf outputs unless explicitly requested
+  again. Existing print instructions below are archival, not completion criteria.
+  Use `cd tools && npm run html`; the default build also produces HTML only.
+- Explain shared conventions once in the home page's “How to use this guide”
+  panel, with a small link from every page: required-field stars, diagram reading
+  direction and arrow meanings, updating work status, and guide progress.
+  Do not repeat these instructions or legends in each page or figure. Keep
+  page-specific required fields, meaningful exceptions and necessary task steps.
+- Every screenshot and diagram must have a short, clear explanation directly
+  underneath via `\shotnote{...}`, written to the standard in **Arabic writing
+  and documentation quality** below: what the figure represents, why it matters
+  and what the reader should take from it, in about two or three sentences.
+- Apply edits in both languages, build HTML, run the web/source checks, and
+  exercise the changed guide interactions in a real browser on desktop/mobile.
+  Guide-only changes are tested on the local guide preview; test2 remains the
+  only allowed application environment for product verification and captures.
+
+## Arabic writing and documentation quality (2026-10-17; applies to all Arabic text)
+
+The user found AI-written Arabic in this guide telegraphic, mechanical and
+weak beneath figures. These rules apply to every Arabic chapter, table, list,
+callout, caption, diagram label and figure note, now and in future chapters.
+
+### Language
+- Write professional Modern Standard Arabic (الفصحى المعاصرة), never dialect:
+  complete, natural sentences with correct grammar, spelling, hamzas and Arabic
+  punctuation («،» «؛» «؟»). Rewrite whole sentences when a word fix is not enough.
+- Avoid literal translation, AI-sounding phrasing, filler («تجدر الإشارة»، «من
+  المهم أن»), promotional or academic tone, vague verbs and repeated wording.
+  Telegraphic fragments («النتيجة: مؤسسة…») are not acceptable as prose; a short
+  bold lead-in such as «المسار:» or «تحقق:» must be followed by a clear sentence.
+- Prefer verbal, active sentences and link ideas with appropriate connectives
+  (ثم، لذلك، أما… فـ، وبذلك). One complete idea per paragraph. Keep the guide
+  short: improve clarity, do not add length.
+- Keep code identifiers, paths, keys, product names and Latin values unchanged
+  (in `\en{}`); keep exact UI labels in «» as the app shows them, verified in
+  `../src/locales/*.ar.ts`, `../common/locales/ar.ts` or the entity seeds.
+- One term per concept across the guide: «المؤسسة» (not «المنظمة» outside a UI
+  label); «العضو/الأعضاء» for the person's record and page, «الموظف» for the
+  person; «المنصب» for the position record; «اضغط» (not «انقر»); «الوحدة
+  التنظيمية»، «الوردية»، «التعيين». Explain a term in plain Arabic on first use.
+- Headings must describe what follows. Explain concepts before relying on them
+  and connect each section to the previous one where a transition is needed.
+
+### Figure explanations (`\shotnote`)
+- About two or three concise sentences per figure, adapted to its complexity:
+  (1) what the figure represents, (2) what it enables or communicates, and
+  (3) what the reader should understand from it in this page's context.
+- Do not narrate positions («في الأعلى»، «في الجهة اليمنى/اليسرى»، «تحته…») or
+  inventory every field. Mention location only when needed to find a control,
+  and name only the one to three labels that matter.
+- Add meaning beyond the caption and surrounding paragraph; never write a note
+  that could fit any screenshot («توضح الصورة واجهة النظام»).
+- Diagrams: explain the dependency, sequence or relationship and its practical
+  consequence; do not re-explain the arrow legend (it lives on the home page) or
+  present a workflow step as automatic processing.
+- Before writing a note, open the actual image and, when its meaning is unclear,
+  the page component, entity seed or locale. Never invent functionality; state
+  test or empty states honestly; keep the fictional Horizon example out of notes.
+
+### Process
+- Before editing, read the whole affected page (definition, example, figures,
+  tables, steps) so changes keep its logical flow and avoid repetition.
+- Mirror any change in meaning, and every rewritten figure note, in `i18n/en/`.
+- After editing, re-read the entire affected section, check each figure against
+  its note, and do a final Arabic proofreading pass (grammar, punctuation,
+  terminology, UI labels) before calling documentation work complete.
+- Language work never changes facts, structure, labels/anchors, table row or
+  list item counts, or figure order; verify any factual correction in the code.
+
 ## 1. What this is
 
 An Arabic (RTL) user guide for KayanOS, written in LaTeX and delivered as
@@ -375,3 +490,18 @@ Use more screenshots beside the actions they explain. Capture crisp originals at
   concept across the guide; no literal translations or mixed-language sentences.
 - Use records whose data is safe to show (test2 is a test organization); do not
   blur or mask. Where real personal rows would appear, open a test record instead.
+
+### Every image is explained directly under it (2026-10-15)
+
+- Pattern on every page, in every chapter and both languages: **image → its
+  explanation → next image → its explanation**. Never put a block of text first
+  and then a run of images (for example a gallery of tabs) with no explanation.
+- Write the explanation inside the figure with `\shotnote{...}`, after `\caption`
+  and `\label`. It renders under the image in PDF, Word and HTML (`.fig-note`).
+- Each note is about 2–3 short sentences on what the figure represents, why it
+  matters and what to take from it, naming key labels exactly; see **Arabic
+  writing and documentation quality** (that section supersedes positional
+  descriptions). Do not repeat the caption, invent UI, or describe a test record
+  as the Horizon example.
+- Applies to screenshots and diagrams, HR now and every future chapter. A figure
+  without a note fails the test `every figure has an explanation under it`.
