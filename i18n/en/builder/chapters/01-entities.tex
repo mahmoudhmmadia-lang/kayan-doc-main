@@ -1,0 +1,66 @@
+\chapter{Entities}
+\label{ch:builder-entities}
+
+\section{What will you build in this chapter?}
+\label{sec:builder-entities-intro}
+
+A record type, which KayanOS calls an “entity”, is the foundation of every application you build: it decides what information is stored, how it is shown and who can work on it. This chapter explains how to build a record type from start to publication: you create it from the “Entities” page, add its fields in the Builder workspace, arrange its page and lists, set its rules and access, then review your changes and publish them.
+
+Every change you make in the Builder workspace is saved as a draft that nobody else sees, so you can try things and correct them safely. Changes reach users only after you publish them, which is why each stage of this chapter ends with review and publishing.
+
+\begin{rcnote}[Example: Horizon]
+Horizon's system administrator builds the “Visit requests” record type: they add its fields, arrange its page, allow Omar Haddad to add requests and Sarah Al-Khatib to review them, then publish it so the team can start using it.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[entity] (type) {Record type};
+\node[entity,below=0.7cm of type] (fields) {Fields};
+\node[entityOpt,below right=0.7cm and 0.3cm of fields] (page) {Record page};
+\node[entityOpt,below left=0.7cm and 0.3cm of fields] (lists) {Lists and views};
+\draw[dependsOn] (type) -- (fields);
+\draw[dependsOnOpt] (fields.south) -- ++(0,-0.3) -| (page.north);
+\draw[dependsOnOpt] (fields.south) -- ++(0,-0.3) -| (lists.north);
+\end{tikzpicture}
+\rclegend
+\caption{The parts of a record type}
+\label{fig:builder-models}
+\shotnote{The figure shows that fields are a required part of the record type, because they define what each record stores. The record page and lists are two ways of showing those fields; each has a working default, so you adjust them when you want a clearer view for the team.}
+\end{figure}
+
+\section{Pages in this chapter}
+\label{sec:builder-entities-pages}
+
+The first two pages start from the “Entities” list in the “Core” section; the other pages explain sections inside the Builder workspace, which you reach by opening a record type. The cards follow the suggested building order, so follow it the first time, then return to any page when you need it.
+
+\begin{table}[H]
+\centering
+\caption{Building a record type step by step}
+\label{tab:builder-pages-entities}
+\rcZebra
+\begin{tabularx}{\linewidth}{R{4.2cm} Y}
+\rcHeaderRow
+\thh{Page and section} & \thh{What this page offers}\\
+Entities — Core & Lists the organization's record types; from here you create a new type or open one to edit.\\
+AI Entity Builder and relationship diagram — Core & Describe the type in your words so the assistant proposes its fields, and see how types relate before you edit them.\\
+The Builder workspace and Overview — Builder workspace & The workspace header and sections, the “Overview” cards and the “Before you publish” list.\\
+Fields — Builder workspace & Fields define what each record stores and what kind of value each one is.\\
+Field types and their settings — Builder workspace & Every field type and when to use it, and the extra settings some types need.\\
+Where the value comes from: calculated, lookup and rolled-up fields — Builder workspace & Values calculated by a formula, taken from a related record or rolled up from linked records, and when a field is required.\\
+Status fields and lifecycle rules — Builder workspace & Conditions for moving between statuses, who may not move them, what is written on the move, and record locking.\\
+Record page — Builder workspace & Arranges the page a user sees when opening a record into tabs and sections.\\
+Overview blocks and layouts — Builder workspace & A summary at the top of the record page with metrics and alerts, and layouts that vary by a value in the record.\\
+Lists \& views — Builder workspace & Decides how records appear together: as a table, a board or a calendar, and which columns show.\\
+Figures and saved views — Builder workspace & Summary numbers above the list, and tabs with ready filters and sorting.\\
+Rules — Builder workspace & Shows, locks, requires or checks fields according to what the record holds.\\
+Limits, reference guards, generation and date windows — Builder workspace & Controls between records that prevent exceeded amounts, deleting used records and conflicting dates.\\
+Access — Builder workspace & Decides which roles can see, add, change and delete the records.\\
+Field access and checking someone's access — Builder workspace & Who sees and who changes each field, and checking what a given person gets before publishing.\\
+Actions \& automations — Builder workspace & Adds buttons to the record that create documents, open links or start workflows.\\
+Movement — Builder workspace & Moves an amount between records of another type and posts it at a given status, for financial and stock types.\\
+Import — Builder workspace & Decides how records are loaded and updated from Excel files, and which key matches rows to records.\\
+Advanced — Builder workspace & Record name, duplicate prevention, parent records and where the type appears.\\
+Review \& publish — Builder workspace & Reviews the changes saved as a draft, publishes them for the team, and restores an earlier version when needed.\\
+\end{tabularx}
+\end{table}

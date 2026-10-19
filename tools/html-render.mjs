@@ -70,6 +70,8 @@ export const UI = {
         moreSteps: 'خطوات أخرى',
         chapterNav: 'فصول الدليل',
         open: 'افتح الفصل',
+        openGuide: 'افتح',
+        mainGuide: 'الدليل الرئيسي',
     },
     en: {
         dir: 'ltr',
@@ -131,6 +133,8 @@ export const UI = {
         moreSteps: 'more steps',
         chapterNav: 'Guide chapters',
         open: 'Open chapter',
+        openGuide: 'Open the',
+        mainGuide: 'Main guide',
     },
 }
 
@@ -155,7 +159,7 @@ const icon = (name, cls = 'ic') => `<svg class="${cls}" viewBox="0 0 24 24" aria
 
 // Groups the flat block list into chapters → sections, assigns stable ids and
 // a label → id map for \ref links.
-export function structure(doc) {
+export function structure(doc, prefix = 'c') {
     // Keep saved links/progress attached to the same content after removing
     // Chapter 2's duplicated HR walkthroughs. Display numbers remain sequential.
     const stableIds = {
@@ -176,7 +180,7 @@ export function structure(doc) {
             continue
         }
         if (b.type === 'chapter') {
-            ch = { ...b, appendix, id: `c${chapters.length + 1}`, intro: [], sections: [], tables: 0, figures: 0 }
+            ch = { ...b, appendix, id: `${prefix}${chapters.length + 1}`, intro: [], sections: [], tables: 0, figures: 0 }
             chapters.push(ch)
             sec = null
             sub = 0
@@ -301,6 +305,19 @@ function renderTable(b, ctx) {
         const i = own.findIndex((f) => plain(f.title, ctx) === name)
         return i < 0 ? null : { feature: own[i], no: i + 1, section: plain(cell, ctx).split(' — ')[1] ?? '' }
     }
+    // A directory of another guide's chapters (tab:guide-<name>-chapters) becomes
+    // chapter cards that open that guide, in row order, plus a button to its home.
+    const other = /^tab:guide-(\w+)-chapters/.exec(b.label ?? '')?.[1]
+    const linked = other && ctx.linked?.[other]
+    if (linked && body.length === linked.chapters.length) {
+        const nav = { ...ctx, nolink: true }
+        return `<figure class="page-cards reveal"${b.id ? ` id="${b.id}"` : ''}>${caption}<ol class="page-grid">${body
+            .map((r, i) => {
+                const x = linked.chapters[i]
+                return `<li><a class="page-card" href="${x.page}"><span class="page-card-top"><span class="page-card-no" dir="ltr">${esc(x.number)}</span><span class="page-card-sec">${x.count} ${esc(ctx.ui.steps)}</span></span><span class="page-card-title">${inline(r.cells[0], nav)}</span><span class="page-card-desc">${inline(r.cells[1] ?? '', nav)}</span><span class="page-card-go">${esc(ctx.ui.open)} ${ARROW}</span></a></li>`
+            })
+            .join('')}</ol><p class="guide-open"><a class="btn btn-primary" href="${linked.home}">${esc(ctx.ui.openGuide)} ${esc(linked.title)} ${ARROW}</a></p></figure>`
+    }
     const cards = /^tab:(hr|tasks|projects|builder)-pages-/.test(b.label ?? '') ? body.map((r) => featureOf(r.cells[0])) : []
     if (cards.length && cards.every(Boolean)) {
         const nav = { ...ctx, nolink: true }
@@ -364,7 +381,7 @@ const ring = (id) =>
     `<span class="toc-ring" data-ring="${id}" aria-hidden="true"><svg viewBox="0 0 20 20"><circle cx="10" cy="10" r="8"/><circle class="ring-val" cx="10" cy="10" r="8" pathLength="100"/></svg></span>`
 
 // Head, top bar, search palette, lightbox and data shared by every page.
-function shell({ ui, lang, page, title, description, body, data, assetsVersion }) {
+function shell({ ui, lang, page, home = 'index.html', title, description, body, data, assetsVersion }) {
     return `<!doctype html>
 <html lang="${lang}" dir="${ui.dir}" data-theme="dark">
 <head>
@@ -381,13 +398,13 @@ function shell({ ui, lang, page, title, description, body, data, assetsVersion }
 <script>try{var t=localStorage.getItem('kos-guide-theme');if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.dataset.theme=t;localStorage.setItem('kos-guide-lang','${lang}')}catch(e){}</script>
 <link rel="stylesheet" href="../assets/guide.css${assetsVersion}">
 </head>
-<body class="${page === 'index.html' ? 'page-home' : 'page-chapter'}">
+<body class="${page === home ? 'page-home' : 'page-chapter'}">
 <a class="skip" href="#main">${esc(ui.start)}</a>
 <div class="read-progress" aria-hidden="true"><span></span></div>
 <header class="topbar">
   <div class="topbar-in">
-    ${page === 'index.html' ? '' : `<button class="icon-btn menu-btn" type="button" data-open-toc aria-label="${esc(ui.menu)}"><svg class="ic" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg></button>`}
-    <a class="brand" href="index.html" aria-label="${esc(ui.brand)}"><img src="../assets/kayanos-mark.svg" alt="" width="34" height="23"><span class="brand-name">Kayan<b>OS</b></span><span class="brand-sep"></span><span class="brand-sub">${esc(ui.brand)}</span></a>
+    ${page === home ? '' : `<button class="icon-btn menu-btn" type="button" data-open-toc aria-label="${esc(ui.menu)}"><svg class="ic" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg></button>`}
+    <a class="brand" href="${home}" aria-label="${esc(ui.brand)}"><img src="../assets/kayanos-mark.svg" alt="" width="34" height="23"><span class="brand-name">Kayan<b>OS</b></span><span class="brand-sep"></span><span class="brand-sub">${esc(ui.brand)}</span></a>
     <button class="search-btn" type="button" data-open-search><svg class="ic" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><span>${esc(ui.search)}</span><kbd dir="ltr">Ctrl K</kbd></button>
     <a class="guide-help-link" href="index.html#guide-help">${esc(ui.help)}</a>
     <a class="lang-btn" href="../${ui.other}/${page}" data-lang-switch="${ui.other}" hreflang="${ui.other}" lang="${ui.other}">${esc(ui.otherName)}</a>
@@ -444,9 +461,15 @@ const LEGACY = {
 }
 
 // Returns { 'index.html': html, 'c1.html': html, … } for one language.
-export function renderSite(doc, { lang, assetsVersion = '' }) {
-    const ui = UI[lang]
-    const { chapters, ids } = structure(doc)
+// `guide` renders a companion guide in the same folder (the Builder guide:
+// home builder.html, chapters b1.html …) with its own ids, progress and home,
+// a link back to the main guide, and search across both guides (`extra`).
+// `linked` gives another guide's chapters to tab:guide-<name>-chapters tables;
+// `out` receives this guide's search entries, routes and chapters.
+export function renderSite(doc, { lang, assetsVersion = '', guide = {} }) {
+    const { home = 'index.html', prefix = 'c', store = 'kos-guide-progress', parent = null, linked = {}, extra = null, out = null } = guide
+    const ui = { ...UI[lang] }
+    const { chapters, ids } = structure(doc, prefix)
     const features = chapters.flatMap(c => c.sections).filter(s => /^sec:(hr|tasks|projects|builder)-feature-/.test(s.label ?? ''))
     const routes = {}
     for (const s of features) {
@@ -457,7 +480,19 @@ export function renderSite(doc, { lang, assetsVersion = '' }) {
         visit(s.blocks)
     }
     const pageOf = id => routes[id] ?? `${id.split('-')[0]}.html`
-    const base = { ui, lang, ids, routes, features, labels: doc.labels, colors: { rcPrimary: '00696D' } }
+    // A reference may point into the other guide: its ids, numbers and pages resolve the link.
+    const base = {
+        ui,
+        lang,
+        ids: new Map([...(extra?.ids ?? []), ...ids]),
+        routes: { ...extra?.routes, ...routes },
+        features,
+        linked,
+        labels: new Map([...(extra?.labels ?? []), ...doc.labels]),
+        colors: { rcPrimary: '00696D' },
+    }
+    // A companion guide is named by its own cover title (the top bar, page titles, crumbs).
+    if (parent && doc.coverArgs?.[1]) ui.brand = plain(doc.coverArgs[1], base)
     diagramSeq = 0
 
     // Render every chapter body first: it gives the step list, search index and word count.
@@ -519,9 +554,13 @@ export function renderSite(doc, { lang, assetsVersion = '' }) {
         return { intro, sections }
     })
 
+    // The other guide's entries make search span both guides; its routes open them.
+    if (out) Object.assign(out, { search, routes, ids, labels: doc.labels, chapters: chapters.map((c) => ({ id: c.id, page: pageOf(c.id), number: c.number, count: c.sections.length })) })
     const data = {
         lang,
-        routes,
+        home,
+        store,
+        routes: base.routes,
         ui: { copied: ui.copied, noResults: ui.noResults, resetConfirm: ui.resetConfirm, chapterDone: ui.chapterDone },
         chapters: chapters.map((c) => ({ id: c.id, p: pageOf(c.id) })),
         legacy: Object.fromEntries(
@@ -531,10 +570,11 @@ export function renderSite(doc, { lang, assetsVersion = '' }) {
                 .map(([old, id]) => [old, `${pageOf(id)}#${id}`])
         ),
         steps,
-        search,
+        search: [...search, ...(extra?.search ?? [])],
     }
     const title = plain(doc.coverArgs?.[1] ?? ui.brand, base)
     const description = plain(doc.coverArgs?.[2] ?? '', base)
+    if (out) out.title = text(doc.coverArgs?.[1] ?? ui.brand, base)
     const pages = {}
 
     // ---- home
@@ -548,16 +588,17 @@ export function renderSite(doc, { lang, assetsVersion = '' }) {
             return `<article class="path-card reveal" style="--d:${i}">
 <a class="path-link" href="${page}"><span class="path-no">${esc(c.kicker)}</span>${ring(c.id)}
 <span class="path-title">${inline(c.title, { ...base, nolink: true })}</span></a>
-<ol class="path-steps">${shown.map((s) => `<li><a href="${link(s.id, 'index.html', routes)}" data-toc="${s.id}"><span class="toc-dot" aria-hidden="true"></span><span>${inline(s.title, { ...base, page: 'index.html', nolink: true })}</span></a></li>`).join('')}${more > 0 ? `<li class="path-more"><a href="${page}">+${more} ${esc(ui.moreSteps)}</a></li>` : ''}</ol>
+<ol class="path-steps">${shown.map((s) => `<li><a href="${link(s.id, home, routes)}" data-toc="${s.id}"><span class="toc-dot" aria-hidden="true"></span><span>${inline(s.title, { ...base, page: home, nolink: true })}</span></a></li>`).join('')}${more > 0 ? `<li class="path-more"><a href="${page}">+${more} ${esc(ui.moreSteps)}</a></li>` : ''}</ol>
 <div class="path-foot"><span class="path-meta">${c.sections.length} ${esc(ui.steps)}</span><a class="path-open" href="${page}">${esc(ui.open)} ${ARROW}</a></div>
 <span class="path-bar" aria-hidden="true"><span data-chapter-bar="${c.id}"></span></span>
 </article>`
         })
         .join('')
-    pages['index.html'] = shell({
+    pages[home] = shell({
         ui,
         lang,
-        page: 'index.html',
+        page: home,
+        home,
         title,
         description,
         data,
@@ -571,12 +612,12 @@ export function renderSite(doc, { lang, assetsVersion = '' }) {
     <h1 class="hero-title reveal"><span class="grad">${coverTitle ?? ''}</span></h1>
     <p class="hero-sub reveal">${subtitle ?? ''}</p>
     <div class="hero-cta reveal">
-      <a class="btn btn-primary" href="${link(steps[0]?.id ?? 'c1', 'index.html')}" data-continue><span class="cta-start">${esc(ui.start)}</span><span class="cta-cont">${esc(ui.continue)}</span>${ARROW}</a>
-      <button class="btn btn-ghost" type="button" data-open-search>${esc(ui.searchShort)} <kbd dir="ltr">Ctrl K</kbd></button>
+      <a class="btn btn-primary" href="${link(steps[0]?.id ?? `${prefix}1`, home)}" data-continue><span class="cta-start">${esc(ui.start)}</span><span class="cta-cont">${esc(ui.continue)}</span>${ARROW}</a>
+      <button class="btn btn-ghost" type="button" data-open-search>${esc(ui.searchShort)} <kbd dir="ltr">Ctrl K</kbd></button>${parent ? `<a class="btn btn-ghost" href="index.html">${esc(ui.mainGuide)}</a>` : ''}
     </div>
   </div>
   <div class="paths">
-    <details class="guide-help" id="guide-help" open>
+    ${parent ? '' : `<details class="guide-help" id="guide-help" open>
       <summary>${esc(ui.helpTitle)}</summary>
       <div class="guide-help-body">
         <p>${esc(ui.helpFields)}</p>
@@ -584,7 +625,7 @@ export function renderSite(doc, { lang, assetsVersion = '' }) {
         <ul class="legend">${Object.entries(ui.legend).map(([kind, label]) => `<li><svg viewBox="0 0 36 10" aria-hidden="true"><line class="dg-edge dg-${kind} static" x1="2" y1="5" x2="30" y2="5"/><path class="dg-head dg-head-${kind}" d="${kind === 'flowsTo' ? 'M27 1 L34 5 L27 9' : 'M27 1 L34 5 L27 9 Z'}"/></svg>${esc(label)}</li>`).join('')}</ul>
         <p>${esc(ui.helpWork)}</p>
       </div>
-    </details>
+    </details>`}
     <h2 class="paths-title reveal">${esc(ui.paths)}</h2>
     <div class="paths-grid">${cards}</div>
     <button class="reset-btn home-reset" type="button" data-reset>${esc(ui.reset)}</button>
@@ -616,7 +657,7 @@ ${here ? `<ol class="toc-secs">${x.sections.map((s) => `<li><a href="${link(s.id
             .join('')
         const prev = chapters[ci - 1],
             next = chapters[ci + 1]
-        const pager = `<nav class="chapter-pager">${prev ? `<a class="pager-card prev" href="${pageOf(prev.id)}"><small>${esc(ui.prevChapter)} · ${esc(prev.kicker)}</small><span>${inline(prev.title, nav)}</span></a>` : `<a class="pager-card prev" href="index.html"><small>${esc(ui.home)}</small><span>${title}</span></a>`}${next ? `<a class="pager-card next" href="${pageOf(next.id)}"><small>${esc(ui.nextChapter)} · ${esc(next.kicker)}</small><span>${inline(next.title, nav)}</span></a>` : ''}</nav>`
+        const pager = `<nav class="chapter-pager">${prev ? `<a class="pager-card prev" href="${pageOf(prev.id)}"><small>${esc(ui.prevChapter)} · ${esc(prev.kicker)}</small><span>${inline(prev.title, nav)}</span></a>` : `<a class="pager-card prev" href="${home}"><small>${esc(ui.home)}</small><span>${title}</span></a>`}${next ? `<a class="pager-card next" href="${pageOf(next.id)}"><small>${esc(ui.nextChapter)} · ${esc(next.kicker)}</small><span>${inline(next.title, nav)}</span></a>` : ''}</nav>`
         // Feature pages: previous/next page of the same app, then the chapter
         // overview or the next chapter at the edges. An app overview offers its
         // first page and the next chapter.
@@ -638,7 +679,8 @@ ${here ? `<ol class="toc-secs">${x.sections.map((s) => `<li><a href="${link(s.id
             ui,
             lang,
             page,
-            title: `${plain(feature?.title ?? c.title, ctx)} · ${ui.brand}`,
+            home,
+            title: `${text(feature?.title ?? c.title, ctx)} · ${ui.brand}`,
             description,
             data,
             assetsVersion,
@@ -654,7 +696,7 @@ ${here ? `<ol class="toc-secs">${x.sections.map((s) => `<li><a href="${link(s.id
   <main class="content">
     <article class="chapter${c.appendix ? ' appendix' : ''}" id="${c.id}" aria-labelledby="${c.id}-h">
       <header class="chapter-head">
-        <nav class="crumbs reveal" aria-label="${esc(ui.home)}"><a href="index.html">${esc(ui.home)}</a><span aria-hidden="true">/</span><a href="${pageOf(c.id)}">${inline(c.title, nav)}</a>${feature ? `<span aria-hidden="true">/</span><span>${inline(feature.title, nav)}</span>` : ''}</nav>
+        <nav class="crumbs reveal" aria-label="${esc(ui.home)}"><a href="index.html">${esc(parent ? ui.mainGuide : ui.home)}</a><span aria-hidden="true">/</span>${parent ? `<a href="${home}">${esc(ui.brand)}</a><span aria-hidden="true">/</span>` : ''}<a href="${pageOf(c.id)}">${inline(c.title, nav)}</a>${feature ? `<span aria-hidden="true">/</span><span>${inline(feature.title, nav)}</span>` : ''}</nav>
         <nav class="ch-tabs reveal" aria-label="${esc(ui.chapterNav)}">${tabs}</nav>
         <div class="chapter-kicker reveal"><span class="chip">${esc(c.kicker)}</span><span class="chapter-meta">${c.sections.length} ${esc(ui.steps)}</span></div>
         <h1 id="${c.id}-h" class="chapter-title reveal">${inline(feature?.title ?? c.title, ctx)}</h1>

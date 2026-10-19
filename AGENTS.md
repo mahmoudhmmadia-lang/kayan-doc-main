@@ -19,6 +19,25 @@ set. `progress.md` is the live status log; this file is the standing brief.
   the markers in `review/fullpage-manifest.json` (`marks`). Arabic images use
   Arabic-interface screenshots with markers on the Arabic controls.
 
+- **Builder is a separate guide (2026-10-19; supersedes the chapter-6 layout below).**
+  At the user's request, chapter 6 of the main guide (`c6.html`) is now only an
+  overview: build order, how the tools fit together, terms, and a «دليل أدوات
+  البناء» step with one card per Builder chapter plus an «افتح دليل أدوات البناء»
+  button. The Builder pages live in a companion document with its own chapters
+  numbered from 1: `builder/main.tex` + `builder/chapters/NN-*.tex` (Arabic master)
+  and `i18n/en/builder/` (same structure). It builds into the same folder as
+  `builder.html` (home), `b1.html … b8.html` (chapter overviews) and the existing
+  `builder-<slug>.html` page names. Chapters: 1 Entities, 2 Apps & Navigation,
+  3 Forms, 4 Services, 5 Internal SOPs, 6 SOPs and Bots, 7 Documents & printing,
+  8 Dashboards & reports. Each chapter will grow to one page per sub-area (the
+  user wants every tool explained fully); Entities is expanded to 20 pages, the
+  others still hold the original pages and are the next phases. Ids use the
+  prefix `b` and progress is stored under `kos-builder-progress`; search, `\ref`
+  and routes work across both guides (`renderGuides` in `tools/build-html.mjs`).
+  A new Builder page = a `\section` labelled `sec:builder-feature-<slug>` in the
+  chapter's `-pages.tex`, a row in its `tab:builder-pages-*` table and the slug in
+  `BUILDER_CHAPTERS` in `tools/guide.test.mjs`. Labels must be unique across guides.
+
 - **Builder authorized (2026-10-19).** The user asked to add Builder (chapter 6,
   `c6.html`, `builder-*.html`) in the same design and rules, then to finish all
   phases and explain this complex app as simply and fully as possible. The draft

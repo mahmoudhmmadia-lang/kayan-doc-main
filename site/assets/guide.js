@@ -35,7 +35,7 @@
       location.replace(moved);
       return true;
     }
-    if (wanted && !document.getElementById(wanted) && /^c\d+/.test(wanted) && pageOf(wanted) !== data.page) {
+    if (wanted && !document.getElementById(wanted) && /^[cb]\d+/.test(wanted) && pageOf(wanted) !== data.page) {
       location.replace(`${pageOf(wanted)}#${wanted}`);
       return true;
     }
@@ -49,7 +49,7 @@
     get(k, d) { try { const v = localStorage.getItem(k); return v == null ? d : JSON.parse(v); } catch { return d; } },
     set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch { /* private mode */ } },
   };
-  const KEY = 'kos-guide-progress';
+  const KEY = data.store || 'kos-guide-progress'; // the main and Builder guides keep separate progress
   const state = store.get(KEY, { done: {}, checks: {}, last: null });
   const save = () => store.set(KEY, state);
 

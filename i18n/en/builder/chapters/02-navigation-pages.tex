@@ -1,0 +1,122 @@
+\clearpage
+\section{Apps \& Navigation}
+\label{sec:builder-feature-navigation}
+
+The “Apps \& Navigation” page decides what members see in the app list and in what order. From here you add an app or a section, drag modules to reorder them or move them between sections, change icons, and show or hide items. A module here is any navigation item: a record type, a form, a dashboard, a page or a built-in page.
+
+\textbf{Path and who uses it:} “Builder” → “Core” → “Apps \& Navigation”. Available only to the organization owner and administrator.
+
+\begin{rcnote}[Example: Horizon]
+The system administrator adds a “Branch services” app with a “Visits” section, drags “Visit requests” into it and saves, so Omar Haddad finds it in the app list on his next page load. They add the app from ① and save from ③.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-navigation-en.png}
+\caption{The “Apps \& Navigation” page}
+\label{fig:builder-navigation-screen}
+\shotnote{The page shows every app, section and module members see, with the state of each. The apps shown belong to the test organization. ① “Add app”: creates a new app. ② Search: finds an app, section or module quickly. ③ “Save changes”: saves order and switches; a new section does not need it.}
+\end{figure}
+
+
+\begin{table}[H]
+\centering
+\caption{What do you find here?}
+\label{tab:builder-navigation-data}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Part} & \thh{Content and action}\\
+Add app and Add section & Creates a new app, or a section inside an app. The section is saved right away, without pressing save.\\
+Dragging, icons and switches & Reorder apps, sections and modules by dragging, change the icon, and turn an item on or off. These changes need “Save changes”.\\
+Filters & “Apps”: All, Native or Custom; “Type”: Entity, Form, Dashboard, Page or Built-in; “Status”: Visible, Hidden or Not shown; and “Changed only”.\\
+Save changes and Discard & Saves the order and switches or undoes them. Members see the changes on their next page load.\\
+Built-in items & Built-in apps such as Email and Chat can only be turned on or off, while Settings and Home are always on.\\
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[entity] (app) {App};
+\node[entity,below=0.7cm of app] (section) {Section};
+\node[entityOpt,below right=0.7cm and 0.3cm of section] (type) {Record type or form};
+\node[entityOpt,below left=0.7cm and 0.3cm of section] (dash) {Dashboard or page};
+\draw[dependsOn] (app) -- (section);
+\draw[dependsOnOpt] (section.south) -- ++(0,-0.3) -| (type.north);
+\draw[dependsOnOpt] (section.south) -- ++(0,-0.3) -| (dash.north);
+\end{tikzpicture}
+\rclegend
+\caption{How navigation is built}
+\label{fig:builder-navigation-tree}
+\shotnote{The figure shows that an app holds sections, and a section holds the modules members open, such as record types, forms and dashboards. So create the app and section first and then drag the module into it; a built-in app does not receive new modules.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Open “Apps \& Navigation” and press “Add app” if the work has no suitable app.
+\item Add a section with the add button on the app's row, and give it a name and icon.
+\item Find the record type or form, drag it into the section, and make sure it is “Visible”.
+\item Press “Save changes”.
+\end{enumerate}
+
+\textbf{Check and recovery:} the message “Navigation saved.” should appear, and the app should show for members after they reload the page. If it does not show for a member, check that they can see the records, because a section with no item they are allowed to open is not shown. If the page refuses to move a module, move it to a section that is not built in.
+
+\clearpage
+\section{Work navigation}
+\label{sec:builder-feature-work-navigation}
+
+This page decides what each member sees first when the day starts: a «My desk» page for their role, a “Due for me” list that gathers the work waiting for them, a shared context such as the year or cycle that lists and dashboards follow, and saved views shown in menus with their counts. Every feature here is off until you turn it on.
+
+\textbf{Path and who uses it:} “Builder” → “Core” → “Work navigation”. Available only to the organization owner and administrator.
+
+\begin{rcnote}[Example: Horizon]
+The system administrator turns on “Due for me” and adds to it the visit requests waiting for Sarah Al-Khatib's decision, so Sarah finds them in one place every morning instead of opening each list. They turn on the feature from ① and add the source from ②.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-work-navigation-en.png}
+\caption{The “Work navigation” page}
+\label{fig:builder-work-navigation-screen}
+\shotnote{The page shows the start-page and due-work features, all off until you turn them on. ① “Features”: turns on «My desk», “Due for me” and more. ② “Sources”: what feeds the due list. ③ “Save”: saves the settings and stays disabled until you change something.}
+\end{figure}
+
+
+\begin{table}[H]
+\centering
+\caption{The page's tabs}
+\label{tab:builder-work-navigation-data}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Tab} & \thh{What do you set?}\\
+Features & Turns on «My desk», “Due for me”, “Context switcher” and “Views in menus”, with the calendar, time zone and week start.\\
+Sources & What feeds the “Due for me” list: transitions the member can run, records assigned to them, and built-in lists such as approvals.\\
+Pages & «My desk» pages per role and for everyone else. They are start pages that never appear in menus, unlike the “Pages” page.\\
+Context & A record type, such as the year or cycle, that chosen apps and sections follow; the member picks it from a chip in the app bar.\\
+Dashboards & The default data scope for new dashboards, and a list of dashboards showing organization-wide data to switch to the viewer's permissions.\\
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[entity] (member) {Member};
+\node[entityOpt,below right=0.7cm and 0.3cm of member] (desk) {My desk page};
+\node[entityOpt,below left=0.7cm and 0.3cm of member] (due) {Due for me};
+\draw[dependsOnOpt] (member.south) -- ++(0,-0.3) -| (desk.north);
+\draw[dependsOnOpt] (member.south) -- ++(0,-0.3) -| (due.north);
+\end{tikzpicture}
+\rclegend
+\caption{What the member sees first}
+\label{fig:builder-work-navigation-model}
+\shotnote{The figure shows that this page creates no new data; it brings existing work closer to the member: a start page that suits their role, and a list gathering what is due for them across record types. Both are optional, so turn on one feature and try it before turning on others.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Open “Work navigation” and turn on what the organization needs under “Features”.
+\item Under “Sources”, add what should appear in the “Due for me” list.
+\item Create a «My desk» page for the right role under “Pages” when needed, then press “Save”.
+\end{enumerate}
+
+\textbf{Check and recovery:} the message “Work navigation saved” should appear, and the member should see their page and list after reloading. If “Settings that need attention” appears, a setting points to a record type or field that changed or was deleted; open it and fix it before saving.

@@ -1,0 +1,259 @@
+\clearpage
+\section{DOCX Templates}
+\label{sec:builder-feature-docx-templates}
+
+A DOCX template is an ordinary Word file where you write the fixed text and put tags in double braces where variable data goes, such as the employee's name or the request number. When a user presses the action button on a record, KayanOS fills the tags from the record's data and downloads the document as Word or PDF. That way contracts and letters are produced with consistent wording and no manual copying.
+
+\textbf{Path and who uses it:} “Builder” → “Core” → “DOCX Templates”. Managed by those with Builder administration; users run them from a button on the record.
+
+\begin{rcnote}[Example: Horizon]
+The system administrator writes the visit confirmation letter in Word, adds one tag for the request number and another for the visit date, uploads it as a template and links it to a button in “Visit requests”. They upload the letter from ① and test it after opening it from ③.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-docx-en.png}
+\caption{The “DOCX Templates” page}
+\label{fig:builder-docx-templates-screen}
+\shotnote{The page lists managed templates with their permissions and status, here test templates. ① “Create template”: uploads a new Word file. ② “Managed templates”: the list with each template’s status. ③ “Open”: opens a template for settings, versions and testing.}
+\end{figure}
+
+
+\begin{table}[H]
+\centering
+\caption{What do you find here?}
+\label{tab:builder-docx-data}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Part} & \thh{Content and action}\\
+Managed templates & The list of templates with “Permissions” and “Status”: “Ready” when a current version exists, or “Needs a Word document”.\\
+Create template & Upload a “Word document” and write the “Template name”; you can also set the downloaded file name and the document permissions.\\
+Document permissions & “Viewer permissions”, the recommended choice, show only what the downloader can see. “Administrator permissions” may put data in the document they cannot view.\\
+Settings and Versions & Edit the settings, upload a new version after it is validated, and review “Version history”.\\
+Test \& download & Choose a real record and Word or PDF, then “Render and download” to see the result before anyone uses it.\\
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Tag examples}
+\label{tab:builder-docx-tags}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Tag} & \thh{What does it do?}\\
+\en{\{\{ \$record.field\_key \}\}} & Inserts a field value from the record, using the field's key, not its label.\\
+\en{\{\{\#if ...\}\}} & Shows a paragraph when a condition is met, and ends with \en{\{\{/if\}\}}.\\
+\en{\{\{\#each ...\}\}} & Repeats a row or paragraph for each item in a list, and ends with \en{\{\{/each\}\}}.\\
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Word file with tags};
+\node[stepBox,below=of a] (b) {Create and test the template};
+\node[stepBox,below=of b] (c) {“Word document” action on the record};
+\node[stepBox,below=of c] (d) {The user presses the button};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\end{tikzpicture}
+\rclegend
+\caption{From a Word file to a document for every record}
+\label{fig:builder-docx-flow}
+\shotnote{The diagram shows that a template is not linked to a record type by itself; it reaches users through a “Word document” action you add in “Actions \& automations”. That is why testing on a real record comes before linking, because validation at upload does not catch every mistake in where tags are placed.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Write the document in Word, place tags using the real field keys, and put condition and loop tags in their own paragraph.
+\item Open “DOCX Templates” and press “Create template”, upload the file, write the name and press “Create template”.
+\item Open “Test \& download”, choose a record, then “Render and download” and review the document.
+\item In the record type, add an action of kind “Word document” linked to the template, then publish.
+\end{enumerate}
+
+\textbf{Check and recovery:} the template's status should be “Ready”, and the action button should download a document filled with the record's data. If “This document needs attention” appears at upload, fix the listed tags and upload again. If a value is blank, check that you used the field's key, not its label.
+
+\clearpage
+\section{XLSX Templates}
+\label{sec:builder-feature-xlsx-templates}
+
+An XLSX template is an Excel workbook with tags of the same kind, which KayanOS fills from the record's data and downloads as Excel or PDF. It suits lists and tabular reports with repeating rows, because tags can repeat rows and columns. A tag placed alone in a cell keeps the value's type as a number or date.
+
+\textbf{Path and who uses it:} “Builder” → “Core” → “XLSX Templates”. Managed by those with Builder administration.
+
+\begin{rcnote}[Example: Horizon]
+The system administrator prepares a “Branch visits sheet” workbook that repeats a row for each visit, and links it to a “Spreadsheet” button, so Sarah Al-Khatib downloads the sheet ready in Excel. They upload the workbook from ①.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-xlsx-en.png}
+\caption{The “XLSX Templates” page}
+\label{fig:builder-xlsx-templates-screen}
+\shotnote{The page lists workbook templates and their status, here test templates. ① “New XLSX template”: uploads an Excel workbook. ② “Workbook templates”: the list with status. ③ “Open”: opens a template to test it.}
+\end{figure}
+
+
+\begin{table}[H]
+\centering
+\caption{What do you find here?}
+\label{tab:builder-xlsx-data}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Part} & \thh{Content and action}\\
+Workbook templates & The list of templates and their status: “Ready” or “Needs an Excel workbook”.\\
+New XLSX template & Upload an “Excel workbook” and write the “Template name”; you can set the “Downloaded filename expression” and “Data permissions”.\\
+Versions & Replace the workbook with a new version and review earlier versions.\\
+Test \& download & Try the template with data, then “Render XLSX” or “Render PDF”.\\
+Excel-specific tags & Repeat rows with \en{\{\{\#each\}\}}, repeat columns with \en{\{\{\#eachCol\}\}}, and hide a row or column when needed.\\
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[entity] (tpl) {XLSX template};
+\node[entityOpt,below right=0.7cm and 0.3cm of tpl] (xlsx) {Excel file};
+\node[entityOpt,below left=0.7cm and 0.3cm of tpl] (pdf) {PDF file};
+\draw[dependsOnOpt] (tpl.south) -- ++(0,-0.3) -| (xlsx.north);
+\draw[dependsOnOpt] (tpl.south) -- ++(0,-0.3) -| (pdf.north);
+\end{tikzpicture}
+\rclegend
+\caption{The two output formats}
+\label{fig:builder-xlsx-outputs}
+\shotnote{The figure shows that one template produces an Excel or PDF file, and you choose what is allowed when linking it to the action with “Allow PDF”. Use Excel when the recipient needs to work with the numbers, and PDF when you want a fixed copy to view or archive.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Prepare the workbook in Excel and place the tags in the right cells.
+\item Open “XLSX Templates” and press “New XLSX template”, upload the workbook, write the name and press “Create template”.
+\item Try the template from “Test \& download”, then add a “Spreadsheet” action in the record type and link it to the template.
+\end{enumerate}
+
+\textbf{Check and recovery:} the template's status should be “Ready”, and the row should repeat for each item in the output file. If a number shows as text, put the tag alone in its cell. If you cannot create the template, managing templates needs Builder administration, not only a full seat.
+
+\clearpage
+\section{Print templates}
+\label{sec:builder-feature-print-templates}
+
+A print template is a document you design inside KayanOS by drag and drop, without uploading a Word file. It prints a form's requests or a record type's records as PDF or Word, on the organization's letterhead and identity. The “Print templates” page lists every existing template and its status; you create a new one from inside the form or record-type builder by pressing “Print”.
+
+\textbf{Path and who uses it:} “Builder” → “Core” → “Print templates”. Used by those who build forms and record types.
+
+\begin{rcnote}[Example: Horizon]
+The system administrator opens the “Visit requests” type, presses “Print” and chooses “Start from this record type” to design a visit sheet with a verification QR code, then publishes it so it appears under “Print” on every request. They reach the template from ③.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-print-en.png}
+\caption{The “Print templates” library}
+\label{fig:builder-print-templates-screen}
+\shotnote{The page lists print templates grouped by form or record type, with their status. The template shown is a test template. ① “Identities \& letterheads”: goes to logos and letterheads. ② “Uploaded Word templates”: goes to DOCX templates. ③ “Open in the builder”: opens the form or type where the template is edited.}
+\end{figure}
+
+
+\begin{table}[H]
+\centering
+\caption{What do you find here?}
+\label{tab:builder-print-data}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Part} & \thh{Content and action}\\
+Template library & Templates grouped by form or record type, with paper size, language, version and status: “Live”, “Draft” or “Unpublished changes”, plus “Open in the builder”.\\
+New template & From the “Print” sheet in the builder: “Start from this form”, “Start from this record type” or “Blank page on the org letterhead”.\\
+Editor & The “Data” tab for fields, “Blocks” such as text, table, image, logo, QR code, signature and approval trail, and “Page” for paper, margins, identity and letterhead.\\
+Output & Formats people can download, the file name, “Who can print”, keeping a copy on the record, and a verification page opened by the QR code.\\
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Print from the form or type builder};
+\node[stepBox,below=of a] (b) {Design data and blocks};
+\node[stepBox,below=of b] (c) {Preview with a record};
+\node[stepBox,below=of c] (d) {Publish};
+\node[stepBox,below=of d] (e) {Print button on the record};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\end{tikzpicture}
+\rclegend
+\caption{From design to the print button}
+\label{fig:builder-print-flow}
+\shotnote{The diagram shows that a template is born inside the form or record-type builder, not on the library page, and is not offered to users before it is published. Previewing with a real record comes before publishing to catch empty fields or long tables before anyone prints them.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Open the form or record type in the builder, press “Print”, then choose a starting point.
+\item Add fields and blocks, and set the paper, identity and letterhead under “Page”.
+\item Press “Preview with a record” and “Download test PDF”, then set “Who can print” and press “Publish”.
+\end{enumerate}
+
+\textbf{Check and recovery:} the template should show as “Live” in the library and appear in “Choose a document” when pressing “Print” on a record. If it does not, make sure it is published, because a template is “Not offered until published”; use “Check against all records” to find records missing data.
+
+\clearpage
+\section{Identities \& letterheads}
+\label{sec:builder-feature-identities}
+
+An identity is the organization's logo, name, colours and official details, such as its registration number and address. A letterhead is the page header and footer shown in printed documents. This page keeps both in one place, so print templates and official correspondence share them, and any change here shows in all of them at the next print.
+
+\textbf{Path and who uses it:} “Builder” → “Core” → “Identities \& letterheads”. Used by those who manage how the organization's documents look.
+
+\begin{rcnote}[Example: Horizon]
+The system administrator uploads Horizon's logo and adds its official details to the default identity, then creates a letterhead whose header shows on the first page only, so the visit sheet prints with the company logo without redesigning it in every template. They upload the logo in ③ and save from ④, then create the letterhead from ②.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-identities-en.png}
+\caption{The “Identities \& letterheads” page}
+\label{fig:builder-identities-screen}
+\shotnote{The page shows the organization’s default identity and its fields, here the test organization’s identity. ① “New identity”: creates another identity, such as a branch identity. ② “Letterheads”: the shared letterheads tab. ③ “Logos”: main, one-color and watermark logos. ④ “Save”: saves identity changes.}
+\end{figure}
+
+
+\begin{table}[H]
+\centering
+\caption{What do you find here?}
+\label{tab:builder-identities-data}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Part} & \thh{Content and action}\\
+Identities & Each identity has a “Name” and “Subtitle” in every language, “Logos” (main, one color, watermark), a “Look” with two colours, and “Official details”.\\
+Inherits from & Lets an identity take what it does not set from another identity, such as a branch identity inheriting from the organization's.\\
+Used by & Shows the letterheads, print templates and correspondence that rely on the identity.\\
+Letterheads & Each letterhead has a name and language, items such as the logo, print date, QR code and page number, and whether the header and footer show on every page or the first only.\\
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[entity] (id) {Identity};
+\node[entityOpt,below=0.7cm of id] (lh) {Letterhead};
+\node[entityOpt,below right=0.7cm and 0.3cm of lh] (print) {Print templates};
+\node[entityOpt,below left=0.7cm and 0.3cm of lh] (corr) {Official correspondence};
+\draw[dependsOnOpt] (id) -- (lh);
+\draw[dependsOnOpt] (lh.south) -- ++(0,-0.3) -| (print.north);
+\draw[dependsOnOpt] (lh.south) -- ++(0,-0.3) -| (corr.north);
+\end{tikzpicture}
+\rclegend
+\caption{From identity to the printed document}
+\label{fig:builder-identities-model}
+\shotnote{The figure shows that the identity feeds the letterhead, and the letterhead is shared by print templates and official correspondence. So change the logo or official details in the identity once, and the change shows in every document printed afterwards; review “Used by” before any change.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Open “Identities \& letterheads”, choose the default “Whole organization” identity or create a “New identity”.
+\item Write the name in each language, upload the logos as PNG or JPG, add the official details, then press “Save”.
+\item Open “Letterheads”, create a “New letterhead”, and choose its items and where they show.
+\end{enumerate}
+
+\textbf{Check and recovery:} print a test document from a template using the letterhead; the logo and new details should appear. If you cannot archive an identity, make another identity the default first, because the default identity cannot be archived.

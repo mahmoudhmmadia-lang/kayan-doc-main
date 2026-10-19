@@ -8,6 +8,9 @@ import {loadDocument, parseBlocks, parseInline} from './latex-parse.mjs';
 
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const doc=loadDocument(root);
+// The Builder guide: a companion document with its own chapters (site/<lang>/builder.html, b1.html …).
+const bdoc=loadDocument(path.join(root,'builder'));
+const ben=loadDocument(path.join(root,'i18n/en/builder'),{lang:'en'});
 
 test('Projects directory preserves model routes, parent links, examples and bilingual navigation',()=>{
  const inventory=JSON.parse(fs.readFileSync(path.join(root,'review/projects-source-inventory.json'),'utf8'));
@@ -118,38 +121,74 @@ test('Tasks overview and all ten feature pages have bilingual examples, media an
  }
 });
 
-test('Builder overview and its feature pages have bilingual examples, diagrams and navigable routes',()=>{
+const guideData=html=>JSON.parse(html.match(/<script id="guide-data" type="application\/json">([^]*?)<\/script>/)[1]);
+const BUILDER_CHAPTERS=[
+ ['entities','ai-builder','workspace','fields','field-types','field-values','lifecycle','record-page','record-page-blocks','lists','figures-views','rules','record-limits','access','field-access','actions','movement','import','advanced','publish'],
+ ['navigation','work-navigation'],['forms'],['services'],['internal-sops'],['sops','bots'],
+ ['docx-templates','xlsx-templates','print-templates','identities'],['dashboards','pages','ai-dashboards','ai-reports'],
+];
+
+test('chapter 6 of the main guide opens the Builder guide, whose chapters start from 1',()=>{
  for(const lang of ['ar','en']) {
   const folder=path.join(root,'site',lang);
-  const overview=fs.readFileSync(path.join(folder,'c6.html'),'utf8');
-  const data=JSON.parse(overview.match(/<script id="guide-data" type="application\/json">([^]*?)<\/script>/)[1]);
-  const features=data.steps.filter(s=>s.p.startsWith('builder-'));
-  assert.deepEqual(features.map(f=>f.p),['entities','fields','record-page','lists','rules','access','actions','movement','import','advanced','publish','navigation','work-navigation','forms','services','internal-sops','sops','bots','docx-templates','xlsx-templates','print-templates','identities','dashboards','pages','ai-dashboards','ai-reports'].map(s=>'builder-'+s+'.html'));
-  assert.equal((overview.match(/class="page-card"/g)||[]).length,features.length);
-  assert.equal((overview.match(/class="step reveal-step"/g)||[]).length,3);
-  for(const feature of features) {
-   const html=fs.readFileSync(path.join(folder,feature.p),'utf8');
-   assert.ok(overview.includes(`href="${feature.p}#${feature.id}"`));
-   assert.equal(data.routes[feature.id],feature.p);
-   assert.ok(data.search.some(s=>s.id===feature.id&&s.p===feature.p&&s.x.length>100));
-   assert.ok(html.includes(`data-done="${feature.id}"`));
-   assert.ok(html.includes(`../${lang==='ar'?'en':'ar'}/${feature.p}`));
-   assert.match(html,/<svg class="diagram"/);
-   assert.match(html,/class="steps"/);
-  }
-  for(const file of ['c6.html',...features.map(f=>f.p)]) {
-   const html=fs.readFileSync(path.join(folder,file),'utf8');
-   const callout=html.match(/<aside class="callout[^>]*>[^]*?<\/aside>/g)?.find(x=>x.includes(lang==='ar'?'مثال: شركة الأفق':'Example: Horizon'));
-   assert.ok(callout,`${lang}/${file}: missing example`);
-   assert.ok(html.indexOf(callout)<html.indexOf('<figure'));
-  }
+  const c6=fs.readFileSync(path.join(folder,'c6.html'),'utf8');
+  const main=guideData(c6);
+  // Chapter 6 keeps its overview steps and lists the Builder chapters as cards, plus a button to the Builder home.
+  assert.equal((c6.match(/class="step reveal-step"/g)||[]).length,3);
+  assert.deepEqual([...c6.matchAll(/class="page-card" href="([^"#]+)"/g)].map(m=>m[1]),BUILDER_CHAPTERS.map((_,i)=>`b${i+1}.html`));
+  assert.match(c6,/<p class="guide-open"><a class="btn btn-primary" href="builder.html">/);
+  assert.ok(!main.steps.some(s=>s.p.startsWith('builder-')),'Builder pages belong to the Builder guide');
+  // Search in the main guide also finds Builder pages, and opens them on the right page.
+  assert.ok(main.search.some(s=>s.p==='builder-fields.html'&&main.routes[s.id]==='builder-fields.html'));
+  const home=fs.readFileSync(path.join(folder,'builder.html'),'utf8');
+  const data=guideData(home);
+  assert.equal(data.store,'kos-builder-progress');
+  assert.equal(data.home,'builder.html');
+  assert.deepEqual(data.chapters.map(c=>c.p),BUILDER_CHAPTERS.map((_,i)=>`b${i+1}.html`));
+  assert.equal((home.match(/class="path-card/g)||[]).length,BUILDER_CHAPTERS.length);
+  assert.match(home,/href="index.html">/,'Builder home links back to the main guide');
+  assert.ok(data.search.some(s=>s.p==='c3.html'),'Builder search also finds main guide pages');
+  assert.ok(data.steps.every(s=>!/^c\d/.test(s.id)),'Builder ids never collide with the main guide');
+ }
+});
+
+test('Builder guide chapters and their pages have bilingual examples, diagrams and navigable routes',()=>{
+ for(const lang of ['ar','en']) {
+  const folder=path.join(root,'site',lang);
+  BUILDER_CHAPTERS.forEach((slugs,i)=>{
+   const file=`b${i+1}.html`;
+   const overview=fs.readFileSync(path.join(folder,file),'utf8');
+   const data=guideData(overview);
+   const features=data.steps.filter(s=>s.c===`b${i+1}`&&s.p.startsWith('builder-'));
+   assert.deepEqual(features.map(f=>f.p),slugs.map(s=>'builder-'+s+'.html'));
+   assert.equal((overview.match(/class="page-card"/g)||[]).length,features.length,`${lang}/${file}: one card per page`);
+   assert.ok(overview.includes(`<span class="chip">${lang==='ar'?'الفصل':'Chapter'} ${i+1}</span>`),`${lang}/${file}: chapters start from 1`);
+   assert.match(overview,/<a href="builder.html">/,'crumbs lead to the Builder home');
+   for(const feature of features) {
+    const html=fs.readFileSync(path.join(folder,feature.p),'utf8');
+    assert.ok(overview.includes(`href="${feature.p}#${feature.id}"`));
+    assert.equal(data.routes[feature.id],feature.p);
+    assert.ok(data.search.some(s=>s.id===feature.id&&s.p===feature.p&&s.x.length>100));
+    assert.ok(html.includes(`data-done="${feature.id}"`));
+    assert.ok(html.includes(`../${lang==='ar'?'en':'ar'}/${feature.p}`));
+    assert.match(html,/<svg class="diagram"/);
+    assert.match(html,/class="steps"/);
+   }
+   for(const page of [file,...features.map(f=>f.p)]) {
+    const html=fs.readFileSync(path.join(folder,page),'utf8');
+    const callout=html.match(/<aside class="callout[^>]*>[^]*?<\/aside>/g)?.find(x=>x.includes(lang==='ar'?'مثال: شركة الأفق':'Example: Horizon'));
+    assert.ok(callout,`${lang}/${page}: missing example`);
+    const figure=html.indexOf('<figure');
+    assert.ok(figure<0||html.indexOf(callout)<figure,`${lang}/${page}: example before the first figure`);
+   }
+  });
  }
 });
 
 test('numbered screenshots: every Builder image has markers and a matching numbered key',()=>{
  const manifest=JSON.parse(fs.readFileSync(path.join(root,'review/fullpage-manifest.json'),'utf8'));
  const circled='①②③④⑤⑥⑦⑧⑨';
- for(const source of [doc,en]) {
+ for(const source of [bdoc,ben]) {
   const shots=source.blocks.filter(b=>/ch06-/.test(b.image??''));
   assert.ok(shots.length>=26,'Builder pages need their screenshots');
   for(const b of shots) {
@@ -175,11 +214,18 @@ test('Arabic text and Latin time ranges retain separate directions',()=>{
 
 test('all chapter references resolve and diagrams carry Arabic legends',()=>{
  const files=['main.tex',...fs.readdirSync(path.join(root,'chapters')).filter(f=>f.endsWith('.tex')).map(f=>`chapters/${f}`),'references/sources.tex'];
+ const bfiles=['builder/main.tex',...fs.readdirSync(path.join(root,'builder/chapters')).filter(f=>f.endsWith('.tex')).map(f=>`builder/chapters/${f}`)];
  const source=files.map(f=>fs.readFileSync(path.join(root,f),'utf8')).join('\n');
- for(const [,label] of source.matchAll(/\\ref\{([^}]+)\}/g)) assert.ok(doc.labels.has(label),`Missing ${label}`);
- const figures=doc.blocks.filter(b=>b.tikz);
- assert.equal(figures.length,(source.match(/\\begin\{tikzpicture\}/g)||[]).length);
- for(const figure of figures) { assert.ok(figure.tikz.includes('\\rclegend')); assert.ok(figure.caption); }
+ const bsource=bfiles.map(f=>fs.readFileSync(path.join(root,f),'utf8')).join('\n');
+ // A reference may point into the other guide; both guides' labels resolve it.
+ const labels=new Set([...doc.labels.keys(),...bdoc.labels.keys()]);
+ for(const [,label] of (source+bsource).matchAll(/\\ref\{([^}]+)\}/g)) assert.ok(labels.has(label),`Missing ${label}`);
+ for(const label of bdoc.labels.keys()) assert.ok(!doc.labels.has(label),`Label used in both guides: ${label}`);
+ for(const [d,src] of [[doc,source],[bdoc,bsource]]) {
+  const figures=d.blocks.filter(b=>b.tikz);
+  assert.equal(figures.length,(src.match(/\\begin\{tikzpicture\}/g)||[]).length);
+  for(const figure of figures) { assert.ok(figure.tikz.includes('\\rclegend')); assert.ok(figure.caption); }
+ }
  assert.ok(doc.blocks.some(b=>b.type==='chapter' && b.label==='ch:hr'));
 });
 
@@ -207,20 +253,22 @@ const en=loadDocument(path.join(root,'i18n/en'),{lang:'en'});
 const shape=(d)=>d.blocks.map(b=>b.type==='para'?'p':`${b.type}${b.level??''}${b.kind??''}:${b.label??''}:${b.rows?.length??''}x${b.rows?.[0]?.cells.length??''}:${b.items?.length??''}:${(b.image??'').replace(/-(ar|en).png$/,'.png')}${b.tikz?'tikz':''}${b.note?'+note':''}`);
 
 test('English HTML sources mirror the Arabic structure',()=>{
- const ar=shape(doc).filter(s=>s!=='p'), e=shape(en).filter(s=>s!=='p');
- assert.deepEqual(e,ar);
- assert.deepEqual([...en.labels.keys()].sort(),[...doc.labels.keys()].sort());
- for(const b of en.blocks.filter(b=>b.tikz)) assert.doesNotMatch(b.tikz,/[\u0600-\u06FF]/,'Arabic left in an English diagram');
+ for(const [a,b] of [[doc,en],[bdoc,ben]]) {
+  const ar=shape(a).filter(s=>s!=='p'), e=shape(b).filter(s=>s!=='p');
+  assert.deepEqual(e,ar);
+  assert.deepEqual([...b.labels.keys()].sort(),[...a.labels.keys()].sort());
+  for(const x of b.blocks.filter(x=>x.tikz)) assert.doesNotMatch(x.tikz,/[\u0600-\u06FF]/,'Arabic left in an English diagram');
+ }
 });
 
 test('every figure has an explanation under it',()=>{
- for(const d of [doc,en]) for(const b of d.blocks.filter(b=>b.type==='figure')) assert.ok(b.note,`figure ${b.label} has no \\shotnote`);
+ for(const d of [doc,en,bdoc,ben]) for(const b of d.blocks.filter(b=>b.type==='figure')) assert.ok(b.note,`figure ${b.label} has no \\shotnote`);
 });
 
 test('screenshots use matching full-page captures in each interface language',()=>{
  const manifest=JSON.parse(fs.readFileSync(path.join(root,'review/fullpage-manifest.json'),'utf8'));
- for(const [lang,source] of [['ar',doc],['en',en]]) {
-  for(const block of source.blocks.filter(b=>b.image)) {
+ for(const [lang,source,side] of [['ar',doc,bdoc],['en',en,ben]]) {
+  for(const block of [...source.blocks,...side.blocks].filter(b=>b.image)) {
    assert.ok(block.image.endsWith(`-${lang}.png`),`Wrong screenshot language: ${block.image}`);
    const name=path.basename(block.image,'.png'), capture=manifest[name];
    assert.ok(capture,`Missing capture evidence: ${name}`);
@@ -250,9 +298,12 @@ test('built HTML site: chapter and feature pages, language, direction and workin
   const folder=path.join(root,'site',lang);
   const pages=Object.fromEntries(fs.readdirSync(folder).filter(f=>f.endsWith('.html')).map(f=>[f,fs.readFileSync(path.join(folder,f),'utf8')]));
   const sourceDoc=lang==='ar'?doc:en;
-  const featureFiles=sourceDoc.blocks.filter(b=>/^sec:(hr|tasks|projects|builder)-feature-/.test(b.label??'')).map(b=>b.label.replace(/^sec:(hr|tasks|projects|builder)-feature-/,'$1-')+'.html');
-  assert.equal(featureFiles.length,57+JSON.parse(fs.readFileSync(path.join(root,'review/projects-source-inventory.json'),'utf8')).pages.length);
-  assert.deepEqual(Object.keys(pages).sort(),['c1.html','c2.html','c3.html','c4.html','c5.html','c6.html','index.html',...featureFiles].sort());
+  const sideDoc=lang==='ar'?bdoc:ben;
+  const featuresOf=d=>d.blocks.filter(b=>/^sec:(hr|tasks|projects|builder)-feature-/.test(b.label??'')).map(b=>b.label.replace(/^sec:(hr|tasks|projects|builder)-feature-/,'$1-')+'.html');
+  const featureFiles=featuresOf(sourceDoc), builderFiles=featuresOf(sideDoc);
+  assert.equal(featureFiles.length,31+JSON.parse(fs.readFileSync(path.join(root,'review/projects-source-inventory.json'),'utf8')).pages.length);
+  assert.equal(builderFiles.length,BUILDER_CHAPTERS.flat().length);
+  assert.deepEqual(Object.keys(pages).sort(),['c1.html','c2.html','c3.html','c4.html','c5.html','c6.html','index.html',...featureFiles,'builder.html',...BUILDER_CHAPTERS.map((_,i)=>`b${i+1}.html`),...builderFiles].sort());
   const ids=Object.fromEntries(Object.entries(pages).map(([f,h])=>[f,new Set([...h.matchAll(/\sid="([^"]+)"/g)].map(m=>m[1]))]));
   let diagrams=0;
   for(const [file,html] of Object.entries(pages)){
@@ -271,7 +322,7 @@ test('built HTML site: chapter and feature pages, language, direction and workin
    assert.ok(!html.includes('>??<'),`${where}: unresolved reference`);
    diagrams+=(html.match(/<svg class="diagram"/g)||[]).length;
   }
-  assert.equal(diagrams,sourceDoc.blocks.filter(b=>b.tikz).length);
+  assert.equal(diagrams,[...sourceDoc.blocks,...sideDoc.blocks].filter(b=>b.tikz).length);
  }
 });
 

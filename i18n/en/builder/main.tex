@@ -1,0 +1,42 @@
+% =====================================================================
+%  Builder guide — English edition (HTML only)
+%  Mirrors ../../../builder/main.tex: same chapters, same order, same labels.
+%  The Arabic sources in builder/chapters/ are the master; update this
+%  translation whenever an Arabic chapter changes.
+% =====================================================================
+\documentclass[11pt,oneside,openany]{report}
+\input{../preamble}
+
+\begin{document}
+
+\makecover{\en{KayanOS} · Builder}
+  {Builder Guide}
+  {Build your organization's applications step by step: records, forms, workflows, documents and reports}
+  {October 2026}{\en{0.1} — draft}{\en{RightCode}}
+
+% ---- chapters (in building order: the record first, then showing it, then what works on it) ----
+\input{chapters/01-entities}
+\input{chapters/01-entities-pages}
+
+\input{chapters/02-navigation}
+\input{chapters/02-navigation-pages}
+
+\input{chapters/03-forms}
+\input{chapters/03-forms-pages}
+
+\input{chapters/04-services}
+\input{chapters/04-services-pages}
+
+\input{chapters/05-internal-sops}
+\input{chapters/05-internal-sops-pages}
+
+\input{chapters/06-automations}
+\input{chapters/06-automations-pages}
+
+\input{chapters/07-documents}
+\input{chapters/07-documents-pages}
+
+\input{chapters/08-dashboards}
+\input{chapters/08-dashboards-pages}
+
+\end{document}
