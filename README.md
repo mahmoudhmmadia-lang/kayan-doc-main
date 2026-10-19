@@ -1,5 +1,11 @@
 # KayanOS web guide
 
+Chapter 5, Projects & planning, now has an Arabic/English draft: `c5.html` and
+82 `projects-*.html` feature pages. It keeps the existing theme, roles, and Horizon
+examples. Six pages correspond to main app entries; the others explain related
+records within their parent workflows. See `review/projects-source-coverage.md`
+for source coverage, test2 evidence, and remaining specialist capture/testing work.
+
 Current work is **web only** (2026-10-16). Build with `cd tools && npm run html`
 and preview with `npm run dev`. The default build produces only HTML. Do not
 generate PDF, Word or Overleaf files; the print documentation below is archived.
@@ -10,7 +16,7 @@ Chapter 4, Tasks, is drafted for review in both languages: `c4.html` and ten
 `tasks-*.html` feature pages. It follows the same screenshot, example and
 navigation rules as HR. Sources live in `chapters/04-tasks*.tex` and their
 English counterparts. See `review/tasks-source-coverage.md` for application
-coverage and live-test limitations. Projects & planning has not been started.
+coverage and live-test limitations. Projects & planning is now drafted as chapter 5.
 
 Explain each concept in general terms first, then separate the fictional scenario
 under **«مثال: شركة الأفق» / “Example: Horizon”**. Keep names and example values
@@ -150,6 +156,11 @@ Menu → Compiler → XeLaTeX and Main document → `main.tex` (the included
 
 ## Authoring rules
 
+- **Numbered screenshots (2026-10-19).** Every screenshot carries numbered markers
+  (①, ②, ③ …) on the controls the reader uses, added by the capture script before
+  capture. Its `\shotnote` explains the image, then lists each number with the exact
+  UI label and when to use it. The Horizon example follows the same numbers. See
+  AGENTS.md → *Numbered screenshots*.
 - Every figure carries `\shotnote{...}` after its `\caption`/`\label`: a 1–3
   sentence explanation printed directly under the image or diagram in all outputs.
   Never stack several images without a note under each. Notes explain what the

@@ -254,6 +254,10 @@ function inline(src, ctx) {
         .join('')
 }
 
+// Plain text for the search and step index, which the browser escapes itself.
+const decode = (s) => s.replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&amp;/g, '&')
+const text = (src, ctx) => decode(plain(src, ctx))
+
 const plain = (src, ctx) =>
     inline(src, ctx)
         .replace(/<[^>]+>/g, '')
@@ -297,7 +301,7 @@ function renderTable(b, ctx) {
         const i = own.findIndex((f) => plain(f.title, ctx) === name)
         return i < 0 ? null : { feature: own[i], no: i + 1, section: plain(cell, ctx).split(' — ')[1] ?? '' }
     }
-    const cards = /^tab:(hr|tasks)-pages-/.test(b.label ?? '') ? body.map((r) => featureOf(r.cells[0])) : []
+    const cards = /^tab:(hr|tasks|projects|builder)-pages-/.test(b.label ?? '') ? body.map((r) => featureOf(r.cells[0])) : []
     if (cards.length && cards.every(Boolean)) {
         const nav = { ...ctx, nolink: true }
         return `<figure class="page-cards reveal"${b.id ? ` id="${b.id}"` : ''}>${caption}<ol class="page-grid">${cards
@@ -443,10 +447,10 @@ const LEGACY = {
 export function renderSite(doc, { lang, assetsVersion = '' }) {
     const ui = UI[lang]
     const { chapters, ids } = structure(doc)
-    const features = chapters.flatMap(c => c.sections).filter(s => /^sec:(hr|tasks)-feature-/.test(s.label ?? ''))
+    const features = chapters.flatMap(c => c.sections).filter(s => /^sec:(hr|tasks|projects|builder)-feature-/.test(s.label ?? ''))
     const routes = {}
     for (const s of features) {
-        const [, app, slug] = s.label.match(/^sec:(hr|tasks)-feature-(.+)$/)
+        const [, app, slug] = s.label.match(/^sec:(hr|tasks|projects|builder)-feature-(.+)$/)
         const page = `${app}-${slug}.html`
         routes[s.id] = page
         const visit = blocks => blocks.forEach(b => { if (b.id) routes[b.id] = page; if (b.blocks) visit(b.blocks) })
@@ -464,25 +468,26 @@ export function renderSite(doc, { lang, assetsVersion = '' }) {
     const bodies = chapters.map((c) => {
         const page = pageOf(c.id)
         const intro = c.intro.map((b) => renderBlock(b, { ...base, page, sectionId: c.id })).join('')
-        search.push({ id: c.id, p: page, c: '', t: plain(c.title, base), n: c.kicker, x: '', chapter: true })
+        search.push({ id: c.id, p: page, c: '', t: text(c.title, base), n: c.kicker, x: '', chapter: true })
         const sections = c.sections
             .map((s) => {
                 const page = pageOf(s.id)
                 const ctx = { ...base, page, sectionId: s.id }
                 const body = s.blocks.map((b) => renderBlock(b, ctx)).join('')
                 totalWords += words(body)
-                steps.push({ id: s.id, p: page, c: c.id, t: plain(s.title, ctx), n: s.number ?? '' })
+                steps.push({ id: s.id, p: page, c: c.id, t: text(s.title, ctx), n: s.number ?? '' })
                 search.push({
                     id: s.id,
                     p: page,
-                    c: plain(c.title, base),
-                    t: plain(s.title, ctx),
+                    c: text(c.title, base),
+                    t: text(s.title, ctx),
                     n: s.number ?? '',
                     x: body
                         .replace(/<svg[\s\S]*?<\/svg>/g, ' ')
                         .replace(/<[^>]+>/g, ' ')
                         .replace(/\s+/g, ' ')
                         .trim()
+                        .replace(/&(lt|gt|quot|#39|amp);/g, (m) => decode(m))
                         .slice(0, 1600),
                 })
                 for (const b of s.blocks)
@@ -490,8 +495,8 @@ export function renderSite(doc, { lang, assetsVersion = '' }) {
                         search.push({
                             id: b.id,
                             p: page,
-                            c: plain(c.title, base),
-                            t: plain(b.title, ctx),
+                            c: text(c.title, base),
+                            t: text(b.title, ctx),
                             n: b.number ?? '',
                             x: '',
                             sub: true,

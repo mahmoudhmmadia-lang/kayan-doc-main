@@ -1,0 +1,31 @@
+{
+  "environment": "https://test2.kayanos.app",
+  "date": "2026-10-18",
+  "flow": "Create a cost category and reopen it in an independent authenticated browser session",
+  "record": {
+    "code": "GUIDE-QA-20261018",
+    "name": "Guide QA — Visit transport",
+    "categoryType": "Travel",
+    "active": true,
+    "url": "https://test2.kayanos.app/apps/projects/pm_financial/pm_cost_categories/guideqa20261018_guide_qa_visit_transport"
+  },
+  "observations": [
+    "Filled Code and Name in the real create form.",
+    "Selected Travel through the Category Type dropdown.",
+    "Clicked Create and observed Created successfully!.",
+    "Opened the saved record in a separate Arabic browser session.",
+    "Confirmed the persisted code, name, Travel type and active state."
+  ],
+  "screenshots": [
+    "figures/screens/ch05-cost-category-en.png",
+    "figures/screens/ch05-cost-category-ar.png"
+  ],
+  "recordRetained": true,
+  "notTested": [
+    "Project and plan approval/lifecycle changes",
+    "Specialist related-record creation",
+    "Budget approval, payment and expenditure processing",
+    "Permission isolation",
+    "Indicator measurement and evaluation workflows"
+  ]
+}

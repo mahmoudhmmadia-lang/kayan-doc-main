@@ -6,12 +6,49 @@ set. `progress.md` is the live status log; this file is the standing brief.
 
 ## Current direction — web only (2026-10-16; supersedes legacy output rules below)
 
+- **Numbered screenshots (2026-10-19; applies to every chapter from now on).**
+  Each screenshot shows numbered markers (green circles ①, ②, ③ …) drawn on the
+  real test2 page at the exact controls the reader must find or use, in the order
+  they are used. The note under the image (`\shotnote`) must explain the whole
+  image and then give a numbered key: one short sentence per number saying what
+  the control is and when to use it, using the same circled numbers and the exact
+  UI label. Keep 2–5 markers per image; never mark decoration. The page's Horizon
+  example must follow the same numbered steps where a screenshot shows them, so
+  the reader can follow the example on the image. Markers are added only by the
+  capture script (DOM overlay before capture), never by editing the PNG; record
+  the markers in `review/fullpage-manifest.json` (`marks`). Arabic images use
+  Arabic-interface screenshots with markers on the Arabic controls.
+
+- **Builder authorized (2026-10-19).** The user asked to add Builder (chapter 6,
+  `c6.html`, `builder-*.html`) in the same design and rules, then to finish all
+  phases and explain this complex app as simply and fully as possible. The draft
+  has a 3-step overview (result, how the tools fit together, grouped directory)
+  and 25 pages; it is under review. Plan, sources and
+  limits: `review/builder-source-coverage.md`. No test2 screenshots yet; the
+  procedures are source-backed only.
+  Fictional example additions: record type «طلبات الزيارة» / “Visit requests”
+  in app «خدمات الفروع» / “Branch services”, serial `HZN-VR-0001`; Horizon's
+  (unnamed) system administrator builds it, Omar submits requests, Sarah reviews.
+
+- **Projects & planning authorized (2026-10-18).** The user approved the chapter
+  5 outline in this conversation. The bilingual web draft now comprises an
+  overview and 82 dedicated explanations: six main navigation pages and their
+  supporting records. Preserve the existing theme and Horizon people/roles.
+  Review `review/projects-source-coverage.md` and the machine-readable inventory
+  before extending coverage. Main-screen captures and a saved cost-category
+  flow were checked on test2; specialist workflows remain source-backed and
+  still need record/tab captures. The next app is not authorized.
+  Fictional example additions: project `HZN-PRJ-01`, preparing the Aleppo visit;
+  cost category `HZN-C-01`, Travel and transport / «السفر والانتقال».
+  Sarah coordinates the visit; Omar prepares its pack; the finance owner manages
+  cost classification. These examples are separate from the live QA record.
+
 - **Tasks authorized (2026-10-17).** The user approved the chapter 4 outline.
   Chapter 4 now has an Arabic/English overview and ten dedicated feature pages
   (`tasks-*.html`), under review. The scope includes collections, views, task
   details, follow-up, relationships, epics, suggestions, assignments and shared
   task/status configuration. Distinguish embedded tabs from standalone pages.
-  Projects & planning is the next app and is not yet authorized. Earlier notes
+  Projects & planning is now authorized and drafted as chapter 5. Earlier notes
   saying Tasks has not started are historical; consult `progress.md`.
   The fictional example is Sarah coordinating a Horizon Aleppo-branch visit,
   with Omar preparing its checklist in “Horizon visits” / «زيارات الأفق».

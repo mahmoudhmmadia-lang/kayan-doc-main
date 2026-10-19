@@ -1,0 +1,180 @@
+\chapter{Builder}
+\label{ch:builder}
+
+\section{What will you achieve?}
+
+Builder lets you design an application for your own work when the ready-made apps have no record that fits it, such as an internal request, an equipment register or visit tracking. You first decide what one record represents, then add its fields, arrange its page and lists, and publish it for the team. Later you can add a request form, an approval workflow, documents generated from its data, and a dashboard that tracks it.
+
+This work belongs to the system administrator or anyone with Builder permissions, and it needs a full seat: Builder is not shown to members with an employee seat. Employees use the application after it is published, without needing Builder.
+
+\begin{rcnote}[Example: Horizon]
+Horizon wants to receive branch visit requests in one place instead of scattered messages. The system administrator therefore builds a record type called “Visit requests”, where Omar Haddad submits the Aleppo Branch visit request and Sarah Al-Khatib reviews it.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Decide what a record is};
+\node[stepBox,below=of a] (b) {Add the fields};
+\node[stepBox,below=of b] (c) {Arrange page and lists};
+\node[stepBox,below=of c] (d) {Rules and access};
+\node[stepBox,below=of d] (e) {Review and publish};
+\node[stepBox,below=of e] (f) {Show it in navigation};
+\node[stepBox,below=of f] (g) {Forms, documents, reports};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\draw[flowsTo] (e) -- (f);
+\draw[flowsTo] (f) -- (g);
+\end{tikzpicture}
+\rclegend
+\caption{Building a new application}
+\label{fig:builder-overview-flow}
+\shotnote{The figure shows the order this chapter recommends: build the record type first, because everything after it depends on its fields. Then publish it and place it in navigation so the team can reach it, and once it works add forms, documents and reports. The team sees no change before you publish, so try each stage with a real record before moving to the next.}
+\end{figure}
+
+\section{How do the Builder tools fit together?}
+\label{sec:builder-map}
+
+Builder can look like many tools, but they revolve around one idea: the record type. It is where the data is stored, and every other tool works with it in a different way: a form collects data into it, actions run work on it, templates produce documents from it, and dashboards show its numbers.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[entity] (type) {Record type};
+\node[entityOpt,below right=0.8cm and 0.6cm of type] (forms) {Forms\\collect data};
+\node[entityOpt,below=0.8cm of type] (sop) {Workflows\\run the work};
+\node[entityOpt,below left=0.8cm and 0.6cm of type] (out) {Templates and dashboards\\produce results};
+\draw[dependsOnOpt] (type.south) -- ++(0,-0.35) -| (forms.north);
+\draw[dependsOnOpt] (type.south) -- (sop.north);
+\draw[dependsOnOpt] (type.south) -- ++(0,-0.35) -| (out.north);
+\end{tikzpicture}
+\rclegend
+\caption{The big picture: everything revolves around the record type}
+\label{fig:builder-big-picture}
+\shotnote{The figure puts the record type on top because the other tools need it, and all of them are optional. Forms bring data in, workflows run work on it, and templates and dashboards produce documents and numbers from it. A record type the team fills in directly may be enough, and you add a form, template or dashboard when the need appears. So do not start with automation or reports before the record type works with real records.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[entity] (type) {Record type};
+\node[entity,below=0.7cm of type] (fields) {Fields};
+\node[entityOpt,below right=0.7cm and 0.3cm of fields] (page) {Record page};
+\node[entityOpt,below left=0.7cm and 0.3cm of fields] (lists) {Lists and views};
+\draw[dependsOn] (type) -- (fields);
+\draw[dependsOnOpt] (fields.south) -- ++(0,-0.3) -| (page.north);
+\draw[dependsOnOpt] (fields.south) -- ++(0,-0.3) -| (lists.north);
+\end{tikzpicture}
+\rclegend
+\caption{The parts of a record type}
+\label{fig:builder-models}
+\shotnote{The figure shows that fields are a required part of the record type, because they define what each record stores. The record page and lists are two ways of showing those fields; each has a working default, so you adjust them when you want a clearer view for the team.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Words you will meet in this chapter}
+\label{tab:builder-terms}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Word} & \thh{What it means, simply}\\
+Record type (entity) & A template for a group of similar records, such as “Visit requests”. Each request in it is a record.\\
+Field & One piece of information in a record, such as the visit date.\\
+Builder workspace & Where you edit a record type; its sections are Fields, Record page, Lists, Rules, Access and more.\\
+Draft and publish & Every change is saved as a draft nobody sees, then reaches the team when you publish a new version.\\
+Role and verb & A role is a set of permissions given to people; a verb is an allowed action, such as adding or changing.\\
+Form & A page of questions an employee or applicant fills in, whose answers may be written into a record type.\\
+Internal SOP & A workflow of steps, such as requesting approval or creating a task, that starts on an event you choose.\\
+Template & A Word or Excel file with tags that are replaced by record data to create a document.\\
+\end{tabularx}
+\end{table}
+
+\section{Builder page guide}
+\label{sec:builder-pages}
+
+You find Builder in the app list as “Builder”, and its pages sit in the “Core” section. Each card below shows whether the page stands on its own in that section, or is a section inside the “Builder” workspace that you reach by opening a record type from “Entities”. Start with the first group, then move on to the others as your work needs.
+
+\begin{table}[H]
+\centering
+\caption{Building the record type: the foundation}
+\label{tab:builder-pages-build}
+\rcZebra
+\begin{tabularx}{\linewidth}{R{4.2cm} Y}
+\rcHeaderRow
+\thh{Page and section} & \thh{What this page offers}\\
+Entities — Core & Lists the organization's record types; from here you create a new type or open one to edit.\\
+Fields — Builder workspace & Fields define what each record stores and what kind of value each one is.\\
+Record page — Builder workspace & Arranges the page a user sees when opening a record into tabs and sections.\\
+Lists \& views — Builder workspace & Decides how records appear together: as a table, a board or a calendar, and which columns show.\\
+Rules — Builder workspace & Shows, locks, requires or checks fields according to what the record holds.\\
+Access — Builder workspace & Decides which roles can see, add, change and delete the records.\\
+Actions \& automations — Builder workspace & Adds buttons to the record that create documents, open links or start workflows.\\
+Movement — Builder workspace & Moves an amount between records of another type and posts it at a given status, for financial and stock types.\\
+Import — Builder workspace & Decides how records are loaded and updated from Excel files, and which key matches rows to records.\\
+Advanced — Builder workspace & Record name, duplicate prevention, parent records and where the type appears.\\
+Review \& publish — Builder workspace & Reviews the changes saved as a draft, publishes them for the team, and restores an earlier version when needed.\\
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Showing the work to the team}
+\label{tab:builder-pages-navigation}
+\rcZebra
+\begin{tabularx}{\linewidth}{R{4.2cm} Y}
+\rcHeaderRow
+\thh{Page and section} & \thh{What this page offers}\\
+Apps \& Navigation — Core & Arranges the apps and sections members see, and shows or hides them.\\
+Work navigation — Core & Decides what each member sees first: a «My desk» page, what is due for them, and a shared context.\\
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Collecting requests and running the work}
+\label{tab:builder-pages-process}
+\rcZebra
+\begin{tabularx}{\linewidth}{R{4.2cm} Y}
+\rcHeaderRow
+\thh{Page and section} & \thh{What this page offers}\\
+Forms — Core & Creates forms that employees or applicants fill in, and manages their published versions.\\
+Services — Core & Offers forms as services the public or staff can request, with request follow-up and performance.\\
+Internal SOPs — Core & Builds workflows of steps, such as approvals and task creation, that start on an event you choose.\\
+SOPs — Core & Builds automations that connect KayanOS with other services and accounts.\\
+Bots — Core & Sets up assistants that work in chat, email and calendar.\\
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Documents and printing}
+\label{tab:builder-pages-documents}
+\rcZebra
+\begin{tabularx}{\linewidth}{R{4.2cm} Y}
+\rcHeaderRow
+\thh{Page and section} & \thh{What this page offers}\\
+DOCX Templates — Core & Word templates that create documents from record data.\\
+XLSX Templates — Core & Excel templates that create workbooks from record data.\\
+Print templates — Core & Ready print layouts for records, designed inside KayanOS.\\
+Identities \& letterheads — Core & The organization's logo, official details and letterheads used in printed documents.\\
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Reports and follow-up}
+\label{tab:builder-pages-reports}
+\rcZebra
+\begin{tabularx}{\linewidth}{R{4.2cm} Y}
+\rcHeaderRow
+\thh{Page and section} & \thh{What this page offers}\\
+Dashboards — Core & Shows the work's numbers and indicators in dashboards the team can see.\\
+Pages — Core & Publishes analytics as standalone pages inside apps.\\
+AI Dashboards — Core & Builds dashboards with AI assistance.\\
+AI Reports — Core & Creates reports generated by AI from the organization's data.\\
+\end{tabularx}
+\end{table}
+
+“Status templates” and “Task settings” also appear in the “Core” section; the Tasks chapter explains them: the first on page \ref{sec:tasks-feature-statuses}, and the second on page \ref{sec:tasks-feature-settings}.

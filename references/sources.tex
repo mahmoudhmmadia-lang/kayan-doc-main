@@ -114,3 +114,14 @@
 يغطي الفصل الرابع المجموعات وعروض المهام وتفاصيل المهمة والتقدم والعلاقات والمهام الكبرى والاقتراحات والتكليفات وإعدادات المهام وقوالب الحالات. وتميّز صفحات الدليل بين صفحات التطبيق والتبويبات والنوافذ.
 المصادر: \en{src/components/Todo/} و\en{src/components/Settings/Todo/} و\en{src/components/FormAssignments/} و\en{src/utils/sidebarItems.tsx} وملفات اللغة. سجل التغطية وحدود التحقق: \en{review/tasks-source-coverage.md}. إثبات الصور: \en{review/fullpage-manifest.json}.
 أُنشئت في بيئة الاختبار مهمة تجريبية وفُتحت بعد حفظها. أما إنشاء مجموعة فانتهى برسالة تفيد بعدم الإتاحة، لذلك لا يُعد الوصول إلى المجموعة متحققاً. ولم تُغيَّر أي إعدادات مشتركة، ولم تُرسَل طلبات إلى أعضاء آخرين.
+
+\section{مصادر فصل المشاريع والتخطيط}
+\label{sec:sources-projects}
+استند الفصل الخامس إلى تعريفات الصفحات والحقول والعلاقات في \en{scripts/seed-entities/entities/}، وإعدادات التطبيق في \en{scripts/seed-entities/apps-config.ts}، وقواعد التخطيط في \en{common/planningPolicy.ts} و\en{common/planningProfiles.ts}. يربط سجل \en{review/projects-source-inventory.json} كل صفحة بمصدرها وسياقها، ويوثق \en{review/projects-source-coverage.md} حدود التحقق.
+
+فُتحت المداخل الستة الرئيسية ونماذجها في بيئة الاختبار، والتُقطت صورها بالعربية والإنجليزية. أُنشئت فئة تكلفة اختبارية وأُعيد فتحها في جلسة أخرى للتحقق من بقاء الرمز والاسم والنوع. أما اعتماد المواثيق والخطط والمصروفات، وإضافة سجلات التنفيذ والتقييم المتخصصة، فشرحها مستند إلى المصدر ولم يُختبر تنفيذها. تحفظ الصور وبياناتها في \en{review/fullpage-manifest.json}؛ وهي منفصلة عن مثال شركة الأفق.
+
+\section{مصادر فصل أدوات البناء}
+\label{sec:sources-builder}
+يغطي الفصل السادس صفحة «الكيانات» وأقسام «المنشئ» كلها، ثم صفحات التنقل والنماذج والخدمات والإجراءات والبوتات والقوالب والهويات ولوحات المعلومات والصفحات وأدوات الذكاء الاصطناعي في قسم «الأساسية». ومصادر الصفحات اللاحقة مفصّلة في سجل التغطية. المصادر: التنقل في \en{src/utils/sidebarItems.tsx}، وقائمة الكيانات في \en{src/components/EntityBuilder/EntityPage/}، وصفحة الإنشاء في \en{CreateUpdateEntityComponent.tsx} و\en{EntityBuilderConnect.ts}، وأقسام المنشئ في \en{src/components/EntityBuilder/workspace/}، وأنواع الحقول في \en{getEntityFieldType.tsx}، وطرق العرض في \en{src/components/Entities/entityTableViewMode.ts}، والتسميات في \en{src/components/EntityBuilder/locales/} و\en{src/locales/}، وقيود المقعد في \en{common/seatPolicy.ts}. سجل التغطية وحدود التحقق: \en{review/builder-source-coverage.md}.
+اختُبر على \en{test2} إنشاء نوع سجلات اختباري وإضافة حقل ونشره وإنشاء سجل وإعادة فتحه، والتُقطت صور الصفحات مرقّمة باللغتين. أما المسارات المتخصصة، مثل الحركة والقوالب والإجراءات الداخلية، فشرحها مستند إلى المصدر ولم يُنفَّذ عملياً.

@@ -9,6 +9,38 @@ import {loadDocument, parseBlocks, parseInline} from './latex-parse.mjs';
 const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const doc=loadDocument(root);
 
+test('Projects directory preserves model routes, parent links, examples and bilingual navigation',()=>{
+ const inventory=JSON.parse(fs.readFileSync(path.join(root,'review/projects-source-inventory.json'),'utf8'));
+ assert.equal(inventory.pages.filter(p=>p.navigation).length,6);
+ for(const lang of ['ar','en']) {
+  const folder=path.join(root,'site',lang);
+  const overview=fs.readFileSync(path.join(folder,'c5.html'),'utf8');
+  const data=JSON.parse(overview.match(/<script id="guide-data" type="application\/json">([^]*?)<\/script>/)[1]);
+  assert.equal((overview.match(/class="page-card"/g)||[]).length,inventory.pages.length);
+  for(const page of inventory.pages) {
+   const file=`projects-${page.slug}.html`;
+   const step=data.steps.find(s=>s.p===file);
+   assert.ok(step,`Missing route: ${file}`);
+   assert.equal(data.routes[step.id],file);
+   assert.ok(overview.includes(`href="${file}#${step.id}"`));
+   const html=fs.readFileSync(path.join(folder,file),'utf8');
+   assert.ok(html.includes(`../${lang==='ar'?'en':'ar'}/${file}`));
+   assert.ok(data.search.some(s=>s.p===file&&s.x.length>100));
+   const example=html.indexOf(lang==='ar'?'مثال: شركة الأفق':'Example: Horizon');
+   assert.ok(example>0&&example<html.indexOf('<figure'));
+   assert.match(html,/<svg class="diagram"/);
+   assert.match(html,/class="steps"/);
+   assert.ok(html.includes(`data-done="${step.id}"`));
+   if(page.parent){
+    const parent=inventory.pages.find(p=>p.key===page.parent);
+    assert.ok(parent,`Missing parent for ${page.key}`);
+    assert.ok(html.includes(`href="projects-${parent.slug}.html#`));
+   }
+  }
+  for(const excluded of inventory.excluded)assert.ok(!inventory.pages.some(p=>p.key===excluded.key));
+ }
+});
+
 test('organization setup keeps existing links while handing HR procedures to chapter 3',()=>{
  for(const lang of ['ar','en']) {
   const html=fs.readFileSync(path.join(root,'site',lang,'c2.html'),'utf8');
@@ -82,6 +114,49 @@ test('Tasks overview and all ten feature pages have bilingual examples, media an
    const callout=html.match(/<aside class="callout[^>]*>[^]*?<\/aside>/g)?.find(x=>x.includes(lang==='ar'?'مثال: شركة الأفق':'Example: Horizon'));
    assert.ok(callout,`${lang}/${file}: missing example`);
    assert.ok(html.indexOf(callout)<html.indexOf('<figure'));
+  }
+ }
+});
+
+test('Builder overview and its feature pages have bilingual examples, diagrams and navigable routes',()=>{
+ for(const lang of ['ar','en']) {
+  const folder=path.join(root,'site',lang);
+  const overview=fs.readFileSync(path.join(folder,'c6.html'),'utf8');
+  const data=JSON.parse(overview.match(/<script id="guide-data" type="application\/json">([^]*?)<\/script>/)[1]);
+  const features=data.steps.filter(s=>s.p.startsWith('builder-'));
+  assert.deepEqual(features.map(f=>f.p),['entities','fields','record-page','lists','rules','access','actions','movement','import','advanced','publish','navigation','work-navigation','forms','services','internal-sops','sops','bots','docx-templates','xlsx-templates','print-templates','identities','dashboards','pages','ai-dashboards','ai-reports'].map(s=>'builder-'+s+'.html'));
+  assert.equal((overview.match(/class="page-card"/g)||[]).length,features.length);
+  assert.equal((overview.match(/class="step reveal-step"/g)||[]).length,3);
+  for(const feature of features) {
+   const html=fs.readFileSync(path.join(folder,feature.p),'utf8');
+   assert.ok(overview.includes(`href="${feature.p}#${feature.id}"`));
+   assert.equal(data.routes[feature.id],feature.p);
+   assert.ok(data.search.some(s=>s.id===feature.id&&s.p===feature.p&&s.x.length>100));
+   assert.ok(html.includes(`data-done="${feature.id}"`));
+   assert.ok(html.includes(`../${lang==='ar'?'en':'ar'}/${feature.p}`));
+   assert.match(html,/<svg class="diagram"/);
+   assert.match(html,/class="steps"/);
+  }
+  for(const file of ['c6.html',...features.map(f=>f.p)]) {
+   const html=fs.readFileSync(path.join(folder,file),'utf8');
+   const callout=html.match(/<aside class="callout[^>]*>[^]*?<\/aside>/g)?.find(x=>x.includes(lang==='ar'?'مثال: شركة الأفق':'Example: Horizon'));
+   assert.ok(callout,`${lang}/${file}: missing example`);
+   assert.ok(html.indexOf(callout)<html.indexOf('<figure'));
+  }
+ }
+});
+
+test('numbered screenshots: every Builder image has markers and a matching numbered key',()=>{
+ const manifest=JSON.parse(fs.readFileSync(path.join(root,'review/fullpage-manifest.json'),'utf8'));
+ const circled='①②③④⑤⑥⑦⑧⑨';
+ for(const source of [doc,en]) {
+  const shots=source.blocks.filter(b=>/ch06-/.test(b.image??''));
+  assert.ok(shots.length>=26,'Builder pages need their screenshots');
+  for(const b of shots) {
+   const capture=manifest[path.basename(b.image,'.png')];
+   assert.ok(capture?.marks?.length,`${b.image}: no markers recorded`);
+   const key=[...circled].filter(c=>b.note.includes(c));
+   assert.deepEqual(key,[...circled].slice(0,capture.marks.length),`${b.image}: key must list ${capture.marks.length} numbered markers`);
   }
  }
 });
@@ -175,9 +250,9 @@ test('built HTML site: chapter and feature pages, language, direction and workin
   const folder=path.join(root,'site',lang);
   const pages=Object.fromEntries(fs.readdirSync(folder).filter(f=>f.endsWith('.html')).map(f=>[f,fs.readFileSync(path.join(folder,f),'utf8')]));
   const sourceDoc=lang==='ar'?doc:en;
-  const featureFiles=sourceDoc.blocks.filter(b=>/^sec:(hr|tasks)-feature-/.test(b.label??'')).map(b=>b.label.replace(/^sec:(hr|tasks)-feature-/,'$1-')+'.html');
-  assert.equal(featureFiles.length,31);
-  assert.deepEqual(Object.keys(pages).sort(),['c1.html','c2.html','c3.html','c4.html','index.html',...featureFiles].sort());
+  const featureFiles=sourceDoc.blocks.filter(b=>/^sec:(hr|tasks|projects|builder)-feature-/.test(b.label??'')).map(b=>b.label.replace(/^sec:(hr|tasks|projects|builder)-feature-/,'$1-')+'.html');
+  assert.equal(featureFiles.length,57+JSON.parse(fs.readFileSync(path.join(root,'review/projects-source-inventory.json'),'utf8')).pages.length);
+  assert.deepEqual(Object.keys(pages).sort(),['c1.html','c2.html','c3.html','c4.html','c5.html','c6.html','index.html',...featureFiles].sort());
   const ids=Object.fromEntries(Object.entries(pages).map(([f,h])=>[f,new Set([...h.matchAll(/\sid="([^"]+)"/g)].map(m=>m[1]))]));
   let diagrams=0;
   for(const [file,html] of Object.entries(pages)){

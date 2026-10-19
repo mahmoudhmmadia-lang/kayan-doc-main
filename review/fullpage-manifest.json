@@ -4,147 +4,274 @@
     "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?returnView=table&tab=overview",
     "lang": "ar",
     "width": 1440,
-    "height": 959,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:36:35.447Z"
+    "capturedAt": "2026-10-19T13:29:50.139Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "نظرة عامة"
+      },
+      {
+        "n": 2,
+        "label": "تعديل"
+      }
+    ]
   },
   "ch03-member-tab1-ar": {
     "file": "kayanos-guide/figures/screens/ch03-member-tab1-ar.png",
     "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=overview&returnView=table",
     "lang": "ar",
     "width": 1440,
-    "height": 1255,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:36:44.098Z",
-    "tab": "نظرة عامة"
+    "capturedAt": "2026-10-19T13:30:06.281Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "نظرة عامة"
+      },
+      {
+        "n": 2,
+        "label": "تعديل"
+      }
+    ]
   },
   "ch03-member-tab2-ar": {
     "file": "kayanos-guide/figures/screens/ch03-member-tab2-ar.png",
     "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=orientation&returnView=table",
     "lang": "ar",
     "width": 1440,
-    "height": 1255,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:36:53.999Z",
-    "tab": "التأهيل والتوجيه"
+    "capturedAt": "2026-10-19T13:30:21.430Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "التأهيل والتوجيه"
+      },
+      {
+        "n": 2,
+        "label": "تعديل"
+      }
+    ]
   },
   "ch03-member-tab3-ar": {
     "file": "kayanos-guide/figures/screens/ch03-member-tab3-ar.png",
     "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=personal&returnView=table",
     "lang": "ar",
     "width": 1440,
-    "height": 1255,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:37:03.057Z",
-    "tab": "الشخصي"
+    "capturedAt": "2026-10-19T13:30:37.050Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الشخصي"
+      },
+      {
+        "n": 2,
+        "label": "تعديل"
+      }
+    ]
   },
   "ch03-member-tab4-ar": {
     "file": "kayanos-guide/figures/screens/ch03-member-tab4-ar.png",
     "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=contact&returnView=table",
     "lang": "ar",
     "width": 1440,
-    "height": 1255,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:37:12.070Z",
-    "tab": "الاتصال"
+    "capturedAt": "2026-10-19T13:30:56.743Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الاتصال"
+      },
+      {
+        "n": 2,
+        "label": "تعديل"
+      }
+    ]
   },
   "ch03-member-tab5-ar": {
     "file": "kayanos-guide/figures/screens/ch03-member-tab5-ar.png",
     "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=qualifications&returnView=table",
     "lang": "ar",
     "width": 1440,
-    "height": 1255,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:37:20.599Z",
-    "tab": "المؤهلات"
+    "capturedAt": "2026-10-19T13:31:14.029Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "المؤهلات"
+      },
+      {
+        "n": 2,
+        "label": "تعديل"
+      }
+    ]
   },
   "ch03-member-tab6-ar": {
     "file": "kayanos-guide/figures/screens/ch03-member-tab6-ar.png",
     "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=conflict_of_interest&returnView=table",
     "lang": "ar",
     "width": 1440,
-    "height": 1255,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:37:29.423Z",
-    "tab": "تضارب المصالح"
+    "capturedAt": "2026-10-19T13:31:29.308Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "تضارب المصالح"
+      },
+      {
+        "n": 2,
+        "label": "تعديل"
+      }
+    ]
   },
   "ch03-member-tab7-ar": {
     "file": "kayanos-guide/figures/screens/ch03-member-tab7-ar.png",
     "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=financial&returnView=table",
     "lang": "ar",
     "width": 1440,
-    "height": 1255,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:37:37.913Z",
-    "tab": "المالية"
+    "capturedAt": "2026-10-19T13:31:46.375Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "المالية"
+      },
+      {
+        "n": 2,
+        "label": "تعديل"
+      }
+    ]
   },
   "ch03-member-tab8-ar": {
     "file": "kayanos-guide/figures/screens/ch03-member-tab8-ar.png",
     "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=employment&returnView=table",
     "lang": "ar",
     "width": 1440,
-    "height": 1255,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:37:46.206Z",
-    "tab": "التوظيف"
+    "capturedAt": "2026-10-19T13:32:02.969Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "التوظيف"
+      },
+      {
+        "n": 2,
+        "label": "تعديل"
+      }
+    ]
   },
   "ch03-member-tab9-ar": {
     "file": "kayanos-guide/figures/screens/ch03-member-tab9-ar.png",
     "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=attendance&returnView=table",
     "lang": "ar",
     "width": 1440,
-    "height": 1255,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:37:54.558Z",
-    "tab": "الحضور"
+    "capturedAt": "2026-10-19T13:32:22.732Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الحضور"
+      },
+      {
+        "n": 2,
+        "label": "تعديل"
+      }
+    ]
   },
   "ch03-member-tab11-ar": {
     "file": "kayanos-guide/figures/screens/ch03-member-tab11-ar.png",
     "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=custom%3Ahosted-email-accounts&returnView=table",
     "lang": "ar",
     "width": 1440,
-    "height": 1255,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:38:11.328Z",
-    "tab": "حسابات البريد"
+    "capturedAt": "2026-10-19T13:32:39.952Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "حسابات البريد"
+      },
+      {
+        "n": 2,
+        "label": "تعديل"
+      }
+    ]
   },
   "ch03-member-tab12-ar": {
     "file": "kayanos-guide/figures/screens/ch03-member-tab12-ar.png",
     "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=custom%3Aworked-hours-assignment&returnView=table",
     "lang": "ar",
     "width": 1440,
-    "height": 1255,
+    "height": 1173,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:38:19.700Z",
-    "tab": "ساعات العمل"
+    "capturedAt": "2026-10-19T13:32:58.070Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "ساعات العمل"
+      },
+      {
+        "n": 2,
+        "label": "تعديل"
+      }
+    ]
   },
   "ch01-workspaces-clear-ar": {
     "file": "kayanos-guide/figures/screens/ch01-workspaces-clear-ar.png",
     "url": "https://test2.kayanos.app/",
     "lang": "ar",
     "width": 1440,
-    "height": 4438,
+    "height": 2454,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:47:39.085Z",
-    "trim": {
-      "top": 0,
-      "height": 1614,
-      "reason": "Remove blank bottom margin; preserve all page content"
-    }
+    "capturedAt": "2026-10-19T13:28:22.303Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "مساحات عملي"
+      },
+      {
+        "n": 2,
+        "label": "الموارد البشرية"
+      },
+      {
+        "n": 3,
+        "label": "افتح دليل التطبيقات"
+      }
+    ]
   },
   "ch01-apps-clear-ar": {
     "file": "kayanos-guide/figures/screens/ch01-apps-clear-ar.png",
     "url": "https://test2.kayanos.app/",
     "lang": "ar",
     "width": 1440,
-    "height": 4438,
+    "height": 2454,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:47:44.966Z",
-    "trim": {
-      "top": 0,
-      "height": 1614,
-      "reason": "Remove blank bottom margin; preserve all page content"
-    }
+    "capturedAt": "2026-10-19T13:28:42.695Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "مشغل التطبيقات"
+      },
+      {
+        "n": 2,
+        "label": "الموارد البشرية"
+      },
+      {
+        "n": 3,
+        "label": "ادوات البناء"
+      }
+    ]
   },
   "ch02-create-org-ar": {
     "file": "kayanos-guide/figures/screens/ch02-create-org-ar.png",
@@ -153,92 +280,192 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:47:55.192Z"
+    "capturedAt": "2026-10-19T13:28:57.593Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "جهة الاتصال"
+      },
+      {
+        "n": 2,
+        "label": "تفاصيل المؤسسة"
+      }
+    ]
   },
   "ch03-member-tab13-ar": {
     "file": "kayanos-guide/figures/screens/ch03-member-tab13-ar.png",
     "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=custom%3Anotifications&returnView=table",
     "lang": "ar",
     "width": 1440,
-    "height": 7131,
+    "height": 3911,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:38:30.399Z",
-    "tab": "الإشعارات"
+    "capturedAt": "2026-10-19T13:33:15.773Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الإشعارات"
+      },
+      {
+        "n": 2,
+        "label": "تعديل"
+      }
+    ]
   },
   "ch03-member-tab14-ar": {
     "file": "kayanos-guide/figures/screens/ch03-member-tab14-ar.png",
     "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=custom%3Asessions&returnView=table",
     "lang": "ar",
     "width": 1440,
-    "height": 1255,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:38:38.855Z",
-    "tab": "الجلسات"
+    "capturedAt": "2026-10-19T13:33:32.120Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الجلسات"
+      },
+      {
+        "n": 2,
+        "label": "تعديل"
+      }
+    ]
   },
   "ch03-member-tab15-ar": {
     "file": "kayanos-guide/figures/screens/ch03-member-tab15-ar.png",
     "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=custom%3Atwo-step-verification&returnView=table",
     "lang": "ar",
     "width": 1440,
-    "height": 1255,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:38:47.249Z",
-    "tab": "التحقق بخطوتين"
+    "capturedAt": "2026-10-19T13:33:46.660Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "التحقق بخطوتين"
+      },
+      {
+        "n": 2,
+        "label": "تعديل"
+      }
+    ]
   },
   "ch03-member-tab16-ar": {
     "file": "kayanos-guide/figures/screens/ch03-member-tab16-ar.png",
     "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=roles&returnView=table",
     "lang": "ar",
     "width": 1440,
-    "height": 1255,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:38:55.899Z",
-    "tab": "الأدوار"
+    "capturedAt": "2026-10-19T13:34:01.557Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الأدوار"
+      },
+      {
+        "n": 2,
+        "label": "تعديل"
+      }
+    ]
   },
   "ch02-position-fields-ar": {
     "file": "kayanos-guide/figures/screens/ch02-position-fields-ar.png",
     "url": "https://test2.kayanos.app/apps/hr/workforce/positions/add?tab=overview",
     "lang": "ar",
     "width": 1440,
-    "height": 926,
+    "height": 1506,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:48:52.943Z"
+    "capturedAt": "2026-10-19T13:34:18.199Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "نظرة عامة *"
+      },
+      {
+        "n": 2,
+        "label": "إنشاء"
+      }
+    ]
   },
   "ch02-assignment-fields-ar": {
     "file": "kayanos-guide/figures/screens/ch02-assignment-fields-ar.png",
     "url": "https://test2.kayanos.app/apps/hr/workforce/assignments/add?tab=overview",
     "lang": "ar",
     "width": 1440,
-    "height": 1507,
+    "height": 1676,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:49:16.891Z"
+    "capturedAt": "2026-10-19T13:37:45.329Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "نظرة عامة *"
+      },
+      {
+        "n": 2,
+        "label": "إنشاء"
+      }
+    ]
   },
   "ch02-node-fields-ar": {
     "file": "kayanos-guide/figures/screens/ch02-node-fields-ar.png",
     "url": "https://test2.kayanos.app/apps/hr/core/nodes/add?tab=overview",
     "lang": "ar",
     "width": 1440,
-    "height": 900,
+    "height": 1200,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:49:40.483Z"
+    "capturedAt": "2026-10-19T13:41:11.365Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "نظرة عامة *"
+      },
+      {
+        "n": 2,
+        "label": "إنشاء"
+      }
+    ]
   },
   "ch02-location-fields-ar": {
     "file": "kayanos-guide/figures/screens/ch02-location-fields-ar.png",
     "url": "https://test2.kayanos.app/apps/hr/core/locations/add?tab=overview",
     "lang": "ar",
     "width": 1440,
-    "height": 979,
+    "height": 1364,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:50:04.041Z"
+    "capturedAt": "2026-10-19T13:44:37.489Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "نظرة عامة *"
+      },
+      {
+        "n": 2,
+        "label": "إنشاء"
+      }
+    ]
   },
   "ch03-hr-pages-clear-ar": {
     "file": "kayanos-guide/figures/screens/ch03-hr-pages-clear-ar.png",
     "url": "https://test2.kayanos.app/apps/hr",
     "lang": "ar",
     "width": 1440,
-    "height": 3779,
+    "height": 4917,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:39:34.581Z"
+    "capturedAt": "2026-10-19T13:29:24.543Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "السجلات"
+      },
+      {
+        "n": 2,
+        "label": "الأعضاء, السجلات"
+      },
+      {
+        "n": 3,
+        "label": "سجل جديد"
+      }
+    ]
   },
   "ch03-shift-example-ar": {
     "file": "kayanos-guide/figures/screens/ch03-shift-example-ar.png",
@@ -283,7 +510,17 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:50:59.755Z"
+    "capturedAt": "2026-10-19T13:54:20.075Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الأعضاء"
+      },
+      {
+        "n": 2,
+        "label": "إنشاء"
+      }
+    ]
   },
   "ch03-feature-seniority-levels-ar": {
     "file": "kayanos-guide/figures/screens/ch03-feature-seniority-levels-ar.png",
@@ -784,10 +1021,19 @@
     "url": "https://test2.kayanos.app/apps/hr/workforce/positions/add?tab=orientation",
     "lang": "ar",
     "width": 1440,
-    "height": 926,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:49:09.166Z",
-    "tab": "التأهيل والتوجيه"
+    "capturedAt": "2026-10-19T13:37:30.142Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "التأهيل والتوجيه"
+      },
+      {
+        "n": 2,
+        "label": "إنشاء"
+      }
+    ]
   },
   "ch02-assignment-fields-tab1-ar": {
     "file": "kayanos-guide/figures/screens/ch02-assignment-fields-tab1-ar.png",
@@ -804,10 +1050,19 @@
     "url": "https://test2.kayanos.app/apps/hr/workforce/assignments/add?tab=orientation",
     "lang": "ar",
     "width": 1440,
-    "height": 1507,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:49:33.322Z",
-    "tab": "التأهيل والتوجيه"
+    "capturedAt": "2026-10-19T13:40:55.302Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "التأهيل والتوجيه"
+      },
+      {
+        "n": 2,
+        "label": "إنشاء"
+      }
+    ]
   },
   "ch02-node-fields-tab1-ar": {
     "file": "kayanos-guide/figures/screens/ch02-node-fields-tab1-ar.png",
@@ -826,8 +1081,17 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:49:56.048Z",
-    "tab": "التأهيل والتوجيه"
+    "capturedAt": "2026-10-19T13:44:21.413Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "التأهيل والتوجيه"
+      },
+      {
+        "n": 2,
+        "label": "إنشاء"
+      }
+    ]
   },
   "ch02-location-fields-tab1-ar": {
     "file": "kayanos-guide/figures/screens/ch02-location-fields-tab1-ar.png",
@@ -844,30 +1108,57 @@
     "url": "https://test2.kayanos.app/apps/hr/core/locations/add?tab=orientation",
     "lang": "ar",
     "width": 1440,
-    "height": 979,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:50:21.274Z",
-    "tab": "التأهيل والتوجيه"
+    "capturedAt": "2026-10-19T13:44:53.114Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "التأهيل والتوجيه"
+      },
+      {
+        "n": 2,
+        "label": "إنشاء"
+      }
+    ]
   },
   "ch02-location-fields-tab3-ar": {
     "file": "kayanos-guide/figures/screens/ch02-location-fields-tab3-ar.png",
     "url": "https://test2.kayanos.app/apps/hr/core/locations/add?tab=general_information",
     "lang": "ar",
     "width": 1440,
-    "height": 979,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:50:29.421Z",
-    "tab": "المعلومات الأساسية"
+    "capturedAt": "2026-10-19T13:48:02.463Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "المعلومات الأساسية"
+      },
+      {
+        "n": 2,
+        "label": "إنشاء"
+      }
+    ]
   },
   "ch02-location-fields-tab4-ar": {
     "file": "kayanos-guide/figures/screens/ch02-location-fields-tab4-ar.png",
     "url": "https://test2.kayanos.app/apps/hr/core/locations/add?tab=location_rooms",
     "lang": "ar",
     "width": 1440,
-    "height": 979,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:50:37.521Z",
-    "tab": "المساحات المستثمرة"
+    "capturedAt": "2026-10-19T13:51:11.635Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "المساحات المستثمرة"
+      },
+      {
+        "n": 2,
+        "label": "إنشاء"
+      }
+    ]
   },
   "ch03-leave-type-fields-tab1-ar": {
     "file": "kayanos-guide/figures/screens/ch03-leave-type-fields-tab1-ar.png",
@@ -1023,63 +1314,173 @@
     "url": "https://test2.kayanos.app/tasks",
     "lang": "en",
     "width": 1440,
-    "height": 1092,
+    "height": 1116,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:52:41.753Z"
+    "capturedAt": "2026-10-19T13:25:06.628Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Add Collection"
+      },
+      {
+        "n": 2,
+        "label": "All Tasks View all tasks across collections"
+      },
+      {
+        "n": 3,
+        "label": "Assigned to Me View all tasks assigned to you"
+      },
+      {
+        "n": 4,
+        "label": "Assignments Forms you were asked to fill, and the assignment"
+      }
+    ]
   },
   "ch04-collection-form-en": {
     "file": "kayanos-guide/figures/screens/ch04-collection-form-en.png",
     "url": "https://test2.kayanos.app/tasks",
     "lang": "en",
     "width": 1440,
-    "height": 1092,
+    "height": 1116,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:52:48.422Z"
+    "capturedAt": "2026-10-19T13:25:28.758Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": ""
+      },
+      {
+        "n": 2,
+        "label": "Shared"
+      },
+      {
+        "n": 3,
+        "label": "Allowed task types"
+      },
+      {
+        "n": 4,
+        "label": "Create"
+      }
+    ]
   },
   "ch04-board-en": {
     "file": "kayanos-guide/figures/screens/ch04-board-en.png",
     "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945",
     "lang": "en",
     "width": 1440,
-    "height": 745,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:41:51.746Z"
+    "capturedAt": "2026-10-19T13:14:41.255Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Board"
+      },
+      {
+        "n": 2,
+        "label": "To Do"
+      },
+      {
+        "n": 3,
+        "label": "Add filter"
+      },
+      {
+        "n": 4,
+        "label": "Add Task"
+      }
+    ]
   },
   "ch04-list-en": {
     "file": "kayanos-guide/figures/screens/ch04-list-en.png",
     "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945",
     "lang": "en",
     "width": 1440,
-    "height": 816,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:41:53.613Z"
+    "capturedAt": "2026-10-19T13:14:59.008Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "List"
+      },
+      {
+        "n": 2,
+        "label": "Search"
+      },
+      {
+        "n": 3,
+        "label": "Add filter"
+      }
+    ]
   },
   "ch04-checkins-en": {
     "file": "kayanos-guide/figures/screens/ch04-checkins-en.png",
     "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945",
     "lang": "en",
     "width": 1440,
-    "height": 679,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:41:55.476Z"
+    "capturedAt": "2026-10-19T13:15:18.170Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Check-ins"
+      },
+      {
+        "n": 2,
+        "label": "Needs attention"
+      },
+      {
+        "n": 3,
+        "label": "No update today"
+      }
+    ]
   },
   "ch04-details-en": {
     "file": "kayanos-guide/figures/screens/ch04-details-en.png",
     "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
     "lang": "en",
     "width": 1440,
-    "height": 1005,
+    "height": 925,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:50:28.004Z"
+    "capturedAt": "2026-10-19T13:26:49.062Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Complete"
+      },
+      {
+        "n": 2,
+        "label": "Log progress"
+      },
+      {
+        "n": 3,
+        "label": "Owner"
+      },
+      {
+        "n": 4,
+        "label": "Priority"
+      }
+    ]
   },
   "ch04-comments-en": {
     "file": "kayanos-guide/figures/screens/ch04-comments-en.png",
     "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
     "lang": "en",
     "width": 1440,
-    "height": 1005,
+    "height": 1170,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:50:58.377Z"
+    "capturedAt": "2026-10-19T13:17:34.810Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Comments"
+      },
+      {
+        "n": 2,
+        "label": "Add"
+      }
+    ]
   },
   "ch04-about-en": {
     "file": "kayanos-guide/figures/screens/ch04-about-en.png",
@@ -1095,216 +1496,528 @@
     "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
     "lang": "en",
     "width": 1440,
-    "height": 1005,
+    "height": 925,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:50:37.157Z"
+    "capturedAt": "2026-10-19T13:16:21.638Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Output"
+      },
+      {
+        "n": 2,
+        "label": "Complete"
+      }
+    ]
   },
   "ch04-challenges-en": {
     "file": "kayanos-guide/figures/screens/ch04-challenges-en.png",
     "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
     "lang": "en",
     "width": 1440,
-    "height": 1005,
+    "height": 925,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:50:40.658Z"
+    "capturedAt": "2026-10-19T13:16:39.755Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Challenges"
+      },
+      {
+        "n": 2,
+        "label": "Complete"
+      }
+    ]
   },
   "ch04-progress-en": {
     "file": "kayanos-guide/figures/screens/ch04-progress-en.png",
     "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
     "lang": "en",
     "width": 1440,
-    "height": 1005,
+    "height": 1170,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:50:44.273Z"
+    "capturedAt": "2026-10-19T13:16:58.668Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Body"
+      },
+      {
+        "n": 2,
+        "label": "Post"
+      },
+      {
+        "n": 3,
+        "label": "Log progress"
+      }
+    ]
   },
   "ch04-emails-en": {
     "file": "kayanos-guide/figures/screens/ch04-emails-en.png",
     "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
     "lang": "en",
     "width": 1440,
-    "height": 1005,
+    "height": 1258,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:50:47.821Z"
+    "capturedAt": "2026-10-19T13:18:47.313Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Emails"
+      },
+      {
+        "n": 2,
+        "label": "Add email"
+      }
+    ]
   },
   "ch04-records-en": {
     "file": "kayanos-guide/figures/screens/ch04-records-en.png",
     "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
     "lang": "en",
     "width": 1440,
-    "height": 1005,
+    "height": 1023,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:50:51.348Z"
+    "capturedAt": "2026-10-19T13:27:27.804Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Relationships"
+      },
+      {
+        "n": 2,
+        "label": "Link a record"
+      }
+    ]
   },
   "ch04-relations-en": {
     "file": "kayanos-guide/figures/screens/ch04-relations-en.png",
     "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
     "lang": "en",
     "width": 1440,
-    "height": 1005,
+    "height": 1368,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:50:54.839Z"
+    "capturedAt": "2026-10-19T13:18:29.630Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Related tasks"
+      },
+      {
+        "n": 2,
+        "label": "Add relation"
+      }
+    ]
   },
   "ch04-activity-en": {
     "file": "kayanos-guide/figures/screens/ch04-activity-en.png",
     "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
     "lang": "en",
     "width": 1440,
-    "height": 1005,
+    "height": 1495,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:51:01.895Z"
+    "capturedAt": "2026-10-19T13:17:53.205Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Activities"
+      }
+    ]
   },
   "ch04-requests-en": {
     "file": "kayanos-guide/figures/screens/ch04-requests-en.png",
     "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
     "lang": "en",
     "width": 1440,
-    "height": 1005,
+    "height": 913,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:51:05.415Z"
+    "capturedAt": "2026-10-19T13:27:09.200Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Requests"
+      },
+      {
+        "n": 2,
+        "label": "New Request"
+      }
+    ]
   },
   "ch04-suggestions-en": {
     "file": "kayanos-guide/figures/screens/ch04-suggestions-en.png",
     "url": "https://test2.kayanos.app/tasks/suggestions?status=pending",
     "lang": "en",
     "width": 1440,
-    "height": 563,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:51:44.100Z"
+    "capturedAt": "2026-10-19T13:19:02.218Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Pending 0"
+      },
+      {
+        "n": 2,
+        "label": "Rejected"
+      },
+      {
+        "n": 3,
+        "label": "Refresh"
+      }
+    ]
   },
   "ch04-assignments-en": {
     "file": "kayanos-guide/figures/screens/ch04-assignments-en.png",
     "url": "https://test2.kayanos.app/tasks/assignments",
     "lang": "en",
     "width": 1440,
-    "height": 7417,
+    "height": 7910,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:51:58.383Z"
+    "capturedAt": "2026-10-19T13:19:21.877Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Assignments"
+      },
+      {
+        "n": 2,
+        "label": "Assigned to me 65"
+      }
+    ]
   },
   "ch04-settings-en": {
     "file": "kayanos-guide/figures/screens/ch04-settings-en.png",
     "url": "https://test2.kayanos.app/builder/task-settings",
     "lang": "en",
     "width": 1440,
-    "height": 793,
+    "height": 1101,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:52:14.672Z"
+    "capturedAt": "2026-10-19T13:19:36.375Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Tasks"
+      },
+      {
+        "n": 2,
+        "label": "Categories"
+      },
+      {
+        "n": 3,
+        "label": "Add"
+      },
+      {
+        "n": 4,
+        "label": "Types"
+      }
+    ]
   },
   "ch04-statuses-en": {
     "file": "kayanos-guide/figures/screens/ch04-statuses-en.png",
     "url": "https://test2.kayanos.app/builder/status-templates",
     "lang": "en",
     "width": 1440,
-    "height": 8774,
+    "height": 9000,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:52:28.994Z"
+    "capturedAt": "2026-10-19T13:23:42.764Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Status templates"
+      },
+      {
+        "n": 2,
+        "label": "Add"
+      }
+    ]
   },
   "ch04-epics-en": {
     "file": "kayanos-guide/figures/screens/ch04-epics-en.png",
     "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945",
     "lang": "en",
     "width": 1440,
-    "height": 662,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:53:30.698Z"
+    "capturedAt": "2026-10-19T13:15:39.864Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Epics"
+      },
+      {
+        "n": 2,
+        "label": "Add Epic"
+      },
+      {
+        "n": 3,
+        "label": "Create Epic"
+      }
+    ]
   },
   "ch04-suggestions-ar": {
     "file": "kayanos-guide/figures/screens/ch04-suggestions-ar.png",
     "url": "https://test2.kayanos.app/tasks/suggestions?status=pending",
     "lang": "ar",
     "width": 1440,
-    "height": 551,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:53:43.470Z"
+    "capturedAt": "2026-10-19T12:57:20.872Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "قيد المراجعة 0"
+      },
+      {
+        "n": 2,
+        "label": "مرفوضة"
+      },
+      {
+        "n": 3,
+        "label": "تحديث"
+      }
+    ]
   },
   "ch04-assignments-ar": {
     "file": "kayanos-guide/figures/screens/ch04-assignments-ar.png",
     "url": "https://test2.kayanos.app/tasks/assignments",
     "lang": "ar",
     "width": 1440,
-    "height": 7417,
+    "height": 7910,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:54:02.908Z"
+    "capturedAt": "2026-10-19T12:57:39.165Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "التكليفات"
+      },
+      {
+        "n": 2,
+        "label": "المطلوب مني 65"
+      }
+    ]
   },
   "ch04-settings-ar": {
     "file": "kayanos-guide/figures/screens/ch04-settings-ar.png",
     "url": "https://test2.kayanos.app/builder/task-settings",
     "lang": "ar",
     "width": 1440,
-    "height": 793,
+    "height": 1101,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:54:15.266Z"
+    "capturedAt": "2026-10-19T12:57:53.308Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "المهام"
+      },
+      {
+        "n": 2,
+        "label": "الفئات"
+      },
+      {
+        "n": 3,
+        "label": "إضافة"
+      },
+      {
+        "n": 4,
+        "label": "الأنواع"
+      }
+    ]
   },
   "ch04-statuses-ar": {
     "file": "kayanos-guide/figures/screens/ch04-statuses-ar.png",
     "url": "https://test2.kayanos.app/builder/status-templates",
     "lang": "ar",
     "width": 1440,
-    "height": 8774,
+    "height": 9000,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:54:31.072Z"
+    "capturedAt": "2026-10-19T12:58:58.198Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "قوالب الحالات"
+      },
+      {
+        "n": 2,
+        "label": "إضافة"
+      }
+    ]
   },
   "ch04-collections-ar": {
     "file": "kayanos-guide/figures/screens/ch04-collections-ar.png",
     "url": "https://test2.kayanos.app/tasks",
     "lang": "ar",
     "width": 1440,
-    "height": 1092,
+    "height": 1116,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:54:48.065Z"
+    "capturedAt": "2026-10-19T12:52:53.604Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إضافة مجموعة"
+      },
+      {
+        "n": 2,
+        "label": "جميع المهام عرض جميع المهام عبر المجموعات"
+      },
+      {
+        "n": 3,
+        "label": "مخصص لي عرض جميع المهام المخصصة لك"
+      },
+      {
+        "n": 4,
+        "label": "التكليفات النماذج المطلوب منك تعبئتها، وخطط التكليف التي تتا"
+      }
+    ]
   },
   "ch04-collection-form-ar": {
     "file": "kayanos-guide/figures/screens/ch04-collection-form-ar.png",
     "url": "https://test2.kayanos.app/tasks",
     "lang": "ar",
     "width": 1440,
-    "height": 1092,
+    "height": 1116,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:54:54.712Z"
+    "capturedAt": "2026-10-19T12:53:10.027Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": ""
+      },
+      {
+        "n": 2,
+        "label": "مشتركة"
+      },
+      {
+        "n": 3,
+        "label": "أنواع المهام المسموح بها"
+      },
+      {
+        "n": 4,
+        "label": "إنشاء"
+      }
+    ]
   },
   "ch04-epics-ar": {
     "file": "kayanos-guide/figures/screens/ch04-epics-ar.png",
     "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945",
     "lang": "ar",
     "width": 1440,
-    "height": 662,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:55:14.772Z"
+    "capturedAt": "2026-10-19T13:13:07.120Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "المشاريع"
+      },
+      {
+        "n": 2,
+        "label": "إضافة مشروع"
+      },
+      {
+        "n": 3,
+        "label": "إنشاء ملحمة"
+      }
+    ]
   },
   "ch04-board-ar": {
     "file": "kayanos-guide/figures/screens/ch04-board-ar.png",
     "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945",
     "lang": "ar",
     "width": 1440,
-    "height": 745,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:55:54.732Z"
+    "capturedAt": "2026-10-19T12:53:26.602Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "لوحة"
+      },
+      {
+        "n": 2,
+        "label": "للعمل"
+      },
+      {
+        "n": 3,
+        "label": "إضافة فلتر"
+      },
+      {
+        "n": 4,
+        "label": "إضافة مهمة"
+      }
+    ]
   },
   "ch04-list-ar": {
     "file": "kayanos-guide/figures/screens/ch04-list-ar.png",
     "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945",
     "lang": "ar",
     "width": 1440,
-    "height": 816,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:56:01.027Z"
+    "capturedAt": "2026-10-19T12:53:43.101Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "قائمة"
+      },
+      {
+        "n": 2,
+        "label": "بحث"
+      },
+      {
+        "n": 3,
+        "label": "إضافة فلتر"
+      }
+    ]
   },
   "ch04-checkins-ar": {
     "file": "kayanos-guide/figures/screens/ch04-checkins-ar.png",
     "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945",
     "lang": "ar",
     "width": 1440,
-    "height": 663,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:56:07.316Z"
+    "capturedAt": "2026-10-19T13:01:40.649Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "المتابعة اليومية"
+      },
+      {
+        "n": 2,
+        "label": "يحتاج إلى انتباه"
+      },
+      {
+        "n": 3,
+        "label": "لا تحديث اليوم"
+      }
+    ]
   },
   "ch04-details-ar": {
     "file": "kayanos-guide/figures/screens/ch04-details-ar.png",
     "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
     "lang": "ar",
     "width": 1440,
-    "height": 1005,
+    "height": 925,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:56:52.461Z"
+    "capturedAt": "2026-10-19T13:09:33.668Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إكمال"
+      },
+      {
+        "n": 2,
+        "label": "تسجيل التقدم"
+      },
+      {
+        "n": 3,
+        "label": "المالك"
+      },
+      {
+        "n": 4,
+        "label": "الأولوية"
+      }
+    ]
   },
   "ch04-about-ar": {
     "file": "kayanos-guide/figures/screens/ch04-about-ar.png",
@@ -1320,134 +2033,1975 @@
     "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
     "lang": "ar",
     "width": 1440,
-    "height": 1005,
+    "height": 925,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:57:01.444Z"
+    "capturedAt": "2026-10-19T13:09:52.385Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "المخرجات"
+      },
+      {
+        "n": 2,
+        "label": "إكمال"
+      }
+    ]
   },
   "ch04-challenges-ar": {
     "file": "kayanos-guide/figures/screens/ch04-challenges-ar.png",
     "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
     "lang": "ar",
     "width": 1440,
-    "height": 1005,
+    "height": 925,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:57:04.936Z"
+    "capturedAt": "2026-10-19T13:10:12.994Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "التحديات"
+      },
+      {
+        "n": 2,
+        "label": "إكمال"
+      }
+    ]
   },
   "ch04-progress-ar": {
     "file": "kayanos-guide/figures/screens/ch04-progress-ar.png",
     "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
     "lang": "ar",
     "width": 1440,
-    "height": 1005,
+    "height": 1170,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:57:08.528Z"
+    "capturedAt": "2026-10-19T13:10:31.240Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "المحتوى"
+      },
+      {
+        "n": 2,
+        "label": "نشر"
+      },
+      {
+        "n": 3,
+        "label": "تسجيل التقدم"
+      }
+    ]
   },
   "ch04-emails-ar": {
     "file": "kayanos-guide/figures/screens/ch04-emails-ar.png",
     "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
     "lang": "ar",
     "width": 1440,
-    "height": 1005,
+    "height": 1258,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:57:12.090Z"
+    "capturedAt": "2026-10-19T13:12:17.415Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "رسائل البريد"
+      },
+      {
+        "n": 2,
+        "label": "إضافة بريد"
+      }
+    ]
   },
   "ch04-records-ar": {
     "file": "kayanos-guide/figures/screens/ch04-records-ar.png",
     "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
     "lang": "ar",
     "width": 1440,
-    "height": 1005,
+    "height": 1360,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:57:15.650Z"
+    "capturedAt": "2026-10-19T13:11:42.702Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "العلاقات"
+      },
+      {
+        "n": 2,
+        "label": "ربط سجل"
+      }
+    ]
   },
   "ch04-relations-ar": {
     "file": "kayanos-guide/figures/screens/ch04-relations-ar.png",
     "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
     "lang": "ar",
     "width": 1440,
-    "height": 1005,
+    "height": 1368,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:57:19.166Z"
+    "capturedAt": "2026-10-19T13:12:00.387Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "المهام المرتبطة"
+      },
+      {
+        "n": 2,
+        "label": "إضافة علاقة"
+      }
+    ]
   },
   "ch04-comments-ar": {
     "file": "kayanos-guide/figures/screens/ch04-comments-ar.png",
     "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
     "lang": "ar",
     "width": 1440,
-    "height": 1005,
+    "height": 1170,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:57:22.734Z"
+    "capturedAt": "2026-10-19T13:11:06.442Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "التعليقات"
+      },
+      {
+        "n": 2,
+        "label": "إضافة"
+      }
+    ]
   },
   "ch04-activity-ar": {
     "file": "kayanos-guide/figures/screens/ch04-activity-ar.png",
     "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
     "lang": "ar",
     "width": 1440,
-    "height": 1005,
+    "height": 1495,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:57:26.338Z"
+    "capturedAt": "2026-10-19T13:11:24.775Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الأنشطة"
+      }
+    ]
   },
   "ch04-requests-ar": {
     "file": "kayanos-guide/figures/screens/ch04-requests-ar.png",
     "url": "https://test2.kayanos.app/tasks/codex_qa_collection_20260703_0945?taskId=tbt3uwpzmaibwcfy31i80",
     "lang": "ar",
     "width": 1440,
-    "height": 1005,
+    "height": 1158,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:57:29.907Z"
+    "capturedAt": "2026-10-19T13:10:48.751Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الطلبات"
+      },
+      {
+        "n": 2,
+        "label": "طلب جديد"
+      }
+    ]
   },
   "ch04-settings-epics-ar": {
     "file": "kayanos-guide/figures/screens/ch04-settings-epics-ar.png",
     "url": "https://test2.kayanos.app/builder/task-settings",
     "lang": "ar",
     "width": 1440,
-    "height": 655,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:58:02.934Z"
+    "capturedAt": "2026-10-19T12:58:09.685Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "المشاريع"
+      },
+      {
+        "n": 2,
+        "label": "إضافة"
+      }
+    ]
   },
   "ch04-settings-records-ar": {
     "file": "kayanos-guide/figures/screens/ch04-settings-records-ar.png",
     "url": "https://test2.kayanos.app/builder/task-settings",
     "lang": "ar",
     "width": 1440,
-    "height": 979,
+    "height": 1284,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:58:06.787Z"
+    "capturedAt": "2026-10-19T13:03:41.271Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "علاقات السجلات"
+      },
+      {
+        "n": 2,
+        "label": "إضافة علاقة"
+      }
+    ]
   },
   "ch04-settings-relations-ar": {
     "file": "kayanos-guide/figures/screens/ch04-settings-relations-ar.png",
     "url": "https://test2.kayanos.app/builder/task-settings",
     "lang": "ar",
     "width": 1440,
-    "height": 1355,
+    "height": 1660,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:58:10.735Z"
+    "capturedAt": "2026-10-19T13:13:23.685Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "علاقات المهام"
+      },
+      {
+        "n": 2,
+        "label": "نوع علاقة جديد"
+      }
+    ]
   },
   "ch04-settings-epics-en": {
     "file": "kayanos-guide/figures/screens/ch04-settings-epics-en.png",
     "url": "https://test2.kayanos.app/builder/task-settings",
     "lang": "en",
     "width": 1440,
-    "height": 655,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:58:33.468Z"
+    "capturedAt": "2026-10-19T13:19:53.154Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Epics"
+      },
+      {
+        "n": 2,
+        "label": "Add"
+      }
+    ]
   },
   "ch04-settings-records-en": {
     "file": "kayanos-guide/figures/screens/ch04-settings-records-en.png",
     "url": "https://test2.kayanos.app/builder/task-settings",
     "lang": "en",
     "width": 1440,
-    "height": 999,
+    "height": 1304,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:58:37.298Z"
+    "capturedAt": "2026-10-19T13:23:05.532Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Record relations"
+      },
+      {
+        "n": 2,
+        "label": "Add relation"
+      }
+    ]
   },
   "ch04-settings-relations-en": {
     "file": "kayanos-guide/figures/screens/ch04-settings-relations-en.png",
     "url": "https://test2.kayanos.app/builder/task-settings",
     "lang": "en",
     "width": 1440,
-    "height": 1355,
+    "height": 1660,
     "scale": 2,
-    "capturedAt": "2026-10-17T09:58:41.200Z"
+    "capturedAt": "2026-10-19T13:23:22.771Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Task relations"
+      },
+      {
+        "n": 2,
+        "label": "New relation type"
+      }
+    ]
+  },
+  "ch05-directory-en": {
+    "file": "kayanos-guide/figures/screens/ch05-directory-en.png",
+    "url": "https://test2.kayanos.app/apps/projects",
+    "lang": "en",
+    "width": 1440,
+    "height": 1634,
+    "scale": 2,
+    "capturedAt": "2026-10-19T12:43:56.576Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Plans, Records"
+      },
+      {
+        "n": 2,
+        "label": "New record"
+      },
+      {
+        "n": 3,
+        "label": "Budgets, Records"
+      },
+      {
+        "n": 4,
+        "label": "Portfolios, Records"
+      }
+    ]
+  },
+  "ch05-projects-list-en": {
+    "file": "kayanos-guide/figures/screens/ch05-projects-list-en.png",
+    "url": "https://test2.kayanos.app/apps/projects/pm_core/pm_projects",
+    "lang": "en",
+    "width": 1440,
+    "height": 595,
+    "scale": 2,
+    "capturedAt": "2026-10-18T17:32:46.805Z"
+  },
+  "ch05-project-create-en": {
+    "file": "kayanos-guide/figures/screens/ch05-project-create-en.png",
+    "url": "https://test2.kayanos.app/apps/projects/pm_core/pm_projects/add?tab=overview",
+    "lang": "en",
+    "width": 1440,
+    "height": 1276,
+    "scale": 2,
+    "capturedAt": "2026-10-19T12:44:27.081Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Overview"
+      },
+      {
+        "n": 2,
+        "label": "Charter *"
+      },
+      {
+        "n": 3,
+        "label": "Framework *"
+      },
+      {
+        "n": 4,
+        "label": "Code"
+      },
+      {
+        "n": 5,
+        "label": "Create"
+      }
+    ]
+  },
+  "ch05-project-framework-en": {
+    "file": "kayanos-guide/figures/screens/ch05-project-framework-en.png",
+    "url": "https://test2.kayanos.app/apps/projects/pm_core/pm_projects/add?tab=framework",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-19T12:46:43.640Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Framework"
+      },
+      {
+        "n": 2,
+        "label": "Framework"
+      },
+      {
+        "n": 3,
+        "label": "Delivery Approach"
+      },
+      {
+        "n": 4,
+        "label": "Create"
+      }
+    ]
+  },
+  "ch05-project-charter-en": {
+    "file": "kayanos-guide/figures/screens/ch05-project-charter-en.png",
+    "url": "https://test2.kayanos.app/apps/projects/pm_core/pm_projects/add?tab=charter",
+    "lang": "en",
+    "width": 1440,
+    "height": 1128,
+    "scale": 2,
+    "capturedAt": "2026-10-19T12:48:27.645Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Charter *"
+      },
+      {
+        "n": 2,
+        "label": "Project Manager"
+      },
+      {
+        "n": 3,
+        "label": "Priority"
+      },
+      {
+        "n": 4,
+        "label": "Create"
+      }
+    ]
+  },
+  "ch05-cost-category-en": {
+    "file": "kayanos-guide/figures/screens/ch05-cost-category-en.png",
+    "url": "https://test2.kayanos.app/apps/projects/pm_financial/pm_cost_categories/guideqa20261018_guide_qa_visit_transport?returnView=table&tab=overview",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-19T12:45:58.460Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Edit"
+      },
+      {
+        "n": 2,
+        "label": "Category Type"
+      },
+      {
+        "n": 3,
+        "label": "Active"
+      },
+      {
+        "n": 4,
+        "label": "Roles"
+      }
+    ]
+  },
+  "ch05-directory-ar": {
+    "file": "kayanos-guide/figures/screens/ch05-directory-ar.png",
+    "url": "https://test2.kayanos.app/apps/projects",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1634,
+    "scale": 2,
+    "capturedAt": "2026-10-19T12:37:51.143Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الخطط, السجلات"
+      },
+      {
+        "n": 2,
+        "label": "سجل جديد"
+      },
+      {
+        "n": 3,
+        "label": "الميزانيات, السجلات"
+      },
+      {
+        "n": 4,
+        "label": "المحافظ, السجلات"
+      }
+    ]
+  },
+  "ch05-cost-category-ar": {
+    "file": "kayanos-guide/figures/screens/ch05-cost-category-ar.png",
+    "url": "https://test2.kayanos.app/apps/projects/pm_financial/pm_cost_categories/guideqa20261018_guide_qa_visit_transport?returnView=table&tab=overview",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-19T12:42:43.996Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "تعديل"
+      },
+      {
+        "n": 2,
+        "label": "نوع الفئة"
+      },
+      {
+        "n": 3,
+        "label": "نشط"
+      },
+      {
+        "n": 4,
+        "label": "الأدوار"
+      }
+    ]
+  },
+  "ch05-plans-en": {
+    "file": "kayanos-guide/figures/screens/ch05-plans-en.png",
+    "url": "https://test2.kayanos.app/apps/projects/planning/plans/add?tab=overview",
+    "lang": "en",
+    "width": 1440,
+    "height": 1087,
+    "scale": 2,
+    "capturedAt": "2026-10-19T12:44:12.668Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Overview *"
+      },
+      {
+        "n": 2,
+        "label": "Plan Category"
+      },
+      {
+        "n": 3,
+        "label": "Create"
+      }
+    ]
+  },
+  "ch05-portfolios-en": {
+    "file": "kayanos-guide/figures/screens/ch05-portfolios-en.png",
+    "url": "https://test2.kayanos.app/apps/projects/portfolio/pm_portfolios/add?tab=overview",
+    "lang": "en",
+    "width": 1440,
+    "height": 1204,
+    "scale": 2,
+    "capturedAt": "2026-10-19T12:45:16.052Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Code"
+      },
+      {
+        "n": 2,
+        "label": "Portfolio Owner"
+      },
+      {
+        "n": 3,
+        "label": "Programs"
+      },
+      {
+        "n": 4,
+        "label": "Create"
+      }
+    ]
+  },
+  "ch05-programs-en": {
+    "file": "kayanos-guide/figures/screens/ch05-programs-en.png",
+    "url": "https://test2.kayanos.app/apps/projects/portfolio/pm_programs/add?tab=overview",
+    "lang": "en",
+    "width": 1440,
+    "height": 1204,
+    "scale": 2,
+    "capturedAt": "2026-10-19T12:45:30.164Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Code"
+      },
+      {
+        "n": 2,
+        "label": "Name"
+      },
+      {
+        "n": 3,
+        "label": "Create"
+      }
+    ]
+  },
+  "ch05-budgets-en": {
+    "file": "kayanos-guide/figures/screens/ch05-budgets-en.png",
+    "url": "https://test2.kayanos.app/apps/projects/pm_financial/pm_budgets/add?tab=overview",
+    "lang": "en",
+    "width": 1440,
+    "height": 1385,
+    "scale": 2,
+    "capturedAt": "2026-10-19T12:45:44.431Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Budget Lines"
+      },
+      {
+        "n": 2,
+        "label": "Budget Period Start"
+      },
+      {
+        "n": 3,
+        "label": "Currency"
+      },
+      {
+        "n": 4,
+        "label": "Create"
+      }
+    ]
+  },
+  "ch05-plans-ar": {
+    "file": "kayanos-guide/figures/screens/ch05-plans-ar.png",
+    "url": "https://test2.kayanos.app/apps/projects/planning/plans/add?tab=overview",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1087,
+    "scale": 2,
+    "capturedAt": "2026-10-19T12:41:01.126Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "نظرة عامة *"
+      },
+      {
+        "n": 2,
+        "label": "فئة الخطة"
+      },
+      {
+        "n": 3,
+        "label": "إنشاء"
+      }
+    ]
+  },
+  "ch05-portfolios-ar": {
+    "file": "kayanos-guide/figures/screens/ch05-portfolios-ar.png",
+    "url": "https://test2.kayanos.app/apps/projects/portfolio/pm_portfolios/add?tab=overview",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1204,
+    "scale": 2,
+    "capturedAt": "2026-10-19T12:42:01.807Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الرمز"
+      },
+      {
+        "n": 2,
+        "label": "مالك المحفظة"
+      },
+      {
+        "n": 3,
+        "label": "البرامج"
+      },
+      {
+        "n": 4,
+        "label": "إنشاء"
+      }
+    ]
+  },
+  "ch05-programs-ar": {
+    "file": "kayanos-guide/figures/screens/ch05-programs-ar.png",
+    "url": "https://test2.kayanos.app/apps/projects/portfolio/pm_programs/add?tab=overview",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1204,
+    "scale": 2,
+    "capturedAt": "2026-10-19T12:42:15.939Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الرمز"
+      },
+      {
+        "n": 2,
+        "label": "الاسم"
+      },
+      {
+        "n": 3,
+        "label": "إنشاء"
+      }
+    ]
+  },
+  "ch05-budgets-ar": {
+    "file": "kayanos-guide/figures/screens/ch05-budgets-ar.png",
+    "url": "https://test2.kayanos.app/apps/projects/pm_financial/pm_budgets/add?tab=overview",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1385,
+    "scale": 2,
+    "capturedAt": "2026-10-19T12:42:30.062Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "بنود الميزانية"
+      },
+      {
+        "n": 2,
+        "label": "بداية فترة الميزانية"
+      },
+      {
+        "n": 3,
+        "label": "العملة"
+      },
+      {
+        "n": 4,
+        "label": "إنشاء"
+      }
+    ]
+  },
+  "ch05-project-create-ar": {
+    "file": "kayanos-guide/figures/screens/ch05-project-create-ar.png",
+    "url": "https://test2.kayanos.app/apps/projects/pm_core/pm_projects/add?tab=overview",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1276,
+    "scale": 2,
+    "capturedAt": "2026-10-19T12:41:15.504Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "نظرة عامة *"
+      },
+      {
+        "n": 2,
+        "label": "ميثاق المشروع *"
+      },
+      {
+        "n": 3,
+        "label": "الإطار *"
+      },
+      {
+        "n": 4,
+        "label": "الرمز"
+      },
+      {
+        "n": 5,
+        "label": "إنشاء"
+      }
+    ]
+  },
+  "ch05-project-framework-ar": {
+    "file": "kayanos-guide/figures/screens/ch05-project-framework-ar.png",
+    "url": "https://test2.kayanos.app/apps/projects/pm_core/pm_projects/add?tab=framework",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-19T12:47:15.443Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الإطار *"
+      },
+      {
+        "n": 2,
+        "label": "الإطار المنهجي"
+      },
+      {
+        "n": 3,
+        "label": "نهج التسليم"
+      },
+      {
+        "n": 4,
+        "label": "إنشاء"
+      }
+    ]
+  },
+  "ch05-project-charter-ar": {
+    "file": "kayanos-guide/figures/screens/ch05-project-charter-ar.png",
+    "url": "https://test2.kayanos.app/apps/projects/pm_core/pm_projects/add?tab=charter",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1128,
+    "scale": 2,
+    "capturedAt": "2026-10-19T12:48:53.088Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "ميثاق المشروع *"
+      },
+      {
+        "n": 2,
+        "label": "مدير المشروع"
+      },
+      {
+        "n": 3,
+        "label": "الأولوية"
+      },
+      {
+        "n": 4,
+        "label": "إنشاء"
+      }
+    ]
+  },
+  "ch06-entities-en": {
+    "file": "kayanos-guide/figures/screens/ch06-entities-en.png",
+    "url": "https://test2.kayanos.app/entities",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:25:41.408Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Search"
+      },
+      {
+        "n": 2,
+        "label": "Guide QA Visit requests"
+      },
+      {
+        "n": 3,
+        "label": "Add Entity"
+      },
+      {
+        "n": 4,
+        "label": "AI Entity Builder"
+      }
+    ]
+  },
+  "ch06-ws-overview-en": {
+    "file": "kayanos-guide/figures/screens/ch06-ws-overview-en.png",
+    "url": "https://test2.kayanos.app/entities/guide_qa_visit_requests/edit?section=overview",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:25:55.418Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Published · no unpublished changes"
+      },
+      {
+        "n": 2,
+        "label": "Before you publish"
+      },
+      {
+        "n": 3,
+        "label": "Preview as user"
+      },
+      {
+        "n": 4,
+        "label": "Review & publish"
+      }
+    ]
+  },
+  "ch06-ws-fields-en": {
+    "file": "kayanos-guide/figures/screens/ch06-ws-fields-en.png",
+    "url": "https://test2.kayanos.app/entities/guide_qa_visit_requests/edit?section=fields&_t=1792409166742&item=new_date",
+    "lang": "en",
+    "width": 1440,
+    "height": 1490,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:26:12.789Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Add field"
+      },
+      {
+        "n": 2,
+        "label": "Date Visit date Main panel"
+      },
+      {
+        "n": 3,
+        "label": "Enter text"
+      },
+      {
+        "n": 4,
+        "label": "Calculated"
+      },
+      {
+        "n": 5,
+        "label": "Only when…"
+      }
+    ]
+  },
+  "ch06-ws-record-page-en": {
+    "file": "kayanos-guide/figures/screens/ch06-ws-record-page-en.png",
+    "url": "https://test2.kayanos.app/entities/guide_qa_visit_requests/edit?section=recordPage",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:59:53.783Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Find a field"
+      },
+      {
+        "n": 2,
+        "label": "Tab"
+      },
+      {
+        "n": 3,
+        "label": "Sample: ecpdq2b255gdytb4x3huk"
+      },
+      {
+        "n": 4,
+        "label": "Phone"
+      }
+    ]
+  },
+  "ch06-ws-lists-en": {
+    "file": "kayanos-guide/figures/screens/ch06-ws-lists-en.png",
+    "url": "https://test2.kayanos.app/entities/guide_qa_visit_requests/edit?section=lists",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:26:42.098Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "List views"
+      },
+      {
+        "n": 2,
+        "label": "Show saved view tabs on the list"
+      },
+      {
+        "n": 3,
+        "label": "Add figure"
+      }
+    ]
+  },
+  "ch06-ws-rules-en": {
+    "file": "kayanos-guide/figures/screens/ch06-ws-rules-en.png",
+    "url": "https://test2.kayanos.app/entities/guide_qa_visit_requests/edit?section=rules",
+    "lang": "en",
+    "width": 1440,
+    "height": 1203,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:26:56.965Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Add rule"
+      },
+      {
+        "n": 2,
+        "label": "Limits"
+      },
+      {
+        "n": 3,
+        "label": "Date windows"
+      }
+    ]
+  },
+  "ch06-ws-access-en": {
+    "file": "kayanos-guide/figures/screens/ch06-ws-access-en.png",
+    "url": "https://test2.kayanos.app/entities/guide_qa_visit_requests/edit?section=access",
+    "lang": "en",
+    "width": 1440,
+    "height": 2524,
+    "scale": 2,
+    "capturedAt": "2026-10-19T12:00:08.036Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Open in Settings › Roles"
+      },
+      {
+        "n": 2,
+        "label": "Field access"
+      },
+      {
+        "n": 3,
+        "label": "Check someone’s access"
+      },
+      {
+        "n": 4,
+        "label": "Add verb"
+      }
+    ]
+  },
+  "ch06-ws-movement-en": {
+    "file": "kayanos-guide/figures/screens/ch06-ws-movement-en.png",
+    "url": "https://test2.kayanos.app/entities/guide_qa_visit_requests/edit?section=movement",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:27:26.597Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Off"
+      },
+      {
+        "n": 2,
+        "label": "Before you start"
+      },
+      {
+        "n": 3,
+        "label": "Set up movement"
+      }
+    ]
+  },
+  "ch06-ws-actions-en": {
+    "file": "kayanos-guide/figures/screens/ch06-ws-actions-en.png",
+    "url": "https://test2.kayanos.app/entities/guide_qa_visit_requests/edit?section=actions",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:27:40.468Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Add action"
+      },
+      {
+        "n": 2,
+        "label": "Automations"
+      }
+    ]
+  },
+  "ch06-ws-advanced-en": {
+    "file": "kayanos-guide/figures/screens/ch06-ws-advanced-en.png",
+    "url": "https://test2.kayanos.app/entities/guide_qa_visit_requests/edit?section=advanced",
+    "lang": "en",
+    "width": 1440,
+    "height": 1942,
+    "scale": 2,
+    "capturedAt": "2026-10-19T12:00:36.018Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Record name"
+      },
+      {
+        "n": 2,
+        "label": "Unique values"
+      },
+      {
+        "n": 3,
+        "label": "Parent records"
+      },
+      {
+        "n": 4,
+        "label": "Where it shows"
+      },
+      {
+        "n": 5,
+        "label": "Definition file"
+      }
+    ]
+  },
+  "ch06-records-en": {
+    "file": "kayanos-guide/figures/screens/ch06-records-en.png",
+    "url": "https://test2.kayanos.app/apps/misc/misc/guide_qa_visit_requests",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-19T12:00:56.758Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Calendar"
+      },
+      {
+        "n": 2,
+        "label": "Add"
+      },
+      {
+        "n": 3,
+        "label": "Visit date"
+      }
+    ]
+  },
+  "ch06-navigation-en": {
+    "file": "kayanos-guide/figures/screens/ch06-navigation-en.png",
+    "url": "https://test2.kayanos.app/builder/navigation",
+    "lang": "en",
+    "width": 1440,
+    "height": 2094,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:28:41.820Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Add app"
+      },
+      {
+        "n": 2,
+        "label": "Search apps, sections and modules"
+      },
+      {
+        "n": 3,
+        "label": "Save changes"
+      }
+    ]
+  },
+  "ch06-work-navigation-en": {
+    "file": "kayanos-guide/figures/screens/ch06-work-navigation-en.png",
+    "url": "https://test2.kayanos.app/builder/work-navigation",
+    "lang": "en",
+    "width": 1440,
+    "height": 1116,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:28:56.563Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Features"
+      },
+      {
+        "n": 2,
+        "label": "Sources"
+      },
+      {
+        "n": 3,
+        "label": "Save"
+      }
+    ]
+  },
+  "ch06-forms-en": {
+    "file": "kayanos-guide/figures/screens/ch06-forms-en.png",
+    "url": "https://test2.kayanos.app/forms",
+    "lang": "en",
+    "width": 1440,
+    "height": 3200,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:29:13.930Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Create Form"
+      },
+      {
+        "n": 2,
+        "label": "Import"
+      },
+      {
+        "n": 3,
+        "label": "Search"
+      }
+    ]
+  },
+  "ch06-services-en": {
+    "file": "kayanos-guide/figures/screens/ch06-services-en.png",
+    "url": "https://test2.kayanos.app/services",
+    "lang": "en",
+    "width": 1440,
+    "height": 2378,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:29:28.187Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "New service"
+      },
+      {
+        "n": 2,
+        "label": "Intake desk"
+      },
+      {
+        "n": 3,
+        "label": "Service performance"
+      },
+      {
+        "n": 4,
+        "label": "Internal forms"
+      }
+    ]
+  },
+  "ch06-internal-sops-en": {
+    "file": "kayanos-guide/figures/screens/ch06-internal-sops-en.png",
+    "url": "https://test2.kayanos.app/internal-sop/",
+    "lang": "en",
+    "width": 1440,
+    "height": 3200,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:29:50.292Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "New SOP"
+      },
+      {
+        "n": 2,
+        "label": "Runs"
+      },
+      {
+        "n": 3,
+        "label": "Connections"
+      }
+    ]
+  },
+  "ch06-bots-en": {
+    "file": "kayanos-guide/figures/screens/ch06-bots-en.png",
+    "url": "https://test2.kayanos.app/bots",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:33:03.655Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Add Bot"
+      },
+      {
+        "n": 2,
+        "label": "Search"
+      }
+    ]
+  },
+  "ch06-docx-en": {
+    "file": "kayanos-guide/figures/screens/ch06-docx-en.png",
+    "url": "https://test2.kayanos.app/builder/docx-templates",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:33:18.118Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Create template"
+      },
+      {
+        "n": 2,
+        "label": "Managed templates"
+      },
+      {
+        "n": 3,
+        "label": "Open"
+      }
+    ]
+  },
+  "ch06-xlsx-en": {
+    "file": "kayanos-guide/figures/screens/ch06-xlsx-en.png",
+    "url": "https://test2.kayanos.app/builder/xlsx-templates",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:33:34.631Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "New XLSX template"
+      },
+      {
+        "n": 2,
+        "label": "Workbook templates"
+      },
+      {
+        "n": 3,
+        "label": "Open"
+      }
+    ]
+  },
+  "ch06-print-en": {
+    "file": "kayanos-guide/figures/screens/ch06-print-en.png",
+    "url": "https://test2.kayanos.app/builder/print-templates",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:33:49.201Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Identities & letterheads"
+      },
+      {
+        "n": 2,
+        "label": "Uploaded Word templates"
+      },
+      {
+        "n": 3,
+        "label": "Open in the builder"
+      }
+    ]
+  },
+  "ch06-identities-en": {
+    "file": "kayanos-guide/figures/screens/ch06-identities-en.png",
+    "url": "https://test2.kayanos.app/builder/identities",
+    "lang": "en",
+    "width": 1440,
+    "height": 1173,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:34:03.495Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "New identity"
+      },
+      {
+        "n": 2,
+        "label": "Letterheads (3)"
+      },
+      {
+        "n": 3,
+        "label": "Logos"
+      },
+      {
+        "n": 4,
+        "label": "Save"
+      }
+    ]
+  },
+  "ch06-dashboards-en": {
+    "file": "kayanos-guide/figures/screens/ch06-dashboards-en.png",
+    "url": "https://test2.kayanos.app/dashboards",
+    "lang": "en",
+    "width": 1440,
+    "height": 1352,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:34:18.319Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Create Dashboard"
+      },
+      {
+        "n": 2,
+        "label": "Create Folder"
+      }
+    ]
+  },
+  "ch06-pages-en": {
+    "file": "kayanos-guide/figures/screens/ch06-pages-en.png",
+    "url": "https://test2.kayanos.app/builder/pages",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:34:33.036Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Add page"
+      }
+    ]
+  },
+  "ch06-ai-dashboards-en": {
+    "file": "kayanos-guide/figures/screens/ch06-ai-dashboards-en.png",
+    "url": "https://test2.kayanos.app/ai-dashboards",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:38:00.305Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": ""
+      }
+    ]
+  },
+  "ch06-ai-reports-en": {
+    "file": "kayanos-guide/figures/screens/ch06-ai-reports-en.png",
+    "url": "https://test2.kayanos.app/ai-reports",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:41:27.128Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": ""
+      }
+    ]
+  },
+  "ch06-entities-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-entities-ar.png",
+    "url": "https://test2.kayanos.app/entities",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:42:04.967Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "بحث"
+      },
+      {
+        "n": 2,
+        "label": "طلبات زيارة ضمان الجودة للمرشد"
+      },
+      {
+        "n": 3,
+        "label": "إضافة كيان"
+      },
+      {
+        "n": 4,
+        "label": "منشئ الكيانات بالذكاء الاصطناعي"
+      }
+    ]
+  },
+  "ch06-ws-overview-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-ws-overview-ar.png",
+    "url": "https://test2.kayanos.app/entities/guide_qa_visit_requests/edit?section=overview",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:42:20.971Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "منشور · لا توجد تغييرات غير منشورة"
+      },
+      {
+        "n": 2,
+        "label": "قبل النشر"
+      },
+      {
+        "n": 3,
+        "label": "معاينة كمستخدم"
+      },
+      {
+        "n": 4,
+        "label": "المراجعة والنشر"
+      }
+    ]
+  },
+  "ch06-ws-fields-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-ws-fields-ar.png",
+    "url": "https://test2.kayanos.app/entities/guide_qa_visit_requests/edit?section=fields&_t=1792410152166&item=new_date",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1470,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:42:37.024Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إضافة حقل"
+      },
+      {
+        "n": 2,
+        "label": "تاريخ تاريخ الزيارة اللوحة الرئيسية"
+      },
+      {
+        "n": 3,
+        "label": "أدخل النص"
+      },
+      {
+        "n": 4,
+        "label": "محسوبة"
+      },
+      {
+        "n": 5,
+        "label": "فقط عندما…"
+      }
+    ]
+  },
+  "ch06-ws-record-page-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-ws-record-page-ar.png",
+    "url": "https://test2.kayanos.app/entities/guide_qa_visit_requests/edit?section=recordPage",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-19T12:01:35.220Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "ابحث عن حقل"
+      },
+      {
+        "n": 2,
+        "label": "تبويب"
+      },
+      {
+        "n": 3,
+        "label": "العينة: ecpdq2b255gdytb4x3huk"
+      },
+      {
+        "n": 4,
+        "label": "الهاتف"
+      }
+    ]
+  },
+  "ch06-ws-lists-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-ws-lists-ar.png",
+    "url": "https://test2.kayanos.app/entities/guide_qa_visit_requests/edit?section=lists",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:43:04.818Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "طرق عرض القوائم"
+      },
+      {
+        "n": 2,
+        "label": "إظهار تبويبات العروض المحفوظة في القائمة"
+      },
+      {
+        "n": 3,
+        "label": "إضافة مؤشر"
+      }
+    ]
+  },
+  "ch06-ws-rules-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-ws-rules-ar.png",
+    "url": "https://test2.kayanos.app/entities/guide_qa_visit_requests/edit?section=rules",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1127,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:43:18.747Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إضافة قاعدة"
+      },
+      {
+        "n": 2,
+        "label": "الحدود"
+      },
+      {
+        "n": 3,
+        "label": "النطاقات الزمنية"
+      }
+    ]
+  },
+  "ch06-ws-access-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-ws-access-ar.png",
+    "url": "https://test2.kayanos.app/entities/guide_qa_visit_requests/edit?section=access",
+    "lang": "ar",
+    "width": 1440,
+    "height": 2488,
+    "scale": 2,
+    "capturedAt": "2026-10-19T12:01:49.407Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "فتح في الإعدادات › الأدوار"
+      },
+      {
+        "n": 2,
+        "label": "صلاحيات الحقول"
+      },
+      {
+        "n": 3,
+        "label": "التحقق من صلاحيات شخص"
+      },
+      {
+        "n": 4,
+        "label": "إضافة فعل"
+      }
+    ]
+  },
+  "ch06-ws-movement-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-ws-movement-ar.png",
+    "url": "https://test2.kayanos.app/entities/guide_qa_visit_requests/edit?section=movement",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:43:47.158Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "متوقفة"
+      },
+      {
+        "n": 2,
+        "label": "قبل البدء"
+      },
+      {
+        "n": 3,
+        "label": "إعداد الحركة"
+      }
+    ]
+  },
+  "ch06-ws-actions-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-ws-actions-ar.png",
+    "url": "https://test2.kayanos.app/entities/guide_qa_visit_requests/edit?section=actions",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:44:01.033Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إضافة إجراء"
+      },
+      {
+        "n": 2,
+        "label": "الأتمتة"
+      }
+    ]
+  },
+  "ch06-ws-advanced-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-ws-advanced-ar.png",
+    "url": "https://test2.kayanos.app/entities/guide_qa_visit_requests/edit?section=advanced",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1848,
+    "scale": 2,
+    "capturedAt": "2026-10-19T12:02:17.501Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "اسم السجل"
+      },
+      {
+        "n": 2,
+        "label": "القيم الفريدة"
+      },
+      {
+        "n": 3,
+        "label": "السجلات الأم"
+      },
+      {
+        "n": 4,
+        "label": "أين يظهر"
+      },
+      {
+        "n": 5,
+        "label": "ملف التعريف"
+      }
+    ]
+  },
+  "ch06-records-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-records-ar.png",
+    "url": "https://test2.kayanos.app/apps/misc/misc/guide_qa_visit_requests",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-19T12:02:37.591Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "التقويم"
+      },
+      {
+        "n": 2,
+        "label": "إضافة"
+      },
+      {
+        "n": 3,
+        "label": "تاريخ الزيارة"
+      }
+    ]
+  },
+  "ch06-navigation-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-navigation-ar.png",
+    "url": "https://test2.kayanos.app/builder/navigation",
+    "lang": "ar",
+    "width": 1440,
+    "height": 2094,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:44:58.730Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إضافة تطبيق"
+      },
+      {
+        "n": 2,
+        "label": "ابحث في التطبيقات والأقسام والوحدات"
+      },
+      {
+        "n": 3,
+        "label": "حفظ التغييرات"
+      }
+    ]
+  },
+  "ch06-work-navigation-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-work-navigation-ar.png",
+    "url": "https://test2.kayanos.app/builder/work-navigation",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1116,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:45:12.749Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الميزات"
+      },
+      {
+        "n": 2,
+        "label": "المصادر"
+      },
+      {
+        "n": 3,
+        "label": "حفظ"
+      }
+    ]
+  },
+  "ch06-forms-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-forms-ar.png",
+    "url": "https://test2.kayanos.app/forms",
+    "lang": "ar",
+    "width": 1440,
+    "height": 3200,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:45:29.318Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إنشاء نموذج"
+      },
+      {
+        "n": 2,
+        "label": "استيراد"
+      },
+      {
+        "n": 3,
+        "label": "بحث"
+      }
+    ]
+  },
+  "ch06-services-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-services-ar.png",
+    "url": "https://test2.kayanos.app/services",
+    "lang": "ar",
+    "width": 1440,
+    "height": 2378,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:45:43.533Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "خدمة جديدة"
+      },
+      {
+        "n": 2,
+        "label": "مكتب الاستقبال"
+      },
+      {
+        "n": 3,
+        "label": "أداء الخدمات"
+      },
+      {
+        "n": 4,
+        "label": "نماذج داخلية"
+      }
+    ]
+  },
+  "ch06-internal-sops-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-internal-sops-ar.png",
+    "url": "https://test2.kayanos.app/internal-sop/",
+    "lang": "ar",
+    "width": 1440,
+    "height": 3200,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:46:04.803Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إجراء جديد"
+      },
+      {
+        "n": 2,
+        "label": "عمليات التشغيل"
+      },
+      {
+        "n": 3,
+        "label": "الاتصالات"
+      }
+    ]
+  },
+  "ch06-bots-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-bots-ar.png",
+    "url": "https://test2.kayanos.app/bots",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:49:19.358Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إضافة بوت"
+      },
+      {
+        "n": 2,
+        "label": "بحث"
+      }
+    ]
+  },
+  "ch06-docx-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-docx-ar.png",
+    "url": "https://test2.kayanos.app/builder/docx-templates",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:49:33.229Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إنشاء قالب"
+      },
+      {
+        "n": 2,
+        "label": "القوالب المُدارة"
+      },
+      {
+        "n": 3,
+        "label": "فتح"
+      }
+    ]
+  },
+  "ch06-xlsx-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-xlsx-ar.png",
+    "url": "https://test2.kayanos.app/builder/xlsx-templates",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:49:47.131Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "قالب XLSX جديد"
+      },
+      {
+        "n": 2,
+        "label": "قوالب المصنفات"
+      },
+      {
+        "n": 3,
+        "label": "فتح"
+      }
+    ]
+  },
+  "ch06-print-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-print-ar.png",
+    "url": "https://test2.kayanos.app/builder/print-templates",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:50:00.981Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الهويات والترويسات"
+      },
+      {
+        "n": 2,
+        "label": "قوالب Word المرفوعة"
+      },
+      {
+        "n": 3,
+        "label": "فتح في المنشئ"
+      }
+    ]
+  },
+  "ch06-identities-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-identities-ar.png",
+    "url": "https://test2.kayanos.app/builder/identities",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1151,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:50:15.003Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "هوية جديدة"
+      },
+      {
+        "n": 2,
+        "label": "الترويسات (3)"
+      },
+      {
+        "n": 3,
+        "label": "الشعارات"
+      },
+      {
+        "n": 4,
+        "label": "حفظ"
+      }
+    ]
+  },
+  "ch06-dashboards-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-dashboards-ar.png",
+    "url": "https://test2.kayanos.app/dashboards",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1352,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:50:29.169Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إنشاء لوحة معلومات"
+      },
+      {
+        "n": 2,
+        "label": "إنشاء مجلد"
+      }
+    ]
+  },
+  "ch06-pages-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-pages-ar.png",
+    "url": "https://test2.kayanos.app/builder/pages",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:50:43.049Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إضافة صفحة"
+      }
+    ]
+  },
+  "ch06-ai-dashboards-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-ai-dashboards-ar.png",
+    "url": "https://test2.kayanos.app/ai-dashboards",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:54:08.785Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": ""
+      }
+    ]
+  },
+  "ch06-ai-reports-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-ai-reports-ar.png",
+    "url": "https://test2.kayanos.app/ai-reports",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-19T11:57:34.557Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": ""
+      }
+    ]
+  },
+  "ch06-ws-import-en": {
+    "file": "kayanos-guide/figures/screens/ch06-ws-import-en.png",
+    "url": "https://test2.kayanos.app/entities/guide_qa_visit_requests/edit?section=import",
+    "lang": "en",
+    "width": 1440,
+    "height": 1022,
+    "scale": 2,
+    "capturedAt": "2026-10-19T12:00:21.983Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Match rows to records by a key"
+      },
+      {
+        "n": 2,
+        "label": "+ Add key"
+      },
+      {
+        "n": 3,
+        "label": "Checks before publishing"
+      }
+    ]
+  },
+  "ch06-ws-import-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-ws-import-ar.png",
+    "url": "https://test2.kayanos.app/entities/guide_qa_visit_requests/edit?section=import",
+    "lang": "ar",
+    "width": 1440,
+    "height": 990,
+    "scale": 2,
+    "capturedAt": "2026-10-19T12:02:03.364Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "مطابقة الصفوف مع السجلات بمفتاح"
+      },
+      {
+        "n": 2,
+        "label": "+ إضافة مفتاح"
+      },
+      {
+        "n": 3,
+        "label": "فحوص قبل النشر"
+      }
+    ]
   }
 }

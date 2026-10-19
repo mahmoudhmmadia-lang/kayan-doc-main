@@ -1,0 +1,3222 @@
+{
+  "verifiedFrom": "Current repository seed definitions; live checks tracked separately",
+  "pages": [
+    {
+      "key": "plans",
+      "slug": "plans",
+      "title": {
+        "en": "Plans",
+        "ar": "الخطط",
+        "tr": "Planlar",
+        "und": "Plans"
+      },
+      "source": "scripts/seed-entities/entities/plans.ts",
+      "navigation": true,
+      "condition": null,
+      "required": [
+        {
+          "key": "plan_category",
+          "conditional": false
+        },
+        {
+          "key": "plan_type",
+          "conditional": true
+        },
+        {
+          "key": "primary_target_id",
+          "conditional": true
+        },
+        {
+          "key": "base_framework",
+          "conditional": true
+        },
+        {
+          "key": "name",
+          "conditional": true
+        },
+        {
+          "key": "priority",
+          "conditional": true
+        },
+        {
+          "key": "start_date",
+          "conditional": true
+        },
+        {
+          "key": "end_date",
+          "conditional": true
+        },
+        {
+          "key": "owner",
+          "conditional": true
+        },
+        {
+          "key": "action_source_profile",
+          "conditional": true
+        },
+        {
+          "key": "budget_constraint_type",
+          "conditional": true
+        },
+        {
+          "key": "budget_envelope_amount",
+          "conditional": true
+        },
+        {
+          "key": "budget_envelope_currency_id",
+          "conditional": true
+        },
+        {
+          "key": "mandatory_budget_link_id",
+          "conditional": true
+        },
+        {
+          "key": "mandate_statement",
+          "conditional": true
+        },
+        {
+          "key": "service_scope_summary",
+          "conditional": true
+        },
+        {
+          "key": "workload_planning_method",
+          "conditional": true
+        },
+        {
+          "key": "effective_date",
+          "conditional": true
+        },
+        {
+          "key": "jurisdiction_type",
+          "conditional": true
+        },
+        {
+          "key": "policy_type",
+          "conditional": true
+        },
+        {
+          "key": "enforcement_level",
+          "conditional": true
+        }
+      ],
+      "children": [
+        "pm_budgets",
+        "planning_themes",
+        "planning_objectives",
+        "planning_initiatives",
+        "planning_okrs",
+        "planning_key_results",
+        "planning_key_result_checkins",
+        "planning_hoshin_items",
+        "planning_hoshin_x_matrix_links",
+        "planning_hoshin_catchball_exchanges",
+        "planning_hoshin_countermeasures",
+        "planning_assumptions",
+        "planning_milestones",
+        "pm_wbs_items",
+        "pm_deliverables",
+        "pm_dependencies",
+        "planning_dependencies",
+        "planning_resources",
+        "pm_resource_allocations",
+        "planning_reviews",
+        "planning_approvals",
+        "planning_decisions",
+        "planning_risks",
+        "pm_procurements",
+        "pm_budget_lines",
+        "pm_budget_line_periods",
+        "pm_funding_sources",
+        "performance_indicators",
+        "planning_time_targets",
+        "planning_reporting_periods",
+        "planning_data_sources",
+        "planning_evidence_items",
+        "planning_evaluation_questions",
+        "planning_evaluation_findings",
+        "planning_management_responses",
+        "planning_learning_agenda_items",
+        "planning_learning_insights",
+        "planning_improvement_opportunities",
+        "pm_theory_of_change",
+        "pm_logframes",
+        "pm_logframe_goals",
+        "pm_logframe_outcomes",
+        "pm_logframe_outputs",
+        "pm_logframe_activities",
+        "planning_scenarios",
+        "planning_bia_entries",
+        "planning_procedures",
+        "planning_exercises",
+        "planning_controls",
+        "planning_control_assessments",
+        "planning_findings",
+        "planning_incidents",
+        "planning_incident_events"
+      ]
+    },
+    {
+      "key": "pm_projects",
+      "slug": "projects",
+      "title": {
+        "en": "Projects",
+        "ar": "المشاريع",
+        "tr": "Projeler",
+        "und": "Projects"
+      },
+      "source": "scripts/seed-entities/entities/pm_projects.ts",
+      "navigation": true,
+      "condition": null,
+      "required": [
+        {
+          "key": "code",
+          "conditional": false
+        },
+        {
+          "key": "name",
+          "conditional": false
+        },
+        {
+          "key": "project_framework",
+          "conditional": false
+        },
+        {
+          "key": "delivery_approach",
+          "conditional": false
+        },
+        {
+          "key": "project_manager_id",
+          "conditional": false
+        },
+        {
+          "key": "priority",
+          "conditional": false
+        }
+      ],
+      "children": [
+        "pm_budgets",
+        "planning_themes",
+        "planning_objectives",
+        "planning_initiatives",
+        "planning_okrs",
+        "planning_key_results",
+        "planning_key_result_checkins",
+        "planning_hoshin_items",
+        "planning_hoshin_x_matrix_links",
+        "planning_hoshin_catchball_exchanges",
+        "planning_hoshin_countermeasures",
+        "planning_assumptions",
+        "planning_milestones",
+        "pm_phases",
+        "pm_wbs_items",
+        "pm_deliverables",
+        "pm_requirements",
+        "pm_dependencies",
+        "planning_dependencies",
+        "pm_baselines",
+        "planning_resources",
+        "pm_team_roles",
+        "pm_raci_entries",
+        "pm_resource_allocations",
+        "pm_stakeholders",
+        "pm_communication_plan",
+        "planning_reviews",
+        "planning_approvals",
+        "planning_decisions",
+        "planning_risks",
+        "pm_project_risks",
+        "pm_issues",
+        "pm_quality_criteria",
+        "pm_gate_reviews",
+        "pm_change_requests",
+        "pm_meeting_decisions",
+        "pm_lessons_learned",
+        "pm_status_reports",
+        "pm_sprints",
+        "pm_definition_of_done",
+        "pm_procurements",
+        "pm_budget_lines",
+        "pm_budget_line_periods",
+        "pm_funding_sources",
+        "pm_expenditures",
+        "performance_indicators",
+        "planning_time_targets",
+        "planning_reporting_periods",
+        "planning_data_sources",
+        "planning_evidence_items",
+        "planning_evaluation_questions",
+        "planning_evaluation_findings",
+        "planning_management_responses",
+        "planning_learning_agenda_items",
+        "planning_learning_insights",
+        "planning_improvement_opportunities",
+        "pm_theory_of_change",
+        "pm_logframes",
+        "pm_logframe_goals",
+        "pm_logframe_outcomes",
+        "pm_logframe_outputs",
+        "pm_logframe_activities",
+        "pm_beneficiaries",
+        "planning_scenarios",
+        "planning_bia_entries",
+        "planning_procedures",
+        "planning_exercises",
+        "planning_controls",
+        "planning_control_assessments",
+        "planning_findings",
+        "planning_incidents",
+        "planning_incident_events"
+      ]
+    },
+    {
+      "key": "pm_portfolios",
+      "slug": "portfolios",
+      "title": {
+        "en": "Portfolios",
+        "ar": "المحافظ",
+        "tr": "Portföyler",
+        "und": "Portfolios"
+      },
+      "source": "scripts/seed-entities/entities/pm_portfolios.ts",
+      "navigation": true,
+      "condition": null,
+      "required": [
+        {
+          "key": "code",
+          "conditional": false
+        },
+        {
+          "key": "name",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        },
+        {
+          "key": "owner_id",
+          "conditional": false
+        }
+      ],
+      "children": [
+        "pm_projects",
+        "pm_programs",
+        "pm_budgets",
+        "planning_themes",
+        "planning_objectives",
+        "planning_initiatives",
+        "planning_okrs",
+        "planning_key_results",
+        "planning_key_result_checkins",
+        "planning_hoshin_items",
+        "planning_hoshin_x_matrix_links",
+        "planning_hoshin_catchball_exchanges",
+        "planning_hoshin_countermeasures",
+        "planning_assumptions",
+        "planning_milestones",
+        "pm_wbs_items",
+        "pm_deliverables",
+        "pm_dependencies",
+        "planning_dependencies",
+        "planning_resources",
+        "pm_resource_allocations",
+        "planning_reviews",
+        "planning_approvals",
+        "planning_decisions",
+        "planning_risks",
+        "pm_project_risks",
+        "pm_procurements",
+        "pm_budget_lines",
+        "pm_budget_line_periods",
+        "pm_funding_sources",
+        "performance_indicators",
+        "planning_time_targets",
+        "planning_reporting_periods",
+        "planning_data_sources",
+        "planning_evidence_items",
+        "planning_evaluation_questions",
+        "planning_evaluation_findings",
+        "planning_management_responses",
+        "planning_learning_agenda_items",
+        "planning_learning_insights",
+        "planning_improvement_opportunities",
+        "pm_theory_of_change",
+        "pm_logframes",
+        "pm_logframe_goals",
+        "pm_logframe_outcomes",
+        "pm_logframe_outputs",
+        "pm_logframe_activities",
+        "planning_scenarios",
+        "planning_bia_entries",
+        "planning_procedures",
+        "planning_exercises",
+        "planning_controls",
+        "planning_control_assessments",
+        "planning_findings",
+        "planning_incidents",
+        "planning_incident_events"
+      ]
+    },
+    {
+      "key": "pm_programs",
+      "slug": "programs",
+      "title": {
+        "en": "Programs",
+        "ar": "البرامج",
+        "tr": "Programlar",
+        "und": "Programs"
+      },
+      "source": "scripts/seed-entities/entities/pm_programs.ts",
+      "navigation": true,
+      "condition": null,
+      "required": [
+        {
+          "key": "code",
+          "conditional": false
+        },
+        {
+          "key": "name",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        },
+        {
+          "key": "program_manager_id",
+          "conditional": false
+        }
+      ],
+      "children": [
+        "pm_projects",
+        "pm_budgets",
+        "planning_themes",
+        "planning_objectives",
+        "planning_initiatives",
+        "planning_okrs",
+        "planning_key_results",
+        "planning_key_result_checkins",
+        "planning_hoshin_items",
+        "planning_hoshin_x_matrix_links",
+        "planning_hoshin_catchball_exchanges",
+        "planning_hoshin_countermeasures",
+        "planning_assumptions",
+        "planning_milestones",
+        "pm_wbs_items",
+        "pm_deliverables",
+        "pm_dependencies",
+        "planning_dependencies",
+        "planning_resources",
+        "pm_resource_allocations",
+        "planning_reviews",
+        "planning_approvals",
+        "planning_decisions",
+        "planning_risks",
+        "pm_project_risks",
+        "pm_procurements",
+        "pm_budget_lines",
+        "pm_budget_line_periods",
+        "pm_funding_sources",
+        "performance_indicators",
+        "planning_time_targets",
+        "planning_reporting_periods",
+        "planning_data_sources",
+        "planning_evidence_items",
+        "planning_evaluation_questions",
+        "planning_evaluation_findings",
+        "planning_management_responses",
+        "planning_learning_agenda_items",
+        "planning_learning_insights",
+        "planning_improvement_opportunities",
+        "pm_theory_of_change",
+        "pm_logframes",
+        "pm_logframe_goals",
+        "pm_logframe_outcomes",
+        "pm_logframe_outputs",
+        "pm_logframe_activities",
+        "planning_scenarios",
+        "planning_bia_entries",
+        "planning_procedures",
+        "planning_exercises",
+        "planning_controls",
+        "planning_control_assessments",
+        "planning_findings",
+        "planning_incidents",
+        "planning_incident_events"
+      ]
+    },
+    {
+      "key": "pm_budgets",
+      "slug": "budgets",
+      "title": {
+        "en": "Budgets",
+        "ar": "الميزانيات",
+        "tr": "Bütçeler",
+        "und": "Budgets"
+      },
+      "source": "scripts/seed-entities/entities/pm_budgets.ts",
+      "navigation": true,
+      "condition": null,
+      "required": [
+        {
+          "key": "name",
+          "conditional": false
+        },
+        {
+          "key": "code",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        },
+        {
+          "key": "version_number",
+          "conditional": false
+        },
+        {
+          "key": "is_current",
+          "conditional": false
+        },
+        {
+          "key": "currency_id",
+          "conditional": false
+        },
+        {
+          "key": "start_date",
+          "conditional": false
+        },
+        {
+          "key": "end_date",
+          "conditional": false
+        },
+        {
+          "key": "prepared_by",
+          "conditional": false
+        }
+      ],
+      "children": [
+        "pm_budget_lines",
+        "pm_funding_sources",
+        "pm_expenditures"
+      ]
+    },
+    {
+      "key": "pm_cost_categories",
+      "slug": "cost-categories",
+      "title": {
+        "en": "Cost Categories",
+        "ar": "فئات التكلفة",
+        "tr": "Maliyet Kategorileri",
+        "und": "Cost Categories"
+      },
+      "source": "scripts/seed-entities/entities/pm_cost_categories.ts",
+      "navigation": true,
+      "condition": null,
+      "required": [
+        {
+          "key": "code",
+          "conditional": false
+        },
+        {
+          "key": "name",
+          "conditional": false
+        },
+        {
+          "key": "category_type",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "planning_themes",
+      "slug": "planning-themes",
+      "title": {
+        "en": "Planning Themes",
+        "ar": "المحاور التخطيطية",
+        "tr": "Planlama Temaları",
+        "und": "Planning Themes"
+      },
+      "source": "scripts/seed-entities/entities/planning_themes.ts",
+      "navigation": false,
+      "parent": "plans",
+      "tab": "framework",
+      "condition": "planningIsPlanContext($relations.context_id) ? ((($relations.context_id.plan_category == \"direction\")) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "context_id",
+          "conditional": true
+        },
+        {
+          "key": "title",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "planning_objectives",
+      "slug": "planning-objectives",
+      "title": {
+        "en": "Planning Objectives",
+        "ar": "أهداف التخطيط",
+        "tr": "Planlama Hedefleri",
+        "und": "Planning Objectives"
+      },
+      "source": "scripts/seed-entities/entities/planning_objectives.ts",
+      "navigation": false,
+      "parent": "plans",
+      "tab": "framework",
+      "condition": "planningIsPlanContext($relations.context_id) ? (((($relations.context_id.base_framework == \"basic\" || $relations.context_id.base_framework == \"okrs\" || $relations.context_id.base_framework == \"okr_overlay\" || $relations.context_id.base_framework == \"balanced_scorecard\" || $relations.context_id.base_framework == \"hoshin\" || $relations.context_id.base_framework == \"policy_logic\" || $relations.context_id.base_framework == \"roadmap_timeline\" || $relations.context_id.base_framework == \"theory_of_change\" || $relations.context_id.base_framework == \"results_framework\" || $relations.context_id.base_framework == \"pm_lite\" || $relations.context_id.base_framework == \"pmbok_style\" || $relations.context_id.base_framework == \"logframe\" || $relations.context_id.base_framework == \"portfolio_management\" || $relations.context_id.base_framework == \"action_plan\" || $relations.context_id.base_framework == \"action_register\" || $relations.context_id.base_framework == \"corrective_action\" || $relations.context_id.base_framework == \"improvement_plan\" || $relations.context_id.base_framework == \"work_plan\" || $relations.context_id.base_framework == \"cycle_plan\" || $relations.context_id.base_framework == \"kpi_scorecard\" || $relations.context_id.base_framework == \"service_scorecard\" || $relations.context_id.base_framework == \"me_framework\" || $relations.context_id.base_framework == \"evaluation_framework\" || $relations.context_id.base_framework == \"rbm\" || $relations.context_id.base_framework == \"service_delivery\") || ($relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"basic\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"okrs\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"okr_overlay\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"balanced_scorecard\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"hoshin\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"policy_logic\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"roadmap_timeline\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"theory_of_change\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"results_framework\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"pm_lite\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"pmbok_style\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"logframe\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"portfolio_management\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"action_plan\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"action_register\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"corrective_action\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"improvement_plan\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"work_plan\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"cycle_plan\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"kpi_scorecard\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"service_scorecard\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"me_framework\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"evaluation_framework\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"rbm\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"service_delivery\")))) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "context_id",
+          "conditional": true
+        },
+        {
+          "key": "name",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "planning_initiatives",
+      "slug": "planning-initiatives",
+      "title": {
+        "en": "Planning Initiatives",
+        "ar": "المبادرات التخطيطية",
+        "tr": "Planlama Girişimleri",
+        "und": "Planning Initiatives"
+      },
+      "source": "scripts/seed-entities/entities/planning_initiatives.ts",
+      "navigation": false,
+      "parent": "plans",
+      "tab": "initiatives",
+      "condition": "planningIsPlanContext($relations.context_id) ? ((($relations.context_id.plan_category == \"direction\")) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "context_id",
+          "conditional": true
+        },
+        {
+          "key": "title",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "planning_okrs",
+      "slug": "planning-okrs",
+      "title": {
+        "en": "OKR Cycles",
+        "ar": "دورات OKR",
+        "tr": "OKR Döngüleri",
+        "und": "OKR Cycles"
+      },
+      "source": "scripts/seed-entities/entities/planning_okrs.ts",
+      "navigation": false,
+      "parent": "plans",
+      "tab": "framework",
+      "condition": "planningIsPlanContext($relations.context_id) ? (((($relations.context_id.base_framework == \"okrs\" || $relations.context_id.base_framework == \"okr_overlay\") || ($relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"okrs\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"okr_overlay\")))) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "context_id",
+          "conditional": true
+        },
+        {
+          "key": "name",
+          "conditional": false
+        }
+      ],
+      "children": [
+        "planning_key_results"
+      ]
+    },
+    {
+      "key": "planning_key_results",
+      "slug": "planning-key-results",
+      "title": {
+        "en": "Key Results",
+        "ar": "النتائج الرئيسية",
+        "tr": "Anahtar Sonuçlar",
+        "und": "Key Results"
+      },
+      "source": "scripts/seed-entities/entities/planning_key_results.ts",
+      "navigation": false,
+      "parent": "plans",
+      "tab": "framework",
+      "condition": "planningIsPlanContext($relations.context_id) ? (((($relations.context_id.base_framework == \"okrs\" || $relations.context_id.base_framework == \"okr_overlay\") || ($relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"okrs\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"okr_overlay\")))) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "context_id",
+          "conditional": true
+        },
+        {
+          "key": "okr_id",
+          "conditional": false
+        },
+        {
+          "key": "tracking_mode",
+          "conditional": false
+        },
+        {
+          "key": "name",
+          "conditional": false
+        },
+        {
+          "key": "commitment_type",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "planning_key_result_checkins",
+      "slug": "planning-key-result-checkins",
+      "title": {
+        "en": "Key Result Check-ins",
+        "ar": "متابعات النتائج الرئيسية",
+        "tr": "Anahtar Sonuç Güncellemeleri",
+        "und": "Key Result Check-ins"
+      },
+      "source": "scripts/seed-entities/entities/planning_key_result_checkins.ts",
+      "navigation": false,
+      "parent": "plans",
+      "tab": "framework",
+      "condition": "planningIsPlanContext($relations.context_id) ? (((($relations.context_id.base_framework == \"okrs\" || $relations.context_id.base_framework == \"okr_overlay\") || ($relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"okrs\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"okr_overlay\")))) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "context_id",
+          "conditional": true
+        },
+        {
+          "key": "key_result_id",
+          "conditional": false
+        },
+        {
+          "key": "check_in_date",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "planning_hoshin_items",
+      "slug": "planning-hoshin-items",
+      "title": {
+        "en": "Hoshin Items",
+        "ar": "عناصر هوشين",
+        "tr": "Hoshin Öğeleri",
+        "und": "Hoshin Items"
+      },
+      "source": "scripts/seed-entities/entities/planning_hoshin_items.ts",
+      "navigation": false,
+      "parent": "plans",
+      "tab": "framework",
+      "condition": "planningIsPlanContext($relations.context_id) ? (((($relations.context_id.base_framework == \"hoshin\") || ($relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"hoshin\")))) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "context_id",
+          "conditional": true
+        },
+        {
+          "key": "name",
+          "conditional": false
+        },
+        {
+          "key": "item_type",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "planning_hoshin_x_matrix_links",
+      "slug": "planning-hoshin-x-matrix-links",
+      "title": {
+        "en": "Hoshin X-Matrix Links",
+        "ar": "روابط مصفوفة X لهوشين",
+        "tr": "Hoshin X-Matrisi Bağlantıları",
+        "und": "Hoshin X-Matrix Links"
+      },
+      "source": "scripts/seed-entities/entities/planning_hoshin_x_matrix_links.ts",
+      "navigation": false,
+      "parent": "plans",
+      "tab": "framework",
+      "condition": "planningIsPlanContext($relations.context_id) ? (((($relations.context_id.base_framework == \"hoshin\") || ($relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"hoshin\")))) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "context_id",
+          "conditional": true
+        },
+        {
+          "key": "source_item_id",
+          "conditional": false
+        },
+        {
+          "key": "target_item_id",
+          "conditional": false
+        },
+        {
+          "key": "link_type",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "planning_hoshin_catchball_exchanges",
+      "slug": "planning-hoshin-catchball-exchanges",
+      "title": {
+        "en": "Hoshin Catchball Exchanges",
+        "ar": "تبادلات كاتشبّول لهوشين",
+        "tr": "Hoshin Catchball Değişimleri",
+        "und": "Hoshin Catchball Exchanges"
+      },
+      "source": "scripts/seed-entities/entities/planning_hoshin_catchball_exchanges.ts",
+      "navigation": false,
+      "parent": "plans",
+      "tab": "framework",
+      "condition": "planningIsPlanContext($relations.context_id) ? (((($relations.context_id.base_framework == \"hoshin\") || ($relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"hoshin\")))) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "context_id",
+          "conditional": true
+        },
+        {
+          "key": "item_id",
+          "conditional": false
+        },
+        {
+          "key": "exchange_date",
+          "conditional": false
+        },
+        {
+          "key": "response_state",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "planning_hoshin_countermeasures",
+      "slug": "planning-hoshin-countermeasures",
+      "title": {
+        "en": "Hoshin Countermeasures",
+        "ar": "الإجراءات المضادة لهوشين",
+        "tr": "Hoshin Karşı Önlemleri",
+        "und": "Hoshin Countermeasures"
+      },
+      "source": "scripts/seed-entities/entities/planning_hoshin_countermeasures.ts",
+      "navigation": false,
+      "parent": "plans",
+      "tab": "framework",
+      "condition": "planningIsPlanContext($relations.context_id) ? (((($relations.context_id.base_framework == \"hoshin\") || ($relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"hoshin\")))) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "context_id",
+          "conditional": true
+        },
+        {
+          "key": "hoshin_item_id",
+          "conditional": false
+        },
+        {
+          "key": "title",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "planning_assumptions",
+      "slug": "planning-assumptions",
+      "title": {
+        "en": "Planning Assumptions",
+        "ar": "افتراضات التخطيط",
+        "tr": "Planlama Varsayımları",
+        "und": "Planning Assumptions"
+      },
+      "source": "scripts/seed-entities/entities/planning_assumptions.ts",
+      "navigation": false,
+      "parent": "plans",
+      "tab": "assumptions",
+      "condition": "planningIsPlanContext($relations.context_id) ? (((($relations.context_id.base_framework == \"policy_logic\" || $relations.context_id.base_framework == \"theory_of_change\" || $relations.context_id.base_framework == \"results_framework\" || $relations.context_id.base_framework == \"logframe\" || $relations.context_id.base_framework == \"rbm\" || $relations.context_id.base_framework == \"me_framework\" || $relations.context_id.base_framework == \"evaluation_framework\" || $relations.context_id.base_framework == \"iso_31000\" || $relations.context_id.base_framework == \"bcp\" || $relations.context_id.base_framework == \"drp\" || $relations.context_id.base_framework == \"incident_response\" || $relations.context_id.base_framework == \"compliance_control_plan\" || $relations.context_id.base_framework == \"compliance_remediation\") || ($relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"policy_logic\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"theory_of_change\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"results_framework\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"logframe\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"rbm\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"me_framework\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"evaluation_framework\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"iso_31000\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"bcp\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"drp\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"incident_response\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"compliance_control_plan\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"compliance_remediation\")))) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "context_id",
+          "conditional": true
+        },
+        {
+          "key": "assumption",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "planning_milestones",
+      "slug": "planning-milestones",
+      "title": {
+        "en": "Planning Milestones",
+        "ar": "معالم التخطيط",
+        "tr": "Planlama Kilometre Taşları",
+        "und": "Planning Milestones"
+      },
+      "source": "scripts/seed-entities/entities/planning_milestones.ts",
+      "navigation": false,
+      "parent": "plans",
+      "tab": "execution",
+      "condition": "planningIsPlanContext($relations.context_id) ? (((($relations.context_id.plan_type == \"implementation_plan\") && (($relations.context_id.base_framework == \"pm_lite\" || $relations.context_id.base_framework == \"stage_gate\" || $relations.context_id.base_framework == \"pmbok_style\") || ($relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"pm_lite\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"stage_gate\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"pmbok_style\")))) || (($relations.context_id.plan_type == \"project_plan\") && (($relations.context_id.base_framework == \"pm_lite\" || $relations.context_id.base_framework == \"pmbok_style\" || $relations.context_id.base_framework == \"stage_gate\") || ($relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"pm_lite\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"pmbok_style\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"stage_gate\"))) && ($relations.context_id.target_entity_class == \"project\")) || (($relations.context_id.plan_type == \"program_plan\") && (($relations.context_id.base_framework == \"pm_lite\" || $relations.context_id.base_framework == \"pmbok_style\" || $relations.context_id.base_framework == \"stage_gate\") || ($relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"pm_lite\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"pmbok_style\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"stage_gate\"))) && ($relations.context_id.target_entity_class == \"program\")) || (($relations.context_id.plan_type == \"service_delivery_plan\") && (($relations.context_id.base_framework == \"service_delivery\") || ($relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"service_delivery\"))) && ($relations.context_id.target_entity_class == \"service\")) || (true)) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "context_id",
+          "conditional": true
+        },
+        {
+          "key": "name",
+          "conditional": false
+        },
+        {
+          "key": "owner_id",
+          "conditional": false
+        },
+        {
+          "key": "due_date",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "pm_phases",
+      "slug": "phases",
+      "title": {
+        "en": "Project Phases",
+        "ar": "مراحل المشروع",
+        "tr": "Proje Aşamaları",
+        "und": "Project Phases"
+      },
+      "source": "scripts/seed-entities/entities/pm_phases.ts",
+      "navigation": false,
+      "parent": "pm_projects",
+      "tab": "schedule",
+      "condition": "($relations.project_id != null && ($relations.project_id.delivery_approach == \"predictive\" || $relations.project_id.delivery_approach == \"hybrid\" || $relations.project_id.project_framework == \"pmp\" || $relations.project_id.project_framework == \"prince2\" || $relations.project_id.project_framework == \"pmd_pro\" || $relations.project_id.project_framework == \"internal_pmo\")) && ($relations.project_id != null && $relations.project_id.setup_stage != \"setup\" && $relations.project_id.charter_status == \"approved\")",
+      "required": [
+        {
+          "key": "project_id",
+          "conditional": true
+        },
+        {
+          "key": "name",
+          "conditional": false
+        },
+        {
+          "key": "order",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "pm_wbs_items",
+      "slug": "wbs-items",
+      "title": {
+        "en": "WBS / Work Packages",
+        "ar": "هيكل العمل / حزم العمل",
+        "tr": "İKY / İş Paketleri",
+        "und": "WBS / Work Packages"
+      },
+      "source": "scripts/seed-entities/entities/pm_wbs_items.ts",
+      "navigation": false,
+      "parent": "pm_projects",
+      "tab": "execution",
+      "condition": "$relations.context_id != null && $relations.context_id.setup_stage != \"setup\" && $relations.context_id.charter_status == \"approved\"",
+      "required": [
+        {
+          "key": "wbs_code",
+          "conditional": false
+        },
+        {
+          "key": "name",
+          "conditional": false
+        },
+        {
+          "key": "wbs_type",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "pm_deliverables",
+      "slug": "deliverables",
+      "title": {
+        "en": "Deliverables / Products",
+        "ar": "المخرجات / المنتجات",
+        "tr": "Teslimatlar / Ürünler",
+        "und": "Deliverables / Products"
+      },
+      "source": "scripts/seed-entities/entities/pm_deliverables.ts",
+      "navigation": false,
+      "parent": "pm_projects",
+      "tab": "execution",
+      "condition": "$relations.context_id != null && $relations.context_id.setup_stage != \"setup\" && $relations.context_id.charter_status == \"approved\"",
+      "required": [
+        {
+          "key": "name",
+          "conditional": false
+        },
+        {
+          "key": "deliverable_type",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "pm_requirements",
+      "slug": "requirements",
+      "title": {
+        "en": "Requirements",
+        "ar": "المتطلبات",
+        "tr": "Gereksinimler",
+        "und": "Requirements"
+      },
+      "source": "scripts/seed-entities/entities/pm_requirements.ts",
+      "navigation": false,
+      "parent": "pm_projects",
+      "tab": "execution",
+      "condition": "$relations.project_id != null && ($relations.project_id.project_framework == \"pmp\" || $relations.project_id.project_framework == \"prince2\" || $relations.project_id.project_framework == \"pmd_pro\" || $relations.project_id.project_framework == \"internal_pmo\")",
+      "required": [
+        {
+          "key": "project_id",
+          "conditional": true
+        },
+        {
+          "key": "code",
+          "conditional": false
+        },
+        {
+          "key": "title",
+          "conditional": false
+        },
+        {
+          "key": "requirement_type",
+          "conditional": false
+        },
+        {
+          "key": "priority",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "pm_dependencies",
+      "slug": "dependencies",
+      "title": {
+        "en": "Dependencies",
+        "ar": "التبعيات",
+        "tr": "Bağımlılıklar",
+        "und": "Dependencies"
+      },
+      "source": "scripts/seed-entities/entities/pm_dependencies.ts",
+      "navigation": false,
+      "parent": "pm_projects",
+      "tab": "schedule",
+      "condition": "($relations.context_id != null && ($relations.context_id.delivery_approach == \"predictive\" || $relations.context_id.delivery_approach == \"hybrid\")) && ($relations.context_id != null && $relations.context_id.setup_stage != \"setup\" && $relations.context_id.charter_status == \"approved\")",
+      "required": [
+        {
+          "key": "predecessor_id",
+          "conditional": false
+        },
+        {
+          "key": "successor_id",
+          "conditional": false
+        },
+        {
+          "key": "dependency_type",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "planning_dependencies",
+      "slug": "planning-dependencies",
+      "title": {
+        "en": "Planning Dependencies",
+        "ar": "اعتماديات التخطيط",
+        "tr": "Planlama Bağımlılıkları",
+        "und": "Planning Dependencies"
+      },
+      "source": "scripts/seed-entities/entities/planning_dependencies.ts",
+      "navigation": false,
+      "parent": "plans",
+      "tab": "risks",
+      "condition": "planningIsPlanContext($relations.context_id) ? ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\") : true",
+      "required": [
+        {
+          "key": "context_id",
+          "conditional": true
+        },
+        {
+          "key": "source_component_id",
+          "conditional": false
+        },
+        {
+          "key": "target_component_id",
+          "conditional": false
+        },
+        {
+          "key": "dependency_type",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "pm_baselines",
+      "slug": "baselines",
+      "title": {
+        "en": "Baselines",
+        "ar": "خطوط الأساس",
+        "tr": "Temel Çizgiler",
+        "und": "Baselines"
+      },
+      "source": "scripts/seed-entities/entities/pm_baselines.ts",
+      "navigation": false,
+      "parent": "pm_projects",
+      "tab": "schedule",
+      "condition": "($relations.project_id != null && ($relations.project_id.delivery_approach == \"predictive\" || $relations.project_id.delivery_approach == \"hybrid\")) && ($relations.project_id != null && $relations.project_id.setup_stage != \"setup\" && $relations.project_id.charter_status == \"approved\")",
+      "required": [
+        {
+          "key": "project_id",
+          "conditional": true
+        },
+        {
+          "key": "name",
+          "conditional": false
+        },
+        {
+          "key": "baseline_type",
+          "conditional": false
+        },
+        {
+          "key": "captured_date",
+          "conditional": false
+        },
+        {
+          "key": "captured_by",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        },
+        {
+          "key": "version_number",
+          "conditional": false
+        }
+      ],
+      "children": [
+        "pm_baseline_items"
+      ]
+    },
+    {
+      "key": "pm_baseline_items",
+      "slug": "baseline-items",
+      "title": {
+        "en": "Baseline Items",
+        "ar": "عناصر خط الأساس",
+        "tr": "Temel Çizgi Öğeleri",
+        "und": "Baseline Items"
+      },
+      "source": "scripts/seed-entities/entities/pm_baseline_items.ts",
+      "navigation": false,
+      "parent": "pm_baselines",
+      "tab": "snapshot",
+      "condition": null,
+      "required": [
+        {
+          "key": "baseline_id",
+          "conditional": false
+        },
+        {
+          "key": "metric_name",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "planning_resources",
+      "slug": "planning-resources",
+      "title": {
+        "en": "Planning Resources",
+        "ar": "موارد التخطيط",
+        "tr": "Planlama Kaynakları",
+        "und": "Planning Resources"
+      },
+      "source": "scripts/seed-entities/entities/planning_resources.ts",
+      "navigation": false,
+      "parent": "plans",
+      "tab": "resources",
+      "condition": "planningIsPlanContext($relations.context_id) ? ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\") : true",
+      "required": [
+        {
+          "key": "context_id",
+          "conditional": true
+        },
+        {
+          "key": "entry_kind",
+          "conditional": false
+        },
+        {
+          "key": "resource_type",
+          "conditional": false
+        },
+        {
+          "key": "allocation_semantics",
+          "conditional": false
+        },
+        {
+          "key": "resource_name",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "pm_team_roles",
+      "slug": "team-roles",
+      "title": {
+        "en": "Team Roles",
+        "ar": "أدوار الفريق",
+        "tr": "Takım Rolleri",
+        "und": "Team Roles"
+      },
+      "source": "scripts/seed-entities/entities/pm_team_roles.ts",
+      "navigation": false,
+      "parent": "pm_projects",
+      "tab": "resources",
+      "condition": null,
+      "required": [
+        {
+          "key": "project_id",
+          "conditional": false
+        },
+        {
+          "key": "member_id",
+          "conditional": false
+        },
+        {
+          "key": "role_name",
+          "conditional": false
+        },
+        {
+          "key": "role_type",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "pm_raci_entries",
+      "slug": "raci-entries",
+      "title": {
+        "en": "RACI Matrix",
+        "ar": "مصفوفة المسؤوليات",
+        "tr": "RACI Matrisi",
+        "und": "RACI Matrix"
+      },
+      "source": "scripts/seed-entities/entities/pm_raci_entries.ts",
+      "navigation": false,
+      "parent": "pm_projects",
+      "tab": "resources",
+      "condition": null,
+      "required": [
+        {
+          "key": "project_id",
+          "conditional": false
+        },
+        {
+          "key": "activity_id",
+          "conditional": false
+        },
+        {
+          "key": "member_id",
+          "conditional": false
+        },
+        {
+          "key": "raci_role",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "pm_resource_allocations",
+      "slug": "resource-allocations",
+      "title": {
+        "en": "Resource Allocations",
+        "ar": "تخصيص الموارد",
+        "tr": "Kaynak Tahsisleri",
+        "und": "Resource Allocations"
+      },
+      "source": "scripts/seed-entities/entities/pm_resource_allocations.ts",
+      "navigation": false,
+      "parent": "pm_projects",
+      "tab": "resources",
+      "condition": "planningIsPlanContext($relations.context_id) ? ((($relations.context_id.plan_type == \"capacity_plan\")) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "status",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "pm_stakeholders",
+      "slug": "stakeholders",
+      "title": {
+        "en": "Stakeholders",
+        "ar": "أصحاب المصلحة",
+        "tr": "Paydaşlar",
+        "und": "Stakeholders"
+      },
+      "source": "scripts/seed-entities/entities/pm_stakeholders.ts",
+      "navigation": false,
+      "parent": "pm_projects",
+      "tab": "resources",
+      "condition": null,
+      "required": [
+        {
+          "key": "project_id",
+          "conditional": false
+        },
+        {
+          "key": "name",
+          "conditional": false
+        },
+        {
+          "key": "stakeholder_type",
+          "conditional": false
+        },
+        {
+          "key": "interest_level",
+          "conditional": false
+        },
+        {
+          "key": "influence_level",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "pm_communication_plan",
+      "slug": "communication-plan",
+      "title": {
+        "en": "Communication Plan",
+        "ar": "خطة الاتصال",
+        "tr": "İletişim Planı",
+        "und": "Communication Plan"
+      },
+      "source": "scripts/seed-entities/entities/pm_communication_plan.ts",
+      "navigation": false,
+      "parent": "pm_projects",
+      "tab": "communications",
+      "condition": null,
+      "required": [
+        {
+          "key": "project_id",
+          "conditional": false
+        },
+        {
+          "key": "name",
+          "conditional": false
+        },
+        {
+          "key": "communication_type",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "planning_reviews",
+      "slug": "planning-reviews",
+      "title": {
+        "en": "Planning Reviews",
+        "ar": "مراجعات التخطيط",
+        "tr": "Planlama Gözden Geçirmeleri",
+        "und": "Planning Reviews"
+      },
+      "source": "scripts/seed-entities/entities/planning_reviews.ts",
+      "navigation": false,
+      "parent": "plans",
+      "tab": "governance",
+      "condition": "planningIsPlanContext($relations.context_id) ? (((($relations.context_id.plan_type == \"implementation_plan\") && (($relations.context_id.base_framework == \"pm_lite\" || $relations.context_id.base_framework == \"stage_gate\" || $relations.context_id.base_framework == \"pmbok_style\") || ($relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"pm_lite\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"stage_gate\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"pmbok_style\")))) || (($relations.context_id.plan_type == \"project_plan\") && (($relations.context_id.base_framework == \"pm_lite\" || $relations.context_id.base_framework == \"pmbok_style\" || $relations.context_id.base_framework == \"stage_gate\") || ($relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"pm_lite\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"pmbok_style\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"stage_gate\"))) && ($relations.context_id.target_entity_class == \"project\")) || (($relations.context_id.plan_type == \"program_plan\") && (($relations.context_id.base_framework == \"pm_lite\" || $relations.context_id.base_framework == \"pmbok_style\" || $relations.context_id.base_framework == \"stage_gate\") || ($relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"pm_lite\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"pmbok_style\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"stage_gate\"))) && ($relations.context_id.target_entity_class == \"program\")) || (($relations.context_id.plan_type == \"service_delivery_plan\") && (($relations.context_id.base_framework == \"service_delivery\") || ($relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"service_delivery\"))) && ($relations.context_id.target_entity_class == \"service\")) || (true)) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "context_id",
+          "conditional": true
+        },
+        {
+          "key": "review_type",
+          "conditional": false
+        },
+        {
+          "key": "review_period_start",
+          "conditional": false
+        },
+        {
+          "key": "review_period_end",
+          "conditional": false
+        },
+        {
+          "key": "review_state",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "planning_approvals",
+      "slug": "planning-approvals",
+      "title": {
+        "en": "Planning Approvals",
+        "ar": "اعتمادات التخطيط",
+        "tr": "Planlama Onayları",
+        "und": "Planning Approvals"
+      },
+      "source": "scripts/seed-entities/entities/planning_approvals.ts",
+      "navigation": false,
+      "parent": "plans",
+      "tab": "governance",
+      "condition": "planningIsPlanContext($relations.context_id) ? (((($relations.context_id.plan_type == \"implementation_plan\") && (($relations.context_id.base_framework == \"pm_lite\" || $relations.context_id.base_framework == \"stage_gate\" || $relations.context_id.base_framework == \"pmbok_style\") || ($relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"pm_lite\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"stage_gate\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"pmbok_style\")))) || (($relations.context_id.plan_type == \"project_plan\") && (($relations.context_id.base_framework == \"pm_lite\" || $relations.context_id.base_framework == \"pmbok_style\" || $relations.context_id.base_framework == \"stage_gate\") || ($relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"pm_lite\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"pmbok_style\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"stage_gate\"))) && ($relations.context_id.target_entity_class == \"project\")) || (($relations.context_id.plan_type == \"program_plan\") && (($relations.context_id.base_framework == \"pm_lite\" || $relations.context_id.base_framework == \"pmbok_style\" || $relations.context_id.base_framework == \"stage_gate\") || ($relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"pm_lite\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"pmbok_style\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"stage_gate\"))) && ($relations.context_id.target_entity_class == \"program\")) || (($relations.context_id.plan_type == \"service_delivery_plan\") && (($relations.context_id.base_framework == \"service_delivery\") || ($relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"service_delivery\"))) && ($relations.context_id.target_entity_class == \"service\")) || (true)) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "context_id",
+          "conditional": true
+        },
+        {
+          "key": "stage",
+          "conditional": false
+        },
+        {
+          "key": "decision",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "planning_decisions",
+      "slug": "planning-decisions",
+      "title": {
+        "en": "Planning Decisions",
+        "ar": "قرارات التخطيط",
+        "tr": "Planlama Kararları",
+        "und": "Planning Decisions"
+      },
+      "source": "scripts/seed-entities/entities/planning_decisions.ts",
+      "navigation": false,
+      "parent": "plans",
+      "tab": "governance",
+      "condition": "planningIsPlanContext($relations.context_id) ? (((($relations.context_id.plan_type == \"implementation_plan\") && (($relations.context_id.base_framework == \"pm_lite\" || $relations.context_id.base_framework == \"stage_gate\" || $relations.context_id.base_framework == \"pmbok_style\") || ($relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"pm_lite\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"stage_gate\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"pmbok_style\")))) || (($relations.context_id.plan_type == \"project_plan\") && (($relations.context_id.base_framework == \"pm_lite\" || $relations.context_id.base_framework == \"pmbok_style\" || $relations.context_id.base_framework == \"stage_gate\") || ($relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"pm_lite\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"pmbok_style\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"stage_gate\"))) && ($relations.context_id.target_entity_class == \"project\")) || (($relations.context_id.plan_type == \"program_plan\") && (($relations.context_id.base_framework == \"pm_lite\" || $relations.context_id.base_framework == \"pmbok_style\" || $relations.context_id.base_framework == \"stage_gate\") || ($relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"pm_lite\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"pmbok_style\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"stage_gate\"))) && ($relations.context_id.target_entity_class == \"program\")) || (($relations.context_id.plan_type == \"service_delivery_plan\") && (($relations.context_id.base_framework == \"service_delivery\") || ($relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"service_delivery\"))) && ($relations.context_id.target_entity_class == \"service\")) || (true)) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "context_id",
+          "conditional": true
+        },
+        {
+          "key": "decision_type",
+          "conditional": false
+        },
+        {
+          "key": "decision_summary",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "planning_risks",
+      "slug": "planning-risks",
+      "title": {
+        "en": "Risk Register",
+        "ar": "سجل المخاطر",
+        "tr": "Risk Kaydı",
+        "und": "Risk Register"
+      },
+      "source": "scripts/seed-entities/entities/planning_risks.ts",
+      "navigation": false,
+      "parent": "plans",
+      "tab": "risks",
+      "condition": "planningIsPlanContext($relations.context_id) ? ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\") : true",
+      "required": [
+        {
+          "key": "context_id",
+          "conditional": true
+        },
+        {
+          "key": "title",
+          "conditional": false
+        },
+        {
+          "key": "risk_type",
+          "conditional": false
+        },
+        {
+          "key": "risk_category",
+          "conditional": false
+        },
+        {
+          "key": "probability",
+          "conditional": false
+        },
+        {
+          "key": "impact",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "pm_project_risks",
+      "slug": "project-risks",
+      "title": {
+        "en": "PM Risk Register",
+        "ar": "سجل مخاطر إدارة المشاريع",
+        "tr": "PM Risk Kaydı",
+        "und": "PM Risk Register"
+      },
+      "source": "scripts/seed-entities/entities/pm_project_risks.ts",
+      "navigation": false,
+      "parent": "pm_projects",
+      "tab": "risks",
+      "condition": null,
+      "required": [
+        {
+          "key": "name",
+          "conditional": false
+        },
+        {
+          "key": "description",
+          "conditional": false
+        },
+        {
+          "key": "risk_category",
+          "conditional": false
+        },
+        {
+          "key": "risk_type",
+          "conditional": false
+        },
+        {
+          "key": "probability",
+          "conditional": false
+        },
+        {
+          "key": "impact",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "pm_issues",
+      "slug": "issues",
+      "title": {
+        "en": "Issues",
+        "ar": "المشكلات",
+        "tr": "Sorunlar",
+        "und": "Issues"
+      },
+      "source": "scripts/seed-entities/entities/pm_issues.ts",
+      "navigation": false,
+      "parent": "pm_projects",
+      "tab": "risks",
+      "condition": null,
+      "required": [
+        {
+          "key": "project_id",
+          "conditional": false
+        },
+        {
+          "key": "title",
+          "conditional": false
+        },
+        {
+          "key": "description",
+          "conditional": false
+        },
+        {
+          "key": "issue_type",
+          "conditional": false
+        },
+        {
+          "key": "priority",
+          "conditional": false
+        },
+        {
+          "key": "raised_by",
+          "conditional": false
+        },
+        {
+          "key": "raised_date",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "pm_quality_criteria",
+      "slug": "quality-criteria",
+      "title": {
+        "en": "Quality Criteria",
+        "ar": "معايير الجودة",
+        "tr": "Kalite Kriterleri",
+        "und": "Quality Criteria"
+      },
+      "source": "scripts/seed-entities/entities/pm_quality_criteria.ts",
+      "navigation": false,
+      "parent": "pm_projects",
+      "tab": "quality",
+      "condition": null,
+      "required": [
+        {
+          "key": "project_id",
+          "conditional": false
+        },
+        {
+          "key": "name",
+          "conditional": false
+        },
+        {
+          "key": "quality_type",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "pm_gate_reviews",
+      "slug": "gate-reviews",
+      "title": {
+        "en": "Gate Reviews",
+        "ar": "مراجعات البوابة",
+        "tr": "Geçit İncelemeleri",
+        "und": "Gate Reviews"
+      },
+      "source": "scripts/seed-entities/entities/pm_gate_reviews.ts",
+      "navigation": false,
+      "parent": "pm_projects",
+      "tab": "governance",
+      "condition": "($relations.project_id != null && ($relations.project_id.delivery_approach == \"predictive\" || $relations.project_id.delivery_approach == \"hybrid\" || $relations.project_id.project_framework == \"pmp\" || $relations.project_id.project_framework == \"prince2\" || $relations.project_id.project_framework == \"pmd_pro\" || $relations.project_id.project_framework == \"internal_pmo\")) && ($relations.project_id != null && $relations.project_id.setup_stage != \"setup\" && $relations.project_id.charter_status == \"approved\")",
+      "required": [
+        {
+          "key": "project_id",
+          "conditional": true
+        },
+        {
+          "key": "name",
+          "conditional": false
+        },
+        {
+          "key": "gate_type",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        },
+        {
+          "key": "reviewer_ids",
+          "conditional": false
+        }
+      ],
+      "children": [
+        "pm_gate_review_checks"
+      ]
+    },
+    {
+      "key": "pm_gate_review_checks",
+      "slug": "gate-review-checks",
+      "title": {
+        "en": "Gate Review Checks",
+        "ar": "فحوصات مراجعة البوابة",
+        "tr": "Geçit İnceleme Kontrolleri",
+        "und": "Gate Review Checks"
+      },
+      "source": "scripts/seed-entities/entities/pm_gate_review_checks.ts",
+      "navigation": false,
+      "parent": "pm_gate_reviews",
+      "tab": "evidence",
+      "condition": null,
+      "required": [
+        {
+          "key": "gate_review_id",
+          "conditional": false
+        },
+        {
+          "key": "criterion",
+          "conditional": false
+        },
+        {
+          "key": "result",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "pm_change_requests",
+      "slug": "change-requests",
+      "title": {
+        "en": "Change Requests",
+        "ar": "طلبات التغيير",
+        "tr": "Değişiklik Talepleri",
+        "und": "Change Requests"
+      },
+      "source": "scripts/seed-entities/entities/pm_change_requests.ts",
+      "navigation": false,
+      "parent": "pm_projects",
+      "tab": "governance",
+      "condition": "($relations.project_id != null && ($relations.project_id.project_framework == \"pmp\" || $relations.project_id.project_framework == \"prince2\" || $relations.project_id.project_framework == \"pmd_pro\" || $relations.project_id.project_framework == \"internal_pmo\")) && ($relations.project_id != null && $relations.project_id.setup_stage != \"setup\" && $relations.project_id.charter_status == \"approved\")",
+      "required": [
+        {
+          "key": "project_id",
+          "conditional": true
+        },
+        {
+          "key": "code",
+          "conditional": false
+        },
+        {
+          "key": "title",
+          "conditional": false
+        },
+        {
+          "key": "description",
+          "conditional": false
+        },
+        {
+          "key": "change_type",
+          "conditional": false
+        },
+        {
+          "key": "priority",
+          "conditional": false
+        },
+        {
+          "key": "requested_by",
+          "conditional": false
+        },
+        {
+          "key": "requested_date",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "pm_meeting_decisions",
+      "slug": "meeting-decisions",
+      "title": {
+        "en": "Meeting Decisions",
+        "ar": "قرارات الاجتماعات",
+        "tr": "Toplantı Kararları",
+        "und": "Meeting Decisions"
+      },
+      "source": "scripts/seed-entities/entities/pm_meeting_decisions.ts",
+      "navigation": false,
+      "parent": "pm_projects",
+      "tab": "governance",
+      "condition": null,
+      "required": [
+        {
+          "key": "project_id",
+          "conditional": false
+        },
+        {
+          "key": "title",
+          "conditional": false
+        },
+        {
+          "key": "decision_type",
+          "conditional": false
+        },
+        {
+          "key": "decision_date",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "pm_lessons_learned",
+      "slug": "lessons-learned",
+      "title": {
+        "en": "Lessons Learned",
+        "ar": "الدروس المستفادة",
+        "tr": "Alınan Dersler",
+        "und": "Lessons Learned"
+      },
+      "source": "scripts/seed-entities/entities/pm_lessons_learned.ts",
+      "navigation": false,
+      "parent": "pm_projects",
+      "tab": "governance",
+      "condition": null,
+      "required": [
+        {
+          "key": "project_id",
+          "conditional": false
+        },
+        {
+          "key": "title",
+          "conditional": false
+        },
+        {
+          "key": "description",
+          "conditional": false
+        },
+        {
+          "key": "category",
+          "conditional": false
+        },
+        {
+          "key": "lesson_type",
+          "conditional": false
+        },
+        {
+          "key": "identified_by",
+          "conditional": false
+        },
+        {
+          "key": "identified_date",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "pm_status_reports",
+      "slug": "status-reports",
+      "title": {
+        "en": "Status Reports",
+        "ar": "تقارير الحالة",
+        "tr": "Durum Raporları",
+        "und": "Status Reports"
+      },
+      "source": "scripts/seed-entities/entities/pm_status_reports.ts",
+      "navigation": false,
+      "parent": "pm_projects",
+      "tab": "performance",
+      "condition": "$relations.project_id != null && $relations.project_id.setup_stage != \"setup\" && $relations.project_id.charter_status == \"approved\"",
+      "required": [
+        {
+          "key": "project_id",
+          "conditional": true
+        },
+        {
+          "key": "title",
+          "conditional": false
+        },
+        {
+          "key": "report_type",
+          "conditional": false
+        },
+        {
+          "key": "reporting_period_start",
+          "conditional": false
+        },
+        {
+          "key": "reporting_period_end",
+          "conditional": false
+        },
+        {
+          "key": "overall_status",
+          "conditional": false
+        },
+        {
+          "key": "prepared_by",
+          "conditional": false
+        },
+        {
+          "key": "prepared_date",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "pm_sprints",
+      "slug": "sprints",
+      "title": {
+        "en": "Sprints",
+        "ar": "السباقات",
+        "tr": "Sprintler",
+        "und": "Sprints"
+      },
+      "source": "scripts/seed-entities/entities/pm_sprints.ts",
+      "navigation": false,
+      "parent": "pm_projects",
+      "tab": "agile",
+      "condition": "$relations.project_id != null && ($relations.project_id.delivery_approach == \"agile\" || $relations.project_id.delivery_approach == \"hybrid\" || $relations.project_id.project_framework == \"agile\")",
+      "required": [
+        {
+          "key": "project_id",
+          "conditional": true
+        },
+        {
+          "key": "name",
+          "conditional": false
+        },
+        {
+          "key": "sprint_number",
+          "conditional": false
+        },
+        {
+          "key": "start_date",
+          "conditional": false
+        },
+        {
+          "key": "end_date",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        }
+      ],
+      "children": [
+        "pm_sprint_burndown_entries"
+      ]
+    },
+    {
+      "key": "pm_sprint_burndown_entries",
+      "slug": "sprint-burndown-entries",
+      "title": {
+        "en": "Sprint Burndown Entries",
+        "ar": "إدخالات احتراق السبرنت",
+        "tr": "Sprint Burndown Girdileri",
+        "und": "Sprint Burndown Entries"
+      },
+      "source": "scripts/seed-entities/entities/pm_sprint_burndown_entries.ts",
+      "navigation": false,
+      "parent": "pm_sprints",
+      "tab": "burndown",
+      "condition": null,
+      "required": [
+        {
+          "key": "sprint_id",
+          "conditional": false
+        },
+        {
+          "key": "entry_date",
+          "conditional": false
+        },
+        {
+          "key": "remaining_points",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "pm_definition_of_done",
+      "slug": "definition-of-done",
+      "title": {
+        "en": "Definition of Done",
+        "ar": "تعريف الإنجاز",
+        "tr": "Tamamlanma Tanımı",
+        "und": "Definition of Done"
+      },
+      "source": "scripts/seed-entities/entities/pm_definition_of_done.ts",
+      "navigation": false,
+      "parent": "pm_projects",
+      "tab": "agile",
+      "condition": "$relations.project_id != null && ($relations.project_id.delivery_approach == \"agile\" || $relations.project_id.delivery_approach == \"hybrid\" || $relations.project_id.project_framework == \"agile\")",
+      "required": [
+        {
+          "key": "project_id",
+          "conditional": true
+        },
+        {
+          "key": "criterion",
+          "conditional": false
+        },
+        {
+          "key": "applies_to",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "pm_procurements",
+      "slug": "procurements",
+      "title": {
+        "en": "Procurements",
+        "ar": "المشتريات",
+        "tr": "Tedarikler",
+        "und": "Procurements"
+      },
+      "source": "scripts/seed-entities/entities/pm_procurements.ts",
+      "navigation": false,
+      "parent": "pm_projects",
+      "tab": "procurement",
+      "condition": "planningIsPlanContext($relations.context_id) ? ((($relations.context_id.plan_type == \"procurement_plan\")) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "title",
+          "conditional": false
+        },
+        {
+          "key": "procurement_type",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "pm_budget_lines",
+      "slug": "budget-lines",
+      "title": {
+        "en": "Budget Lines",
+        "ar": "بنود الميزانية",
+        "tr": "Bütçe Kalemleri",
+        "und": "Budget Lines"
+      },
+      "source": "scripts/seed-entities/entities/pm_budget_lines.ts",
+      "navigation": false,
+      "parent": "pm_projects",
+      "condition": "planningIsPlanContext($relations.context_id) ? ((($relations.context_id.plan_type == \"budget_plan\")) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "budget_id",
+          "conditional": false
+        },
+        {
+          "key": "code",
+          "conditional": false
+        },
+        {
+          "key": "name",
+          "conditional": false
+        },
+        {
+          "key": "line_type",
+          "conditional": false
+        }
+      ],
+      "children": [
+        "pm_budget_line_periods"
+      ]
+    },
+    {
+      "key": "pm_budget_line_periods",
+      "slug": "budget-line-periods",
+      "title": {
+        "en": "Budget Line Periods",
+        "ar": "فترات بند الميزانية",
+        "tr": "Bütçe Kalemi Dönemleri",
+        "und": "Budget Line Periods"
+      },
+      "source": "scripts/seed-entities/entities/pm_budget_line_periods.ts",
+      "navigation": false,
+      "parent": "pm_projects",
+      "condition": "planningIsPlanContext($relations.context_id) ? ((($relations.context_id.plan_type == \"budget_plan\")) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "budget_line_id",
+          "conditional": false
+        },
+        {
+          "key": "name",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "pm_funding_sources",
+      "slug": "funding-sources",
+      "title": {
+        "en": "Funding Sources",
+        "ar": "مصادر التمويل",
+        "tr": "Finansman Kaynakları",
+        "und": "Funding Sources"
+      },
+      "source": "scripts/seed-entities/entities/pm_funding_sources.ts",
+      "navigation": false,
+      "parent": "pm_projects",
+      "condition": "planningIsPlanContext($relations.context_id) ? ((($relations.context_id.plan_type == \"budget_plan\" || $relations.context_id.plan_type == \"fundraising_plan\")) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "name",
+          "conditional": false
+        },
+        {
+          "key": "source_type",
+          "conditional": false
+        },
+        {
+          "key": "amount_pledged",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        }
+      ],
+      "children": [
+        "pm_funding_disbursements"
+      ]
+    },
+    {
+      "key": "pm_funding_disbursements",
+      "slug": "funding-disbursements",
+      "title": {
+        "en": "Funding Disbursements",
+        "ar": "دفعات التمويل",
+        "tr": "Finansman Ödemeleri",
+        "und": "Funding Disbursements"
+      },
+      "source": "scripts/seed-entities/entities/pm_funding_disbursements.ts",
+      "navigation": false,
+      "parent": "pm_funding_sources",
+      "tab": "terms",
+      "condition": null,
+      "required": [
+        {
+          "key": "funding_source_id",
+          "conditional": false
+        },
+        {
+          "key": "name",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "pm_expenditures",
+      "slug": "expenditures",
+      "title": {
+        "en": "Expenditures",
+        "ar": "المصروفات",
+        "tr": "Harcamalar",
+        "und": "Expenditures"
+      },
+      "source": "scripts/seed-entities/entities/pm_expenditures.ts",
+      "navigation": false,
+      "parent": "pm_projects",
+      "tab": "financials",
+      "condition": null,
+      "required": [
+        {
+          "key": "budget_id",
+          "conditional": false
+        },
+        {
+          "key": "project_id",
+          "conditional": false
+        },
+        {
+          "key": "description",
+          "conditional": false
+        },
+        {
+          "key": "amount",
+          "conditional": false
+        },
+        {
+          "key": "expenditure_date",
+          "conditional": false
+        },
+        {
+          "key": "expenditure_type",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "performance_indicators",
+      "slug": "performance-indicators",
+      "title": {
+        "en": "Performance Indicators",
+        "ar": "مؤشرات الأداء",
+        "tr": "Performans Göstergeleri",
+        "und": "Performance Indicators"
+      },
+      "source": "scripts/seed-entities/entities/performance_indicators.ts",
+      "navigation": false,
+      "parent": "pm_projects",
+      "tab": "performance",
+      "condition": "planningIsPlanContext($relations.context_id) ? ((($relations.context_id.plan_category == \"direction\" || $relations.context_id.plan_category == \"performance_learning\" || $relations.context_id.plan_category == \"execution\")) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "context_id",
+          "conditional": true
+        },
+        {
+          "key": "name",
+          "conditional": false
+        },
+        {
+          "key": "unit",
+          "conditional": false
+        },
+        {
+          "key": "direction",
+          "conditional": false
+        },
+        {
+          "key": "frequency",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "planning_time_targets",
+      "slug": "planning-time-targets",
+      "title": {
+        "en": "Time-Phased Targets",
+        "ar": "الأهداف المرحلية",
+        "tr": "Dönemsel Hedefler",
+        "und": "Time-Phased Targets"
+      },
+      "source": "scripts/seed-entities/entities/planning_time_targets.ts",
+      "navigation": false,
+      "parent": "plans",
+      "tab": "performance",
+      "condition": "planningIsPlanContext($relations.context_id) ? ((($relations.context_id.plan_category == \"direction\")) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "context_id",
+          "conditional": true
+        },
+        {
+          "key": "linked_component_id",
+          "conditional": false
+        },
+        {
+          "key": "period_type",
+          "conditional": false
+        },
+        {
+          "key": "period_start",
+          "conditional": false
+        },
+        {
+          "key": "period_end",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "planning_reporting_periods",
+      "slug": "planning-reporting-periods",
+      "title": {
+        "en": "Reporting Periods",
+        "ar": "فترات التقارير",
+        "tr": "Raporlama Dönemleri",
+        "und": "Reporting Periods"
+      },
+      "source": "scripts/seed-entities/entities/planning_reporting_periods.ts",
+      "navigation": false,
+      "parent": "plans",
+      "tab": "data",
+      "condition": "planningIsPlanContext($relations.context_id) ? ((($relations.context_id.plan_type == \"kpi_plan\" || $relations.context_id.plan_type == \"me_plan\" || $relations.context_id.plan_type == \"results_plan\")) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "context_id",
+          "conditional": true
+        },
+        {
+          "key": "name",
+          "conditional": false
+        },
+        {
+          "key": "period_type",
+          "conditional": false
+        },
+        {
+          "key": "period_start",
+          "conditional": false
+        },
+        {
+          "key": "period_end",
+          "conditional": false
+        },
+        {
+          "key": "state",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "planning_data_sources",
+      "slug": "planning-data-sources",
+      "title": {
+        "en": "Planning Data Sources",
+        "ar": "مصادر بيانات التخطيط",
+        "tr": "Planlama Veri Kaynakları",
+        "und": "Planning Data Sources"
+      },
+      "source": "scripts/seed-entities/entities/planning_data_sources.ts",
+      "navigation": false,
+      "parent": "plans",
+      "tab": "data",
+      "condition": "planningIsPlanContext($relations.context_id) ? ((($relations.context_id.plan_type == \"kpi_plan\" || $relations.context_id.plan_type == \"me_plan\" || $relations.context_id.plan_type == \"evaluation_plan\" || $relations.context_id.plan_type == \"improvement_plan\" || $relations.context_id.plan_type == \"learning_plan\" || $relations.context_id.plan_type == \"results_plan\")) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "context_id",
+          "conditional": true
+        },
+        {
+          "key": "name",
+          "conditional": false
+        },
+        {
+          "key": "source_type",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "planning_evidence_items",
+      "slug": "planning-evidence-items",
+      "title": {
+        "en": "Evidence Items",
+        "ar": "عناصر الأدلة",
+        "tr": "Kanıt Öğeleri",
+        "und": "Evidence Items"
+      },
+      "source": "scripts/seed-entities/entities/planning_evidence_items.ts",
+      "navigation": false,
+      "parent": "plans",
+      "tab": "data",
+      "condition": "planningIsPlanContext($relations.context_id) ? ((($relations.context_id.plan_type == \"kpi_plan\" || $relations.context_id.plan_type == \"me_plan\" || $relations.context_id.plan_type == \"evaluation_plan\" || $relations.context_id.plan_type == \"improvement_plan\" || $relations.context_id.plan_type == \"learning_plan\" || $relations.context_id.plan_type == \"results_plan\")) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "context_id",
+          "conditional": true
+        },
+        {
+          "key": "title",
+          "conditional": false
+        },
+        {
+          "key": "evidence_type",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "planning_evaluation_questions",
+      "slug": "planning-evaluation-questions",
+      "title": {
+        "en": "Evaluation Questions",
+        "ar": "أسئلة التقييم",
+        "tr": "Değerlendirme Soruları",
+        "und": "Evaluation Questions"
+      },
+      "source": "scripts/seed-entities/entities/planning_evaluation_questions.ts",
+      "navigation": false,
+      "parent": "plans",
+      "tab": "evaluation",
+      "condition": "planningIsPlanContext($relations.context_id) ? ((($relations.context_id.plan_type == \"me_plan\" || $relations.context_id.plan_type == \"evaluation_plan\")) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "context_id",
+          "conditional": true
+        },
+        {
+          "key": "question",
+          "conditional": false
+        },
+        {
+          "key": "criterion",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "planning_evaluation_findings",
+      "slug": "planning-evaluation-findings",
+      "title": {
+        "en": "Evaluation Findings",
+        "ar": "نتائج التقييم",
+        "tr": "Değerlendirme Bulguları",
+        "und": "Evaluation Findings"
+      },
+      "source": "scripts/seed-entities/entities/planning_evaluation_findings.ts",
+      "navigation": false,
+      "parent": "plans",
+      "tab": "evaluation",
+      "condition": "planningIsPlanContext($relations.context_id) ? ((($relations.context_id.plan_type == \"evaluation_plan\")) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "context_id",
+          "conditional": true
+        },
+        {
+          "key": "finding",
+          "conditional": false
+        },
+        {
+          "key": "finding_type",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "planning_management_responses",
+      "slug": "planning-management-responses",
+      "title": {
+        "en": "Management Responses",
+        "ar": "استجابات الإدارة",
+        "tr": "Yönetim Yanıtları",
+        "und": "Management Responses"
+      },
+      "source": "scripts/seed-entities/entities/planning_management_responses.ts",
+      "navigation": false,
+      "parent": "plans",
+      "tab": "evaluation",
+      "condition": "planningIsPlanContext($relations.context_id) ? ((($relations.context_id.plan_type == \"evaluation_plan\")) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "context_id",
+          "conditional": true
+        },
+        {
+          "key": "response",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "planning_learning_agenda_items",
+      "slug": "planning-learning-agenda-items",
+      "title": {
+        "en": "Learning Agenda Items",
+        "ar": "بنود أجندة التعلم",
+        "tr": "Öğrenme Gündemi Öğeleri",
+        "und": "Learning Agenda Items"
+      },
+      "source": "scripts/seed-entities/entities/planning_learning_agenda_items.ts",
+      "navigation": false,
+      "parent": "plans",
+      "tab": "learning",
+      "condition": "planningIsPlanContext($relations.context_id) ? ((($relations.context_id.plan_type == \"me_plan\" || $relations.context_id.plan_type == \"learning_plan\")) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "context_id",
+          "conditional": true
+        },
+        {
+          "key": "learning_question",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "planning_learning_insights",
+      "slug": "planning-learning-insights",
+      "title": {
+        "en": "Learning Insights",
+        "ar": "رؤى التعلم",
+        "tr": "Öğrenme İçgörüleri",
+        "und": "Learning Insights"
+      },
+      "source": "scripts/seed-entities/entities/planning_learning_insights.ts",
+      "navigation": false,
+      "parent": "plans",
+      "tab": "learning",
+      "condition": "planningIsPlanContext($relations.context_id) ? ((($relations.context_id.plan_type == \"learning_plan\")) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "context_id",
+          "conditional": true
+        },
+        {
+          "key": "insight",
+          "conditional": false
+        },
+        {
+          "key": "uptake_status",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "planning_improvement_opportunities",
+      "slug": "planning-improvement-opportunities",
+      "title": {
+        "en": "Improvement Opportunities",
+        "ar": "فرص التحسين",
+        "tr": "İyileştirme Fırsatları",
+        "und": "Improvement Opportunities"
+      },
+      "source": "scripts/seed-entities/entities/planning_improvement_opportunities.ts",
+      "navigation": false,
+      "parent": "plans",
+      "tab": "improvement",
+      "condition": "planningIsPlanContext($relations.context_id) ? ((($relations.context_id.plan_type == \"kpi_plan\" || $relations.context_id.plan_type == \"me_plan\" || $relations.context_id.plan_type == \"evaluation_plan\" || $relations.context_id.plan_type == \"improvement_plan\" || $relations.context_id.plan_type == \"learning_plan\" || $relations.context_id.plan_type == \"results_plan\")) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "context_id",
+          "conditional": true
+        },
+        {
+          "key": "problem_statement",
+          "conditional": false
+        },
+        {
+          "key": "priority",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "pm_theory_of_change",
+      "slug": "theory-of-change",
+      "title": {
+        "en": "Theory of Change",
+        "ar": "نظرية التغيير",
+        "tr": "Değişim Teorisi",
+        "und": "Theory of Change"
+      },
+      "source": "scripts/seed-entities/entities/pm_theory_of_change.ts",
+      "navigation": false,
+      "parent": "pm_projects",
+      "tab": "framework",
+      "condition": "planningIsPlanContext($relations.context_id) ? (((($relations.context_id.base_framework == \"theory_of_change\") || ($relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"theory_of_change\")))) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "element_type",
+          "conditional": false
+        },
+        {
+          "key": "statement",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "pm_logframes",
+      "slug": "logframes",
+      "title": {
+        "en": "Results Frameworks",
+        "ar": "أطر النتائج",
+        "tr": "Sonuç Çerçeveleri",
+        "und": "Results Frameworks"
+      },
+      "source": "scripts/seed-entities/entities/pm_logframes.ts",
+      "navigation": false,
+      "parent": "pm_projects",
+      "tab": "framework",
+      "condition": "planningIsPlanContext($relations.context_id) ? (((($relations.context_id.base_framework == \"results_framework\" || $relations.context_id.base_framework == \"logframe\" || $relations.context_id.base_framework == \"me_framework\" || $relations.context_id.base_framework == \"evaluation_framework\" || $relations.context_id.base_framework == \"rbm\") || ($relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"results_framework\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"logframe\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"me_framework\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"evaluation_framework\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"rbm\")))) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "name",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "pm_logframe_goals",
+      "slug": "logframe-goals",
+      "title": {
+        "en": "Logframe Goals",
+        "ar": "أهداف الإطار المنطقي",
+        "tr": "Mantıksal Çerçeve Hedefleri",
+        "und": "Logframe Goals"
+      },
+      "source": "scripts/seed-entities/entities/pm_logframe_goals.ts",
+      "navigation": false,
+      "parent": "pm_projects",
+      "tab": "framework",
+      "condition": "planningIsPlanContext($relations.context_id) ? (((($relations.context_id.base_framework == \"results_framework\" || $relations.context_id.base_framework == \"logframe\" || $relations.context_id.base_framework == \"me_framework\" || $relations.context_id.base_framework == \"evaluation_framework\" || $relations.context_id.base_framework == \"rbm\") || ($relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"results_framework\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"logframe\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"me_framework\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"evaluation_framework\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"rbm\")))) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "logframe_id",
+          "conditional": false
+        },
+        {
+          "key": "code",
+          "conditional": false
+        },
+        {
+          "key": "statement",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "pm_logframe_outcomes",
+      "slug": "logframe-outcomes",
+      "title": {
+        "en": "Logframe Outcomes",
+        "ar": "نتائج الإطار المنطقي",
+        "tr": "Mantıksal Çerçeve Sonuçları",
+        "und": "Logframe Outcomes"
+      },
+      "source": "scripts/seed-entities/entities/pm_logframe_outcomes.ts",
+      "navigation": false,
+      "parent": "pm_projects",
+      "tab": "framework",
+      "condition": "planningIsPlanContext($relations.context_id) ? (((($relations.context_id.base_framework == \"results_framework\" || $relations.context_id.base_framework == \"logframe\" || $relations.context_id.base_framework == \"me_framework\" || $relations.context_id.base_framework == \"evaluation_framework\" || $relations.context_id.base_framework == \"rbm\") || ($relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"results_framework\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"logframe\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"me_framework\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"evaluation_framework\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"rbm\")))) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "logframe_id",
+          "conditional": false
+        },
+        {
+          "key": "goal_id",
+          "conditional": false
+        },
+        {
+          "key": "code",
+          "conditional": false
+        },
+        {
+          "key": "statement",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "pm_logframe_outputs",
+      "slug": "logframe-outputs",
+      "title": {
+        "en": "Logframe Outputs",
+        "ar": "مخرجات الإطار المنطقي",
+        "tr": "Mantıksal Çerçeve Çıktıları",
+        "und": "Logframe Outputs"
+      },
+      "source": "scripts/seed-entities/entities/pm_logframe_outputs.ts",
+      "navigation": false,
+      "parent": "pm_projects",
+      "tab": "framework",
+      "condition": "planningIsPlanContext($relations.context_id) ? (((($relations.context_id.base_framework == \"results_framework\" || $relations.context_id.base_framework == \"logframe\" || $relations.context_id.base_framework == \"me_framework\" || $relations.context_id.base_framework == \"evaluation_framework\" || $relations.context_id.base_framework == \"rbm\") || ($relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"results_framework\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"logframe\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"me_framework\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"evaluation_framework\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"rbm\")))) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "logframe_id",
+          "conditional": false
+        },
+        {
+          "key": "outcome_id",
+          "conditional": false
+        },
+        {
+          "key": "code",
+          "conditional": false
+        },
+        {
+          "key": "name",
+          "conditional": false
+        },
+        {
+          "key": "delivery_tracking_mode",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "pm_logframe_activities",
+      "slug": "logframe-activities",
+      "title": {
+        "en": "Logframe Activities",
+        "ar": "أنشطة الإطار المنطقي",
+        "tr": "Mantıksal Çerçeve Faaliyetleri",
+        "und": "Logframe Activities"
+      },
+      "source": "scripts/seed-entities/entities/pm_logframe_activities.ts",
+      "navigation": false,
+      "parent": "pm_projects",
+      "tab": "framework",
+      "condition": "planningIsPlanContext($relations.context_id) ? (((($relations.context_id.base_framework == \"results_framework\" || $relations.context_id.base_framework == \"logframe\" || $relations.context_id.base_framework == \"me_framework\" || $relations.context_id.base_framework == \"evaluation_framework\" || $relations.context_id.base_framework == \"rbm\") || ($relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"results_framework\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"logframe\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"me_framework\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"evaluation_framework\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"rbm\")))) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "logframe_id",
+          "conditional": false
+        },
+        {
+          "key": "output_id",
+          "conditional": false
+        },
+        {
+          "key": "code",
+          "conditional": false
+        },
+        {
+          "key": "title",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "pm_beneficiaries",
+      "slug": "beneficiaries",
+      "title": {
+        "en": "Beneficiaries",
+        "ar": "المستفيدون",
+        "tr": "Yararlanıcılar",
+        "und": "Beneficiaries"
+      },
+      "source": "scripts/seed-entities/entities/pm_beneficiaries.ts",
+      "navigation": false,
+      "parent": "pm_projects",
+      "tab": "me",
+      "condition": "$relations.project_id != null && ( $relations.project_id.project_framework == \"pmd_pro\" || $relations.project_id.project_type == \"grant_funded\" || $relations.project_id.client_type == \"government\" || $relations.project_id.client_type == \"public_agency\" || $relations.project_id.client_type == \"municipality\" || $relations.project_id.client_type == \"ngo\" || $relations.project_id.client_type == \"community_based_org\" || $relations.project_id.client_type == \"donor\" || $relations.project_id.client_type == \"international_org\" || $relations.project_id.client_type == \"community_or_beneficiaries\" || $relations.project_id.client_type == \"consortium_or_partnership\" )",
+      "required": [
+        {
+          "key": "project_id",
+          "conditional": true
+        },
+        {
+          "key": "name",
+          "conditional": false
+        },
+        {
+          "key": "beneficiary_type",
+          "conditional": false
+        }
+      ],
+      "children": [
+        "pm_beneficiary_segments"
+      ]
+    },
+    {
+      "key": "pm_beneficiary_segments",
+      "slug": "beneficiary-segments",
+      "title": {
+        "en": "Beneficiary Segments",
+        "ar": "شرائح المستفيدين",
+        "tr": "Yararlanıcı Segmentleri",
+        "und": "Beneficiary Segments"
+      },
+      "source": "scripts/seed-entities/entities/pm_beneficiary_segments.ts",
+      "navigation": false,
+      "parent": "pm_beneficiaries",
+      "tab": "demographics",
+      "condition": null,
+      "required": [
+        {
+          "key": "beneficiary_id",
+          "conditional": false
+        },
+        {
+          "key": "dimension",
+          "conditional": false
+        },
+        {
+          "key": "segment_label",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "planning_scenarios",
+      "slug": "planning-scenarios",
+      "title": {
+        "en": "Planning Scenarios",
+        "ar": "سيناريوهات التخطيط",
+        "tr": "Planlama Senaryoları",
+        "und": "Planning Scenarios"
+      },
+      "source": "scripts/seed-entities/entities/planning_scenarios.ts",
+      "navigation": false,
+      "parent": "plans",
+      "tab": "scenarios",
+      "condition": "planningIsPlanContext($relations.context_id) ? ((($relations.context_id.plan_type == \"contingency_plan\" || $relations.context_id.plan_type == \"business_continuity_plan\")) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "context_id",
+          "conditional": true
+        },
+        {
+          "key": "title",
+          "conditional": false
+        },
+        {
+          "key": "scenario_type",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "planning_bia_entries",
+      "slug": "planning-bia-entries",
+      "title": {
+        "en": "BIA Entries",
+        "ar": "سجلات تحليل أثر الأعمال",
+        "tr": "İş Etki Analizi Kayıtları",
+        "und": "BIA Entries"
+      },
+      "source": "scripts/seed-entities/entities/planning_bia_entries.ts",
+      "navigation": false,
+      "parent": "plans",
+      "tab": "bia",
+      "condition": "planningIsPlanContext($relations.context_id) ? ((((($relations.context_id.plan_type == \"business_continuity_plan\" || $relations.context_id.plan_type == \"disaster_recovery_plan\")) || (($relations.context_id.plan_type == \"contingency_plan\" || $relations.context_id.plan_type == \"incident_response_plan\") && (($relations.context_id.base_framework == \"bcp\" || $relations.context_id.base_framework == \"drp\") || ($relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"bcp\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"drp\")))))) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "context_id",
+          "conditional": true
+        },
+        {
+          "key": "capability_name",
+          "conditional": false
+        },
+        {
+          "key": "criticality",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "planning_procedures",
+      "slug": "planning-procedures",
+      "title": {
+        "en": "Planning Procedures",
+        "ar": "إجراءات التخطيط",
+        "tr": "Planlama Prosedürleri",
+        "und": "Planning Procedures"
+      },
+      "source": "scripts/seed-entities/entities/planning_procedures.ts",
+      "navigation": false,
+      "parent": "plans",
+      "tab": "procedures",
+      "condition": "planningIsPlanContext($relations.context_id) ? ((($relations.context_id.plan_type == \"contingency_plan\" || $relations.context_id.plan_type == \"business_continuity_plan\" || $relations.context_id.plan_type == \"disaster_recovery_plan\" || $relations.context_id.plan_type == \"incident_response_plan\")) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "context_id",
+          "conditional": true
+        },
+        {
+          "key": "title",
+          "conditional": false
+        },
+        {
+          "key": "procedure_type",
+          "conditional": false
+        },
+        {
+          "key": "readiness_state",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "planning_exercises",
+      "slug": "planning-exercises",
+      "title": {
+        "en": "Planning Exercises",
+        "ar": "تمارين التخطيط",
+        "tr": "Planlama Tatbikatları",
+        "und": "Planning Exercises"
+      },
+      "source": "scripts/seed-entities/entities/planning_exercises.ts",
+      "navigation": false,
+      "parent": "plans",
+      "tab": "exercises",
+      "condition": "planningIsPlanContext($relations.context_id) ? ((((($relations.context_id.plan_type == \"business_continuity_plan\" || $relations.context_id.plan_type == \"disaster_recovery_plan\")) || (($relations.context_id.plan_type == \"contingency_plan\" || $relations.context_id.plan_type == \"incident_response_plan\") && (($relations.context_id.base_framework == \"bcp\" || $relations.context_id.base_framework == \"drp\") || ($relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"bcp\") || $relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"drp\")))))) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "context_id",
+          "conditional": true
+        },
+        {
+          "key": "title",
+          "conditional": false
+        },
+        {
+          "key": "exercise_type",
+          "conditional": false
+        },
+        {
+          "key": "outcome",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "planning_controls",
+      "slug": "planning-controls",
+      "title": {
+        "en": "Planning Controls",
+        "ar": "ضوابط التخطيط",
+        "tr": "Planlama Kontrolleri",
+        "und": "Planning Controls"
+      },
+      "source": "scripts/seed-entities/entities/planning_controls.ts",
+      "navigation": false,
+      "parent": "plans",
+      "tab": "controls",
+      "condition": "planningIsPlanContext($relations.context_id) ? ((((($relations.context_id.plan_type == \"risk_plan\" || $relations.context_id.plan_type == \"compliance_plan\")) || (($relations.context_id.plan_type == \"contingency_plan\" || $relations.context_id.plan_type == \"business_continuity_plan\" || $relations.context_id.plan_type == \"disaster_recovery_plan\") && (($relations.context_id.base_framework == \"iso_31000\") || ($relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"iso_31000\")))))) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "context_id",
+          "conditional": true
+        },
+        {
+          "key": "title",
+          "conditional": false
+        },
+        {
+          "key": "control_type",
+          "conditional": false
+        },
+        {
+          "key": "control_state",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "planning_control_assessments",
+      "slug": "planning-control-assessments",
+      "title": {
+        "en": "Control Assessments",
+        "ar": "تقييمات الضوابط",
+        "tr": "Kontrol Değerlendirmeleri",
+        "und": "Control Assessments"
+      },
+      "source": "scripts/seed-entities/entities/planning_control_assessments.ts",
+      "navigation": false,
+      "parent": "plans",
+      "tab": "assessments",
+      "condition": "planningIsPlanContext($relations.context_id) ? ((((($relations.context_id.plan_type == \"risk_plan\" || $relations.context_id.plan_type == \"compliance_plan\")) || (($relations.context_id.plan_type == \"contingency_plan\" || $relations.context_id.plan_type == \"business_continuity_plan\" || $relations.context_id.plan_type == \"disaster_recovery_plan\") && (($relations.context_id.base_framework == \"iso_31000\") || ($relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"iso_31000\")))))) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "context_id",
+          "conditional": true
+        },
+        {
+          "key": "control_id",
+          "conditional": false
+        },
+        {
+          "key": "assessment_type",
+          "conditional": false
+        },
+        {
+          "key": "assessment_date",
+          "conditional": false
+        },
+        {
+          "key": "result",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "planning_findings",
+      "slug": "planning-findings",
+      "title": {
+        "en": "Planning Findings",
+        "ar": "ملاحظات التخطيط",
+        "tr": "Planlama Bulguları",
+        "und": "Planning Findings"
+      },
+      "source": "scripts/seed-entities/entities/planning_findings.ts",
+      "navigation": false,
+      "parent": "plans",
+      "tab": "findings",
+      "condition": "planningIsPlanContext($relations.context_id) ? ((((($relations.context_id.plan_type == \"compliance_plan\" || $relations.context_id.plan_type == \"incident_response_plan\")) || (($relations.context_id.plan_type == \"contingency_plan\" || $relations.context_id.plan_type == \"disaster_recovery_plan\") && (($relations.context_id.base_framework == \"incident_response\") || ($relations.context_id.overlay_frameworks && contains($relations.context_id.overlay_frameworks, \"incident_response\")))))) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "context_id",
+          "conditional": true
+        },
+        {
+          "key": "title",
+          "conditional": false
+        },
+        {
+          "key": "finding_type",
+          "conditional": false
+        },
+        {
+          "key": "severity",
+          "conditional": false
+        },
+        {
+          "key": "status",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "planning_incidents",
+      "slug": "planning-incidents",
+      "title": {
+        "en": "Planning Incidents",
+        "ar": "حوادث التخطيط",
+        "tr": "Planlama Olayları",
+        "und": "Planning Incidents"
+      },
+      "source": "scripts/seed-entities/entities/planning_incidents.ts",
+      "navigation": false,
+      "parent": "plans",
+      "tab": "incidents",
+      "condition": "planningIsPlanContext($relations.context_id) ? ((($relations.context_id.plan_type == \"incident_response_plan\")) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "context_id",
+          "conditional": true
+        },
+        {
+          "key": "title",
+          "conditional": false
+        },
+        {
+          "key": "classification",
+          "conditional": false
+        },
+        {
+          "key": "severity",
+          "conditional": false
+        },
+        {
+          "key": "state",
+          "conditional": false
+        }
+      ],
+      "children": []
+    },
+    {
+      "key": "planning_incident_events",
+      "slug": "planning-incident-events",
+      "title": {
+        "en": "Incident Timeline Events",
+        "ar": "أحداث الخط الزمني للحوادث",
+        "tr": "Olay Zaman Çizelgesi Olayları",
+        "und": "Incident Timeline Events"
+      },
+      "source": "scripts/seed-entities/entities/planning_incident_events.ts",
+      "navigation": false,
+      "parent": "plans",
+      "tab": "timeline",
+      "condition": "planningIsPlanContext($relations.context_id) ? ((($relations.context_id.plan_type == \"incident_response_plan\")) && ($relations.context_id.plan_category != null && $relations.context_id.plan_category != \"\" && $relations.context_id.plan_type != null && $relations.context_id.plan_type != \"\" && $relations.context_id.primary_target_id != null && $relations.context_id.primary_target_id != \"\" && $relations.context_id.base_framework != null && $relations.context_id.base_framework != \"\" && $relations.context_id.name != null && $relations.context_id.name != \"\" && $relations.context_id.owner != null && $relations.context_id.owner != \"\" && $relations.context_id.start_date != null && $relations.context_id.start_date != \"\" && $relations.context_id.end_date != null && $relations.context_id.end_date != \"\")) : true",
+      "required": [
+        {
+          "key": "context_id",
+          "conditional": true
+        },
+        {
+          "key": "incident_id",
+          "conditional": false
+        },
+        {
+          "key": "event_type",
+          "conditional": false
+        },
+        {
+          "key": "event_at",
+          "conditional": false
+        }
+      ],
+      "children": []
+    }
+  ],
+  "excluded": [
+    {
+      "key": "projects",
+      "reason": "Hidden legacy compatibility model"
+    },
+    {
+      "key": "budgets",
+      "reason": "Hidden legacy compatibility model"
+    },
+    {
+      "key": "budget_lines",
+      "reason": "Legacy budget child"
+    },
+    {
+      "key": "budget_allocations",
+      "reason": "Legacy budget child"
+    },
+    {
+      "key": "pm_project_charter",
+      "reason": "Hidden separate legacy model; current charter fields live on pm_projects and are explained there"
+    },
+    {
+      "key": "pm_logframe_entries",
+      "reason": "No exposed inverse-tab navigation; typed goals/outcomes/outputs/activities documented instead"
+    },
+    {
+      "key": "pm_sprint_ceremonies",
+      "reason": "Source does not establish exposed inverse-tab entry point"
+    }
+  ]
+}
