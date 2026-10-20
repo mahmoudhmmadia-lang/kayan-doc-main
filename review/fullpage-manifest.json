@@ -6,7 +6,7 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-19T13:29:50.139Z",
+    "capturedAt": "2026-10-20T10:17:30.011Z",
     "marks": [
       {
         "n": 1,
@@ -25,7 +25,7 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-19T13:30:06.281Z",
+    "capturedAt": "2026-10-20T10:17:44.508Z",
     "marks": [
       {
         "n": 1,
@@ -44,7 +44,7 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-19T13:30:21.430Z",
+    "capturedAt": "2026-10-20T10:17:59.045Z",
     "marks": [
       {
         "n": 1,
@@ -63,7 +63,7 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-19T13:30:37.050Z",
+    "capturedAt": "2026-10-20T10:18:13.576Z",
     "marks": [
       {
         "n": 1,
@@ -82,7 +82,7 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-19T13:30:56.743Z",
+    "capturedAt": "2026-10-20T10:18:28.068Z",
     "marks": [
       {
         "n": 1,
@@ -101,7 +101,7 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-19T13:31:14.029Z",
+    "capturedAt": "2026-10-20T10:18:42.644Z",
     "marks": [
       {
         "n": 1,
@@ -120,7 +120,7 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-19T13:31:29.308Z",
+    "capturedAt": "2026-10-20T10:18:57.175Z",
     "marks": [
       {
         "n": 1,
@@ -139,7 +139,7 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-19T13:31:46.375Z",
+    "capturedAt": "2026-10-20T10:19:11.682Z",
     "marks": [
       {
         "n": 1,
@@ -158,7 +158,7 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-19T13:32:02.969Z",
+    "capturedAt": "2026-10-20T10:19:26.262Z",
     "marks": [
       {
         "n": 1,
@@ -177,7 +177,7 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-19T13:32:22.732Z",
+    "capturedAt": "2026-10-20T10:19:40.831Z",
     "marks": [
       {
         "n": 1,
@@ -196,7 +196,7 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-19T13:32:39.952Z",
+    "capturedAt": "2026-10-20T10:19:55.305Z",
     "marks": [
       {
         "n": 1,
@@ -213,9 +213,9 @@
     "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=custom%3Aworked-hours-assignment&returnView=table",
     "lang": "ar",
     "width": 1440,
-    "height": 1173,
+    "height": 1147,
     "scale": 2,
-    "capturedAt": "2026-10-19T13:32:58.070Z",
+    "capturedAt": "2026-10-20T10:20:09.857Z",
     "marks": [
       {
         "n": 1,
@@ -234,7 +234,7 @@
     "width": 1440,
     "height": 2454,
     "scale": 2,
-    "capturedAt": "2026-10-19T13:28:22.303Z",
+    "capturedAt": "2026-10-20T10:16:25.288Z",
     "marks": [
       {
         "n": 1,
@@ -257,7 +257,7 @@
     "width": 1440,
     "height": 2454,
     "scale": 2,
-    "capturedAt": "2026-10-19T13:28:42.695Z",
+    "capturedAt": "2026-10-20T10:16:43.327Z",
     "marks": [
       {
         "n": 1,
@@ -280,7 +280,7 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-19T13:28:57.593Z",
+    "capturedAt": "2026-10-20T10:16:57.942Z",
     "marks": [
       {
         "n": 1,
@@ -297,9 +297,9 @@
     "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=custom%3Anotifications&returnView=table",
     "lang": "ar",
     "width": 1440,
-    "height": 3911,
+    "height": 3790,
     "scale": 2,
-    "capturedAt": "2026-10-19T13:33:15.773Z",
+    "capturedAt": "2026-10-20T10:20:25.248Z",
     "marks": [
       {
         "n": 1,
@@ -316,9 +316,9 @@
     "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=custom%3Asessions&returnView=table",
     "lang": "ar",
     "width": 1440,
-    "height": 900,
+    "height": 1119,
     "scale": 2,
-    "capturedAt": "2026-10-19T13:33:32.120Z",
+    "capturedAt": "2026-10-20T10:20:40.267Z",
     "marks": [
       {
         "n": 1,
@@ -337,7 +337,7 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-19T13:33:46.660Z",
+    "capturedAt": "2026-10-20T10:20:54.776Z",
     "marks": [
       {
         "n": 1,
@@ -356,7 +356,7 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-19T13:34:01.557Z",
+    "capturedAt": "2026-10-20T10:21:09.253Z",
     "marks": [
       {
         "n": 1,
@@ -373,9 +373,9 @@
     "url": "https://test2.kayanos.app/apps/hr/workforce/positions/add?tab=overview",
     "lang": "ar",
     "width": 1440,
-    "height": 1506,
+    "height": 1450,
     "scale": 2,
-    "capturedAt": "2026-10-19T13:34:18.199Z",
+    "capturedAt": "2026-10-20T10:21:23.893Z",
     "marks": [
       {
         "n": 1,
@@ -392,9 +392,9 @@
     "url": "https://test2.kayanos.app/apps/hr/workforce/assignments/add?tab=overview",
     "lang": "ar",
     "width": 1440,
-    "height": 1676,
+    "height": 1617,
     "scale": 2,
-    "capturedAt": "2026-10-19T13:37:45.329Z",
+    "capturedAt": "2026-10-20T10:24:48.626Z",
     "marks": [
       {
         "n": 1,
@@ -411,9 +411,9 @@
     "url": "https://test2.kayanos.app/apps/hr/core/nodes/add?tab=overview",
     "lang": "ar",
     "width": 1440,
-    "height": 1200,
+    "height": 1144,
     "scale": 2,
-    "capturedAt": "2026-10-19T13:41:11.365Z",
+    "capturedAt": "2026-10-20T10:31:20.501Z",
     "marks": [
       {
         "n": 1,
@@ -430,9 +430,9 @@
     "url": "https://test2.kayanos.app/apps/hr/core/locations/add?tab=overview",
     "lang": "ar",
     "width": 1440,
-    "height": 1364,
+    "height": 1304,
     "scale": 2,
-    "capturedAt": "2026-10-19T13:44:37.489Z",
+    "capturedAt": "2026-10-20T10:34:45.077Z",
     "marks": [
       {
         "n": 1,
@@ -451,7 +451,7 @@
     "width": 1440,
     "height": 4917,
     "scale": 2,
-    "capturedAt": "2026-10-19T13:29:24.543Z",
+    "capturedAt": "2026-10-20T10:17:15.395Z",
     "marks": [
       {
         "n": 1,
@@ -472,9 +472,23 @@
     "url": "https://test2.kayanos.app/apps/hr/time/shifts/add",
     "lang": "ar",
     "width": 1440,
-    "height": 1201,
+    "height": 1189,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:39:42.181Z"
+    "capturedAt": "2026-10-20T10:47:53.937Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الاسم"
+      },
+      {
+        "n": 2,
+        "label": "أيام العمل"
+      },
+      {
+        "n": 3,
+        "label": "الاستراحات"
+      }
+    ]
   },
   "ch03-leave-type-fields-ar": {
     "file": "kayanos-guide/figures/screens/ch03-leave-type-fields-ar.png",
@@ -483,25 +497,47 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:50:44.780Z"
+    "capturedAt": "2026-10-20T10:48:38.526Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "القواعد"
+      },
+      {
+        "n": 2,
+        "label": "إنشاء"
+      }
+    ]
   },
   "ch03-leave-fields-ar": {
     "file": "kayanos-guide/figures/screens/ch03-leave-fields-ar.png",
-    "url": "https://test2.kayanos.app/apps/hr/time/leaves/add",
+    "url": "https://test2.kayanos.app/apps/hr/time/leaves/add?tab=overview",
     "lang": "ar",
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:39:56.493Z"
+    "capturedAt": "2026-10-20T10:49:07.981Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إنشاء"
+      }
+    ]
   },
   "ch03-payroll-input-fields-ar": {
     "file": "kayanos-guide/figures/screens/ch03-payroll-input-fields-ar.png",
-    "url": "https://test2.kayanos.app/apps/hr/payment/payroll_inputs/add",
+    "url": "https://test2.kayanos.app/apps/hr/payment/payroll_inputs/add?tab=overview",
     "lang": "ar",
     "width": 1440,
-    "height": 1117,
+    "height": 1223,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:40:04.115Z"
+    "capturedAt": "2026-10-20T11:00:00.825Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إنشاء"
+      }
+    ]
   },
   "ch03-feature-groups-ar": {
     "file": "kayanos-guide/figures/screens/ch03-feature-groups-ar.png",
@@ -510,7 +546,7 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-19T13:54:20.075Z",
+    "capturedAt": "2026-10-20T10:44:29.122Z",
     "marks": [
       {
         "n": 1,
@@ -527,9 +563,19 @@
     "url": "https://test2.kayanos.app/apps/hr/salaryScale/seniority_levels/add?tab=overview",
     "lang": "ar",
     "width": 1440,
-    "height": 900,
+    "height": 1144,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:40:18.766Z"
+    "capturedAt": "2026-10-20T10:56:22.018Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "نظرة عامة *"
+      },
+      {
+        "n": 2,
+        "label": "إنشاء"
+      }
+    ]
   },
   "ch03-feature-experience-levels-ar": {
     "file": "kayanos-guide/figures/screens/ch03-feature-experience-levels-ar.png",
@@ -538,7 +584,13 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:40:25.952Z"
+    "capturedAt": "2026-10-20T10:59:31.483Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "مستويات الخبرة"
+      }
+    ]
   },
   "ch03-feature-salary-scale-ar": {
     "file": "kayanos-guide/figures/screens/ch03-feature-salary-scale-ar.png",
@@ -547,16 +599,40 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:40:33.165Z"
+    "capturedAt": "2026-10-20T10:59:45.945Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "سلم الراتب"
+      },
+      {
+        "n": 2,
+        "label": "مستوى الأقدمية"
+      }
+    ]
   },
   "ch03-feature-my-attendance-ar": {
     "file": "kayanos-guide/figures/screens/ch03-feature-my-attendance-ar.png",
     "url": "https://test2.kayanos.app/time/attendance",
     "lang": "ar",
     "width": 1440,
-    "height": 1484,
+    "height": 1773,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:40:41.067Z"
+    "capturedAt": "2026-10-20T10:48:08.959Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "حضوري"
+      },
+      {
+        "n": 2,
+        "label": "العمل"
+      },
+      {
+        "n": 3,
+        "label": "15 الخميس لا بصمات يحتاج تصحيحًا غياب بدون أجر · 8h 00m"
+      }
+    ]
   },
   "ch03-feature-timesheets-ar": {
     "file": "kayanos-guide/figures/screens/ch03-feature-timesheets-ar.png",
@@ -565,7 +641,21 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:40:48.343Z"
+    "capturedAt": "2026-10-20T10:48:23.604Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "جداول الدوام"
+      },
+      {
+        "n": 2,
+        "label": "اليوم"
+      },
+      {
+        "n": 3,
+        "label": "الأسبوع"
+      }
+    ]
   },
   "ch03-feature-holiday-groups-ar": {
     "file": "kayanos-guide/figures/screens/ch03-feature-holiday-groups-ar.png",
@@ -574,16 +664,32 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:40:55.553Z"
+    "capturedAt": "2026-10-20T10:55:22.342Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "مجموعات العطل الرسمية"
+      },
+      {
+        "n": 2,
+        "label": "مجموعة جديدة"
+      }
+    ]
   },
   "ch03-feature-attendance-corrections-ar": {
     "file": "kayanos-guide/figures/screens/ch03-feature-attendance-corrections-ar.png",
     "url": "https://test2.kayanos.app/time/attendance-corrections",
     "lang": "ar",
     "width": 1440,
-    "height": 3786,
+    "height": 3763,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:41:03.960Z"
+    "capturedAt": "2026-10-20T10:55:38.184Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "تصحيحات الحضور"
+      }
+    ]
   },
   "ch03-feature-attendance-policy-ar": {
     "file": "kayanos-guide/figures/screens/ch03-feature-attendance-policy-ar.png",
@@ -592,7 +698,21 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:41:11.187Z"
+    "capturedAt": "2026-10-20T10:55:52.794Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "سياسة جديدة"
+      },
+      {
+        "n": 2,
+        "label": "فتح الدعم"
+      },
+      {
+        "n": 3,
+        "label": "حفظ"
+      }
+    ]
   },
   "ch03-feature-attendance-terminals-ar": {
     "file": "kayanos-guide/figures/screens/ch03-feature-attendance-terminals-ar.png",
@@ -601,7 +721,17 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:41:18.389Z"
+    "capturedAt": "2026-10-20T10:56:07.341Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "شبكة جديدة"
+      },
+      {
+        "n": 2,
+        "label": "الإعدادات"
+      }
+    ]
   },
   "ch03-feature-payrolls-ar": {
     "file": "kayanos-guide/figures/screens/ch03-feature-payrolls-ar.png",
@@ -610,44 +740,82 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:41:25.566Z"
+    "capturedAt": "2026-10-20T11:00:40.946Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إنشاء كشف رواتب"
+      },
+      {
+        "n": 2,
+        "label": "جميع الحالات"
+      }
+    ]
   },
   "ch03-create-slips-clear-ar": {
     "file": "kayanos-guide/figures/screens/ch03-create-slips-clear-ar.png",
     "url": "https://test2.kayanos.app/apps/hr/payment/salary_slips",
     "lang": "ar",
     "width": 1440,
-    "height": 1900,
+    "height": 1805,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:41:34.332Z"
+    "capturedAt": "2026-10-20T11:00:26.440Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إنشاء قسائم رواتب"
+      },
+      {
+        "n": 2,
+        "label": "بحث"
+      }
+    ]
   },
   "ch01-workspaces-clear-en": {
     "file": "kayanos-guide/figures/screens/ch01-workspaces-clear-en.png",
     "url": "https://test2.kayanos.app/",
     "lang": "en",
     "width": 1440,
-    "height": 4438,
+    "height": 2454,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:48:06.734Z",
-    "trim": {
-      "top": 0,
-      "height": 1614,
-      "reason": "Remove blank bottom margin; preserve all page content"
-    }
+    "capturedAt": "2026-10-20T11:01:11.184Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "My workspaces"
+      },
+      {
+        "n": 2,
+        "label": "HR"
+      },
+      {
+        "n": 3,
+        "label": "Open the app directory"
+      }
+    ]
   },
   "ch01-apps-clear-en": {
     "file": "kayanos-guide/figures/screens/ch01-apps-clear-en.png",
     "url": "https://test2.kayanos.app/",
     "lang": "en",
     "width": 1440,
-    "height": 4438,
+    "height": 2454,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:48:12.525Z",
-    "trim": {
-      "top": 0,
-      "height": 1614,
-      "reason": "Remove blank bottom margin; preserve all page content"
-    }
+    "capturedAt": "2026-10-20T11:01:30.619Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "App launcher"
+      },
+      {
+        "n": 2,
+        "label": "HR"
+      },
+      {
+        "n": 3,
+        "label": "Builder"
+      }
+    ]
   },
   "ch02-create-org-en": {
     "file": "kayanos-guide/figures/screens/ch02-create-org-en.png",
@@ -656,220 +824,443 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:48:22.706Z"
+    "capturedAt": "2026-10-20T11:01:45.999Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Contact"
+      },
+      {
+        "n": 2,
+        "label": "Organization Details"
+      }
+    ]
   },
   "ch02-member-fields-en": {
     "file": "kayanos-guide/figures/screens/ch02-member-fields-en.png",
     "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?returnView=table&tab=overview",
     "lang": "en",
     "width": 1440,
-    "height": 987,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:42:33.880Z"
+    "capturedAt": "2026-10-20T11:02:25.064Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Overview"
+      },
+      {
+        "n": 2,
+        "label": "Edit"
+      }
+    ]
   },
   "ch03-member-tab1-en": {
     "file": "kayanos-guide/figures/screens/ch03-member-tab1-en.png",
     "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=overview&returnView=table",
     "lang": "en",
     "width": 1440,
-    "height": 1283,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:42:42.087Z",
-    "tab": "Overview"
+    "capturedAt": "2026-10-20T11:02:39.871Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Overview"
+      },
+      {
+        "n": 2,
+        "label": "Edit"
+      }
+    ]
   },
   "ch03-member-tab2-en": {
     "file": "kayanos-guide/figures/screens/ch03-member-tab2-en.png",
     "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=orientation&returnView=table",
     "lang": "en",
     "width": 1440,
-    "height": 1283,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:42:50.304Z",
-    "tab": "Orientation"
+    "capturedAt": "2026-10-20T11:02:54.975Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Orientation"
+      },
+      {
+        "n": 2,
+        "label": "Edit"
+      }
+    ]
   },
   "ch03-member-tab3-en": {
     "file": "kayanos-guide/figures/screens/ch03-member-tab3-en.png",
     "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=personal&returnView=table",
     "lang": "en",
     "width": 1440,
-    "height": 1283,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:42:58.574Z",
-    "tab": "Personal"
+    "capturedAt": "2026-10-20T11:03:10.530Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Personal"
+      },
+      {
+        "n": 2,
+        "label": "Edit"
+      }
+    ]
   },
   "ch03-member-tab4-en": {
     "file": "kayanos-guide/figures/screens/ch03-member-tab4-en.png",
     "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=contact&returnView=table",
     "lang": "en",
     "width": 1440,
-    "height": 1283,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:43:06.799Z",
-    "tab": "Contact"
+    "capturedAt": "2026-10-20T11:03:26.324Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Contact"
+      },
+      {
+        "n": 2,
+        "label": "Edit"
+      }
+    ]
   },
   "ch03-member-tab5-en": {
     "file": "kayanos-guide/figures/screens/ch03-member-tab5-en.png",
     "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=qualifications&returnView=table",
     "lang": "en",
     "width": 1440,
-    "height": 1283,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:43:15.097Z",
-    "tab": "Qualifications"
+    "capturedAt": "2026-10-20T11:03:42.056Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Qualifications"
+      },
+      {
+        "n": 2,
+        "label": "Edit"
+      }
+    ]
   },
   "ch03-member-tab6-en": {
     "file": "kayanos-guide/figures/screens/ch03-member-tab6-en.png",
     "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=conflict_of_interest&returnView=table",
     "lang": "en",
     "width": 1440,
-    "height": 1283,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:43:23.320Z",
-    "tab": "Conflict of Interest"
+    "capturedAt": "2026-10-20T11:03:57.754Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Conflict of Interest"
+      },
+      {
+        "n": 2,
+        "label": "Edit"
+      }
+    ]
   },
   "ch03-member-tab7-en": {
     "file": "kayanos-guide/figures/screens/ch03-member-tab7-en.png",
     "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=financial&returnView=table",
     "lang": "en",
     "width": 1440,
-    "height": 1283,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:43:31.530Z",
-    "tab": "Financial"
+    "capturedAt": "2026-10-20T11:04:13.040Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Financial"
+      },
+      {
+        "n": 2,
+        "label": "Edit"
+      }
+    ]
   },
   "ch03-member-tab8-en": {
     "file": "kayanos-guide/figures/screens/ch03-member-tab8-en.png",
     "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=employment&returnView=table",
     "lang": "en",
     "width": 1440,
-    "height": 1283,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:43:39.854Z",
-    "tab": "Employment"
+    "capturedAt": "2026-10-20T11:04:28.243Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Employment"
+      },
+      {
+        "n": 2,
+        "label": "Edit"
+      }
+    ]
   },
   "ch03-member-tab9-en": {
     "file": "kayanos-guide/figures/screens/ch03-member-tab9-en.png",
     "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=attendance&returnView=table",
     "lang": "en",
     "width": 1440,
-    "height": 1283,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:43:48.092Z",
-    "tab": "Attendance"
+    "capturedAt": "2026-10-20T11:04:43.565Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Attendance"
+      },
+      {
+        "n": 2,
+        "label": "Edit"
+      }
+    ]
   },
   "ch03-member-tab11-en": {
     "file": "kayanos-guide/figures/screens/ch03-member-tab11-en.png",
     "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=custom%3Ahosted-email-accounts&returnView=table",
     "lang": "en",
     "width": 1440,
-    "height": 1283,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:44:04.917Z",
-    "tab": "Email Accounts"
+    "capturedAt": "2026-10-20T11:04:58.505Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Email Accounts"
+      },
+      {
+        "n": 2,
+        "label": "Edit"
+      }
+    ]
   },
   "ch03-member-tab12-en": {
     "file": "kayanos-guide/figures/screens/ch03-member-tab12-en.png",
     "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=custom%3Aworked-hours-assignment&returnView=table",
     "lang": "en",
     "width": 1440,
-    "height": 1283,
+    "height": 1167,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:44:13.243Z",
-    "tab": "Worked hours"
+    "capturedAt": "2026-10-20T11:05:13.280Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Worked hours"
+      },
+      {
+        "n": 2,
+        "label": "Edit"
+      }
+    ]
   },
   "ch03-member-tab13-en": {
     "file": "kayanos-guide/figures/screens/ch03-member-tab13-en.png",
     "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=custom%3Anotifications&returnView=table",
     "lang": "en",
     "width": 1440,
-    "height": 7131,
+    "height": 3790,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:44:23.439Z",
-    "tab": "Notifications"
+    "capturedAt": "2026-10-20T11:05:29.326Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Notifications"
+      },
+      {
+        "n": 2,
+        "label": "Edit"
+      }
+    ]
   },
   "ch03-member-tab14-en": {
     "file": "kayanos-guide/figures/screens/ch03-member-tab14-en.png",
     "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=custom%3Asessions&returnView=table",
     "lang": "en",
     "width": 1440,
-    "height": 1283,
+    "height": 1119,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:44:31.788Z",
-    "tab": "Sessions"
+    "capturedAt": "2026-10-20T11:05:47.617Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Sessions"
+      },
+      {
+        "n": 2,
+        "label": "Edit"
+      }
+    ]
   },
   "ch03-member-tab15-en": {
     "file": "kayanos-guide/figures/screens/ch03-member-tab15-en.png",
     "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=custom%3Atwo-step-verification&returnView=table",
     "lang": "en",
     "width": 1440,
-    "height": 1283,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:44:40.579Z",
-    "tab": "Two-step verification"
+    "capturedAt": "2026-10-20T11:06:02.496Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Two-step verification"
+      },
+      {
+        "n": 2,
+        "label": "Edit"
+      }
+    ]
   },
   "ch03-member-tab16-en": {
     "file": "kayanos-guide/figures/screens/ch03-member-tab16-en.png",
     "url": "https://test2.kayanos.app/apps/hr/core/members/demo_m_adm?tab=roles&returnView=table",
     "lang": "en",
     "width": 1440,
-    "height": 1283,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:44:48.852Z",
-    "tab": "Roles"
+    "capturedAt": "2026-10-20T11:06:17.496Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Roles"
+      },
+      {
+        "n": 2,
+        "label": "Edit"
+      }
+    ]
   },
   "ch02-position-fields-en": {
     "file": "kayanos-guide/figures/screens/ch02-position-fields-en.png",
     "url": "https://test2.kayanos.app/apps/hr/workforce/positions/add?tab=overview",
     "lang": "en",
     "width": 1440,
-    "height": 926,
+    "height": 1450,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:51:15.688Z"
+    "capturedAt": "2026-10-20T11:06:32.377Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Overview *"
+      },
+      {
+        "n": 2,
+        "label": "Create"
+      }
+    ]
   },
   "ch02-assignment-fields-en": {
     "file": "kayanos-guide/figures/screens/ch02-assignment-fields-en.png",
     "url": "https://test2.kayanos.app/apps/hr/workforce/assignments/add?tab=overview",
     "lang": "en",
     "width": 1440,
-    "height": 1507,
+    "height": 1617,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:51:40.078Z"
+    "capturedAt": "2026-10-20T11:09:57.367Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Overview *"
+      },
+      {
+        "n": 2,
+        "label": "Create"
+      }
+    ]
   },
   "ch02-node-fields-en": {
     "file": "kayanos-guide/figures/screens/ch02-node-fields-en.png",
     "url": "https://test2.kayanos.app/apps/hr/core/nodes/add?tab=overview",
     "lang": "en",
     "width": 1440,
-    "height": 900,
+    "height": 1144,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:52:04.977Z"
+    "capturedAt": "2026-10-20T11:19:23.864Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Overview *"
+      },
+      {
+        "n": 2,
+        "label": "Create"
+      }
+    ]
   },
   "ch02-location-fields-en": {
     "file": "kayanos-guide/figures/screens/ch02-location-fields-en.png",
     "url": "https://test2.kayanos.app/apps/hr/core/locations/add?tab=overview",
     "lang": "en",
     "width": 1440,
-    "height": 979,
+    "height": 1304,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:52:28.184Z"
+    "capturedAt": "2026-10-20T11:22:50.387Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Overview *"
+      },
+      {
+        "n": 2,
+        "label": "Create"
+      }
+    ]
   },
   "ch03-hr-pages-clear-en": {
     "file": "kayanos-guide/figures/screens/ch03-hr-pages-clear-en.png",
     "url": "https://test2.kayanos.app/apps/hr",
     "lang": "en",
     "width": 1440,
-    "height": 3779,
+    "height": 4907,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:45:27.722Z"
+    "capturedAt": "2026-10-20T11:02:07.702Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Records"
+      },
+      {
+        "n": 2,
+        "label": "Members, Records"
+      },
+      {
+        "n": 3,
+        "label": "New record"
+      }
+    ]
   },
   "ch03-shift-example-en": {
     "file": "kayanos-guide/figures/screens/ch03-shift-example-en.png",
     "url": "https://test2.kayanos.app/apps/hr/time/shifts/add",
     "lang": "en",
     "width": 1440,
-    "height": 1201,
+    "height": 1189,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:45:35.337Z"
+    "capturedAt": "2026-10-20T11:38:54.262Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Name"
+      },
+      {
+        "n": 2,
+        "label": "Work Days"
+      },
+      {
+        "n": 3,
+        "label": "Breaks"
+      }
+    ]
   },
   "ch03-leave-type-fields-en": {
     "file": "kayanos-guide/figures/screens/ch03-leave-type-fields-en.png",
@@ -878,25 +1269,47 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:53:08.285Z"
+    "capturedAt": "2026-10-20T11:39:38.526Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Rules"
+      },
+      {
+        "n": 2,
+        "label": "Create"
+      }
+    ]
   },
   "ch03-leave-fields-en": {
     "file": "kayanos-guide/figures/screens/ch03-leave-fields-en.png",
-    "url": "https://test2.kayanos.app/apps/hr/time/leaves/add",
+    "url": "https://test2.kayanos.app/apps/hr/time/leaves/add?tab=overview",
     "lang": "en",
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:45:49.723Z"
+    "capturedAt": "2026-10-20T11:40:07.647Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Create"
+      }
+    ]
   },
   "ch03-payroll-input-fields-en": {
     "file": "kayanos-guide/figures/screens/ch03-payroll-input-fields-en.png",
-    "url": "https://test2.kayanos.app/apps/hr/payment/payroll_inputs/add",
+    "url": "https://test2.kayanos.app/apps/hr/payment/payroll_inputs/add?tab=overview",
     "lang": "en",
     "width": 1440,
-    "height": 1117,
+    "height": 1223,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:45:57.347Z"
+    "capturedAt": "2026-10-20T11:51:02.286Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Create"
+      }
+    ]
   },
   "ch03-feature-groups-en": {
     "file": "kayanos-guide/figures/screens/ch03-feature-groups-en.png",
@@ -905,16 +1318,36 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:53:23.134Z"
+    "capturedAt": "2026-10-20T11:35:29.971Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Members"
+      },
+      {
+        "n": 2,
+        "label": "Create"
+      }
+    ]
   },
   "ch03-feature-seniority-levels-en": {
     "file": "kayanos-guide/figures/screens/ch03-feature-seniority-levels-en.png",
     "url": "https://test2.kayanos.app/apps/hr/salaryScale/seniority_levels/add?tab=overview",
     "lang": "en",
     "width": 1440,
-    "height": 900,
+    "height": 1144,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:46:11.698Z"
+    "capturedAt": "2026-10-20T11:47:22.041Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Overview *"
+      },
+      {
+        "n": 2,
+        "label": "Create"
+      }
+    ]
   },
   "ch03-feature-experience-levels-en": {
     "file": "kayanos-guide/figures/screens/ch03-feature-experience-levels-en.png",
@@ -923,7 +1356,13 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:46:19.249Z"
+    "capturedAt": "2026-10-20T11:50:31.887Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Experience Levels"
+      }
+    ]
   },
   "ch03-feature-salary-scale-en": {
     "file": "kayanos-guide/figures/screens/ch03-feature-salary-scale-en.png",
@@ -932,16 +1371,40 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:46:26.508Z"
+    "capturedAt": "2026-10-20T11:50:46.726Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Salary Scale"
+      },
+      {
+        "n": 2,
+        "label": "Seniority Level"
+      }
+    ]
   },
   "ch03-feature-my-attendance-en": {
     "file": "kayanos-guide/figures/screens/ch03-feature-my-attendance-en.png",
     "url": "https://test2.kayanos.app/time/attendance",
     "lang": "en",
     "width": 1440,
-    "height": 1484,
+    "height": 1773,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:46:34.169Z"
+    "capturedAt": "2026-10-20T11:39:09.087Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "My attendance"
+      },
+      {
+        "n": 2,
+        "label": "Worked"
+      },
+      {
+        "n": 3,
+        "label": "15 Thu No punches Needs a fix Unpaid absence · 8h 00m"
+      }
+    ]
   },
   "ch03-feature-timesheets-en": {
     "file": "kayanos-guide/figures/screens/ch03-feature-timesheets-en.png",
@@ -950,7 +1413,21 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:46:41.275Z"
+    "capturedAt": "2026-10-20T11:39:23.859Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Timesheet"
+      },
+      {
+        "n": 2,
+        "label": "Today"
+      },
+      {
+        "n": 3,
+        "label": "Week"
+      }
+    ]
   },
   "ch03-feature-holiday-groups-en": {
     "file": "kayanos-guide/figures/screens/ch03-feature-holiday-groups-en.png",
@@ -959,16 +1436,32 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:46:48.404Z"
+    "capturedAt": "2026-10-20T11:46:22.910Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Holiday Groups"
+      },
+      {
+        "n": 2,
+        "label": "New Group"
+      }
+    ]
   },
   "ch03-feature-attendance-corrections-en": {
     "file": "kayanos-guide/figures/screens/ch03-feature-attendance-corrections-en.png",
     "url": "https://test2.kayanos.app/time/attendance-corrections",
     "lang": "en",
     "width": 1440,
-    "height": 4600,
+    "height": 3803,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:46:56.464Z"
+    "capturedAt": "2026-10-20T11:46:37.905Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Attendance Corrections"
+      }
+    ]
   },
   "ch03-feature-attendance-policy-en": {
     "file": "kayanos-guide/figures/screens/ch03-feature-attendance-policy-en.png",
@@ -977,7 +1470,21 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:47:03.572Z"
+    "capturedAt": "2026-10-20T11:46:52.549Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "New policy"
+      },
+      {
+        "n": 2,
+        "label": "T2 test policy Active · v1 catch-all No rules yet Everyone n"
+      },
+      {
+        "n": 3,
+        "label": "Save"
+      }
+    ]
   },
   "ch03-feature-attendance-terminals-en": {
     "file": "kayanos-guide/figures/screens/ch03-feature-attendance-terminals-en.png",
@@ -986,7 +1493,17 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:47:10.698Z"
+    "capturedAt": "2026-10-20T11:47:07.129Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "New network"
+      },
+      {
+        "n": 2,
+        "label": "Settings"
+      }
+    ]
   },
   "ch03-feature-payrolls-en": {
     "file": "kayanos-guide/figures/screens/ch03-feature-payrolls-en.png",
@@ -995,16 +1512,36 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:47:17.838Z"
+    "capturedAt": "2026-10-20T11:51:43.693Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Create payroll"
+      },
+      {
+        "n": 2,
+        "label": "All statuses"
+      }
+    ]
   },
   "ch03-create-slips-clear-en": {
     "file": "kayanos-guide/figures/screens/ch03-create-slips-clear-en.png",
     "url": "https://test2.kayanos.app/apps/hr/payment/salary_slips",
     "lang": "en",
     "width": 1440,
-    "height": 1900,
+    "height": 1805,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:47:26.131Z"
+    "capturedAt": "2026-10-20T11:51:28.654Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Create salary slips"
+      },
+      {
+        "n": 2,
+        "label": "Search"
+      }
+    ]
   },
   "ch02-position-fields-tab1-ar": {
     "file": "kayanos-guide/figures/screens/ch02-position-fields-tab1-ar.png",
@@ -1023,7 +1560,7 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-19T13:37:30.142Z",
+    "capturedAt": "2026-10-20T10:24:33.574Z",
     "marks": [
       {
         "n": 1,
@@ -1052,7 +1589,7 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-19T13:40:55.302Z",
+    "capturedAt": "2026-10-20T10:31:04.680Z",
     "marks": [
       {
         "n": 1,
@@ -1081,7 +1618,7 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-19T13:44:21.413Z",
+    "capturedAt": "2026-10-20T10:34:30.045Z",
     "marks": [
       {
         "n": 1,
@@ -1110,7 +1647,7 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-19T13:44:53.114Z",
+    "capturedAt": "2026-10-20T10:34:59.684Z",
     "marks": [
       {
         "n": 1,
@@ -1129,7 +1666,7 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-19T13:48:02.463Z",
+    "capturedAt": "2026-10-20T10:38:09.598Z",
     "marks": [
       {
         "n": 1,
@@ -1148,7 +1685,7 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-19T13:51:11.635Z",
+    "capturedAt": "2026-10-20T10:41:19.231Z",
     "marks": [
       {
         "n": 1,
@@ -1167,8 +1704,17 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:50:52.524Z",
-    "tab": "القواعد"
+    "capturedAt": "2026-10-20T10:48:53.137Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "القواعد"
+      },
+      {
+        "n": 2,
+        "label": "إنشاء"
+      }
+    ]
   },
   "ch03-feature-groups-tab1-ar": {
     "file": "kayanos-guide/figures/screens/ch03-feature-groups-tab1-ar.png",
@@ -1177,8 +1723,17 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:51:07.836Z",
-    "tab": "الأعضاء"
+    "capturedAt": "2026-10-20T10:47:38.997Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الأعضاء"
+      },
+      {
+        "n": 2,
+        "label": "إنشاء"
+      }
+    ]
   },
   "ch02-position-fields-tab1-en": {
     "file": "kayanos-guide/figures/screens/ch02-position-fields-tab1-en.png",
@@ -1195,10 +1750,19 @@
     "url": "https://test2.kayanos.app/apps/hr/workforce/positions/add?tab=orientation",
     "lang": "en",
     "width": 1440,
-    "height": 926,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:51:32.283Z",
-    "tab": "Orientation"
+    "capturedAt": "2026-10-20T11:09:41.881Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Orientation"
+      },
+      {
+        "n": 2,
+        "label": "Create"
+      }
+    ]
   },
   "ch02-assignment-fields-tab1-en": {
     "file": "kayanos-guide/figures/screens/ch02-assignment-fields-tab1-en.png",
@@ -1215,10 +1779,19 @@
     "url": "https://test2.kayanos.app/apps/hr/workforce/assignments/add?tab=orientation",
     "lang": "en",
     "width": 1440,
-    "height": 1507,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:51:57.603Z",
-    "tab": "Orientation"
+    "capturedAt": "2026-10-20T11:16:13.275Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Orientation"
+      },
+      {
+        "n": 2,
+        "label": "Create"
+      }
+    ]
   },
   "ch02-node-fields-tab1-en": {
     "file": "kayanos-guide/figures/screens/ch02-node-fields-tab1-en.png",
@@ -1237,8 +1810,17 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:52:20.468Z",
-    "tab": "Orientation"
+    "capturedAt": "2026-10-20T11:22:34.611Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Orientation"
+      },
+      {
+        "n": 2,
+        "label": "Create"
+      }
+    ]
   },
   "ch02-location-fields-tab1-en": {
     "file": "kayanos-guide/figures/screens/ch02-location-fields-tab1-en.png",
@@ -1255,30 +1837,57 @@
     "url": "https://test2.kayanos.app/apps/hr/core/locations/add?tab=orientation",
     "lang": "en",
     "width": 1440,
-    "height": 979,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:52:44.632Z",
-    "tab": "Orientation"
+    "capturedAt": "2026-10-20T11:26:00.250Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Orientation"
+      },
+      {
+        "n": 2,
+        "label": "Create"
+      }
+    ]
   },
   "ch02-location-fields-tab3-en": {
     "file": "kayanos-guide/figures/screens/ch02-location-fields-tab3-en.png",
     "url": "https://test2.kayanos.app/apps/hr/core/locations/add?tab=general_information",
     "lang": "en",
     "width": 1440,
-    "height": 979,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:52:52.832Z",
-    "tab": "General Information"
+    "capturedAt": "2026-10-20T11:29:09.935Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "General Information"
+      },
+      {
+        "n": 2,
+        "label": "Create"
+      }
+    ]
   },
   "ch02-location-fields-tab4-en": {
     "file": "kayanos-guide/figures/screens/ch02-location-fields-tab4-en.png",
     "url": "https://test2.kayanos.app/apps/hr/core/locations/add?tab=location_rooms",
     "lang": "en",
     "width": 1440,
-    "height": 979,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:53:01.019Z",
-    "tab": "Rooms"
+    "capturedAt": "2026-10-20T11:32:19.675Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Rooms"
+      },
+      {
+        "n": 2,
+        "label": "Create"
+      }
+    ]
   },
   "ch03-leave-type-fields-tab1-en": {
     "file": "kayanos-guide/figures/screens/ch03-leave-type-fields-tab1-en.png",
@@ -1287,8 +1896,17 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:53:15.963Z",
-    "tab": "Rules"
+    "capturedAt": "2026-10-20T11:39:53.023Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Rules"
+      },
+      {
+        "n": 2,
+        "label": "Create"
+      }
+    ]
   },
   "ch03-feature-groups-tab1-en": {
     "file": "kayanos-guide/figures/screens/ch03-feature-groups-tab1-en.png",
@@ -1297,8 +1915,17 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-15T09:53:30.870Z",
-    "tab": "Members"
+    "capturedAt": "2026-10-20T11:38:39.475Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Members"
+      },
+      {
+        "n": 2,
+        "label": "Create"
+      }
+    ]
   },
   "ch04-create-en": {
     "file": "kayanos-guide/figures/screens/ch04-create-en.png",
@@ -3086,9 +3713,9 @@
     "url": "https://test2.kayanos.app/builder/navigation",
     "lang": "en",
     "width": 1440,
-    "height": 2094,
+    "height": 1000,
     "scale": 2,
-    "capturedAt": "2026-10-19T11:28:41.820Z",
+    "capturedAt": "2026-10-20T07:16:55.779Z",
     "marks": [
       {
         "n": 1,
@@ -3100,6 +3727,14 @@
       },
       {
         "n": 3,
+        "label": "Industrial Observatory"
+      },
+      {
+        "n": 4,
+        "label": "Changed only"
+      },
+      {
+        "n": 5,
         "label": "Save changes"
       }
     ]
@@ -3109,9 +3744,9 @@
     "url": "https://test2.kayanos.app/builder/work-navigation",
     "lang": "en",
     "width": 1440,
-    "height": 1116,
+    "height": 1089,
     "scale": 2,
-    "capturedAt": "2026-10-19T11:28:56.563Z",
+    "capturedAt": "2026-10-20T07:17:10.290Z",
     "marks": [
       {
         "n": 1,
@@ -3119,10 +3754,14 @@
       },
       {
         "n": 2,
-        "label": "Sources"
+        "label": "Due for me"
       },
       {
         "n": 3,
+        "label": "Sources"
+      },
+      {
+        "n": 4,
         "label": "Save"
       }
     ]
@@ -3182,21 +3821,25 @@
     "url": "https://test2.kayanos.app/internal-sop/",
     "lang": "en",
     "width": 1440,
-    "height": 3200,
+    "height": 1400,
     "scale": 2,
-    "capturedAt": "2026-10-19T11:29:50.292Z",
+    "capturedAt": "2026-10-20T07:21:55.073Z",
     "marks": [
       {
         "n": 1,
-        "label": "New SOP"
+        "label": "Create Folder"
       },
       {
         "n": 2,
-        "label": "Runs"
+        "label": "New SOP"
       },
       {
         "n": 3,
-        "label": "Connections"
+        "label": "Needs attention · 3"
+      },
+      {
+        "n": 4,
+        "label": "Runs"
       }
     ]
   },
@@ -3665,9 +4308,9 @@
     "url": "https://test2.kayanos.app/builder/navigation",
     "lang": "ar",
     "width": 1440,
-    "height": 2094,
+    "height": 1000,
     "scale": 2,
-    "capturedAt": "2026-10-19T11:44:58.730Z",
+    "capturedAt": "2026-10-20T07:18:29.555Z",
     "marks": [
       {
         "n": 1,
@@ -3679,6 +4322,14 @@
       },
       {
         "n": 3,
+        "label": "المرصد الصناعي"
+      },
+      {
+        "n": 4,
+        "label": "المعدّل فقط"
+      },
+      {
+        "n": 5,
         "label": "حفظ التغييرات"
       }
     ]
@@ -3688,9 +4339,9 @@
     "url": "https://test2.kayanos.app/builder/work-navigation",
     "lang": "ar",
     "width": 1440,
-    "height": 1116,
+    "height": 1089,
     "scale": 2,
-    "capturedAt": "2026-10-19T11:45:12.749Z",
+    "capturedAt": "2026-10-20T07:18:44.010Z",
     "marks": [
       {
         "n": 1,
@@ -3698,10 +4349,14 @@
       },
       {
         "n": 2,
-        "label": "المصادر"
+        "label": "قائمة المستحق عليّ"
       },
       {
         "n": 3,
+        "label": "المصادر"
+      },
+      {
+        "n": 4,
         "label": "حفظ"
       }
     ]
@@ -3761,21 +4416,25 @@
     "url": "https://test2.kayanos.app/internal-sop/",
     "lang": "ar",
     "width": 1440,
-    "height": 3200,
+    "height": 1400,
     "scale": 2,
-    "capturedAt": "2026-10-19T11:46:04.803Z",
+    "capturedAt": "2026-10-20T07:21:49.170Z",
     "marks": [
       {
         "n": 1,
-        "label": "إجراء جديد"
+        "label": "إنشاء مجلد"
       },
       {
         "n": 2,
-        "label": "عمليات التشغيل"
+        "label": "إجراء جديد"
       },
       {
         "n": 3,
-        "label": "الاتصالات"
+        "label": "تحتاج إلى متابعة · 3"
+      },
+      {
+        "n": 4,
+        "label": "عمليات التشغيل"
       }
     ]
   },
@@ -4001,6 +4660,4364 @@
       {
         "n": 3,
         "label": "فحوص قبل النشر"
+      }
+    ]
+  },
+  "ch06-ai-builder-en": {
+    "file": "kayanos-guide/figures/screens/ch06-ai-builder-en.png",
+    "url": "https://test2.kayanos.app/entities/ai-builder",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T06:41:31.591Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Describe your entity..."
+      },
+      {
+        "n": 2,
+        "label": "Start a conversation"
+      },
+      {
+        "n": 3,
+        "label": "No entity proposal yet"
+      }
+    ]
+  },
+  "ch06-ws-header-en": {
+    "file": "kayanos-guide/figures/screens/ch06-ws-header-en.png",
+    "url": "https://test2.kayanos.app/entities/guide_qa_visit_requests/edit?section=overview",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T06:44:31.856Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Switch record type, now Guide QA Visit requests"
+      },
+      {
+        "n": 2,
+        "label": "Published · no unpublished changes"
+      },
+      {
+        "n": 3,
+        "label": "Fields 2"
+      },
+      {
+        "n": 4,
+        "label": "Connections Linked with 0 record types"
+      },
+      {
+        "n": 5,
+        "label": "Draft changes"
+      }
+    ]
+  },
+  "ch06-ws-add-field-en": {
+    "file": "kayanos-guide/figures/screens/ch06-ws-add-field-en.png",
+    "url": "https://test2.kayanos.app/entities/guide_qa_visit_requests/edit?section=fields",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T06:42:02.162Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Add field"
+      },
+      {
+        "n": 2,
+        "label": "Serial ID"
+      },
+      {
+        "n": 3,
+        "label": "Relation"
+      },
+      {
+        "n": 4,
+        "label": "Lookup field Shows a field of a related record, like the est"
+      }
+    ]
+  },
+  "ch06-ws-value-source-en": {
+    "file": "kayanos-guide/figures/screens/ch06-ws-value-source-en.png",
+    "url": "https://test2.kayanos.app/entities/guide_qa_visit_requests/edit?section=fields&_t=1792478533287&item=new_date",
+    "lang": "en",
+    "width": 1440,
+    "height": 1409,
+    "scale": 2,
+    "capturedAt": "2026-10-20T06:42:18.237Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Where the value comes from"
+      },
+      {
+        "n": 2,
+        "label": "Calculated"
+      },
+      {
+        "n": 3,
+        "label": "Rolled up"
+      },
+      {
+        "n": 4,
+        "label": "From a related record"
+      },
+      {
+        "n": 5,
+        "label": "Required"
+      }
+    ]
+  },
+  "ch06-ws-blocks-en": {
+    "file": "kayanos-guide/figures/screens/ch06-ws-blocks-en.png",
+    "url": "https://test2.kayanos.app/entities/guide_qa_visit_requests/edit?section=recordPage",
+    "lang": "en",
+    "width": 1440,
+    "height": 1408,
+    "scale": 2,
+    "capturedAt": "2026-10-20T06:42:34.794Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Blocks"
+      },
+      {
+        "n": 2,
+        "label": "Metrics"
+      },
+      {
+        "n": 3,
+        "label": "Needs attention"
+      },
+      {
+        "n": 4,
+        "label": "Phone"
+      }
+    ]
+  },
+  "ch06-ws-figures-views-en": {
+    "file": "kayanos-guide/figures/screens/ch06-ws-figures-views-en.png",
+    "url": "https://test2.kayanos.app/entities/guide_qa_visit_requests/edit?section=lists",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T06:42:48.914Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Add figure"
+      },
+      {
+        "n": 2,
+        "label": "Saved views"
+      }
+    ]
+  },
+  "ch06-ws-rule-tools-en": {
+    "file": "kayanos-guide/figures/screens/ch06-ws-rule-tools-en.png",
+    "url": "https://test2.kayanos.app/entities/guide_qa_visit_requests/edit?section=rules",
+    "lang": "en",
+    "width": 1440,
+    "height": 1161,
+    "scale": 2,
+    "capturedAt": "2026-10-20T06:43:02.999Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Add limit"
+      },
+      {
+        "n": 2,
+        "label": "Add guard"
+      },
+      {
+        "n": 3,
+        "label": "Add a generation rule"
+      },
+      {
+        "n": 4,
+        "label": "Add date window"
+      }
+    ]
+  },
+  "ch06-ws-field-access-en": {
+    "file": "kayanos-guide/figures/screens/ch06-ws-field-access-en.png",
+    "url": "https://test2.kayanos.app/entities/guide_qa_visit_requests/edit?section=access",
+    "lang": "en",
+    "width": 1440,
+    "height": 2568,
+    "scale": 2,
+    "capturedAt": "2026-10-20T06:43:17.202Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Field access"
+      },
+      {
+        "n": 2,
+        "label": "Set verbs for several fields"
+      },
+      {
+        "n": 3,
+        "label": "Fields usable in role rules"
+      },
+      {
+        "n": 4,
+        "label": "Check someone’s access"
+      }
+    ]
+  },
+  "ch06-ai-builder-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-ai-builder-ar.png",
+    "url": "https://test2.kayanos.app/entities/ai-builder",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T06:45:03.677Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "صف الكيان الخاص بك..."
+      },
+      {
+        "n": 2,
+        "label": "ابدأ محادثة"
+      },
+      {
+        "n": 3,
+        "label": "لا يوجد اقتراح للكيان حتى الآن"
+      }
+    ]
+  },
+  "ch06-ws-header-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-ws-header-ar.png",
+    "url": "https://test2.kayanos.app/entities/guide_qa_visit_requests/edit?section=overview",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T06:45:17.532Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "تغيير نوع السجلات، الحالي طلبات زيارة ضمان الجودة للمرشد"
+      },
+      {
+        "n": 2,
+        "label": "منشور · لا توجد تغييرات غير منشورة"
+      },
+      {
+        "n": 3,
+        "label": "الحقول 2"
+      },
+      {
+        "n": 4,
+        "label": "الارتباطات غير مرتبط بأي نوع سجلات"
+      },
+      {
+        "n": 5,
+        "label": "تغييرات المسودة"
+      }
+    ]
+  },
+  "ch06-ws-add-field-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-ws-add-field-ar.png",
+    "url": "https://test2.kayanos.app/entities/guide_qa_visit_requests/edit?section=fields",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T06:45:33.899Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إضافة حقل"
+      },
+      {
+        "n": 2,
+        "label": "معرف تسلسلي"
+      },
+      {
+        "n": 3,
+        "label": "علاقة"
+      },
+      {
+        "n": 4,
+        "label": "حقل مرتبط يعرض حقلًا من سجل مرتبط، مثل محافظة المنشأة."
+      }
+    ]
+  },
+  "ch06-ws-value-source-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-ws-value-source-ar.png",
+    "url": "https://test2.kayanos.app/entities/guide_qa_visit_requests/edit?section=fields&_t=1792478745005&item=new_date",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1395,
+    "scale": 2,
+    "capturedAt": "2026-10-20T06:45:49.891Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "مصدر القيمة"
+      },
+      {
+        "n": 2,
+        "label": "محسوبة"
+      },
+      {
+        "n": 3,
+        "label": "مجمّعة"
+      },
+      {
+        "n": 4,
+        "label": "من سجل مرتبط"
+      },
+      {
+        "n": 5,
+        "label": "إلزامي"
+      }
+    ]
+  },
+  "ch06-ws-blocks-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-ws-blocks-ar.png",
+    "url": "https://test2.kayanos.app/entities/guide_qa_visit_requests/edit?section=recordPage",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1374,
+    "scale": 2,
+    "capturedAt": "2026-10-20T06:46:06.411Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الكتل"
+      },
+      {
+        "n": 2,
+        "label": "مؤشرات"
+      },
+      {
+        "n": 3,
+        "label": "يحتاج إلى متابعة"
+      },
+      {
+        "n": 4,
+        "label": "الهاتف"
+      }
+    ]
+  },
+  "ch06-ws-figures-views-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-ws-figures-views-ar.png",
+    "url": "https://test2.kayanos.app/entities/guide_qa_visit_requests/edit?section=lists",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T06:46:20.270Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إضافة مؤشر"
+      },
+      {
+        "n": 2,
+        "label": "العروض المحفوظة"
+      }
+    ]
+  },
+  "ch06-ws-rule-tools-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-ws-rule-tools-ar.png",
+    "url": "https://test2.kayanos.app/entities/guide_qa_visit_requests/edit?section=rules",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1102,
+    "scale": 2,
+    "capturedAt": "2026-10-20T06:46:34.167Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إضافة حدّ"
+      },
+      {
+        "n": 2,
+        "label": "إضافة حارس"
+      },
+      {
+        "n": 3,
+        "label": "إضافة قاعدة توليد"
+      },
+      {
+        "n": 4,
+        "label": "إضافة نطاق زمني"
+      }
+    ]
+  },
+  "ch06-ws-field-access-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-ws-field-access-ar.png",
+    "url": "https://test2.kayanos.app/entities/guide_qa_visit_requests/edit?section=access",
+    "lang": "ar",
+    "width": 1440,
+    "height": 2532,
+    "scale": 2,
+    "capturedAt": "2026-10-20T06:46:48.335Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "صلاحيات الحقول"
+      },
+      {
+        "n": 2,
+        "label": "تحديد الأفعال لعدة حقول"
+      },
+      {
+        "n": 3,
+        "label": "الحقول القابلة للاستخدام في قواعد الأدوار"
+      },
+      {
+        "n": 4,
+        "label": "التحقق من صلاحيات شخص"
+      }
+    ]
+  },
+  "ch06-ws-evidence-en": {
+    "file": "kayanos-guide/figures/screens/ch06-ws-evidence-en.png",
+    "url": "https://test2.kayanos.app/entities/guide_qa_visit_requests/edit?section=evidence",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:08:40.271Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Evidence"
+      },
+      {
+        "n": 2,
+        "label": "Turn on"
+      }
+    ]
+  },
+  "ch06-ws-evidence-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-ws-evidence-ar.png",
+    "url": "https://test2.kayanos.app/entities/guide_qa_visit_requests/edit?section=evidence",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:09:10.523Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الإثبات"
+      },
+      {
+        "n": 2,
+        "label": "تشغيل"
+      }
+    ]
+  },
+  "ch06-dash-builder-en": {
+    "file": "kayanos-guide/figures/screens/ch06-dash-builder-en.png",
+    "url": "https://test2.kayanos.app/dashboards/build/x05w70ug5xh8dm2gsdeja",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:05:59.882Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Add Section"
+      },
+      {
+        "n": 2,
+        "label": "Edit"
+      },
+      {
+        "n": 3,
+        "label": "Figure"
+      },
+      {
+        "n": 4,
+        "label": ""
+      },
+      {
+        "n": 5,
+        "label": "Save"
+      }
+    ]
+  },
+  "ch06-dash-chart-types-en": {
+    "file": "kayanos-guide/figures/screens/ch06-dash-chart-types-en.png",
+    "url": "https://test2.kayanos.app/dashboards/build/x05w70ug5xh8dm2gsdeja",
+    "lang": "en",
+    "width": 1440,
+    "height": 1000,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:10:08.740Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Figure"
+      },
+      {
+        "n": 2,
+        "label": ""
+      },
+      {
+        "n": 3,
+        "label": "Pie"
+      },
+      {
+        "n": 4,
+        "label": "Bar"
+      }
+    ]
+  },
+  "ch06-dash-widget-settings-en": {
+    "file": "kayanos-guide/figures/screens/ch06-dash-widget-settings-en.png",
+    "url": "https://test2.kayanos.app/dashboards/build/x05w70ug5xh8dm2gsdeja",
+    "lang": "en",
+    "width": 1440,
+    "height": 1229,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:06:37.378Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "General"
+      },
+      {
+        "n": 2,
+        "label": "Data Source Type"
+      },
+      {
+        "n": 3,
+        "label": "Value Type"
+      },
+      {
+        "n": 4,
+        "label": "User Permissions"
+      },
+      {
+        "n": 5,
+        "label": "Inspect data"
+      }
+    ]
+  },
+  "ch06-dash-settings-en": {
+    "file": "kayanos-guide/figures/screens/ch06-dash-settings-en.png",
+    "url": "https://test2.kayanos.app/dashboards/build/x05w70ug5xh8dm2gsdeja",
+    "lang": "en",
+    "width": 1440,
+    "height": 1000,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:11:38.113Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Show in navigation"
+      },
+      {
+        "n": 2,
+        "label": "App"
+      },
+      {
+        "n": 3,
+        "label": "With the viewer’s permissions"
+      },
+      {
+        "n": 4,
+        "label": "All organization data"
+      },
+      {
+        "n": 5,
+        "label": "Follow a context"
+      }
+    ]
+  },
+  "ch06-dash-filters-en": {
+    "file": "kayanos-guide/figures/screens/ch06-dash-filters-en.png",
+    "url": "https://test2.kayanos.app/dashboards/build/x05w70ug5xh8dm2gsdeja",
+    "lang": "en",
+    "width": 1440,
+    "height": 1000,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:10:44.285Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Add"
+      },
+      {
+        "n": 2,
+        "label": "Type"
+      },
+      {
+        "n": 3,
+        "label": "Scope*"
+      },
+      {
+        "n": 4,
+        "label": "Specific Widgets Apply only to selected widgets"
+      }
+    ]
+  },
+  "ch06-dash-ai-builder-en": {
+    "file": "kayanos-guide/figures/screens/ch06-dash-ai-builder-en.png",
+    "url": "https://test2.kayanos.app/dashboards/build/x05w70ug5xh8dm2gsdeja",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:07:27.793Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "AI Dashboard Builder"
+      },
+      {
+        "n": 2,
+        "label": "Describe the dashboard you want to build"
+      },
+      {
+        "n": 3,
+        "label": "Attach file"
+      }
+    ]
+  },
+  "ch06-dash-versions-en": {
+    "file": "kayanos-guide/figures/screens/ch06-dash-versions-en.png",
+    "url": "https://test2.kayanos.app/dashboards/build/x05w70ug5xh8dm2gsdeja",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:07:44.333Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Preview"
+      },
+      {
+        "n": 2,
+        "label": "Publish"
+      },
+      {
+        "n": 3,
+        "label": "Version history"
+      },
+      {
+        "n": 4,
+        "label": "More options"
+      }
+    ]
+  },
+  "ch06-dash-view-en": {
+    "file": "kayanos-guide/figures/screens/ch06-dash-view-en.png",
+    "url": "https://test2.kayanos.app/dashboards/view/bbx5v62vjggk7xmpic8o0",
+    "lang": "en",
+    "width": 1440,
+    "height": 971,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:08:01.351Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Filters 1"
+      },
+      {
+        "n": 2,
+        "label": "Widget options"
+      },
+      {
+        "n": 3,
+        "label": "Export data"
+      },
+      {
+        "n": 4,
+        "label": "Export PDF"
+      }
+    ]
+  },
+  "ch06-dash-builder-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-dash-builder-ar.png",
+    "url": "https://test2.kayanos.app/dashboards/build/x05w70ug5xh8dm2gsdeja",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:05:57.504Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إضافة قسم"
+      },
+      {
+        "n": 2,
+        "label": "تعديل"
+      },
+      {
+        "n": 3,
+        "label": "رقم"
+      },
+      {
+        "n": 4,
+        "label": ""
+      },
+      {
+        "n": 5,
+        "label": "حفظ"
+      }
+    ]
+  },
+  "ch06-dash-chart-types-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-dash-chart-types-ar.png",
+    "url": "https://test2.kayanos.app/dashboards/build/x05w70ug5xh8dm2gsdeja",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1000,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:10:07.834Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "رقم"
+      },
+      {
+        "n": 2,
+        "label": ""
+      },
+      {
+        "n": 3,
+        "label": "دائري"
+      },
+      {
+        "n": 4,
+        "label": "أعمدة"
+      }
+    ]
+  },
+  "ch06-dash-widget-settings-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-dash-widget-settings-ar.png",
+    "url": "https://test2.kayanos.app/dashboards/build/x05w70ug5xh8dm2gsdeja",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1229,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:06:33.187Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "عام"
+      },
+      {
+        "n": 2,
+        "label": "نوع مصدر البيانات"
+      },
+      {
+        "n": 3,
+        "label": "نوع القيمة"
+      },
+      {
+        "n": 4,
+        "label": "حسب صلاحيات المستخدم"
+      },
+      {
+        "n": 5,
+        "label": "فحص البيانات"
+      }
+    ]
+  },
+  "ch06-dash-settings-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-dash-settings-ar.png",
+    "url": "https://test2.kayanos.app/dashboards/build/x05w70ug5xh8dm2gsdeja",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1000,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:11:35.576Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إظهار في التنقل"
+      },
+      {
+        "n": 2,
+        "label": "التطبيق"
+      },
+      {
+        "n": 3,
+        "label": "بصلاحيات المشاهد"
+      },
+      {
+        "n": 4,
+        "label": "بيانات المنظمة كاملة"
+      },
+      {
+        "n": 5,
+        "label": "يتبع سياقاً"
+      }
+    ]
+  },
+  "ch06-dash-filters-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-dash-filters-ar.png",
+    "url": "https://test2.kayanos.app/dashboards/build/x05w70ug5xh8dm2gsdeja",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1000,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:10:42.707Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إضافة"
+      },
+      {
+        "n": 2,
+        "label": "النوع"
+      },
+      {
+        "n": 3,
+        "label": "النطاق*"
+      },
+      {
+        "n": 4,
+        "label": "عناصر محددة يُطبّق فقط على العناصر المحددة"
+      }
+    ]
+  },
+  "ch06-dash-ai-builder-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-dash-ai-builder-ar.png",
+    "url": "https://test2.kayanos.app/dashboards/build/x05w70ug5xh8dm2gsdeja",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:07:23.573Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "منشئ لوحات التحكم بالذكاء الاصطناعي"
+      },
+      {
+        "n": 2,
+        "label": "صف لوحة التحكم التي تريد بناءها"
+      },
+      {
+        "n": 3,
+        "label": "إرفاق ملف"
+      }
+    ]
+  },
+  "ch06-dash-versions-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-dash-versions-ar.png",
+    "url": "https://test2.kayanos.app/dashboards/build/x05w70ug5xh8dm2gsdeja",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:07:40.117Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "معاينة"
+      },
+      {
+        "n": 2,
+        "label": "نشر"
+      },
+      {
+        "n": 3,
+        "label": "سجل الإصدارات"
+      },
+      {
+        "n": 4,
+        "label": "المزيد من الخيارات"
+      }
+    ]
+  },
+  "ch06-dash-view-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-dash-view-ar.png",
+    "url": "https://test2.kayanos.app/dashboards/view/bbx5v62vjggk7xmpic8o0",
+    "lang": "ar",
+    "width": 1440,
+    "height": 971,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:07:56.700Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "المرشحات 1"
+      },
+      {
+        "n": 2,
+        "label": "خيارات العنصر"
+      },
+      {
+        "n": 3,
+        "label": "تصدير البيانات"
+      },
+      {
+        "n": 4,
+        "label": "تصدير PDF"
+      }
+    ]
+  },
+  "ch06-services-new-en": {
+    "file": "kayanos-guide/figures/screens/ch06-services-new-en.png",
+    "url": "https://test2.kayanos.app/services",
+    "lang": "en",
+    "width": 1440,
+    "height": 1000,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:13:36.704Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Service name on the portal"
+      },
+      {
+        "n": 2,
+        "label": "How the service is delivered"
+      },
+      {
+        "n": 3,
+        "label": "Form the applicant starts with"
+      },
+      {
+        "n": 4,
+        "label": "Create service"
+      }
+    ]
+  },
+  "ch06-services-overview-en": {
+    "file": "kayanos-guide/figures/screens/ch06-services-overview-en.png",
+    "url": "https://test2.kayanos.app/services/svc_19a5353cac7b43b6f1a0",
+    "lang": "en",
+    "width": 1440,
+    "height": 1318,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:02:59.412Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Service readiness"
+      },
+      {
+        "n": 2,
+        "label": "Last 30 days"
+      },
+      {
+        "n": 3,
+        "label": "Needs your attention"
+      },
+      {
+        "n": 4,
+        "label": "Full performance"
+      }
+    ]
+  },
+  "ch06-services-profile-en": {
+    "file": "kayanos-guide/figures/screens/ch06-services-profile-en.png",
+    "url": "https://test2.kayanos.app/services/svc_19a5353cac7b43b6f1a0?tab=profile",
+    "lang": "en",
+    "width": 1440,
+    "height": 2126,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:03:15.454Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Service name"
+      },
+      {
+        "n": 2,
+        "label": "Portal address"
+      },
+      {
+        "n": 3,
+        "label": "Add a document"
+      },
+      {
+        "n": 4,
+        "label": "Place on the portal"
+      },
+      {
+        "n": 5,
+        "label": "Save and apply"
+      }
+    ]
+  },
+  "ch06-services-delivery-en": {
+    "file": "kayanos-guide/figures/screens/ch06-services-delivery-en.png",
+    "url": "https://test2.kayanos.app/services/svc_19a5353cac7b43b6f1a0?tab=access",
+    "lang": "en",
+    "width": 1440,
+    "height": 3765,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:03:39.902Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "How the service is delivered"
+      },
+      {
+        "n": 2,
+        "label": "Availability"
+      },
+      {
+        "n": 3,
+        "label": "Who can apply"
+      },
+      {
+        "n": 4,
+        "label": "Manage centers"
+      },
+      {
+        "n": 5,
+        "label": "Save and apply"
+      }
+    ]
+  },
+  "ch06-services-centers-en": {
+    "file": "kayanos-guide/figures/screens/ch06-services-centers-en.png",
+    "url": "https://test2.kayanos.app/services/svc_19a5353cac7b43b6f1a0?tab=access",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:08:53.366Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Add center"
+      },
+      {
+        "n": 2,
+        "label": "Name"
+      },
+      {
+        "n": 3,
+        "label": "Staff at this center"
+      },
+      {
+        "n": 4,
+        "label": "Only assigned staff use a center's intake desk"
+      },
+      {
+        "n": 5,
+        "label": "Save"
+      }
+    ]
+  },
+  "ch06-services-path-en": {
+    "file": "kayanos-guide/figures/screens/ch06-services-path-en.png",
+    "url": "https://test2.kayanos.app/services/svc_19a5353cac7b43b6f1a0?tab=path",
+    "lang": "en",
+    "width": 1440,
+    "height": 1459,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:13:50.681Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Add step"
+      },
+      {
+        "n": 2,
+        "label": "Step name"
+      },
+      {
+        "n": 3,
+        "label": "Step type"
+      },
+      {
+        "n": 4,
+        "label": "Add a follow-up form"
+      },
+      {
+        "n": 5,
+        "label": "Save path"
+      }
+    ]
+  },
+  "ch06-services-fees-en": {
+    "file": "kayanos-guide/figures/screens/ch06-services-fees-en.png",
+    "url": "https://test2.kayanos.app/services/svc_19a5353cac7b43b6f1a0?tab=fees",
+    "lang": "en",
+    "width": 1440,
+    "height": 1526,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:04:33.062Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Add an item"
+      },
+      {
+        "n": 2,
+        "label": "Add an exemption"
+      },
+      {
+        "n": 3,
+        "label": "When a fee falls due"
+      },
+      {
+        "n": 4,
+        "label": "Save and apply"
+      }
+    ]
+  },
+  "ch06-services-form-settings-en": {
+    "file": "kayanos-guide/figures/screens/ch06-services-form-settings-en.png",
+    "url": "https://test2.kayanos.app/forms/lifecycle_qa_20260924",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:09:31.162Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Service New"
+      },
+      {
+        "n": 2,
+        "label": "Open service"
+      },
+      {
+        "n": 3,
+        "label": "What the service sets for this form"
+      },
+      {
+        "n": 4,
+        "label": "Form and service fit"
+      }
+    ]
+  },
+  "ch06-services-intake-en": {
+    "file": "kayanos-guide/figures/screens/ch06-services-intake-en.png",
+    "url": "https://test2.kayanos.app/services/intake",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:09:45.120Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Center"
+      },
+      {
+        "n": 2,
+        "label": "New walk-in request"
+      },
+      {
+        "n": 3,
+        "label": "Search by request number, phone or national number"
+      },
+      {
+        "n": 4,
+        "label": "Today"
+      },
+      {
+        "n": 5,
+        "label": "Services at this center"
+      }
+    ]
+  },
+  "ch06-services-performance-en": {
+    "file": "kayanos-guide/figures/screens/ch06-services-performance-en.png",
+    "url": "https://test2.kayanos.app/services/performance",
+    "lang": "en",
+    "width": 1440,
+    "height": 1609,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:09:59.115Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Last 30 days"
+      },
+      {
+        "n": 2,
+        "label": "Average time per stage vs expected"
+      },
+      {
+        "n": 3,
+        "label": "Requests past their time"
+      },
+      {
+        "n": 4,
+        "label": "Export"
+      }
+    ]
+  },
+  "ch06-services-new-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-services-new-ar.png",
+    "url": "https://test2.kayanos.app/services",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1000,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:14:17.264Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "اسم الخدمة على البوابة"
+      },
+      {
+        "n": 2,
+        "label": "طريقة تقديم الخدمة"
+      },
+      {
+        "n": 3,
+        "label": "النموذج الذي يبدأ به المتعامل"
+      },
+      {
+        "n": 4,
+        "label": "إنشاء الخدمة"
+      }
+    ]
+  },
+  "ch06-services-overview-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-services-overview-ar.png",
+    "url": "https://test2.kayanos.app/services/svc_19a5353cac7b43b6f1a0",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1318,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:10:40.978Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "جاهزية الخدمة"
+      },
+      {
+        "n": 2,
+        "label": "آخر 30 يوماً"
+      },
+      {
+        "n": 3,
+        "label": "يحتاج انتباهك"
+      },
+      {
+        "n": 4,
+        "label": "الأداء الكامل"
+      }
+    ]
+  },
+  "ch06-services-profile-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-services-profile-ar.png",
+    "url": "https://test2.kayanos.app/services/svc_19a5353cac7b43b6f1a0?tab=profile",
+    "lang": "ar",
+    "width": 1440,
+    "height": 2126,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:10:55.026Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "اسم الخدمة"
+      },
+      {
+        "n": 2,
+        "label": "عنوان الخدمة على البوابة"
+      },
+      {
+        "n": 3,
+        "label": "إضافة مستند"
+      },
+      {
+        "n": 4,
+        "label": "مكان العرض على البوابة"
+      },
+      {
+        "n": 5,
+        "label": "حفظ وتطبيق"
+      }
+    ]
+  },
+  "ch06-services-delivery-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-services-delivery-ar.png",
+    "url": "https://test2.kayanos.app/services/svc_19a5353cac7b43b6f1a0?tab=access",
+    "lang": "ar",
+    "width": 1440,
+    "height": 3525,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:11:10.207Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "طريقة تقديم الخدمة"
+      },
+      {
+        "n": 2,
+        "label": "الإتاحة"
+      },
+      {
+        "n": 3,
+        "label": "من يمكنه التقديم"
+      },
+      {
+        "n": 4,
+        "label": "إدارة المراكز"
+      },
+      {
+        "n": 5,
+        "label": "حفظ وتطبيق"
+      }
+    ]
+  },
+  "ch06-services-centers-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-services-centers-ar.png",
+    "url": "https://test2.kayanos.app/services/svc_19a5353cac7b43b6f1a0?tab=access",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:11:26.756Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إضافة مركز"
+      },
+      {
+        "n": 2,
+        "label": "الاسم"
+      },
+      {
+        "n": 3,
+        "label": "موظفو هذا المركز"
+      },
+      {
+        "n": 4,
+        "label": "يستخدم مكتب استقبال المركز موظفوه فقط"
+      },
+      {
+        "n": 5,
+        "label": "حفظ"
+      }
+    ]
+  },
+  "ch06-services-path-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-services-path-ar.png",
+    "url": "https://test2.kayanos.app/services/svc_19a5353cac7b43b6f1a0?tab=path",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1435,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:14:31.390Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إضافة خطوة"
+      },
+      {
+        "n": 2,
+        "label": "اسم الخطوة"
+      },
+      {
+        "n": 3,
+        "label": "نوع الخطوة"
+      },
+      {
+        "n": 4,
+        "label": "إضافة نموذج متابعة"
+      },
+      {
+        "n": 5,
+        "label": "حفظ المسار"
+      }
+    ]
+  },
+  "ch06-services-fees-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-services-fees-ar.png",
+    "url": "https://test2.kayanos.app/services/svc_19a5353cac7b43b6f1a0?tab=fees",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1482,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:11:54.824Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إضافة بند"
+      },
+      {
+        "n": 2,
+        "label": "إضافة إعفاء"
+      },
+      {
+        "n": 3,
+        "label": "عند استحقاق رسم"
+      },
+      {
+        "n": 4,
+        "label": "حفظ وتطبيق"
+      }
+    ]
+  },
+  "ch06-services-form-settings-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-services-form-settings-ar.png",
+    "url": "https://test2.kayanos.app/forms/lifecycle_qa_20260924",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:12:16.164Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الخدمة جديد"
+      },
+      {
+        "n": 2,
+        "label": "فتح الخدمة"
+      },
+      {
+        "n": 3,
+        "label": "ما تحدده الخدمة لهذا النموذج"
+      },
+      {
+        "n": 4,
+        "label": "توافق النموذج مع الخدمة"
+      }
+    ]
+  },
+  "ch06-services-intake-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-services-intake-ar.png",
+    "url": "https://test2.kayanos.app/services/intake",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:12:30.517Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "المركز"
+      },
+      {
+        "n": 2,
+        "label": "طلب حضوري جديد"
+      },
+      {
+        "n": 3,
+        "label": "ابحث برقم الطلب أو رقم الهاتف أو الرقم الوطني"
+      },
+      {
+        "n": 4,
+        "label": "اليوم"
+      },
+      {
+        "n": 5,
+        "label": "خدمات هذا المركز"
+      }
+    ]
+  },
+  "ch06-services-performance-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-services-performance-ar.png",
+    "url": "https://test2.kayanos.app/services/performance",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1609,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:12:45.003Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "آخر 30 يوم"
+      },
+      {
+        "n": 2,
+        "label": "متوسط المدة لكل مرحلة مقابل المتوقع"
+      },
+      {
+        "n": 3,
+        "label": "طلبات تجاوزت المدة"
+      },
+      {
+        "n": 4,
+        "label": "تصدير"
+      }
+    ]
+  },
+  "ch06-nav-add-app-en": {
+    "file": "kayanos-guide/figures/screens/ch06-nav-add-app-en.png",
+    "url": "https://test2.kayanos.app/builder/navigation",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:21:36.237Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": ""
+      },
+      {
+        "n": 2,
+        "label": "Enter text"
+      },
+      {
+        "n": 3,
+        "label": "Enter text"
+      },
+      {
+        "n": 4,
+        "label": "Create"
+      }
+    ]
+  },
+  "ch06-nav-identity-en": {
+    "file": "kayanos-guide/figures/screens/ch06-nav-identity-en.png",
+    "url": "https://test2.kayanos.app/builder/navigation",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:21:53.220Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Enter text"
+      },
+      {
+        "n": 2,
+        "label": "Upload"
+      },
+      {
+        "n": 3,
+        "label": "Hex code"
+      },
+      {
+        "n": 4,
+        "label": "Focused mode"
+      },
+      {
+        "n": 5,
+        "label": "Save"
+      }
+    ]
+  },
+  "ch06-nav-add-view-en": {
+    "file": "kayanos-guide/figures/screens/ch06-nav-add-view-en.png",
+    "url": "https://test2.kayanos.app/builder/navigation",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:22:12.963Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Record type"
+      },
+      {
+        "n": 2,
+        "label": "Enter text"
+      },
+      {
+        "n": 3,
+        "label": "Show a live count"
+      },
+      {
+        "n": 4,
+        "label": "Attention"
+      },
+      {
+        "n": 5,
+        "label": "Add view"
+      }
+    ]
+  },
+  "ch06-wn-sources-en": {
+    "file": "kayanos-guide/figures/screens/ch06-wn-sources-en.png",
+    "url": "https://test2.kayanos.app/builder/work-navigation",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:17:27.210Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Sources"
+      },
+      {
+        "n": 2,
+        "label": "Add a source"
+      },
+      {
+        "n": 3,
+        "label": "Save"
+      },
+      {
+        "n": 4,
+        "label": "Preview as a member"
+      }
+    ]
+  },
+  "ch06-wn-context-en": {
+    "file": "kayanos-guide/figures/screens/ch06-wn-context-en.png",
+    "url": "https://test2.kayanos.app/builder/work-navigation",
+    "lang": "en",
+    "width": 1440,
+    "height": 1100,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:17:44.516Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Context"
+      },
+      {
+        "n": 2,
+        "label": "Record type"
+      },
+      {
+        "n": 3,
+        "label": "Default when the member has not picked"
+      },
+      {
+        "n": 4,
+        "label": "Apps"
+      },
+      {
+        "n": 5,
+        "label": "Follow the direct relations (61)"
+      }
+    ]
+  },
+  "ch06-wn-dashboards-en": {
+    "file": "kayanos-guide/figures/screens/ch06-wn-dashboards-en.png",
+    "url": "https://test2.kayanos.app/builder/work-navigation",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:18:01.581Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Dashboards"
+      },
+      {
+        "n": 2,
+        "label": "With the viewer’s permissions"
+      },
+      {
+        "n": 3,
+        "label": "Save"
+      },
+      {
+        "n": 4,
+        "label": "Switch to the viewer’s permissions"
+      },
+      {
+        "n": 5,
+        "label": "Switch selected (0)"
+      }
+    ]
+  },
+  "ch06-nav-add-app-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-nav-add-app-ar.png",
+    "url": "https://test2.kayanos.app/builder/navigation",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:22:41.540Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": ""
+      },
+      {
+        "n": 2,
+        "label": "أدخل النص"
+      },
+      {
+        "n": 3,
+        "label": "أدخل النص"
+      },
+      {
+        "n": 4,
+        "label": "إنشاء"
+      }
+    ]
+  },
+  "ch06-nav-identity-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-nav-identity-ar.png",
+    "url": "https://test2.kayanos.app/builder/navigation",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:22:58.600Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "أدخل النص"
+      },
+      {
+        "n": 2,
+        "label": "رفع"
+      },
+      {
+        "n": 3,
+        "label": "رمز اللون"
+      },
+      {
+        "n": 4,
+        "label": "الوضع المركّز"
+      },
+      {
+        "n": 5,
+        "label": "حفظ"
+      }
+    ]
+  },
+  "ch06-nav-add-view-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-nav-add-view-ar.png",
+    "url": "https://test2.kayanos.app/builder/navigation",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:23:18.384Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "نوع السجل"
+      },
+      {
+        "n": 2,
+        "label": "أدخل النص"
+      },
+      {
+        "n": 3,
+        "label": "إظهار العدد الحالي"
+      },
+      {
+        "n": 4,
+        "label": "تنبيه"
+      },
+      {
+        "n": 5,
+        "label": "إضافة طريقة العرض"
+      }
+    ]
+  },
+  "ch06-wn-sources-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-wn-sources-ar.png",
+    "url": "https://test2.kayanos.app/builder/work-navigation",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:19:01.099Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "المصادر"
+      },
+      {
+        "n": 2,
+        "label": "إضافة مصدر"
+      },
+      {
+        "n": 3,
+        "label": "حفظ"
+      },
+      {
+        "n": 4,
+        "label": "معاينة كعضو"
+      }
+    ]
+  },
+  "ch06-wn-context-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-wn-context-ar.png",
+    "url": "https://test2.kayanos.app/builder/work-navigation",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1100,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:19:18.167Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "السياق"
+      },
+      {
+        "n": 2,
+        "label": "نوع السجل"
+      },
+      {
+        "n": 3,
+        "label": "الافتراضي حين لا يختار العضو"
+      },
+      {
+        "n": 4,
+        "label": "التطبيقات"
+      },
+      {
+        "n": 5,
+        "label": "اتباع العلاقات المباشرة (61)"
+      }
+    ]
+  },
+  "ch06-wn-dashboards-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-wn-dashboards-ar.png",
+    "url": "https://test2.kayanos.app/builder/work-navigation",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:20:43.446Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "اللوحات"
+      },
+      {
+        "n": 2,
+        "label": "بصلاحيات المشاهد"
+      },
+      {
+        "n": 3,
+        "label": "حفظ"
+      },
+      {
+        "n": 4,
+        "label": "تحويل إلى صلاحيات المشاهد"
+      },
+      {
+        "n": 5,
+        "label": "تحويل المحدد (0)"
+      }
+    ]
+  },
+  "ch06-docx-workspace-en": {
+    "file": "kayanos-guide/figures/screens/ch06-docx-workspace-en.png",
+    "url": "https://test2.kayanos.app/builder/docx-templates?template=chO0InvszsoysWVkIZMm_&tab=versions",
+    "lang": "en",
+    "width": 1440,
+    "height": 1115,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:16:02.747Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Test & download"
+      },
+      {
+        "n": 2,
+        "label": "Versions"
+      },
+      {
+        "n": 3,
+        "label": "Choose or drop a Word document"
+      },
+      {
+        "n": 4,
+        "label": "Revise with AI helper"
+      }
+    ]
+  },
+  "ch06-xlsx-workspace-en": {
+    "file": "kayanos-guide/figures/screens/ch06-xlsx-workspace-en.png",
+    "url": "https://test2.kayanos.app/builder/xlsx-templates?template=BUpWdbcYD0AVMfZBc7B8G&tab=test",
+    "lang": "en",
+    "width": 1440,
+    "height": 1065,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:16:16.747Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Versions"
+      },
+      {
+        "n": 2,
+        "label": "Test & download"
+      },
+      {
+        "n": 3,
+        "label": "{}"
+      },
+      {
+        "n": 4,
+        "label": "Render XLSX"
+      },
+      {
+        "n": 5,
+        "label": "Render PDF"
+      }
+    ]
+  },
+  "ch06-print-builder-en": {
+    "file": "kayanos-guide/figures/screens/ch06-print-builder-en.png",
+    "url": "https://test2.kayanos.app/builder/print-templates/j16pxfu7lucda0mflyh1a",
+    "lang": "en",
+    "width": 1440,
+    "height": 1205,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:23:17.048Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Data"
+      },
+      {
+        "n": 2,
+        "label": "Blocks"
+      },
+      {
+        "n": 3,
+        "label": "Show when"
+      },
+      {
+        "n": 4,
+        "label": "QR code"
+      },
+      {
+        "n": 5,
+        "label": "All 16 data fields on this page exist on SUP-000460 Vehicle "
+      }
+    ]
+  },
+  "ch06-print-page-en": {
+    "file": "kayanos-guide/figures/screens/ch06-print-page-en.png",
+    "url": "https://test2.kayanos.app/builder/print-templates/j16pxfu7lucda0mflyh1a",
+    "lang": "en",
+    "width": 1440,
+    "height": 1354,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:16:50.108Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Page"
+      },
+      {
+        "n": 2,
+        "label": "A4"
+      },
+      {
+        "n": 3,
+        "label": "Portrait"
+      },
+      {
+        "n": 4,
+        "label": "Identity"
+      },
+      {
+        "n": 5,
+        "label": "Header & footer"
+      }
+    ]
+  },
+  "ch06-print-publish-en": {
+    "file": "kayanos-guide/figures/screens/ch06-print-publish-en.png",
+    "url": "https://test2.kayanos.app/builder/print-templates/j16pxfu7lucda0mflyh1a?mode=preview",
+    "lang": "en",
+    "width": 1440,
+    "height": 1096,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:17:07.290Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Sample values Every field filled with an example"
+      },
+      {
+        "n": 2,
+        "label": "Check again"
+      },
+      {
+        "n": 3,
+        "label": "Both"
+      },
+      {
+        "n": 4,
+        "label": "Download test PDF"
+      },
+      {
+        "n": 5,
+        "label": "Live · v1"
+      }
+    ]
+  },
+  "ch06-print-verify-en": {
+    "file": "kayanos-guide/figures/screens/ch06-print-verify-en.png",
+    "url": "https://test2.kayanos.app/verify-document/guide-sample-code",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:17:21.198Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "No matching document"
+      },
+      {
+        "n": 2,
+        "label": "This code doesn’t match any document we issued. Make sure th"
+      }
+    ]
+  },
+  "ch06-letterheads-en": {
+    "file": "kayanos-guide/figures/screens/ch06-letterheads-en.png",
+    "url": "https://test2.kayanos.app/builder/identities/letterheads/epdt4u_pzsmye4fv2u0hw",
+    "lang": "en",
+    "width": 1440,
+    "height": 1164,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:24:03.007Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Letterhead name · English"
+      },
+      {
+        "n": 2,
+        "label": "Logo image"
+      },
+      {
+        "n": 3,
+        "label": "Page number page"
+      },
+      {
+        "n": 4,
+        "label": "Every page"
+      },
+      {
+        "n": 5,
+        "label": "Save"
+      }
+    ]
+  },
+  "ch06-docx-workspace-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-docx-workspace-ar.png",
+    "url": "https://test2.kayanos.app/builder/docx-templates?template=chO0InvszsoysWVkIZMm_&tab=versions",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1115,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:18:01.568Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "اختبار وتحميل"
+      },
+      {
+        "n": 2,
+        "label": "الإصدارات"
+      },
+      {
+        "n": 3,
+        "label": "اختر مستند Word أو أفلته هنا"
+      },
+      {
+        "n": 4,
+        "label": "تحرير باستخدام مساعِد الذكاء الاصطناعي"
+      }
+    ]
+  },
+  "ch06-xlsx-workspace-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-xlsx-workspace-ar.png",
+    "url": "https://test2.kayanos.app/builder/xlsx-templates?template=BUpWdbcYD0AVMfZBc7B8G&tab=test",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1065,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:18:15.644Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الإصدارات"
+      },
+      {
+        "n": 2,
+        "label": "اختبار وتحميل"
+      },
+      {
+        "n": 3,
+        "label": "{}"
+      },
+      {
+        "n": 4,
+        "label": "إنشاء XLSX"
+      },
+      {
+        "n": 5,
+        "label": "إنشاء PDF"
+      }
+    ]
+  },
+  "ch06-print-builder-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-print-builder-ar.png",
+    "url": "https://test2.kayanos.app/builder/print-templates/j16pxfu7lucda0mflyh1a",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1205,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:18:36.593Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "البيانات"
+      },
+      {
+        "n": 2,
+        "label": "العناصر"
+      },
+      {
+        "n": 3,
+        "label": "إظهار عند"
+      },
+      {
+        "n": 4,
+        "label": "رمز QR"
+      },
+      {
+        "n": 5,
+        "label": "جميع حقول البيانات في هذه الصفحة (16) موجودة في SUP-000460 V"
+      }
+    ]
+  },
+  "ch06-print-page-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-print-page-ar.png",
+    "url": "https://test2.kayanos.app/builder/print-templates/j16pxfu7lucda0mflyh1a",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1302,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:18:54.103Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الصفحة"
+      },
+      {
+        "n": 2,
+        "label": "A4"
+      },
+      {
+        "n": 3,
+        "label": "عمودي"
+      },
+      {
+        "n": 4,
+        "label": "الهوية"
+      },
+      {
+        "n": 5,
+        "label": "الترويسة والتذييل"
+      }
+    ]
+  },
+  "ch06-print-publish-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-print-publish-ar.png",
+    "url": "https://test2.kayanos.app/builder/print-templates/j16pxfu7lucda0mflyh1a?mode=preview",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1096,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:19:13.335Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "قيم تجريبية جميع الحقول معبّأة بأمثلة"
+      },
+      {
+        "n": 2,
+        "label": "إعادة الفحص"
+      },
+      {
+        "n": 3,
+        "label": "كلاهما"
+      },
+      {
+        "n": 4,
+        "label": "تنزيل ملف PDF تجريبي"
+      },
+      {
+        "n": 5,
+        "label": "منشور · الإصدار 1"
+      }
+    ]
+  },
+  "ch06-print-verify-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-print-verify-ar.png",
+    "url": "https://test2.kayanos.app/verify-document/guide-sample-code",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:22:24.123Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "لا يوجد مستند مطابق"
+      },
+      {
+        "n": 2,
+        "label": "هذا الرمز لا يطابق أي مستند أصدرناه. تأكد من استخدام الرابط "
+      }
+    ]
+  },
+  "ch06-letterheads-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-letterheads-ar.png",
+    "url": "https://test2.kayanos.app/builder/identities/letterheads/epdt4u_pzsmye4fv2u0hw",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1164,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:24:29.572Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "اسم الترويسة · العربية"
+      },
+      {
+        "n": 2,
+        "label": "الشعار صورة"
+      },
+      {
+        "n": 3,
+        "label": "رقم الصفحة صفحة"
+      },
+      {
+        "n": 4,
+        "label": "كل صفحة"
+      },
+      {
+        "n": 5,
+        "label": "حفظ"
+      }
+    ]
+  },
+  "ch06-isop-editor-en": {
+    "file": "kayanos-guide/figures/screens/ch06-isop-editor-en.png",
+    "url": "https://test2.kayanos.app/internal-sop/drv4zp5i7urxvwm6n0c9h",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:09:06.658Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Build"
+      },
+      {
+        "n": 2,
+        "label": "Add SOP action"
+      },
+      {
+        "n": 3,
+        "label": "Add note"
+      },
+      {
+        "n": 4,
+        "label": "All steps ready"
+      }
+    ]
+  },
+  "ch06-isop-triggers-en": {
+    "file": "kayanos-guide/figures/screens/ch06-isop-triggers-en.png",
+    "url": "https://test2.kayanos.app/internal-sop/drv4zp5i7urxvwm6n0c9h",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:09:23.521Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Search triggers"
+      },
+      {
+        "n": 2,
+        "label": "General"
+      },
+      {
+        "n": 3,
+        "label": "Kayan"
+      },
+      {
+        "n": 4,
+        "label": "New Record Created Runs when a record is created in a select"
+      }
+    ]
+  },
+  "ch06-isop-control-flow-en": {
+    "file": "kayanos-guide/figures/screens/ch06-isop-control-flow-en.png",
+    "url": "https://test2.kayanos.app/internal-sop/drv4zp5i7urxvwm6n0c9h",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:15:57.188Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Control flow 12"
+      },
+      {
+        "n": 2,
+        "label": "Decision Routes the SOP through named branches using express"
+      },
+      {
+        "n": 3,
+        "label": "For Each Runs the Body path for each item, then continues on"
+      },
+      {
+        "n": 4,
+        "label": "Delay Pauses the SOP for a duration or until a specific date"
+      }
+    ]
+  },
+  "ch06-isop-records-en": {
+    "file": "kayanos-guide/figures/screens/ch06-isop-records-en.png",
+    "url": "https://test2.kayanos.app/internal-sop/drv4zp5i7urxvwm6n0c9h",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:16:17.324Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Kayan 83"
+      },
+      {
+        "n": 2,
+        "label": "Records"
+      },
+      {
+        "n": 3,
+        "label": "Find Entity Records Finds records in an internal entity with"
+      },
+      {
+        "n": 4,
+        "label": "Create Entity Record Creates a record in an internal entity."
+      },
+      {
+        "n": 5,
+        "label": "Update Entity Record Updates a record in an internal entity."
+      }
+    ]
+  },
+  "ch06-isop-people-en": {
+    "file": "kayanos-guide/figures/screens/ch06-isop-people-en.png",
+    "url": "https://test2.kayanos.app/internal-sop/drv4zp5i7urxvwm6n0c9h",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:16:39.927Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Tasks & epics"
+      },
+      {
+        "n": 2,
+        "label": "Approvals & requests"
+      },
+      {
+        "n": 3,
+        "label": "Notifications & chat"
+      },
+      {
+        "n": 4,
+        "label": "Documents"
+      },
+      {
+        "n": 5,
+        "label": "Approval Request Requests an approval owned by this SOP and "
+      }
+    ]
+  },
+  "ch06-isop-inspector-en": {
+    "file": "kayanos-guide/figures/screens/ch06-isop-inspector-en.png",
+    "url": "https://test2.kayanos.app/internal-sop/drv4zp5i7urxvwm6n0c9h",
+    "lang": "en",
+    "width": 1440,
+    "height": 2146,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:19:14.574Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Step name"
+      },
+      {
+        "n": 2,
+        "label": "Insert data"
+      },
+      {
+        "n": 3,
+        "label": "Approval title expression"
+      },
+      {
+        "n": 4,
+        "label": "Advanced Stop the run"
+      },
+      {
+        "n": 5,
+        "label": "Test this step"
+      }
+    ]
+  },
+  "ch06-isop-errors-en": {
+    "file": "kayanos-guide/figures/screens/ch06-isop-errors-en.png",
+    "url": "https://test2.kayanos.app/internal-sop/drv4zp5i7urxvwm6n0c9h",
+    "lang": "en",
+    "width": 1440,
+    "height": 2572,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:19:35.149Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Advanced Stop the run"
+      },
+      {
+        "n": 2,
+        "label": "Stop the run"
+      },
+      {
+        "n": 3,
+        "label": "Follow a Failure path"
+      },
+      {
+        "n": 4,
+        "label": "Retry before giving up"
+      },
+      {
+        "n": 5,
+        "label": "Skip this step"
+      }
+    ]
+  },
+  "ch06-isop-connections-en": {
+    "file": "kayanos-guide/figures/screens/ch06-isop-connections-en.png",
+    "url": "https://test2.kayanos.app/internal-sop",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:22:13.028Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Connections"
+      },
+      {
+        "n": 2,
+        "label": "Add connection"
+      },
+      {
+        "n": 3,
+        "label": "Variables"
+      }
+    ]
+  },
+  "ch06-isop-testing-en": {
+    "file": "kayanos-guide/figures/screens/ch06-isop-testing-en.png",
+    "url": "https://test2.kayanos.app/internal-sop/drv4zp5i7urxvwm6n0c9h",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:17:43.505Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Test"
+      },
+      {
+        "n": 2,
+        "label": "Edit"
+      },
+      {
+        "n": 3,
+        "label": "Simulate (safe)"
+      },
+      {
+        "n": 4,
+        "label": "Real run"
+      },
+      {
+        "n": 5,
+        "label": "Run simulation"
+      }
+    ]
+  },
+  "ch06-isop-runs-en": {
+    "file": "kayanos-guide/figures/screens/ch06-isop-runs-en.png",
+    "url": "https://test2.kayanos.app/internal-sop/drv4zp5i7urxvwm6n0c9h",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:13:20.495Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Runs"
+      },
+      {
+        "n": 2,
+        "label": "Live"
+      },
+      {
+        "n": 3,
+        "label": "Completed Live · v1 0.2 s Oct 3, 2026, 2:39 AM"
+      },
+      {
+        "n": 4,
+        "label": "1 Manual Passed"
+      },
+      {
+        "n": 5,
+        "label": "Test the draft with this data"
+      }
+    ]
+  },
+  "ch06-isop-approvals-en": {
+    "file": "kayanos-guide/figures/screens/ch06-isop-approvals-en.png",
+    "url": "https://test2.kayanos.app/approval-requests",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:22:32.684Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Needs you (33)"
+      },
+      {
+        "n": 2,
+        "label": "W2 QA: approval without version switch, Round 1"
+      },
+      {
+        "n": 3,
+        "label": "Approve"
+      },
+      {
+        "n": 4,
+        "label": "Request changes · comment"
+      }
+    ]
+  },
+  "ch06-isop-publish-en": {
+    "file": "kayanos-guide/figures/screens/ch06-isop-publish-en.png",
+    "url": "https://test2.kayanos.app/internal-sop/drv4zp5i7urxvwm6n0c9h",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:18:24.795Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Review & publish"
+      },
+      {
+        "n": 2,
+        "label": "Checks"
+      },
+      {
+        "n": 3,
+        "label": "Changes since v1 (live)"
+      },
+      {
+        "n": 4,
+        "label": "Run a test"
+      },
+      {
+        "n": 5,
+        "label": "Publish v2"
+      }
+    ]
+  },
+  "ch06-isop-versions-en": {
+    "file": "kayanos-guide/figures/screens/ch06-isop-versions-en.png",
+    "url": "https://test2.kayanos.app/internal-sop/drv4zp5i7urxvwm6n0c9h",
+    "lang": "en",
+    "width": 1440,
+    "height": 1150,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:22:59.750Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Definition details: W2 QA K2 approval without record version"
+      },
+      {
+        "n": 2,
+        "label": "Version history"
+      },
+      {
+        "n": 3,
+        "label": "Version 2"
+      },
+      {
+        "n": 4,
+        "label": "Save details"
+      }
+    ]
+  },
+  "ch06-isop-editor-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-isop-editor-ar.png",
+    "url": "https://test2.kayanos.app/internal-sop/drv4zp5i7urxvwm6n0c9h",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:08:59.308Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "بناء"
+      },
+      {
+        "n": 2,
+        "label": "أضف إجراء SOP"
+      },
+      {
+        "n": 3,
+        "label": "إضافة ملاحظة"
+      },
+      {
+        "n": 4,
+        "label": "كل الخطوات جاهزة"
+      }
+    ]
+  },
+  "ch06-isop-triggers-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-isop-triggers-ar.png",
+    "url": "https://test2.kayanos.app/internal-sop/drv4zp5i7urxvwm6n0c9h",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:09:15.956Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "البحث في المشغّلات"
+      },
+      {
+        "n": 2,
+        "label": "عام"
+      },
+      {
+        "n": 3,
+        "label": "Kayan"
+      },
+      {
+        "n": 4,
+        "label": "إنشاء سجل جديد يعمل عند إنشاء سجل في جدول محدد."
+      }
+    ]
+  },
+  "ch06-isop-control-flow-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-isop-control-flow-ar.png",
+    "url": "https://test2.kayanos.app/internal-sop/drv4zp5i7urxvwm6n0c9h",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:15:53.955Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "تدفق التحكم 12"
+      },
+      {
+        "n": 2,
+        "label": "تفرّع شرطي يوجّه الإجراء عبر مسارات مسماة وفق شروط تعبيرية."
+      },
+      {
+        "n": 3,
+        "label": "لكل عنصر يشغّل مسار Body لكل عنصر ثم يتابع عبر Done. استخدم "
+      },
+      {
+        "n": 4,
+        "label": "تأخير يوقف الإجراء مؤقتاً لمدة محددة أو حتى تاريخ معين."
+      }
+    ]
+  },
+  "ch06-isop-records-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-isop-records-ar.png",
+    "url": "https://test2.kayanos.app/internal-sop/drv4zp5i7urxvwm6n0c9h",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:16:14.008Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Kayan 83"
+      },
+      {
+        "n": 2,
+        "label": "السجلات"
+      },
+      {
+        "n": 3,
+        "label": "البحث عن سجلات كيان يبحث عن سجلات مطابقة في كيان داخلي."
+      },
+      {
+        "n": 4,
+        "label": "إنشاء سجل كيان ينشئ سجلاً في كيان داخلي."
+      },
+      {
+        "n": 5,
+        "label": "تحديث سجل كيان يحدّث سجلاً في كيان داخلي."
+      }
+    ]
+  },
+  "ch06-isop-people-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-isop-people-ar.png",
+    "url": "https://test2.kayanos.app/internal-sop/drv4zp5i7urxvwm6n0c9h",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:16:36.605Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "المهام والمشاريع"
+      },
+      {
+        "n": 2,
+        "label": "الموافقات والطلبات"
+      },
+      {
+        "n": 3,
+        "label": "الإشعارات والمحادثات"
+      },
+      {
+        "n": 4,
+        "label": "المستندات"
+      },
+      {
+        "n": 5,
+        "label": "طلب موافقة يطلب موافقة يملكها هذا الإجراء وينتظر حتى يُسجَّل"
+      }
+    ]
+  },
+  "ch06-isop-inspector-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-isop-inspector-ar.png",
+    "url": "https://test2.kayanos.app/internal-sop/drv4zp5i7urxvwm6n0c9h",
+    "lang": "ar",
+    "width": 1440,
+    "height": 2130,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:19:14.484Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "اسم الخطوة"
+      },
+      {
+        "n": 2,
+        "label": "إدراج بيانات"
+      },
+      {
+        "n": 3,
+        "label": "عنوان الموافقة التعبير"
+      },
+      {
+        "n": 4,
+        "label": "متقدم إيقاف التشغيل"
+      },
+      {
+        "n": 5,
+        "label": "اختبار هذه الخطوة"
+      }
+    ]
+  },
+  "ch06-isop-errors-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-isop-errors-ar.png",
+    "url": "https://test2.kayanos.app/internal-sop/drv4zp5i7urxvwm6n0c9h",
+    "lang": "ar",
+    "width": 1440,
+    "height": 2556,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:19:35.055Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "متقدم إيقاف التشغيل"
+      },
+      {
+        "n": 2,
+        "label": "إيقاف التشغيل"
+      },
+      {
+        "n": 3,
+        "label": "اتباع مسار الفشل"
+      },
+      {
+        "n": 4,
+        "label": "إعادة المحاولة قبل الاستسلام"
+      },
+      {
+        "n": 5,
+        "label": "تخطي هذه الخطوة"
+      }
+    ]
+  },
+  "ch06-isop-connections-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-isop-connections-ar.png",
+    "url": "https://test2.kayanos.app/internal-sop",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:22:07.121Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الاتصالات"
+      },
+      {
+        "n": 2,
+        "label": "إضافة اتصال"
+      },
+      {
+        "n": 3,
+        "label": "المتغيرات"
+      }
+    ]
+  },
+  "ch06-isop-testing-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-isop-testing-ar.png",
+    "url": "https://test2.kayanos.app/internal-sop/drv4zp5i7urxvwm6n0c9h",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:17:40.136Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "اختبار"
+      },
+      {
+        "n": 2,
+        "label": "تعديل"
+      },
+      {
+        "n": 3,
+        "label": "محاكاة (آمنة)"
+      },
+      {
+        "n": 4,
+        "label": "تشغيل فعلي"
+      },
+      {
+        "n": 5,
+        "label": "تشغيل المحاكاة"
+      }
+    ]
+  },
+  "ch06-isop-runs-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-isop-runs-ar.png",
+    "url": "https://test2.kayanos.app/internal-sop/drv4zp5i7urxvwm6n0c9h",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:13:05.660Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "عمليات التشغيل"
+      },
+      {
+        "n": 2,
+        "label": "فعلي"
+      },
+      {
+        "n": 3,
+        "label": "مكتمل فعلي · v1 0.2 ث 03‏/10‏/2026، 2:39 ص"
+      },
+      {
+        "n": 4,
+        "label": "1 Manual نجح"
+      },
+      {
+        "n": 5,
+        "label": "اختبار المسودة بهذه البيانات"
+      }
+    ]
+  },
+  "ch06-isop-approvals-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-isop-approvals-ar.png",
+    "url": "https://test2.kayanos.app/approval-requests",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:22:24.764Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "بانتظارك (33)"
+      },
+      {
+        "n": 2,
+        "label": "W2 QA: approval without version switch, الجولة 1"
+      },
+      {
+        "n": 3,
+        "label": "موافقة"
+      },
+      {
+        "n": 4,
+        "label": "طلب تغييرات · تعليق"
+      }
+    ]
+  },
+  "ch06-isop-publish-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-isop-publish-ar.png",
+    "url": "https://test2.kayanos.app/internal-sop/drv4zp5i7urxvwm6n0c9h",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:18:22.036Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "مراجعة ونشر"
+      },
+      {
+        "n": 2,
+        "label": "الفحوصات"
+      },
+      {
+        "n": 3,
+        "label": "التغييرات منذ v1 (المنشور)"
+      },
+      {
+        "n": 4,
+        "label": "تشغيل اختبار"
+      },
+      {
+        "n": 5,
+        "label": "نشر v2"
+      }
+    ]
+  },
+  "ch06-isop-versions-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-isop-versions-ar.png",
+    "url": "https://test2.kayanos.app/internal-sop/drv4zp5i7urxvwm6n0c9h",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1150,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:22:50.028Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "تفاصيل التعريف: W2 QA K2 approval without record version (no"
+      },
+      {
+        "n": 2,
+        "label": "سجل الإصدارات"
+      },
+      {
+        "n": 3,
+        "label": "الإصدار 2"
+      },
+      {
+        "n": 4,
+        "label": "حفظ التفاصيل"
+      }
+    ]
+  },
+  "ch06-forms-create-en": {
+    "file": "kayanos-guide/figures/screens/ch06-forms-create-en.png",
+    "url": "https://test2.kayanos.app/forms",
+    "lang": "en",
+    "width": 1440,
+    "height": 1000,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:30:55.812Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Form Name"
+      },
+      {
+        "n": 2,
+        "label": "Form Code"
+      },
+      {
+        "n": 3,
+        "label": "Reference Prefix"
+      },
+      {
+        "n": 4,
+        "label": "App *"
+      },
+      {
+        "n": 5,
+        "label": "Create"
+      }
+    ]
+  },
+  "ch06-forms-builder-en": {
+    "file": "kayanos-guide/figures/screens/ch06-forms-builder-en.png",
+    "url": "https://test2.kayanos.app/forms/sdop_leave_isop",
+    "lang": "en",
+    "width": 1440,
+    "height": 1000,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:31:15.167Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "AI"
+      },
+      {
+        "n": 2,
+        "label": "Describe the form change you want"
+      },
+      {
+        "n": 3,
+        "label": "Saved"
+      },
+      {
+        "n": 4,
+        "label": "Test form"
+      },
+      {
+        "n": 5,
+        "label": "Publish"
+      }
+    ]
+  },
+  "ch06-forms-pages-en": {
+    "file": "kayanos-guide/figures/screens/ch06-forms-pages-en.png",
+    "url": "https://test2.kayanos.app/forms/sdop_leave_isop",
+    "lang": "en",
+    "width": 1440,
+    "height": 1400,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:37:27.868Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Page 1"
+      },
+      {
+        "n": 2,
+        "label": "Add page"
+      },
+      {
+        "n": 3,
+        "label": "Section"
+      },
+      {
+        "n": 4,
+        "label": "Table"
+      },
+      {
+        "n": 5,
+        "label": "Repeatable"
+      }
+    ]
+  },
+  "ch06-forms-types-basic-en": {
+    "file": "kayanos-guide/figures/screens/ch06-forms-types-basic-en.png",
+    "url": "https://test2.kayanos.app/forms/sdop_leave_isop",
+    "lang": "en",
+    "width": 1440,
+    "height": 1000,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:31:51.672Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Select field type"
+      },
+      {
+        "n": 2,
+        "label": "Search question types"
+      },
+      {
+        "n": 3,
+        "label": "Phone or national number"
+      },
+      {
+        "n": 4,
+        "label": "Choice cards"
+      },
+      {
+        "n": 5,
+        "label": "Dependent list"
+      }
+    ]
+  },
+  "ch06-forms-types-more-en": {
+    "file": "kayanos-guide/figures/screens/ch06-forms-types-more-en.png",
+    "url": "https://test2.kayanos.app/forms/sdop_leave_isop",
+    "lang": "en",
+    "width": 1440,
+    "height": 1000,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:32:09.991Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Year or month"
+      },
+      {
+        "n": 2,
+        "label": "Date range (from – to)"
+      },
+      {
+        "n": 3,
+        "label": "Establishment boundary (map)"
+      },
+      {
+        "n": 4,
+        "label": "Take picture"
+      }
+    ]
+  },
+  "ch06-forms-field-settings-en": {
+    "file": "kayanos-guide/figures/screens/ch06-forms-field-settings-en.png",
+    "url": "https://test2.kayanos.app/forms/sdop_leave_isop",
+    "lang": "en",
+    "width": 1440,
+    "height": 1000,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:38:38.323Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "3 Starts At * Empty"
+      },
+      {
+        "n": 2,
+        "label": "General info"
+      },
+      {
+        "n": 3,
+        "label": "Rules"
+      },
+      {
+        "n": 4,
+        "label": "Record"
+      },
+      {
+        "n": 5,
+        "label": "Notes on the answer"
+      }
+    ]
+  },
+  "ch06-forms-rules-en": {
+    "file": "kayanos-guide/figures/screens/ch06-forms-rules-en.png",
+    "url": "https://test2.kayanos.app/forms/sdop_leave_isop",
+    "lang": "en",
+    "width": 1440,
+    "height": 1000,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:32:44.595Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "47 Rules"
+      },
+      {
+        "n": 2,
+        "label": "Add rule"
+      },
+      {
+        "n": 3,
+        "label": "Show 9"
+      },
+      {
+        "n": 4,
+        "label": "Show Page 1 Sound Hide Results when Rejection Reason is empt"
+      }
+    ]
+  },
+  "ch06-forms-button-en": {
+    "file": "kayanos-guide/figures/screens/ch06-forms-button-en.png",
+    "url": "https://test2.kayanos.app/forms/sdop_leave_isop",
+    "lang": "en",
+    "width": 1440,
+    "height": 1000,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:35:37.097Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Submit"
+      },
+      {
+        "n": 2,
+        "label": "When clicked"
+      },
+      {
+        "n": 3,
+        "label": "Run an SOP SOPs triggered by this button · waits for its res"
+      },
+      {
+        "n": 4,
+        "label": "Add step"
+      },
+      {
+        "n": 5,
+        "label": "Try"
+      }
+    ]
+  },
+  "ch06-forms-records-en": {
+    "file": "kayanos-guide/figures/screens/ch06-forms-records-en.png",
+    "url": "https://test2.kayanos.app/forms/ui_audit_site_inspection",
+    "lang": "en",
+    "width": 1440,
+    "height": 1000,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:33:29.015Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Record question"
+      },
+      {
+        "n": 2,
+        "label": "From a record type"
+      },
+      {
+        "n": 3,
+        "label": "Not allowed yet"
+      },
+      {
+        "n": 4,
+        "label": "Allow in the record type"
+      }
+    ]
+  },
+  "ch06-forms-access-en": {
+    "file": "kayanos-guide/figures/screens/ch06-forms-access-en.png",
+    "url": "https://test2.kayanos.app/forms/sdop_leave_isop",
+    "lang": "en",
+    "width": 1440,
+    "height": 1000,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:33:46.230Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Who can do what Everyone and every action in one grid, full "
+      },
+      {
+        "n": 2,
+        "label": "Person who starts it Built in The person who starts the form"
+      },
+      {
+        "n": 3,
+        "label": "Add people"
+      },
+      {
+        "n": 4,
+        "label": "From the answers"
+      }
+    ]
+  },
+  "ch06-forms-journey-en": {
+    "file": "kayanos-guide/figures/screens/ch06-forms-journey-en.png",
+    "url": "https://test2.kayanos.app/forms/journey_qa_20261013",
+    "lang": "en",
+    "width": 1440,
+    "height": 1105,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:35:56.480Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Statuses"
+      },
+      {
+        "n": 2,
+        "label": "Phase"
+      },
+      {
+        "n": 3,
+        "label": "Transition"
+      },
+      {
+        "n": 4,
+        "label": "Preview and turn on"
+      },
+      {
+        "n": 5,
+        "label": "Applicant"
+      }
+    ]
+  },
+  "ch06-forms-assign-en": {
+    "file": "kayanos-guide/figures/screens/ch06-forms-assign-en.png",
+    "url": "https://test2.kayanos.app/forms/sdop_leave_isop",
+    "lang": "en",
+    "width": 1440,
+    "height": 1000,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:34:03.568Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Assign"
+      },
+      {
+        "n": 2,
+        "label": "The form can be assigned"
+      },
+      {
+        "n": 3,
+        "label": "Work"
+      }
+    ]
+  },
+  "ch06-forms-work-en": {
+    "file": "kayanos-guide/figures/screens/ch06-forms-work-en.png",
+    "url": "https://test2.kayanos.app/forms/work/approval_steps_e_2_e_1014",
+    "lang": "en",
+    "width": 1440,
+    "height": 1098,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:36:10.550Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "AI check Suggests marks only Checked: 4 To fix: 4 Didn’t run"
+      },
+      {
+        "n": 2,
+        "label": "Section head Everyone sees it, first answer counts Waiting: "
+      },
+      {
+        "n": 3,
+        "label": "From arrival to decision"
+      }
+    ]
+  },
+  "ch06-forms-settings-en": {
+    "file": "kayanos-guide/figures/screens/ch06-forms-settings-en.png",
+    "url": "https://test2.kayanos.app/forms/sdop_leave_isop",
+    "lang": "en",
+    "width": 1440,
+    "height": 1000,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:34:22.895Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "General"
+      },
+      {
+        "n": 2,
+        "label": "Numbering"
+      },
+      {
+        "n": 3,
+        "label": "Lifecycle"
+      },
+      {
+        "n": 4,
+        "label": "Stages & durations"
+      },
+      {
+        "n": 5,
+        "label": "Filling & navigation"
+      }
+    ]
+  },
+  "ch06-forms-test-en": {
+    "file": "kayanos-guide/figures/screens/ch06-forms-test-en.png",
+    "url": "https://test2.kayanos.app/forms/sdop_leave_isop",
+    "lang": "en",
+    "width": 1440,
+    "height": 1752,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:36:33.880Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Isolated"
+      },
+      {
+        "n": 2,
+        "label": "M Interacting as Mahmoud Masri"
+      },
+      {
+        "n": 3,
+        "label": "Test helpers"
+      },
+      {
+        "n": 4,
+        "label": "Exit"
+      }
+    ]
+  },
+  "ch06-forms-versions-en": {
+    "file": "kayanos-guide/figures/screens/ch06-forms-versions-en.png",
+    "url": "https://test2.kayanos.app/forms/sdop_leave_isop",
+    "lang": "en",
+    "width": 1440,
+    "height": 1000,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:34:40.042Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Unpublished changes"
+      },
+      {
+        "n": 2,
+        "label": "Live"
+      },
+      {
+        "n": 3,
+        "label": "Changes"
+      },
+      {
+        "n": 4,
+        "label": "Edit as draft"
+      }
+    ]
+  },
+  "ch06-forms-submissions-en": {
+    "file": "kayanos-guide/figures/screens/ch06-forms-submissions-en.png",
+    "url": "https://test2.kayanos.app/apps/builder/system_data/forms/approval_steps_e_2_e_1014",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:36:47.820Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "New Submission"
+      },
+      {
+        "n": 2,
+        "label": "Search"
+      },
+      {
+        "n": 3,
+        "label": "Status"
+      },
+      {
+        "n": 4,
+        "label": "Approved"
+      }
+    ]
+  },
+  "ch06-forms-create-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-forms-create-ar.png",
+    "url": "https://test2.kayanos.app/forms",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1000,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:39:19.022Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "اسم النموذج"
+      },
+      {
+        "n": 2,
+        "label": "كود النموذج"
+      },
+      {
+        "n": 3,
+        "label": "الاختصار المرجعي"
+      },
+      {
+        "n": 4,
+        "label": "التطبيق *"
+      },
+      {
+        "n": 5,
+        "label": "إنشاء"
+      }
+    ]
+  },
+  "ch06-forms-builder-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-forms-builder-ar.png",
+    "url": "https://test2.kayanos.app/forms/sdop_leave_isop",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1000,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:39:44.247Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الذكاء"
+      },
+      {
+        "n": 2,
+        "label": "وصف التغيير الذي ترغب في إجرائه في النموذج"
+      },
+      {
+        "n": 3,
+        "label": "تم الحفظ"
+      },
+      {
+        "n": 4,
+        "label": "اختبار النموذج"
+      },
+      {
+        "n": 5,
+        "label": "نشر"
+      }
+    ]
+  },
+  "ch06-forms-pages-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-forms-pages-ar.png",
+    "url": "https://test2.kayanos.app/forms/sdop_leave_isop",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1400,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:40:02.835Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "صفحة 1"
+      },
+      {
+        "n": 2,
+        "label": "إضافة صفحة"
+      },
+      {
+        "n": 3,
+        "label": "قسم"
+      },
+      {
+        "n": 4,
+        "label": "جدول"
+      },
+      {
+        "n": 5,
+        "label": "متكرر"
+      }
+    ]
+  },
+  "ch06-forms-types-basic-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-forms-types-basic-ar.png",
+    "url": "https://test2.kayanos.app/forms/sdop_leave_isop",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1000,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:40:21.978Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "اختر نوع الحقل"
+      },
+      {
+        "n": 2,
+        "label": "ابحث في أنواع الأسئلة"
+      },
+      {
+        "n": 3,
+        "label": "هاتف أو رقم وطني"
+      },
+      {
+        "n": 4,
+        "label": "بطاقات اختيار"
+      },
+      {
+        "n": 5,
+        "label": "قائمة مرتبطة"
+      }
+    ]
+  },
+  "ch06-forms-types-more-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-forms-types-more-ar.png",
+    "url": "https://test2.kayanos.app/forms/sdop_leave_isop",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1000,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:40:42.388Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "سنة أو شهر"
+      },
+      {
+        "n": 2,
+        "label": "فترة (من – إلى)"
+      },
+      {
+        "n": 3,
+        "label": "حدود المنشأة (خريطة)"
+      },
+      {
+        "n": 4,
+        "label": "التقاط صورة"
+      }
+    ]
+  },
+  "ch06-forms-field-settings-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-forms-field-settings-ar.png",
+    "url": "https://test2.kayanos.app/forms/sdop_leave_isop",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1000,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:40:59.912Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "3 يبدأ في * فارغ"
+      },
+      {
+        "n": 2,
+        "label": "معلومات عامة"
+      },
+      {
+        "n": 3,
+        "label": "القواعد"
+      },
+      {
+        "n": 4,
+        "label": "السجل"
+      },
+      {
+        "n": 5,
+        "label": "ملاحظات على الإجابة"
+      }
+    ]
+  },
+  "ch06-forms-rules-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-forms-rules-ar.png",
+    "url": "https://test2.kayanos.app/forms/sdop_leave_isop",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1000,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:41:19.199Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "47 القواعد"
+      },
+      {
+        "n": 2,
+        "label": "إضافة قاعدة"
+      },
+      {
+        "n": 3,
+        "label": "إظهار 9"
+      },
+      {
+        "n": 4,
+        "label": "إظهار Page 1 سليمة أخفِ النتيجة عندما Rejection Reason فارغ"
+      }
+    ]
+  },
+  "ch06-forms-button-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-forms-button-ar.png",
+    "url": "https://test2.kayanos.app/forms/sdop_leave_isop",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1000,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:41:38.966Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "تقديم"
+      },
+      {
+        "n": 2,
+        "label": "عند النقر"
+      },
+      {
+        "n": 3,
+        "label": "تشغيل SOP الـ SOP المرتبطة بهذا الزر · تنتظر نتيجتها إجراء و"
+      },
+      {
+        "n": 4,
+        "label": "إضافة خطوة"
+      },
+      {
+        "n": 5,
+        "label": "تجربة"
+      }
+    ]
+  },
+  "ch06-forms-records-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-forms-records-ar.png",
+    "url": "https://test2.kayanos.app/forms/ui_audit_site_inspection",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1000,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:41:58.312Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "سؤال سجل"
+      },
+      {
+        "n": 2,
+        "label": "من نوع سجل"
+      },
+      {
+        "n": 3,
+        "label": "غير مسموح بعد"
+      },
+      {
+        "n": 4,
+        "label": "السماح في نوع السجل"
+      }
+    ]
+  },
+  "ch06-forms-access-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-forms-access-ar.png",
+    "url": "https://test2.kayanos.app/forms/sdop_leave_isop",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1000,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:42:17.511Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "من يستطيع ماذا الجميع وكل الإجراءات في جدول واحد بملء الشاشة"
+      },
+      {
+        "n": 2,
+        "label": "من يبدأ النموذج مدمج الشخص الذي يبدأ النموذج تعديل قائمة فتح"
+      },
+      {
+        "n": 3,
+        "label": "إضافة أشخاص"
+      },
+      {
+        "n": 4,
+        "label": "من الإجابات"
+      }
+    ]
+  },
+  "ch06-forms-journey-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-forms-journey-ar.png",
+    "url": "https://test2.kayanos.app/forms/journey_qa_20261013",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1105,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:42:34.670Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الحالات"
+      },
+      {
+        "n": 2,
+        "label": "مرحلة"
+      },
+      {
+        "n": 3,
+        "label": "انتقال"
+      },
+      {
+        "n": 4,
+        "label": "معاينة وتفعيل"
+      },
+      {
+        "n": 5,
+        "label": "المتعامل"
+      }
+    ]
+  },
+  "ch06-forms-assign-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-forms-assign-ar.png",
+    "url": "https://test2.kayanos.app/forms/sdop_leave_isop",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1000,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:42:53.790Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إسناد"
+      },
+      {
+        "n": 2,
+        "label": "يمكن التكليف به"
+      },
+      {
+        "n": 3,
+        "label": "العمل"
+      }
+    ]
+  },
+  "ch06-forms-work-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-forms-work-ar.png",
+    "url": "https://test2.kayanos.app/forms/work/approval_steps_e_2_e_1014",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1098,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:43:07.808Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "فحص الذكاء الاصطناعي يقترح العلامات فقط فُحص: 4 للتصحيح: 4 ل"
+      },
+      {
+        "n": 2,
+        "label": "رئيس القسم الكل يرونها، وأول ردّ يكفي بانتظار: 3 الأقدم قبل "
+      },
+      {
+        "n": 3,
+        "label": "من الوصول إلى القرار"
+      }
+    ]
+  },
+  "ch06-forms-settings-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-forms-settings-ar.png",
+    "url": "https://test2.kayanos.app/forms/sdop_leave_isop",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1000,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:43:24.899Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "عام"
+      },
+      {
+        "n": 2,
+        "label": "ترقيم"
+      },
+      {
+        "n": 3,
+        "label": "دورة الحياة"
+      },
+      {
+        "n": 4,
+        "label": "المراحل والمدد"
+      },
+      {
+        "n": 5,
+        "label": "التعبئة والتنقل"
+      }
+    ]
+  },
+  "ch06-forms-test-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-forms-test-ar.png",
+    "url": "https://test2.kayanos.app/forms/sdop_leave_isop",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1752,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:43:50.226Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "معزولة"
+      },
+      {
+        "n": 2,
+        "label": "M التفاعل بصفة Mahmoud Masri"
+      },
+      {
+        "n": 3,
+        "label": "أدوات الاختبار"
+      },
+      {
+        "n": 4,
+        "label": "خروج"
+      }
+    ]
+  },
+  "ch06-forms-versions-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-forms-versions-ar.png",
+    "url": "https://test2.kayanos.app/forms/sdop_leave_isop",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1000,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:44:09.388Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "تغييرات غير منشورة"
+      },
+      {
+        "n": 2,
+        "label": "منشور"
+      },
+      {
+        "n": 3,
+        "label": "التغييرات"
+      },
+      {
+        "n": 4,
+        "label": "تعديل كمسودة"
+      }
+    ]
+  },
+  "ch06-forms-submissions-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-forms-submissions-ar.png",
+    "url": "https://test2.kayanos.app/apps/builder/system_data/forms/approval_steps_e_2_e_1014",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:44:23.468Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "طلب جديد"
+      },
+      {
+        "n": 2,
+        "label": "بحث"
+      },
+      {
+        "n": 3,
+        "label": "الحالة"
+      },
+      {
+        "n": 4,
+        "label": "معتمد"
+      }
+    ]
+  },
+  "ch06-sops-en": {
+    "file": "kayanos-guide/figures/screens/ch06-sops-en.png",
+    "url": "https://test2.kayanos.app/sop",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:38:16.267Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Automations"
+      },
+      {
+        "n": 2,
+        "label": "Search flows and tables..."
+      },
+      {
+        "n": 3,
+        "label": "Create New"
+      },
+      {
+        "n": 4,
+        "label": "on"
+      }
+    ]
+  },
+  "ch06-sops-trigger-en": {
+    "file": "kayanos-guide/figures/screens/ch06-sops-trigger-en.png",
+    "url": "https://test2.kayanos.app/sop",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:29:25.107Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Trigger 1. On Form Action KayanOS"
+      },
+      {
+        "n": 2,
+        "label": "Form *"
+      },
+      {
+        "n": 3,
+        "label": "Form Versions"
+      },
+      {
+        "n": 4,
+        "label": "Actions"
+      },
+      {
+        "n": 5,
+        "label": "Test Trigger Ctrl + G"
+      }
+    ]
+  },
+  "ch06-sops-action-en": {
+    "file": "kayanos-guide/figures/screens/ch06-sops-action-en.png",
+    "url": "https://test2.kayanos.app/sop",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:29:53.135Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "3. Read submission KayanOS"
+      },
+      {
+        "n": 2,
+        "label": "Table Name"
+      },
+      {
+        "n": 3,
+        "label": "Record ID"
+      },
+      {
+        "n": 4,
+        "label": "Retry on Failure"
+      },
+      {
+        "n": 5,
+        "label": "Test Step Ctrl + G"
+      }
+    ]
+  },
+  "ch06-sops-connections-en": {
+    "file": "kayanos-guide/figures/screens/ch06-sops-connections-en.png",
+    "url": "https://test2.kayanos.app/sop",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:38:39.490Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Connections"
+      },
+      {
+        "n": 2,
+        "label": "New Connection"
+      },
+      {
+        "n": 3,
+        "label": "No connections found"
+      }
+    ]
+  },
+  "ch06-sops-runs-en": {
+    "file": "kayanos-guide/figures/screens/ch06-sops-runs-en.png",
+    "url": "https://test2.kayanos.app/sop",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:30:38.183Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Runs"
+      },
+      {
+        "n": 2,
+        "label": "Status"
+      },
+      {
+        "n": 3,
+        "label": "Last 7 Days"
+      },
+      {
+        "n": 4,
+        "label": "No flow runs found"
+      }
+    ]
+  },
+  "ch06-bot-capabilities-en": {
+    "file": "kayanos-guide/figures/screens/ch06-bot-capabilities-en.png",
+    "url": "https://test2.kayanos.app/bots/ft28wbjmtpag4gz6xexjl",
+    "lang": "en",
+    "width": 1440,
+    "height": 1250,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:41:57.264Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Addable to Direct Chats"
+      },
+      {
+        "n": 2,
+        "label": "Can Send Message To It"
+      },
+      {
+        "n": 3,
+        "label": "Email Installable"
+      },
+      {
+        "n": 4,
+        "label": "Calendar Installable"
+      }
+    ]
+  },
+  "ch06-bot-default-installation-en": {
+    "file": "kayanos-guide/figures/screens/ch06-bot-default-installation-en.png",
+    "url": "https://test2.kayanos.app/bots/ft28wbjmtpag4gz6xexjl",
+    "lang": "en",
+    "width": 1440,
+    "height": 1250,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:45:14.798Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Install in Direct Chats"
+      },
+      {
+        "n": 2,
+        "label": "None"
+      },
+      {
+        "n": 3,
+        "label": "Install in Emails"
+      },
+      {
+        "n": 4,
+        "label": "None"
+      },
+      {
+        "n": 5,
+        "label": "Install in Calendar"
+      }
+    ]
+  },
+  "ch06-sops-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-sops-ar.png",
+    "url": "https://test2.kayanos.app/sop",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:38:15.731Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Automations"
+      },
+      {
+        "n": 2,
+        "label": "Search flows and tables..."
+      },
+      {
+        "n": 3,
+        "label": "Create New"
+      },
+      {
+        "n": 4,
+        "label": "on"
+      }
+    ]
+  },
+  "ch06-sops-trigger-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-sops-trigger-ar.png",
+    "url": "https://test2.kayanos.app/sop",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:29:30.367Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Trigger 1. On Form Action KayanOS"
+      },
+      {
+        "n": 2,
+        "label": "Form *"
+      },
+      {
+        "n": 3,
+        "label": "Form Versions"
+      },
+      {
+        "n": 4,
+        "label": "Actions"
+      },
+      {
+        "n": 5,
+        "label": "اختبر المشغّل Ctrl + G"
+      }
+    ]
+  },
+  "ch06-sops-action-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-sops-action-ar.png",
+    "url": "https://test2.kayanos.app/sop",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:29:58.339Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "3. Read submission KayanOS"
+      },
+      {
+        "n": 2,
+        "label": "اسم الجدول"
+      },
+      {
+        "n": 3,
+        "label": "معرف السجل"
+      },
+      {
+        "n": 4,
+        "label": "إعادة المحاولة عند الفشل"
+      },
+      {
+        "n": 5,
+        "label": "اختبار الخطوة Ctrl + G"
+      }
+    ]
+  },
+  "ch06-sops-connections-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-sops-connections-ar.png",
+    "url": "https://test2.kayanos.app/sop",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:38:38.807Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الاتصالات"
+      },
+      {
+        "n": 2,
+        "label": "اتصال جديد"
+      },
+      {
+        "n": 3,
+        "label": "No connections found"
+      }
+    ]
+  },
+  "ch06-sops-runs-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-sops-runs-ar.png",
+    "url": "https://test2.kayanos.app/sop",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:30:43.602Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "التشغيلات"
+      },
+      {
+        "n": 2,
+        "label": "الحالة"
+      },
+      {
+        "n": 3,
+        "label": "Last 7 Days"
+      },
+      {
+        "n": 4,
+        "label": "No flow runs found"
+      }
+    ]
+  },
+  "ch06-bot-capabilities-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-bot-capabilities-ar.png",
+    "url": "https://test2.kayanos.app/bots/ft28wbjmtpag4gz6xexjl",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1250,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:41:56.248Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "قابل للإضافة إلى الدردشات المباشرة"
+      },
+      {
+        "n": 2,
+        "label": "يمكن إرسال رسالة إليه"
+      },
+      {
+        "n": 3,
+        "label": "قابل للتثبيت للبريد"
+      },
+      {
+        "n": 4,
+        "label": "قابل للتثبيت للتقويم"
+      }
+    ]
+  },
+  "ch06-bot-default-installation-ar": {
+    "file": "kayanos-guide/figures/screens/ch06-bot-default-installation-ar.png",
+    "url": "https://test2.kayanos.app/bots/ft28wbjmtpag4gz6xexjl",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1250,
+    "scale": 2,
+    "capturedAt": "2026-10-20T07:45:13.654Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "التثبيت في الدردشات المباشرة"
+      },
+      {
+        "n": 2,
+        "label": "لا شيء"
+      },
+      {
+        "n": 3,
+        "label": "التثبيت في البريد الإلكتروني"
+      },
+      {
+        "n": 4,
+        "label": "لا شيء"
+      },
+      {
+        "n": 5,
+        "label": "التثبيت في التقويم"
       }
     ]
   }

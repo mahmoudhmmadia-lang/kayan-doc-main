@@ -67,11 +67,19 @@ Open an existing type & Pressing a type opens it in the “Builder” workspace,
 
 Instead of adding fields one by one, you can describe the record type you need in your own words: the “AI Entity Builder” proposes its fields, tabs and sections, and you review and edit the proposal before saving it. This helps when the type is large or when you want a quick starting point. “View ERD Diagram” draws the existing record types and the relationships between them, so before any change you know what is linked to the type you are about to edit.
 
-\textbf{Where and who:} “Entities” → “AI Entity Builder”, or the “View ERD Diagram” button in the header of the same page. The AI button shows when “AI in builders” is on in the organization's settings, and saving needs permissions to create and update entities and to create fields.
+\textbf{Path and who uses it:} “Entities” → “AI Entity Builder”, or the “View ERD Diagram” button in the header of the same page. The AI button shows when “AI in builders” is on in the organization's settings, and saving needs permissions to create and update entities and to create fields.
 
 \begin{rcnote}[Example: Horizon]
 Horizon's system administrator writes: “Create a record type for branch visit requests, with the branch, the visit date, its purpose and the requester.” They answer two questions the assistant asks, review the proposed fields, and press “Validate” before “Save Entity”.
 \end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-ai-builder-en.png}
+\caption{The AI Entity Builder before the conversation starts}
+\label{fig:builder-ai-builder-screen}
+\shotnote{The screen shows the assistant before any conversation: the chat on one side and the proposal preview on the other, empty until the assistant proposes a type. It shows where you write and where you review the result before saving. ① The “Describe your entity...” box: write the type description here. ② “Start a conversation”: an example of a suitable description to follow. ③ “No entity proposal yet”: the place of the “Entity Preview”, which fills after the first proposal.}
+\end{figure}
 
 \begin{table}[H]
 \centering
@@ -130,13 +138,21 @@ Unlike the Builder workspace, the type and its fields are created directly after
 \section{The Builder workspace and Overview}
 \label{sec:builder-feature-workspace}
 
-The Builder workspace is where you edit a record type after creating it; you open it by pressing the type on the “Entities” page. Its sections appear in a side menu in this order: “Overview”, “Fields”, “Record page”, “Lists \& views”, “Rules”, “Access”, “Movement”, “Actions \& automations”, “Import” and “Advanced”. The “Overview” section summarizes the whole type in one place and tells you what must be fixed before publishing.
+The Builder workspace is where you edit a record type after creating it; you open it by pressing the type on the “Entities” page. Its sections appear in a side menu in this order: “Overview”, “Fields”, “Record page”, “Lists \& views”, “Rules”, “Access”, “Movement”, “Evidence”, “Actions \& automations”, “Import” and “Advanced”. The “Overview” section summarizes the whole type in one place and tells you what must be fixed before publishing.
 
-\textbf{Where and who:} “Entities” → press the record type → “Overview”. The person who builds the type uses it every time they return, to know what changed and what is still missing.
+\textbf{Path and who uses it:} “Entities” → press the record type → “Overview”. The person who builds the type uses it every time they return, to know what changed and what is still missing.
 
 \begin{rcnote}[Example: Horizon]
 The administrator opens “Visit requests” and sees in “Overview” that three fields are not on any page yet, and that “Before you publish” shows a warning for a label with no English text. They place the fields on the page and translate the label, then press “Review \& publish”.
 \end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-ws-header-en.png}
+\caption{The workspace header and the “Overview” section of a test record type}
+\label{fig:builder-workspace-screen}
+\shotnote{The image shows the test record type created on test2 to verify this guide, open in the Builder workspace on “Overview”. The header, side menu and cards gather what you need to know before any change. ① The record-type switcher: moves you to another type. ② The status pill: says the type is published with no pending changes. ③ “Fields” in the side menu: the number next to it is the field count. ④ The “Connections” card: the types linked with this one. ⑤ “Draft changes”: what is not published yet.}
+\end{figure}
 
 \begin{table}[H]
 \centering
@@ -147,6 +163,8 @@ The administrator opens “Visit requests” and sees in “Overview” that thr
 \thh{Item} & \thh{What it offers}\\
 Record-type switcher & Moves you to another type without returning to the list, with a “Find a record type” search.\\
 Status pill & Says “Published · no unpublished changes” when the type matches what the team sees, or “Draft” with the number of unpublished changes and the time of the last save.\\
+Print & Opens the record type's print templates; their number shows on the button when there are any.\\
+Assistant & Opens the “Builder assistant”: you ask it for a field, a rule or a formula, it proposes changes to the draft, and you apply the ones you want. Nothing is published until you review and publish.\\
 Preview as user & Shows the record page as a given role or person sees it, without saving anything.\\
 Review \& publish · N & Opens the review dialog; the number is the count of changes in the draft. The button is disabled when there are no changes.\\
 \end{tabularx}
@@ -154,16 +172,18 @@ Review \& publish · N & Opens the review dialog; the number is the count of cha
 
 \begin{table}[H]
 \centering
-\caption{The “Overview” cards}
+\caption{The parts of “Overview”}
 \label{tab:builder-workspace-cards}
 \begin{tabularx}{\linewidth}{R{3.6cm} Y}
 \rcHeaderRow
-\thh{Card} & \thh{What it tells you}\\
-Records & The number of records, where the type is shown, and the published version and who published it. “Open list” opens the list.\\
+\thh{Part} & \thh{What it tells you}\\
+Page header & The type's name and description, the number of records, the app and section under “Shown in”, and the published version and who published it. “Open list” opens the list of records.\\
 Fields & The number of fields, how many are calculated or rolled up, and the fields not placed on any page.\\
-Record page and lists & The number of tabs and sections, the default list view, and the figures and saved views.\\
-Rules and access & The number of rules by kind, the number of roles and verbs, and the fields with their own access.\\
-Connections & The record types linked with this type, so you know what an edit may affect.\\
+Record page & The number of tabs and sections, and whether overview blocks are on.\\
+Lists \& views & The available views and the default one, and the number of figures and saved views.\\
+Rules & The number of rules by kind, such as show or hide, editing and required.\\
+Access & The number of roles, verbs and custom verbs, and the fields with their own access.\\
+Connections & The number of record types linked with this type, so you know what an edit may affect.\\
 Draft changes & The unpublished changes since the draft started; “Review all” opens the review.\\
 Before you publish & The problems that block publishing and the warnings, each with a button that opens the place to fix it.\\
 \end{tabularx}
@@ -293,11 +313,19 @@ Required & Prevents saving the record while the field is empty. Use it only for 
 
 A field's type decides how the value is entered, how it is checked, and what can be done with it later: sorting, filtering and calculating. This page therefore explains every type available in “Add field”, then the extra settings that appear under “Type settings” for some of them. Choose the type before entering real data, because changing it after records accumulate is harder.
 
-\textbf{Where and who:} Builder workspace → “Fields” → “Add field”, then “Type settings” in the field's settings panel. Used by the person who builds the record type.
+\textbf{Path and who uses it:} Builder workspace → “Fields” → “Add field”, then “Type settings” in the field's settings panel. Used by the person who builds the record type.
 
 \begin{rcnote}[Example: Horizon]
 For the request number, the system administrator chooses the “Serial ID” type in “Automatic” mode and gives it a format that starts with \en{HZN-VR-}, so the first request is numbered \en{HZN-VR-0001}. For the branch they choose a “Relation” field linked to the branches record type.
 \end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-ws-add-field-en.png}
+\caption{The list of field types after pressing “Add field”}
+\label{fig:builder-field-types-screen}
+\shotnote{The image shows the list that opens when you add a field, with every available type in the order shown. It helps you choose the right type from the start instead of changing it after data is entered. ① “Add field”: opens the list. ② “Serial ID”: a reference number the system generates. ③ “Relation”: links the record to a record of another type. ④ “Lookup field”: shows information from a related record.}
+\end{figure}
 
 \begin{table}[H]
 \centering
@@ -326,7 +354,7 @@ Action & A button inside the record that creates a Word document or an Excel she
 \rcHeaderRow
 \thh{Type} & \thh{What you set in “Type settings”}\\
 Select and Status & “Choices” and their colours, “Allow adding options” if users may add a new value, and a number for each option when you need calculations.\\
-Relation & “Links to” to choose the other record type, and what happens to the record when the linked record is deleted: block the deletion, clear the field, or delete the dependent records with it.\\
+Relation & “Links to” to choose the other record type, and what happens to the record when the linked record is deleted: block the deletion, clear the field, or delete the dependent records with it. “Show relation in tab” and “Relations display” choose how these records appear on the other record's page, including a “Checklist” answered in place.\\
 Serial ID & “Serial mode”: “Automatic”, “On request” or both, “Manual serial entry”, the “Format JEXL” that sets the number's shape, “Start at” and “Timezone”.\\
 Status & The status template that defines the stages: a “Fixed template” for all records, or a “Per-record template” chosen from another field.\\
 Member Selector & “Display As”: the member's details as fields inside the section, or as a separate tab on the record page.\\
@@ -371,11 +399,19 @@ All types & “Allow several values” to keep more than one value in the same f
 
 Users do not type every value themselves; some values are calculated from the record's fields, taken from a related record, or rolled up from the records linked to it. The “Where the value comes from” setting in the field's panel decides the source, so there are fewer mistakes and the same information is not kept in more than one place. This page also explains the “Required” setting, because it depends on how the value is obtained.
 
-\textbf{Where and who:} Builder workspace → “Fields” → choose the field → “Value” → “Where the value comes from”. Used by the person who builds the type. The setting does not appear for “Action”, “Status” and “Serial ID” fields.
+\textbf{Path and who uses it:} Builder workspace → “Fields” → choose the field → “Value” → “Where the value comes from”. Used by the person who builds the type. The setting does not appear for “Action”, “Status” and “Serial ID” fields.
 
 \begin{rcnote}[Example: Horizon]
 The administrator adds a “Branch province” field to “Visit requests” whose source is “From a related record”, so it takes the province from the branch record automatically. On the branches type they add a “Number of visits” field whose source is “Rolled up”, counting the visit requests linked to each branch.
 \end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-ws-value-source-en.png}
+\caption{The “Where the value comes from” setting in a date field’s panel}
+\label{fig:builder-field-values-screen}
+\shotnote{The image shows the settings of the “Visit date” field in the test type, with the “Value” section and its options. It shows that the value source and whether the field is required are set in one place in the field panel. ① “Where the value comes from”: decides where the value comes from. ② “Calculated”: the value is a formula result. ③ “Rolled up”: the value comes from linked records. ④ “From a related record”: the value comes from a field of a related record. ⑤ “Required”: when saving is blocked if the field is empty.}
+\end{figure}
 
 \begin{table}[H]
 \centering
@@ -434,7 +470,7 @@ The “Required” setting decides when saving the record is blocked if the fiel
 \item Publish the changes, then open a record linked to other records and compare the value with what you expect.
 \end{enumerate}
 
-\textbf{Check and recovery:} the value should appear without anyone typing it, and change when its sources change. If “Before you publish” says the field “can't be calculated”, the formula points to a field that does not exist; press “Fix formula” and choose the right field. If you switch a lookup field to “Typed in”, its current values stay but no longer update.
+\textbf{Check and recovery:} the value should appear without anyone typing it, and change when its sources change. If “Before you publish” shows the field's name followed by “can’t be calculated”, the formula points to a field that does not exist; press “Fix formula” and choose the right field. If you switch a lookup field to “Typed in”, its current values stay but no longer update.
 
 \clearpage
 \section{Status fields and lifecycle rules}
@@ -442,7 +478,7 @@ The “Required” setting decides when saving the record is blocked if the fiel
 
 A “Status” field follows the work stages of a status template, such as “New”, then “Under review”, then “Approved”. “Lifecycle rules” add controls to it: when a move from one status to another is allowed, who may not make it, which fields are set automatically during the move, and whether the record is locked in a given status. So following the procedure does not depend on employees remembering it.
 
-\textbf{Where and who:} Builder workspace → “Fields” → choose the status field → “Lifecycle rules”. The rules need a “Fixed template” in the field's settings and are not available on built-in record types. Status templates themselves are explained in the Tasks chapter, on page \ref{sec:tasks-feature-statuses}.
+\textbf{Path and who uses it:} Builder workspace → “Fields” → choose the status field → “Lifecycle rules”. The rules need a “Fixed template” in the field's settings and are not available on built-in record types. Status templates themselves are explained in the Tasks chapter, on page \ref{sec:tasks-feature-statuses}.
 
 \begin{rcnote}[Example: Horizon]
 The administrator forbids the requester from moving a “Visit requests” record to “Approved”, so Omar Haddad cannot approve his own request. They add an effect that writes the approval date and approver, then lock the approved request so its data does not change after Sarah Al-Khatib approves it.
@@ -527,7 +563,7 @@ The system administrator gives the visit request page two tabs: “Request” fo
 \includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-ws-record-page-en.png}
 \caption{The “Record page” section with a real record preview}
 \label{fig:builder-record-page-screen}
-\shotnote{The section shows the page parts on one side and the page itself in the middle with a test record’s values, so you see the arrangement before publishing. ① “Find a field”: finds the field you want to drag onto the page. ② “+ Tab”: adds a tab to hold sections and fields. ③ “Sample”: the record used to preview the page. ④ “Phone”: shows the page as it appears on a small screen.}
+\shotnote{The section shows the page parts on one side and the page itself in the middle with a test record’s values, so you see the arrangement before publishing. ① “Find a field”: finds the field you want to drag onto the page. ② “Tab”: adds a tab to hold sections and fields. ③ “Sample”: the record used to preview the page. ④ “Phone”: shows the page as it appears on a small screen.}
 \end{figure}
 
 
@@ -578,11 +614,19 @@ Preview & Shows the page with a sample of a real record, as a chosen role sees i
 
 Besides fields, a record page can open with a summary of what matters most: the stage path, key figures and what needs attention. These summaries are built from “Overview blocks”, which show at the top of the first tab. “Layouts” are saved arrangements of the page that you choose between by a value in the record, so each kind of record gets the arrangement that suits it best.
 
-\textbf{Where and who:} Builder workspace → “Record page” → “Page settings” to turn on overview blocks, then “Page parts” → “Blocks” to add them. Layouts are under “Manage layouts…”. Used by the person who builds the type once its fields are settled.
+\textbf{Path and who uses it:} Builder workspace → “Record page” → “Page settings” to turn on overview blocks, then “Page parts” → “Blocks” to add them. Layouts are under “Manage layouts…”. Used by the person who builds the type once its fields are settled.
 
 \begin{rcnote}[Example: Horizon]
 The administrator adds a “Metrics” block to the “Visit requests” page showing how many days the request has been open, and a “Needs attention” block that alerts Sarah Al-Khatib to a request waiting more than three days for review.
 \end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-ws-blocks-en.png}
+\caption{The “Blocks” tab in “Page parts”}
+\label{fig:builder-record-page-blocks-screen}
+\shotnote{The image shows the “Record page” section with the blocks tab open, listing every block that can sit at the top of the first tab, with the preview beside it. It helps you choose a block and see its effect before publishing. ① “Blocks”: the tab that lists the blocks. ② “Metrics”: key figures about the record. ③ “Needs attention”: alerts from rules you set. ④ “Phone”: shows the preview at phone size.}
+\end{figure}
 
 \begin{table}[H]
 \centering
@@ -651,7 +695,7 @@ The preview shows the page with a sample record chosen in “Sample”; you can 
 \section{Lists \& views}
 \label{sec:builder-feature-lists}
 
-The “Lists \& views” section decides how the type's records appear together when a user opens the list. You choose the views people can switch between, such as “Table”, “Kanban” or “Calendar”, the visible columns and the figures that summarize the list at the top.
+The “Lists \& views” section decides how the type's records appear together when a user opens the list. You choose the views people can switch between, such as “Table”, “Kanban” or “Calendar”, the visible columns and the figures that summarize the list at the top. The “Inline cells” card offers “Edit cells in place”, so people edit table cells without opening each record, provided list views are on and they may change the field.
 
 \textbf{Path and who uses it:} record type → “Lists \& views”. Used by whoever builds the type, and useful to everyone who follows the records daily.
 
@@ -684,7 +728,7 @@ The system administrator shows visit requests in a “Table” with number, bran
 \rcHeaderRow
 \thh{View} & \thh{When it fits}\\
 Table and List & Always available for reviewing and comparing records row by row, with sorting and filtering.\\
-Cards and Gallery & “Cards” is always available; “Gallery” appears when the type has an image field.\\
+Cards and Gallery & “Cards” is always available; “Gallery” appears when the type has a “File” field to show images from.\\
 Kanban & Spreads records into columns by status or a select value, and appears when a suitable field exists.\\
 Calendar and Timeline & Appear when the type has a date or time-range field, such as appointments and stages.\\
 Map & Appears when the type has a “Location” or “Boundary” field.\\
@@ -722,11 +766,19 @@ Tree & Appears when you turn on “Parent records” in “Advanced”, showing 
 
 These two tools help the team understand a list without opening every record. “Figures” are summary numbers above the list, such as the number of open requests or a total amount, and clicking a figure filters the list. “Saved views” are tabs above the list, each with ready filters, sorting and grouping, so users switch between “My requests” and “Waiting for review” in one click.
 
-\textbf{Where and who:} Builder workspace → “Lists \& views” → the “Figures” card and the “Saved views” card. The person who builds the type sets them, and everyone who opens the list sees them. Each user can also save views of their own from the list itself.
+\textbf{Path and who uses it:} Builder workspace → “Lists \& views” → the “Figures” card and the “Saved views” card. The person who builds the type sets them, and everyone who opens the list sees them. Each user can also save views of their own from the list itself.
 
 \begin{rcnote}[Example: Horizon]
 Above the “Visit requests” list, the administrator adds a figure with the number of requests “Under review” that turns warning-coloured above five, and a saved view called “Waiting for my review” that shows Sarah Al-Khatib the requests waiting for her.
 \end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-ws-figures-views-en.png}
+\caption{The figures and saved views cards in “Lists \& views”}
+\label{fig:builder-figures-views-screen}
+\shotnote{The image shows the “Lists \& views” section of the test type, with no figure or saved view added yet. It shows where to start when you want to summarize or organize the list. ① “Add figure”: adds a summary number above the list. ② “Saved views”: the card where you add ready tabs above the list.}
+\end{figure}
 
 \begin{table}[H]
 \centering
@@ -870,11 +922,19 @@ Unique values & In “Advanced”: prevents two records from sharing a code or a
 
 These four tools sit below the rules table in the “Rules” section and protect data from mistakes that are hard to find later. “Limits” prevent the total of linked records from exceeding a limit, “Reference guards” prevent deleting or changing a record while other records depend on it, “Generation” keeps one record for every combination of two linked types, and “Date windows” keep a record's dates inside the dates of a related record.
 
-\textbf{Where and who:} Builder workspace → “Rules”, then at the bottom of the page: “Limits”, “Reference guards”, “Generation” and “Date windows”. Used by people who build financial and organizational types that need controls between records.
+\textbf{Path and who uses it:} Builder workspace → “Rules”, then at the bottom of the page: “Limits”, “Reference guards”, “Generation” and “Date windows”. Used by people who build financial and organizational types that need controls between records.
 
 \begin{rcnote}[Example: Horizon]
 The administrator adds a date window that keeps the visit date inside the dates of the visit plan linked to the request, and a guard that prevents deleting a branch while it has open visit requests.
 \end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-ws-rule-tools-en.png}
+\caption{The four tools below the rules table}
+\label{fig:builder-record-limits-screen}
+\shotnote{The image shows the “Rules” section of the test type, with a card for each tool below the rules table and its own add button. Each card shows what it needs before use, such as a relation field. ① “Add limit”. ② “Add guard”. ③ “Add a generation rule”. ④ “Add date window”. Each button starts an editor that leads you to complete the sentence describing the control.}
+\end{figure}
 
 \begin{table}[H]
 \centering
@@ -968,8 +1028,9 @@ Roles and verbs & Press a cell to grant a verb to a role or take it away. It sho
 Field access & Fields have no grants of their own; each field names the verb needed “To see”, “To change” or “To run” it. Empty means the default.\\
 Verbs & “Add verb” for a custom verb, such as “Approve budget”, then grant it to roles.\\
 Fields usable in role rules & Let a role be narrowed by a field's value, such as the branch.\\
+Require permission to export & When on, only roles holding the \en{export} verb can download files from this type; people who can view the records still see them.\\
 Forms that write to this type & Decides which forms may write this type's fields. Changes here apply right away; they are not part of the draft.\\
-Check someone's access & Pick a person and a record to see the roles that reach it and the verbs they hold.\\
+Check someone’s access & Pick a person and a record to see the roles that reach it and the verbs they hold.\\
 \end{tabularx}
 \end{table}
 
@@ -995,7 +1056,7 @@ Check someone's access & Pick a person and a record to see the roles that reach 
 \item Open the record type, choose “Access”, and review the roles shown.
 \item Press the cells to give each role only the verbs its work needs.
 \item For sensitive fields, open “Field access” and set the verb needed to see or change them.
-\item Use “Check someone's access” on an employee and a test record, then publish the changes.
+\item Use “Check someone’s access” on an employee and a test record, then publish the changes.
 \end{enumerate}
 
 \textbf{Check and recovery:} the check tool should show the expected verbs for the person, and after publishing the user should see only what concerns them. If the message “You need the Update verb on roles to change grants.” appears, ask the organization administrator; if a field does not appear for a user, review the verb it needs under “Field access”.
@@ -1006,11 +1067,19 @@ Check someone's access & Pick a person and a record to see the roles that reach 
 
 The type's access decides who sees and changes records, but some fields need finer protection, such as an amount field or the reviewer's notes. This page explains three cards in the “Access” section: “Field access”, which sets the verb needed to see and change each field; “Fields usable in role rules”, which narrows a role by a value in the record; and “Check someone's access”, which shows what a given person actually gets.
 
-\textbf{Where and who:} Builder workspace → “Access”. Used by the person who builds the type together with whoever manages roles, because the section edits the same roles and verbs as “Settings” → “Roles”.
+\textbf{Path and who uses it:} Builder workspace → “Access”. Used by the person who builds the type together with whoever manages roles, because the section edits the same roles and verbs as “Settings” → “Roles”.
 
 \begin{rcnote}[Example: Horizon]
 The administrator makes the “Review notes” field of “Visit requests” read-only except for those holding the approval verb, then uses “Check someone's access” with Omar Haddad and one of his requests to confirm that Omar sees the notes and cannot change them.
 \end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-ws-field-access-en.png}
+\caption{The fine-grained access cards in the “Access” section}
+\label{fig:builder-field-access-screen}
+\shotnote{The image shows the whole “Access” section of the test type, including the cards that set field access and check what a given person gets. It helps you know their order on the page before you start. ① “Field access”: the table of verbs needed to see and change each field. ② “Set verbs for several fields”: sets several fields together. ③ “Fields usable in role rules”: narrows a role by a value in the record. ④ “Check someone’s access”: checks what a person gets on a record.}
+\end{figure}
 
 \begin{table}[H]
 \centering
@@ -1022,7 +1091,7 @@ The administrator makes the “Review notes” field of “Visit requests” rea
 Field access & A table of fields with two columns for each: “To see” and “To change”. In each you choose the needed verb, or leave it empty to follow the record's default access. Each row shows who the field is hidden from and who sees it read-only.\\
 Set verbs for several fields & You choose several fields and set “To see” and “To change” for them together: keep as it is, the default, a given verb, or the system only. Then press “Apply”, and the change goes to the draft.\\
 Fields usable in role rules & You turn on a relation, dropdown or yes/no field, so a role given on a department, location or position can be narrowed by that field's value. Text, number, date and multi-value fields cannot be used, and a field roles already use is locked.\\
-Check someone's access & You choose a person and a record, and see the roles that reach the record, the verbs the person holds with those they lack struck through, and how many fields are hidden from them or read-only. The check uses the draft's access, so you can verify before publishing.\\
+Check someone’s access & You choose a person and a record, and see the roles that reach the record, the verbs the person holds with those they lack struck through, and how many fields are hidden from them or read-only. The check uses the draft's access, so you can verify before publishing.\\
 \end{tabularx}
 \end{table}
 
@@ -1047,11 +1116,11 @@ Check someone's access & You choose a person and a record, and see the roles tha
 \begin{enumerate}
 \item Open “Access” and make sure the roles hold the basic verbs on the type, such as open and update.
 \item In “Field access” choose the needed verb in “To see” or “To change” for the sensitive field, or use “Set verbs for several fields” for several fields at once.
-\item In “Check someone's access” choose an employee and a record, and review the fields hidden from them and the read-only ones.
+\item In “Check someone’s access” choose an employee and a record, and review the fields hidden from them and the read-only ones.
 \item Publish the changes, then ask the employee to open the record and confirm what they see.
 \end{enumerate}
 
-\textbf{Check and recovery:} what the employee sees should match the check. If “This person can't open the record” appears, the problem is in the type's verbs or their role, not in field access; review the roles that reach the record first.
+\textbf{Check and recovery:} what the employee sees should match the check. If “This person can’t open the record” appears, the problem is in the type's verbs or their role, not in field access; review the roles that reach the record first.
 
 \clearpage
 \section{Actions \& automations}
@@ -1117,7 +1186,7 @@ Recalculated on a schedule & Calculated fields the system recalculates “Daily�
 \section{Movement}
 \label{sec:builder-feature-movement}
 
-Movement is a specialist setting for records that move an amount or quantity from one record to another, such as transfers between budget lines or between stores. Each record names where the amount comes from and where it goes; KayanOS keeps both sides equal and posts them together when the record reaches a status you choose. Most record types do not need this section.
+Movement is a specialist setting for records that move an amount or quantity from one record to another, such as transfers between budget lines or between stores. Each record names where the amount comes from and where it goes; KayanOS keeps both sides equal and posts them together when the record reaches a status you choose. Most record types do not need this section. If you turn on “Evidence” on the same type, movement must post at the verify status, as page \ref{sec:builder-feature-evidence} explains.
 
 \textbf{Path and who uses it:} record type → “Movement”. Used by whoever builds financial or stock record types.
 
@@ -1174,6 +1243,98 @@ Period totals and Try it & Show totals for each period and test the setup before
 \textbf{Check and recovery:} after publishing, move a test record to the posting status and confirm both balances changed by the same amount. If you turn movement off later, amounts already posted stay as they are and only new records stop posting.
 
 \clearpage
+\section{Evidence}
+\label{sec:builder-feature-evidence}
+
+“Evidence” is a specialist section for record types that record an amount paid or received, such as expense claims, which documents must prove. The section calls each record of such a type an “entry”: the submitter attaches the required documents and submits it, and KayanOS checks the documents and duplicates, numbers the entry and freezes its files. A verifier then answers a checklist for each document, and the verifier is never the entry's creator or submitter. After verification the entry locks for everyone, and corrections are reversal entries, never edits.
+
+The section starts “Off”, so records work as before and no file is checked. The “Turn on” button works only with two conditions that the section lists under “Before you start”: a status field with a status template, and a number field for the amount. Evidence is not available on the system's built-in record types.
+
+\textbf{Path and who uses it:} Builder workspace → “Evidence”. Whoever builds financial record types sets it up with the finance owner. After publishing, the record page shows an “Evidence” tab, where the submitter uploads the documents and presses “Submit for verification”, and the verifier verifies the entry or returns it for correction.
+
+\begin{rcnote}[Example: Horizon]
+“Visit requests” does not need evidence because it records no amount. But if Horizon created a type for visit expenses, the system administrator would make a “Hotel invoice” document always required, with the checklist item “Invoice is in the company's name”. Omar Haddad uploads the invoice for his Aleppo Branch visit and submits the entry, then Sarah Al-Khatib verifies it.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-ws-evidence-en.png}
+\caption{The “Evidence” section before it is turned on, in a test record type}
+\label{fig:builder-evidence-screen}
+\shotnote{The image shows the section in the test type on test2 while it is off, with what happens once it is turned on and the “Before you start” list. It shows that the button stays disabled until both conditions are met, because this type has no status field and no number field for an amount. ① “Evidence” in the side menu: opens the section. ② “Turn on”: switches evidence on once the conditions are met.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{The “Evidence” tabs once it is on}
+\label{tab:builder-evidence-tabs}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Tab} & \thh{What you set there}\\
+Entry types \& slots & Under “General”: “Status field”, “Submit status”, “Verify status” and “Return statuses”, an “Entry type field” when documents differ by entry type, “Entry fields” (the amount is required; currency, value date, body and counterparty are optional) and “Numbering” with a prefix. Then the entry types, each with its “Cross-checks” and “Evidence slots”.\\
+Duplicates & Rules that compare each submitted entry with the type's entries by “File content”, “Fields” or “AI reading”, within the “Same body” or the “Whole organization”, then “Refuse”, “Warn, reason” or “Flag for verifier”. When several rules match, the strictest outcome wins.\\
+AI reading & AI reads values such as the “Total amount” and “Document number” from the documents, then suggests them or compares them with what the submitter typed, within a “Monthly cap” and “Pages per file”.\\
+Posting & Shows the “Lifecycle” from submit to return or verify, and checks the status template and its agreement with the “Movement” section. Without a movement setup, entries are proved, verified and locked, and no amount moves.\\
+Confidentiality & The “Default level” for documents, the “Verifier signature” with the member key, and “Editable after verification” for fields that stay open after the lock, such as notes. Documents at level “Secret (3)” and above can only be viewed: never downloaded and never sent to AI reading.\\
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{The settings of each slot}
+\label{tab:builder-evidence-slot}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Setting} & \thh{Meaning}\\
+Required & “Always”, “Optional”, or “When…” a condition holds, checked on submit and again on verify.\\
+Files & The accepted formats: PDF, images, Word and Excel; the number of files “At least” and “At most”; the “Max size (MB)”; and a minimum photo resolution. With no format picked, PDF and images are accepted.\\
+Shared document & “May back other entries” when one document covers more than one entry, such as instalments.\\
+Confidentiality and reading & A confidentiality level for the slot, and “AI reads this slot”.\\
+Verifier checklist & Items the verifier answers with yes, no or not applicable plus a note; verification completes only when every answer is yes or not applicable.\\
+\end{tabularx}
+\end{table}
+
+\begin{rcwarn}[Turning it off keeps what was submitted]
+If you turn evidence off after entries were submitted, KayanOS keeps the setup and the section shows “Turned off” with a “Turn on again” button; the entries' history and locks stay as they are. Evidence files are never deleted: even a returned entry keeps its old files beside the new ones.
+\end{rcwarn}
+
+\subsection{Checklists with evidence}
+
+“Evidence” fits financial entries only. If you want a list of items answered inside a record, some of which need a photo or file as proof, such as a visit checklist, make the items related records and set them up from the “Relation” field on the item type: choose “Show relation in tab”, then “Checklist” under “Relations display”. You then set the “Answer field”, pick under “Evidence files” the “File collection” the proof is uploaded to, and add a condition under “Evidence is required only when…” if needed.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Status and amount fields};
+\node[stepBox,below=of a] (b) {Turn evidence on};
+\node[stepBox,below=of b] (c) {Entry types and slots};
+\node[stepBox,below=of c] (d) {Duplicates and confidentiality};
+\node[stepBox,below=of d] (e) {Posting with Movement};
+\node[stepBox,below=of e] (f) {Review and publish};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\draw[flowsTo] (e) -- (f);
+\end{tikzpicture}
+\rclegend
+\caption{Turning evidence on and setting it up}
+\label{fig:builder-evidence-flow}
+\shotnote{The diagram starts with the two fields because the turn-on button stays disabled without them, and because KayanOS infers the submit and verify statuses and the amount field from them. Posting comes before publishing because KayanOS refuses to publish when evidence disagrees with the “Movement” setup, so money moves only after verification.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item In “Fields”, make sure there is a “Status” field with a fixed, published template that has a status for submitting and another for verifying, and a “Number” field for the amount.
+\item Open “Evidence” and press “Turn on”, then review under “General” the statuses KayanOS suggested, and pick the “Entry fields” and the “Prefix”.
+\item Under “Evidence slots”, press “Add slot” for each document, set “Required” and the files, then add “Verifier checklist” items with “Add item”.
+\item Review “Duplicates” and “Confidentiality”, then open “Posting” and resolve every check that is not met, especially if the type has a “Movement” setup.
+\item Publish, then create a test record, upload its documents in the “Evidence” tab, press “Submit for verification”, and ask another user to verify it.
+\end{enumerate}
+
+\textbf{Check and recovery:} a “Ready” badge should appear next to the section title, and the submitted entry should carry a number that starts with your prefix. If “Turn on” stays disabled, add the field that “Before you start” points to. If a badge shows the number of problems “to fix”, or “Evidence setup” appears in “Before you publish”, open the tab marked with an error and complete what is missing.
+
+\clearpage
 \section{Import}
 \label{sec:builder-feature-import}
 
@@ -1190,7 +1351,7 @@ The system administrator adds an import key based on the request number \en{HZN-
 \includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-ws-import-en.png}
 \caption{The “Import” section}
 \label{fig:builder-import-screen}
-\shotnote{The section decides how records are updated from Excel and CSV files; matching by key is off here. ① The “Match rows to records by a key” switch. ② “+ Add key”: adds the field rows are matched by. ③ “Checks before publishing”: after you add a key, “Run check” shows here whether it is unique among saved records.}
+\shotnote{The section decides how records are updated from Excel and CSV files; matching by key is off here. ① The “Match rows to records by a key” switch. ② “+ Add key”: adds the field rows are matched by. ③ “Checks before publishing”: after you add a key, “Run the check” shows here whether it is unique among saved records.}
 \end{figure}
 
 
@@ -1204,7 +1365,7 @@ The system administrator adds an import key based on the request number \en{HZN-
 Match rows to records by a key & Turns on import by key. When off, import guesses matches as before.\\
 Import keys & Each key shows the fields it is “Made of”, where it is “Unique within”, its “Normalising”, such as ignoring spaces or leading zeros, whether it is “Backed by” a unique value, and its status, “Ready” or “Problem”.\\
 Behaviour & What happens “When some rows have errors”, block the import or allow the valid rows, what happens to records missing from the file, keep, archive or delete them, and how long the last import can be undone.\\
-Checks before publishing & “Run check” confirms the key is unique among saved records and shows duplicate or empty ones.\\
+Checks before publishing & “Run the check” confirms the key is unique among saved records and shows duplicate or empty ones.\\
 \end{tabularx}
 \end{table}
 
@@ -1229,7 +1390,7 @@ Checks before publishing & “Run check” confirms the key is unique among save
 \begin{enumerate}
 \item Open the record type, choose “Import”, then turn on “Match rows to records by a key”.
 \item Press “+ Add key” and choose the field that identifies each record, such as the code or serial number.
-\item Press “Run check” and fix any duplicate or empty records it shows.
+\item Press “Run the check” and fix any duplicate or empty records it shows.
 \item Choose the right behaviour for errors and missing records, then publish the changes.
 \end{enumerate}
 
@@ -1268,7 +1429,8 @@ Name uniqueness & What happens when two records get the same name: “Must be un
 Unique values & A field, such as a code, or a combination of fields that no two records may share, also in forms, imports and automations.\\
 Photo & The field used as the record's main photo.\\
 Parent records & Lets a record sit under another record of the same type, which makes the “Tree” view available.\\
-Archive instead of delete & Moves a deleted record to the archive instead of removing it for good.\\
+Archive instead of delete & A deleted record stays archived: it leaves lists and search, keeps its links and numbers, and can be restored. You can also archive its child records and linked tasks with it.\\
+Discussion and review & Lets people open points with a state on the record, its fields, its related rows or a single cell; they appear in a “Points” tab on the record page. It stays off until you turn it on.\\
 ID label & What the record ID is called on the page.\\
 Access scope & Makes each record a scope roles can be given on, such as giving a branch manager rights on their branch only.\\
 Where it shows & The “App” and “App Section” that list the records, “Show in navigation”, and the icon.\\
@@ -1338,9 +1500,10 @@ Before launching “Visit requests”, the system administrator uses “Preview 
 Draft & The type has unpublished changes. “Published · no unpublished changes” means the team sees the latest version you built.\\
 Overview & A summary of fields, page, lists and rules; “Before you publish” lists the problems that block publishing and the warnings.\\
 Preview as user & Shows the type as the user will see it, before publishing.\\
-Review \& publish & Opens “Review changes” for every change, then publishes them together with the publish button.\\
-Version history & Lists earlier versions and lets you “Restore” one of them.\\
-Discard draft & Deletes the unpublished changes and returns the type to the last published version.\\
+Review \& publish & Opens the review of changes grouped by section; each change has a checkbox you can clear to keep it in the draft. You add an optional description of the version, then press “Publish N changes”.\\
+Pending changes & If the organization turned on approval of record-type changes, changes the approval policy covers do not apply on publishing; they are kept as “Pending changes” that you submit for approval from the bar at the top of the workspace. The type and its records keep the current definition until they are approved and applied.\\
+Version history & Lists earlier versions. “Restore” puts a version's fields and page layout into the draft; nothing reaches the team until you publish.\\
+Discard draft & Removes the unpublished changes for everyone; the published definition stays as it is.\\
 \end{tabularx}
 \end{table}
 
@@ -1365,8 +1528,8 @@ Discard draft & Deletes the unpublished changes and returns the type to the last
 \begin{enumerate}
 \item Open “Overview”, review “Before you publish” and fix every problem that blocks publishing.
 \item Press “Preview as user” and review the page and lists as the team will see them.
-\item Press “Review \& publish”, review the list of changes, then press the publish button.
+\item Press “Review \& publish”, review the list of changes, clear any change you want to keep in the draft, then press “Publish N changes”.
 \item Create a test record from the type's list, then reopen it and confirm its values were saved.
 \end{enumerate}
 
-\textbf{Check and recovery:} a message should say the type was “Published as version” with its number, and the status should change to “Published · no unpublished changes”. If a problem appears after publishing, open “Version history” and restore the previous version, then correct the draft and publish again.
+\textbf{Check and recovery:} a message should say the type was “Published as version” with its number, and the status should change to “Published · no unpublished changes”. If a problem appears after publishing, open “Version history” and restore the previous version into the draft, then correct it and publish again, because restoring alone does not change what the team sees.

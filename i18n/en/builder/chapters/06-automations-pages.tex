@@ -2,60 +2,363 @@
 \section{SOPs}
 \label{sec:builder-feature-sops}
 
-This page opens an embedded automation studio that builds flows connecting KayanOS with other accounts and services, starting on a KayanOS event such as a record being created or a form being submitted. Every automation in it works through a KayanOS account connection you choose first. For approval and task workflows inside the organization, “Internal SOPs” is the better fit.
+This page opens the embedded KayanOS Automations studio inside the app, where you build flows that run by themselves when a specific event happens. Instead of an employee remembering the same hand-off every time, the automation reads the record, decides whether work is needed, then creates a record, task, document or notification that the owner reviews. The product documentation says automations run through a KayanOS connection; the connections page explains what the test environment showed. Approval and task flows built entirely inside the app are explained under “Internal SOPs” in the previous chapter.
 
-\textbf{Path and who uses it:} “Builder” → “Core” → “SOPs”. Used by those with forms permission who need to connect KayanOS with other systems.
+The names of triggers, actions and their fields come from the embedded studio, not from the app's translations, so most of them appear in English even in the Arabic interface, and these pages give them as they appear on screen. The screens shown were reviewed on the \en{test2} test environment; the other names in the tables come from the product documentation.
+
+\textbf{Path and who uses it:} “Builder” → “Core” → “SOPs”. The page appears for those with forms permission; the owner or administrator who needs to automate a repeated hand-off builds there.
 
 \begin{rcnote}[Example: Horizon]
-Horizon wants a message to reach an external tracking sheet whenever a visit request is created. So the system administrator builds an automation that starts when a new record is created in “Visit requests”, then checks the branch before sending the data.
+Horizon wants no new visit request to be lost. So the system administrator builds an automation that starts when a record is created in “Visit requests”, checks that the branch is “Aleppo Branch”, then creates a review task for Sarah Al-Khatib and sends her a notification.
 \end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-sops-en.png}
+\caption{The automation list in the embedded studio}
+\label{fig:builder-sops-screen}
+\shotnote{The image shows the embedded automation studio as it appeared in the test2 test organization, with test automations, some on and some off. It is where every new automation starts and where you follow the state of existing ones. ① “Automations”: the tab that lists the automations. ② “Search flows and tables...”: finds an automation by name. ③ “Create New”: starts a new automation. ④ The switch in the “Status” column: shows the automation is on, and turns it on or off.}
+\end{figure}
 
 \begin{table}[H]
 \centering
-\caption{The parts of an automation}
+\caption{The automation flow model}
 \label{tab:builder-sops-parts}
 \begin{tabularx}{\linewidth}{R{3.6cm} Y}
 \rcHeaderRow
 \thh{Part} & \thh{Meaning}\\
-Connection & The KayanOS account the automation acts as, chosen first. Give it only the permissions the work needs.\\
-Trigger & The event that starts the automation, such as a record created or updated, or an action on a form or task.\\
-Condition & Checks the data before any write, so the automation does not act on records that are not its concern.\\
-Actions & What the automation does: create, update or find records, create tasks, send a notification and more.\\
+Trigger & The event that starts the automation, such as a record created or an action on a form or task. Choose one event that truly marks the start of the work.\\
+Read, map and validate & The trigger test output shows the data that arrived; map only what the next step needs and check that required values exist.\\
+Condition & A clear reason to continue, such as the status changing to a specific value with no open follow-up. If it is not met, the flow stops with no side effect.\\
+Action & What the automation does: find or update records, create a task, wait for an event, prepare a document or send a notification.\\
+Reviewable outcome & A trace that is easy to find later, such as a record, task, document or notification with a known owner.\\
 \end{tabularx}
 \end{table}
 
 \begin{figure}[H]
 \centering
 \begin{tikzpicture}[node distance=0.5cm]
-\node[stepBox] (a) {Choose the connection};
+\node[stepBox] (a) {Name the flow and its decision};
 \node[stepBox,below=of a] (b) {Trigger};
-\node[stepBox,below=of b] (c) {Condition before writing};
-\node[stepBox,below=of c] (d) {One action at a time};
+\node[stepBox,below=of b] (c) {Read and validate the data};
+\node[stepBox,below=of c] (d) {Condition before writing};
+\node[stepBox,below=of d] (e) {One action at a time};
+\node[stepBox,below=of e] (f) {Outcome the owner reviews};
 \draw[flowsTo] (a) -- (b);
 \draw[flowsTo] (b) -- (c);
 \draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\draw[flowsTo] (e) -- (f);
 \end{tikzpicture}
 \rclegend
 \caption{The order for building an automation}
 \label{fig:builder-sops-flow}
-\shotnote{The diagram puts the condition before the action, because an automation that writes without checking can change many records in a moment. Test the parts one by one: the trigger alone, then the condition both ways, then each action separately.}
+\shotnote{The diagram puts the condition before any writing action, because an automation that writes without checking can change many records in a moment. The flow ends with an outcome that has an owner, so the only evidence of a run is never a hidden background action. The next pages explain each of these parts separately.}
 \end{figure}
 
 \subsection{Steps and check}
 \begin{enumerate}
-\item Open “SOPs”, create a new flow, then choose a KayanOS connection.
-\item Choose the trigger and test it with sample data.
-\item Add a condition that checks the data, then add the actions one after another, testing each one.
-\item Turn the automation on after the tests pass, then review the first real run.
+\item Before building, write one sentence that states the decision, such as: “When a new request is created for a given branch, create one review task.”
+\item Open “SOPs”, create a new flow with a name that describes the result, and choose the approved KayanOS connection if the step asks for one.
+\item Choose the narrowest trigger for the event, test it with a sample record and review the data that arrived.
+\item Add a condition before the first writing action, then add the actions one after another, testing each one.
+\item Turn the automation on for a small scope after the tests pass, then review the first real run with the business owner.
 \end{enumerate}
 
-\textbf{Check and recovery:} the run should appear in the automation's history with the expected result. If the page stays empty or shows an error, the automation service may not be available in your organization's environment; on the \en{test2} test environment the page was empty when checked. If an action fails, check the connection's permissions first.
+\textbf{Check and recovery:} you should find the result in its place inside the app, such as the new task or record, not only in the automation output. If the page stays empty or shows an error, the automation service may not be available in your organization's environment; ask the platform administrator to check it. If an action fails, check the connection first, as the connections page explains.
+
+\clearpage
+\section{Automation triggers}
+\label{sec:builder-feature-sops-triggers}
+
+A trigger is the event that starts an automation; it is not a subscription to everything that happens in the organization. A good trigger answers one question: what happened, to which record, form or task, and why is this the moment to start the work? So a deliberate action, such as submitting a form for review, is better than watching every edit on a record.
+
+\textbf{Path and who uses it:} “SOPs” → the flow → the trigger step. Used by whoever builds the automation.
+
+\begin{rcnote}[Example: Horizon]
+The system administrator chooses the \en{New Record Created} trigger and sets the table to “Visit requests”. They test it with a sample request and see in the output the branch and visit date that the condition will rely on.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-sops-trigger-en.png}
+\caption{The settings of the On Form Action trigger in the automation editor}
+\label{fig:builder-sops-triggers-screen}
+\shotnote{The image shows a test automation open in the editor, with the trigger step selected and its settings in the side panel. The trigger is On Form Action, so the automation starts when the Submit action runs on a leave request form. It shows that a trigger is set by its source, then narrowed, then tested before any other step is added. ① “1. On Form Action”: the trigger step at the start of the flow. ② “Form”: the form the trigger watches. ③ “Form Versions”: limits the trigger to chosen versions of the form. ④ “Actions”: the form actions that start the automation. ⑤ “Test Trigger”: fetches the data of a sample event for you to review.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Trigger groups}
+\label{tab:builder-sops-triggers-catalog}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Group} & \thh{Triggers and when to use them}\\
+Record events & \en{New Record Created} when a record is created, \en{Record Updated} when it is updated, \en{Record Deleted} when it is deleted, and \en{Record Changes} to watch operations you choose. All of them ask for \en{Table Name}.\\
+Forms, signatures and entity actions & \en{On Form Action} when an action is taken on a form, \en{On Form Signature Signed} when a signature is completed, and \en{On Entity Action} when an action configured on a record-type field is performed.\\
+Tasks and grouped work & \en{On Task Action} and \en{On Epic Action}, which can be narrowed by the previous and new status, \en{Old Status} and \en{New Status}.\\
+Interactive and public entry & \en{On Dashboard Widget Call} and \en{On Form Call} ask the automation for a response, while \en{Short Link Opened} runs when a short link is opened.\\
+\end{tabularx}
+\end{table}
+
+\begin{rcwarn}[Avoid repeat runs]
+A record update or task action may legitimately happen more than once. So watch only the relevant field, check that the status really moved to the required value, and look for an open follow-up before creating another. Do not treat opening a short link as proof of anyone's identity or approval.
+\end{rcwarn}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Describe the event in one sentence};
+\node[stepBox,below=of a] (b) {Narrowest event source};
+\node[stepBox,below=of b] (c) {Available narrowing filters};
+\node[stepBox,below=of c] (d) {Test with a sample record};
+\node[stepBox,below=of d] (e) {Review the data that arrived};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\end{tikzpicture}
+\rclegend
+\caption{Setting up the trigger}
+\label{fig:builder-sops-triggers-flow}
+\shotnote{Setting up the trigger starts by describing the event before choosing it, because a clear description points to the right source: a table, a form or a task type. Filters such as the form version or the status transition then narrow the event, and the work ends by reading the test output, the only reliable record of what the automation will actually receive.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Write the event in one sentence, such as: “When the request moves to the ready-for-review status.”
+\item Choose the trigger with the clearest business meaning, then set its source: \en{Table Name}, \en{Form}, \en{Task Type} or \en{Epic Type}.
+\item Apply the available narrowing filters, such as \en{Form Versions} and \en{Actions} for a form, or \en{Operations} in \en{Record Changes}.
+\item Run the trigger test with one sample record, and review \en{data}, \en{oldData}, \en{changedFields} and \en{action} when they appear.
+\item In the following steps, map stable IDs and status values, not names a user could edit.
+\end{enumerate}
+
+\textbf{Check and recovery:} the test output should show the event you intended with the data you need. If the automation does not start, review the trigger source and its filters, then repeat the same event on the sample record. If it starts too often, narrow the trigger or add a status-transition condition.
+
+\clearpage
+\section{Automation actions}
+\label{sec:builder-feature-sops-actions}
+
+An action is the outcome of an automation step: it reads information, creates or updates a record, waits for a later event, coordinates a task, prepares a document, returns a response or sends an internal notification. The preferred order is: read first, then check the condition, then write once, then inform the owner. Choose each action because it produces a needed result, not because it is in the list.
+
+\textbf{Path and who uses it:} “SOPs” → the flow → add a step after the trigger or condition. Used by whoever builds the automation, who also needs access to the records, forms and tasks it uses.
+
+\begin{rcnote}[Example: Horizon]
+The system administrator adds \en{Find Records} to look for an open review task for the same request. If none is found, they add \en{Create Task} for Sarah Al-Khatib, then \en{Send Notification} to tell her about the new request.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-sops-action-en.png}
+\caption{The settings of an action step in the automation editor}
+\label{fig:builder-sops-actions-screen}
+\shotnote{The image shows the third step of the same test automation, a read step that fetches the form session record that started the automation. It shows how an action field is linked to a value from the trigger result instead of being typed, and how error handling is set for each step separately. ① “3. Read submission”: the action step in the flow. ② “Table Name”: the table the action reads from. ③ “Record ID”: linked here to the form session ID from the trigger result. ④ “Retry on Failure”: retries the step up to four times before it fails. ⑤ “Test Step”: runs this step alone so you can review its result.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Action groups}
+\label{tab:builder-sops-actions-catalog}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Group} & \thh{Actions and what they do}\\
+Records & \en{Get Record} and \en{Find Records} to read; \en{Create Record}, \en{Update Record} and \en{Delete Record(s)} to write; \en{Wait for Record Change} and \en{Wait for Record Creation} to wait.\\
+Tasks and grouped work & \en{Create Task}, \en{Create Epic}, \en{Update Task} and \en{Update Epic}, plus actions that wait for, execute or respond to a task action, such as \en{Wait For Task Action} and \en{Execute Task Action}.\\
+Forms and entity actions & \en{Update Form Session Values}, \en{Wait For Form Action}, \en{Wait For Form Signature} and \en{Execute Form Action}, their entity-action counterparts, and \en{Return Form Response}.\\
+Documents, links and responses & \en{Word Template} and \en{Excel Template} to create a file from a template, \en{Word to PDF} and \en{Excel to PDF} to convert, \en{Create Short Link}, and \en{Return Dashboard Widget Response}.\\
+Governance and notifications & \en{Send Notification} for an internal notification to a specific member or group, and \en{Update Roles} to change role assignments within an explicit scope.\\
+\end{tabularx}
+\end{table}
+
+\begin{rcwarn}[Actions that need special care]
+Do not place a write, execute, role-update, document or notification action directly after an unnarrowed event. Treat \en{Delete Record(s)} and \en{Update Roles} as high risk, and never use \en{Execute} actions to skip a decision that policy assigns to a person.
+\end{rcwarn}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Read the record or search};
+\node[stepBox,below=of a] (b) {Check the condition};
+\node[stepBox,below=of b] (c) {One controlled write};
+\node[stepBox,below=of c] (d) {Notify the owner};
+\node[stepBox,below=of d] (e) {Keep proof of the result};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\end{tikzpicture}
+\rclegend
+\caption{The safe order of actions}
+\label{fig:builder-sops-actions-flow}
+\shotnote{The order starts with reading because an automation can run more than once, and searching for an existing follow-up prevents a second copy. A single write protected by the condition follows, then a notification to the owner. Finally the flow keeps the ID of what it created, so a reviewer can trace the result back to its source.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Add a read action such as \en{Get Record} or \en{Find Records}, and narrow the search by a stable ID, relationship or status.
+\item Add the condition that decides whether to continue, and handle no result, one result and several results deliberately.
+\item Add the write action, and map its required fields from the trigger output or the previous step.
+\item Add \en{Send Notification}, and set \en{Type} and one of \en{Member ID} or \en{Member Selectors}.
+\item Test each action after adding it, and look for its result in its place inside the app.
+\end{enumerate}
+
+\textbf{Check and recovery:} a run should create one result in the right place, with no duplicates and no change to other records. If a write is rejected, review the required fields, the target table and the connection's permissions. If a notification is rejected, leave \en{Member Selectors} empty when you set \en{Member ID}.
+
+\clearpage
+\section{Automation connections}
+\label{sec:builder-feature-sops-connections}
+
+The product documentation says every trigger and action in KayanOS Automations runs through a KayanOS connection. The connection is an organization-level permission boundary the automation runs through, even when its result only touches records inside the app. So confirm it is valid before choosing the trigger or mapping fields when the step asks for it. If the result genuinely needs an external system, that system's connection is an additional authorization; it does not replace the KayanOS connection. On the \en{test2} test environment, KayanOS steps showed no field for choosing a connection, and the “Connections” list was empty although active automations existed; so ask the platform administrator which connection your organization's automations run through if you need to document it.
+
+\textbf{Path and who uses it:} “SOPs” → the “Connections” tab, or the step's connection field when it appears. Chosen by whoever builds the automation and approved by an owner the organization names.
+
+\begin{rcnote}[Example: Horizon]
+For the “Visit requests” automation, the system administrator chooses the organization's approved connection, not an employee's personal account. They record that the connection's owner is responsible for renewing it if it expires.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-sops-connections-en.png}
+\caption{The “Connections” tab in the automation studio}
+\label{fig:builder-sops-connections-screen}
+\shotnote{The image shows the studio’s “Connections” tab, empty in the test organization even though it has active automations. This tab is where connections are created and where you review each connection’s status and the automations that use it, so it is where you check the approved connection before building. ① “Connections”: the tab that lists the organization’s connections. ② “New Connection”: adds a new connection. ③ “No connections found”: the message shown when no connection exists yet.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{What to record before approving a connection}
+\label{tab:builder-sops-connections-owner}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Item} & \thh{Why it matters}\\
+Purpose & States the result the connection serves, so it is not used for anything else.\\
+Organization owner & Handles renewal, review and revocation, so the connection does not depend on one employee's account.\\
+Technical owner & Diagnoses configuration and availability problems when they happen.\\
+Allowed data & Sets which values cross the connection and which fields must never be sent.\\
+Allowed actions & Limits the connection to the narrowest scope that is enough to read, write or notify.\\
+Failure behaviour & States whether the automation stops, creates an internal review task, or follows another documented path.\\
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Diagnosing connection problems}
+\label{tab:builder-sops-connections-diagnose}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Symptom} & \thh{What to do}\\
+No connection can be selected & Check that you are in the right organization and have automation access, then ask its owner for the approved connection.\\
+Connection rejected during test & Renew or reconnect it through its recorded owner, then repeat one sample test.\\
+Trigger works but action fails & Keep the run ID and test data, and correct one boundary before retrying a writing action.\\
+Connection revoked or owner changed & Stop the automations that depend on it, review a replacement owned by the organization, then test before turning them on again.\\
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Define the required result};
+\node[stepBox,below=of a] (b) {Define the allowed data};
+\node[stepBox,below=of b] (c) {Narrowest sufficient access};
+\node[stepBox,below=of c] (d) {Assign the owners};
+\node[stepBox,below=of d] (e) {Sample test, then use};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\end{tikzpicture}
+\rclegend
+\caption{Approving the connection before building}
+\label{fig:builder-sops-connections-flow}
+\shotnote{The diagram ties a connection's access to its purpose: the result and data are defined first, then the narrowest access that covers them is granted. Owners are assigned before use, because a connection without an owner stops working with no one knowing how to renew it.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Describe the result the automation needs, and decide whether it stays inside the app or needs an external system.
+\item In the first step of the flow, choose the organization connection that matches the purpose, and do not create a personal copy of it.
+\item Confirm the connection's name, owner, validity and scope before mapping any field.
+\item Map only approved values, so you do not send the whole record when the target needs one ID or status.
+\item Test the connection with a sample record, then document its purpose, scope and review date.
+\end{enumerate}
+
+\textbf{Check and recovery:} the editor should accept the connection, and the test should succeed without reaching beyond the approved scope. If the connection has expired or its scope is wrong, correct it through its owner; never solve the problem by choosing a broader connection or a personal account. Never write a password or access token in a field, expression or template.
+
+\clearpage
+\section{Test, run and troubleshoot automations}
+\label{sec:builder-feature-sops-testing}
+
+A successful test proves more than that the flow ran: the intended event supplied the intended data, the condition made the right decision, the action affected only the approved target, and a reviewer can find the result. So you test the parts one by one with sample records, then turn the automation on for a small scope before widening it.
+
+\textbf{Path and who uses it:} “SOPs” → the flow → testing each step, then the run history. Whoever builds the automation tests it, and the business owner confirms the result.
+
+\begin{rcnote}[Example: Horizon]
+The system administrator tests the automation with two sample requests: one for “Aleppo Branch” that should create a task for Sarah Al-Khatib, and one for another branch that should create nothing. Sarah then confirms that the task appeared only once.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-sops-runs-en.png}
+\caption{The run log in the “Runs” tab}
+\label{fig:builder-sops-testing-screen}
+\shotnote{The image shows the “Runs” tab, which records every time an automation ran; it is empty in the test organization because no automation ran in the last seven days. After testing, this log is where you look for a failed or repeated run and find its time, duration and failure reason. ① “Runs”: the tab that shows the run log. ② “Status”: filters runs by status, such as failed. ③ “Last 7 Days”: the period shown, which you can change. ④ “No flow runs found”: the message shown when no run exists in the chosen period.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Diagnosing failures in order}
+\label{tab:builder-sops-testing-diagnose}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Symptom} & \thh{What to check first}\\
+The automation never starts & The trigger source and its filters, and whether the event really happened on the record.\\
+It starts, then stops & The condition values against the actual test data and the field keys.\\
+A lookup finds nothing & The table, ID and filter values; try \en{Get Record} with a known ID first.\\
+A write is rejected & The required fields, target table, values and permission scope.\\
+The result is duplicated & A broad trigger and no search for an existing follow-up before creating.\\
+It waits forever & That the later event belongs to the same record, task or form session.\\
+\end{tabularx}
+\end{table}
+
+\begin{rcwarn}[After a wrong or duplicate run]
+Turn the automation off if it can repeat the effect, and identify everything it created or changed. Do not delete records to hide the problem; follow the approved correction procedure, then repeat the positive and negative tests before turning it on again.
+\end{rcwarn}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Define the expected path};
+\node[stepBox,below=of a] (b) {Test the trigger alone};
+\node[stepBox,below=of b] (c) {Test the condition both ways};
+\node[stepBox,below=of c] (d) {Add an action and test it};
+\node[stepBox,below=of d] (e) {Turn on for a small scope};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\end{tikzpicture}
+\rclegend
+\caption{The test protocol}
+\label{fig:builder-sops-testing-flow}
+\shotnote{The diagram isolates each part before the next one is added, so when a test fails you know at once which step caused it. The condition is tested twice, once where the flow should continue and once where it should stop, because the negative case reveals an automation that writes when it should not.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Before testing, write down the event, the condition, the record to read, the target to write and the reviewer who will confirm the result.
+\item Cause the event on one sample record, and review the data that arrived before mapping any field.
+\item Run one case that should continue and one that should stop, and confirm that the second created nothing.
+\item Add the actions one after another, and after each run look for the result inside the app.
+\item Turn the automation on for a small scope, review the first real runs, then widen it after the business owner agrees.
+\end{enumerate}
+
+\textbf{Check and recovery:} a test is complete when the reviewer finds the intended result with no duplicates or unintended effects, not when the test panel shows success. If a run fails, record its time, the event, the mapped values, the error message and the last step that succeeded, then correct one step only. For ready patterns, such as routing to a queue or preparing a document after approval, see the automation recipes in the product documentation.
 
 \clearpage
 \section{Bots}
 \label{sec:builder-feature-bots}
 
-A bot is an assistant with a name and picture that members add to chat, email or calendar. On this page you decide where it can be added, whether it is added automatically, and how it reaches email. What the bot does when messaged or mentioned is built in “Internal SOPs” with triggers such as “On Direct Message to Bot” and “On Mention”.
+A bot is an assistant with a name and picture that members add to chat, email or calendar. This page lists the organization's bots, and on each bot's page you decide where it may be added and what members can do with it. What the bot does when messaged or mentioned is built in “Internal SOPs” with triggers such as “On Direct Message to Bot”, “On Channel Message” and “On Mention”.
 
 \textbf{Path and who uses it:} “Builder” → “Core” → “Bots”. Used by those with bots permission.
 
@@ -74,18 +377,26 @@ The system administrator creates a “Visits assistant” bot and makes it addab
 
 \begin{table}[H]
 \centering
-\caption{Bot settings}
+\caption{Bot capabilities}
 \label{tab:builder-bots-data}
 \begin{tabularx}{\linewidth}{R{3.6cm} Y}
 \rcHeaderRow
 \thh{Section} & \thh{What do you set?}\\
-Add Bot & Asks only for the name; the picture is chosen automatically.\\
-Chat & Whether it can be added to direct chats or channels, and whether it can be messaged or mentioned.\\
-Emails & Whether it is installable in email, can be CCed, and can add internal or external contacts.\\
-Calendar & Whether it can be installed in the calendar.\\
-Default installation & Whether it is added automatically to chat, email or calendar, and its default email access.\\
+Add Bot & Asks only for the name, then the bot's page opens; the picture is chosen automatically.\\
+Chat & “Addable to Direct Chats” and “Addable to Channels”, “Can Open Conversation” (members can open a conversation with it), “Can Send Message To It”, and “Mentionable” in channels and direct chats.\\
+Emails & “Email Installable”; when you turn it on, three options appear: “Can be CCed”, “Can Add Internal Contacts” and “Can Add External Contacts”.\\
+Calendar & “Calendar Installable”, meaning members can add it to the calendar app.\\
+Default installation & Whether the bot is added automatically and which email it reaches; the next page explains it.\\
 \end{tabularx}
 \end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-bot-capabilities-en.png}
+\caption{The bot's capabilities on its page}
+\label{fig:builder-bots-capabilities-screen}
+\shotnote{The image shows a test bot's page in the test organization, with all its switches off. The page groups the bot's capabilities into the “Chat”, “Emails” and “Calendar” sections, so members cannot add the bot anywhere until you turn on the right switch and save. ① “Addable to Direct Chats”: lets members add the bot to their direct chats. ② “Can Send Message To It”: lets members message the bot, and a message is what starts an internal SOP with the “On Direct Message to Bot” trigger. ③ “Email Installable”: lets members add the bot to the email app. ④ “Calendar Installable”: lets members add it to the calendar app.}
+\end{figure}
 
 \begin{figure}[H]
 \centering
@@ -104,9 +415,92 @@ Default installation & Whether it is added automatically to chat, email or calen
 
 \subsection{Steps and check}
 \begin{enumerate}
-\item Open “Bots”, press “Add Bot”, write the name and press “Create”.
-\item Open the bot, turn on where it can be added in chat, email and calendar, then press “Save”.
-\item In “Internal SOPs”, build an SOP that starts “On Direct Message to Bot” and publish it.
+\item Open “Bots”, press “Add Bot”, write the name in “Name” and press “Create”.
+\item In the “Chat” section, turn on where it can be added and what members can do with it.
+\item Turn on the “Emails” and “Calendar” sections if you need them, then press “Save” in the “Unsaved changes” bar.
+\item In “Internal SOPs”, build an SOP that starts “On Direct Message to Bot”, select the bot in it, then publish it.
 \end{enumerate}
 
-\textbf{Check and recovery:} add the bot to a test chat and message it; the SOP should start and appear under “Runs”. If members do not see the option to add it, review the chat settings and save; if the bot does not reply, make sure the SOP is published and not paused.
+\textbf{Check and recovery:} add the bot to a test chat and message it; the SOP should start and appear under “Runs”. If members do not see the option to add it, review the “Chat” switches and make sure you saved; if the bot does not reply, make sure the SOP is published and not paused. To delete a bot, press “Delete” in its row in the list and confirm in the “Delete Bot” dialog; the deletion cannot be undone.
+
+\clearpage
+\section{Bot default installation}
+\label{sec:builder-feature-bots-default-installation}
+
+The “Default installation” section on a bot's page decides whether the bot is added automatically, without members adding it themselves. You choose the chats it is installed in, whether it is installed in email and calendar, and whether members can remove it from each place. The section also sets which email messages the bot reaches by default, its most important privacy setting.
+
+\textbf{Path and who uses it:} “Bots” → open the bot → “Default installation”. Used by those with bots permission after setting the bot's capabilities.
+
+\begin{rcnote}[Example: Horizon]
+For “Visits assistant”, the system administrator chooses “Channels only” in chat, so the bot is installed in channels such as the branches channel. In email they choose “Related” with the branches' email address only, not “All”.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-bot-default-installation-en.png}
+\caption{The “Default installation” section of a bot’s page}
+\label{fig:builder-bots-default-installation-screen}
+\shotnote{The image shows the “Default installation” section of a test bot’s page, with its three switches off and both lists on “None”. This section decides where the bot is added automatically, without members adding it, and which email messages it reaches. ① “Install in Direct Chats”: a switch that installs the bot in chats automatically. ② The list beside it: choose “Channels only” or “Direct \& Channels”. ③ “Install in Emails”: a switch that installs the bot in email. ④ The button beside it: shows the current access scope and opens “Default email access”. ⑤ “Install in Calendar”: a switch that installs the bot in the calendar.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Default installation options}
+\label{tab:builder-bots-default-options}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Setting} & \thh{What it means}\\
+Install in Direct Chats & A switch with a list beside it: “None”, “Channels only” and “Direct \& Channels”. Turning the switch on selects “Channels only”, and choosing “None” turns it off.\\
+Removal from chat & When on, two options appear: “Can be removed from Direct chat” and “Can be removed from Direct Channel” (the second one applies to channels).\\
+Install in Emails & A switch with a button beside it that shows the current access scope and opens “Default email access”; when on, “Can be removed from Default Email” appears.\\
+Install in Calendar & A switch that installs the bot in the calendar; when on, “Can be removed from Default Calendar” appears.\\
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Default email access}
+\label{tab:builder-bots-default-email}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Option} & \thh{What the bot reaches}\\
+None & The bot reaches no email by default.\\
+Related & Email related to addresses you type and add with “Add”, such as a pattern ending in your organization's domain.\\
+Labels & Email in the labels you select.\\
+All & All email by default.\\
+\end{tabularx}
+\end{table}
+
+\begin{rcwarn}[Turning it on starts with “All”]
+When you turn on “Install in Emails”, default access is set to “All”. So open “Default email access” right after turning it on, and choose the narrowest option that covers the bot's work before saving.
+\end{rcwarn}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Set the bot's capabilities};
+\node[stepBox,below=of a] (b) {Install in chat};
+\node[stepBox,below=of b] (c) {Install in email and set access};
+\node[stepBox,below=of c] (d) {Install in calendar};
+\node[stepBox,below=of d] (e) {Allow removal, then save};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\end{tikzpicture}
+\rclegend
+\caption{Setting default installation}
+\label{fig:builder-bots-default-installation-flow}
+\shotnote{The diagram starts with the bot's capabilities because they decide where it may be added at all, then goes through chat, email and calendar in the order they appear on the page. Setting the email scope sits in the middle on purpose, because it decides which of the members' messages the bot can see.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Open the bot from “Bots” and go to the “Default installation” section.
+\item Turn on “Install in Direct Chats”, then choose “Channels only” or “Direct \& Channels” from the list.
+\item Turn on “Install in Emails” if you need it, then press the button beside it to open “Default email access”, choose “Related” or “Labels”, and add the addresses or labels.
+\item Turn on “Install in Calendar” if you need it, and select the “Can be removed from…” options that let members remove it.
+\item Press “Save” in the “Unsaved changes” bar, or “Discard” to cancel the changes.
+\end{enumerate}
+
+\textbf{Check and recovery:} a save-success message should appear, and the chosen option should still show beside each switch when you reopen the bot. If access went back to “All” by mistake, open the button again, choose the narrower option and save. If the bot is not added where you expected, review the capability switches in the “Chat” and “Emails” sections.

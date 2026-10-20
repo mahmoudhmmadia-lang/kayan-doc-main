@@ -4,25 +4,62 @@
 \section{What will you build in this chapter?}
 \label{sec:builder-forms-intro}
 
-A form is a page of questions that an employee or applicant fills in; its answers reach the person who reviews them and may be written into a record type. This chapter explains how to create a form, arrange its pages and questions, link its answers to records, then test it, publish it and follow up what it receives.
+A form is a page of questions that an employee or applicant fills in; its answers reach the person who reviews them and may be written into a record type. This chapter explains building a form from start to following up its requests: creating it, arranging its pages and questions, setting its rules and buttons, linking it to records, deciding who reaches its responses, then drawing the request journey and its approvals, testing it and publishing it.
+
+Every change you make in the “Form Builder” is saved to a draft, while people always fill the published version. So you can edit and test safely, and no change reaches anyone until you publish.
 
 \begin{rcnote}[Example: Horizon]
-The system administrator creates a “Branch visit request” form; Omar Haddad fills it in, a record is created in “Visit requests” from his answers, and Sarah Al-Khatib reviews it.
+The system administrator creates a “Branch visit request” form; Omar Haddad fills it in, and a record is created in “Visit requests” from his answers after Sarah Al-Khatib approves it.
 \end{rcnote}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Content: pages and questions};
+\node[stepBox,below=of a] (b) {Behaviour: rules and buttons};
+\node[stepBox,below=of b] (c) {Links: records and access};
+\node[stepBox,below=of c] (d) {Journey and approvals};
+\node[stepBox,below=of d] (e) {Testing and publishing};
+\node[stepBox,below=of e] (f) {Submissions and follow-up};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\draw[flowsTo] (e) -- (f);
+\end{tikzpicture}
+\rclegend
+\caption{Stages of building a form}
+\label{fig:builder-forms-overview}
+\shotnote{The diagram orders the chapter's pages in the suggested build order: what is asked first, then how the form behaves, then where the answers go and who sees them. Follow-up comes last because it starts only after the form is published and requests arrive.}
+\end{figure}
 
 \section{Pages in this chapter}
 \label{sec:builder-forms-pages}
 
-You start from the “Forms” page in Builder's “Core” section, and open the form builder from there.
+The first page starts from “Forms” in Builder's “Core” section; the other pages explain the “Form Builder” tools you reach by opening the form, and the last page explains the submissions table. Follow the order the first time, then come back to any page when you need it.
 
 \begin{table}[H]
 \centering
-\caption{Collecting data with forms}
+\caption{Building a form step by step}
 \label{tab:builder-pages-forms}
 \rcZebra
 \begin{tabularx}{\linewidth}{R{4.2cm} Y}
 \rcHeaderRow
 \thh{Page and section} & \thh{What this page offers}\\
-Forms — Core & Creates forms that employees or applicants fill in, and manages their published versions.\\
+Forms — Core & Lists the organization's forms; from here you create a new form, duplicate it or import it.\\
+The form builder and its tools — Form Builder & The form canvas and the “Form tools” rail, and the AI assistant that proposes changes.\\
+Pages, sections and tables — Form Builder & Dividing the form into pages, and grouping questions in repeatable sections or tables.\\
+Question types: text, choice and numbers — Form Builder & Text, choice, number and rating types, and how they are displayed.\\
+Question types: dates, place, files and other — Form Builder & Time, map, attachment and media questions, and picking an existing record or request.\\
+Question settings and checks — Form Builder & The question settings panel, and checks with their levels and messages.\\
+Rules — Form Builder & Everything that shows, hides, requires, locks or calculates questions, in one list.\\
+Action buttons: When clicked — Form Builder & Buttons that check, save and send notifications and documents in ordered steps.\\
+Records: linking the form to a record type — Form Builder & Reading answers from records and writing them back, and when they are written.\\
+Access and participants — Form Builder & Who reaches each response, what they can do with it, and who presses each button.\\
+Request journey: statuses and approvals — Form Builder & Request statuses, phases and transitions, approval steps and the AI review.\\
+Assignments and the Work page — Form Builder & Assigning people to fill the form, and following filling, approvals and late items.\\
+Form settings — Form Builder & Numbering, the PDF document, lifecycle, stages, filling and publishing policy.\\
+Testing, publishing and versions — Form Builder & Trying the form as a member in an isolated workspace, then publishing it and following its versions.\\
+Submissions — Navigation & The form's responses table, where requests are opened, reviewed and started.\\
 \end{tabularx}
 \end{table}

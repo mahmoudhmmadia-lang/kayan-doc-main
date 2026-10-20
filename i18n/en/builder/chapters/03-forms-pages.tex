@@ -2,12 +2,12 @@
 \section{Forms}
 \label{sec:builder-feature-forms}
 
-A form is a page of questions an employee or applicant fills in, such as a leave request or a visit form. You create forms and publish their versions on the “Forms” page; a form can write its answers into a record type and can have a status and approval journey. People always work on the published version, while you edit a new draft without affecting them.
+A form is a page of questions an employee or applicant fills in, such as a leave request or a visit form. The “Forms List” page shows all the organization's forms grouped by app and section; from it you create a new form or open an existing one in the “Form Builder”. People always work on the published version of a form, while your edits stay in a draft that does not reach them before you publish.
 
-\textbf{Path and who uses it:} “Builder” → “Core” → “Forms”. Used by those with forms permission to design how requests are collected.
+\textbf{Path and who uses it:} “Builder” → “Core” → “Forms”. Used by those with forms permission to create new forms, duplicate them or move them between organizations.
 
 \begin{rcnote}[Example: Horizon]
-The system administrator builds a “Branch visit request” form asking for the branch, date and purpose, and has it write the answers into “Visit requests” when Sarah Al-Khatib approves the request, so Omar Haddad fills it in without opening the record type itself. The form starts from ①.
+The system administrator presses ① “Create Form”, writes “Branch visit request” as the form name, chooses the “Branch services” app and one of its sections, then writes a short reference prefix that marks this form's requests. Later he finds the form quickly by typing its name in ③ Search.
 \end{rcnote}
 
 \begin{figure}[H]
@@ -18,6 +18,13 @@ The system administrator builds a “Branch visit request” form asking for the
 \shotnote{The page lists forms grouped by app and section, with the submission count of each. The forms shown are test forms on test2. ① “Create Form”: starts a new form. ② “Import”: creates a form from an exported file. ③ Search: finds a form by name.}
 \end{figure}
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-forms-create-en.png}
+\caption{The “Create Form” window}
+\label{fig:builder-forms-create-screen}
+\shotnote{The image shows the window that opens after pressing “Create Form” in the forms list, with its fields still empty. It gathers what defines the form before it opens in the builder, including two fields that cannot change after creation, so review them before saving. ① “Form Name”: the name people see. ② “Form Code”: a fixed identifier that cannot change later. ③ “Reference Prefix”: the prefix of request numbers, also fixed. ④ “App”: where the form sits in navigation, followed by the app section. ⑤ “Create”: saves the form and opens the builder.}
+\end{figure}
 
 \begin{table}[H]
 \centering
@@ -26,28 +33,26 @@ The system administrator builds a “Branch visit request” form asking for the
 \begin{tabularx}{\linewidth}{R{3.6cm} Y}
 \rcHeaderRow
 \thh{Part} & \thh{Content and action}\\
-Create Form & Asks for “Form Name”, “Form Code”, “Reference Prefix”, the app and the section, then opens the builder.\\
-The list & Forms grouped by app and section, with search, sorting and submission counts, and the actions “Duplicate”, “Export form” and “Delete Form”.\\
-Import & Creates a form from a previously exported file.\\
-Form packages & Ordered sets of forms assigned and tracked as one task per record.\\
+Create Form & Asks for “Form Name”, “Form Code”, a short description and “Reference Prefix”, then the app and its section, and opens the builder.\\
+The list & Forms grouped by app and section, with search and sorting by name, date, status or number of “Submissions”.\\
+Form actions & “Duplicate” creates an independent copy, “Export form” saves it as a file, and “Delete Form” deletes it permanently. You can select several forms and press “Delete selected”.\\
+Import & Creates a form from a previously exported file, and asks whether to copy who gets access with it.\\
+Form packages & Ordered sets of forms assigned and tracked as one task per record, created from “New form package”.\\
 \end{tabularx}
 \end{table}
 
 \begin{table}[H]
 \centering
-\caption{The form builder's tools}
-\label{tab:builder-forms-editor}
+\caption{Fields of the “Create Form” window}
+\label{tab:builder-forms-create}
 \begin{tabularx}{\linewidth}{R{3.6cm} Y}
 \rcHeaderRow
-\thh{Tool} & \thh{What does it do?}\\
-Questions & Adds questions from groups: Text, Choice, Numbers and rating, Date and time, Place, Files \& media, and Other; plus sections, pages and text blocks.\\
-Rules & Everything that shows, hides, locks, requires, calculates or checks a question, in one list.\\
-Access & Who can reach each response and what they can do with it: the person who starts it, fixed people, or people chosen by the answers.\\
-Journey & “Request journey”: the statuses and phases the applicant sees, the transitions between them, and approval steps.\\
-Records & The records this form reads from and writes to, and when it writes: “When approved” or “When submitted”.\\
-Assign & Plans that assign people to fill the form for certain records; available after the form is saved.\\
-Versions and Settings & “Version history” for every version, and settings such as numbering, the PDF document and prefilled links.\\
-Test form and Publish & Opens an isolated test workspace where you try the form as a member, then “Publish” makes the draft the live version.\\
+\thh{Field} & \thh{What you write in it}\\
+Form Name & The name people see, which can be written in more than one language. The system refuses a name another form already has.\\
+Form Code & A fixed identifier of letters, numbers, spaces and hyphens only; it cannot be changed after creation.\\
+Description & A sentence explaining the form's purpose, at least 12 characters and two words.\\
+Reference Prefix & The prefix of request numbers; no other form may use it, and it cannot be changed after creation.\\
+App and App Section & Where the form appears in navigation, with the “Show in Navigation” option.\\
 \end{tabularx}
 \end{table}
 
@@ -67,15 +72,1085 @@ Test form and Publish & Opens an isolated test workspace where you try the form 
 \rclegend
 \caption{From idea to published form}
 \label{fig:builder-forms-flow}
-\shotnote{The diagram orders form building from content to behaviour: questions first, then who reaches the response and where the answers go. Testing comes before publishing because the test workspace is isolated, so it exposes mistakes without reaching anyone; publishing makes the version available to everyone who fills in the form.}
+\shotnote{The diagram orders form building from content to behaviour: questions first, then who reaches the response and where the answers go. Testing comes before publishing because the test workspace is isolated, so it exposes mistakes without reaching anyone; the following pages explain each of these steps on its own.}
 \end{figure}
 
 \subsection{Steps and check}
 \begin{enumerate}
-\item Open “Forms” and press “Create Form”, then write the name, code and prefix and choose the app and section.
-\item Add the questions, choosing a type that fits each answer, then add rules when needed.
-\item Open “Access” to decide who sees responses, and “Records” if the answers should be written into a record type.
-\item Press “Test form” and fill it in completely, then press “Publish”.
+\item Open “Forms” and search for the form's name first, so you do not create a form that already exists.
+\item Press “Create Form”, and write the name, code, description and reference prefix.
+\item Choose the app and its section, and turn on “Show in Navigation” if people should reach it from the side menu.
+\item Press the create button and wait for the “Form Builder” to open.
 \end{enumerate}
 
-\textbf{Check and recovery:} the message “Form published successfully” should appear, and the version should show as live in “Version history”. If the publish button turns into “Send for approval”, your organization requires publishing approval, and the form goes live after the approver agrees. If answers are not written to the record, open “Records” and check that the record type's administrator has allowed the form to write there.
+\textbf{Check and recovery:} the message “Form created successfully” should appear, and the builder should open with a first section and a first question. If the message “This reference prefix is already used by another form” appears, choose another prefix. If “Select an app and one of its sections.” appears, complete the app and section and try again.
+
+\clearpage
+\section{The form builder and its tools}
+\label{sec:builder-feature-forms-builder}
+
+The “Form Builder” is where you design the whole form. In its middle a canvas shows the form's pages and questions as the person filling it will see them, and beside it the “Form tools” rail opens each tool in its own panel. The builder header shows the save status, the button to try the form, and “Publish”.
+
+\textbf{Path and who uses it:} “Forms” → press the form's name. Used by those who may edit the form; more than one person can work on the same draft.
+
+\begin{rcnote}[Example: Horizon]
+The system administrator opens the “Branch visit request” form and sees on the rail how many rules and record questions it has. He then opens “AI” and writes: “Add a question about the number of visitors after the branch question”, reviews the proposed change and presses “Apply”.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-forms-builder-en.png}
+\caption{The “Form Builder” with the AI assistant open}
+\label{fig:builder-forms-builder-screen}
+\shotnote{The image shows a test leave-request form on the test organization, open in the builder with the “Form AI Assistant” opened from the tools rail. It gathers what every working session needs: the tools on the rail, the content on the canvas, and the save status with the test and publish buttons in the header. ① “AI”: opens the assistant. ② The “Describe the form change you want” box: write your request here. ③ “Saved”: the draft’s save status. ④ “Test form”: tries the draft before publishing. ⑤ “Publish”: turns the draft into a published version.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{The “Form tools” rail}
+\label{tab:builder-forms-builder-rail}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Tool} & \thh{What does it open?}\\
+AI & The “Form AI Assistant”, which proposes changes to the form from a written request.\\
+Rules & Everything that shows, hides, locks, requires, calculates or checks a question, in one list.\\
+Access & Who reaches each response, and what they can do with it.\\
+Journey & The request journey: statuses, phases, the buttons that move a request, and approval steps.\\
+Records & Record questions, and the records the form reads from and writes to.\\
+Assign & Assigning people to fill the form and assignment plans; shown after the form is saved.\\
+Work & A page to follow filling and approvals, shown when the form has a published version, approval steps or assignment plans.\\
+Submissions & The number of submissions on the form, for information only.\\
+Versions, print and Settings & The version history, the form's print templates, and the “Form Settings” window.\\
+\end{tabularx}
+\end{table}
+
+\subsection{The form AI assistant}
+Open “AI” and write what you want in the “Describe the form change you want” box, such as adding questions, changing checks or adding an action. The assistant does not change the form directly: it shows “AI draft changes” with how much was added, updated and removed, and you can open “Change details”. Then press “Apply” to carry them out or “Discard” to drop them. This button appears when AI in Builder is turned on for the organization.
+
+\begin{rcwarn}[When you open an old version]
+If you open an earlier version from “Versions”, most tools are disabled because it is read-only. To change it, press “Edit as draft”, which starts a new draft from it. If the message “This draft changed in another editor” appears, press “Reload latest draft” after copying any unsaved work.
+\end{rcwarn}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Open the form in the builder};
+\node[stepBox,below=of a] (b) {Edit pages and questions};
+\node[stepBox,below=of b] (c) {Open a tool from the rail};
+\node[stepBox,below=of c] (d) {Saved to the draft};
+\node[stepBox,below=of d] (e) {Test, then publish};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\end{tikzpicture}
+\rclegend
+\caption{The working cycle in the form builder}
+\label{fig:builder-forms-builder-flow}
+\shotnote{The diagram shows that work in the builder revolves around the draft: you edit the content on the canvas and set behaviour from the rail tools, and the changes are saved to the draft. None of this reaches the person filling the form until it is tested and published.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Open the form from “Forms” and confirm its name in the builder header.
+\item Edit the questions on the canvas, then open the tool you need from the “Form tools” rail.
+\item If you want help, open “AI” and write the change you need, then review the details and press “Apply” or “Discard”.
+\item Watch the save status in the header before closing the page.
+\end{enumerate}
+
+\textbf{Check and recovery:} the status “Saved” should appear after each change. If “Sync failed” or “Offline” appears, do not close the page until the connection returns and “Saved” shows. If “Assign” does not appear on the rail, save the form first.
+
+\clearpage
+\section{Pages, sections and tables}
+\label{sec:builder-feature-forms-pages}
+
+A long form is divided into pages, so the person filling it sees one part at a time and moves between them. Each page holds sections that group related questions, and a section can repeat to enter several sets of the same answers, such as several visitors. A table shows questions as columns and adds a row for each entry.
+
+\textbf{Path and who uses it:} “Form Builder” → the pages bar above the canvas, and the add bar under each section. Used by the person designing the form.
+
+\begin{rcnote}[Example: Horizon]
+The system administrator splits “Branch visit request” into two pages: “Visit details” and “Visitors”. On the second page he places a table of visitor names and turns on “User can add rows”, so Omar Haddad adds one row per visitor.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-forms-pages-en.png}
+\caption{The pages bar and the settings of a selected section}
+\label{fig:builder-forms-pages-screen}
+\shotnote{The image shows the test form with one page, with the “Leave Information” section selected so its settings appear in the side panel. It shows that pages are managed from the bar above the canvas, while sections and tables are added from the add bar and set in the selected item’s panel. ① “Page 1”: the current page, with its page actions menu. ② “Add page”: adds a new page. ③ “Section”: adds a section. ④ “Table”: adds a table. ⑤ “Repeatable”: lets the section be filled more than once.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{What you can add to a page}
+\label{tab:builder-forms-pages-items}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Item} & \thh{When to use it}\\
+Field & A question the person filling the form answers; you choose its type from “Select field type”.\\
+Section & A group of questions under one title, which can be “Repeatable” or “Collapsible”.\\
+Table & Questions in columns; it holds only fields, text blocks and actions.\\
+Text Block & An explanation or instructions shown between questions, without an answer.\\
+Action & A button that works when pressed; its steps are explained on the “When clicked” page.\\
+Approval & A sign-off block where reviewers sign, added from “Add approval”.\\
+Questions from a record type & Creates questions linked to the fields of an existing record type, from “Add questions from a record type”.\\
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Page, section and table settings}
+\label{tab:builder-forms-pages-settings}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Setting} & \thh{What it does}\\
+Page settings & “Page title”, “Page description” and “Page is visible”, and “Validate before continuing” to check all of the page's answers, or chosen fields, before moving on.\\
+Page actions & “Add page”, “Duplicate page” and “Delete page”, with the choice “Move content and delete page” or “Delete page and contents”.\\
+Repeat & How many times the section is filled: “Fixed Count”, added and removed by the user within limits, or once for each item in a list.\\
+Table & “User can add rows”, and “Mobile layout”: “Cards” on small screens or “Scroll” sideways always.\\
+Width & For each question, “Full line” or “Half” the line beside another question on wide screens.\\
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {The form};
+\node[stepBox,below=of a] (b) {Pages};
+\node[stepBox,below=of b] (c) {Sections and tables};
+\node[stepBox,below=of c] (d) {Questions, texts and buttons};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\end{tikzpicture}
+\rclegend
+\caption{Form structure from page to question}
+\label{fig:builder-forms-pages-flow}
+\shotnote{The diagram shows that every question sits inside a section or table, and that sections sit inside a page. So hiding or deleting a page affects everything in it: the questions of a hidden page are skipped and not checked.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Press “Add page” for each stage of filling, then open “Page settings” and write its title.
+\item Add a section or a table on each page, then add the questions inside it.
+\item Turn on “Repeatable” for a section that is filled more than once, and choose how it repeats.
+\item Use “Move to page” from the item menu to move a question between pages instead of deleting and recreating it.
+\end{enumerate}
+
+\textbf{Check and recovery:} the pages should appear in the right order in the pages bar. If the message “A form must contain at least one page.” appears, the last page cannot be deleted. If a table refuses an item, remember it does not accept nested sections, signatures or repeatable fields.
+
+\clearpage
+\section{Question types: text, choice and numbers}
+\label{sec:builder-feature-forms-questions-basic}
+
+A question's type sets the input the person filling the form sees, and how the answer is checked and saved. The type picker groups questions, and this page explains the three most used groups: “Text”, “Choice” and “Numbers and rating”. Some entries in the picker are presets, such as “Choice cards” and “Slider”, which add a known type with its display already set.
+
+\textbf{Path and who uses it:} “Form Builder” → “Select field type” in the add bar, then “Show as” in the question settings. Used by the person designing the questions.
+
+\begin{rcnote}[Example: Horizon]
+The system administrator chooses “Phone or national number” for Omar Haddad's phone number, “Choice cards” for the purpose of the visit, and a star “Rating” for the visitor to rate the branch after the visit.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-forms-types-basic-en.png}
+\caption{The question type list: text and choice}
+\label{fig:builder-forms-questions-basic-screen}
+\shotnote{The image shows the type list opened from “Select field type”, starting with the “Text” and “Choice” groups, with the newer types marked “New”. It shows that presets sit among the types themselves, and that search is the quickest way to a type you cannot find. ① “Select field type”: opens the list. ② “Search question types”: filters types by name. ③ “Phone or national number”: a number checked while typing. ④ “Choice cards”: illustrated options. ⑤ “Dependent list”: options that follow an earlier answer.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{The text, choice and number groups}
+\label{tab:builder-forms-questions-basic-types}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Group} & \thh{Types and when to use them}\\
+Text & “Text” for a short answer, “Textarea” for a note or description, “Rich Editor” for formatted text, and “Phone or national number” for a number checked while typing.\\
+Choice & “Single Select” for a list of options, “Choice cards” for illustrated options, “Boolean” for yes or no, “Matrix” for several statements on one scale, “Ranking” to order options, and “Dependent list” for options that follow an earlier answer.\\
+Numbers and rating & “Number”, “Rating” with stars, numbers, faces or 0–10, “Slider”, “Number with unit”, “Number range (from – to)”, “Shares of 100\%” for parts with a fixed total, “Money” for amounts, and “Calculated Value” from other answers.\\
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Settings that depend on the type}
+\label{tab:builder-forms-questions-basic-settings}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Type} & \thh{What you set}\\
+Text & “Format”: “Any text”, “Phone number”, “National number”, “Register number”, “Email”, “Link” or “Pattern”.\\
+Choice & “Show as”: “Dropdown”, “List” or “Cards”; “People can pick” “One” or “Several”; and “Options depend on an earlier answer”.\\
+Boolean & “Switch” or “Two buttons” with words you choose, or “Consent”, which must be ticked and saves its time.\\
+Number & “Number box” or “Slider”, “Minimum” and “Maximum”, “Unit”, and “Group thousands” to show separators.\\
+Rating & “Look”, “Number of steps” and “Words at both ends”. The answer is saved as a number that rules and reports read.\\
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {What kind of information?};
+\node[stepBox,below=of a] (b) {Choose group and type};
+\node[stepBox,below=of b] (c) {Display};
+\node[stepBox,below=of c] (d) {Options and limits};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\end{tikzpicture}
+\rclegend
+\caption{Choosing a question type}
+\label{fig:builder-forms-questions-basic-flow}
+\shotnote{The diagram starts from the nature of the information, not its look, because the type decides checking and saving. The display only changes the look and can be switched later in the question settings without changing saved answers.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Press “Select field type”, and type the type's name in “Search question types” if you cannot find it.
+\item Choose the type that matches the information; a phone number is “Phone or national number”, not “Number”.
+\item Open the question settings and complete the options, “Format” or limits, depending on the type.
+\item Choose the “Show as” that suits phones and computers.
+\end{enumerate}
+
+\textbf{Check and recovery:} in testing, the answer should appear as expected, such as cards or stars. If the message “The maximum must be greater than the minimum.” appears, correct the two limits. If a “Dependent list” question stays empty, make sure a single-choice question with options, or a record question, comes before it.
+
+\clearpage
+\section{Question types: dates, place, files and other}
+\label{sec:builder-feature-forms-questions-more}
+
+This page completes the type picker with the four remaining groups: “Date and time”, “Place”, “Files \& media” and “Other”. These types help when you need a date, a place on the map, an attachment, or a reference to an existing record or request. Some of them work fully in the phone app, such as taking pictures and recording.
+
+\textbf{Path and who uses it:} “Form Builder” → “Select field type” → the group you need. Used by the person designing the questions.
+
+\begin{rcnote}[Example: Horizon]
+The system administrator adds to “Branch visit request” a “Date” question for the visit date, an “Entity Select” question from which Omar Haddad picks Aleppo Branch, and a “File” question to attach the assignment letter.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-forms-types-more-en.png}
+\caption{The question type list: dates, place and files}
+\label{fig:builder-forms-questions-more-screen}
+\shotnote{The image shows the same list scrolled to the “Date and time”, “Place” and “Files \& media” groups; the “Other” group follows at the end of the list. It helps you tell a type that holds one value from one that holds a period, a boundary or media. ① “Year or month”: a monthly or yearly period. ② “Date range (from – to)”: information with a start and an end. ③ “Establishment boundary (map)”: drawing a property boundary on the map. ④ “Take picture”: capturing a picture directly.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{The four remaining groups}
+\label{tab:builder-forms-questions-more-types}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Group} & \thh{Types and when to use them}\\
+Date and time & “Date”, “Date \& Time” and “Time” for one value, “Year or month” for a monthly or yearly period, and “Date range (from – to)” for information with a start and an end.\\
+Place & “Location” for a point on the map, and “Establishment boundary (map)” to draw a property boundary whose area and perimeter are worked out.\\
+Files \& media & “File” for attachments, and “Take picture”, “Take video” and “Audio recording” to capture media directly.\\
+Other & “Consent” for a statement that must be ticked, “Entity Select” to pick a record of a record type, and “Form Session Select” to pick a submitted response of another form.\\
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Important settings for these types}
+\label{tab:builder-forms-questions-more-settings}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Type} & \thh{What you set}\\
+File & “Accepted types” such as \en{.pdf}, “Max size per file”, and one file or several.\\
+Establishment boundary & “Map starts at”, “Parcels per answer”, “Allowed area”, and comparison with a declared area.\\
+Entity Select & The “Record type” to pick from, and “Scope and access” to filter the records offered.\\
+Form Session Select & “Responses from”: the form whose submitted responses people pick from.\\
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Choose the type};
+\node[stepBox,below=of a] (b) {Set limits and source};
+\node[stepBox,below=of b] (c) {Try on phone and computer};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\end{tikzpicture}
+\rclegend
+\caption{Setting up time, place and file questions}
+\label{fig:builder-forms-questions-more-flow}
+\shotnote{The diagram makes limits and source a separate step because these types are incomplete without them: a record question needs its record type, and a file question needs types and size. Trying on both devices reveals how capture differs between the phone and the web.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item From “Date and time”, choose the type that matches the information: one value or a period.
+\item For a “File” question, write the “Accepted types” and set the “Max size per file”.
+\item For an “Entity Select” question, choose the “Record type”, then filter the records if needed.
+\item Try media and map questions in testing from a phone as well.
+\end{enumerate}
+
+\textbf{Check and recovery:} the date picker, the map or the upload button should appear depending on the type. If the list of records is empty, check the “Record type”, the filters and the filler's permission on that type. If the message “The minimum is above the maximum” appears in a boundary question, correct the “Allowed area”, because the form will not publish before that.
+
+\clearpage
+\section{Question settings and checks}
+\label{sec:builder-feature-forms-field-settings}
+
+When you press a question on the canvas, its settings panel opens beside it, holding everything about that question alone. The panel has collapsible sections: general information, options, look, rules and the record link. Checks help you stop wrong answers before they reach the reviewer.
+
+\textbf{Path and who uses it:} “Form Builder” → press the question → the settings panel. Used by the person designing the form.
+
+\begin{rcnote}[Example: Horizon]
+The system administrator makes the visit date question “Required”, and adds a check from the “Date not in the past” preset at the “Error” level, so Omar Haddad cannot send a request with a date that has passed.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-forms-field-settings-en.png}
+\caption{The settings panel of a date question}
+\label{fig:builder-forms-field-settings-screen}
+\shotnote{The image shows the “Starts At” question selected on the canvas, with its settings panel and collapsible sections beside it. It shows that everything about one question, from its description to its rules and record link, is set in one place. ① The “Starts At” question: press it to open its settings. ② “General info”: the type settings, here what the date asks for. ③ “Rules”: required, visible, editable and the question’s checks. ④ “Record”: links the question to a record field. ⑤ “Notes on the answer”: lets people add a comment or evidence to the answer.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Sections of the question settings panel}
+\label{tab:builder-forms-field-settings-panel}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Section} & \thh{What it holds}\\
+General info & The question's title and description, “Width”, and type settings such as limits, length and files.\\
+Options & The options of choice questions, with a key for each option and an optional description.\\
+Question look & An icon, a colour and an illustration, and “More help” shown folded under the question.\\
+Rules & “Required”, “Visible”, “Editable” and “Default value”, and the question's own checks.\\
+Notes on the answer & Lets people add a comment, a voice note or evidence to the answer.\\
+Record and Developer & Linking the question to a record field, and “Copy value path” for use in code.\\
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Check levels}
+\label{tab:builder-forms-field-settings-levels}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Level} & \thh{Effect on the person filling the form}\\
+Error & Blocks moving on and submitting until the answer is fixed.\\
+Warning & Doesn't block moving on, but blocks submit until the person filling writes a reason.\\
+Note for reviewer & Hidden from the person filling; shown to reviewers next to the answer.\\
+Hint & Grey helper text under the question; blocks nothing.\\
+\end{tabularx}
+\end{table}
+
+\subsection{Ready-made check presets}
+A check starts from “Start from” with a preset, such as “Number range”, “Length”, “Email”, “Compare with another question”, “Sum equals a total” or “Date not in the future”. You then write the “Message” shown on failure and choose “When” it is checked: “While typing”, “On leaving the page” or “On submit”. If you leave the message empty, the default “This value is not valid” is shown.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Pick the question};
+\node[stepBox,below=of a] (b) {General info};
+\node[stepBox,below=of b] (c) {Required, visible, editable};
+\node[stepBox,below=of c] (d) {A check and its message};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\end{tikzpicture}
+\rclegend
+\caption{Setting up one question}
+\label{fig:builder-forms-field-settings-flow}
+\shotnote{The diagram orders a question's setup from its description to its behaviour and then to checking its answer. The check comes last because it depends on the question's type and limits, and because a hidden question is never checked.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Press the question on the canvas, and write its title and description in “General info”.
+\item Set “Required”, “Visible” and “Editable”: “Always”, “Never” or with a condition.
+\item Add a check from “Start from”, choose its level and write its message.
+\item Try the check with a wrong answer and then a correct one in testing.
+\end{enumerate}
+
+\textbf{Check and recovery:} your message should appear under the question for a wrong answer and disappear once it is fixed. If it does not appear, make sure the question is visible; a check never fails on a hidden question. If you delete a question used by other rules, those rules show as “Missing reference” until you fix them.
+
+\clearpage
+\section{Rules}
+\label{sec:builder-feature-forms-rules}
+
+A rule changes how a question, section or page behaves based on the answers: it shows or hides it, requires it, locks it, sets its value, calculates it or checks it. The “Rules” tool gathers all these rules in one list, so you see the form's whole logic without opening each question. Each rule is saved in the settings of the item it applies to, so editing it from the list or from the question is the same.
+
+\textbf{Path and who uses it:} “Form Builder” → “Rules”. Used by the person designing the form; the number of rules shows next to the name.
+
+\begin{rcnote}[Example: Horizon]
+The system administrator adds a “Show or hide” rule that makes the urgent-visit reason question “Shown when” Omar Haddad says the visit is urgent, then tries it in “Try it” with two different answers.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-forms-rules-en.png}
+\caption{The “Rules” tool with the form’s rule list}
+\label{fig:builder-forms-rules-screen}
+\shotnote{The image shows the “Rules” tool of the test form, with 47 rules grouped by kind, each with a sentence describing it and its status. The list lets you read the whole form’s logic without opening each question. ① “Rules” on the rail: opens the tool; the number is the rule count. ② “Add rule”: starts a new rule. ③ “Show 9”: filters the list by rule kind. ④ A rule card marked “Sound”: says what the rule does and to which item.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Rule kinds}
+\label{tab:builder-forms-rules-kinds}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Kind} & \thh{What it does}\\
+Show or hide & “Shown when”, “Hidden when”, “Always” or “Never”, for a question, section or page.\\
+Require & “Required when”, “Always required” or “Not required”.\\
+Lock editing & “Locked when” or “Editable only when”; it applies to everyone filling the form.\\
+Default value & A value set once that stays editable, or “Always recalculated”, which updates and locks it.\\
+Calculation & The value of a calculated question, updated on every change and not seen by the person filling.\\
+Check & A check on a question's answer, or a section check that reads several questions together.\\
+Disable and Condition & “Disable” keeps a button on screen without letting it be pressed, and “Condition” applies to an approval step.\\
+\end{tabularx}
+\end{table}
+
+\begin{rcwarn}[Hiding does not protect data]
+Hiding a question only changes what is shown; it does not stop access to the answer. To protect a question from some people, use “Access” or field permissions. A hidden question is never required: the form skips hidden questions.
+\end{rcwarn}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Add rule};
+\node[stepBox,below=of a] (b) {Rule kind};
+\node[stepBox,below=of b] (c) {When: the conditions};
+\node[stepBox,below=of c] (d) {Then: the target};
+\node[stepBox,below=of d] (e) {Try it};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\end{tikzpicture}
+\rclegend
+\caption{Building a rule}
+\label{fig:builder-forms-rules-flow}
+\shotnote{The diagram reads a rule like a sentence: its kind, then the condition, then the item it applies to. “Try it” comes last because it works out the result with sample answers, so you know whether the question shows or hides before testing the whole form.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Open “Rules” and press “Add rule”, then choose the “Rule kind”.
+\item Build the conditions in “When” from questions and values, or write them as an expression when needed.
+\item In “Question, section or block”, choose the item the rule applies to.
+\item Enter “Sample answers” in “Try it”, confirm the result, then save.
+\end{enumerate}
+
+\textbf{Check and recovery:} the rule should appear in the list as “Sound”. If it shows “Missing reference”, the rule points at a deleted question; if it shows “Incompatible type”, the question's type changed; open the rule and pick a suitable question. “Custom code” means the rule is an expression that cannot be shown as rows, and it stays as written unless you replace it.
+
+\clearpage
+\section{Action buttons: When clicked}
+\label{sec:builder-feature-forms-buttons}
+
+An action button is an item you place in the form to do something when pressed, such as sending the request for review, approving it, or saving the answers to a record. You define what the button does in its “When clicked” section as a list of steps that run in order. The steps fall into three phases: checking first, then saving, then after saving.
+
+\textbf{Path and who uses it:} “Form Builder” → add an “Action” → press the button → “When clicked”. Used by the person designing the form; who can press the button is set in “Access”.
+
+\begin{rcnote}[Example: Horizon]
+The system administrator adds a “Submit for review” button from “Start from a preset”, and the preset fills in the confirmation, status change and review notification steps. When Omar Haddad presses it, the request changes and a notification reaches Sarah Al-Khatib.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-forms-button-en.png}
+\caption{The “When clicked” section of a “Submit” button}
+\label{fig:builder-forms-buttons-screen}
+\shotnote{The image shows the “Submit” button of the test form selected, with a “When clicked” section holding one step that runs an SOP. It shows that what a button does is a list of steps read and edited in its panel, and that it can be tried before publishing. ① The “Submit” button: press it to open its settings. ② “When clicked”: the steps in order; the number is their count. ③ The “Run an SOP” step: an existing step you can open and set. ④ “Add step”: adds another step. ⑤ “Try”: tries the button’s steps.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Phases of a button run}
+\label{tab:builder-forms-buttons-phases}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Phase} & \thh{What happens in it}\\
+1 · Check & Checks run first and change nothing. If one fails, the run stops with its message and nothing is saved.\\
+2 · Save & Save steps are committed together: answers, status and records all change, or none of them do.\\
+3 · After saving & These run only after the save succeeded. A failure here does not undo the save and can be retried step by step.\\
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Step groups in “Add step”}
+\label{tab:builder-forms-buttons-steps}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Group} & \thh{Example steps}\\
+Check & “Validate pages”, “Check a condition”, “Confirm or ask for a reason” and “Ask to choose”.\\
+Answers and records & “Set answers”, “Clear answers”, “Save to a record type”, “Fill answers from a record” and “Write the linked records”.\\
+Workflow & “Change status”, “Assign”, “Create a task”, “Request approval” and “Start another form”.\\
+Messages and documents & “Notify”, “Reply to the applicant”, “Generate a document” and “Export as PDF”.\\
+Services and AI & “Call a web service”, “Run an SOP” and “Ask AI”.\\
+Finish and flow & “For each row”, “If … otherwise” and “Result message”.\\
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Pressing the button};
+\node[stepBox,below=of a] (b) {1 · Check};
+\node[stepBox,below=of b] (c) {2 · Save};
+\node[stepBox,below=of c] (d) {3 · After saving};
+\node[stepBox,below=of d] (e) {Result message};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\end{tikzpicture}
+\rclegend
+\caption{The order of a button run}
+\label{fig:builder-forms-buttons-flow}
+\shotnote{The diagram shows why steps are ordered in phases: checking comes first so nothing is saved from an incomplete request, and saving happens in one go. Messages and documents come after saving, so their failure does not undo what was saved.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Add an “Action” at the right place on the page, and write the button's text.
+\item Open “When clicked” and choose a preset from “Start from a preset”, or “Or add steps one by one”.
+\item Complete every step marked in amber, such as the document template or the record type.
+\item For each step set “If it fails”: “Stop with its message” or “Continue”.
+\item Test the button in the test workspace and review the recorded steps.
+\end{enumerate}
+
+\textbf{Check and recovery:} in the test workspace, notifications, documents and approval requests are recorded as simulations and not actually sent. If the button stops with a check message, complete the required answers. If someone cannot press the button, check in “Access” which action protects it.
+
+\clearpage
+\section{Records: linking the form to a record type}
+\label{sec:builder-feature-forms-records}
+
+A form can read from existing records and write to them, so people do not re-enter information already stored in the system. Linking starts with a record question from which the person filling the form picks a record; other questions are then linked to that record's fields. The “Records” tool shows every record question, its linked fields and when the answers are written.
+
+\textbf{Path and who uses it:} “Form Builder” → “Records”, or the “Record” row in each question's settings. Used by the person designing the form; writing needs the record type admin's approval.
+
+\begin{rcnote}[Example: Horizon]
+The system administrator adds a record question from “Visit requests” and links the branch and date questions to its fields, written “When approved”. So record \en{HZN-VR-0001} is created only after Sarah Al-Khatib approves Omar Haddad's request.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-forms-records-en.png}
+\caption{The “Records” tool with three record questions}
+\label{fig:builder-forms-records-screen}
+\shotnote{The image shows the “Records” tool of a test audit form, with three record questions, each showing its record type, how the record is chosen, when it is written and the linked fields. The cards show “Not allowed yet”: writing waits until the record type’s admin allows it, while reading works right away. ① “Record question”: adds a question that picks a record. ② “From a record type”: creates questions from an existing type’s fields. ③ “Not allowed yet”: the write permission status. ④ “Allow in the record type”: shown to the type’s admin to allow writing.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Record link options}
+\label{tab:builder-forms-records-options}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Option} & \thh{Values and meaning}\\
+Direction & “Read” to fill the question from the record, “Write” to save the answer to it, or “Read and write”.\\
+Which record & “Existing only”, “Existing or new”, “Always new” or “Decided by a condition”.\\
+Prefill & “Answer” that can be changed, “Reference only” beside an empty field, “Locked”, or “No prefill”.\\
+When to write & “When approved”, “When submitted” before review, or “With every save”.\\
+On conflict & “Ask at approval”, “Keep the record value” or “Overwrite”.\\
+\end{tabularx}
+\end{table}
+
+\begin{rcwarn}[Writing needs the record type admin's approval]
+Reading from records works right away, but writing to them does not happen until the record type's admin allows this form in the type's access settings. Until then the question card shows “Not allowed yet”, then “Waiting for the … admin” once you ask; you can press “Ask for permission” or “Copy a link for its admin” and send it. If you are the record type’s admin yourself, “Allow in the record type” shows instead. You can publish the form meanwhile, but fields not yet allowed are skipped when writing.
+\end{rcwarn}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Record question};
+\node[stepBox,below=of a] (b) {Link questions to record fields};
+\node[stepBox,below=of b] (c) {Direction and write time};
+\node[stepBox,below=of c] (d) {Record type admin's approval};
+\node[stepBox,below=of d] (e) {Writing to the record};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\end{tikzpicture}
+\rclegend
+\caption{From record question to writing}
+\label{fig:builder-forms-records-flow}
+\shotnote{The diagram shows that the record question is the starting point, because the other questions read from or write to the record it picks. The record type admin's permission comes before writing: the form does not change records of a type it does not manage without its owner's approval.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Open “Records” and press “Record question”, or use “Add questions from a record type” to create questions straight from the type's fields.
+\item Press the question you want to link, open the “Record” row in its settings, then “Link to a record”.
+\item Choose the “Direction”, which record, the prefill and the write time.
+\item Check the “Record type permission” column in “Records”, and ask for permission if needed.
+\end{enumerate}
+
+\textbf{Check and recovery:} after publishing and testing, the new or updated record should appear in the record type at the time you chose. If “Broken links” appear in the “Records” panel, open the named link and fix it; the questions work as plain questions until it is fixed. If a message says a field was removed from the record type, choose another field or remove the link.
+
+\clearpage
+\section{Access and participants}
+\label{sec:builder-feature-forms-access}
+
+The “Access” tool sets who can reach each response to the form, and what they can do with it. People come from three sources: the person who starts the form, fixed people, and people chosen by the answers. Each has “actions” such as opening, editing, deleting and starting approvals, plus custom actions that protect particular buttons.
+
+\textbf{Path and who uses it:} “Form Builder” → “Access”. Used by the person designing the form; the number of roles and participants shows next to the name.
+
+\begin{rcnote}[Example: Horizon]
+The system administrator leaves open and edit actions to the person who starts the form, so Omar Haddad sees only his own requests. He then adds a participant “From the answers” that reaches the manager of the branch chosen in the request, so Aleppo Branch requests reach Sarah Al-Khatib.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-forms-access-en.png}
+\caption{The “Access” tool with its three sources of people}
+\label{fig:builder-forms-access-screen}
+\shotnote{The image shows the “Access” tool of the test form, where only the person who starts the form has been set, with its actions. The tool shows the three sources of people in one list, so you see who reaches a response before setting what they do. ① “Who can do what”: opens the full grid in full screen. ② The “Person who starts it” card: the built-in group and its actions. ③ “Add people”: adds fixed people or people from the answers. ④ “From the answers”: people who change with each response; none yet.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Sources of people in “Access”}
+\label{tab:builder-forms-access-groups}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Source} & \thh{Who it covers}\\
+Person who starts it & The person who starts the response; built in and always there.\\
+Fixed people & The same members, positions or units on every response, saved as form roles.\\
+From the answers & People found from a question, like the requester's manager, so they change with each response. They are saved as “Form participants”.\\
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Built-in actions}
+\label{tab:builder-forms-access-actions}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Action} & \thh{What it allows}\\
+List and Open & See the response in lists, then open and read it.\\
+Edit & Change the answers of a response the person can open, so it needs Open.\\
+Share and Delete & Share the response with someone else, delete the response, and delete a response that was never submitted.\\
+Start approvals & Start the approval steps of a response they can open.\\
+Custom action & Protects the button with its key, so only people with this action can press it.\\
+\end{tabularx}
+\end{table}
+
+\subsection{Participants from the answers}
+A participant is built in steps: in “Start from” you choose a person, position, assignment or record question, then if needed go to the parent record or to whoever holds a given role. You then set its actions in “They can”. “Try it” shows the people the participant reaches when you pick a sample record.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {A response to the form};
+\node[stepBox,below=of a] (b) {Who reaches it?};
+\node[stepBox,below=of b] (c) {What can they do?};
+\node[stepBox,below=of c] (d) {Protected buttons};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\end{tikzpicture}
+\rclegend
+\caption{The logic of access to a response}
+\label{fig:builder-forms-access-flow}
+\shotnote{The diagram orders access in two successive questions: who reaches the response, then what they do with it. Protected buttons come last because a custom action decides who can press a button such as “Approve”.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Open “Access” and choose the “Who can do what” view to see everyone and every action in one grid.
+\item Review the actions of the “Person who starts it”, then press “Add people” to add fixed people or people from the answers.
+\item Choose the actions of each group, then press “Save to draft”.
+\item Add a custom “Action” for each sensitive button, and pick the button in “Protects button”.
+\end{enumerate}
+
+\textbf{Check and recovery:} every participant should show as “Sound”. If it shows “Needs a route” or “Needs a role”, complete the participant's steps; if it shows “No actions”, give it at least one action. To confirm the result, open the test workspace as a different member and compare what they see.
+
+\clearpage
+\section{Request journey: statuses and approvals}
+\label{sec:builder-feature-forms-journey}
+
+The request journey draws a response's path after it is submitted on one canvas: the statuses it passes through, the phases the applicant sees with their promised durations, the buttons that move it, and the approvals that run on the way. You edit all of this in one place instead of searching through scattered settings. Nothing changes for applicants until you publish the form.
+
+\textbf{Path and who uses it:} “Form Builder” → “Journey” → “Turn on the journey”. Used by the person designing the form; it has the tabs “Journey”, “Statuses”, “Applicant” and “Settings”.
+
+\begin{rcnote}[Example: Horizon]
+The system administrator adds two statuses, “In review” and “Approved”, and a “Review” phase with a duration of two business days, then an “Approval step” signed by Sarah Al-Khatib. The step includes an “AI review” stage that first checks the assignment letter is attached and leaves the decision to Sarah.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-forms-journey-en.png}
+\caption{The “Request journey” canvas of a test form}
+\label{fig:builder-forms-journey-screen}
+\shotnote{The image shows the request journey of a test form: seven statuses in three phases, the buttons that move the request between them, and an approval card with two stages. The side panel sums up the counts and shows the “Checks”, which warn of a status no button or rule leads to. ① “Statuses”: the tab to review statuses and their categories. ② “Phase”: adds a phase band the applicant sees. ③ “Transition”: adds a button or rule that moves the request. ④ “Preview and turn on”: converts the current approval into an approval step after a preview. ⑤ “Applicant”: shows the request as its applicant sees it.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Parts of the journey canvas}
+\label{tab:builder-forms-journey-parts}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Part} & \thh{Meaning}\\
+Status & Where the request is now; it has “Name (staff)”, “Name for the applicant” and “Category”, and may let the applicant edit in it.\\
+Phase & A band the applicant sees, with “Name for the applicant”, “Responsible” and “Promised duration”; it holds one or more statuses.\\
+Transition & A button or rule that moves the request from one status to another, such as submit, withdraw or a button in the form.\\
+Approval step & An approval that runs while the request is in chosen statuses, with “Who signs” in stages one after another or side by side, and “Outcomes” that move the request.\\
+AI review & A stage inside an approval step that reads chosen answers and attachments and leaves suggested marks by its “Criteria”; people decide.\\
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{The fixed status categories}
+\label{tab:builder-forms-journey-categories}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Category} & \thh{How the request behaves}\\
+Draft and Submitted & Not sent yet and freely edited by the applicant; then received, and processing time starts here.\\
+In progress & With staff, and locked for the applicant.\\
+Action needed & Reopened for the applicant, and the processing clock pauses.\\
+Awaiting payment & The applicant sees the fees and how to pay.\\
+Approved and Rejected & Decision issued and documents become available; or final, and the applicant is told why.\\
+Withdrawn and Closed & Withdrawn by the applicant and not reopened; or closed by staff or because a deadline passed.\\
+\end{tabularx}
+\end{table}
+
+\begin{rcwarn}[AI suggests, it does not decide]
+An “AI review” stage suggests marks with a reason; people decide, and it never rejects a request. Fields marked “Personal” are never sent to it, even if picked. If it does not run because of a pause, the budget or an error, the request goes on to the next stage without it.
+\end{rcwarn}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Turn on the journey};
+\node[stepBox,below=of a] (b) {Statuses and categories};
+\node[stepBox,below=of b] (c) {Phases and durations};
+\node[stepBox,below=of c] (d) {Transitions};
+\node[stepBox,below=of d] (e) {Approval steps};
+\node[stepBox,below=of e] (f) {Review the checks};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\draw[flowsTo] (e) -- (f);
+\end{tikzpicture}
+\rclegend
+\caption{Building the request journey}
+\label{fig:builder-forms-journey-flow}
+\shotnote{The diagram starts with statuses because everything after them depends on them: phases group statuses, transitions connect them, and approval steps run inside them. Reviewing the “Checks” comes last because it reveals a status nothing leads to, or an approval that is never ready in any status.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Open “Journey” and press “Turn on the journey”, then review the suggested statuses and their categories in “Statuses”.
+\item Add a “Phase” for each part the applicant sees, set the “Promised duration”, then put its statuses in it.
+\item Add a “Transition” from one status to another; a button that sets the status is added at the end of the current page.
+\item Turn on “Approval steps” and add an “Approval step”, then choose “Runs in”, “Who signs” and “Outcomes”.
+\item Review the “Applicant” tab to see the request as its applicant sees it in each status.
+\end{enumerate}
+
+\textbf{Check and recovery:} the “Checks” section should say “Nothing to look at”. If it says a status is in no phase, put it in a phase, because the applicant would see no stage while the request is there. If it says an approval is never ready in any status, choose the statuses it runs in.
+
+\clearpage
+\section{Assignments and the Work page}
+\label{sec:builder-feature-forms-assign-work}
+
+Assigning asks people to fill the form by a date, optionally about one record, such as a visit to each branch. Each assignment is a task that appears in the assignee's work and is tracked until done. The “Work” page shows what is happening on the form: filling, AI checks and approval steps, what waits at each stage and what is late.
+
+\textbf{Path and who uses it:} “Form Builder” → “Assign”, then “Work”. Used by the form's designer and by those who run assignment plans; “Work” is also seen by people who supervise one of the approval stages.
+
+\begin{rcnote}[Example: Horizon]
+The system administrator turns on “The form can be assigned” for the “Branch visit request” form and creates a “New plan” that assigns Omar Haddad a visit to Aleppo Branch within seven days. Sarah Al-Khatib then opens “Work” to see how many requests wait for her approval.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-forms-assign-en.png}
+\caption{The “Assign” tool with assignment off}
+\label{fig:builder-forms-assign-work-screen}
+\shotnote{The image shows the “Assign” tool of the test form with assignment off, the default for every form. The assignment settings and plans stay hidden until you turn the switch on, so nobody can assign a form that is not open for assignment. ① “Assign”: opens the assignment tool. ② “The form can be assigned”: the switch that opens assignment and shows its settings. ③ “Work”: the page that follows filling and approvals.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-forms-work-en.png}
+\caption{The “Work” page of a form with an AI check and an approval stage}
+\label{fig:builder-forms-assign-work-work-screen}
+\shotnote{The image shows the “Work” page of a test form whose requests pass an AI check and then a “Section head” approval stage. The page gathers what waits at each step, the oldest item and how the stage works, so you see where work is held up. ① “AI check”: how many requests were checked, how many need fixing and how many it did not run on. ② “Section head”: the stage and how many wait for it. ③ “From arrival to decision”: how many requests reached and passed each step recently.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{“Assigning this form” settings}
+\label{tab:builder-forms-assign-work-settings}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Setting} & \thh{What it decides}\\
+The form can be assigned & Opens assignment for this form; off by default.\\
+What the assignee may do & “Fill and send” or “View only” while the assignment is open, and “After it is done” “View only” or “No access”.\\
+Done when the response is & The response becomes “Sent” or “Approved”.\\
+Record question and Due & The question the assignment's record fills, and the number of days to the “Due” date.\\
+Allow declining & The assignee can decline with a reason.\\
+Outcomes without a response & Statuses of the “Closed” category the assignee can choose without answering, such as no access, with a reason, photo or location.\\
+This form's plans & Plans that spread assignments over many records and people: records, candidates, distribution, due date and reminders, and tracking.\\
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{What the “Work” page shows}
+\label{tab:builder-forms-assign-work-page}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Part} & \thh{What you read in it}\\
+Steps of the work & Filling, then the AI check, then approvals, with how many wait and how many are late at each step.\\
+Assignment plans & The progress of each plan: done, filling, late, and “With nobody”.\\
+AI check & How many requests were checked, how many had something to fix, and how many it did not run on.\\
+Stage and waiting list & Who answers and how requests are distributed, and the waiting requests with their deadlines.\\
+From arrival to decision & How many requests reached each step and passed its stages in the recent period.\\
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Publish the form};
+\node[stepBox,below=of a] (b) {Turn on and save assignment};
+\node[stepBox,below=of b] (c) {Assignment plan};
+\node[stepBox,below=of c] (d) {Assignees fill it in};
+\node[stepBox,below=of d] (e) {Follow up in Work};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\end{tikzpicture}
+\rclegend
+\caption{From assignment to follow-up}
+\label{fig:builder-forms-assign-work-flow}
+\shotnote{The diagram puts publishing first because an assignment opens only the published version, then makes saving the assignment settings a condition for starting any plan. The “Work” page comes last because it reads what actually happens on requests once assignees start.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Publish the form, then open “Assign” and turn on “The form can be assigned”.
+\item Set “What assignees do”: permissions, when the assignment is done, and the due date, then press “Save”.
+\item Open “This form's plans” and press “New plan”, then complete its five sections.
+\item Open “Work” and review the progress and late items at each step.
+\end{enumerate}
+
+\textbf{Check and recovery:} the message “Assignment settings saved” should appear and the plan should show in the list. If “Publish the form before assigning it” appears, publish it first. If “New plan” stays disabled, save the settings with assignment turned on. If “Work” does not show on the rail, the form has no published version, approval steps or plans yet.
+
+\clearpage
+\section{Form settings}
+\label{sec:builder-feature-forms-settings}
+
+The “Form Settings” window gathers what concerns the whole form rather than one question: its name and place, request numbering, the PDF document, the lifecycle, stages, filling behaviour and publishing policy. You open it from the tools rail and move between its tabs from the side list. The newer tabs carry a mark showing they are new.
+
+\textbf{Path and who uses it:} “Form Builder” → “Settings”. Used by the person designing the form; it is disabled while viewing an old version.
+
+\begin{rcnote}[Example: Horizon]
+In the “Filling \& navigation” tab, the system administrator turns on “Review page before submitting” and writes a “Declaration before submitting”, so Omar Haddad reviews his answers and confirms they are correct before sending the visit request.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-forms-settings-en.png}
+\caption{The “Form Settings” window on the “General” tab}
+\label{fig:builder-forms-settings-screen}
+\shotnote{The image shows the “Form Settings” window of the test form open on “General”, with every tab in the side list and the newer ones marked “New”. It shows that the code and reference prefix are read-only after creation. ① “General”: the name, app and section. ② “Numbering”: the format of the request number. ③ “Lifecycle”: statuses and locking after submission. ④ “Stages \& durations”: stage durations and the calendar. ⑤ “Filling \& navigation”: the form outline and the review page before submitting.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{“Form Settings” tabs}
+\label{tab:builder-forms-settings-tabs}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Tab} & \thh{What you set in it}\\
+General & “Form Name”, the app, its section and the icon, and “Delete Form”. The code and prefix are shown read-only.\\
+Numbering & The format of the number each request carries.\\
+PDF document & “PDF content scope”, “Page orientation”, “Content density”, colours, “Show organization branding”, the watermark and the QR code.\\
+Service & Shown when the form is offered through a service; it explains that who applies and when is set on the service page.\\
+Prefilled links & Links that open the form with prefilled inputs, with “Add new link” and “Copy link”.\\
+Table Display Fields & The fields and variables shown as columns in the submissions table, and the “I’m a participant” view and “Progress column”.\\
+Lifecycle & “Turn on lifecycle”, “Request statuses” and their categories, “Submit button”, “Lock after submit”, “Allow withdrawing” and “Default correction deadline”.\\
+Stages \& durations & “Request stages” and their durations, the “Calendar” and working days, “Warn before the deadline”, and what happens “When the duration is exceeded”.\\
+Filling \& navigation & “Form outline”, “Moving between pages”, the “Missing only” filter, “Review page before submitting” and “Declaration before submitting”.\\
+Publishing & “Policy for this form”, “Extra reviewers”, “Readiness condition” and “Go live after approval”. Shown after the form is saved.\\
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {General and Numbering};
+\node[stepBox,below=of a] (b) {Lifecycle and stages};
+\node[stepBox,below=of b] (c) {Filling and navigation};
+\node[stepBox,below=of c] (d) {PDF, table and links};
+\node[stepBox,below=of d] (e) {Publishing};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\end{tikzpicture}
+\rclegend
+\caption{A suggested order for the settings}
+\label{fig:builder-forms-settings-flow}
+\shotnote{The diagram suggests setting the form's identity first, then how a request behaves after submission, then the filling experience, then the outputs. “Publishing” comes last because the organization's policy may require changes to be approved before they reach people.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Open “Settings” and check the name and app in “General”.
+\item Turn on “Lifecycle” if you want to lock the request after submission or allow withdrawing it, then check each status's category.
+\item In “Stages \& durations”, set each stage's duration and the working-days calendar.
+\item Press “Turn on” in “Filling \& navigation” for long forms, then adjust the recommended settings.
+\item Set the “PDF document” and “Table Display Fields” for the reviewers' needs.
+\end{enumerate}
+
+\textbf{Check and recovery:} lifecycle and duration changes apply to requests after the form is published. If “Status values used by earlier requests are not categorized” appears, review the suggested category for each value and press “Apply categories”. If “Saved in the draft: it takes effect when the next version is approved and published.” appears, the setting is waiting for an approved publish.
+
+\clearpage
+\section{Testing, publishing and versions}
+\label{sec:builder-feature-forms-test-publish}
+
+Before the form reaches people, you try it in an isolated test workspace as a member you choose, so you see what they see with their roles and permissions. You then publish it, and the draft becomes a new published version that people fill. “Versions” keeps every version, so you can view an old one or start a new draft from it.
+
+\textbf{Path and who uses it:} “Form Builder” → “Test form” then “Publish” in the header, and “Versions” on the rail. Used by those who may edit the form.
+
+\begin{rcnote}[Example: Horizon]
+The system administrator tests “Branch visit request” as Omar Haddad, then as Sarah Al-Khatib, to make sure the “Approve” button appears for her alone. He then presses “Publish” and writes the reason for the change in the change note.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-forms-test-en.png}
+\caption{The test workspace}
+\label{fig:builder-forms-test-publish-screen}
+\shotnote{The image shows the test workspace after “Start testing” on the test form, with defaults filling some fields for the chosen member. The top bar confirms that everything here is isolated and runs on the current draft, so nothing becomes a real request. ① “Isolated”: the isolation badge. ② “Interacting as”: the member whose roles the form is evaluated with; it can be switched. ③ “Test helpers”: tools such as reset. ④ “Exit”: closes the test workspace.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-forms-versions-en.png}
+\caption{The “Versions” tool}
+\label{fig:builder-forms-test-publish-versions-screen}
+\shotnote{The image shows the “Versions” tool of the test form: a draft with unpublished changes and four published versions, the newest of which is live. It shows that old versions are not edited directly; a new draft starts from them. ① “Unpublished changes”: the draft holds what has not reached people yet. ② “Live”: the version people fill now. ③ “Changes”: compares the version with the one before. ④ “Edit as draft”: starts a new draft from this version.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{The test workspace}
+\label{tab:builder-forms-test-publish-workspace}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Part} & \thh{What it does}\\
+The chosen member & The form is evaluated with this member's roles and permissions; only members who can sign in are listed. Switching members starts a fresh session.\\
+The current draft & The workspace runs the draft you are editing, including unsaved changes, and starts with form defaults.\\
+Simulated effects & Notifications, external actions, documents and approval requests are recorded as simulations on the timeline and not carried out.\\
+Reset & Clears entered values and returns the form to its defaults. Nothing here becomes a real submission.\\
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Publishing and versions}
+\label{tab:builder-forms-test-publish-versions}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Part} & \thh{What it does}\\
+What will change & Shows before publishing the changes compared with the published version, marked “Breaking”, “Normal” or “Minor”, with the number of open responses affected.\\
+Open responses & They stay on the version they started on; new responses use the new version.\\
+Send for approval & Replaces “Publish” when the organization's policy requires publishing approval, so reviewers review the request before it goes live.\\
+Versions & Each version with “Live” or “Unpublished changes”, and “View”, “Changes” and “Edit as draft”.\\
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {The draft};
+\node[stepBox,below=of a] (b) {Test as a member};
+\node[stepBox,below=of b] (c) {Review what will change};
+\node[stepBox,below=of c] (d) {Publish or send for approval};
+\node[stepBox,below=of d] (e) {Published version};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\end{tikzpicture}
+\rclegend
+\caption{From draft to published version}
+\label{fig:builder-forms-test-publish-flow}
+\shotnote{The diagram shows that testing and reviewing changes come before publishing, because the test is isolated and creates no real requests. Publishing branches by the organization's policy: a direct publish, or an approval request that goes live after the reviewers agree.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Press “Test form”, choose a member, then press “Start testing”.
+\item Fill in the whole form, press its buttons, and review the timeline of simulated effects.
+\item Switch member to try what a reviewer or another role holder sees, then exit the test workspace.
+\item Press “Publish”, review “What will change”, write a change note, then confirm publishing.
+\end{enumerate}
+
+\textbf{Check and recovery:} the message “Form published successfully” should appear, and the new version should be marked “Live” in “Versions”. If a message asks you to fix errors before publishing the form, fix the listed errors first. If the button turns into “Send for approval”, the form goes live after the reviewers agree; while the request is “In review” the draft may be locked until you withdraw it.
+
+\clearpage
+\section{Submissions}
+\label{sec:builder-feature-forms-submissions}
+
+Each time someone sends the form, a request is created, and the submissions page gathers the form's responses in one table. From it a reviewer opens a request to read its answers and see its status and approval steps, and a user starts a new request. The builder rail shows only the submission count; the table itself opens from the form in navigation.
+
+\textbf{Path and who uses it:} navigation → the app → the section → the form's name. Used by those who fill the form and those who review its requests, each according to what “Access” gives them.
+
+\begin{rcnote}[Example: Horizon]
+Sarah Al-Khatib opens “Branch visit request” from the “Branch services” app and chooses “I’m a participant” to see the requests that concern her. She then opens Omar Haddad's request and approves it, and its new status shows in the table.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-forms-submissions-en.png}
+\caption{The submissions table of a test form}
+\label{fig:builder-forms-submissions-screen}
+\shotnote{The image shows the submissions page of a test form on the test organization, with seven requests in different statuses. The “I’m a participant” option does not appear because it is not turned on in this form’s settings, and the columns are the defaults. ① “New Submission”: starts a request on the published version. ② “Search”: finds a request in the table. ③ “Status”: each request’s status column. ④ “Approved”: the status of a request with a decision.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{What the submissions page holds}
+\label{tab:builder-forms-submissions-page}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Part} & \thh{What it offers}\\
+New Submission & Starts a new response on the published version.\\
+Responses to show & “All responses”, or “I’m a participant” if this view is turned on in the settings.\\
+The table & Columns from “Table Display Fields”, with search, filtering and deletion according to permission.\\
+Assignment plans and Assign & Open this form's plans or assign people to fill it, when the form can be assigned.\\
+The request page & The answers, the status, and “Approvals” with who signed and who is waiting, plus AI suggestions if any.\\
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Submitting the request};
+\node[stepBox,below=of a] (b) {It appears in the table};
+\node[stepBox,below=of b] (c) {Open and review it};
+\node[stepBox,below=of c] (d) {Approval and status change};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\end{tikzpicture}
+\rclegend
+\caption{The request's path after submission}
+\label{fig:builder-forms-submissions-flow}
+\shotnote{The diagram shows what happens to a request after submission from the reviewer's side: it appears in the table, is opened and reviewed, then an approval or an action button changes its status. So this page depends on the “Access” and “Journey” settings made in the builder.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Open the form from its app and section in navigation.
+\item Choose “All responses” or “I’m a participant”, and search for the request you need.
+\item Open the request, and review the answers and the “Approvals” section.
+\item Carry out the required action, such as approving or returning for correction, then go back to the table.
+\end{enumerate}
+
+\textbf{Check and recovery:} the request's new status should appear in the table. If “There are no submissions yet” appears, nobody has sent the form, or you lack permission to see its requests. If a column you need is missing, add it from “Table Display Fields” in “Form Settings”.

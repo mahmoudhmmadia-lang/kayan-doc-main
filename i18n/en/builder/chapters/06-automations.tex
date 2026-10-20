@@ -4,26 +4,33 @@
 \section{What will you build in this chapter?}
 \label{sec:builder-automations-intro}
 
-This chapter brings together two tools that connect KayanOS with what surrounds it. The “SOPs” page builds automations that connect to external services and accounts, such as email or spreadsheets. The “Bots” page sets up assistants that work in chat, email and calendar, and decides where they are installed and what they may do.
+This chapter brings together two tools that connect KayanOS with what surrounds it. The “SOPs” page opens an embedded automation studio that builds flows starting from a KayanOS event, then reading and checking the data, and finally running an action whose result leaves a reviewable trace. The “Bots” page sets up assistants with a name and picture, decides where members add them in chat, email and calendar, and whether they are installed automatically.
+
+The chapter explains automation on five pages in build order: the overall idea, then triggers, then actions, then connections, then testing and troubleshooting. Two bot pages follow: its capabilities, then its default installation.
 
 \begin{rcnote}[Example: Horizon]
-Horizon sets up a bot called “Visits assistant” that is added to the branches channel, so Omar Haddad can mention it in the conversation when he needs to follow up a visit request.
+Horizon's system administrator builds an automation that creates a review task for Sarah Al-Khatib whenever Omar Haddad submits a new visit request in “Visit requests”. They also set up the “Visits assistant” bot and add it to the branches channel, so Omar can mention it in the conversation when he needs to follow up his request.
 \end{rcnote}
 
 \section{Pages in this chapter}
 \label{sec:builder-automations-pages}
 
-Both pages stand on their own in Builder's “Core” section.
+The two main pages stand on their own in Builder's “Core” section; the other pages explain parts inside them. Follow the order the first time, then return to any page when you need it.
 
 \begin{table}[H]
 \centering
-\caption{External automation and bots}
+\caption{Automation and bots step by step}
 \label{tab:builder-pages-automations}
 \rcZebra
 \begin{tabularx}{\linewidth}{R{4.2cm} Y}
 \rcHeaderRow
 \thh{Page and section} & \thh{What this page offers}\\
-SOPs — Core & Builds automations that connect KayanOS with other services and accounts.\\
-Bots — Core & Sets up assistants that work in chat, email and calendar.\\
+SOPs — Core & Explains the automation studio and the flow model from event to reviewable result.\\
+Automation triggers — SOPs & Lists the events that start an automation, how to pick the narrowest one and prevent repeat runs.\\
+Automation actions — SOPs & Lists what an automation can do with records, tasks, forms, documents and notifications.\\
+Automation connections — SOPs & Explains the connection an automation runs through, who owns it and how to fix its errors.\\
+Test, run and troubleshoot automations — SOPs & Explains testing each part before turning it on, and the order for finding the cause of a failure.\\
+Bots — Core & Lists the organization's bots and sets where members add them in chat, email and calendar.\\
+Bot default installation — Bots & Sets whether the bot is added automatically, whether members can remove it, and which email it reaches.\\
 \end{tabularx}
 \end{table}

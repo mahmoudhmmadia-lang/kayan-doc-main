@@ -2,12 +2,12 @@
 \section{Dashboards}
 \label{sec:builder-feature-dashboards}
 
-A dashboard is a page of numbers and charts that summarizes the work, such as the number of open requests or the average time to finish. You build it from widgets that take their data from a record type, form submissions or other sources, then publish it and place it in navigation. Each viewer sees the data their permissions allow, so a dashboard never goes around anyone's access.
+A dashboard is a page of numbers and charts that summarizes the work, such as the number of open or overdue requests. Every dashboard starts on the “Dashboards” page, where you create dashboards, arrange them in folders and decide who can reach each one. Building a dashboard's content happens in the dashboard builder, explained on the following pages.
 
-\textbf{Path and who uses it:} “Builder” → “Core” → “Dashboards”. Built by those allowed to create dashboards, and viewed by those given access.
+\textbf{Path and who uses it:} “Builder” → “Core” → “Dashboards”. The “Create Dashboard” button appears for those allowed to create dashboards, and each user sees the cards they are allowed to open.
 
 \begin{rcnote}[Example: Horizon]
-Horizon builds a “Visit tracking” dashboard with a figure for pending requests, a chart of visits by branch and a calendar of their dates, which Sarah Al-Khatib reviews every week. The dashboard starts from ①.
+The system administrator creates a “Branch services” folder, then creates the “Visits follow-up” dashboard inside it and gives Sarah Al-Khatib's role access to it. The dashboard starts from ①, and the folder from ②.
 \end{rcnote}
 
 \begin{figure}[H]
@@ -21,45 +21,609 @@ Horizon builds a “Visit tracking” dashboard with a figure for pending reques
 
 \begin{table}[H]
 \centering
-\caption{What do you find here?}
+\caption{What do you find in the list?}
 \label{tab:builder-dashboards-data}
 \begin{tabularx}{\linewidth}{R{3.6cm} Y}
 \rcHeaderRow
 \thh{Part} & \thh{Content and action}\\
-Dashboards List & Dashboards and folders with their status, “Draft” or “Published”, and the buttons “Create Dashboard” and “Create Folder”.\\
-Widgets & “Add Section”, then “Add Widget”: chart, figure, KPI, table, progress, calendar, map and more.\\
-Data source & Entity, form submissions, SOP, manual data and others, with the data access level.\\
-Filters & Let the viewer change the date range for the whole dashboard or for chosen sections or widgets.\\
-Settings and access & Name, description, “Show in Navigation”, app and section, and “Manage access” to decide who views it.\\
-Versions and publishing & “Publish” creates a new version that replaces the live one, and “Version history” lets you restore.\\
+Dashboard card & Shows the dashboard's name, last change and status: “Draft” if not yet published, or “Published”. Its menu offers “View”, “Edit”, “Manage Access” and “Delete”, depending on your permissions.\\
+“Create Dashboard” & Asks for the “Dashboard Name” and a description of at least twelve characters and two words, then opens the new dashboard in the builder. The dashboard is created inside the open folder.\\
+Folders & “Create Folder” creates a folder that holds dashboards and subfolders. You move a dashboard into it by dragging its card onto the folder; when a folder is deleted, its contents move out of it.\\
+Access & “Manage access” sets the roles and people who can open the dashboard. A dashboard also gets the access granted on its folder, so removing someone from the dashboard does not remove their folder access.\\
 \end{tabularx}
 \end{table}
 
 \begin{figure}[H]
 \centering
 \begin{tikzpicture}[node distance=0.5cm]
-\node[stepBox] (a) {Create Dashboard};
-\node[stepBox,below=of a] (b) {Sections, widgets, sources};
-\node[stepBox,below=of b] (c) {Preview and compare};
-\node[stepBox,below=of c] (d) {Publish and show in navigation};
+\node[stepBox] (a) {Create a folder if needed};
+\node[stepBox,below=of a] (b) {Create Dashboard inside it};
+\node[stepBox,below=of b] (c) {Build and publish in the builder};
+\node[stepBox,below=of c] (d) {Give roles access};
 \draw[flowsTo] (a) -- (b);
 \draw[flowsTo] (b) -- (c);
 \draw[flowsTo] (c) -- (d);
 \end{tikzpicture}
 \rclegend
-\caption{Building a dashboard}
+\caption{From the list to a dashboard the team can reach}
 \label{fig:builder-dashboards-flow}
-\shotnote{The diagram puts the comparison with known records before publishing, because a wrong number on a dashboard leads to a wrong decision. If you know five requests are waiting for a decision, the widget must show five. The team does not see the dashboard in navigation before it is published.}
+\shotnote{The diagram shows that the dashboard's place is chosen before it is created, because it is created inside the open folder and inherits the access granted there. Access comes after publishing, because anyone who opens an unpublished dashboard sees a message that it is not published yet.}
 \end{figure}
 
 \subsection{Steps and check}
 \begin{enumerate}
-\item Open “Dashboards” and press “Create Dashboard”, then write the name and a clear description.
-\item Add a section, then a widget, choose its data source, fields and filters, and give it a title that says what it counts.
-\item Press “Preview” and compare the numbers with records you know, then set where it appears in the settings and press “Publish”.
+\item Open “Dashboards”, press “Create Folder” if you want to group one team's dashboards, then open the folder.
+\item Press “Create Dashboard”, write the “Dashboard Name” and a description of what the dashboard follows, then press “Create”.
+\item Build and publish the dashboard as on the following pages, then return to the list and check that its status is “Published”.
+\item Choose “Manage Access” from the card's menu and add the roles that should see it.
 \end{enumerate}
 
-\textbf{Check and recovery:} open the dashboard from navigation as a viewer; it should show the expected numbers. If the message “This dashboard isn't published yet” appears, publish it; if one user sees smaller numbers than another, it is because the dashboard shows what their permissions allow.
+\textbf{Check and recovery:} the card should appear in the right folder as “Published”, and the intended user should be able to open it. If “Describe it in at least 12 characters and two words.” appears, write a longer description. If someone still sees the dashboard after you removed them, check the access granted on its folder.
+
+\clearpage
+\section{Dashboard builder: sections and widgets}
+\label{sec:builder-feature-dashboards-builder}
+
+The dashboard builder is where you build a dashboard's content. A dashboard is made of sections one after another; each section has a title, a description and a grid where you place widgets, and a widget is a figure, a chart, a table or something similar. “Save” keeps your changes as a draft, and viewers do not see them until you publish.
+
+\textbf{Path and who uses it:} “Dashboards” → the dashboard card's menu → “Edit”. Used by those allowed to edit the dashboard; it also opens automatically after you create a new dashboard.
+
+\begin{rcnote}[Example: Horizon]
+The system administrator adds to “Visits follow-up” a section titled “Request status” with a figure for pending requests and a pie chart of requests by status, then a second section titled “Appointments” with a calendar of the visits.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-dash-builder-en.png}
+\caption{The dashboard builder with the toolbar at the bottom of the page}
+\label{fig:builder-dashboards-builder-screen}
+\shotnote{The image shows a test dashboard open in the builder, with one section holding two “Figure” widgets and the AI side panel shown. The bottom toolbar gathers everything that adds sections and widgets, while the header holds the settings and save buttons. ① “Add Section”: adds a section at the end of the dashboard. ② “Edit”: the pencil button that opens the section title and description. ③ “Figure”: adds a number widget to the last section. ④ The chart button: opens the “Chart Type” list. ⑤ “Save”: saves the draft without publishing it.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{The builder header buttons}
+\label{tab:builder-dashboards-builder-header}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Button} & \thh{What it does}\\
+“Manage access” & Sets who can open the dashboard, as on the “Dashboards” page.\\
+“Filters” & Adds the filters the viewer changes, such as a date range.\\
+“Settings” & Opens the dashboard settings: name, description and where it appears in navigation.\\
+“AI Dashboard Builder” & Shows or hides the side panel where you describe what you want, and the AI proposes widgets.\\
+“Versions” and “Preview” & The first lists earlier versions; the second shows the dashboard as a viewer sees it.\\
+“Save” and “Publish” & The first saves the draft; the second saves what is in the builder, then publishes it to viewers.\\
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Working with sections and widgets}
+\label{tab:builder-dashboards-builder-grid}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Action} & \thh{How it is done}\\
+Add a section & Press “Add Section” in the toolbar at the bottom of the page. The section is added at the end of the dashboard.\\
+Edit a section & Press the pencil next to its title, write the “Section Title” and “Description”, then press “Save”. The bin button deletes the section.\\
+Add a widget & Press the widget type's icon in the toolbar, or the chart button to choose from the “Chart Type” list. The widget is added to the last section, or next to another widget if you press the \en{+} sign at its edge.\\
+Arrange a widget & Drag it inside the grid or resize it from its edge. The “Move Widget” menu moves it up, down or sideways, or to another section with “Move to Section”.\\
+Configure a widget & Press the widget to open its settings panel, which also has “Duplicate” to copy it and “Delete” to remove it.\\
+\end{tabularx}
+\end{table}
+
+\begin{rcwarn}[A new chart starts with sample data]
+A new chart shows sample data until you choose a real data source for it. Do not publish before every widget is linked to its source, or viewers will see numbers that do not belong to the organization.
+\end{rcwarn}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Add Section};
+\node[stepBox,below=of a] (b) {Add a widget to the section};
+\node[stepBox,below=of b] (c) {Configure it in its settings panel};
+\node[stepBox,below=of c] (d) {Arrange and size the widgets};
+\node[stepBox,below=of d] (e) {Save the draft};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\end{tikzpicture}
+\rclegend
+\caption{Building a dashboard's content}
+\label{fig:builder-dashboards-builder-flow}
+\shotnote{The diagram starts with the section because every widget belongs to a section, and a new widget goes to the dashboard's last section. Arranging comes after configuring, because the right size only becomes clear once the widget shows its real data. It ends with saving, because the layout is stored in the draft only when you press “Save” or “Publish”.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Open the dashboard in the builder and press “Add Section”, then press the pencil, write the “Section Title” and press “Save”.
+\item Press the “Figure” icon in the toolbar, then the chart button and choose “Pie” from “Chart Type”.
+\item Press each widget and set its data source as on the “Widget settings and data sources” page.
+\item Drag and resize the widgets until the section reads well, then press “Save”.
+\end{enumerate}
+
+\textbf{Check and recovery:} the sections and widgets should stay in place when you reopen the builder. If a widget you added seems to be missing, look for it in the dashboard's last section, then move it with “Move to Section”. If a chart shows strange numbers, its source is still the sample data.
+
+\clearpage
+\section{Widget settings and data sources}
+\label{sec:builder-feature-dashboards-widget-settings}
+
+When you press a widget in the builder, its settings panel opens with three tabs: “General” for the title and size, “Data” for the source of the numbers and how they are calculated, and “Style” for colours and look. The data source decides where the widget takes its numbers from, and “Access Level” decides whether each viewer sees only what their permissions allow.
+
+\textbf{Path and who uses it:} dashboard builder → press the widget → the settings panel. Used by whoever builds the dashboard; the “Data” tab opens first.
+
+\begin{rcnote}[Example: Horizon]
+For the pending-requests widget, the system administrator chooses the source “Entity” and the record type “Visit requests”, the value type “Count”, then adds a filter limiting the count to requests waiting for review. He chooses “User Permissions”, so Sarah Al-Khatib sees only her branches' requests.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-dash-widget-settings-en.png}
+\caption{The settings panel of a “Figure” widget on the “Data” tab}
+\label{fig:builder-dashboards-widget-settings-screen}
+\shotnote{The image shows the settings panel after pressing a “Figure” widget in a test dashboard, with the “Data” tab opened automatically. In this widget type the permissions and filters section is called “Data Controls”, and it holds the “Access Level” that decides what each viewer sees. ① “General”: the title, width and height. ② “Data Source Type”: where the widget takes its figures from. ③ “Value Type”: “Count” or “Value”. ④ “User Permissions”: computes the figure with the permissions of whoever opens the dashboard. ⑤ “Inspect data”: shows the records the widget read.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{The sources in “Data Source Type”}
+\label{tab:builder-dashboards-widget-settings-sources}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Source} & \thh{When to use it}\\
+“Entity” & The usual source: you choose the record type in “Select Entity”, then the fields the widget shows or counts.\\
+“SOP” & The widget calls a webhook trigger in an SOP flow and shows what it returns; “Test SOP” tries it.\\
+“Assignment plan” & Shows the figures of an assignment plan and its rounds, such as how many tasks are assigned, done and late.\\
+“Checks and findings” & Shows the quality checks of a form you choose: response scores, the checks, or AI findings.\\
+“Manual Data” & You type the data yourself as \en{JSON}; it suits a fixed example or a number not stored in the system.\\
+“Official correspondence” & Appears for members who have the correspondence app, and shows letters, work items, the registry or performance over a period you choose.\\
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{What you set in the three tabs}
+\label{tab:builder-dashboards-widget-settings-tabs}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Tab} & \thh{Settings}\\
+“General” & The “Title” shown above the widget, and “Width” and “Height” in grid cells.\\
+“Data” & The source, then the fields, and “Value Type”: “Count” to count records or “Value” for a numeric field with an “Aggregation” such as sum or average.\\
+“Advanced \& Filters” & Inside “Data”, called “Data Controls” in a “Figure” widget: “Access Level” with “Show All Options” or “User Permissions”, the filters that narrow the records, and the option to hide the widget from those without permission.\\
+“Data Inspector” & Also inside “Data”: its “Inspect data” button shows the records the widget read and the data after transformation, so you can find the reason for an unexpected number.\\
+“Style” & Colours, labels, fonts and display. Its options depend on the widget type.\\
+\end{tabularx}
+\end{table}
+
+\begin{rcwarn}[“Show All Options” goes beyond the viewer's permissions]
+If you choose “Show All Options”, everyone who opens the dashboard sees figures for all records, even those they cannot open. Choose “User Permissions” unless the full figures are meant for everyone who can reach the dashboard.
+\end{rcwarn}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Choose the Data Source Type};
+\node[stepBox,below=of a] (b) {Choose the entity and fields};
+\node[stepBox,below=of b] (c) {Value type and aggregation};
+\node[stepBox,below=of c] (d) {Access level and filters};
+\node[stepBox,below=of d] (e) {Data Inspector};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\end{tikzpicture}
+\rclegend
+\caption{Setting up a widget's data}
+\label{fig:builder-dashboards-widget-settings-flow}
+\shotnote{The diagram follows the order of the “Data” tab: the available fields depend on the source and entity, and the aggregation depends on the field. “Data Inspector” comes last because it reveals how the filters and access level affect the number before anyone sees it.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Press the widget in the builder, write the “Title” in “General”, then set “Width” and “Height”.
+\item Open “Data”, choose “Entity” in “Data Source Type”, then choose the record type in “Select Entity”.
+\item Choose “Count” or “Value” in “Value Type”, and set the field and “Aggregation” when needed.
+\item Open “Advanced \& Filters”, choose “User Permissions”, and add the filters that limit the records to what you want.
+\item Press “Inspect data” and compare the records shown with what you know, then set the colours in “Style”.
+\end{enumerate}
+
+\textbf{Check and recovery:} the number should match the count of records you know. If “No Data” appears, check the filters in “Advanced \& Filters”. If a viewer sees a message that they do not have permission to view the data, that is expected with “User Permissions”; give them the right to read the record type or hide the widget from them.
+
+\clearpage
+\section{Widget types}
+\label{sec:builder-feature-dashboards-widgets}
+
+A widget's type decides how its data is shown: a single number, a table, a chart, a calendar and so on. The builder toolbar holds thirteen types, and the chart button opens a list of thirty-one chart kinds. Choose the type that answers the viewer's question in the simplest form.
+
+\textbf{Path and who uses it:} dashboard builder → the toolbar at the bottom of the page. Used by whoever builds the dashboard; each type's name appears when you hover over its icon.
+
+\begin{rcnote}[Example: Horizon]
+In “Visits follow-up”, the system administrator uses a “Figure” for pending requests, a “Pie” chart for requests by status, a “Bar” chart for visits by branch, and a “Calendar” widget for visit dates in the Aleppo Branch and elsewhere.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-dash-chart-types-en.png}
+\caption{The “Chart Type” list above the toolbar}
+\label{fig:builder-dashboards-widgets-screen}
+\shotnote{The image shows the list that opens from the chart button; its first charts are visible, and the rest appear by scrolling inside the list. Non-chart types each have their own toolbar icon, whose name appears when you hover over it. ① “Figure”: the icon of the single-value widget. ② The chart button: opens the list. ③ “Pie”: for parts of a whole, such as requests by status. ④ “Bar”: for comparing categories, such as visits by branch.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Widget types in the toolbar}
+\label{tab:builder-dashboards-widgets-types}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Group} & \thh{Types and when to use each}\\
+Basic & “Figure” for one value with an optional previous value or goal, “Table” to show records in columns you choose, “Text” for fixed text or a value from a field, “Image” from a link or field, and “Button” that opens a page, a form or a link.\\
+Status and progress & “Progress” for a value against an upper limit, “Status” for a badge whose colour follows a field's value, and “KPI” for a main value with a comparison, a goal and threshold colours.\\
+Special widgets & “Heatmap” for a grid of rows and columns whose cells are coloured by value, “Timeline” for events ordered by date, “Map” for record locations, and “Calendar” for their dates.\\
+AI analysis & “AI Analysis” reads rows from one or more sources and writes an analysis following the “Analysis Prompt”, then answers follow-up questions.\\
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Charts in “Chart Type”}
+\label{tab:builder-dashboards-widgets-charts}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Purpose} & \thh{Suitable charts}\\
+Comparing categories & “Bar”, “Polar Bar”, “Radial Bar” and “Radar”.\\
+Change over time & “Line”, “Stream”, “Bump”, “Calendar”, which colours the days of a year, and “Time Range”.\\
+Parts of a whole & “Pie”, “Waffle”, “Tree Map”, “Sunburst” and “Circle Packing”.\\
+Stages and flow & “Funnel” for stages whose count shrinks, and “Sankey” for amounts moving between stages.\\
+Distribution and relation & “Scatter Plot”, “Box Plot”, “Swarm Plot”, “Heat Map” and “Parallel Coordinates”.\\
+Maps & “Choropleth” to colour regions by value, and “Geo Map” to draw regions.\\
+\end{tabularx}
+\end{table}
+
+The list also holds other specialist charts, such as “Chord”, “Network”, “Tree” and “Icicle”. You adjust any chart's look in “Chart options” in the “Style” tab, and return it to its defaults with “Reset to defaults”.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Which question does it answer?};
+\node[stepBox,below=of a] (b) {One number, a list or a chart?};
+\node[stepBox,below=of b] (c) {Choose and add the type};
+\node[stepBox,below=of c] (d) {Link it to its data source};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\end{tikzpicture}
+\rclegend
+\caption{Choosing a widget type}
+\label{fig:builder-dashboards-widgets-flow}
+\shotnote{The diagram starts from the viewer's question, not the chart's shape, because the right type follows what the viewer wants to know. A current count needs only a “Figure”, a comparison between branches needs a “Bar” chart, and dates are read faster in a “Calendar”.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Write the question the widget answers, such as “How many requests are waiting for review?”.
+\item Pick the answering type from the two tables, and hover over the toolbar icons until you find its name.
+\item Press the icon, or the chart button and then the chart's name in “Chart Type”.
+\item Set the data source and the fields this type needs, then check its look in “Preview”.
+\end{enumerate}
+
+\textbf{Check and recovery:} the widget should answer its question at a glance. If a chart is crowded with many categories, use a “Table” or add a filter that reduces them. If “AI Analysis” shows no result, press “Generate result”, because the builder pauses the analysis while you edit.
+
+\clearpage
+\section{Dashboard settings}
+\label{sec:builder-feature-dashboards-settings}
+
+The dashboard settings set its name, its description and where it appears in app navigation. They may also show settings that control the data a viewer sees, when the organization has work navigation features turned on.
+
+\textbf{Path and who uses it:} dashboard builder → “Settings” → the “Dashboard Settings” window. Used by whoever builds the dashboard, who then presses “Save”.
+
+\begin{rcnote}[Example: Horizon]
+The system administrator turns on “Show in navigation” for “Visits follow-up”, chooses “Branch services” in “App” and the visits section in “App Section”, so the dashboard appears for Sarah Al-Khatib inside the app she works in.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-dash-settings-en.png}
+\caption{The “Dashboard Settings” dialog scrolled to the “Navigation” section}
+\label{fig:builder-dashboards-settings-screen}
+\shotnote{The image shows the settings dialog of a test dashboard scrolled to the visibility and data settings, with the name and description above them. “Data shown” and “Follow a context” appear because these features are on in the test organization; they may not appear in yours. ① “Show in navigation”: adds the dashboard to the app menu. ② “App”: available once it is on, followed by “App Section”. ③ “With the viewer’s permissions”: the safe choice that computes every widget with the permissions of whoever opens the dashboard. ④ “All organization data”: only an organization owner or administrator can choose it. ⑤ “Follow a context”: limits widgets to the chosen context, and “No context” leaves them unnarrowed.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{The “Dashboard Settings” fields}
+\label{tab:builder-dashboards-settings-fields}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Field} & \thh{Meaning}\\
+“Dashboard Name” and “Description” & The name shown in the list and navigation in each language, and a short description of what the dashboard follows.\\
+“Show in navigation” & Adds the dashboard as an item in the app menu, with an icon you choose.\\
+“App” and “App Section” & The app and section where the dashboard appears.\\
+“Data shown” & “With the viewer’s permissions”, so every widget is computed with the permissions of whoever opens the dashboard, or “All organization data”, so each widget keeps its own access setting. Only an organization owner or administrator can choose the second option.\\
+“Follow a context” & Limits widgets on record types tied to a context to what the member picks in the app bar, such as one branch. “No context” leaves widgets un-narrowed.\\
+\end{tabularx}
+\end{table}
+
+\begin{rcwarn}[Take care with “All organization data”]
+With this option, everyone who can open the dashboard sees all records in widgets set to “Show All Options”, even if their permissions are narrower. With “With the viewer’s permissions”, widgets fed by an automation show no data.
+\end{rcwarn}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Name and description};
+\node[stepBox,below=of a] (b) {Show in navigation};
+\node[stepBox,below=of b] (c) {App and App Section};
+\node[stepBox,below=of c] (d) {Data shown and context};
+\node[stepBox,below=of d] (e) {Save, then publish};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\end{tikzpicture}
+\rclegend
+\caption{Setting up the dashboard}
+\label{fig:builder-dashboards-settings-flow}
+\shotnote{The diagram brings together two decisions: where the dashboard appears, and which data its viewers see. The placement is settled first because the suggested context depends on the app and section; then everything is saved and the dashboard is published so the change reaches viewers.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item In the builder press “Settings”, and review the “Dashboard Name” and “Description”.
+\item Turn on “Show in navigation”, then choose the “App”, the “App Section” and a suitable icon.
+\item If “Data shown” appears, choose “With the viewer’s permissions” unless you need otherwise.
+\item If “Follow a context” appears, choose the context the dashboard follows or “No context”, then press “Save” and publish the dashboard.
+\end{enumerate}
+
+\textbf{Check and recovery:} the dashboard should appear in the chosen app section. If it does not, make sure “Show in navigation” is on and the dashboard is published. If choosing “All organization data” is refused, only an organization owner or administrator can choose it.
+
+\clearpage
+\section{Viewer filters and entity selectors}
+\label{sec:builder-feature-dashboards-filters}
+
+Viewer filters are controls at the top of the dashboard that let the viewer change what the widgets show without editing the dashboard. There are three kinds: “Date Range” to pick a period, “Selector” to pick a record of a record type such as a branch, and “Select Field” to pick a value from a list of options. Each filter has a “Scope” that decides which widgets it affects.
+
+\textbf{Path and who uses it:} dashboard builder → “Filters”. Set up by whoever builds the dashboard, and used by everyone who opens it.
+
+\begin{rcnote}[Example: Horizon]
+The system administrator adds to “Visits follow-up” a “Date Range” filter on the visit date and a “Selector” for branches. Sarah Al-Khatib picks the Aleppo Branch and last month, and every widget shows that branch's visits in that period.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-dash-filters-en.png}
+\caption{The “Filters” dialog in the builder}
+\label{fig:builder-dashboards-filters-screen}
+\shotnote{The image shows a “Date Range” filter in a test dashboard, with its scope limited to one of the section’s two widgets. It shows that a filter changes only the widgets within its scope, even when they all sit in the same section. ① “Add”: adds a new filter. ② “Type”: “Date Range”, “Selector” or “Select Field”. ③ “Scope”: where the filter applies. ④ “Specific Widgets”: applies it to the widgets you pick below.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Filter settings}
+\label{tab:builder-dashboards-filters-fields}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Setting} & \thh{Meaning}\\
+“Date Range” & You choose the date field or fields in each record type, and the filter limits records to the period the viewer picks.\\
+“Selector” & You choose the record type, the “Label” and the “Default Value (Optional)”, and can make it “Required”. Widgets use its value in their filters through the selector ID.\\
+“Select Field” & Matches the “Target Field” against an option the viewer picks. The options come from “Manual Options” you type, or “From Entity Field” of a choice type.\\
+“Scope” & Applies the filter to the whole dashboard, to “Specific Sections”, or to “Specific Widgets”.\\
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Choose the filter kind};
+\node[stepBox,below=of a] (b) {Fields or record type};
+\node[stepBox,below=of b] (c) {Set the scope};
+\node[stepBox,below=of c] (d) {Try the filter in Preview};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\end{tikzpicture}
+\rclegend
+\caption{Adding a viewer filter}
+\label{fig:builder-dashboards-filters-flow}
+\shotnote{The diagram puts the scope after the fields, because a filter affects only widgets that read the field you linked it to. That is why the test in Preview comes last, to see which widgets actually change when you pick a period or a record.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item In the builder press “Filters”, add a filter and choose its kind.
+\item For “Date Range” choose the date fields; for “Selector” choose the record type and write the “Label”.
+\item Choose the “Scope”: the whole dashboard, “Specific Sections” or “Specific Widgets”, then tick the sections or widgets.
+\item Press “Save”, then “Preview”, and change the filter's value while watching the widgets.
+\end{enumerate}
+
+\textbf{Check and recovery:} the covered widgets' numbers should change when the filter changes, and “Clear All” should return them. If the window refuses to save, complete the highlighted fields, such as “Select at least one section.”. If a widget is not affected, check the filter's scope and the field the widget reads.
+
+\clearpage
+\section{AI Dashboard Builder}
+\label{sec:builder-feature-dashboards-ai-builder}
+
+The builder offers a side panel where you describe the dashboard you want in your own words; the AI asks clarifying questions, then proposes widgets and filters. Nothing changes in the dashboard until you review the proposal and apply it, and the result stays a draft you edit and publish like any dashboard.
+
+\textbf{Path and who uses it:} dashboard builder → the “AI Dashboard Builder” side panel, shown or hidden by the button of the same name. Used by whoever builds the dashboard and wants a quick start.
+
+\begin{rcnote}[Example: Horizon]
+The system administrator writes: “I want the number of pending visit requests, requests by status and branch, and a calendar of appointments.” He answers a question about the date field, then presses “Apply Proposal” and reviews the widgets before publishing.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-dash-ai-builder-en.png}
+\caption{The “AI Dashboard Builder” side panel before a conversation starts}
+\label{fig:builder-dashboards-ai-builder-screen}
+\shotnote{The image shows the side panel open in the builder of a test dashboard, with no conversation yet. Nothing in the dashboard changes during the conversation; the proposal enters the draft only when you apply it. ① “AI Dashboard Builder”: shows or hides the side panel. ② “Describe the dashboard you want to build”: write your request here, then press Enter. ③ “Attach file”: attaches a file that explains the request.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{The stages of the conversation}
+\label{tab:builder-dashboards-ai-builder-steps}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Stage} & \thh{What happens}\\
+Request & You write in “Describe the dashboard you want to build” what you want to see, and you can “Attach file” to explain your request.\\
+Questions & “Please answer these questions” may appear; you answer, then press “Submit Answers”.\\
+Proposal & “Proposal Summary” shows how many widgets it adds, updates or removes, and any selector changes.\\
+Applying & “Apply Proposal” puts the changes into the draft, and you accept or reject selector changes with “Accept” and “Reject”.\\
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Describe the dashboard};
+\node[stepBox,below=of a] (b) {Answer the questions};
+\node[stepBox,below=of b] (c) {Review the Proposal Summary};
+\node[stepBox,below=of c] (d) {Apply Proposal};
+\node[stepBox,below=of d] (e) {Review widgets, then publish};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\end{tikzpicture}
+\rclegend
+\caption{Building a dashboard with AI help}
+\label{fig:builder-dashboards-ai-builder-flow}
+\shotnote{The diagram separates applying the proposal from publishing it, because applying changes only the draft. After applying, review each widget, its source and its access level, then publish once you are sure the numbers are right.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item In the builder, if the side panel is not shown, press “AI Dashboard Builder”.
+\item Write what you want to see, with the record type and period, then press \en{Enter} to send.
+\item Answer the questions if they appear and press “Submit Answers”, then review the “Proposal Summary”.
+\item Press “Apply Proposal”, then open each widget and review its data source and “Access Level” before “Save” and “Publish”.
+\end{enumerate}
+
+\textbf{Check and recovery:} the button should change to “Applied” and the widgets should appear in the builder. If the proposal does not match what you wanted, write a more precise request instead of applying it. If “Widget error” appears on a proposed widget, use “Send error to AI” to have it corrected, or set the widget up yourself.
+
+\clearpage
+\section{Preview, publishing and versions}
+\label{sec:builder-feature-dashboards-publish}
+
+The builder keeps your work as a draft that viewers do not see. “Preview” shows the dashboard as they will see it, then “Publish” creates a new version that replaces the published one. “Version history” keeps earlier versions, so you can return to any of them when needed.
+
+\textbf{Path and who uses it:} dashboard builder → “Preview”, “Publish” or “Versions”. Used by those allowed to edit the dashboard.
+
+\begin{rcnote}[Example: Horizon]
+The system administrator previews “Visits follow-up” and sees that the number of pending requests matches the list, so he presses “Publish”. A week later he deletes a widget by mistake and restores the previous version from “Version history”.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-dash-versions-en.png}
+\caption{The “Version history” panel with the preview and publish buttons}
+\label{fig:builder-dashboards-publish-screen}
+\shotnote{The image shows the version history of a test dashboard with two versions: the first published with a green dot, and a newer unpublished draft with an orange dot. It shows that viewers see the published version, not the latest save in the builder. ① “Preview”: shows the dashboard as a viewer sees it. ② “Publish”: saves the draft and publishes it as a new version. ③ “Version history”: the list of versions with their numbers and dates. ④ “More options”: the version menu with “View” and “Restore”.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Preview and publishing tools}
+\label{tab:builder-dashboards-publish-tools}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Tool} & \thh{What it does}\\
+“Preview” & Shows the dashboard with real data and without editing tools, under a “Previewing Dashboard” bar; “Exit Preview” takes you back.\\
+“Save” & Saves the draft without changing what viewers see.\\
+“Publish” & Saves what is in the builder, then publishes it as a new version, and “Dashboard published successfully” appears.\\
+“Version history” & Lists each version with its number and date; the published version is marked “Published” with a green dot, and an orange dot marks a draft. From a version's menu you choose “View”, “Edit as draft” or “Restore”.\\
+\end{tabularx}
+\end{table}
+
+\begin{rcwarn}[Restoring replaces the current draft]
+“Edit as draft” and “Restore” replace the current draft with the version you chose, so unpublished changes are lost. Viewers do not see the restored version until you publish it.
+\end{rcwarn}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Save the draft};
+\node[stepBox,below=of a] (b) {Preview and compare with known records};
+\node[stepBox,below=of b] (c) {Publish a new version};
+\node[stepBox,below=of c] (d) {Restore an earlier version on error};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\end{tikzpicture}
+\rclegend
+\caption{From draft to published version}
+\label{fig:builder-dashboards-publish-flow}
+\shotnote{The diagram puts the comparison with known records before publishing, because a wrong number on a dashboard leads to a wrong decision; if you know five requests are waiting, the widget must show five. Restoring comes last as the way back if an error shows up after publishing.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Press “Save”, then “Preview”, and compare the widgets' numbers with records you know.
+\item Press “Exit Preview”, correct what is needed, then press “Publish”.
+\item To restore a version, press “Versions”, open the version's menu, choose “Restore” and confirm.
+\item Publish the dashboard again so the restored version reaches viewers.
+\end{enumerate}
+
+\textbf{Check and recovery:} a new version with the status “Published” should appear in “Version history”. If “Failed to publish dashboard. Please try again.” appears, save first, then publish again. If viewers see the old version, make sure you published after your last change.
+
+\clearpage
+\section{Viewing and exporting a dashboard}
+\label{sec:builder-feature-dashboards-viewing}
+
+A viewer opens the published dashboard from navigation or from the “Dashboards” list and sees the published version according to their permissions. They can change the filters the owner set up, export a table's data, and export the whole dashboard as a \en{PDF} report.
+
+\textbf{Path and who uses it:} the app section where the dashboard appears, or “Dashboards” → the card's menu → “View”. Used by everyone given access to the dashboard.
+
+\begin{rcnote}[Example: Horizon]
+Sarah Al-Khatib opens “Visits follow-up” from “Branch services”, picks the Aleppo Branch in the filter, then presses “Export PDF” to attach the report to the monthly meeting minutes.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-dash-view-en.png}
+\caption{A published dashboard in view mode with the “Widget options” menu}
+\label{fig:builder-dashboards-viewing-screen}
+\shotnote{The image shows a published test dashboard with an entity table, its menu opened without running any export. The number next to “Filters” is the count of filters set, and they also apply to exported data. ① “Filters”: the viewer changes the period or record here. ② “Widget options”: the dots button in the table’s corner. ③ “Export data”: exports the table records with the current filters. ④ “Export PDF”: prepares a report of the whole dashboard.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{What a viewer can do}
+\label{tab:builder-dashboards-viewing-actions}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Action} & \thh{How it is done}\\
+“Filters” & The viewer changes the period, record or option, the covered widgets change, and “Clear All” returns the default values.\\
+“Export data” & Appears in the “Widget options” menu of entity tables for those allowed to export, and exports the records with the current filters. The file may be prepared in the background, with a notification when it is ready.\\
+“Export PDF” & Prepares a report of all the dashboard's widgets with the current filters, then opens it in a new tab with the print dialog so you can save it as \en{PDF}.\\
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Open the published dashboard};
+\node[stepBox,below=of a] (b) {Set the filters};
+\node[stepBox,below=of b] (c) {Export data from a table};
+\node[stepBox,below=of c] (d) {Export PDF of the whole dashboard};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\end{tikzpicture}
+\rclegend
+\caption{From viewing to a report}
+\label{fig:builder-dashboards-viewing-flow}
+\shotnote{The diagram puts setting the filters before exporting, because the file and the report carry the period and records chosen at export time. That way, what you share matches what you saw on screen.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Open the dashboard from its app section, or choose “View” from its card's menu.
+\item Set the “Filters” to the period and record you need.
+\item To export a table, press the dots button in its corner and choose “Export data”.
+\item For a full report, press “Export PDF”, then save the file from the print dialog.
+\end{enumerate}
+
+\textbf{Check and recovery:} the report should show the widgets with the filters you chose. If “Please allow pop-ups to open the PDF report in a new tab.” appears, allow pop-ups in the browser and try again. If “Export data” does not appear, you lack the export right or the widget is not an entity table. If “This dashboard isn't published yet” appears, ask its owner to publish it.
 
 \clearpage
 \section{Pages}

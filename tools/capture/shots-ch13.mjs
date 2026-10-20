@@ -10,10 +10,10 @@ const form = (name, url, extra = []) => ({ name, url, marks: [ACTIVE, ...extra, 
 export const SHOTS = [
   { name: 'ch01-workspaces-clear', url: '/', marks: [
     { t: '^(My workspaces|مساحات عملي)$' }, { t: '^(HR|الموارد البشرية)$', dom: 0 }, { t: '^(All workspaces|جميع مساحات العمل)$' }] },
-  { name: 'ch01-apps-clear', url: '/', prep: [{ t: '^(All workspaces|جميع مساحات العمل)', wait: 3000 }], marks: [
+  { name: 'ch01-apps-clear', url: '/', keepDialog: true, prep: [{ t: '^(All workspaces|جميع مساحات العمل)', wait: 3000 }], marks: [
     { sel: '[role=dialog] input' }, { t: '^(HR|الموارد البشرية)$', dom: 0 }, { t: '^(Builder|ادوات البناء)$', dom: 0 }] },
   { name: 'ch02-create-org', url: '/create-organization', marks: [
-    { t: '^(Contact|جهة الاتصال|جهة ?\\n?الاتصال)', max: 20 }, { t: '^(Organization details|تفاصيل المؤسسة)$' }] },
+    { t: '^(Contact|جهة الاتصال|جهة ?\\n?الاتصال)', max: 20 }, { t: '^(Organization Details|Organization details|تفاصيل المؤسسة)$' }] },
   { name: 'ch03-hr-pages-clear', url: '/apps/hr', marks: [
     { t: '^(Records|السجلات)$', dom: 0 }, { t: '^(Members|الأعضاء)$', dom: 0 }, { t: '^(New record|سجل جديد)$', dom: 0 }] },
   { name: 'ch02-member-fields', url: `${M}?returnView=table&tab=overview`, marks: [ACTIVE, EDIT] },
@@ -30,15 +30,15 @@ export const SHOTS = [
   form('ch02-location-fields-tab4', '/apps/hr/core/locations/add?tab=location_rooms'),
   form('ch03-feature-groups', '/apps/hr/workforce/groups/add?tab=member_selector%3Amembers'),
   form('ch03-feature-groups-tab1', '/apps/hr/workforce/groups/add?tab=member_selector%3Amembers'),
-  { name: 'ch03-shift-example', url: '/apps/hr/time/shifts/add', marks: [CREATE] },
+  { name: 'ch03-shift-example', url: '/apps/hr/time/shifts/add', marks: [{ t: '^(Name|الاسم)', max: 8, dom: 0 }, { t: '^(Working Days|Work Days|أيام العمل)$' }, { t: '^(Breaks|الاستراحات)$' }] },
   { name: 'ch03-feature-my-attendance', url: '/time/attendance', marks: [
-    { sel: 'main h1' }, { t: '^(Work|العمل)$' }, { t: '^(Needs correction|يحتاج تصحيحًا)$', dom: 0 }] },
+    { sel: 'main h1' }, { t: { en: '^Work', ar: '^العمل$' }, max: 12, dom: 0 }, { t: { en: '^Needs ', ar: '^يحتاج تصحيحًا$' }, max: 25, dom: 0 }] },
   { name: 'ch03-feature-timesheets', url: '/apps/hr/time/work_time_entries', marks: [
     { sel: 'main h1' }, { t: '^(Today|اليوم)$', dom: 0 }, { t: '^(Week|الأسبوع)$' }] },
   form('ch03-leave-type-fields', '/apps/hr/time/leave_types/add?tab=rules'),
   form('ch03-leave-type-fields-tab1', '/apps/hr/time/leave_types/add?tab=rules'),
   { name: 'ch03-leave-fields', url: '/apps/hr/time/leaves/add', marks: [CREATE] },
-  { name: 'ch03-feature-holiday-groups', url: '/apps/hr/time/holidays_groups', marks: [{ sel: 'main h1' }, { t: '^(New group|مجموعة جديدة)$' }] },
+  { name: 'ch03-feature-holiday-groups', url: '/apps/hr/time/holidays_groups', marks: [{ sel: 'main h1' }, { t: '^(New [Gg]roup|مجموعة جديدة)$' }] },
   { name: 'ch03-feature-attendance-corrections', url: '/time/attendance-corrections', marks: [{ sel: 'main h1' }] },
   { name: 'ch03-feature-attendance-policy', url: '/time/attendance-policy', marks: [
     { t: '^(New policy|سياسة جديدة)$' }, { t: '^(Open|فتح)', max: 10, dom: 0 }, { t: '^(Save|حفظ)$' }] },
@@ -46,7 +46,7 @@ export const SHOTS = [
     { t: '^(New network|شبكة جديدة)$' }, { t: '^(Settings|الإعدادات)$' }] },
   form('ch03-feature-seniority-levels', '/apps/hr/salaryScale/seniority_levels/add?tab=overview'),
   { name: 'ch03-feature-experience-levels', url: '/apps/hr/salaryScale/experience_level_groups', marks: [{ sel: 'main h1' }] },
-  { name: 'ch03-feature-salary-scale', url: '/workforce/salary-scale', marks: [{ sel: 'main h1' }, { sel: 'main table th, main [role=columnheader]' }] },
+  { name: 'ch03-feature-salary-scale', url: '/workforce/salary-scale', marks: [{ sel: 'main h1' }, { t: '^(Seniority Level|مستوى الأقدمية)$' }] },
   { name: 'ch03-payroll-input-fields', url: '/apps/hr/payment/payroll_inputs/add', marks: [CREATE] },
   { name: 'ch03-create-slips-clear', url: '/apps/hr/payment/salary_slips', marks: [{ t: '^(Create salary slips|إنشاء قسائم رواتب)$' }, { sel: 'main input' }] },
   { name: 'ch03-feature-payrolls', url: '/payment/payrolls', marks: [{ t: '^(Create payroll|إنشاء كشف رواتب)$' }, { t: '^(All statuses|جميع الحالات)$' }] },

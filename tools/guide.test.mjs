@@ -123,9 +123,14 @@ test('Tasks overview and all ten feature pages have bilingual examples, media an
 
 const guideData=html=>JSON.parse(html.match(/<script id="guide-data" type="application\/json">([^]*?)<\/script>/)[1]);
 const BUILDER_CHAPTERS=[
- ['entities','ai-builder','workspace','fields','field-types','field-values','lifecycle','record-page','record-page-blocks','lists','figures-views','rules','record-limits','access','field-access','actions','movement','import','advanced','publish'],
- ['navigation','work-navigation'],['forms'],['services'],['internal-sops'],['sops','bots'],
- ['docx-templates','xlsx-templates','print-templates','identities'],['dashboards','pages','ai-dashboards','ai-reports'],
+ ['entities','ai-builder','workspace','fields','field-types','field-values','lifecycle','record-page','record-page-blocks','lists','figures-views','rules','record-limits','access','field-access','actions','movement','evidence','import','advanced','publish'],
+ ['navigation','navigation-apps-sections','navigation-identity','navigation-views','work-navigation','work-navigation-sources','work-navigation-context','work-navigation-dashboards','work-navigation-stale'],
+ ['forms','forms-builder','forms-pages','forms-questions-basic','forms-questions-more','forms-field-settings','forms-rules','forms-buttons','forms-records','forms-access','forms-journey','forms-assign-work','forms-settings','forms-test-publish','forms-submissions'],
+ ['services','services-overview','services-profile','services-delivery','services-centers','services-path','services-fees','services-publish','services-form-settings','services-intake','services-performance'],
+ ['internal-sops','isop-editor','isop-triggers','isop-control-flow','isop-records','isop-people','isop-inspector','isop-errors','isop-connections','isop-testing','isop-runs','isop-approvals','isop-publish'],
+ ['sops','sops-triggers','sops-actions','sops-connections','sops-testing','bots','bots-default-installation'],
+ ['docx-templates','docx-tags','docx-workspace','xlsx-templates','xlsx-tags','xlsx-workspace','print-templates','print-builder','print-page','print-publish','print-verify','identities','letterheads'],
+ ['dashboards','dashboards-builder','dashboards-widget-settings','dashboards-widgets','dashboards-settings','dashboards-filters','dashboards-ai-builder','dashboards-publish','dashboards-viewing','pages','ai-dashboards','ai-reports'],
 ];
 
 test('chapter 6 of the main guide opens the Builder guide, whose chapters start from 1',()=>{
@@ -185,12 +190,12 @@ test('Builder guide chapters and their pages have bilingual examples, diagrams a
  }
 });
 
-test('numbered screenshots: every Builder image has markers and a matching numbered key',()=>{
+test('numbered screenshots: every image has markers and a matching numbered key',()=>{
  const manifest=JSON.parse(fs.readFileSync(path.join(root,'review/fullpage-manifest.json'),'utf8'));
  const circled='①②③④⑤⑥⑦⑧⑨';
  for(const source of [bdoc,ben]) {
-  const shots=source.blocks.filter(b=>/ch06-/.test(b.image??''));
-  assert.ok(shots.length>=26,'Builder pages need their screenshots');
+  const shots=source.blocks.filter(b=>b.image);
+  assert.ok(shots.length>=100,'every chapter needs its screenshots');
   for(const b of shots) {
    const capture=manifest[path.basename(b.image,'.png')];
    assert.ok(capture?.marks?.length,`${b.image}: no markers recorded`);

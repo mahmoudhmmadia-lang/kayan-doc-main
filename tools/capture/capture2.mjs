@@ -30,7 +30,8 @@ async function mark(page, marks) {
         el = cands[0] ? (cands[0].closest('button,a,[role=button],[role=tab]') || cands[0]) : null; }
       }
       if (!el) { missing.push(m.t || m.sel); return; }
-      const r = el.getBoundingClientRect();
+      let r = el.getBoundingClientRect();
+      if (/^H[1-4]$/.test(el.tagName)) { const rg = document.createRange(); rg.selectNodeContents(el); r = rg.getBoundingClientRect(); }
       const box = document.createElement('div');
       box.className = 'guide-mark';
       Object.assign(box.style, { position: 'fixed', left: `${r.left - 3}px`, top: `${r.top - 3}px`, width: `${r.width + 6}px`, height: `${r.height + 6}px`, border: '3px solid #12a368', borderRadius: '10px', zIndex: 2147483646, pointerEvents: 'none', boxSizing: 'border-box' });
@@ -56,8 +57,10 @@ const manifest = JSON.parse(fs.readFileSync(MANIFEST, 'utf8'));
 for (const shot of list) {
   try {
     await page.setViewportSize({ width: 1440, height: 900 });
+    for (let i = 0; i < 2; i++) { await page.keyboard.press('Escape').catch(() => {}); await page.waitForTimeout(300); }
     let ok; if (shot.reload) { await page.goto("https://test2.kayanos.app" + shot.url, { waitUntil: "domcontentloaded" }); ok = await ready(page); } else { ok = await go(page, shot.url); }
     await page.waitForTimeout(shot.wait ?? 3000);
+    for (const n of ['Discard changes', 'تجاهل التغييرات']) { const d = page.getByRole('button', { name: n, exact: true }); if (await d.count()) { await d.first().click().catch(() => {}); await page.waitForTimeout(2500); await go(page, shot.url); await page.waitForTimeout(2000); } }
     for (const n of ['Not Now', 'ليس الآن']) await page.getByRole('button', { name: n }).click({ timeout: 1000 }).catch(() => {});
     if (shot.search) {
       const box = page.locator('main input[type=text], main input[type=search], main input[placeholder]').first();
@@ -87,6 +90,11 @@ for (const shot of list) {
     });
     await page.setViewportSize({ width: 1440, height });
     await page.waitForTimeout(2500);
+    if (!shot.keepDialog) {
+      const open = () => page.evaluate(() => [...document.querySelectorAll('[role=dialog],[role=alertdialog]')].some((d) => { const r = d.getBoundingClientRect(); return r.width > 50 && r.height > 50; }));
+      if (await open()) { await page.keyboard.press('Escape').catch(() => {}); await page.waitForTimeout(1200); }
+      if (await open()) console.log('DIALOG WARN', shot.name, lang);
+    }
     const placed = await mark(page, (shot.marks ?? []).map((m) => ({ ...m, t: typeof m.t === 'object' ? m.t[lang] : m.t, dom: m.dom && typeof m.dom === 'object' ? m.dom[lang] : m.dom })));
     if (placed.missing.length) console.log('MARK MISSING', shot.name, lang, JSON.stringify(placed.missing));
     const dir = await page.evaluate(() => document.documentElement.dir);

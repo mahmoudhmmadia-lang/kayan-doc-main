@@ -135,3 +135,22 @@ card navigation, mark-as-done, language switch, search and the image lightbox ve
 
 **Test data left on test2 (test organization, allowed).** Record type `guide_qa_visit_requests`
 (version 2, fields "Field 1" and "Visit date") and one record "Guide QA visit — Aleppo branch".
+
+## Builder guide expansion (2026-10-20)
+
+Builder is now a separate guide (`builder.html`, chapters b1–b8, 101 pages). Pages were written from
+`origin/production` (the code test2 runs; the local checkout was 452 commits behind) and checked per
+chapter with `node tools/check-builder-chapter.mjs <NN-name>`. Screenshots were captured on test2 with
+numbered markers and merged into `fullpage-manifest.json`.
+
+Pages without a screenshot: lifecycle (test type has no status field), work-navigation-stale (nothing
+stale on test2), services-publish (button could publish a form), docx-tags and xlsx-tags (written in
+Word/Excel).
+
+Arabic UI copy problems found (not changed in the product): «ادوات البناء» without hamza; mixed
+«المتعامل»/«المراجع», «لوحة التحكم»/«لوحة المعلومات», «الودجت»/«عنصر», «الروبوتات»/«البوتات»;
+garbled DOCX/XLSX helper strings («تحقق وقم بالتحميل», «Panels المكانة العمل», «سيBranchالتوجيه…»);
+untranslated test workspace (`forms.testWorkspace.*`) and cycle-phase trigger; legacy SOP approval page
+(«موافق نهائي» for “Any approver”, «هذا الموافقة»); bots: «يمكنه فتح محادثة مع» reverses the meaning and
+EN “Can be removed from Direct Channel” controls channels; «إعادة تشغيل المهمة» for “Retrying run”.
+Unverified behaviour is listed in each chapter's agent report and kept out of the text or worded as such.

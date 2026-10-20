@@ -2,12 +2,12 @@
 \section{Internal SOPs}
 \label{sec:builder-feature-internal-sops}
 
-An internal SOP is a workflow that starts on an event you choose and then runs steps in order: a human step such as an approval, signature or task, or an automatic step such as creating a record or sending a notification. You build, test and publish SOPs on this page without external tools.
+The “Internal SOPs” page is the starting point for every SOP you build. It lists existing SOPs in folders, shows each SOP's state and its recent run results, and lets you create a new SOP or open an existing one to edit it. Its health signals help you notice an SOP that has started failing before anyone complains.
 
-\textbf{Path and who uses it:} “Builder” → “Core” → “Internal SOPs”. Used by those who design the organization's workflows.
+\textbf{Path and who uses it:} “Builder” → “Core” → “Internal SOPs”. Used by those who design the organization's workflows and follow how they run.
 
 \begin{rcnote}[Example: Horizon]
-The system administrator builds an “Approve visit request” SOP that starts “On Form Submitted” for the visit request form, sends an “Approval Request” to Sarah Al-Khatib, then creates a task for Omar Haddad to prepare the visit if she approves. The SOP starts from ① and is followed in ②.
+The system administrator builds an “Approve visit request” SOP that starts “On Form Submitted” for the visit request form, sends an “Approval Request” to Sarah Al-Khatib, then creates a task for Omar Haddad to prepare the visit if she approves. The SOP starts from ② and its runs are followed in ④.
 \end{rcnote}
 
 \begin{figure}[H]
@@ -15,51 +15,933 @@ The system administrator builds an “Approve visit request” SOP that starts �
 \includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-internal-sops-en.png}
 \caption{The “Internal SOPs” page}
 \label{fig:builder-internal-sops-screen}
-\shotnote{The page lists SOPs, their states and follow-up tabs. The list is empty in the test organization. ① “New SOP”: starts an SOP and asks what starts it. ② “Runs”: every time an SOP ran and its result. ③ “Connections”: external service accounts the steps use.}
+\shotnote{The image shows the top of the SOP list in the test organization, with dozens of test SOPs, their states and recent run results, preceded by a banner about an SOP that failed recently. It shows that the page itself points you to a struggling SOP before you look for it. ① “Create Folder”: organizes SOPs into folders. ② “New SOP”: starts an SOP and asks what starts it. ③ “Needs attention”: shows live SOPs whose recent runs failed. ④ “Runs”: the latest runs of all SOPs.}
 \end{figure}
-
 
 \begin{table}[H]
 \centering
-\caption{What do you find here?}
+\caption{What is on the page?}
 \label{tab:builder-internal-sops-data}
 \begin{tabularx}{\linewidth}{R{3.6cm} Y}
 \rcHeaderRow
-\thh{Tab or tool} & \thh{Content and action}\\
-SOPs & The list of SOPs with their state and recent run results, filtered by “Live”, “Drafts”, “Needs attention”, “Paused” and “Archived”.\\
-Runs & Every time an SOP started, with its status: queued, running, waiting, completed or failed.\\
-Connections and Variables & External service accounts the steps use, and encrypted values SOPs can use.\\
-New SOP & Write the name and choose “What starts it?”, such as “On Form Submitted”, “New Record Created”, “Schedule” or “Manual”, then “Create and open”.\\
-Editor & The step canvas with “Build”, “Test” and “Runs” modes. Steps include approval, form and signature requests, task creation, decisions, waits, and creating or updating records.\\
-Review \& publish & Shows what to fix and the changes since the live version, then publishes a new version. Runs in progress finish on their old version.\\
+\thh{Part} & \thh{What it offers}\\
+Tabs & “SOPs”, the default tab, “Runs” for every SOP, “Connections” and “Variables”.\\
+Filters & “All”, “Live”, “Drafts”, “Needs attention” and “Archived”, each with its count. “Paused” appears when an SOP is paused.\\
+List columns & The SOP name and trigger, “State” such as “Live · v2” or “Draft”, “Last 10 runs” with the share that passed, “Last run” and “Last modified”.\\
+Failure banner & Appears above the list when a live SOP failed at least one of its last five runs, with “Open failed run” and “Show all”.\\
+Folders & “Create Folder” in the page header. A folder's menu renames it, creates an SOP or a subfolder inside it, moves it and deletes it.\\
+SOP menu & “Move to” another folder, “Pause SOP” or “Resume” for a live SOP, “Archive”, and “Restore” for an archived SOP.\\
 \end{tabularx}
 \end{table}
+
+\subsection{Creating a new SOP}
+
+“New SOP” opens a side sheet that asks for two things only: the name, and the answer to “What starts it?”. The sheet shows the most used triggers, “On Form Submitted”, “New Record Created”, “Schedule”, “On Approval Finished”, “Generic Webhook” and “Manual”; the others are behind “More triggers”. You can change both the name and the trigger later in the editor.
+
+\begin{rcwarn}[Deleting a folder that holds SOPs]
+If you delete a folder that contains SOPs or subfolders, you must choose what happens to its contents: move them to the top of the list, or archive them and remove the folder. An empty folder is deleted directly.
+\end{rcwarn}
 
 \begin{figure}[H]
 \centering
 \begin{tikzpicture}[node distance=0.5cm]
-\node[stepBox] (a) {Trigger: what starts it?};
-\node[stepBox,below=of a] (b) {Human and automatic steps};
-\node[stepBox,below=of b] (c) {Test: safe simulation};
-\node[stepBox,below=of c] (d) {Review and publish};
-\node[stepBox,below=of d] (e) {Follow the runs};
+\node[stepBox] (a) {New SOP};
+\node[stepBox,below=of a] (b) {Write the name};
+\node[stepBox,below=of b] (c) {Choose what starts it};
+\node[stepBox,below=of c] (d) {Create and open};
+\node[stepBox,below=of d] (e) {Editor: build the steps};
 \draw[flowsTo] (a) -- (b);
 \draw[flowsTo] (b) -- (c);
 \draw[flowsTo] (c) -- (d);
 \draw[flowsTo] (d) -- (e);
 \end{tikzpicture}
 \rclegend
-\caption{The life of an internal SOP}
+\caption{Creating an SOP from the home page}
 \label{fig:builder-internal-sops-flow}
-\shotnote{The diagram shows that an SOP runs only after it is published, and that testing comes before publishing. “Simulate (safe)” creates nothing real and makes external steps return example data, so you test the path without disturbing anyone. After publishing, follow the runs to see where the SOP succeeded and where it stopped.}
+\shotnote{The diagram shows that an SOP cannot be created without a trigger: “Create and open” stays disabled until you choose what starts it. After creation you go straight to the editor, where the SOP is a draft that does not run until you publish it.}
 \end{figure}
 
 \subsection{Steps and check}
 \begin{enumerate}
-\item Open “Internal SOPs”, press “New SOP”, name it, choose what starts it and press “Create and open”.
-\item Add the steps on the canvas and finish setting up each one until “All steps ready” appears.
-\item Switch to “Test” mode, choose “Simulate (safe)”, then press “Run simulation”.
-\item Press “Review \& publish”, review the changes, then publish the version.
+\item Open “Internal SOPs”; to organize SOPs, press “Create Folder” and type the “Folder name”.
+\item Press “New SOP”, or choose the create-SOP command from a folder's menu.
+\item Type the name, choose a common trigger or one from “More triggers”, then press “Create and open”.
+\item Come back to the list later and choose “Needs attention” to see live SOPs whose recent runs failed.
 \end{enumerate}
 
-\textbf{Check and recovery:} the SOP's state should be “Live”, and runs should appear after the event happens. If a run fails, open it from “Runs” to see the failed step, fix it and publish again. To stop the SOP for a while, pause it instead of deleting it; no new runs start until you resume it.
+\textbf{Check and recovery:} the editor should open on the new SOP, and the list should show it as “Draft” with the note “Not published yet”. If you cannot find an SOP you know, choose “All” and clear the search, then try “Archived”: an archived SOP does not appear under “All” until you “Restore” it.
+
+\clearpage
+\section{The SOP editor and its modes}
+\label{sec:builder-feature-isop-editor}
+
+The editor is where you draw the SOP step by step. It has a header showing the SOP's state, a “Steps” list beside the canvas, and the canvas where you see the steps and the paths between them. The editor has three modes: “Build” to edit steps, “Test” to try the draft, and “Runs” to see on the same canvas what happened in each run. Your edits save automatically to a draft.
+
+\textbf{Path and who uses it:} “Internal SOPs” → press the SOP's name. Used by whoever builds or fixes the SOP.
+
+\begin{rcnote}[Example: Horizon]
+The administrator opens “Approve visit request” and sees in the “Steps” list that the “Approval Request” step carries the “Needs setup” badge. He presses it, finishes its setup, then writes a note (③) on the canvas explaining to colleagues why Sarah's approval is requested.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-isop-editor-en.png}
+\caption{An existing SOP open in “Build” mode}
+\label{fig:builder-isop-editor-screen}
+\shotnote{The image shows a published test SOP in the test organization, open in “Build” mode with every step ready. The editor gathers the steps list, the canvas and its tools on one screen, so you know the SOP's state before you change it. ① “Build”: the mode where you edit steps. ② The “+” add button on the line between two steps: opens the step menu. ③ “Add note”: places a note for colleagues on the canvas. ④ “All steps ready”: the steps-list summary when no step needs setup.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Parts of the editor}
+\label{tab:builder-isop-editor-parts}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Part} & \thh{What it offers}\\
+Editor header & “Back to SOPs”, the SOP name that opens its details and version history, the version badge such as “Live · v2” or “Not published yet”, and the save status such as “Saved”.\\
+Modes & “Build”, “Test” and “Runs”. Beside them is the server connection: “Online” or “Server offline”.\\
+Readiness badge & “N to fix” while steps are incomplete, or “All steps ready”. Pressing it opens the review.\\
+Steps & A numbered list in step order, each with its status such as “Ready” or “Needs setup”. Above it, a summary “Steps that need setup: N” or “All steps ready”.\\
+Canvas & Add a step with the add button on the line between two steps; right-click a step to open its menu to copy, paste, test or delete it.\\
+Canvas tools & “Add trigger”, “Add note”, horizontal or vertical layout, zoom in and out, “Fit workflow to view”, step search, the minimap, “Undo” and “Redo”.\\
+\end{tabularx}
+\end{table}
+
+\subsection{Adding a step}
+
+When you press the add button, the step menu opens grouped into four categories: “Control flow”, “Kayan”, “Customer Services” and “Integrations”. The “Kayan” category is split into sections such as “Records”, “Forms”, “Tasks \& epics”, “Approvals \& requests”, “Notifications \& chat” and “Documents”. You can search directly in “Search apps and actions” instead of browsing the categories.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Open the SOP in Build mode};
+\node[stepBox,below=of a] (b) {Add a step from the menu};
+\node[stepBox,below=of b] (c) {Set up the step};
+\node[stepBox,below=of c] (d) {Review the steps list};
+\node[stepBox,below=of d] (e) {Switch to Test};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\end{tikzpicture}
+\rclegend
+\caption{A build session in the editor}
+\label{fig:builder-isop-editor-flow}
+\shotnote{The diagram shows that adding a step and setting it up are one task repeated until every step is complete. Reviewing the “Steps” list comes before testing because it reveals incomplete steps where the test may stop.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Open the SOP from “Internal SOPs” and make sure the mode is “Build”.
+\item Press the add button on the line after the trigger and choose the step from its category or by searching.
+\item Press the step on the canvas to open its setup and fill in its required fields.
+\item Add a note with “Add note” if you want to explain part of the path to colleagues.
+\item Check the “Steps” list summary until it shows “All steps ready”.
+\end{enumerate}
+
+\textbf{Check and recovery:} the save status should change to “Saved” after each edit, and the new step should appear in the “Steps” list with its number. If you delete a step by mistake, press “Undo” or \en{Ctrl+Z}. If “Server offline” appears, you can still edit, but you cannot test or publish until the connection returns.
+
+\clearpage
+\section{Triggers: what starts the SOP?}
+\label{sec:builder-feature-isop-triggers}
+
+A trigger is the event that starts a new run of the SOP, and it is always the first step in the path. It may be a system event such as a record being created or a form being submitted, a recurring schedule, or a member pressing run. A trigger works only after the SOP is published, and an SOP can contain more than one trigger.
+
+\textbf{Path and who uses it:} the “New SOP” sheet → “What starts it?” → “More triggers”, or “Add trigger” in the editor, or “Change trigger” in the trigger step's setup. Used by whoever builds the SOP.
+
+\begin{rcnote}[Example: Horizon]
+The administrator chooses “New Record Created” (④) and sets “Table” to the “Visit requests” record type. Each time Omar Haddad adds a new request such as \en{HZN-VR-0001}, a new run of the SOP starts.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-isop-triggers-en.png}
+\caption{The “Choose a trigger” window}
+\label{fig:builder-isop-triggers-screen}
+\shotnote{The image shows the window that opens from “Add trigger”, with triggers grouped under “General”, then “Kayan” split into sections, followed by integration triggers further down. The groups take you to the right event without memorizing every trigger name. ① “Search triggers”: type the event name directly. ② “General”: manual, scheduled and called triggers. ③ “Kayan”: system events grouped by section. ④ “New Record Created”: an example trigger that runs when a record is created in a table you choose.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Trigger groups in “Choose a trigger”}
+\label{tab:builder-isop-triggers-groups}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Group} & \thh{Examples and when to use them}\\
+General & “Manual” when a member runs the SOP, “Schedule” for a daily, weekly or \en{Cron} time, “Generic Webhook” when another system calls the SOP's URL, and “Called by Another SOP” for an SOP that a step in another SOP calls. There is also a trigger that starts the SOP when a “Cycles” phase opens or closes and names the SOP in its actions.\\
+Kayan & System events grouped by section, such as records, forms, tasks, approvals, files, support, email and WhatsApp.\\
+Integrations & Events from external services; they usually need a connection to that service's account.\\
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Record, form, task and approval triggers}
+\label{tab:builder-isop-triggers-kayan}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Trigger} & \thh{When it starts the SOP}\\
+New Record Created, Record Updated, Record Deleted & When a record is created, updated or deleted in the “Table” you choose. “Record Changes” combines the operations you select.\\
+On Entity Action & When an action or status change runs on a chosen record type, such as a request moving to an approved status.\\
+On Form Submitted & When any form session in the system is submitted.\\
+On Form Action & When a chosen form performs one of the actions you select.\\
+On Task Action & When task actions run or a task's status changes. A separate trigger runs when a comment is added to a task.\\
+On Approval Response, On Approval Finished & The first with every response to an approval request; the second when the request completes, is cancelled or expires.\\
+\end{tabularx}
+\end{table}
+
+\begin{rcwarn}[Changing the trigger discards its setup]
+If you press “Change trigger” after setting it up, the “Change trigger?” message lists the fields that will be discarded. Press “Continue” only if you will set up the new trigger again.
+\end{rcwarn}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Choose a trigger};
+\node[stepBox,below=of a] (b) {Search or pick the group};
+\node[stepBox,below=of b] (c) {Set the trigger's fields};
+\node[stepBox,below=of c] (d) {Add a step after it};
+\node[stepBox,below=of d] (e) {Publish so it starts};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\end{tikzpicture}
+\rclegend
+\caption{Setting up the trigger}
+\label{fig:builder-isop-triggers-flow}
+\shotnote{The diagram links the trigger to publishing, because a trigger in a draft starts no run. It also reminds you to add a step after it: the review blocks publishing with “Add a step after this trigger.” if the trigger stands alone.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item In the editor, press “Add trigger”, or open the current trigger and press “Change trigger”.
+\item Search “Search triggers” by the event name, or browse “General”, “Kayan” and “Integrations”.
+\item Choose the trigger and fill in its fields, such as “Table” for record triggers or frequency, time and timezone for “Schedule”.
+\item Add a step after the trigger, then publish the SOP.
+\end{enumerate}
+
+\textbf{Check and recovery:} after publishing, a new run should appear in “Runs” each time the event happens. If none appears, make sure the SOP is not paused and that you chose the right table or form in the trigger. For “Generic Webhook”, the “Published webhook URL” appears only after publishing.
+
+\clearpage
+\section{Control-flow steps}
+\label{sec:builder-feature-isop-control-flow}
+
+Control-flow steps do no work in the system; they decide the SOP's route: does it branch? does it repeat steps for each item in a list? does it wait for a time or an event? when does it end? You find them all in the “Control flow” category when adding a step. Thanks to them, the SOP follows the rule the organization actually works by, not a single fixed path.
+
+\textbf{Path and who uses it:} the editor → the add button → “Control flow”. Used by whoever builds the SOP.
+
+\begin{rcnote}[Example: Horizon]
+After “Approval Request”, the administrator adds a “Decision” (②) with two paths: the first continues to creating Omar's task when the approval outcome is approved, and the second ends with an “End” step when Sarah requests changes.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-isop-control-flow-en.png}
+\caption{The “Control flow” category in the step menu}
+\label{fig:builder-isop-control-flow-screen}
+\shotnote{The image shows the step menu after pressing the add button, open on the “Control flow” category with its twelve steps and a short description of each. The descriptions help you pick the step that decides the SOP's route before you add it. ① “Control flow”: the category that groups control steps. ② “Decision”: routes the SOP into named paths. ③ “For Each”: repeats steps for each item in a list. ④ “Delay”: pauses the SOP for a duration or until a date.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{“Control flow” steps}
+\label{tab:builder-isop-control-flow-steps}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Step} & \thh{What it does}\\
+Decision & Routes the SOP into named paths, each with a label and a condition. It starts with two paths and a fallback path when nothing matches; “Matching paths” chooses between “First matching path” and “All matching paths”.\\
+For Each & Repeats the body steps for each item in “Items”, then continues after them. Inside the loop you can use the current item and its position.\\
+Delay & Pauses the SOP for a “Duration” such as 1 day, or “Until date”.\\
+Wait For & Waits until a matching internal event, record state or external callback arrives, with an optional timeout.\\
+End & Finishes the run with an optional result; no step can follow it.\\
+Call SOP & Runs a published SOP whose trigger is “Called by Another SOP” and waits for its response. The chosen version stays fixed for that call, even on retry.\\
+Return SOP Response & Returns a value to the SOP that called this one.\\
+Run JavaScript & Runs short code in an isolated sandbox without network, and returns a value the next steps can use.\\
+\end{tabularx}
+\end{table}
+
+\begin{rcwarn}[Only a Decision branches]
+Only one connection can leave an ordinary step. If you need two paths, add a “Decision”; otherwise the issue “Only a Decision can split into several paths.” appears. Every path of a decision must also have a name.
+\end{rcwarn}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Earlier step returns a result};
+\node[stepBox,below=of a] (b) {Decision};
+\node[stepBox,below=of b] (c) {Matching path};
+\node[stepBox,below=of c] (d) {Delay or Wait For};
+\node[stepBox,below=of d] (e) {End};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\end{tikzpicture}
+\rclegend
+\caption{How control-flow steps drive the path}
+\label{fig:builder-isop-control-flow-flow}
+\shotnote{The diagram shows that a decision depends on the result of an earlier step: a condition with no data to read makes no sense. Delays and waits put the run in the “Waiting” state until the time comes or the event arrives; the path then continues to “End”.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Add a “Decision” after the step whose result you want to decide on.
+\item In the decision's setup, type each path's label and press “Set condition” to write the condition or choose “Always” or “Never”.
+\item Press “Add path” if you need another path, and choose the selection method in “Matching paths”.
+\item Add the next step or an “End” step at the end of each path.
+\end{enumerate}
+
+\textbf{Check and recovery:} the canvas should show one line per path carrying its label, and the warning “The decision's conditions don't match its paths.” should disappear. If the test takes the wrong path, open the previous step's result in the test and check the value the condition reads.
+
+\clearpage
+\section{Record and form steps}
+\label{sec:builder-feature-isop-records}
+
+These steps work with data stored in record types and with forms. With them you can find records, create a record, update fields of an existing record, or ask members to fill in a form. You find them in the Kayan category, in the “Records” and “Forms” sections.
+
+\textbf{Path and who uses it:} the editor → the add button → Kayan → “Records” or “Forms”. Used by whoever builds the SOP, who needs permission on the record types the step works with.
+
+\begin{rcnote}[Example: Horizon]
+After Sarah Al-Khatib's approval, the administrator adds an “Update Entity Record” step (⑤), chooses the “Visit requests” record type, sets “Record” to the record that started the run, and sets the request status to approved.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-isop-records-en.png}
+\caption{The “Records” section of the “Kayan” category}
+\label{fig:builder-isop-records-screen}
+\shotnote{The image shows the “Kayan” category of the step menu, with the section buttons followed by the steps of the “Records” section. It shows that record and form steps sit in one category that you reach by section instead of long scrolling. ① “Kayan”: the category of system steps. ② “Records”: the section that groups record steps. ③ “Find Entity Records”: returns the records that match your conditions. ④ “Create Entity Record”: creates a new record. ⑤ “Update Entity Record”: changes the fields of an existing record.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Record steps}
+\label{tab:builder-isop-records-steps}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Step} & \thh{What it does and its main fields}\\
+Find Entity Records & Returns the records in the chosen “Entity” that match your conditions, with the fields you choose and a maximum between 1 and 1000.\\
+Create Entity Record & Creates a record and fills “Field values” “Field by field” or as a “Whole object”. “If a matching record exists” decides what happens on a duplicate: “Fail”, “Skip” or “Use existing”.\\
+Update Entity Record & Updates the fields of the “Record” you choose or the one coming from the trigger.\\
+Get Record, Delete Records & Reads one record to use its values, or deletes records.\\
+Wait for Record Change, Wait for Record Creation & Pause the SOP until a record changes or a matching record is created.\\
+Execute Entity Action & Runs an action defined on the record type, such as moving to a status.\\
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Form steps}
+\label{tab:builder-isop-records-forms}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Step} & \thh{What it does}\\
+Form Request & Asks the members in “Recipients” to fill in the chosen “Form”, with “Due date”, “Wait for completion” and “Wait timeout”.\\
+Start Form Session & Starts a new filling session of a form.\\
+Get Form Submission, Find Form Submissions & Read what members submitted, for use in later steps.\\
+Save Form as PDF & Saves the submission as a \en{PDF} file.\\
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Choose the entity};
+\node[stepBox,below=of a] (b) {Choose the record or conditions};
+\node[stepBox,below=of b] (c) {Set field values};
+\node[stepBox,below=of c] (d) {Add required fields};
+\node[stepBox,below=of d] (e) {Test the step};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\end{tikzpicture}
+\rclegend
+\caption{Setting up a record step}
+\label{fig:builder-isop-records-flow}
+\shotnote{The diagram starts with the entity because the available fields load from it, so you cannot choose a record or values before it. Adding the required fields comes before the test, because the step is incomplete until every mandatory field of the record type has a value.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Add the step from the “Records” section and choose the “Entity”.
+\item In an update step, choose the “Record”, or use the record that came from the trigger instead of a fixed one.
+\item In “Field values”, press “Add value”, choose the field, then type its value or insert it from an earlier step.
+\item Press “Add required fields” if it appears, so every mandatory field is covered.
+\end{enumerate}
+
+\textbf{Check and recovery:} the warning “Map the required fields” should disappear from the step. If “No writable fields are available for this operation.” appears, check your permissions on the record type. If the step goes over a limit on records, fill in “Reason when over a limit” when the limit allows going over; otherwise the run stops.
+
+\clearpage
+\section{Task, approval, notification and document steps}
+\label{sec:builder-feature-isop-people}
+
+These steps involve people in the SOP: they create a task for a member, request an approval or a signature, send a notification, or generate a document from a template. Some wait for the person's response before continuing, so the run stays “Waiting” until the response arrives or the timeout ends.
+
+\textbf{Path and who uses it:} the editor → the add button → Kayan → “Tasks \& epics”, “Approvals \& requests”, “Notifications \& chat” or “Documents”. Used by whoever builds the SOP.
+
+\begin{rcnote}[Example: Horizon]
+The administrator adds an “Approval Request” (⑤) titled “Approve the Aleppo Branch visit” with Sarah Al-Khatib in its only stage. After her approval, a “Create Task” step creates the task “Prepare the visit” with Omar Haddad among the “Assignees”.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-isop-people-en.png}
+\caption{The “Approvals \& requests” section of the “Kayan” category}
+\label{fig:builder-isop-people-screen}
+\shotnote{The image shows the step menu after choosing the “Approvals \& requests” section, with the approval, form and signature request steps and related steps. The same section buttons lead to the task, notification and document steps this page explains. ① “Tasks \& epics”: steps that create and update tasks. ② “Approvals \& requests”: the section shown in the image. ③ “Notifications \& chat”: steps that send notifications. ④ “Documents”: generate a document or a spreadsheet. ⑤ “Approval Request”: the step that requests an approval and waits for the response.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Main steps and their fields}
+\label{tab:builder-isop-people-steps}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Step} & \thh{What it does and its main fields}\\
+Create Task & Creates an internal task: “Task title”, “Task details”, “Assignees”, “Priority” and “Due date”; you can also set the “Task type” and the “Owner”.\\
+Approval Request & Requests an approval and waits for the response: “Approval title”, “Approval stages” with at least one approver per stage, “Request actions”, and “Wait for completion” with a “Timeout” that starts at 30 days.\\
+Signature Request & Requests members' signatures by “Signer rules”, with instructions and library attachments.\\
+Send Notification & Notifies the “Recipients” or “Member selectors” such as roles and departments, with “Message title”, “Message body” and an optional link.\\
+Other task steps & “Update Task”, “Execute Task Action”, “Wait for Task Action” and “Add Task Comment”.\\
+Other approval steps & “Send Approval Reminder”, “Cancel Approval Request” and “Create Approval Request for a Member”, which does not wait for the response.\\
+Documents & “Generate Document from Template” and “Generate Spreadsheet”.\\
+\end{tabularx}
+\end{table}
+
+\subsection{Request actions}
+
+The “Approval Request” step comes with two ready actions: approve, which requires a signature and makes the comment optional; and request changes, which requires a comment and ends the request. Each action has an outcome that the step stores, so a “Decision” after it can read the outcome and choose the path.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Approval Request};
+\node[stepBox,below=of a] (b) {Waiting for the approver};
+\node[stepBox,below=of b] (c) {Decide by the outcome};
+\node[stepBox,below=of c] (d) {Create Task};
+\node[stepBox,below=of d] (e) {Send Notification};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\end{tikzpicture}
+\rclegend
+\caption{A path that involves people}
+\label{fig:builder-isop-people-flow}
+\shotnote{The diagram shows that the approval splits the SOP into before and after the response: the task is created only after the approver decides. That is why the decision comes right after the approval request, sending each response to its own path.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Add “Approval Request”, type the “Approval title”, then press “Add stage” and choose the approvers.
+\item Review “Request actions”, and keep “Wait for completion” on if the next steps depend on the response.
+\item Add a “Decision” after it that reads the approval outcome.
+\item Add “Create Task” on the approval path, type the “Task title” and choose the “Assignees”.
+\end{enumerate}
+
+\textbf{Check and recovery:} no step should carry the “Needs setup” badge. If “At least one approver is required.” appears, add an approver to every stage. If a run waits too long, add “Send Approval Reminder” after the step, or shorten the “Timeout”.
+
+\clearpage
+\section{Step setup: inputs, data and expressions}
+\label{sec:builder-feature-isop-inspector}
+
+When you press a step on the canvas, its setup panel opens beside the canvas. There you edit the step's name, fill in its inputs and choose the source of each value: a value you type, data from the trigger or an earlier step, or an expression that computes it. Changes save automatically.
+
+\textbf{Path and who uses it:} the editor → press the step → the setup panel. Used by whoever builds the SOP.
+
+\begin{rcnote}[Example: Horizon]
+In the “Create Task” step, the administrator presses “Insert data” (②) next to “Task title” and chooses the request number from the trigger data, so the title becomes “Prepare visit \en{HZN-VR-0001}” for each request according to its number.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-isop-inspector-en.png}
+\caption{The setup panel of an “Approval Request” step}
+\label{fig:builder-isop-inspector-screen}
+\shotnote{The image shows the setup panel of the “Approval Request” step in the test SOP, with all its fields from the title down to “Advanced”. The same two buttons repeat beside each field, showing that any value can be typed, inserted or computed. ① The step name: press it to edit it. ② “Insert data”: inserts a value from the trigger or an earlier step. ③ The expression button: turns the field into an expression you write. ④ “Advanced”: the description, the reference name and what happens on failure. ⑤ “Test this step”: runs the step on its own.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Parts of the step setup panel}
+\label{tab:builder-isop-inspector-parts}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Part} & \thh{What it offers}\\
+Header & The step name, which you edit by pressing it, and below it its number and kind, such as “Step 3 · Approval Request”.\\
+Inputs & The step's fields, with the required ones marked. Issues appear right under the incomplete field.\\
+Insert data & Opens the data available to the field: the trigger, earlier steps, the current item inside “For Each”, and “Variables”. Each field shows an example value from the last test.\\
+Expression button & Turns the field into an expression you write yourself when you need a calculation or formula.\\
+Advanced & “If this step fails”, “Skip this step”, “Description” and the “Reference name” that formulas use.\\
+Footer & “Test this step” and “Delete step”, with the line “Changes save automatically”.\\
+\end{tabularx}
+\end{table}
+
+\begin{rcwarn}[The reference name]
+Formulas point to a step by its reference name, so keep it readable with lowercase letters, numbers and underscores. When you change it, every formula that points to the step is updated, but a name already used by another step is refused.
+\end{rcwarn}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Select the step};
+\node[stepBox,below=of a] (b) {Fill in the inputs};
+\node[stepBox,below=of b] (c) {Insert earlier data};
+\node[stepBox,below=of c] (d) {Write an expression if needed};
+\node[stepBox,below=of d] (e) {Test this step};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\end{tikzpicture}
+\rclegend
+\caption{From an empty field to a correct value}
+\label{fig:builder-isop-inspector-flow}
+\shotnote{The diagram orders value sources from simplest to most complex: type the value; if it changes with every run, insert it from earlier data; use an expression when you need a calculation. It ends with testing the step to see the actual value it received.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Press the step on the canvas or in the “Steps” list.
+\item Fill in the required fields, and press “Insert data” next to any field whose value comes from the trigger or an earlier step.
+\item Search “Search fields” for the field you want, then press it to insert it in place.
+\item Open “Advanced” if you want to write a description for the step or change its reference name.
+\end{enumerate}
+
+\textbf{Check and recovery:} inserted data should appear inside the field as a distinct reference, and the “Needs setup” badge should disappear. If the data list shows “Run a test to see example values here.”, run a test first to see values. If the editor warns about an unclosed data reference in a field, delete the reference and insert it again.
+
+\clearpage
+\section{Error handling and skipping steps}
+\label{sec:builder-feature-isop-errors}
+
+A step may fail because an external service did not respond or a record no longer exists. The “Error handling” settings decide what happens then: stop the whole run, or continue on an alternative path you build. You can also ask for retries before the step counts as failed, or keep a step in the path without running it for now.
+
+\textbf{Path and who uses it:} the editor → press the step → “Advanced” → “If this step fails”. Used by whoever builds the SOP. The options do not appear for trigger, “Decision” and “End” steps.
+
+\begin{rcnote}[Example: Horizon]
+The administrator turns on “Retry before giving up” in the “Send Notification” step to Omar Haddad, and chooses “Follow a Failure path” (③) to send an alternative notification to Sarah Al-Khatib on the failure path.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-isop-errors-en.png}
+\caption{The failure and skip options in “Advanced”}
+\label{fig:builder-isop-errors-screen}
+\shotnote{The image shows the “Advanced” section open in an “Approval Request” step, set to the default “Stop the run” with both switches off. The choice is summarized beside the “Advanced” title, so you know how the step behaves on failure without opening the section. ① “Advanced”: opens the options. ② “Stop the run”: the run stops at this step. ③ “Follow a Failure path”: adds Success and Failure paths. ④ “Retry before giving up”: up to four retries. ⑤ “Skip this step”: the step stays but does not run.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Failure and skip options}
+\label{tab:builder-isop-errors-options}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Option} & \thh{What happens}\\
+Stop the run & The default: the run is marked Failed and stops at this step.\\
+Follow a Failure path & Adds Success and Failure paths after the step, so on error the run continues on the Failure path instead of stopping. Turning it off keeps the Success path only.\\
+Retry before giving up & Runs the step again up to 4 times before failing it.\\
+Skip this step & Keeps the step in the path without running it; it shows on the canvas with the “Skipped” badge. Not available for control steps such as “Decision”, “For Each” and “End”.\\
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {The step runs};
+\node[stepBox,below=of a] (b) {An error occurs};
+\node[stepBox,below=of b] (c) {Retry if turned on};
+\node[stepBox,below=of c] (d) {Stop or Failure path};
+\node[stepBox,below=of d] (e) {Review the run};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\end{tikzpicture}
+\rclegend
+\caption{What happens when a step fails}
+\label{fig:builder-isop-errors-flow}
+\shotnote{The diagram shows that retrying comes first, and the stop or failure-path choice applies only after the retries run out. In both cases the error stays recorded in the run, so you can review it and find the cause.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Press the step, then open “Advanced”.
+\item Under “If this step fails”, choose “Stop the run” or “Follow a Failure path”.
+\item If you chose the failure path, add on the canvas's Failure path the steps that handle the error.
+\item Turn on “Retry before giving up” for steps that call services that may be slow.
+\end{enumerate}
+
+\textbf{Check and recovery:} with the failure path chosen, you should see two lines leaving the step, and the choice summarized next to “Advanced”. If you leave a step on “Skip this step” it will not run in any run, so look for the “Skipped” badge on the canvas before publishing.
+
+\clearpage
+\section{Connections and variables}
+\label{sec:builder-feature-isop-connections}
+
+Some steps reach services outside \en{KayanOS}, so they need an account in that service. Those accounts are kept in the “Connections” tab, and a step picks a connection instead of carrying a password. “Variables” are encrypted organization values, such as an access token or a fixed number, that you use in any SOP's expressions without typing them in each step.
+
+\textbf{Path and who uses it:} “Internal SOPs” → “Connections” or “Variables”, or the “Connection” field in an “Integrations” step. Used by whoever builds SOPs and manages the organization's accounts.
+
+\begin{rcnote}[Example: Horizon]
+The administrator adds a variable named \en{HZN\_ALEPPO\_EMAIL} that holds the Aleppo Branch email, then uses it in expressions instead of typing the address in every step. When the email changes, he changes the variable's value once.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-isop-connections-en.png}
+\caption{The “Connections” tab of Internal SOPs}
+\label{fig:builder-isop-connections-screen}
+\shotnote{The image shows the “Connections” tab in the test organization, empty because no external account has been added yet. The line above the list states that saved credentials are never displayed, so a step picks a connection by its name only. ① “Connections”: the tab that keeps external service accounts. ② “Add connection”: starts linking a new account. ③ “Variables”: the neighbouring tab for the encrypted values that expressions use.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Managing connections}
+\label{tab:builder-isop-connections-parts}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Tool} & \thh{What it does}\\
+Add connection & Choose the “App”, then the “Connection method”: “Sign in to an account” in a new window, or an “API key or token”. Then type the “Connection name” and press “Save connection”.\\
+Status & “Active”, or “Reconnect required” when the sign-in expires.\\
+Test & Checks the connection and shows “Connection test passed.” or “Connection test failed.”.\\
+Update connection & Signs in again or replaces the credentials, without changing the steps that use it.\\
+Rename, Delete & After deleting, steps that use the connection need a replacement.\\
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Managing variables}
+\label{tab:builder-isop-connections-variables}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Tool} & \thh{What it does}\\
+New variable & Type the “Name” with letters, digits and underscores only, then the “Value”, then press “Create variable”. The value is never shown again after saving.\\
+Copy reference & Copies the reference to the variable so you can paste it into an expression.\\
+Rotate value & Replaces the stored value with a new one.\\
+Delete variable & Deletes the variable; expressions that use it will fail.\\
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Add a connection or variable};
+\node[stepBox,below=of a] (b) {Test it or copy its reference};
+\node[stepBox,below=of b] (c) {Pick it in the step};
+\node[stepBox,below=of c] (d) {Update it when it changes};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\end{tikzpicture}
+\rclegend
+\caption{The life of a connection or variable}
+\label{fig:builder-isop-connections-flow}
+\shotnote{The diagram shows that a connection or variable is created once and then used by many steps. So when a password or value changes, updating it in one place is enough, without opening every SOP that depends on it.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Open the “Connections” tab, press “Add connection” and choose the “App”.
+\item Choose the “Connection method”, sign in or enter the key, then type the “Connection name” and press “Save connection”.
+\item Press “Test” next to the connection, then pick it in the step's “Connection” field.
+\item To add a variable, open “Variables”, press “New variable”, then press “Copy reference” to use it in an expression.
+\end{enumerate}
+
+\textbf{Check and recovery:} the connection should show as “Active”. If “Allow pop-ups to connect this account.” appears, allow pop-ups for the site and try again. If the status becomes “Reconnect required”, press “Update connection” and sign in again.
+
+\clearpage
+\section{Testing an SOP}
+\label{sec:builder-feature-isop-testing}
+
+A test tries the draft before you publish it, and shows each step's result on the canvas. “Test” mode offers two ways: “Simulate (safe)” runs the draft without creating records or sending anything, and “Real run” runs the live version with real effects. You can also test a single step without running the whole path.
+
+\textbf{Path and who uses it:} the editor → “Test” → the “Test this draft” panel, or the step panel → “Test this step”. Used by whoever builds the SOP before every publish.
+
+\begin{rcnote}[Example: Horizon]
+The administrator writes a visit request for the Aleppo Branch in “Test data”, then runs “Simulate (safe)” (③). He sees that the path reached “Approval Request” without any real request reaching Sarah Al-Khatib.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-isop-testing-en.png}
+\caption{The “Test this draft” panel in “Test” mode}
+\label{fig:builder-isop-testing-screen}
+\shotnote{The image shows the test SOP in “Test” mode, with test data taken from a saved run and “Simulate (safe)” selected. No test was run for the capture, so the panel shows what you choose before running, not a result. ① “Test”: the mode where you try the draft. ② “Edit”: changes the test data. ③ “Simulate (safe)”: a try with no real effect. ④ “Real run”: runs the published version with real effects. ⑤ “Run simulation”: starts the try.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Parts of the test panel}
+\label{tab:builder-isop-testing-panel}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Part} & \thh{What it offers}\\
+Test data & The data the trigger starts with. Change it with “Edit”, or choose “Use the last run's data”. It must be a \en{JSON} object.\\
+What should the test do? & “Simulate (safe)”: runs the draft, and steps that talk to other systems return example data. “Real run”: runs the live version, so records are created and messages are sent.\\
+Real-run consent & A box where you confirm that the run can have real side effects and may wait for external responses. The button does not work until you confirm.\\
+Latest test & “Test passed”, “Test failed at” a given step or “The test is waiting for a response”, with the step count, duration and “Logs and details”.\\
+Test just this step & Runs only the selected step with saved test data. For Kayan steps it performs a real action, so it asks for your consent first.\\
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Prepare test data};
+\node[stepBox,below=of a] (b) {Safe simulation of the draft};
+\node[stepBox,below=of b] (c) {Read results on the steps};
+\node[stepBox,below=of c] (d) {Fix the step and test again};
+\node[stepBox,below=of d] (e) {Real run after publishing};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\end{tikzpicture}
+\rclegend
+\caption{From simulation to a real run}
+\label{fig:builder-isop-testing-flow}
+\shotnote{The diagram puts simulation first because it tests the draft itself with no effect on data or people. The real run comes last, because it works only on the live version and may create records and send real requests.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Press “Test” in the editor header, then press “Edit” in “Test data”, type the values you want to try and press “Done”.
+\item Choose “Simulate (safe)”, then press “Run simulation”.
+\item Read the result on each step, and press the failed step to see what it received and returned.
+\item Fix the step in “Build” mode, then come back and press “Run the test again”.
+\item After publishing, if you want a real try, choose “Real run”, confirm the consent, then press the real-run button.
+\end{enumerate}
+
+\textbf{Check and recovery:} “Test passed” should appear under “Latest test”. If “Steps that still need setup” appears, finish those steps first, because the test may stop at them. If “Real run” does not work, publish the SOP first and make sure the server is “Online”.
+
+\clearpage
+\section{Runs and run history}
+\label{sec:builder-feature-isop-runs}
+
+A run is one time the SOP worked from the trigger to the end, or until it stopped. The system keeps each run's status and each step's result, so you know where the SOP succeeded and where it failed or is waiting. You review runs in two places: “Runs” mode in the editor, for one SOP on its canvas, and the “Runs” tab on the home page, for all SOPs together.
+
+\textbf{Path and who uses it:} the editor → “Runs”, or “Internal SOPs” → “Runs”. Used by whoever builds the SOP and whoever follows its runs.
+
+\begin{rcnote}[Example: Horizon]
+The administrator opens the run for request \en{HZN-VR-0001} and finds it “Waiting” at “Approval Request”, with the waiting time and a link that opens the request. Once Sarah Al-Khatib approves, the run completes and Omar Haddad's task appears.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-isop-runs-en.png}
+\caption{A completed run shown in “Runs” mode}
+\label{fig:builder-isop-runs-screen}
+\shotnote{The image shows the only run of the test SOP after selecting it, with each step's result on the canvas and in the steps list. You see where the run succeeded or stopped without reading technical logs. ① “Runs”: the mode that shows this SOP's runs. ② “Live”: shows real runs without tests. ③ The “Completed” run card: select it to see the run on the canvas. ④ “Passed”: the step's result in this run. ⑤ “Test the draft with this data”: tries the draft again with this run's data.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Run statuses}
+\label{tab:builder-isop-runs-statuses}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Status} & \thh{What it means and what you can do}\\
+Queued, Running & The run started and has not finished. You can stop it with “Cancel run”.\\
+Waiting & Waiting for an approval, form, signature, task, event or time. It shows how long it has waited, the deadline, and a link to the request or related record.\\
+Completed & The run reached its end without error.\\
+Failed & It stopped at a failed step. It shows the failed step and the error, and you can run it again with “Retry run”.\\
+Cancelled & Someone stopped it before it finished.\\
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Where do you review runs?}
+\label{tab:builder-isop-runs-places}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Place} & \thh{What it shows}\\
+“Runs” mode & This SOP's runs, filtered by “All”, “Live” and “Tests”. Choosing a run shows each step's result on the canvas, such as “Passed”, “Failed”, “Waiting”, “Skipped” and “Not reached”.\\
+Selected run & The version, mode and number of passed steps, “Failed at” a step, “Open step” to read its inputs, output and error, and “Test the draft with this data”.\\
+“Runs” tab & The latest fifty runs across all SOPs, with SOP, status, mode and start-time columns, plus search and “Refresh”. Pressing a row opens “Run details”.\\
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {The event happens};
+\node[stepBox,below=of a] (b) {Queued};
+\node[stepBox,below=of b] (c) {Running};
+\node[stepBox,below=of c] (d) {Waiting};
+\node[stepBox,below=of d] (e) {Completed or Failed};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\end{tikzpicture}
+\rclegend
+\caption{The stages of a run}
+\label{fig:builder-isop-runs-flow}
+\shotnote{The diagram shows the usual route of a run with a step that waits for a person. Waiting is a normal stage, not an error, and it may last days until the response arrives or the timeout ends. A run that waits for nobody goes from running straight to its end.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Open the SOP, press “Runs” and choose “Live” to see only real runs.
+\item Choose a run from the list and review the step results on the canvas.
+\item If it failed, press “Open step” at the failed step and read the error.
+\item Fix the cause, then press “Retry run”, or “Test the draft with this data” to try the fix first.
+\end{enumerate}
+
+\textbf{Check and recovery:} after the fix, the run's status should change to “Completed”. If you find no run at all, make sure the SOP is published and not paused, and that the event actually happened after publishing. If a run is stuck waiting needlessly, press “Cancel run”.
+
+\clearpage
+\section{Responding to approval requests}
+\label{sec:builder-feature-isop-approvals}
+
+When the SOP reaches an “Approval Request” step, it creates a request that reaches the approvers, then waits for their response. The approver responds from “Requests for you”, choosing one of the request actions defined by whoever built the step. After the response, the SOP continues its path, and another SOP can start on the response or when the request finishes.
+
+\textbf{Path and who uses it:} “Requests for you” → press the request. Used by approvers; whoever built the SOP follows the request from the waiting run.
+
+\begin{rcnote}[Example: Horizon]
+Sarah Al-Khatib opens “Requests for you” and finds “Approve the Aleppo Branch visit” under “Needs you” (①); she presses “Approve” (③) and signs. The SOP then continues and creates the visit preparation task for Omar Haddad.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-isop-approvals-en.png}
+\caption{An internal SOP approval request in “Requests for you”}
+\label{fig:builder-isop-approvals-screen}
+\shotnote{The image shows the “Requests for you” page in the test organization, with a request selected that an “Approval Request” step of the test SOP created. The response buttons carry the names of the request actions set by whoever built the step, so they may differ from one SOP to another. ① “Needs you”: the tab that gathers requests waiting for your response. ② The request card: select it to see its details. ③ “Approve”: the approve action. ④ “Request changes”: an action that requires a comment.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{What happens on each response}
+\label{tab:builder-isop-approvals-responses}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Response or event} & \thh{Result}\\
+Approve & The step's ready action; it requires a signature and the comment is optional. The request continues to the next stage, if any.\\
+Request changes & The second ready action; the comment is required, and it ends the request with the request-changes outcome.\\
+Timeout & If no response arrives within the “Timeout”, the wait ends.\\
+On Approval Response & A trigger that starts another SOP with every response to the request.\\
+On Approval Finished & A trigger that starts another SOP when the request completes, is cancelled or expires.\\
+\end{tabularx}
+\end{table}
+
+\subsection{The legacy SOP approval page}
+
+Older SOPs keep a separate response page opened from the approval link. It shows the title, details, approval policy and due date, a “Comment (optional)” box of up to 500 characters, and the “Approve” and “Reject” buttons. Only one response is accepted, and the request status shows as “Pending”, “Approved”, “Rejected”, “Expired” or “Cancelled”.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Approval Request step};
+\node[stepBox,below=of a] (b) {Request in Requests for you};
+\node[stepBox,below=of b] (c) {The approver responds};
+\node[stepBox,below=of c] (d) {The outcome is recorded};
+\node[stepBox,below=of d] (e) {The SOP continues};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\end{tikzpicture}
+\rclegend
+\caption{The journey of an approval request}
+\label{fig:builder-isop-approvals-flow}
+\shotnote{The diagram shows that the SOP does not decide for the approver; it sends the request and waits. The outcome recorded by the response is what the next steps read to choose their path.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Open “Requests for you” and choose the request from the “Needs you” tab.
+\item Read the request's title, details and the attached record, if any.
+\item Press “Approve” and sign, or press “Request changes” and write the comment.
+\item As the SOP's builder, open the run in “Runs” and check that it continued after the response.
+\end{enumerate}
+
+\textbf{Check and recovery:} the request should leave “Needs you” and appear under “Completed”, and the run should continue after the response. If the approver cannot find the request, make sure they are in the approval stages and that the run actually reached the “Approval Request” step. If the response is late, send a reminder from the request.
+
+\clearpage
+\section{Review, publish and version history}
+\label{sec:builder-feature-isop-publish}
+
+An SOP runs only after it is published, and your edits do not reach the live version until you publish again. Before publishing, “Review \& publish” shows what must be fixed, the changes since the live version and the last test result. After publishing, the version is locked: runs in progress finish on their old version, and new runs use the new one.
+
+\textbf{Path and who uses it:} the editor → “Review \& publish”; version history from the SOP name in the editor header. Used by whoever builds the SOP.
+
+\begin{rcnote}[Example: Horizon]
+The administrator adds a “Send Notification” step to the live SOP, and it appears under “Changes since v1 (live)” marked “Added”. He publishes v2, and a visit request already waiting for Sarah's approval on v1 stays on v1 until it ends.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-isop-publish-en.png}
+\caption{The “Review and publish v2” panel of a published SOP with no changes}
+\label{fig:builder-isop-publish-screen}
+\shotnote{The image shows the review panel of a published SOP whose draft has not changed since v1, so the publish button is disabled with the reason below it. Nothing was published for the capture; the panel shows what you review before publishing. ① “Review \& publish”: opens the panel. ② “Checks”: the issues that block publishing, or confirmation that every step is set up. ③ “Changes since v1 (live)”: what changed from the published version. ④ “Run a test”: tests the draft before publishing. ⑤ “Publish v2”: publishes the new version.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-isop-versions-en.png}
+\caption{Version history and definition details}
+\label{fig:builder-isop-publish-versions-screen}
+\shotnote{The image shows the menu that opens from the SOP name in the editor header, with “Version history” open on the current draft and its definition snapshot. The line above the list reminds you that published versions are locked and that a run in progress stays on its version. ① The SOP name: opens this menu. ② “Version history”: lists the versions and their snapshots. ③ “Version 2”: a version in the history, here a draft. ④ “Save details”: saves the title and description after you edit them.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Sections of the review panel}
+\label{tab:builder-isop-publish-review}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Section} & \thh{What it shows}\\
+Fix before publishing & Issues that block publishing, each with a “Fix” button that opens the step. When none remain, the section is titled “Checks” and shows “Every step is set up.”\\
+Changes since the live version & Each step “Added”, “Removed”, “Renamed” or “Changed”, and changed “Paths” between steps.\\
+Last test & “The last test of this draft passed.”, its failure or “This draft hasn't been tested yet.”, with “Run a test”. You can publish without a test, but a test is recommended.\\
+Publish button & “Publish vN”. It is disabled while issues remain, while the server is offline, or when there is nothing to publish.\\
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{After publishing}
+\label{tab:builder-isop-publish-after}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Tool} & \thh{What it does}\\
+Version history & Lists the locked published versions, each with “View snapshot”. Editing after publishing creates a new draft.\\
+Pause SOP & Stops triggers from starting new runs until “Resume”, without deleting the SOP or its versions.\\
+Definition details & Edit the “Title” and “Description”, then press “Save details”.\\
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {A complete draft};
+\node[stepBox,below=of a] (b) {Review and publish};
+\node[stepBox,below=of b] (c) {Fix the issues};
+\node[stepBox,below=of c] (d) {Publish the version};
+\node[stepBox,below=of d] (e) {Locked version in history};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\end{tikzpicture}
+\rclegend
+\caption{From draft to published version}
+\label{fig:builder-isop-publish-flow}
+\shotnote{The diagram shows that each publish produces a new locked version instead of changing the previous one. So a run that started before publishing is not affected, and you can always tell which version each run used.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Press “Review \& publish” in the editor header.
+\item Press “Fix” next to each issue, fix the step, then return to the review.
+\item Review the changes since the live version, and run a test if the draft is untested.
+\item Press “Publish vN”.
+\item To review an earlier version, press the SOP name in the editor header and open “Version history”.
+\end{enumerate}
+
+\textbf{Check and recovery:} the message “vN is live” should appear, and the version badge should change to “Live · vN”. If “Nothing to publish: the draft matches the live version.” appears, nothing changed since the last publish. If “The draft changed during publication.” appears, publish again to include your latest edits.

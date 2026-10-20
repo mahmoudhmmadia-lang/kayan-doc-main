@@ -7,7 +7,7 @@ const START = { t: '^(Start|ابدأ|Complete|إكمال)$' };
 export const SHOTS = [
   { name: 'ch04-collections', url: '/tasks', marks: [
     { t: '^(Add Collection|إضافة مجموعة)$' }, { t: '^(All Tasks|جميع المهام)$' }, { t: '^(Assigned to Me|مخصص لي)$' }, { t: '^(Assignments|التكليفات)$' }] },
-  { name: 'ch04-collection-form', url: '/tasks', prep: [{ t: '^(Add Collection|إضافة مجموعة)$' }], marks: [
+  { name: 'ch04-collection-form', url: '/tasks', keepDialog: true, prep: [{ t: '^(Add Collection|إضافة مجموعة)$' }], marks: [
     { sel: '[role=dialog] input' }, { t: '^(Shared|مشتركة)$' }, { t: '^(Allowed task types|أنواع المهام المسموح بها)$', dom: 0 }, { t: '^(Create|إنشاء)$' }] },
   { name: 'ch04-board', url: COL, prep: [tab('Board', 'لوحة')], marks: [
     { t: '^(Board|لوحة)$' }, { t: '^(To Do|للعمل)$', dom: 0 }, { t: '^(Add filter|إضافة فلتر)$' }, { t: '^(Add Task|إضافة مهمة)$' }] },

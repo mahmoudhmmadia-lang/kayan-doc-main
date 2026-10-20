@@ -2,12 +2,12 @@
 \section{Services}
 \label{sec:builder-feature-services}
 
-A service is what the public sees on the organization's portal, such as “Certificate request” or “Book an appointment”. Each service holds one or more forms and decides how it is delivered and who may apply. So a form reaches applicants only through a service; a form that belongs to no service stays an “internal form” for staff only.
+A service is what applicants see on the organization's portal, such as “Certificate request” or “Book an appointment”. Each service holds one or more forms and decides how it is delivered and who may apply. So a form reaches applicants only through a service; a form that belongs to no service stays an internal form that only staff use. The “Services” page gathers every service in one table, and from it you create a new service and open the intake desk and service performance.
 
-\textbf{Path and who uses it:} “Builder” → “Core” → “Services”. Used by those who manage the organization's public services.
+\textbf{Path and who uses it:} “Builder” → “Core” → “Services”. Used by whoever manages the organization's public services, when creating a service or reviewing the state of existing ones.
 
 \begin{rcnote}[Example: Horizon]
-Horizon accepts maintenance requests from its Aleppo customers, so the system administrator creates a “Maintenance request” service that starts with a published form and makes it available to registered accounts only. The “Branch visit request” form stays an internal form. They start the service from ①, and the visit form stays in ④.
+Horizon's system administrator presses “New service” ①, names the service “Branch visit request” and chooses “Hybrid”, because the request starts on the portal and the visit itself happens at the Aleppo Branch. They then choose the published “Branch visit request” form, while Horizon's other forms stay under “Internal forms” ④.
 \end{rcnote}
 
 \begin{figure}[H]
@@ -18,19 +18,40 @@ Horizon accepts maintenance requests from its Aleppo customers, so the system ad
 \shotnote{The page lists the services shown on the portal and their state, then the internal forms that belong to no service. ① “New service”: starts a service around a published form. ② “Intake desk”: registers an in-person request. ③ “Service performance”: shows how requests move. ④ “Internal forms”: forms the public does not see.}
 \end{figure}
 
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-services-new-en.png}
+\caption{The “New service” dialog}
+\label{fig:builder-services-new-screen}
+\shotnote{The screen shows the “New service” dialog before it is filled in, in the test organization, with the four delivery modes. It shows that creating a service asks for only three things; the other settings are completed later on the service page. ① “Service name on the portal”: the name applicants see. ② “How the service is delivered”: decides whether the service starts on the portal or at a center. ③ “Form the applicant starts with”: the list shows only published forms that belong to no service. ④ “Create service”: creates the service as a draft and opens its page.}
+\end{figure}
 
 \begin{table}[H]
 \centering
-\caption{What do you find here?}
+\caption{What do you find on the “Services” page?}
 \label{tab:builder-services-data}
 \begin{tabularx}{\linewidth}{R{3.6cm} Y}
 \rcHeaderRow
 \thh{Part} & \thh{Content and action}\\
-Services & The services table with “Delivery”, “Who applies”, “Verification”, forms and status, filtered by “Published”, “Paused” or “Draft”.\\
-New service & Asks for the service name and the “Form the applicant starts with”, plus an optional staff record form.\\
-Internal forms & Forms that belong to no service. “Make available on the portal” turns a published form into a new service or a step in an existing one.\\
-Service page & Tabs “Overview”, “Fees”, “Profile”, “Delivery \& eligibility” and “Path \& forms”.\\
-Intake desk and Service performance & Register an in-person request at a service center, and follow how requests move and where they wait.\\
+Services table & Shows each service's “Delivery”, “Who applies”, “Verification”, number of “Forms” and “Status”; pressing a row opens the service page.\\
+Filter by status & Shows “All”, “Published”, “Paused” or “Draft” with a count for each. Published services show on the portal right away; paused ones show with their message.\\
+From form settings & A badge for a form that is public with its own settings and no service; “Create service” turns it into a service you manage here.\\
+Internal forms & Forms that belong to no service, each with a “Make available on the portal” button that works once the form is published.\\
+New service & A dialog that asks for the “Service name on the portal”, “How the service is delivered” and the form the service starts with; the service is then created as a draft and its page opens.\\
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Delivery modes}
+\label{tab:builder-services-modes}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Mode} & \thh{What it means and what it asks for at creation}\\
+Fully online & Applicants apply, pay and receive the result on the portal, and every path step is a form. It asks for the “Form the applicant starts with”; only published forms that belong to no service are listed.\\
+Hybrid & The request starts on the portal and some steps happen in person at a service center. It asks for the same starting form.\\
+In person with online tracking & The request is made at a center and the applicant tracks it on the portal by request number and phone. You may choose a “Staff record form (optional)”.\\
+Traditional & No requests on the portal: it shows the guide and where to apply, and staff can still record requests internally. The form is optional here too.\\
 \end{tabularx}
 \end{table}
 
@@ -46,15 +67,750 @@ Intake desk and Service performance & Register an in-person request at a service
 \rclegend
 \caption{What a service holds}
 \label{fig:builder-services-model}
-\shotnote{The figure shows that a service needs a published starting form the applicant fills in, while the other forms are optional, such as later path steps or a follow-up form requested at a given status. So publish the form in the form builder first, then build the service around it.}
+\shotnote{The figure shows that a service starting on the portal needs a published starting form the applicant fills in, while the other forms are optional, such as later path steps or a follow-up form requested at a given status. So publish the form in the form builder first, then build the service around it.}
 \end{figure}
 
 \subsection{Steps and check}
 \begin{enumerate}
 \item Publish the form the applicant will start with on the “Forms” page.
-\item Open “Services”, press “New service”, choose the form, then press “Create service”.
-\item Complete the “Profile” the applicant reads, and set who may apply under “Delivery \& eligibility”.
-\item Publish the service, then press “View on portal” to see it as the applicant does.
+\item Open “Services”, press “New service” and type the “Service name on the portal”.
+\item Choose “How the service is delivered”, then choose the form from the list and press “Create service”.
+\item Complete the service page tabs: “Profile”, “Delivery \& eligibility”, “Path \& forms” and “Fees”.
+\item Set the “Service status” to “Published”, then press “View on portal” to see it as the applicant does.
 \end{enumerate}
 
-\textbf{Check and recovery:} a published service should appear on the portal right away. If it does not, make sure it is not a “Draft”, because “Drafts are not on the portal”. To stop requests for a while, set it to “Paused” with a message to applicants instead of deleting it.
+\textbf{Check and recovery:} the new service appears in the table as “Draft” and is not on the portal until you publish it, because “Drafts are not on the portal”. If your form is missing from the creation list, make sure it is published and does not belong to another service. To stop requests for a while, set the service to “Paused” with a message to applicants instead of deleting it.
+
+\clearpage
+\section{Service overview}
+\label{sec:builder-feature-services-overview}
+
+Every service opens on the “Overview” tab, a summary that answers three questions: is the service ready, how is it doing, and what needs you now. It starts with the “Service readiness” list, which checks each part of the setup, then the last 30 days' numbers, then late requests. So return to it each time you open the service to know where to start.
+
+\textbf{Path and who uses it:} “Services” → press the service → “Overview”. Used by whoever builds the service to finish its setup, and by whoever follows it to see which requests are late.
+
+\begin{rcnote}[Example: Horizon]
+The system administrator opens the “Branch visit request” service and sees in “Service readiness” ① that “Fees” are not set up and “Center intake” is off. They press “Turn on” next to center intake to go straight to the “Delivery \& eligibility” tab.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-services-overview-en.png}
+\caption{The “Overview” tab of a service in the test organization}
+\label{fig:builder-services-overview-screen}
+\shotnote{The screen shows a published hybrid service in the test organization with all seven readiness items complete, its figures for the last 30 days and one request waiting on its applicant. It shows that this tab brings setup state and request state together, so you see both what to finish and what to follow up. ① “Service readiness”: the items that check the service setup, with a count of those done. ② “Last 30 days”: request figures for the past month. ③ “Needs your attention”: late requests and those waiting on their applicants. ④ “Full performance”: opens the “Service performance” page.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{“Service readiness” checks}
+\label{tab:builder-services-overview-checks}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Check} & \thh{When it is done}\\
+Profile and guide & When the service has a description, plus a processing time or at least one required document in the guide.\\
+Path & When the path has at least one step; the number of steps is shown.\\
+Access & When the service is “Published”; the check also says whether it needs an account and which verification level applies.\\
+Fees & When fee items are on with at least one item. If fees are only written as text in the guide, the check asks you to turn them into items.\\
+Request handling & When the review workspace and applicant updates are on for the starting form.\\
+Follow-up forms & When follow-up forms are on; the number of active rules is shown.\\
+Center intake & Shown only for services with in-person steps; done when center staff register walk-in requests.\\
+\end{tabularx}
+\end{table}
+
+Next to each unfinished check is a link to the tab that fixes it, such as “Complete”, “Open fees”, “Set up” or “Turn on”.
+
+\begin{table}[H]
+\centering
+\caption{Other parts of “Overview”}
+\label{tab:builder-services-overview-parts}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Part} & \thh{What it shows}\\
+Last 30 days & Four figures: “New requests” against the period before, “On time”, “Average time to decision” in working days, and “Applicant rating” out of 5. The “Full performance” link opens “Service performance”.\\
+Needs your attention & Up to five late requests with the stage they are late in and by how many days, and the number of requests waiting on their applicant.\\
+As the portal shows it & A preview of the service card as applicants see it, or a note that drafts do not appear on the portal.\\
+Service centers & The centers the service uses, with their opening hours.\\
+Change history & Who changed what and when, such as “Changed fees” or “Created the service”.\\
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Read service readiness};
+\node[stepBox,below=of a] (b) {Open the missing tab};
+\node[stepBox,below=of b] (c) {Save and come back};
+\node[stepBox,below=of c] (d) {Review Needs your attention};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\end{tikzpicture}
+\rclegend
+\caption{Using “Overview” on every visit to the service}
+\label{fig:builder-services-overview-flow}
+\shotnote{The diagram starts with readiness because it points to the tab that still needs work; after saving you come back and see the check done. “Needs your attention” comes last because it concerns running requests, not the service's setup.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Open “Services” and press the service; it opens on “Overview”.
+\item Read the counter next to “Service readiness”, such as “5 of 7 done”.
+\item Press the link next to the first unfinished check, complete the tab it opens, then press “Save and apply”.
+\item Return to “Overview”, review “Needs your attention”, and press “Open” next to any late request to handle it.
+\end{enumerate}
+
+\textbf{Check and recovery:} after saving, the check turns “Done” and the counter goes up. If “The numbers could not be loaded.” appears, reload the page; this does not affect the service's setup. A service marked “From form settings” shows no numbers until you turn it into a service.
+
+\clearpage
+\section{Profile and service guide}
+\label{sec:builder-feature-services-profile}
+
+The “Profile” tab is what applicants read before they start: the service name and description, and its guide with processing time, fees and required documents. The clearer the guide, the fewer incomplete requests and repeated questions. The tab also sets the service's portal address and where it appears among apps and sections.
+
+\textbf{Path and who uses it:} “Services” → press the service → “Profile”. Filled in by whoever builds the service, and updated by whoever answers applicants' questions when a procedure changes.
+
+\begin{rcnote}[Example: Horizon]
+The system administrator writes “3 working days” in “Processing time” and uses “Add a document” ③ to add a copy of the ID as a required document. They then choose the “Branch services” app in “Place on the portal” ④, so customers find the service there.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-services-profile-en.png}
+\caption{The “Profile” tab and the service guide}
+\label{fig:builder-services-profile-screen}
+\shotnote{The screen shows the “Profile” tab of a service in the test organization, with the “At a glance” and “Required documents” fields still empty. It shows that everything applicants read before they start is written here and goes live on the portal with one button. ① “Service name”: the required name applicants see. ② “Portal address”: an optional readable link for the service page. ③ “Add a document”: adds a required document marked “Required” or “When needed”. ④ “Place on the portal”: the app and section the service is listed under. ⑤ “Save and apply”: saves the profile and stays disabled until you change something.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Sections of the “Profile” tab}
+\label{tab:builder-services-profile-parts}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Section} & \thh{What you write in it}\\
+Profile & The required “Service name”, and the “Description” saying who the service is for and what the applicant gets.\\
+Portal address & The readable link of the service page: 3 to 80 lower-case latin letters or digits with hyphens, such as branch-visit. Links by id keep working.\\
+Service guide & “At a glance”, shown as tiles under the title: “Processing time”, “Fees”, “Who it is for” and “Minutes to fill in”. Then “Who can apply”, “Required documents”, “After applying” and “Service guide (PDF)”.\\
+Place on the portal & The “App” and “Section” the service is listed under.\\
+\end{tabularx}
+\end{table}
+
+Each document under “Required documents” is either “Required” or “When needed”. This list matters later, because the intake desk shows it to center staff to tick what the applicant handed in. Leave out what does not apply to your service.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Name and description};
+\node[stepBox,below=of a] (b) {At a glance};
+\node[stepBox,below=of b] (c) {Required documents};
+\node[stepBox,below=of c] (d) {Place on the portal};
+\node[stepBox,below=of d] (e) {Save and apply};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\end{tikzpicture}
+\rclegend
+\caption{Completing the service profile}
+\label{fig:builder-services-profile-flow}
+\shotnote{The diagram orders the sections as applicants read them: name and description first, then time and fees, then what they must prepare. It ends with saving because changes apply on the portal at once, without republishing any form.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Open the service and press the “Profile” tab.
+\item Type the “Service name” and “Description”, and add a “Portal address” if you want a readable link.
+\item Fill in “At a glance”, then add documents with “Add a document” and mark each “Required” or “When needed”.
+\item Choose the “App” and “Section” under “Place on the portal”, then press “Save and apply”.
+\end{enumerate}
+
+\textbf{Check and recovery:} the save bar changes to “No unsaved changes”, and the “Profile and guide” check is done in “Overview”. If the save button stays disabled, make sure the “Service name” is not empty and the address matches the rule written under it. If “Another service already uses this portal address.” appears, choose a different address.
+
+\clearpage
+\section{Delivery and eligibility}
+\label{sec:builder-feature-services-delivery}
+
+The “Delivery \& eligibility” tab sets how the service is delivered, when it is available, and who may apply on what conditions. It stops requests that do not qualify before they start, instead of rejecting them after they arrive. The sections shown depend on the delivery mode: a service starting on the portal shows the eligibility and verification sections, and a service with in-person steps shows service centers, appointments and intake.
+
+\textbf{Path and who uses it:} “Services” → press the service → “Delivery \& eligibility”. Set by whoever builds the service, who comes back to pause it or change its conditions.
+
+\begin{rcnote}[Example: Horizon]
+For the “Branch visit request” service, the system administrator chooses “Registered accounts only” ③ and sets “Open requests per applicant” to one, so a customer does not repeat the same request. They then choose the Aleppo Branch under service centers and turn on “Center intake”.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-services-delivery-en.png}
+\caption{The “Delivery & eligibility” tab of a hybrid service}
+\label{fig:builder-services-delivery-screen}
+\shotnote{The screen shows the “Delivery & eligibility” tab of a hybrid service in the test organization, so it holds both the eligibility and verification sections for starting on the portal and the centers and intake sections for in-person steps. It shows that the sections are set from top to bottom and then saved together. ① “How the service is delivered”: the four modes, which decide the sections shown after them. ② “Availability”: the service status and application window. ③ “Who can apply”: anyone, or registered accounts only. ④ “Manage centers”: opens the “Service centers” dialog. ⑤ “Save and apply”: applies the settings on the portal at once.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Delivery and availability sections}
+\label{tab:builder-services-delivery-parts}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Section} & \thh{What you set in it}\\
+How the service is delivered & One of the four modes. If the current path does not fit the new mode, an “Adjust the path” button appears, and the mode applies only once the adjusted path is saved.\\
+Availability & “Service status”: “Published”, “Paused” with a “Message to applicants”, or “Draft”. And the “Application window”: “Always open” or “During a period” between two dates.\\
+Who can apply & For services starting on the portal: “Anyone” without an account, or “Registered accounts only”.\\
+Required verification level & For services starting on the portal: “No verification” or a level defined in settings, then “When the level is required”: “When the request starts” or “When the request is submitted”.\\
+Application limits & “Open requests per applicant”, up to 9, and “Total requests”, after which the service stops accepting portal requests.\\
+Service centers and appointments & For services with in-person steps: the centers where they happen, and whether “Appointment required” applies.\\
+Center intake & Lets center staff register walk-in requests and print a receipt, with an “Open the intake desk” link.\\
+Request handling & “Review workspace and applicant updates”: off by default; when on, staff handle requests in the review workspace and applicants receive automatic updates.\\
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Eligibility sections for services that start on the portal}
+\label{tab:builder-services-delivery-eligibility}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Section} & \thh{What you set in it}\\
+Who applies & “Individuals”, “Companies” or “Individuals and companies”. The company options need company profiles turned on in “Company profile settings”.\\
+Company requirements & “Only companies staff have verified”, and “Who applies for the company”: “Any registered representative” or “The authorized signatory only”.\\
+Conditions & Turn them on with “Use conditions”, then add with “Add a condition” rules checked from the applicant's or the company's profile before the request starts, such as “age at least”. Write a “Message to applicants who do not qualify”.\\
+\end{tabularx}
+\end{table}
+
+\begin{rcwarn}[A staff-verified level cannot be required at start]
+If the chosen level includes a field staff verify from an existing request and you require it “When the request starts”, a new applicant could never begin the service. A warning then appears with a “Require it at submit” button; press it before saving.
+\end{rcwarn}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {How the service is delivered};
+\node[stepBox,below=of a] (b) {Availability};
+\node[stepBox,below=of b] (c) {Who applies and conditions};
+\node[stepBox,below=of c] (d) {Centers and intake};
+\node[stepBox,below=of d] (e) {Save and apply};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\end{tikzpicture}
+\rclegend
+\caption{Setting delivery and eligibility}
+\label{fig:builder-services-delivery-flow}
+\shotnote{The delivery mode comes first because it decides which sections follow: eligibility and verification for services that start on the portal, centers and intake for services with in-person steps. All settings apply on the portal as soon as you save, and requests already submitted are not affected.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Open the service, press “Delivery \& eligibility”, and confirm “How the service is delivered”.
+\item Under “Availability”, choose the “Service status” and “Application window”.
+\item Set “Who can apply” and “Who applies”, and add “Conditions” if you need them.
+\item Choose service centers and turn on “Center intake” if the service has in-person steps, then set the “Application limits”.
+\item Press “Save and apply”.
+\end{enumerate}
+
+\textbf{Check and recovery:} “Saved — live on the portal now” appears, and the “As the portal shows it” preview reflects your choices. If the save button stays disabled after changing the mode, press “Adjust the path” and save a path that fits it. If “The window must end after it opens.” appears, correct the “To” date.
+
+\clearpage
+\section{Service centers}
+\label{sec:builder-feature-services-centers}
+
+Service centers are where applicants go for in-person steps, such as handing in originals or collecting the result. Centers are defined once for the whole organization, then each service chooses the ones it needs, and they show on the portal with the address and opening hours. Each center also sets the staff whose intake desk opens on it.
+
+\textbf{Path and who uses it:} “Services” → press a service whose mode is not “Fully online” → “Delivery \& eligibility” → “Manage centers”. Set by the services administrator when a center opens or its hours or staff change.
+
+\begin{rcnote}[Example: Horizon]
+The system administrator presses “Add center” ① and adds a center named “Aleppo Branch” ② and another named “Head Office, Damascus”, each with its address and opening hours. They then add Omar Haddad to “Staff at this center” ③ for the Aleppo Branch, so his intake desk opens on that branch.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-services-centers-en.png}
+\caption{The “Service centers” dialog}
+\label{fig:builder-services-centers-screen}
+\shotnote{The screen shows the “Service centers” dialog in the test organization with one center that has a name, opening hours and one staff member. The line at the bottom reminds you that changes apply to every service that uses these centers, not only to the open service. ① “Add center”: adds a new center card. ② “Name”: the required center name applicants see. ③ “Staff at this center”: whose intake desk opens on this center. ④ “Only assigned staff use a center's intake desk”: limits each center's desk to its own staff. ⑤ “Save”: saves the centers for the whole organization.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{What you set in the “Service centers” dialog}
+\label{tab:builder-services-centers-parts}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Field or option} & \thh{What it means}\\
+Name & The center name applicants see; it is required.\\
+Address and opening hours & Shown on the portal, such as “Sunday–Thursday, 8:00–14:00”; the hours are printed on the walk-in receipt.\\
+Staff at this center & The staff whose intake desk opens on this center.\\
+Only assigned staff use a center's intake desk & Off: everyone who can start a service's form uses every center's desk. On: staff see only their centers; service administrators see all.\\
+\end{tabularx}
+\end{table}
+
+\begin{rcwarn}[Changes reach every service]
+Changes to centers apply to every service that uses them, so do not remove a center or change its hours before checking the services linked to it.
+\end{rcwarn}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Manage centers};
+\node[stepBox,below=of a] (b) {Add a center and its details};
+\node[stepBox,below=of b] (c) {Choose the center staff};
+\node[stepBox,below=of c] (d) {Choose it in the service};
+\node[stepBox,below=of d] (e) {Save and apply};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\end{tikzpicture}
+\rclegend
+\caption{Setting up a service center and linking it to the service}
+\label{fig:builder-services-centers-flow}
+\shotnote{The diagram separates two saves: the dialog saves the centers for the whole organization with “Save”, then the service chooses its centers and saves them with “Save and apply”. Creating a center alone does not make it appear in a particular service.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Open “Delivery \& eligibility” in a service with in-person steps, and press “Manage centers”.
+\item Press “Add center” and type the “Name”, “Address” and “Opening hours”.
+\item Choose the “Staff at this center”, decide whether to turn on “Only assigned staff use a center's intake desk”, then press “Save”.
+\item Choose the center under “Where in-person steps happen”, then press “Save and apply”.
+\end{enumerate}
+
+\textbf{Check and recovery:} the center appears in the “As the portal shows it” preview and in the “Service centers” card on “Overview”. If a staff member sees “You are not assigned to a service center” at the intake desk, add them to “Staff at this center”. If the center is not saved, make sure every center has a name.
+
+\clearpage
+\section{Path and forms}
+\label{sec:builder-feature-services-path}
+
+The “Path \& forms” tab draws what a request goes through, in order: the starting step, then the next steps and where each happens. A step can be a form the applicant fills in on the portal, or an in-person step at a center that staff record. The tab also holds forms the applicant can start at any time outside the path, and follow-up forms requested from them at a given status.
+
+\textbf{Path and who uses it:} “Services” → press the service → “Path \& forms”. Built by the service administrator after publishing the forms it will use.
+
+\begin{rcnote}[Example: Horizon]
+The “Branch visit request” path starts with the request form on the portal; the system administrator then presses “Add step” ① and adds an in-person step named “Attend the visit” ②, available when the request is “Approved”. They turn on “Appointment required” for it, so it shows a “By appointment” badge.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-services-path-en.png}
+\caption{The “Path & forms” tab}
+\label{fig:builder-services-path-screen}
+\shotnote{The screen shows the path of a hybrid service in the test organization: the portal start step with its “Starting point” badge, then an in-person step “By appointment”, plus one follow-up rule. It shows that the selected step is edited in the side panel, and that the in-person option is disabled for the start step in this mode. ① “Add step”: adds a step at the end of the path. ② “Step name”: the name applicants see in “My requests”. ③ “Step type”: a form on the portal or an in-person step at a center. ④ “Add a follow-up form”: adds a rule that asks for a form at a given status. ⑤ “Save path”: saves the steps and rules.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Step settings}
+\label{tab:builder-services-path-step}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Setting} & \thh{What it means}\\
+Step name & The name the applicant sees in “My requests”, such as “Next step: …”.\\
+Step type & “Form on the portal”, which the applicant fills in and sends, or “In-person step at a center”, where the applicant comes in and staff record what happened.\\
+Form or staff record & A portal step takes a published form, which can be left empty when the step is completed in the same request. An in-person step takes a “Staff record (optional)”.\\
+Available when & “After the previous step”, or when the request reaches one of the starting form's statuses.\\
+Appointment required & For in-person steps: the applicant books an appointment at one of the service centers.\\
+\end{tabularx}
+\end{table}
+
+The first step carries a “Starting point” badge and cannot be removed in services that start on the portal. A service holds up to 20 steps, and a form appears only once in it. A “Fully online” service has no in-person steps, and a traditional service starts at the center.
+
+\begin{table}[H]
+\centering
+\caption{Other sections of the tab}
+\label{tab:builder-services-path-more}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Section} & \thh{What it offers}\\
+Forms outside the path & For services that start on the portal: published forms the applicant can start at any time, such as a renewal, added with “Add form”.\\
+Follow-up forms & Turn them on with “Use follow-up forms”, then add a rule: “Status that asks for the form”, “Form”, “Days to fill it”, “After the applicant sends it, move the request to” and “Tell the applicant”. The answers are kept with the original request.\\
+As applicants see it in “My requests” & A preview of the selected step as it appears on the applicant's request.\\
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Starting point};
+\node[stepBox,below=of a] (b) {Add step};
+\node[stepBox,below=of b] (c) {Step type and form};
+\node[stepBox,below=of c] (d) {Available when};
+\node[stepBox,below=of d] (e) {Save path};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\end{tikzpicture}
+\rclegend
+\caption{Building the service path}
+\label{fig:builder-services-path-flow}
+\shotnote{The path always starts from the starting point set when the service was created, and steps are added after it one by one. “Available when” relies on the starting form's statuses, so set up its lifecycle before building a path that waits for a status.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Open the service, press “Path \& forms”, and review the “Starting point” step.
+\item Press “Add step”, type the “Step name” and choose the “Step type”.
+\item Choose the “Form” or “Staff record (optional)”, then set “Available when”, and turn on “Appointment required” if needed.
+\item Order the steps with “Move up” and “Move down”, and add follow-up forms if you need them.
+\item Press “Save path”.
+\end{enumerate}
+
+\textbf{Check and recovery:} the save bar changes to “No unsaved changes”, and the number of steps shows in “Service readiness”. If saving is disabled with a message such as “A fully online service cannot have in-person steps.”, change the step type or the delivery mode. If “The starting form has no statuses yet” appears, add the statuses in the form's “Lifecycle”.
+
+\clearpage
+\section{Fees}
+\label{sec:builder-feature-services-fees}
+
+The “Fees” tab turns what a service costs into clear items, so the portal shows them before the applicant starts and each request knows what it owes and when. An item can depend on an answer in the form, and an exemption can waive it for applicants who bring proof. The tab also sets what happens to the request when a fee falls due, and the days to pay.
+
+\textbf{Path and who uses it:} “Services” → press the service → “Fees”. Set by whoever builds the service together with the finance owner.
+
+\begin{rcnote}[Example: Horizon]
+The system administrator turns on “Use fee items” and uses “Add an item” ① to add an item named “Visit fee”, due “At the center visit”. The customer sees the fee on the service page, and Omar Haddad records the receipt number when he takes it at the Aleppo Branch.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-services-fees-en.png}
+\caption{The “Fees” tab}
+\label{fig:builder-services-fees-screen}
+\shotnote{The screen shows the fees of a service in the test organization: two items with their amounts and due points, one exemption, and payment at a service center because online payment is “Not connected”. The side preview shows the total as applicants see it, so you can check each change before saving. ① “Add an item”: adds a new fee. ② “Add an exemption”: adds a group exempt from an existing item. ③ “When a fee falls due”: the status the request moves to and the days to pay. ④ “Save and apply”: saves the fees, which apply to what falls due from now.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{“Fee items” columns}
+\label{tab:builder-services-fees-items}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Column} & \thh{What it means}\\
+Item & The fee name, such as “Licence fee”; it is required.\\
+Amount & The item's value in the service currency; it is required.\\
+Due & “When sent”, “After approval” or “At the center visit”.\\
+Applies & “Always”, or a condition that applies the item for given answers in a choice field of the form, chosen under “Answers that make the item apply”.\\
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Other “Fees” sections}
+\label{tab:builder-services-fees-more}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Section} & \thh{What it offers}\\
+Exemptions & “Who is exempt”, “Exempt from” and “Proof”, with “Staff approve the exemption” when the reviewer grants it after checking the document.\\
+Payment & “At a service center”, where staff record the receipt number on the request. “Online payment” shows “Not connected” until a payment provider is connected.\\
+When a fee falls due & “Move the request to”, so the applicant sees the request waiting for payment, and “Days to pay”.\\
+On the portal & A preview of the items and total as applicants see them.\\
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Use fee items};
+\node[stepBox,below=of a] (b) {Add the items};
+\node[stepBox,below=of b] (c) {Exemptions};
+\node[stepBox,below=of c] (d) {When a fee falls due};
+\node[stepBox,below=of d] (e) {Save and apply};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\end{tikzpicture}
+\rclegend
+\caption{Setting up service fees}
+\label{fig:builder-services-fees-flow}
+\shotnote{Items come before exemptions because an exemption points to existing items and cannot be added before them. Requests already sent keep the fees they owe; changes apply to what falls due from now.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Open the service, press “Fees”, and turn on “Use fee items”.
+\item Press “Add an item”, type the “Item name” and amount, choose when it is due and when it applies, then press “Done”.
+\item Add exemptions with “Add an exemption” if any apply.
+\item Under “When a fee falls due”, choose the status the request moves to and the “Days to pay”.
+\item Press “Save and apply”, and review the total in “On the portal”.
+\end{enumerate}
+
+\textbf{Check and recovery:} the number of items shows in the “Fees” check of “Service readiness”. If saving stays disabled, read “Every item needs a name and an amount.” and complete the missing item. If “Add an exemption” is disabled, add at least one item first.
+
+\clearpage
+\section{Making a form available on the portal}
+\label{sec:builder-feature-services-publish}
+
+You may have a published internal form that should reach applicants. Instead of building a service from scratch, “Make available on the portal” turns it in one step into a new service, or adds it as a step to an existing one. A new service starts with your organization defaults, which you can change on the service page at any time without republishing the form.
+
+\textbf{Path and who uses it:} “Services” → “Internal forms” → “Make available on the portal”, or from the “Service” tab in the form settings. Used by the services administrator when an internal form becomes a public service.
+
+\begin{rcnote}[Example: Horizon]
+Horizon has a published internal form for renewing a visit request, so the system administrator presses “Make available on the portal” and chooses “A step in an existing service”. They then choose the “Branch visit request” service and add it as “A form outside the path”, so customers can start it at any time.
+\end{rcnote}
+
+\begin{table}[H]
+\centering
+\caption{Options in the availability dialog}
+\label{tab:builder-services-publish-options}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Option} & \thh{What it means}\\
+New service & The simplest case: one service for this form. You type the “Service name on the portal”.\\
+Who fills in this form & “The applicant, on the portal”, which creates a “Fully online” service, or “Staff, at a service center”, which creates an “In person with online tracking” service.\\
+Publish the service on the portal now & When ticked the button reads “Create and publish service”; when cleared it reads “Create as draft”.\\
+A step in an existing service & Choose the “Service” among services that start online, then “Added as”: “A form outside the path” or “A step in the path”, and press “Add to service”.\\
+\end{tabularx}
+\end{table}
+
+A new service shows default settings: anyone can apply, no verification level, always open, no limits. A form added to an existing service follows that service's eligibility and verification. In the services table you may also find a form marked “From form settings”, which is public with its own settings; press “Create service” to manage it like the other services.
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Publish the form in the builder};
+\node[stepBox,below=of a] (b) {Make available on the portal};
+\node[stepBox,below=of b] (c) {New or existing service};
+\node[stepBox,below=of c] (d) {Create or add};
+\node[stepBox,below=of d] (e) {Review the service page};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\end{tikzpicture}
+\rclegend
+\caption{Turning an internal form into a service}
+\label{fig:builder-services-publish-flow}
+\shotnote{The diagram starts with publishing the form because the availability button stays disabled until then. It ends on the service page because the defaults only suit a start, so review eligibility and the guide before relying on the service.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Open “Services” and find the form under “Internal forms”.
+\item Press “Make available on the portal”, and choose “New service” or “A step in an existing service”.
+\item For a new service: type the name, choose “Who fills in this form”, and decide whether to tick “Publish the service on the portal now”.
+\item For an existing service: choose the “Service” and “Added as”, then press “Add to service”.
+\end{enumerate}
+
+\textbf{Check and recovery:} the service page opens directly and the form leaves “Internal forms”. If the button is disabled with the hint “Publish the form in the builder first”, publish the form and come back. If “No services that start online yet.” appears, create a new service instead of adding to one.
+
+\clearpage
+\section{The service in form settings}
+\label{sec:builder-feature-services-form-settings}
+
+You do not need to leave the form builder to see how a form relates to services. The form settings have a “Service” tab that shows the service the form belongs to and its role there, what the service sets for it, and whether the two fit. The tab reminds you of an important rule: service settings apply at once from the service page, while form changes apply after you publish the form.
+
+\textbf{Path and who uses it:} “Forms” → open the form → “Settings” → “Service” in the “Form Settings” dialog. Used by whoever edits the form, to make sure the edit does not break the service path.
+
+\begin{rcnote}[Example: Horizon]
+The system administrator opens the “Service” tab ① of the “Branch visit request” form and sees it is “Step 1 in the path” with a “Starting point” badge. Under “Form and service fit” ④ they read that the statuses the path depends on exist in this form.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-services-form-settings-en.png}
+\caption{The “Service” tab in “Form Settings”}
+\label{fig:builder-services-form-settings-screen}
+\shotnote{The screen shows the “Service” tab of the start form of a hybrid service in the test organization, with the form's role “Step 1 in the path” and the service settings that apply to it. It shows that these settings are “Read only”: you change them on the service page, not in the form builder. ① “Service”: the tab in the settings list. ② “Open service”: takes you to the service page to edit it. ③ “What the service sets for this form”: availability, who applies, verification, limits and centers. ④ “Form and service fit”: checks of the statuses the path depends on.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{What the “Service” tab shows}
+\label{tab:builder-services-form-settings-parts}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Part} & \thh{What it shows or allows}\\
+The service and the form's role & The service name and the form's role, such as “Step 1 in the path” or “A form outside the path, available at any time”, with “Path \& forms” and “Open service” links.\\
+What the service sets for this form & “Availability”, “Who applies”, “Verification level”, “Open requests”, “In-person steps” and “Service centers”, all “Read only · edit on the service”.\\
+Form and service fit & Checks that the statuses the path waits for exist in the form, and that the form has statuses so applicants see where their request is.\\
+Remove from service & Makes the form internal and takes it off the portal. It is disabled for the starting form of services that start on the portal until you change the path.\\
+Internal form & For a form that belongs to no service, with a “Make available on the portal” button.\\
+Request handling & The “Review workspace and applicant updates” switch for this form, and the “Close the request from correspondence” switch.\\
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Open the Service tab};
+\node[stepBox,below=of a] (b) {Read the form's role};
+\node[stepBox,below=of b] (c) {Review the fit};
+\node[stepBox,below=of c] (d) {Fix in the form or the service};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\end{tikzpicture}
+\rclegend
+\caption{Checking how a form relates to its service}
+\label{fig:builder-services-form-settings-flow}
+\shotnote{The diagram puts the fit review before any fix, because the warning tells you where the solution lies: either the form's statuses in “Lifecycle” or the service steps in “Path \& forms”. Service settings are not edited from this tab; it is read only.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Open the form in the form builder, press “Settings”, then “Service”.
+\item Read the form's role in the service and what the service sets for it.
+\item Review “Form and service fit”, and fix any warning in “Lifecycle” or in “Path \& forms”.
+\item If the form belongs to no service, press “Make available on the portal” to turn it into one.
+\end{enumerate}
+
+\textbf{Check and recovery:} every check under “Form and service fit” should show a tick. If “Save the form first.” appears, save the new form and open the tab again. If “Remove from service” is disabled, change the starting form in “Path \& forms” first.
+
+\clearpage
+\section{Intake desk}
+\label{sec:builder-feature-services-intake}
+
+The intake desk is the page where center staff register the request of an applicant who came in person. They choose the service, find the applicant's account or register them without one, tick the documents received, then fill in the form with the applicant and print a receipt with the request number. The walk-in request then follows the same tracking as portal requests.
+
+\textbf{Path and who uses it:} “Services” → “Intake desk”. Used daily by service center staff; it lists only services that turned on “Center intake”.
+
+\begin{rcnote}[Example: Horizon]
+A customer without a portal account comes to the Aleppo Branch, so Omar Haddad presses “New walk-in request” ②, chooses “Register without an account” and types their name and phone. He then fills in the form with them and presses “Register and print receipt”.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-services-intake-en.png}
+\caption{The “Intake desk” page}
+\label{fig:builder-services-intake-screen}
+\shotnote{The screen shows the intake desk in the test organization on “Governorate service center”, with no walk-in request registered today, so the figures are zero. The center's service list shows one service taking requests and another turned off, with a link to turn it on. ① “Center”: the center you work at. ② “New walk-in request”: starts registering a request for an applicant in person. ③ The search box: searches by request number, phone or national number. ④ “Today”: shows today's requests, next to “Open”. ⑤ “Services at this center”: the services that turned on intake.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Parts of the intake desk}
+\label{tab:builder-services-intake-desk}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Part} & \thh{What it shows or allows}\\
+Center & The center you work on; your own center is marked “(your center)”.\\
+Figures & “Received today” or “Open at this center”, “Waiting for documents” and “Ready to collect”.\\
+Search and view & “Search by request number, phone or national number”, and switching between “Today” and “Open”.\\
+Requests table & “Request no.”, “Applicant”, “Service”, “Status”, “Received by” and “Time”, with “Open” or “Continue” and “Print receipt”.\\
+Services at this center & The services that turned on intake, with a “Turn on in the service” link for those that are off.\\
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{The “New walk-in request” page and the receipt}
+\label{tab:builder-services-intake-new}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Section} & \thh{What you do in it}\\
+Service and applicant & Choose the service, then search by “Phone, email or national number” for the applicant's portal account so the request shows in their account, or choose “Register without an account” and type the “Full name” and “Phone”.\\
+Documents received & The documents listed in the service guide. If a “Required” document is missing, the request stays “Waiting for documents”.\\
+Summary & The status “When registered”, the fee received at the center with its “Receipt number”, then the “Create and fill in” button.\\
+Request receipt & Shows the “Request number”, the documents received and not received, how to “Track your request” by request number and phone, and the center hours.\\
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {New walk-in request};
+\node[stepBox,below=of a] (b) {Service and applicant};
+\node[stepBox,below=of b] (c) {Documents received};
+\node[stepBox,below=of c] (d) {Create and fill in};
+\node[stepBox,below=of d] (e) {Register and print receipt};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\end{tikzpicture}
+\rclegend
+\caption{Registering a walk-in request}
+\label{fig:builder-services-intake-flow}
+\shotnote{The request is created first and its form filled in after; it gets its number only at the last step, so it shows as “Not registered” in the table until you finish. If a required document is missing, the request waits for it until you press “Documents received — send on”.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Open “Services”, press “Intake desk”, and check the “Center”.
+\item Press “New walk-in request”, choose the service, then find the applicant or register them without an account.
+\item Tick the documents received, record the “Receipt number” if you took the fee, then press “Create and fill in”.
+\item Fill in the form with the applicant, then press “Register and print receipt”.
+\item Press “Print” on the receipt page and hand it to the applicant.
+\end{enumerate}
+
+\textbf{Check and recovery:} the request appears in the table with its number and who received it. If “Complete the required answers in the form before registering the request.” appears, fill in the missing fields. If “No service takes walk-in requests at this center yet” appears, turn on “Center intake” in the service's “Delivery \& eligibility” tab.
+
+\clearpage
+\section{Service performance}
+\label{sec:builder-feature-services-performance}
+
+The “Service performance” page answers management's questions: how many requests arrived, how long they took, where they wait, and what applicants think. It counts requests sent from the portal, and time waiting on the applicant is not counted in stage or completion times. So it gives a fair picture of your team's performance and points to the stage that needs support.
+
+\textbf{Path and who uses it:} “Services” → “Service performance”, or the “Full performance” link on “Overview”. Used by service managers in their periodic review.
+
+\begin{rcnote}[Example: Horizon]
+Sarah Al-Khatib chooses “Last 30 days” ① and the “Branch visit request” service, and sees under “Requests past their time” ③ a request late in the review stage. She presses “Escalate” next to it, then exports the figures with “Export” ④ for her monthly meeting.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-services-performance-en.png}
+\caption{The “Service performance” page}
+\label{fig:builder-services-performance-screen}
+\shotnote{The screen shows service performance in the test organization for the last 30 days, with no request past its time, so the overdue table is empty. It shows that the page moves from overall figures to stages and then to single requests. ① “Last 30 days”: the period, next to the service and app filters. ② “Average time per stage vs expected”: the actual time of each stage against the expected one. ③ “Requests past their time”: late requests with an “Escalate” button. ④ “Export”: saves the figures to a file.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{“Service performance” figures}
+\label{tab:builder-services-performance-kpis}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Figure} & \thh{What it measures}\\
+New requests & The number of requests in the period, against the previous period.\\
+Stages finished on time & The share of stages finished on time, against a target shown under the figure.\\
+Average time to decision & The average working days until a decision, and the number of decided requests.\\
+Waiting on the applicant & Requests waiting for their applicant to act; not counted in completion times.\\
+Past their time & The number of open requests past their stage time, and the stage with the most.\\
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Analysis cards}
+\label{tab:builder-services-performance-cards}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Card} & \thh{What it shows}\\
+Average time per stage vs expected & Each stage's actual time in working days against the expected time set in the form's “Stages \& durations”, for the chosen service or the busiest one.\\
+Request funnel & From “Service page visits” to “Requests started”, “Requests sent” and “Decisions issued”, with the “overall conversion”.\\
+Requests past their time & “Request”, “Service”, “Stage”, “Handled by” and “Over by”, with an “Escalate” button.\\
+Applicant satisfaction and Most requested & The average rating after the decision, and a table of the most requested services with their share of requests and rating.\\
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Period and service};
+\node[stepBox,below=of a] (b) {Read the figures};
+\node[stepBox,below=of b] (c) {Find the late stage};
+\node[stepBox,below=of c] (d) {Escalate late requests};
+\node[stepBox,below=of d] (e) {Export for review};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\end{tikzpicture}
+\rclegend
+\caption{A periodic review of service performance}
+\label{fig:builder-services-performance-flow}
+\shotnote{The diagram moves from the overall picture to the single request: the figures show that something is late, the stage card shows where, and the overdue table lets you escalate each request. Export comes last to keep the review's result in a file.}
+\end{figure}
+
+\subsection{Steps and check}
+\begin{enumerate}
+\item Open “Services” and press “Service performance”.
+\item Choose the “Period”: 7, 30 or 90 days, then choose a service or app to narrow it down.
+\item Compare actual and expected time in the stage card, and find the stage that runs over.
+\item Press “Escalate” next to each late request that needs action.
+\item Press “Export” to save the figures to a file.
+\end{enumerate}
+
+\textbf{Check and recovery:} after escalating, the button changes to “Escalated” and cannot be pressed again. If “No stages to compare yet.” appears, set the form's stages and durations in “Stages \& durations”. If “Service performance could not be loaded.” appears, reload the page.

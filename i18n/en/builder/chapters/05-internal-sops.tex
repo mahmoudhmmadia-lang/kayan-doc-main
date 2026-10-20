@@ -4,16 +4,37 @@
 \section{What will you build in this chapter?}
 \label{sec:builder-internal-sops-intro}
 
-An internal SOP is a workflow of consecutive steps that starts on an event you choose, such as a record being created or a form being submitted. Its steps may request an approval, create a task or send a notification, so getting the work done does not depend on someone remembering the next step. This chapter explains how to build an SOP, test it, publish it and follow up its runs.
+An internal SOP is a workflow of consecutive steps that starts on an event you choose, such as a record being created or a form being submitted. Its steps may request an approval, create a task or send a notification, so getting the work done does not depend on someone remembering the next step. This chapter explains the whole tool: the home page, the editor, triggers and step types, setting up each step and handling its errors, then testing, publishing, following runs and responding to approvals.
+
+Your edits are saved in a draft that does not run until you publish it, so every SOP goes through the same cycle: build it, test it, publish it, then follow its runs.
 
 \begin{rcnote}[Example: Horizon]
 When a new visit request is created, an internal SOP requests Sarah Al-Khatib's approval, and once she approves it creates the visit preparation task for Omar Haddad.
 \end{rcnote}
 
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Trigger: what starts it?};
+\node[stepBox,below=of a] (b) {Steps and their setup};
+\node[stepBox,below=of b] (c) {Test: safe simulation};
+\node[stepBox,below=of c] (d) {Review and publish};
+\node[stepBox,below=of d] (e) {Follow the runs};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\end{tikzpicture}
+\rclegend
+\caption{The life of an internal SOP}
+\label{fig:builder-internal-sops-overview}
+\shotnote{The diagram orders this chapter's pages by the SOP's life cycle. Testing comes before publishing because a simulation has no effect, and follow-up comes after publishing because the SOP starts no run before it.}
+\end{figure}
+
 \section{Pages in this chapter}
 \label{sec:builder-internal-sops-pages}
 
-You start from the “Internal SOPs” page in Builder's “Core” section.
+You start from the “Internal SOPs” page in Builder's “Core” section; the other pages explain parts of the editor and the tabs of the same page. Follow their order the first time, then come back to any page when you need it.
 
 \begin{table}[H]
 \centering
@@ -23,6 +44,18 @@ You start from the “Internal SOPs” page in Builder's “Core” section.
 \begin{tabularx}{\linewidth}{R{4.2cm} Y}
 \rcHeaderRow
 \thh{Page and section} & \thh{What this page offers}\\
-Internal SOPs — Core & Builds workflows of steps, such as approvals and task creation, that start on an event you choose.\\
+Internal SOPs — Core & Lists SOPs in folders with their state and run health, and creates a new SOP.\\
+The SOP editor and its modes — Editor & The editor header, the “Build”, “Test” and “Runs” modes, the steps list, the canvas and its tools.\\
+Triggers: what starts the SOP? — Editor & Trigger groups, record, form, task and approval triggers, and changing the trigger.\\
+Control-flow steps — Editor & Decisions, loops, delays, waits, ending and calling another SOP.\\
+Record and form steps — Editor & Finding, creating and updating records, and asking people to fill in forms.\\
+Task, approval, notification and document steps — Editor & Creating tasks, requesting approvals and signatures, sending notifications and generating documents.\\
+Step setup: inputs, data and expressions — Editor & The step inspector, inserting data from earlier steps, expressions and the reference name.\\
+Error handling and skipping steps — Editor & Stopping or following a failure path on error, retrying and skipping a step.\\
+Connections and variables — Internal SOPs & External service accounts, and encrypted values used in expressions.\\
+Testing an SOP — Editor & Safe simulation, real runs and testing a single step.\\
+Runs and run history — Editor and Internal SOPs & Run statuses, reading results on the canvas, retrying or cancelling a run.\\
+Responding to approval requests — Requests for you & How an approver responds, and what happens after each response.\\
+Review, publish and version history — Editor & What to fix and what changed before publishing, locked versions and pausing.\\
 \end{tabularx}
 \end{table}
