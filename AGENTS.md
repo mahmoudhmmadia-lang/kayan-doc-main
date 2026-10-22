@@ -6,6 +6,15 @@ set. `progress.md` is the live status log; this file is the standing brief.
 
 ## Current direction — web only (2026-10-16; supersedes legacy output rules below)
 
+- **Official Correspondence stage 1 authorized (2026-10-21).** The user approved
+  the recommended next app. The approved outline is
+  `review/correspondence-outline.md`; its first stage is chapter 7, with a
+  bilingual overview and three pages: home/responsibilities, capacity/permissions,
+  and the tray/lifecycle. Explain starting points by responsibility, without
+  equating a workflow responsibility with a named permission role. Preserve the
+  Horizon visit example. See `review/correspondence-source-coverage.md` for
+  verification and later stages; the first stage is under review.
+
 - **Numbered screenshots (2026-10-19; applies to every chapter from now on).**
   Each screenshot shows numbered markers (green circles ①, ②, ③ …) drawn on the
   real test2 page at the exact controls the reader must find or use, in the order

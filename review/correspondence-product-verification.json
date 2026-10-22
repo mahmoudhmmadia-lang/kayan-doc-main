@@ -1,0 +1,14 @@
+{
+  "environment": "test2",
+  "checks": [
+    "switch working position and restore original",
+    "folders: Inbox to Drafts and back",
+    "search with no matches",
+    "clear search restores rows",
+    "Urgent toggles URL filter",
+    "Refresh clicked"
+  ],
+  "limits": [
+    "No composition, approval, dispatch or delegation performed."
+  ]
+}

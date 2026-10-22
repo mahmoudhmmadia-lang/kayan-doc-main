@@ -2,6 +2,22 @@
 
 الحالات: لم يبدأ · مسودة · قيد المراجعة · معتمد
 
+## نافذة تأكيد إعادة ضبط التقدم — 2026-10-21
+
+- استُبدل تأكيد المتصفح بنافذة متوافقة مع تصميم الدليل، بالعربية والإنجليزية وبالمظهرين. يستفيد دليل المرصد من المكوّن المشترك نفسه.
+- يبدأ التركيز بزر «إلغاء»، ويبقى التنقل بلوحة المفاتيح داخل النافذة. يحافظ الإلغاء وEscape والضغط خارج النافذة على التقدم؛ ويمسح التأكيد تقدم الدليل الجاري فقط، ويعيد رابط المتابعة إلى أول خطوة.
+- نجح بناء الدليلين و19 اختباراً نشطاً إجمالاً، ثم 20 سيناريو متصفح تغطي دليل النظام وأدوات البناء والمرصد، على الهاتف وسطح المكتب وبالمظهرين. النتائج والصور في `review/reset-dialog/`، وأداة التحقق `tools/verify-reset-dialog.mjs`.
+- جرى الاختبار محلياً لأن التغيير في قارئ الدليل المولّد، وليس في تطبيق test2. لم تتغير حالات اعتماد الفصول.
+
+## المراسلات الرسمية: مرحلة البداية — 2026-10-21 — قيد المراجعة
+
+- وافق المستخدم على بدء التطبيق المقترح. أُضيف الفصل السابع باللغتين: نظرة عامة وثلاث صفحات مستقلة للرئيسية والمسؤوليات، والصفة والصلاحيات، وصندوق المراسلات ودورة العمل، وفق المرحلة الأولى من المخطط المعتمد.
+- يميّز الشرح المُعِدّ ومراجع الصياغة والمعتمد والمستلم وموظف الديوان ومسؤول التهيئة، دون تقديم هذه المسؤوليات بوصفها أسماء أدوار إلزامية. يتابع مثال الأفق طلب تنسيق زيارة فرع حلب.
+- التُقطت ست صور من test2 باللغتين، مع أرقام على عناصر التحكم وشروح مطابقة تحت الصور. أُضيفت الصفحات إلى الفهرس والبحث والتنقل وتبديل اللغة وحفظ الإنجاز.
+- اختُبر على test2 تبديل المنصب وإعادته، والانتقال من الواردة إلى المسودات والعودة، والبحث بنتيجة فارغة ومسحه لاستعادة القائمة، وتفعيل فلتر العاجل وإلغاؤه والتحديث. لم تُنشأ مراسلات ولم تُعتمد أو تُرسل؛ ولم يُختبر إنشاء تفويض أو عمل جميع الأدوار.
+- نجح بناء HTML و17 اختباراً نشطاً؛ وتأجل اختبارا المطبوعات وفق اتجاه المشروع. نجحت 32 حالة متصفح للصفحات الجديدة باللغتين، على سطح المكتب والهاتف وبالمظهرين، مع البطاقات والبحث وتبديل اللغة وحفظ الإنجاز وتكبير الصور ودون تمرير أفقي.
+- أدلة التحقق وحدوده في `review/correspondence-source-coverage.md` وملفي التحقق المجاورين له. المرحلة الأولى جاهزة للمراجعة؛ وتبقى المراحل 2–6 في المخطط. لم تُحدَّث مخرجات PDF أو Word أو Overleaf.
+
 ## دليل أدوات البناء مكتمل الفصول — 2026-10-20 — قيد المراجعة
 
 - بطلب المستخدم وُسّعت فصول دليل أدوات البناء الثمانية كلها: 101 صفحة باللغتين (الكيانات 21، التطبيقات والتنقل 9، النماذج 15، الخدمات 11، الإجراءات الداخلية 13، إجراءات التشغيل القياسية والبوتات 7، المستندات والطباعة 13، لوحات المعلومات والتقارير 12).
@@ -317,3 +333,9 @@
 - Open: ch02-create-org capture shows no fields; ch04-statuses capture repeats its
   header; ch04-assignments is very tall; two leave-type images are identical; the
   Arabic UI mixes «المشاريع»/«ملحمة» for epics and spells «ادوات البناء».
+# 2026-10-22 — Chapter navigation UI
+
+Replaced the cramped chapter tabs with a keyboard-accessible chapter picker in the shared HTML renderer. The collapsed control shows the current chapter and the expanded grid shows full titles, numbered cards and the current chapter state. Mobile uses a single column. Applies to Arabic, English, Builder and the industrial observatory guide; chapter content and approval states are unchanged.
+
+Verification: HTML builds passed. KayanOS tests: 17 passed, 2 archived checks skipped. Observatory tests: 3 passed. `node kayanos-guide/tools/verify-chapter-picker.mjs` passed 16 local Edge combinations covering both themes, desktop/mobile, Arabic/English and Builder: keyboard opening, visible full labels, navigation, progress persistence, search and overflow. Desktop and mobile screenshots were visually inspected in `review/html/chapter-picker/`. The first concurrent test run encountered generated files being rebuilt; sequential reruns passed. No product workflows or deployment were tested in this guide-only change.
+

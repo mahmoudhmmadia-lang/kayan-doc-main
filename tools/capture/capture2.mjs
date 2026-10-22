@@ -78,7 +78,7 @@ for (const shot of list) {
       await page.waitForTimeout(2000);
     }
     // Height of all content, including content inside internal scroll containers.
-    const height = await page.evaluate(() => {
+    let height = await page.evaluate(() => {
       let h = document.scrollingElement.scrollHeight;
       for (const el of document.querySelectorAll('*')) {
         const cs = getComputedStyle(el);
@@ -95,6 +95,14 @@ for (const shot of list) {
       if (await open()) { await page.keyboard.press('Escape').catch(() => {}); await page.waitForTimeout(1200); }
       if (await open()) console.log('DIALOG WARN', shot.name, lang);
     }
+    // screenshot() waits for fonts; wait here too so labels cannot shift after markers are placed.
+    await page.evaluate(() => document.fonts.ready);
+    if (shot.fitBottom) {
+      const bottom = await page.locator(shot.fitBottom).last().evaluate(e => e.getBoundingClientRect().bottom + scrollY);
+      height = Math.ceil(bottom + 24);
+      await page.setViewportSize({ width: 1440, height });
+      await page.waitForTimeout(300);
+    }
     const placed = await mark(page, (shot.marks ?? []).map((m) => ({ ...m, t: typeof m.t === 'object' ? m.t[lang] : m.t, dom: m.dom && typeof m.dom === 'object' ? m.dom[lang] : m.dom })));
     if (placed.missing.length) console.log('MARK MISSING', shot.name, lang, JSON.stringify(placed.missing));
     const dir = await page.evaluate(() => document.documentElement.dir);
@@ -105,7 +113,10 @@ for (const shot of list) {
       capturedAt: new Date().toISOString(),
       marks: placed.marks,
     };
-    fs.writeFileSync(MANIFEST, JSON.stringify(manifest, null, 2));
+    fs.writeFileSync(MANIFEST, JSON.stringify({
+      ...JSON.parse(fs.readFileSync(MANIFEST, 'utf8')),
+      [`${shot.name}-${lang}`]: manifest[`${shot.name}-${lang}`],
+    }, null, 2));
     console.log('OK', shot.name, lang, dir, height, ok ? '' : '(content wait timed out)');
   } catch (e) {
     console.log('FAIL', shot.name, lang, e.message.split('\n')[0].slice(0, 120));

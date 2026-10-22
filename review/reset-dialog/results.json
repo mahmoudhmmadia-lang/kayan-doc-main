@@ -1,0 +1,145 @@
+{
+  "results": [
+    {
+      "guide": "kayanos-guide",
+      "lang": "ar",
+      "file": "index.html",
+      "width": 1440,
+      "theme": "dark"
+    },
+    {
+      "guide": "kayanos-guide",
+      "lang": "ar",
+      "file": "index.html",
+      "width": 1440,
+      "theme": "light"
+    },
+    {
+      "guide": "kayanos-guide",
+      "lang": "ar",
+      "file": "index.html",
+      "width": 390,
+      "theme": "dark"
+    },
+    {
+      "guide": "kayanos-guide",
+      "lang": "ar",
+      "file": "index.html",
+      "width": 390,
+      "theme": "light"
+    },
+    {
+      "guide": "kayanos-guide",
+      "lang": "en",
+      "file": "index.html",
+      "width": 1440,
+      "theme": "dark"
+    },
+    {
+      "guide": "kayanos-guide",
+      "lang": "en",
+      "file": "index.html",
+      "width": 1440,
+      "theme": "light"
+    },
+    {
+      "guide": "kayanos-guide",
+      "lang": "en",
+      "file": "index.html",
+      "width": 390,
+      "theme": "dark"
+    },
+    {
+      "guide": "kayanos-guide",
+      "lang": "en",
+      "file": "index.html",
+      "width": 390,
+      "theme": "light"
+    },
+    {
+      "guide": "kayanos-guide",
+      "lang": "ar",
+      "file": "builder.html",
+      "width": 1440,
+      "theme": "dark"
+    },
+    {
+      "guide": "kayanos-guide",
+      "lang": "ar",
+      "file": "builder.html",
+      "width": 1440,
+      "theme": "light"
+    },
+    {
+      "guide": "kayanos-guide",
+      "lang": "ar",
+      "file": "builder.html",
+      "width": 390,
+      "theme": "dark"
+    },
+    {
+      "guide": "kayanos-guide",
+      "lang": "ar",
+      "file": "builder.html",
+      "width": 390,
+      "theme": "light"
+    },
+    {
+      "guide": "kayanos-guide",
+      "lang": "en",
+      "file": "builder.html",
+      "width": 1440,
+      "theme": "dark"
+    },
+    {
+      "guide": "kayanos-guide",
+      "lang": "en",
+      "file": "builder.html",
+      "width": 1440,
+      "theme": "light"
+    },
+    {
+      "guide": "kayanos-guide",
+      "lang": "en",
+      "file": "builder.html",
+      "width": 390,
+      "theme": "dark"
+    },
+    {
+      "guide": "kayanos-guide",
+      "lang": "en",
+      "file": "builder.html",
+      "width": 390,
+      "theme": "light"
+    },
+    {
+      "guide": "industrial-observatory-guide",
+      "lang": "ar",
+      "file": "index.html",
+      "width": 1440,
+      "theme": "dark"
+    },
+    {
+      "guide": "industrial-observatory-guide",
+      "lang": "ar",
+      "file": "index.html",
+      "width": 1440,
+      "theme": "light"
+    },
+    {
+      "guide": "industrial-observatory-guide",
+      "lang": "ar",
+      "file": "index.html",
+      "width": 390,
+      "theme": "dark"
+    },
+    {
+      "guide": "industrial-observatory-guide",
+      "lang": "ar",
+      "file": "index.html",
+      "width": 390,
+      "theme": "light"
+    }
+  ],
+  "errors": []
+}

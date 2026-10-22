@@ -1,14 +1,15 @@
 // Local preview of the HTML guide: builds site/, serves it, and rebuilds and
 // reloads the browser when a chapter, translation, theme file or screenshot
-// changes. Restart it after editing the renderer (tools/*.mjs).
+// changes, including the renderer (tools/*.mjs): each build runs in a fresh
+// process, so it never reuses modules loaded when the server started.
 //   cd tools && npm run dev      → http://localhost:4321/
 // Set PORT to use another port.
 
 import fs from 'node:fs';
 import http from 'node:http';
 import path from 'node:path';
-import { fileURLToPath } from 'node:url';
-import { buildHtml } from './build-html.mjs';
+import { execFileSync } from 'node:child_process';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SITE = path.join(ROOT, 'site');
@@ -18,7 +19,8 @@ const clients = new Set();
 
 function build() {
   try {
-    buildHtml(ROOT);
+    const entry = pathToFileURL(path.join(ROOT, 'tools/build-html.mjs')).href;
+    execFileSync(process.execPath, ['--input-type=module', '-e', `import { buildHtml } from ${JSON.stringify(entry)}; buildHtml(${JSON.stringify(ROOT)});`], { stdio: ['ignore', 'ignore', 'pipe'] });
     console.log(`[${new Date().toLocaleTimeString()}] built`);
     for (const res of clients) res.write('data: reload\n\n');
   } catch (err) {
@@ -49,9 +51,9 @@ http.createServer((req, res) => {
 
 let timer;
 const watch = (dir) => fs.watch(path.join(ROOT, dir), { recursive: true }, (_e, f) => {
-  if (f && !/\.(tex|css|js|svg|png)$/.test(f)) return;
+  if (f && (!/\.(tex|css|js|mjs|svg|png)$/.test(f) || /node_modules|capture/.test(f))) return;
   clearTimeout(timer); timer = setTimeout(build, 150);
 });
-['chapters', 'references', 'i18n', 'web', 'figures'].forEach((d) => { if (fs.existsSync(path.join(ROOT, d))) watch(d); });
+['chapters', 'references', 'i18n', 'web', 'figures', 'tools'].forEach((d) => { if (fs.existsSync(path.join(ROOT, d))) watch(d); });
 fs.watch(ROOT, (_e, f) => { if (f === 'main.tex') { clearTimeout(timer); timer = setTimeout(build, 150); } });
 build();

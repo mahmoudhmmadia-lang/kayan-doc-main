@@ -256,6 +256,18 @@ function parseTableBody(body) {
   return rows;
 }
 
+// Splits a shotnote into its description and the numbered key (① … ⑳) that
+// explains the markers drawn on the screenshot.
+export function splitNote(note) {
+  const parts = note.split(/([①-⑳])/)
+  const keys = []
+  for (let i = 1; i < parts.length; i += 2) {
+    const text = parts[i + 1].trim()
+    if (text) keys.push({ n: parts[i].charCodeAt(0) - 0x245f, text })
+  }
+  return { noteText: parts[0].trim(), noteKeys: keys }
+}
+
 function parseFloat_(env, body, opts) {
   const out = { type: env === 'table' ? 'table' : 'figure', caption: null, label: null };
   const cap = /\\caption(?:of\{table\})?\{/.exec(body);
@@ -264,7 +276,10 @@ function parseFloat_(env, body, opts) {
   if (lab) out.label = lab[1];
   // \shotnote{..}: the explanation printed directly under the image or diagram.
   const note = /\\shotnote\{/.exec(body);
-  if (note) out.note = readGroup(body, note.index + note[0].length - 1)[0].trim();
+  if (note) {
+    out.note = readGroup(body, note.index + note[0].length - 1)[0].trim();
+    Object.assign(out, splitNote(out.note));
+  }
   const tab = /\\begin\{(tabularx|tabular|longtable)\}/.exec(body);
   if (tab) {
     let i = tab.index + tab[0].length;

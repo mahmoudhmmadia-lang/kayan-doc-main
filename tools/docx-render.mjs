@@ -199,6 +199,19 @@ function list(block, ctx) {
   });
 }
 
+// Description first, then one line per numbered marker, like the HTML guide.
+function note(block, ctx) {
+  const keys = block.noteKeys ?? [];
+  const out = [];
+  if (block.noteText) out.push(para(block.noteText, ctx, { spacing: { before: 0, after: keys.length ? 100 : 240, line: 276 } }));
+  keys.forEach(({ n, text }, i) => out.push(para(text, ctx, {
+    spacing: { before: 0, after: i === keys.length - 1 ? 240 : 40, line: 264 },
+    indent: { start: 240 },
+    prefix: [new TextRun({ text: `${String.fromCharCode(0x245f + n)}  `, bold: true, boldComplexScript: true, color: '12A368', font: FONT, rightToLeft: true })],
+  })));
+  return out;
+}
+
 function figure(block, ctx, images) {
   const img = images.get(block);
   if (!img) return [];
@@ -208,7 +221,7 @@ function figure(block, ctx, images) {
     children: [new ImageRun({ type: 'png', data: img.data, transformation: { width: img.width, height: img.height } })],
   })];
   if (block.caption) out.push(caption('figure', block, ctx));
-  if (block.note) out.push(para(block.note, ctx, { spacing: { before: 0, after: 240, line: 276 } }));
+  if (block.note) out.push(...note(block, ctx));
   return out;
 }
 

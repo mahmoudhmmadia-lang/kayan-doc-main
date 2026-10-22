@@ -1,0 +1,239 @@
+{
+  "checks": [
+    "32 page/language/width/theme cases",
+    "directory card opens feature",
+    "no horizontal overflow",
+    "images decode",
+    "completion persists after reload",
+    "language switching",
+    "search opens capacity page",
+    "image lightbox opens/closes"
+  ],
+  "evidence": [
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "c7",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "correspondence-home",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "correspondence-capacity",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "correspondence-tray",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "c7",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "correspondence-home",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "correspondence-capacity",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "correspondence-tray",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "c7",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "correspondence-home",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "correspondence-capacity",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "correspondence-tray",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "c7",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "correspondence-home",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "correspondence-capacity",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "correspondence-tray",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "c7",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "correspondence-home",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "correspondence-capacity",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "correspondence-tray",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "c7",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "correspondence-home",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "correspondence-capacity",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "correspondence-tray",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "c7",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "correspondence-home",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "correspondence-capacity",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "correspondence-tray",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "c7",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "correspondence-home",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "correspondence-capacity",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "correspondence-tray",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

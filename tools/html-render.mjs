@@ -47,6 +47,8 @@ export const UI = {
         table: 'جدول',
         figure: 'شكل',
         theme: 'تبديل المظهر',
+        short: 'الأمثلة والصور فقط',
+        shortEmpty: 'لا يحتوي هذا القسم على مثال أو صورة. أوقف «الأمثلة والصور فقط» لقراءة الشرح.',
         lang: 'English',
         top: 'إلى الأعلى',
         noResults: 'لا نتائج. جرّب كلمة أخرى.',
@@ -55,11 +57,15 @@ export const UI = {
         closeHint: 'للإغلاق',
         reset: 'إعادة ضبط التقدّم',
         resetConfirm: 'هل تريد مسح تقدّمك في هذا الدليل؟',
+        resetDescription: 'ستُمسح الخطوات المنجزة وعلامات التحقق وموضع المتابعة في هذا المتصفح. لن يتأثر تقدّمك في الأدلة الأخرى. لا يمكن التراجع عن هذا الإجراء.',
+        cancel: 'إلغاء',
+        resetAction: 'مسح التقدّم',
         legend: { dependsOn: 'يحتاج أولاً (إلزامي)', dependsOnOpt: 'ربط اختياري', flowsTo: 'الخطوة التالية' },
         badges: { req: 'إلزامي تقنياً', rec: 'موصى به', opt: 'اختياري', gen: 'يولّده النظام' },
         boxes: { note: 'ملاحظة', warn: 'تنبيه', check: 'قائمة تحقق' },
         zoom: 'تكبير الصورة',
         original: 'فتح الصورة الأصلية',
+        keyTitle: 'مفتاح الأرقام',
         close: 'إغلاق',
         menu: 'القائمة',
         of: 'من',
@@ -110,6 +116,8 @@ export const UI = {
         table: 'Table',
         figure: 'Figure',
         theme: 'Toggle theme',
+        short: 'Examples and pictures only',
+        shortEmpty: 'This section has no example or picture. Turn off “Examples and pictures only” to read the explanation.',
         lang: 'العربية',
         top: 'Back to top',
         noResults: 'No results. Try another word.',
@@ -118,11 +126,15 @@ export const UI = {
         closeHint: 'to close',
         reset: 'Reset progress',
         resetConfirm: 'Clear your progress in this guide?',
+        resetDescription: 'This clears completed steps, checkmarks and your reading position in this browser. Progress in other guides stays unchanged. This cannot be undone.',
+        cancel: 'Cancel',
+        resetAction: 'Clear progress',
         legend: { dependsOn: 'Needs this first (required)', dependsOnOpt: 'Optional link', flowsTo: 'Next step' },
         badges: { req: 'Required', rec: 'Recommended', opt: 'Optional', gen: 'System-generated' },
         boxes: { note: 'Note', warn: 'Caution', check: 'Checklist' },
         zoom: 'Enlarge image',
         original: 'Open original image',
+        keyTitle: 'Numbered key',
         close: 'Close',
         menu: 'Menu',
         of: 'of',
@@ -318,7 +330,7 @@ function renderTable(b, ctx) {
             })
             .join('')}</ol><p class="guide-open"><a class="btn btn-primary" href="${linked.home}">${esc(ctx.ui.openGuide)} ${esc(linked.title)} ${ARROW}</a></p></figure>`
     }
-    const cards = /^tab:(hr|tasks|projects|builder)-pages-/.test(b.label ?? '') ? body.map((r) => featureOf(r.cells[0])) : []
+    const cards = /^tab:(hr|tasks|projects|builder|correspondence)-pages-/.test(b.label ?? '') ? body.map((r) => featureOf(r.cells[0])) : []
     if (cards.length && cards.every(Boolean)) {
         const nav = { ...ctx, nolink: true }
         return `<figure class="page-cards reveal"${b.id ? ` id="${b.id}"` : ''}>${caption}<ol class="page-grid">${cards
@@ -330,12 +342,26 @@ function renderTable(b, ctx) {
     return `<figure class="table-card reveal"${b.id ? ` id="${b.id}"` : ''}>${caption}<div class="table-scroll"><table class="${cls}">${thead}${tbody}</table></div></figure>`
 }
 
+// The description and the numbered key are shown apart: a short paragraph,
+// then one row per marker whose badge matches the number on the screenshot.
+function renderNote(b, ctx) {
+    if (!b.note) return ''
+    const text = b.noteText ? `<p class="fig-desc">${inline(b.noteText, ctx)}</p>` : ''
+    if (!b.noteKeys?.length) return `<div class="fig-note">${text}</div>`
+    const rows = b.noteKeys.map(({ n, text: key }) => {
+        const m = /^(.{1,60}?):\s+(.+)$/s.exec(key)
+        const body = m ? `<strong class="fig-key-term">${inline(m[1], ctx)}</strong><span class="fig-key-text">${inline(m[2], ctx)}</span>` : `<span class="fig-key-text">${inline(key, ctx)}</span>`
+        return `<li><span class="fig-key-no" dir="ltr">${n}</span><span class="fig-key-body">${body}</span></li>`
+    }).join('')
+    return `<div class="fig-note">${text}<div class="fig-keys"><p class="fig-keys-title">${esc(ctx.ui.keyTitle)}</p><ol>${rows}</ol></div></div>`
+}
+
 function renderFigure(b, ctx) {
     const cap = b.caption
         ? `<figcaption><span class="cap-no">${ctx.ui.figure} ${esc(b.number)}</span>${inline(b.caption, ctx)}</figcaption>`
         : ''
     const id = b.id ? ` id="${b.id}"` : ''
-    const note = b.note ? `<p class="fig-note">${inline(b.note, ctx)}</p>` : ''
+    const note = renderNote(b, ctx)
     if (b.image) {
         const file = b.image.split('/').pop()
         const alt = b.caption ? plain(b.caption, ctx) : ''
@@ -348,10 +374,14 @@ function renderFigure(b, ctx) {
     return ''
 }
 
+// Examples stay visible in short mode: callouts titled «مثال…»/«تطبيق المثال»/«Example…»
+// and paragraphs that open with a bold «تطبيق المثال:».
+const EXAMPLE = /^\s*(?:\\textbf\{)?\s*(?:تطبيق المثال|مثال|Example|Applying the example)/
+
 function renderBlock(b, ctx) {
     switch (b.type) {
         case 'para':
-            return `<p>${inline(b.src, ctx)}</p>`
+            return EXAMPLE.test(b.src) ? `<p class="is-example">${inline(b.src, ctx)}</p>` : `<p>${inline(b.src, ctx)}</p>`
         case 'heading':
             return `<h3 id="${b.id}" class="sub">${inline(b.title, ctx)}</h3>`
         case 'list':
@@ -362,7 +392,7 @@ function renderBlock(b, ctx) {
             return renderFigure(b, ctx)
         case 'box': {
             const title = b.title ? inline(b.title, ctx) : esc(ctx.ui.boxes[b.kind])
-            return `<aside class="callout callout-${b.kind} reveal"><div class="callout-head">${icon(b.kind)}<span>${title}</span></div><div class="callout-body">${b.blocks.map((x) => renderBlock(x, ctx)).join('')}</div></aside>`
+            return `<aside class="callout callout-${b.kind}${EXAMPLE.test(b.title ?? '') ? ' is-example' : ''} reveal"><div class="callout-head">${icon(b.kind)}<span>${title}</span></div><div class="callout-body">${b.blocks.map((x) => renderBlock(x, ctx)).join('')}</div></aside>`
         }
         default:
             return ''
@@ -395,7 +425,7 @@ function shell({ ui, lang, page, home = 'index.html', title, description, body, 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&family=Cairo:wght@400;500;700;800&display=swap">
-<script>try{var t=localStorage.getItem('kos-guide-theme');if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.dataset.theme=t;localStorage.setItem('kos-guide-lang','${lang}')}catch(e){}</script>
+<script>try{var t=localStorage.getItem('kos-guide-theme');if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.dataset.theme=t;if(localStorage.getItem('kos-guide-short')==='on')document.documentElement.dataset.short='on';localStorage.setItem('kos-guide-lang','${lang}')}catch(e){}</script>
 <link rel="stylesheet" href="../assets/guide.css${assetsVersion}">
 </head>
 <body class="${page === home ? 'page-home' : 'page-chapter'}">
@@ -408,6 +438,7 @@ function shell({ ui, lang, page, home = 'index.html', title, description, body, 
     <button class="search-btn" type="button" data-open-search><svg class="ic" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><span>${esc(ui.search)}</span><kbd dir="ltr">Ctrl K</kbd></button>
     <a class="guide-help-link" href="index.html#guide-help">${esc(ui.help)}</a>
     <a class="lang-btn" href="../${ui.other}/${page}" data-lang-switch="${ui.other}" hreflang="${ui.other}" lang="${ui.other}">${esc(ui.otherName)}</a>
+    <button class="icon-btn short-btn" type="button" data-short-toggle aria-pressed="false" aria-label="${esc(ui.short)}" title="${esc(ui.short)}"><svg class="ic" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="m3 13 5-4 4 3 3-2 6 4M8 20h8"/></svg><span class="short-label">${esc(ui.short)}</span></button>
     <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-label="${esc(ui.theme)}" title="${esc(ui.theme)}"><svg class="ic sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="ic moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
   </div>
 </header>
@@ -420,6 +451,15 @@ ${body}
   </div>
 </div>
 <div class="lightbox" hidden><button class="icon-btn lightbox-close" type="button" aria-label="${esc(ui.close)}"><svg class="ic" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button><img alt=""></div>
+<dialog class="reset-dialog" aria-labelledby="reset-title" aria-describedby="reset-description">
+  <div class="reset-dialog-icon" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24"><path d="M3 10a9 9 0 1 1 2.7 8.4M3 4v6h6"/></svg></div>
+  <h2 id="reset-title">${esc(ui.resetConfirm)}</h2>
+  <p id="reset-description">${esc(ui.resetDescription)}</p>
+  <form method="dialog" class="reset-dialog-actions">
+    <button class="btn btn-ghost" value="cancel" autofocus>${esc(ui.cancel)}</button>
+    <button class="btn reset-confirm" value="reset">${esc(ui.resetAction)}</button>
+  </form>
+</dialog>
 <div class="toast" role="status" aria-live="polite"></div>
 <script id="guide-data" type="application/json">${JSON.stringify({ ...data, page }).replace(/</g, '\\u003c')}</script>
 <script src="../assets/guide.js${assetsVersion}" defer></script>
@@ -470,10 +510,10 @@ export function renderSite(doc, { lang, assetsVersion = '', guide = {} }) {
     const { home = 'index.html', prefix = 'c', store = 'kos-guide-progress', parent = null, linked = {}, extra = null, out = null } = guide
     const ui = { ...UI[lang] }
     const { chapters, ids } = structure(doc, prefix)
-    const features = chapters.flatMap(c => c.sections).filter(s => /^sec:(hr|tasks|projects|builder)-feature-/.test(s.label ?? ''))
+    const features = chapters.flatMap(c => c.sections).filter(s => /^sec:(hr|tasks|projects|builder|correspondence)-feature-/.test(s.label ?? ''))
     const routes = {}
     for (const s of features) {
-        const [, app, slug] = s.label.match(/^sec:(hr|tasks|projects|builder)-feature-(.+)$/)
+        const [, app, slug] = s.label.match(/^sec:(hr|tasks|projects|builder|correspondence)-feature-(.+)$/)
         const page = `${app}-${slug}.html`
         routes[s.id] = page
         const visit = blocks => blocks.forEach(b => { if (b.id) routes[b.id] = page; if (b.blocks) visit(b.blocks) })
@@ -544,7 +584,7 @@ export function renderSite(doc, { lang, assetsVersion = '', guide = {} }) {
     <button class="icon-btn copy-link" type="button" data-copy="${s.id}" title="${esc(ui.copyLink)}" aria-label="${esc(ui.copyLink)}">${icon('link')}</button>
   </div>
 </header>
-<div class="step-body">${body}</div>
+<div class="step-body" data-short-empty="${esc(ctx.ui.shortEmpty)}">${body}</div>
 <footer class="step-foot"><button class="done-btn" type="button" data-done="${s.id}" aria-pressed="false"><span class="done-box">${icon('tick')}</span><span class="done-off">${esc(ui.markDone)}</span><span class="done-on">${esc(ui.done)}</span></button></footer>
 </section>`
                 sectionBodies.set(s.id, rendered)
@@ -697,7 +737,10 @@ ${here ? `<ol class="toc-secs">${x.sections.map((s) => `<li><a href="${link(s.id
     <article class="chapter${c.appendix ? ' appendix' : ''}" id="${c.id}" aria-labelledby="${c.id}-h">
       <header class="chapter-head">
         <nav class="crumbs reveal" aria-label="${esc(ui.home)}"><a href="index.html">${esc(parent ? ui.mainGuide : ui.home)}</a><span aria-hidden="true">/</span>${parent ? `<a href="${home}">${esc(ui.brand)}</a><span aria-hidden="true">/</span>` : ''}<a href="${pageOf(c.id)}">${inline(c.title, nav)}</a>${feature ? `<span aria-hidden="true">/</span><span>${inline(feature.title, nav)}</span>` : ''}</nav>
-        <nav class="ch-tabs reveal" aria-label="${esc(ui.chapterNav)}">${tabs}</nav>
+        <details class="chapter-picker reveal">
+          <summary><span class="chapter-picker-icon" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg></span><span class="chapter-picker-label"><span>${esc(ui.chapterNav)}</span><strong>${inline(c.title, nav)}</strong></span><span class="chapter-picker-count" dir="ltr">${ci + 1} / ${chapters.length}</span><svg class="ic chapter-picker-chevron" aria-hidden="true" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></summary>
+          <nav class="ch-tabs" aria-label="${esc(ui.chapterNav)}">${tabs}</nav>
+        </details>
         <div class="chapter-kicker reveal"><span class="chip">${esc(c.kicker)}</span><span class="chapter-meta">${c.sections.length} ${esc(ui.steps)}</span></div>
         <h1 id="${c.id}-h" class="chapter-title reveal">${inline(feature?.title ?? c.title, ctx)}</h1>
         <div class="chapter-progress" aria-hidden="true"><span data-chapter-bar="${c.id}"></span></div>

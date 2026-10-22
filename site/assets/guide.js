@@ -70,6 +70,21 @@
     try { localStorage.setItem('kos-guide-theme', next); } catch { /* ignore */ }
   });
 
+  // ---------------------------------------------------------------- short mode
+  // Hides the explanations and keeps examples, pictures and steps. Saved per browser.
+  const shortBtn = $('[data-short-toggle]');
+  if (shortBtn) {
+    const paint = () => shortBtn.setAttribute('aria-pressed', String(root.dataset.short === 'on'));
+    paint();
+    shortBtn.addEventListener('click', () => {
+      const on = root.dataset.short !== 'on';
+      if (on) root.dataset.short = 'on'; else delete root.dataset.short;
+      try { localStorage.setItem('kos-guide-short', on ? 'on' : 'off'); } catch { /* ignore */ }
+      paint();
+      say(shortBtn.title + (on ? ' ✓' : ''));
+    });
+  }
+
   // ---------------------------------------------------------------- navigation
   const steps = $$('.step'); // the steps on this page
   let current = null;
@@ -142,12 +157,32 @@
     });
   });
 
+  const resetDialog = $('.reset-dialog');
+  resetDialog.addEventListener('keydown', (event) => {
+    if (event.key !== 'Tab') return;
+    const buttons = $$('button', resetDialog);
+    const first = buttons[0], last = buttons.at(-1);
+    if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+    else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+  });
   $$('[data-reset]').forEach((b) => b.addEventListener('click', () => {
-    if (!confirm(ui.resetConfirm)) return;
+    resetDialog.returnValue = '';
+    resetDialog.showModal();
+  }));
+  resetDialog.addEventListener('click', (event) => {
+    const rect = resetDialog.getBoundingClientRect();
+    if (event.target === resetDialog && (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom)) {
+      resetDialog.close('cancel');
+    }
+  });
+  resetDialog.addEventListener('close', () => {
+    if (resetDialog.returnValue !== 'reset') return;
     state.done = {}; state.checks = {}; state.last = null; save();
     $$('[data-check]').forEach((x) => { x.checked = false; });
     paint();
-  }));
+    const cont = $('[data-continue]');
+    if (cont && all[0]) cont.href = `${pageOf(all[0].id)}#${all[0].id}`;
+  });
 
   // ---------------------------------------------------------------- copy link
   document.addEventListener('click', async (e) => {
@@ -309,6 +344,7 @@
 
   // ---------------------------------------------------------------- keyboard
   document.addEventListener('keydown', (e) => {
+    if (resetDialog.open) return; // Keep guide shortcuts inactive while the modal is open.
     const typing = /INPUT|TEXTAREA|SELECT/.test(document.activeElement?.tagName);
     if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); pal.hidden ? openPalette() : closePalette(); return; }
     if (e.key === 'Escape') { if (!pal.hidden) closePalette(); closeLightbox(); closeToc(); return; }

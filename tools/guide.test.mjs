@@ -12,6 +12,30 @@ const doc=loadDocument(root);
 const bdoc=loadDocument(path.join(root,'builder'));
 const ben=loadDocument(path.join(root,'i18n/en/builder'),{lang:'en'});
 
+test('Correspondence stage one has three bilingual role-based pages and numbered evidence',()=>{
+ const manifest=JSON.parse(fs.readFileSync(path.join(root,'review/fullpage-manifest.json'),'utf8'));
+ for(const lang of ['ar','en']){
+  const folder=path.join(root,'site',lang);
+  const overview=fs.readFileSync(path.join(folder,'c7.html'),'utf8');
+  const data=JSON.parse(overview.match(/<script id="guide-data" type="application\/json">([^]*?)<\/script>/)[1]);
+  const features=data.steps.filter(s=>s.p.startsWith('correspondence-'));
+  assert.deepEqual(features.map(s=>s.p),['home','capacity','tray'].map(s=>`correspondence-${s}.html`));
+  assert.equal((overview.match(/class="page-card"/g)||[]).length,3);
+  for(const [index,feature] of features.entries()){
+   const html=fs.readFileSync(path.join(folder,feature.p),'utf8');
+   assert.ok(overview.includes(`href="${feature.p}#${feature.id}"`));
+   assert.equal(data.routes[feature.id],feature.p);
+   assert.ok(data.search.some(s=>s.p===feature.p&&s.x.length>100));
+   assert.ok(html.indexOf(lang==='ar'?'مثال: شركة الأفق':'Example: Horizon')<html.indexOf('<figure'));
+   const slug=['home','capacity','tray'][index];
+   const marks=manifest[`ch07-${slug}-${lang}`]?.marks;
+   assert.equal(marks?.length,[3,2,4][index]);
+   for(const n of '①②③④'.slice(0,marks.length))assert.ok(html.includes(n));
+   assert.ok(html.includes(`../${lang==='ar'?'en':'ar'}/${feature.p}`));
+  }
+ }
+});
+
 test('Projects directory preserves model routes, parent links, examples and bilingual navigation',()=>{
  const inventory=JSON.parse(fs.readFileSync(path.join(root,'review/projects-source-inventory.json'),'utf8'));
  assert.equal(inventory.pages.filter(p=>p.navigation).length,6);
@@ -304,11 +328,11 @@ test('built HTML site: chapter and feature pages, language, direction and workin
   const pages=Object.fromEntries(fs.readdirSync(folder).filter(f=>f.endsWith('.html')).map(f=>[f,fs.readFileSync(path.join(folder,f),'utf8')]));
   const sourceDoc=lang==='ar'?doc:en;
   const sideDoc=lang==='ar'?bdoc:ben;
-  const featuresOf=d=>d.blocks.filter(b=>/^sec:(hr|tasks|projects|builder)-feature-/.test(b.label??'')).map(b=>b.label.replace(/^sec:(hr|tasks|projects|builder)-feature-/,'$1-')+'.html');
+  const featuresOf=d=>d.blocks.filter(b=>/^sec:(hr|tasks|projects|builder|correspondence)-feature-/.test(b.label??'')).map(b=>b.label.replace(/^sec:(hr|tasks|projects|builder|correspondence)-feature-/,'$1-')+'.html');
   const featureFiles=featuresOf(sourceDoc), builderFiles=featuresOf(sideDoc);
-  assert.equal(featureFiles.length,31+JSON.parse(fs.readFileSync(path.join(root,'review/projects-source-inventory.json'),'utf8')).pages.length);
+  assert.equal(featureFiles.length,34+JSON.parse(fs.readFileSync(path.join(root,'review/projects-source-inventory.json'),'utf8')).pages.length);
   assert.equal(builderFiles.length,BUILDER_CHAPTERS.flat().length);
-  assert.deepEqual(Object.keys(pages).sort(),['c1.html','c2.html','c3.html','c4.html','c5.html','c6.html','index.html',...featureFiles,'builder.html',...BUILDER_CHAPTERS.map((_,i)=>`b${i+1}.html`),...builderFiles].sort());
+  assert.deepEqual(Object.keys(pages).sort(),['c1.html','c2.html','c3.html','c4.html','c5.html','c6.html','c7.html','index.html',...featureFiles,'builder.html',...BUILDER_CHAPTERS.map((_,i)=>`b${i+1}.html`),...builderFiles].sort());
   const ids=Object.fromEntries(Object.entries(pages).map(([f,h])=>[f,new Set([...h.matchAll(/\sid="([^"]+)"/g)].map(m=>m[1]))]));
   let diagrams=0;
   for(const [file,html] of Object.entries(pages)){

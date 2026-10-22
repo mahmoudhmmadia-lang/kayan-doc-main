@@ -1,4 +1,5 @@
 build/
 tools/node_modules/
+tools/capture/state.json
 *.zip
 _docx-figures.*
