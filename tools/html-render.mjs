@@ -14,6 +14,9 @@ export const UI = {
         dir: 'rtl',
         help: 'استخدام الدليل',
         helpTitle: 'كيف تستخدم هذا الدليل؟',
+        helpFieldsTitle: 'أكمل البيانات المطلوبة',
+        helpDiagramsTitle: 'افهم العلاقات والخطوات',
+        helpWorkTitle: 'احفظ تقدمك في القراءة',
         helpFields: 'الحقول ذات النجمة (*) إلزامية. أكملها قبل الحفظ.',
         helpDiagrams: 'اقرأ المخططات من الأعلى إلى الأسفل. في مخطط الاعتماد، جهّز السجلات المطلوبة قبل السجل الذي يعتمد عليها. سهم الخطوة التالية يوضح الترتيب؛ ولا يعني تنفيذًا آليًا إلا إذا ذُكر ذلك.',
         helpWork: 'حدّث حالة العمل عند إنجازه. وفي الدليل، استخدم «تحديد كمنجزة» لحفظ تقدّمك في هذا المتصفح.',
@@ -83,6 +86,9 @@ export const UI = {
         dir: 'ltr',
         help: 'Guide help',
         helpTitle: 'How to use this guide',
+        helpFieldsTitle: 'Complete required fields',
+        helpDiagramsTitle: 'Understand relationships and steps',
+        helpWorkTitle: 'Keep your reading progress',
         helpFields: 'Fields marked with an asterisk (*) are required. Complete them before saving.',
         helpDiagrams: 'Read diagrams from top to bottom. For dependencies, prepare the required records before the record that needs them. Next-step arrows show order; they imply automation only when explicitly stated.',
         helpWork: 'Update work status when finished. In this guide, use “Mark as done” to save your reading progress in this browser.',
@@ -436,13 +442,22 @@ function shell({ ui, lang, page, home = 'index.html', title, description, body, 
     ${page === home ? '' : `<button class="icon-btn menu-btn" type="button" data-open-toc aria-label="${esc(ui.menu)}"><svg class="ic" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg></button>`}
     <a class="brand" href="${home}" aria-label="${esc(ui.brand)}"><img src="../assets/kayanos-mark.svg" alt="" width="34" height="23"><span class="brand-name">Kayan<b>OS</b></span><span class="brand-sep"></span><span class="brand-sub">${esc(ui.brand)}</span></a>
     <button class="search-btn" type="button" data-open-search><svg class="ic" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><span>${esc(ui.search)}</span><kbd dir="ltr">Ctrl K</kbd></button>
-    <a class="guide-help-link" href="index.html#guide-help">${esc(ui.help)}</a>
+    <button class="guide-help-link" type="button" data-open-help aria-haspopup="dialog" aria-controls="guide-help" aria-label="${esc(ui.help)}" title="${esc(ui.help)}"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M9.5 9a2.5 2.5 0 0 1 5 .5c0 1.5-2.5 2-2.5 3.5M12 16h.01"/></svg><span>${esc(ui.help)}</span></button>
     <a class="lang-btn" href="../${ui.other}/${page}" data-lang-switch="${ui.other}" hreflang="${ui.other}" lang="${ui.other}">${esc(ui.otherName)}</a>
     <button class="icon-btn short-btn" type="button" data-short-toggle aria-pressed="false" aria-label="${esc(ui.short)}" title="${esc(ui.short)}"><svg class="ic" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="m3 13 5-4 4 3 3-2 6 4M8 20h8"/></svg><span class="short-label">${esc(ui.short)}</span></button>
     <button class="icon-btn theme-btn" type="button" data-theme-toggle aria-label="${esc(ui.theme)}" title="${esc(ui.theme)}"><svg class="ic sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg><svg class="ic moon" viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></button>
   </div>
 </header>
 ${body}
+<dialog class="help-dialog" id="guide-help" aria-labelledby="help-title">
+  <header class="help-dialog-head"><div><span class="help-eyebrow">${esc(ui.help)}</span><h2 id="help-title">${esc(ui.helpTitle)}</h2></div><form method="dialog"><button class="icon-btn" aria-label="${esc(ui.close)}" autofocus><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></form></header>
+  <div class="help-dialog-body">
+    <section class="help-card"><span class="help-card-no" aria-hidden="true">01</span><div><h3>${esc(ui.helpFieldsTitle)}</h3><p>${esc(ui.helpFields)}</p></div></section>
+    <section class="help-card"><span class="help-card-no" aria-hidden="true">02</span><div><h3>${esc(ui.helpDiagramsTitle)}</h3><p>${esc(ui.helpDiagrams)}</p><ul class="legend">${Object.entries(ui.legend).map(([kind, label]) => `<li><svg viewBox="0 0 36 10" aria-hidden="true"><line class="dg-edge dg-${kind} static" x1="2" y1="5" x2="30" y2="5"/><path class="dg-head dg-head-${kind}" d="${kind === 'flowsTo' ? 'M27 1 L34 5 L27 9' : 'M27 1 L34 5 L27 9 Z'}"/></svg>${esc(label)}</li>`).join('')}</ul></div></section>
+    <section class="help-card"><span class="help-card-no" aria-hidden="true">03</span><div><h3>${esc(ui.helpWorkTitle)}</h3><p>${esc(ui.helpWork)}</p></div></section>
+  </div>
+  <form method="dialog" class="help-dialog-foot"><button class="btn btn-primary">${esc(ui.close)}</button></form>
+</dialog>
 <div class="palette" role="dialog" aria-modal="true" aria-label="${esc(ui.searchShort)}" hidden>
   <div class="palette-box">
     <div class="palette-input"><svg class="ic" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="search" placeholder="${esc(ui.search)}" autocomplete="off" spellcheck="false" aria-label="${esc(ui.search)}"><kbd>Esc</kbd></div>
@@ -657,15 +672,6 @@ export function renderSite(doc, { lang, assetsVersion = '', guide = {} }) {
     </div>
   </div>
   <div class="paths">
-    ${parent ? '' : `<details class="guide-help" id="guide-help" open>
-      <summary>${esc(ui.helpTitle)}</summary>
-      <div class="guide-help-body">
-        <p>${esc(ui.helpFields)}</p>
-        <p>${esc(ui.helpDiagrams)}</p>
-        <ul class="legend">${Object.entries(ui.legend).map(([kind, label]) => `<li><svg viewBox="0 0 36 10" aria-hidden="true"><line class="dg-edge dg-${kind} static" x1="2" y1="5" x2="30" y2="5"/><path class="dg-head dg-head-${kind}" d="${kind === 'flowsTo' ? 'M27 1 L34 5 L27 9' : 'M27 1 L34 5 L27 9 Z'}"/></svg>${esc(label)}</li>`).join('')}</ul>
-        <p>${esc(ui.helpWork)}</p>
-      </div>
-    </details>`}
     <h2 class="paths-title reveal">${esc(ui.paths)}</h2>
     <div class="paths-grid">${cards}</div>
     <button class="reset-btn home-reset" type="button" data-reset>${esc(ui.reset)}</button>

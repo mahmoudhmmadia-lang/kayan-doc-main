@@ -104,14 +104,16 @@ test('every HR page has a concrete bilingual Horizon example before its first im
  }
 });
 
-test('shared guidance has one home and every guide page links to it',()=>{
+test('shared guidance opens in one dialog on every guide page',()=>{
  for(const lang of ['ar','en']) {
   const dir=path.join(root,'site',lang);
   for(const file of fs.readdirSync(dir).filter(f=>f.endsWith('.html'))) {
    const html=fs.readFileSync(path.join(dir,file),'utf8');
-   assert.ok(html.includes('href="index.html#guide-help"'),`${lang}/${file}: help link`);
-   assert.equal((html.match(/id="guide-help"/g)||[]).length,file==='index.html'?1:0);
-   assert.equal((html.match(/<ul class="legend">/g)||[]).length,file==='index.html'?1:0);
+   assert.ok(html.includes('data-open-help aria-haspopup="dialog"'),`${lang}/${file}: help button`);
+   assert.equal((html.match(/id="guide-help"/g)||[]).length,1);
+   assert.ok(html.includes('<dialog class="help-dialog"'));
+   assert.ok(!html.includes('<details class="guide-help"'));
+   assert.equal((html.match(/<ul class="legend">/g)||[]).length,1);
   }
  }
 });

@@ -99,7 +99,7 @@ body {
     transition:
         background-color 0.4s var(--ease),
         color 0.4s var(--ease);
-    overflow-x: hidden;
+    overflow-x: clip;
 }
 :root[lang='ar'] body {
     font-size: 17px;
@@ -2555,12 +2555,34 @@ html:has(.reset-dialog[open]) { overflow: hidden; }
 .reset-dialog button:focus-visible { outline: 3px solid var(--brand); outline-offset: 4px; }
 @media (max-width: 420px) { .reset-dialog-actions .btn { flex: 1; padding-inline: 10px; } }
 @media print { .reset-dialog { display: none !important; } }
-.guide-help { margin-block: 0 2rem; padding: 1rem 1.25rem; border: 1px solid var(--brand); border-radius: 16px; scroll-margin-top: 100px; }
-.guide-help summary { cursor: pointer; font-weight: 700; }
-.guide-help-body { max-width: 75ch; font-size: .9rem; line-height: 1.8; }
-.guide-help-body p { margin-block: .75rem; }
-.guide-help-link { font-size: .8rem; white-space: nowrap; color: var(--text); }
-@media (max-width: 600px) { .guide-help-link { font-size: .7rem; } }
+.guide-help-link { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-width: 44px; min-height: 44px; padding: 8px 12px; font: 600 .8rem var(--font-body); white-space: nowrap; color: var(--brand-strong); background: var(--brand-soft); border: 1px solid color-mix(in srgb, var(--brand) 25%, transparent); border-radius: 12px; cursor: pointer; }
+.guide-help-link:hover { border-color: var(--brand); background: var(--surface-raised); }
+.help-dialog { width: min(680px, calc(100% - 32px)); max-height: calc(100dvh - 32px); padding: 0; border: 1px solid var(--border-strong); border-radius: 24px; background: var(--surface); color: var(--text); box-shadow: 0 32px 100px #0006; overflow: auto; }
+.help-dialog::backdrop { background: #020617a6; backdrop-filter: blur(8px); }
+html:has(.help-dialog[open]) { overflow: hidden; }
+.help-dialog-head { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; padding: 28px; background: linear-gradient(120deg, var(--brand-soft), transparent); border-bottom: 1px solid var(--border); }
+.help-dialog-head form { flex: none; }
+.help-eyebrow { color: var(--brand-strong); font-size: .8rem; font-weight: 700; }
+.help-dialog h2 { margin: 6px 0 0; font-size: 1.5rem; line-height: 1.5; }
+.help-dialog-body { padding: 24px; display: grid; gap: 14px; }
+.help-card { display: flex; gap: 16px; padding: 20px; border: 1px solid var(--border); border-radius: 16px; background: var(--surface-raised); }
+.help-card > div { min-width: 0; }
+.help-card-no { flex: none; display: grid; place-items: center; width: 32px; height: 32px; border-radius: 10px; background: var(--brand-soft); color: var(--brand-strong); font: 600 .75rem/1 var(--font-body); }
+.help-card h3 { font-size: 1rem; margin: 0 0 8px; line-height: 1.6; }
+.help-card p { font-size: .9rem; line-height: 1.9; color: var(--text-muted); margin: 0; }
+.help-card .legend { margin: 14px 0 0; justify-content: flex-start; }
+.help-dialog-foot { display: flex; justify-content: flex-end; padding: 16px 24px; border-top: 1px solid var(--border); }
+.help-dialog-foot button { font: inherit; cursor: pointer; }
+@media (max-width: 600px) {
+    .guide-help-link { padding: 8px; }
+    .guide-help-link > span { display: none; }
+    .help-dialog { border-radius: 20px; }
+    .help-dialog-head { padding: 20px; }
+    .help-dialog h2 { font-size: 1.2rem; }
+    .help-dialog-body { padding: 14px; }
+    .help-card { padding: 16px; gap: 10px; }
+}
+@media print { .help-dialog { display: none !important; } }
 @media (max-width: 420px) {
     .page-chapter .brand-name { display: none; }
 }

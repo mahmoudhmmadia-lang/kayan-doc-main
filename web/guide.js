@@ -8,16 +8,30 @@
   const $ = (s, el = document) => el.querySelector(s);
   const $$ = (s, el = document) => [...el.querySelectorAll(s)];
   const root = document.documentElement;
-  const showGuideHelp = () => {
-    const help = $('#guide-help');
-    if (help && location.hash === '#guide-help') help.open = true;
+  const helpDialog = $('#guide-help');
+  const helpButton = $('[data-open-help]');
+  let helpScroll = 0;
+  const openHelp = () => {
+    if (!helpDialog || helpDialog.open) return;
+    helpScroll = window.scrollY;
+    helpDialog.showModal();
   };
-  window.addEventListener('hashchange', showGuideHelp);
-  $('.guide-help-link')?.addEventListener('click', () => {
-    const help = $('#guide-help');
-    if (help) help.open = true;
+  helpButton?.addEventListener('click', openHelp);
+  helpDialog?.addEventListener('click', event => {
+    const box = helpDialog.getBoundingClientRect();
+    if (event.target === helpDialog && (event.clientX < box.left || event.clientX > box.right || event.clientY < box.top || event.clientY > box.bottom)) helpDialog.close();
   });
-  showGuideHelp();
+  helpDialog?.addEventListener('close', () => {
+    helpButton?.focus({ preventScroll: true });
+    window.scrollTo({ top: helpScroll, behavior: 'instant' });
+  });
+  const showLinkedHelp = () => {
+    if (location.hash !== '#guide-help') return;
+    history.replaceState(null, '', location.pathname + location.search);
+    openHelp();
+  };
+  window.addEventListener('hashchange', showLinkedHelp);
+  showLinkedHelp();
   const data = JSON.parse($('#guide-data').textContent);
   const ui = data.ui;
   const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;

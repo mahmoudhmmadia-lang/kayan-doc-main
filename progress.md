@@ -339,3 +339,9 @@ Replaced the cramped chapter tabs with a keyboard-accessible chapter picker in t
 
 Verification: HTML builds passed. KayanOS tests: 17 passed, 2 archived checks skipped. Observatory tests: 3 passed. `node kayanos-guide/tools/verify-chapter-picker.mjs` passed 16 local Edge combinations covering both themes, desktop/mobile, Arabic/English and Builder: keyboard opening, visible full labels, navigation, progress persistence, search and overflow. Desktop and mobile screenshots were visually inspected in `review/html/chapter-picker/`. The first concurrent test run encountered generated files being rebuilt; sequential reruns passed. No product workflows or deployment were tested in this guide-only change.
 
+# 2026-10-22 — Help dialog
+
+Moved shared help from the home-page panel into a native modal on every page, including Builder and the observatory guide. The navbar now uses an icon button with a desktop label and an accessible mobile name. Three explanation cards retain the required-field guidance, diagram legend and reading-progress guidance. Escape, backdrop and close buttons dismiss the dialog; focus and reading position return. Old `#guide-help` links open the dialog. Horizontal clipping now preserves sticky navbar behavior.
+
+Verification: both HTML builds succeeded; KayanOS tests passed 17 checks (2 archived checks skipped), observatory tests passed 3. `node kayanos-guide/tools/verify-help-dialog.mjs` passed 16 local Edge combinations covering no navigation, scroll restoration, scrolling back to the top, focus containment and return, all dismissal paths, old links and mobile overflow. Desktop/mobile screenshots inspected in `review/html/help-dialog/`. No application workflow or deployment was involved.
+
