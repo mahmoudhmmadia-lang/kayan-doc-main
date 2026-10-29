@@ -105,8 +105,10 @@
   let lockUntil = 0; // scroll-spy pauses while go() scrolls to a chosen step
 
   // Scrolls to an id on this page, or opens the chapter page that holds it.
+  let showInOverview = null; // set by the chapter overview while it hides the chapter
   const go = (id, { flash = true } = {}) => {
     const el = document.getElementById(id);
+    if (el && showInOverview?.(id, el)) { closeToc(); return; }
     if (!el) { location.href = id.includes('-') ? `${pageOf(id)}#${id}` : pageOf(id); return; }
     closeToc();
     history.replaceState(null, '', `#${id}`);
@@ -119,7 +121,7 @@
   // In-page links scroll smoothly and keep the hash in sync; other pages load normally.
   document.addEventListener('click', (e) => {
     const a = e.target.closest('a[href^="#"]');
-    if (!a || e.metaKey || e.ctrlKey || e.shiftKey) return;
+    if (!a || e.defaultPrevented || e.metaKey || e.ctrlKey || e.shiftKey) return;
     const id = a.getAttribute('href').slice(1);
     if (!id || !document.getElementById(id)) return;
     e.preventDefault();
@@ -232,6 +234,7 @@
     const link = $(`.toc [data-toc="${step.id}"]`);
     if (link) {
       link.classList.add('active');
+      link.closest('.toc-section')?.setAttribute('open', '');
       const toc = $('#toc');
       if (getComputedStyle(toc).position === 'sticky') {
         const r = link.getBoundingClientRect(), t = toc.getBoundingClientRect();
@@ -370,7 +373,7 @@
 
   // ---------------------------------------------------------------- language switch keeps your place
   $$('[data-lang-switch]').forEach((a) => a.addEventListener('click', () => {
-    const id = current?.id || location.hash.slice(1);
+    const id = root.hasAttribute('data-overview-focus') ? '' : current?.id || location.hash.slice(1); // shorthand has no place in the chapter
     a.href = `../${a.dataset.langSwitch}/${data.page}${id ? `#${id}` : ''}`;
     try { localStorage.setItem('kos-guide-lang', a.dataset.langSwitch); } catch { /* ignore */ }
   }));
@@ -384,6 +387,145 @@
     if (z) { const img = $('img', z); lbImg.src = img.currentSrc || img.src; lbImg.alt = img.alt; lb.hidden = false; lb.scrollTop = 0; $('.lightbox-close', lb).focus(); return; }
     if (!lb.hidden && e.target.closest('.lightbox')) closeLightbox();
   });
+
+  // ---------------------------------------------------------------- chapter overview
+  // The switch shows only the chapter's key ideas and hides the rest of it.
+  // Each idea opens its full explanation in a dialog, fetched from the feature
+  // page when it lives elsewhere. Saved per chapter page, apart from progress.
+  const overview = $('.chapter-overview');
+  const ovDialog = $('.overview-dialog');
+  if (overview && ovDialog) {
+    const overviewKey = `${KEY}:overview:${data.page}`;
+    const ideas = $$('[data-overview-open]', overview);
+    const setFocus = (on) => root.toggleAttribute('data-overview-focus', on);
+    const inChapter = (el) => !!el && !overview.contains(el) && !!el.closest('.chapter');
+    // A deep link to part of the chapter shows the whole chapter.
+    const linked = document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    overview.open = !inChapter(linked) && store.get(overviewKey, false) === true;
+    store.set(overviewKey, overview.open);
+    setFocus(overview.open);
+    overview.addEventListener('toggle', () => {
+      store.set(overviewKey, overview.open);
+      setFocus(overview.open);
+      if (overview.open && overview.getBoundingClientRect().top < 0) overview.scrollIntoView({ block: 'start', behavior: 'instant' });
+    });
+    const showChapter = () => { overview.open = false; store.set(overviewKey, false); setFocus(false); };
+    $('[data-overview-full]', overview).addEventListener('click', () => {
+      showChapter();
+      overview.scrollIntoView({ block: 'start', behavior: reduce ? 'auto' : 'smooth' });
+    });
+
+    const body = $('[data-ov-body]', ovDialog);
+    const fullLink = $('[data-ov-full]', ovDialog);
+    const pages = new Map(); // other pages already fetched, by path
+    let shown = { idea: -1, href: '' };
+    let request = 0;
+    const readPage = (url) => {
+      if (url.pathname === location.pathname) return Promise.resolve(document);
+      if (!pages.has(url.pathname)) {
+        pages.set(url.pathname, fetch(url.pathname).then((r) => {
+          if (!r.ok) throw new Error(String(r.status));
+          return r.text();
+        }).then((html) => new DOMParser().parseFromString(html, 'text/html')).catch((error) => {
+          pages.delete(url.pathname);
+          throw error;
+        }));
+      }
+      return pages.get(url.pathname);
+    };
+    // A copy of the section's text and pictures, with its own ids so diagrams
+    // keep their arrowheads and nothing clashes with the hidden original.
+    const copyOf = (step, target, url, own) => {
+      const copy = document.importNode($('.step-body', step), true);
+      const ids = new Map();
+      for (const el of copy.querySelectorAll('[id]')) {
+        ids.set(el.id, `ov-${el.id}`);
+        if (el.id === target.id) el.dataset.ovTarget = '';
+        el.id = `ov-${el.id}`;
+      }
+      for (const el of copy.querySelectorAll('*')) {
+        for (const at of [...el.attributes]) {
+          if (at.name === 'href' && at.value.startsWith('#')) {
+            if (!own) el.setAttribute('href', url.pathname.split('/').pop() + at.value);
+          } else if (at.value.includes('url(#')) {
+            el.setAttribute(at.name, at.value.replace(/url\(#([^)]+)\)/g, (m, id) => `url(#${ids.get(id) ?? id})`));
+          } else if (/^aria-(labelledby|describedby|controls)$/.test(at.name)) {
+            el.setAttribute(at.name, at.value.split(' ').map((id) => ids.get(id) ?? id).join(' '));
+          }
+        }
+      }
+      copy.querySelectorAll('.reveal, .reveal-step, .diagram-card').forEach((el) => el.classList.add('in'));
+      return copy;
+    };
+    const paintNav = () => {
+      const nav = $('[data-ov-nav]', ovDialog);
+      nav.hidden = shown.idea < 0;
+      if (shown.idea < 0) return;
+      $('[data-ov-count]', nav).textContent = `${shown.idea + 1} / ${ideas.length}`;
+      $('[data-ov-step="-1"]', nav).disabled = shown.idea === 0;
+      $('[data-ov-step="1"]', nav).disabled = shown.idea === ideas.length - 1;
+    };
+    const show = async (href, idea = -1) => {
+      const url = new URL(href, location.href);
+      const id = decodeURIComponent(url.hash.slice(1));
+      const ticket = ++request;
+      shown = { idea, href: url.href };
+      paintNav();
+      fullLink.href = url.href;
+      $('[data-ov-eyebrow]', ovDialog).textContent = idea < 0 ? '' : ideas[idea].dataset.title;
+      $('[data-ov-title]', ovDialog).textContent = '';
+      body.replaceChildren(Object.assign(document.createElement('p'), { className: 'overview-dialog-loading', textContent: ovDialog.dataset.loading }));
+      if (!ovDialog.open) { ovDialog.showModal(); ovDialog.append(lb); }
+      try {
+        const doc = await readPage(url);
+        if (ticket !== request) return;
+        const target = doc.getElementById(id);
+        const step = target?.closest('.step');
+        if (!step) throw new Error(`Missing ${id}`);
+        const no = $('.step-no', step)?.textContent.trim();
+        $('[data-ov-title]', ovDialog).textContent = `${no ? `${no}  ` : ''}${$('.step-head h2', step).textContent.trim()}`;
+        const copy = copyOf(step, target, url, doc === document);
+        body.replaceChildren(copy);
+        body.scrollTop = 0;
+        const mark = $('[data-ov-target]', copy);
+        if (mark) requestAnimationFrame(() => { body.scrollTop = mark.offsetTop - 12; });
+      } catch {
+        // Offline copies (file://) cannot fetch another page: open it instead.
+        if (ticket === request) location.href = url.href;
+      }
+    };
+    showInOverview = (id, el) => {
+      if (!overview.open || !inChapter(el)) return false;
+      show(`#${id}`);
+      return true;
+    };
+    overview.addEventListener('click', (e) => {
+      const a = e.target.closest('[data-overview-open]');
+      if (!a || e.metaKey || e.ctrlKey || e.shiftKey) return;
+      e.preventDefault();
+      show(a.getAttribute('href'), Number(a.dataset.overviewOpen));
+    });
+    $$('[data-ov-step]', ovDialog).forEach((b) => b.addEventListener('click', () => {
+      const next = ideas[shown.idea + Number(b.dataset.ovStep)];
+      if (next) show(next.getAttribute('href'), ideas.indexOf(next));
+    }));
+    $('[data-ov-close]', ovDialog).addEventListener('click', () => ovDialog.close());
+    ovDialog.addEventListener('click', (e) => {
+      const box = ovDialog.getBoundingClientRect();
+      if (e.target === ovDialog && (e.clientX < box.left || e.clientX > box.right || e.clientY < box.top || e.clientY > box.bottom)) ovDialog.close();
+    });
+    // Escape closes an enlarged screenshot first, then the dialog.
+    ovDialog.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !lb.hidden) e.preventDefault(); }, true);
+    ovDialog.addEventListener('close', () => { request++; closeLightbox(); document.body.append(lb); });
+    fullLink.addEventListener('click', (e) => {
+      const url = new URL(shown.href);
+      ovDialog.close();
+      if (url.pathname !== location.pathname) return;
+      e.preventDefault();
+      showChapter();
+      go(decodeURIComponent(url.hash.slice(1)));
+    });
+  }
 
   // ---------------------------------------------------------------- hover glow on chapter cards
   $$('.path-card').forEach((c) => c.addEventListener('pointermove', (e) => {

@@ -15,6 +15,13 @@ set. `progress.md` is the live status log; this file is the standing brief.
   Horizon visit example. See `review/correspondence-source-coverage.md` for
   verification and later stages; the first stage is under review.
 
+- **Explain only the numbers that need it (2026-10-22).** In a numbered key, write
+  `label: explanation` only when the explanation adds meaning (a non-obvious
+  effect, condition, warning, the value shown, or an ambiguous control). When the
+  UI label says enough, write just the label (`④ «إنشاء».`). The HTML key shows
+  label-only items as compact lines and explained items as cards, on a rail that
+  shows the marker order. Do not repeat «الأرقام في الصورة» or «بترتيب الأرقام في الصورة»
+  beneath screenshots (2026-10-28); keep the numbered explanations. Same rule in both languages.
 - **Numbered screenshots (2026-10-19; applies to every chapter from now on).**
   Each screenshot shows numbered markers (green circles ①, ②, ③ …) drawn on the
   real test2 page at the exact controls the reader must find or use, in the order

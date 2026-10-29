@@ -17,7 +17,7 @@ Horizon wants no new visit request to be lost. So the system administrator build
 \includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-sops-en.png}
 \caption{The automation list in the embedded studio}
 \label{fig:builder-sops-screen}
-\shotnote{The image shows the embedded automation studio as it appeared in the test2 test organization, with test automations, some on and some off. It is where every new automation starts and where you follow the state of existing ones. ① “Automations”: the tab that lists the automations. ② “Search flows and tables...”: finds an automation by name. ③ “Create New”: starts a new automation. ④ The switch in the “Status” column: shows the automation is on, and turns it on or off.}
+\shotnote{The image shows the embedded automation studio as it appeared in the test2 test organization, with test automations, some on and some off. It is where every new automation starts and where you follow the state of existing ones. ① “Automations”. ② “Search flows and tables...”: finds an automation by name. ③ “Create New”: starts a new automation. ④ The switch in the “Status” column: shows the automation is on, and turns it on or off.}
 \end{figure}
 
 \begin{table}[H]
@@ -152,7 +152,7 @@ The system administrator adds \en{Find Records} to look for an open review task 
 \includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-sops-action-en.png}
 \caption{The settings of an action step in the automation editor}
 \label{fig:builder-sops-actions-screen}
-\shotnote{The image shows the third step of the same test automation, a read step that fetches the form session record that started the automation. It shows how an action field is linked to a value from the trigger result instead of being typed, and how error handling is set for each step separately. ① “3. Read submission”: the action step in the flow. ② “Table Name”: the table the action reads from. ③ “Record ID”: linked here to the form session ID from the trigger result. ④ “Retry on Failure”: retries the step up to four times before it fails. ⑤ “Test Step”: runs this step alone so you can review its result.}
+\shotnote{The image shows the third step of the same test automation, a read step that fetches the form session record that started the automation. It shows how an action field is linked to a value from the trigger result instead of being typed, and how error handling is set for each step separately. ① “3. Read submission”: the action step in the flow. ② “Table Name”. ③ “Record ID”: linked here to the form session ID from the trigger result. ④ “Retry on Failure”: retries the step up to four times before it fails. ⑤ “Test Step”: runs this step alone so you can review its result.}
 \end{figure}
 
 \begin{table}[H]
@@ -221,7 +221,7 @@ For the “Visit requests” automation, the system administrator chooses the or
 \includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-sops-connections-en.png}
 \caption{The “Connections” tab in the automation studio}
 \label{fig:builder-sops-connections-screen}
-\shotnote{The image shows the studio’s “Connections” tab, empty in the test organization even though it has active automations. This tab is where connections are created and where you review each connection’s status and the automations that use it, so it is where you check the approved connection before building. ① “Connections”: the tab that lists the organization’s connections. ② “New Connection”: adds a new connection. ③ “No connections found”: the message shown when no connection exists yet.}
+\shotnote{The image shows the studio’s “Connections” tab, empty in the test organization even though it has active automations. This tab is where connections are created and where you review each connection’s status and the automations that use it, so it is where you check the approved connection before building. ① “Connections”. ② “New Connection”. ③ “No connections found”: the message shown when no connection exists yet.}
 \end{figure}
 
 \begin{table}[H]
@@ -301,7 +301,7 @@ The system administrator tests the automation with two sample requests: one for 
 \includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-sops-runs-en.png}
 \caption{The run log in the “Runs” tab}
 \label{fig:builder-sops-testing-screen}
-\shotnote{The image shows the “Runs” tab, which records every time an automation ran; it is empty in the test organization because no automation ran in the last seven days. After testing, this log is where you look for a failed or repeated run and find its time, duration and failure reason. ① “Runs”: the tab that shows the run log. ② “Status”: filters runs by status, such as failed. ③ “Last 7 Days”: the period shown, which you can change. ④ “No flow runs found”: the message shown when no run exists in the chosen period.}
+\shotnote{The image shows the “Runs” tab, which records every time an automation ran; it is empty in the test organization because no automation ran in the last seven days. After testing, this log is where you look for a failed or repeated run and find its time, duration and failure reason. ① “Runs”. ② “Status”: filters runs by status, such as failed. ③ “Last 7 Days”: the period shown, which you can change. ④ “No flow runs found”: the message shown when no run exists in the chosen period.}
 \end{figure}
 
 \begin{table}[H]
@@ -371,7 +371,7 @@ The system administrator creates a “Visits assistant” bot and makes it addab
 \includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-bots-en.png}
 \caption{The “Bots” page}
 \label{fig:builder-bots-screen}
-\shotnote{The page lists the organization’s bots, here test bots. ① “Add Bot”: asks only for a name. ② Search: finds a bot by name.}
+\shotnote{The page lists the organization’s bots, here test bots. ① “Add Bot”: asks only for a name. ② Search.}
 \end{figure}
 
 
@@ -395,7 +395,7 @@ Default installation & Whether the bot is added automatically and which email it
 \includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-bot-capabilities-en.png}
 \caption{The bot's capabilities on its page}
 \label{fig:builder-bots-capabilities-screen}
-\shotnote{The image shows a test bot's page in the test organization, with all its switches off. The page groups the bot's capabilities into the “Chat”, “Emails” and “Calendar” sections, so members cannot add the bot anywhere until you turn on the right switch and save. ① “Addable to Direct Chats”: lets members add the bot to their direct chats. ② “Can Send Message To It”: lets members message the bot, and a message is what starts an internal SOP with the “On Direct Message to Bot” trigger. ③ “Email Installable”: lets members add the bot to the email app. ④ “Calendar Installable”: lets members add it to the calendar app.}
+\shotnote{The image shows a test bot's page in the test organization, with all its switches off. The page groups the bot's capabilities into the “Chat”, “Emails” and “Calendar” sections, so members cannot add the bot anywhere until you turn on the right switch and save. ① “Addable to Direct Chats”. ② “Can Send Message To It”: lets members message the bot, and a message is what starts an internal SOP with the “On Direct Message to Bot” trigger. ③ “Email Installable”. ④ “Calendar Installable”.}
 \end{figure}
 
 \begin{figure}[H]
@@ -440,7 +440,7 @@ For “Visits assistant”, the system administrator chooses “Channels only”
 \includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch06-bot-default-installation-en.png}
 \caption{The “Default installation” section of a bot’s page}
 \label{fig:builder-bots-default-installation-screen}
-\shotnote{The image shows the “Default installation” section of a test bot’s page, with its three switches off and both lists on “None”. This section decides where the bot is added automatically, without members adding it, and which email messages it reaches. ① “Install in Direct Chats”: a switch that installs the bot in chats automatically. ② The list beside it: choose “Channels only” or “Direct \& Channels”. ③ “Install in Emails”: a switch that installs the bot in email. ④ The button beside it: shows the current access scope and opens “Default email access”. ⑤ “Install in Calendar”: a switch that installs the bot in the calendar.}
+\shotnote{The image shows the “Default installation” section of a test bot’s page, with its three switches off and both lists on “None”. This section decides where the bot is added automatically, without members adding it, and which email messages it reaches. ① “Install in Direct Chats”. ② The list beside it: choose “Channels only” or “Direct \& Channels”. ③ “Install in Emails”. ④ The button beside it: shows the current access scope and opens “Default email access”. ⑤ “Install in Calendar”.}
 \end{figure}
 
 \begin{table}[H]

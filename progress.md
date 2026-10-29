@@ -2,6 +2,36 @@
 
 الحالات: لم يبدأ · مسودة · قيد المراجعة · معتمد
 
+## Chapter shorthand fixes (chapters 1–3) — 2026-10-28 — under review
+
+- The `+` glyph is replaced by an On/Off switch in the panel header. Turning it on now hides every chapter section and the step bar, leaving the title, the diagram and the pager; a note under the diagram offers "Show the full chapter".
+- Redesigned the flow: one rail of numbered nodes ending in a result node; each card shows the idea and the Horizon example side by side (stacked on phones), with a pill "Read the explanation" button.
+- "Read the explanation" opens the section in a modal (bottom sheet on phones) instead of scrolling: previous/next idea, "Open it in the chapter", screenshot enlargement above it, Escape closes the picture first. HR sections are fetched from their feature pages; offline `file://` copies fall back to opening the page. While shorthand is on, contents links also open in the dialog; deep links and language switching behave correctly. The global short mode no longer trims the dialog's copy.
+- Verification: HTML build, 18 unit tests (2 archived skipped) and `tools/verify-chapter-overviews.mjs` (24 combinations: both languages × chapters 1–3 × 1440/390 × dark/light, plus no-JavaScript). Screenshots: `review/html/chapter-overviews/`. Guide-only change; no test2 product workflow test needed.
+
+## Screenshot key wording — 2026-10-28
+
+- Removed the repeated screenshot-number lead-in from Arabic/English source notes and capture helpers, and removed the order subtitle from the shared HTML renderer. Kept numbered explanations and the key heading; removed unused subtitle CSS.
+- Rebuilt both languages. All 17 active checks passed (2 archived print checks skipped); all 469 generated HTML pages are free of the removed phrases. Local browser checks passed for Arabic/English, desktop/mobile and dark/light, preserving the numbered keys without horizontal overflow. Evidence: `review/html/clean-screenshot-keys/`. This guide-only change requires no test2 product workflow test.
+
+## Chapter 1: introduce the shared example first — 2026-10-28 — under review
+
+- Moved the Horizon introduction from 1.4 to 1.2, before the Builder and permissions sections, in Arabic and English. Added an opening sentence explaining that one fictional company is followed throughout the guide and introduced Sarah and Omar by their full names before their worked examples.
+- Rebuilt HTML; all 17 active source/web checks passed (2 archived print checks skipped). Local Edge verification passed 8 combinations covering both languages, desktop/mobile and dark/light: section order, numbering, deep links, language switching, saved completion and horizontal overflow. Inspected desktop/mobile screenshots in `review/html/intro-order/`.
+- This is a guide-only editorial change, so verification used the local guide preview; no product workflow test on test2 was needed.
+
+## الفصل 1: مقدمة أقوى لقدرات كيان — 2026-10-28 — قيد المراجعة
+
+- بطلب المستخدم صار الفصل الأول يعرّف القارئ الجديد بحجم كيان وفائدته: جدول «ما الذي يقدّمه كيان لمؤسستك؟» (القدرة، معناها، ما تكسبه)، وصفحتان جديدتان: «ابنِ نظام عملك دون برمجة» (جدول أدوات البناء الثماني بأمثلة، وشكل «من فكرة إلى تطبيق يعمل به الفريق»، ومثال الأفق) و«تحكّم في كل صلاحية» (مستويات الصلاحيات، وأداة «التحقق من صلاحيات شخص»، ومثال الأفق).
+- أُضيف صف «من يبني تطبيقات المؤسسة» إلى «من أين تبدأ؟»، وصف «المراسلات الرسمية» إلى «اختر التطبيق». لم تتغير الصور ولا الأقسام الأخرى، وبقيت التسميات (labels) كما هي.
+- كل قدرة مذكورة مأخوذة من صفحات دليل أدوات البناء الموثّقة، دون وعود بأرقام أو نتائج آلية. نجح بناء HTML و17 اختباراً، وفُحصت الصفحة في المتصفح باللغتين (1440 و390) دون تمرير أفقي أو أخطاء، مع رابط الفصل 6. الصور في `review/html/intro/`.
+
+## مفتاح الأرقام: شرح ما يحتاج فقط — 2026-10-22
+
+- طلب المستخدم ألا يُشرح كل رقم. صار المفتاح يعرض الأرقام بترتيبها على خط واحد مع عبارة «بترتيب الأرقام في الصورة»؛ التسمية وحدها سطر مختصر، و«التسمية: الشرح» بطاقة. التعديل في `tools/html-render.mjs` و`web/guide.css`، ونُسخ إلى دليل المرصد الصناعي.
+- رُوجعت مفاتيح كل الفصول بالعربية والإنجليزية: حُذف الشرح الذي يكرر التسمية (نحو 150 بنداً، منها 15 تكراراً لنجمة الحقول الإلزامية في الموارد البشرية)، وحُوّل الشرح المفيد المكتوب دون نقطتين إلى صيغة «التسمية: الشرح».
+- نجح بناء HTML و17 اختباراً، وفُحص المفتاح بصرياً بالعربية (1440 داكن) والإنجليزية (390 فاتح) في `review/html/key-*.png`.
+
 ## نافذة تأكيد إعادة ضبط التقدم — 2026-10-21
 
 - استُبدل تأكيد المتصفح بنافذة متوافقة مع تصميم الدليل، بالعربية والإنجليزية وبالمظهرين. يستفيد دليل المرصد من المكوّن المشترك نفسه.
@@ -345,3 +375,11 @@ Moved shared help from the home-page panel into a native modal on every page, in
 
 Verification: both HTML builds succeeded; KayanOS tests passed 17 checks (2 archived checks skipped), observatory tests passed 3. `node kayanos-guide/tools/verify-help-dialog.mjs` passed 16 local Edge combinations covering no navigation, scroll restoration, scrolling back to the top, focus containment and return, all dismissal paths, old links and mobile overflow. Desktop/mobile screenshots inspected in `review/html/help-dialog/`. No application workflow or deployment was involved.
 
+
+# 2026-10-29 — Chapter sections and reader navigation
+
+Added a three-level chapter → section → page tree to the shared web renderer. Sections come from the existing bilingual page-directory captions, with overview steps grouped separately. Every page appears once, existing routes and progress IDs are preserved, and the active page opens its containing section. All chapters can be expanded without navigating away; long chapter lists no longer have a fixed height that could hide their final pages. Feature pages show their section beside the chapter label.
+
+Refreshed the toolbar and contents panel with quieter controls, a clearer search field, section counts, nested disclosure controls and highlighted current pages. Kept the KayanOS palette, both themes, RTL/LTR and responsive mobile drawer.
+
+Verification: HTML build succeeded; 18 automated checks passed, with 2 archived print checks skipped. The local Edge verification script `tools/verify-section-navigation.mjs` exercises 8 language/viewport/theme combinations, including section navigation, active ancestors, Projects and Builder's last pages, saved completion, search, language switching and overflow. Screenshots are in `review/html/section-navigation/`. This is guide-only work, verified on the local guide preview under this directory's instructions; no product environment or deployment changed.

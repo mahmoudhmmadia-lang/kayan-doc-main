@@ -234,7 +234,7 @@
     "width": 1440,
     "height": 2454,
     "scale": 2,
-    "capturedAt": "2026-10-20T10:16:25.288Z",
+    "capturedAt": "2026-10-28T07:54:53.882Z",
     "marks": [
       {
         "n": 1,
@@ -257,7 +257,7 @@
     "width": 1440,
     "height": 2454,
     "scale": 2,
-    "capturedAt": "2026-10-20T10:16:43.327Z",
+    "capturedAt": "2026-10-28T07:55:12.779Z",
     "marks": [
       {
         "n": 1,
@@ -778,7 +778,7 @@
     "width": 1440,
     "height": 2454,
     "scale": 2,
-    "capturedAt": "2026-10-20T11:01:11.184Z",
+    "capturedAt": "2026-10-28T07:55:45.017Z",
     "marks": [
       {
         "n": 1,
@@ -801,7 +801,7 @@
     "width": 1440,
     "height": 2454,
     "scale": 2,
-    "capturedAt": "2026-10-20T11:01:30.619Z",
+    "capturedAt": "2026-10-28T07:56:03.764Z",
     "marks": [
       {
         "n": 1,
@@ -2945,9 +2945,9 @@
     "url": "https://test2.kayanos.app/apps/projects",
     "lang": "en",
     "width": 1440,
-    "height": 1634,
+    "height": 2479,
     "scale": 2,
-    "capturedAt": "2026-10-19T12:43:56.576Z",
+    "capturedAt": "2026-10-28T09:18:59.283Z",
     "marks": [
       {
         "n": 1,
@@ -2981,9 +2981,9 @@
     "url": "https://test2.kayanos.app/apps/projects/pm_core/pm_projects/add?tab=overview",
     "lang": "en",
     "width": 1440,
-    "height": 1276,
+    "height": 1201,
     "scale": 2,
-    "capturedAt": "2026-10-19T12:44:27.081Z",
+    "capturedAt": "2026-10-28T09:17:03.991Z",
     "marks": [
       {
         "n": 1,
@@ -3014,7 +3014,7 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-19T12:46:43.640Z",
+    "capturedAt": "2026-10-28T09:17:18.842Z",
     "marks": [
       {
         "n": 1,
@@ -3039,9 +3039,9 @@
     "url": "https://test2.kayanos.app/apps/projects/pm_core/pm_projects/add?tab=charter",
     "lang": "en",
     "width": 1440,
-    "height": 1128,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-19T12:48:27.645Z",
+    "capturedAt": "2026-10-28T09:17:44.266Z",
     "marks": [
       {
         "n": 1,
@@ -3068,7 +3068,7 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-19T12:45:58.460Z",
+    "capturedAt": "2026-10-28T09:18:44.132Z",
     "marks": [
       {
         "n": 1,
@@ -3093,9 +3093,9 @@
     "url": "https://test2.kayanos.app/apps/projects",
     "lang": "ar",
     "width": 1440,
-    "height": 1634,
+    "height": 2469,
     "scale": 2,
-    "capturedAt": "2026-10-19T12:37:51.143Z",
+    "capturedAt": "2026-10-28T09:15:04.169Z",
     "marks": [
       {
         "n": 1,
@@ -3122,7 +3122,7 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-19T12:42:43.996Z",
+    "capturedAt": "2026-10-28T09:14:47.144Z",
     "marks": [
       {
         "n": 1,
@@ -3147,9 +3147,9 @@
     "url": "https://test2.kayanos.app/apps/projects/planning/plans/add?tab=overview",
     "lang": "en",
     "width": 1440,
-    "height": 1087,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-19T12:44:12.668Z",
+    "capturedAt": "2026-10-28T09:16:38.272Z",
     "marks": [
       {
         "n": 1,
@@ -3170,9 +3170,9 @@
     "url": "https://test2.kayanos.app/apps/projects/portfolio/pm_portfolios/add?tab=overview",
     "lang": "en",
     "width": 1440,
-    "height": 1204,
+    "height": 1124,
     "scale": 2,
-    "capturedAt": "2026-10-19T12:45:16.052Z",
+    "capturedAt": "2026-10-28T09:17:59.268Z",
     "marks": [
       {
         "n": 1,
@@ -3197,9 +3197,9 @@
     "url": "https://test2.kayanos.app/apps/projects/portfolio/pm_programs/add?tab=overview",
     "lang": "en",
     "width": 1440,
-    "height": 1204,
+    "height": 1124,
     "scale": 2,
-    "capturedAt": "2026-10-19T12:45:30.164Z",
+    "capturedAt": "2026-10-28T09:18:14.472Z",
     "marks": [
       {
         "n": 1,
@@ -3220,9 +3220,9 @@
     "url": "https://test2.kayanos.app/apps/projects/pm_financial/pm_budgets/add?tab=overview",
     "lang": "en",
     "width": 1440,
-    "height": 1385,
+    "height": 1305,
     "scale": 2,
-    "capturedAt": "2026-10-19T12:45:44.431Z",
+    "capturedAt": "2026-10-28T09:18:29.560Z",
     "marks": [
       {
         "n": 1,
@@ -3247,9 +3247,9 @@
     "url": "https://test2.kayanos.app/apps/projects/planning/plans/add?tab=overview",
     "lang": "ar",
     "width": 1440,
-    "height": 1087,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-19T12:41:01.126Z",
+    "capturedAt": "2026-10-28T09:12:40.022Z",
     "marks": [
       {
         "n": 1,
@@ -3270,9 +3270,9 @@
     "url": "https://test2.kayanos.app/apps/projects/portfolio/pm_portfolios/add?tab=overview",
     "lang": "ar",
     "width": 1440,
-    "height": 1204,
+    "height": 1124,
     "scale": 2,
-    "capturedAt": "2026-10-19T12:42:01.807Z",
+    "capturedAt": "2026-10-28T09:14:00.566Z",
     "marks": [
       {
         "n": 1,
@@ -3297,9 +3297,9 @@
     "url": "https://test2.kayanos.app/apps/projects/portfolio/pm_programs/add?tab=overview",
     "lang": "ar",
     "width": 1440,
-    "height": 1204,
+    "height": 1124,
     "scale": 2,
-    "capturedAt": "2026-10-19T12:42:15.939Z",
+    "capturedAt": "2026-10-28T09:14:15.229Z",
     "marks": [
       {
         "n": 1,
@@ -3320,9 +3320,9 @@
     "url": "https://test2.kayanos.app/apps/projects/pm_financial/pm_budgets/add?tab=overview",
     "lang": "ar",
     "width": 1440,
-    "height": 1385,
+    "height": 1305,
     "scale": 2,
-    "capturedAt": "2026-10-19T12:42:30.062Z",
+    "capturedAt": "2026-10-28T09:14:30.302Z",
     "marks": [
       {
         "n": 1,
@@ -3347,9 +3347,9 @@
     "url": "https://test2.kayanos.app/apps/projects/pm_core/pm_projects/add?tab=overview",
     "lang": "ar",
     "width": 1440,
-    "height": 1276,
+    "height": 1201,
     "scale": 2,
-    "capturedAt": "2026-10-19T12:41:15.504Z",
+    "capturedAt": "2026-10-28T09:13:05.538Z",
     "marks": [
       {
         "n": 1,
@@ -3380,7 +3380,7 @@
     "width": 1440,
     "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-19T12:47:15.443Z",
+    "capturedAt": "2026-10-28T09:13:20.295Z",
     "marks": [
       {
         "n": 1,
@@ -3405,9 +3405,9 @@
     "url": "https://test2.kayanos.app/apps/projects/pm_core/pm_projects/add?tab=charter",
     "lang": "ar",
     "width": 1440,
-    "height": 1128,
+    "height": 900,
     "scale": 2,
-    "capturedAt": "2026-10-19T12:48:53.088Z",
+    "capturedAt": "2026-10-28T09:13:45.560Z",
     "marks": [
       {
         "n": 1,
@@ -9028,7 +9028,7 @@
     "width": 1440,
     "height": 1986,
     "scale": 2,
-    "capturedAt": "2026-10-21T10:24:12.855Z",
+    "capturedAt": "2026-10-28T09:23:21.637Z",
     "marks": [
       {
         "n": 1,
@@ -9051,7 +9051,7 @@
     "width": 1440,
     "height": 1209,
     "scale": 2,
-    "capturedAt": "2026-10-21T10:22:32.734Z",
+    "capturedAt": "2026-10-28T09:23:43.598Z",
     "marks": [
       {
         "n": 1,
@@ -9070,7 +9070,7 @@
     "width": 1440,
     "height": 1097,
     "scale": 2,
-    "capturedAt": "2026-10-21T10:22:47.673Z",
+    "capturedAt": "2026-10-28T09:23:59.172Z",
     "marks": [
       {
         "n": 1,
@@ -9097,7 +9097,7 @@
     "width": 1440,
     "height": 1986,
     "scale": 2,
-    "capturedAt": "2026-10-21T10:24:44.474Z",
+    "capturedAt": "2026-10-28T09:22:14.578Z",
     "marks": [
       {
         "n": 1,
@@ -9120,7 +9120,7 @@
     "width": 1440,
     "height": 1209,
     "scale": 2,
-    "capturedAt": "2026-10-21T10:23:30.631Z",
+    "capturedAt": "2026-10-28T09:22:32.089Z",
     "marks": [
       {
         "n": 1,
@@ -9139,7 +9139,7 @@
     "width": 1440,
     "height": 1097,
     "scale": 2,
-    "capturedAt": "2026-10-21T10:23:45.712Z",
+    "capturedAt": "2026-10-28T09:22:47.865Z",
     "marks": [
       {
         "n": 1,

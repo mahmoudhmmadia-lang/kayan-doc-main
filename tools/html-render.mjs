@@ -8,6 +8,7 @@
 
 import { renderDiagram } from './html-diagram.mjs'
 import { parseInline } from './latex-parse.mjs'
+import { renderChapterOverview } from './chapter-overviews.mjs'
 
 export const UI = {
     ar: {
@@ -349,15 +350,20 @@ function renderTable(b, ctx) {
 }
 
 // The description and the numbered key are shown apart: a short paragraph,
-// then one row per marker whose badge matches the number on the screenshot.
+// then the markers in their order on the screenshot. A marker whose label says
+// enough is one compact line; only "label: explanation" keys get a second line.
 function renderNote(b, ctx) {
     if (!b.note) return ''
     const text = b.noteText ? `<p class="fig-desc">${inline(b.noteText, ctx)}</p>` : ''
     if (!b.noteKeys?.length) return `<div class="fig-note">${text}</div>`
     const rows = b.noteKeys.map(({ n, text: key }) => {
         const m = /^(.{1,60}?):\s+(.+)$/s.exec(key)
-        const body = m ? `<strong class="fig-key-term">${inline(m[1], ctx)}</strong><span class="fig-key-text">${inline(m[2], ctx)}</span>` : `<span class="fig-key-text">${inline(key, ctx)}</span>`
-        return `<li><span class="fig-key-no" dir="ltr">${n}</span><span class="fig-key-body">${body}</span></li>`
+        const body = m
+            ? `<strong class="fig-key-term">${inline(m[1], ctx)}</strong><span class="fig-key-text">${inline(m[2], ctx)}</span>`
+            : key.length > 48
+                ? `<span class="fig-key-text">${inline(key, ctx)}</span>`
+                : `<span class="fig-key-term">${inline(key.replace(/[.。]\s*$/, ''), ctx)}</span>`
+        return `<li class="${m ? 'is-explained' : key.length > 48 ? 'is-note' : 'is-label'}"><span class="fig-key-no" dir="ltr">${n}</span><span class="fig-key-body">${body}</span></li>`
     }).join('')
     return `<div class="fig-note">${text}<div class="fig-keys"><p class="fig-keys-title">${esc(ctx.ui.keyTitle)}</p><ol>${rows}</ol></div></div>`
 }
@@ -680,6 +686,31 @@ export function renderSite(doc, { lang, assetsVersion = '', guide = {} }) {
 </main>`,
     })
 
+    // Keep the authored directory groups as a real chapter → section → page tree.
+    // Match titles exactly as renderTable does; keep each page once, in source order.
+    const chapterGroups = new Map(chapters.map(c => {
+        const groups = [], assigned = new Set()
+        const overview = c.sections.filter(s => !routes[s.id])
+        if (overview.length) groups.push({ title: lang === 'ar' ? 'نظرة عامة' : 'Overview', pages: overview })
+        const visit = blocks => blocks.forEach(b => {
+            if (/^tab:(hr|tasks|projects|builder|correspondence)-pages-/.test(b.label ?? '')) {
+                const pages = (b.rows ?? []).filter(r => !r.header).flatMap(r => {
+                    const name = plain(r.cells[0], base).split(' — ')[0].trim()
+                    const s = c.sections.find(s => routes[s.id] && plain(s.title, base) === name)
+                    if (!s || assigned.has(s.id)) return []
+                    assigned.add(s.id)
+                    return [s]
+                })
+                if (pages.length) groups.push({ title: b.caption, pages })
+            }
+            if (b.blocks) visit(b.blocks)
+        })
+        visit([...c.intro, ...overview.flatMap(s => s.blocks)])
+        const remaining = c.sections.filter(s => routes[s.id] && !assigned.has(s.id))
+        if (remaining.length) groups.push({ title: lang === 'ar' ? 'صفحات الفصل' : 'Chapter pages', pages: remaining })
+        return [c.id, groups]
+    }))
+
     // ---- one page per chapter
     const views = chapters.flatMap((c, ci) => [{c, ci}, ...c.sections.filter(s => routes[s.id]).map(feature => ({c, ci, feature}))])
     views.forEach(({c, ci, feature}) => {
@@ -691,7 +722,7 @@ export function renderSite(doc, { lang, assetsVersion = '', guide = {} }) {
                 const here = x === c
                 return `<li class="toc-ch${here ? ' current' : ''}">
 <a class="toc-ch-link" href="${here && !feature ? `#${x.id}` : pageOf(x.id)}"${here && !feature ? ' aria-current="page"' : ''}><span class="toc-ch-no">${esc(x.number)}</span><span class="toc-ch-title">${inline(x.title, nav)}</span>${ring(x.id)}</a>
-${here ? `<ol class="toc-secs">${x.sections.map((s) => `<li><a href="${link(s.id, page, routes)}" data-toc="${s.id}"><span class="toc-dot" aria-hidden="true"></span><span>${inline(s.title, nav)}</span></a></li>`).join('')}</ol>` : ''}
+<details class="toc-chapters"${here ? ' open' : ''}><summary>${lang === 'ar' ? 'أقسام الفصل' : 'Chapter sections'}<span>${chapterGroups.get(x.id).length}</span></summary><ol class="toc-groups">${chapterGroups.get(x.id).map((group, gi) => `<li><details class="toc-section"${here && (feature ? group.pages.includes(feature) : gi === 0) ? ' open' : ''}><summary><span>${inline(group.title, nav)}</span><span class="section-count">${group.pages.length}</span></summary><ol class="toc-secs">${group.pages.map(s => `<li><a href="${link(s.id, page, routes)}" data-toc="${s.id}"${feature === s ? ' aria-current="page"' : ''}><span class="toc-dot" aria-hidden="true"></span><span>${inline(s.title, nav)}</span></a></li>`).join('')}</ol></details></li>`).join('')}</ol></details>
 </li>`
             })
             .join('')
@@ -701,6 +732,7 @@ ${here ? `<ol class="toc-secs">${x.sections.map((s) => `<li><a href="${link(s.id
                     `<a class="ch-tab${x === c ? ' current' : ''}" href="${x === c && !feature ? `#${x.id}` : pageOf(x.id)}"${x === c && !feature ? ' aria-current="page"' : ''} title="${esc(plain(x.title, ctx))}"><span dir="ltr">${esc(x.number)}</span><span class="ch-tab-t">${inline(x.title, nav)}</span></a>`
             )
             .join('')
+        const currentGroup = feature && chapterGroups.get(c.id).find(group => group.pages.includes(feature))
         const prev = chapters[ci - 1],
             next = chapters[ci + 1]
         const pager = `<nav class="chapter-pager">${prev ? `<a class="pager-card prev" href="${pageOf(prev.id)}"><small>${esc(ui.prevChapter)} · ${esc(prev.kicker)}</small><span>${inline(prev.title, nav)}</span></a>` : `<a class="pager-card prev" href="${home}"><small>${esc(ui.home)}</small><span>${title}</span></a>`}${next ? `<a class="pager-card next" href="${pageOf(next.id)}"><small>${esc(ui.nextChapter)} · ${esc(next.kicker)}</small><span>${inline(next.title, nav)}</span></a>` : ''}</nav>`
@@ -747,10 +779,15 @@ ${here ? `<ol class="toc-secs">${x.sections.map((s) => `<li><a href="${link(s.id
           <summary><span class="chapter-picker-icon" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg></span><span class="chapter-picker-label"><span>${esc(ui.chapterNav)}</span><strong>${inline(c.title, nav)}</strong></span><span class="chapter-picker-count" dir="ltr">${ci + 1} / ${chapters.length}</span><svg class="ic chapter-picker-chevron" aria-hidden="true" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></summary>
           <nav class="ch-tabs" aria-label="${esc(ui.chapterNav)}">${tabs}</nav>
         </details>
-        <div class="chapter-kicker reveal"><span class="chip">${esc(c.kicker)}</span><span class="chapter-meta">${c.sections.length} ${esc(ui.steps)}</span></div>
+        <div class="chapter-kicker reveal"><span class="chip">${esc(c.kicker)}</span>${currentGroup ? `<span class="section-context">${inline(currentGroup.title, nav)}</span>` : `<span class="chapter-meta">${chapterGroups.get(c.id).length} ${lang === 'ar' ? 'أقسام' : 'sections'} · ${c.sections.length} ${esc(ui.steps)}</span>`}</div>
         <h1 id="${c.id}-h" class="chapter-title reveal">${inline(feature?.title ?? c.title, ctx)}</h1>
         <div class="chapter-progress" aria-hidden="true"><span data-chapter-bar="${c.id}"></span></div>
       </header>
+      ${!feature && prefix === 'c' ? renderChapterOverview(c.label, lang, label => {
+          const id = ids.get(label)
+          if (!id) throw new Error(`Missing chapter overview target: ${label}`)
+          return link(id, page, routes)
+      }, esc) : ''}
       ${intro ? `<div class="chapter-intro">${intro}</div>` : ''}
       ${sections}
       ${pagerHtml}

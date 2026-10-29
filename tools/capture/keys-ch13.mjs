@@ -1,24 +1,24 @@
 const member = (ar, en, arWhat, enWhat) => ({
-  ar: `الأرقام في الصورة: ① تبويب «${ar}» في ملف العضو، ${arWhat} ② «تعديل» يفتح الملف لتغيير بياناته.`,
-  en: `Numbers on the image: ① The “${en}” tab of the member profile, ${enWhat} ② “Edit” opens the profile to change its data.`,
+  ar: `① تبويب «${ar}» في ملف العضو، ${arWhat} ② «تعديل» يفتح الملف لتغيير بياناته.`,
+  en: `① The “${en}” tab of the member profile, ${enWhat} ② “Edit” opens the profile to change its data.`,
 });
 const form = (arWhat, enWhat) => ({
-  ar: `الأرقام في الصورة: ① التبويب المفتوح في النموذج، ${arWhat} ② «إنشاء» يحفظ السجل بعد إكمال الحقول الإلزامية المعلّمة بنجمة.`,
-  en: `Numbers on the image: ① The open tab of the form, ${enWhat} ② “Create” saves the record once the required fields marked with a star are complete.`,
+  ar: `① التبويب المفتوح في النموذج، ${arWhat} ② «إنشاء» يحفظ السجل بعد إكمال الحقول الإلزامية المعلّمة بنجمة.`,
+  en: `① The open tab of the form, ${enWhat} ② “Create” saves the record once the required fields marked with a star are complete.`,
 });
 export const KEYS = {
   'ch01-workspaces-clear': {
-    ar: 'الأرقام في الصورة: ① قسم «مساحات عملي» الذي يرتّب التطبيقات بحسب استخدامك. ② بطاقة «الموارد البشرية» تفتح التطبيق مباشرة. ③ «جميع مساحات العمل» يعرض كل التطبيقات المتاحة لك.',
-    en: 'Numbers on the image: ① The “My workspaces” section, which orders apps by your use. ② The “HR” card opens the app directly. ③ “All workspaces” shows every app available to you.' },
+    ar: '① قسم «مساحات عملي» الذي يرتّب التطبيقات بحسب استخدامك. ② بطاقة «الموارد البشرية» تفتح التطبيق مباشرة. ③ «جميع مساحات العمل» يعرض كل التطبيقات المتاحة لك.',
+    en: '① The “My workspaces” section, which orders apps by your use. ② The “HR” card opens the app directly. ③ “All workspaces” shows every app available to you.' },
   'ch01-apps-clear': {
-    ar: 'الأرقام في الصورة: ① مربع البحث لكتابة اسم التطبيق. ② «الموارد البشرية». ③ «ادوات البناء»، ويظهر لمن يملك صلاحية البناء.',
-    en: 'Numbers on the image: ① The search box for typing an app’s name. ② “HR”. ③ “Builder”, shown to those with building rights.' },
+    ar: '① مربع البحث لكتابة اسم التطبيق. ② «الموارد البشرية». ③ «ادوات البناء»، ويظهر لمن يملك صلاحية البناء.',
+    en: '① The search box for typing an app’s name. ② “HR”. ③ “Builder”, shown to those with building rights.' },
   'ch02-create-org': {
-    ar: 'الأرقام في الصورة: ① الخطوة الأولى «جهة الاتصال» التي تبدأ بها. ② الخطوة الأخيرة «تفاصيل المؤسسة» التي تنتهي عندها.',
-    en: 'Numbers on the image: ① The first step, contact details, where you start. ② The last step, organization details, where you finish.' },
+    ar: '① الخطوة الأولى «جهة الاتصال» التي تبدأ بها. ② الخطوة الأخيرة «تفاصيل المؤسسة» التي تنتهي عندها.',
+    en: '① The first step, contact details, where you start. ② The last step, organization details, where you finish.' },
   'ch03-hr-pages-clear': {
-    ar: 'الأرقام في الصورة: ① «السجلات» يعرض صفحات السجلات وحدها. ② بطاقة «الأعضاء». ③ «سجل جديد» يضيف سجلاً مباشرة من البطاقة.',
-    en: 'Numbers on the image: ① “Records” shows record pages only. ② The “Members” card. ③ “New record” adds a record straight from the card.' },
+    ar: '① «السجلات» يعرض صفحات السجلات وحدها. ② بطاقة «الأعضاء». ③ «سجل جديد» يضيف سجلاً مباشرة من البطاقة.',
+    en: '① “Records” shows record pages only. ② The “Members” card. ③ “New record” adds a record straight from the card.' },
   'ch02-member-fields': member('نظرة عامة', 'Overview', 'وفيه أهم بيانات العضو.', 'holding the member’s key data.'),
   'ch03-member-tab1': member('نظرة عامة', 'Overview', 'وفيه أهم بيانات العضو.', 'holding the member’s key data.'),
   'ch03-member-tab2': member('التأهيل والتوجيه', 'Orientation', 'وفيه خطوات استقبال الموظف الجديد.', 'holding the new employee’s onboarding steps.'),
@@ -51,14 +51,14 @@ export const KEYS = {
   'ch03-leave-type-fields-tab1': form('وفيه قواعد نوع الإجازة.', 'holding the leave type’s rules.'),
   'ch03-feature-seniority-levels': form('وفيه بيانات المستوى الوظيفي.', 'holding the seniority level’s data.'),
   'ch03-shift-example': {
-    ar: 'الأرقام في الصورة: ① «الاسم» الإلزامي للوردية. ② «أيام العمل» التي تختارها بالضغط. ③ «الاستراحات» التي تُخصم من مدة الدوام.',
-    en: 'Numbers on the image: ① The shift’s required “Name”. ② “Working Days”, chosen by pressing them. ③ “Breaks”, deducted from the working time.' },
+    ar: '① «الاسم» الإلزامي للوردية. ② «أيام العمل» التي تختارها بالضغط. ③ «الاستراحات» التي تُخصم من مدة الدوام.',
+    en: '① The shift’s required “Name”. ② “Working Days”, chosen by pressing them. ③ “Breaks”, deducted from the working time.' },
   'ch03-feature-my-attendance': {
-    ar: 'الأرقام في الصورة: ① عنوان صفحة «حضوري». ② «العمل»: الوقت المحتسب في الشهر. ③ «يحتاج تصحيحًا»: يوم يحتاج إلى طلب تصحيح.',
-    en: 'Numbers on the image: ① The “My attendance” page title. ② “Work”: time counted in the month. ③ “Needs correction”: a day that needs a correction request.' },
+    ar: '① عنوان صفحة «حضوري». ② «العمل»: الوقت المحتسب في الشهر. ③ «يحتاج تصحيحًا»: يوم يحتاج إلى طلب تصحيح.',
+    en: '① The “My attendance” page title. ② “Work”: time counted in the month. ③ “Needs correction”: a day that needs a correction request.' },
   'ch03-feature-timesheets': {
-    ar: 'الأرقام في الصورة: ① عنوان صفحة «جداول الدوام». ② «اليوم» يعرض يوماً واحداً. ③ «الأسبوع» يعرض الأسبوع كاملاً.',
-    en: 'Numbers on the image: ① The “Timesheets” page title. ② “Today” shows a single day. ③ “Week” shows the whole week.' },
+    ar: '① عنوان صفحة «جداول الدوام». ② «اليوم» يعرض يوماً واحداً. ③ «الأسبوع» يعرض الأسبوع كاملاً.',
+    en: '① The “Timesheets” page title. ② “Today” shows a single day. ③ “Week” shows the whole week.' },
   'ch03-leave-fields': {
     ar: 'الرقم في الصورة: ① «إنشاء» يحفظ الإجازة بعد إكمال الحقول الإلزامية.',
     en: 'Number on the image: ① “Create” saves the leave once the required fields are complete.' },
@@ -66,27 +66,27 @@ export const KEYS = {
     ar: 'الرقم في الصورة: ① «إنشاء» يحفظ مدخل الراتب بعد إكمال الحقول الإلزامية.',
     en: 'Number on the image: ① “Create” saves the payroll input once the required fields are complete.' },
   'ch03-feature-holiday-groups': {
-    ar: 'الأرقام في الصورة: ① عنوان صفحة «مجموعات العطل الرسمية». ② «مجموعة جديدة» تنشئ تقويم عطل جديداً.',
-    en: 'Numbers on the image: ① The “Holiday groups” page title. ② “New group” creates a new holiday calendar.' },
+    ar: '① عنوان صفحة «مجموعات العطل الرسمية». ② «مجموعة جديدة» تنشئ تقويم عطل جديداً.',
+    en: '① The “Holiday groups” page title. ② “New group” creates a new holiday calendar.' },
   'ch03-feature-attendance-corrections': {
     ar: 'الرقم في الصورة: ① عنوان صفحة تصحيحات الحضور، وتحته الطلبات وحالاتها.',
     en: 'Number on the image: ① The attendance corrections page title, with the requests and their status below it.' },
   'ch03-feature-attendance-policy': {
-    ar: 'الأرقام في الصورة: ① «سياسة جديدة» تنشئ سياسة حضور. ② «فتح» يعرض قواعد السياسة. ③ «حفظ» يحفظ مهلة تصحيح الحضور.',
-    en: 'Numbers on the image: ① “New policy” creates an attendance policy. ② “Open” shows the policy’s rules. ③ “Save” saves the correction window.' },
+    ar: '① «سياسة جديدة» تنشئ سياسة حضور. ② «فتح» يعرض قواعد السياسة. ③ «حفظ» يحفظ مهلة تصحيح الحضور.',
+    en: '① “New policy” creates an attendance policy. ② “Open” shows the policy’s rules. ③ “Save” saves the correction window.' },
   'ch03-feature-attendance-terminals': {
-    ar: 'الأرقام في الصورة: ① «شبكة جديدة» تضيف شبكة موقع فيها أجهزة بصمة. ② «الإعدادات» لإعدادات وكيل الحضور.',
-    en: 'Numbers on the image: ① “New network” adds a site network with fingerprint devices. ② “Settings” for the attendance agent settings.' },
+    ar: '① «شبكة جديدة» تضيف شبكة موقع فيها أجهزة بصمة. ② «الإعدادات» لإعدادات وكيل الحضور.',
+    en: '① “New network” adds a site network with fingerprint devices. ② “Settings” for the attendance agent settings.' },
   'ch03-feature-experience-levels': {
     ar: 'الرقم في الصورة: ① عنوان صفحة «مستويات الخبرة»، وتحته المجموعات وعملتها وزيادتها.',
     en: 'Number on the image: ① The “Experience levels” page title, with the groups, their currency and increment below it.' },
   'ch03-feature-salary-scale': {
-    ar: 'الأرقام في الصورة: ① عنوان صفحة «سلم الراتب». ② عمود «مستوى الأقدمية» الذي تُقرأ منه رواتب كل درجة.',
-    en: 'Numbers on the image: ① The “Salary scale” page title. ② The “Seniority Level” column, from which each grade’s salaries are read.' },
+    ar: '① عنوان صفحة «سلم الراتب». ② عمود «مستوى الأقدمية» الذي تُقرأ منه رواتب كل درجة.',
+    en: '① The “Salary scale” page title. ② The “Seniority Level” column, from which each grade’s salaries are read.' },
   'ch03-create-slips-clear': {
-    ar: 'الأرقام في الصورة: ① «إنشاء قسائم رواتب» يبدأ قسائم الفترة. ② مربع البحث للعثور على قسيمة موظف.',
-    en: 'Numbers on the image: ① “Create salary slips” starts the period’s slips. ② The search box to find an employee’s slip.' },
+    ar: '① «إنشاء قسائم رواتب» يبدأ قسائم الفترة. ② مربع البحث للعثور على قسيمة موظف.',
+    en: '① “Create salary slips” starts the period’s slips. ② The search box to find an employee’s slip.' },
   'ch03-feature-payrolls': {
-    ar: 'الأرقام في الصورة: ① «إنشاء كشف رواتب» يجمع القسائم المعتمدة في كشف. ② «جميع الحالات» يصفّي الكشوف بحسب حالتها.',
-    en: 'Numbers on the image: ① “Create payroll” gathers approved slips into a payroll. ② “All statuses” filters payrolls by status.' },
+    ar: '① «إنشاء كشف رواتب» يجمع القسائم المعتمدة في كشف. ② «جميع الحالات» يصفّي الكشوف بحسب حالتها.',
+    en: '① “Create payroll” gathers approved slips into a payroll. ② “All statuses” filters payrolls by status.' },
 };

@@ -12,6 +12,21 @@ const doc=loadDocument(root);
 const bdoc=loadDocument(path.join(root,'builder'));
 const ben=loadDocument(path.join(root,'i18n/en/builder'),{lang:'en'});
 
+test('chapter overview pilot is confined to main chapters 1–3 in both languages',()=>{
+ for(const lang of ['ar','en']){
+  const folder=path.join(root,'site',lang);
+  for(const file of fs.readdirSync(folder).filter(file=>file.endsWith('.html'))){
+   const html=fs.readFileSync(path.join(folder,file),'utf8');
+   const pilot=/^c[123]\.html$/.test(file);
+   assert.equal(html.includes('class="chapter-overview"'),pilot,`${lang}/${file}: pilot scope`);
+   if(pilot){
+    assert.equal((html.match(/class="overview-example"/g)||[]).length,4);
+    assert.match(html,/<details class="chapter-overview" id="chapter-overview">/);
+   }
+  }
+ }
+});
+
 test('Correspondence stage one has three bilingual role-based pages and numbered evidence',()=>{
  const manifest=JSON.parse(fs.readFileSync(path.join(root,'review/fullpage-manifest.json'),'utf8'));
  for(const lang of ['ar','en']){
