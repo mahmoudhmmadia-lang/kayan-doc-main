@@ -15,6 +15,17 @@ set. `progress.md` is the live status log; this file is the standing brief.
   Horizon visit example. See `review/correspondence-source-coverage.md` for
   verification and later stages; the first stage is under review.
 
+- **Chapter at a glance and Kayan sections (2026-10-30).** Every main-guide chapter
+  (`c1`–`c7`) has a «الفصل في مخطط» / “Chapter at a glance” overview in
+  `tools/chapter-overviews.mjs`: four ideas, each `[title, idea, Horizon example,
+  target label, optional Kayan path]`, written in both languages from the linked
+  page. The path (`المهام › المجموعات`) shows where the idea lives in Kayan; use
+  only labels verified in the page, locales or seeds. A new chapter needs its entry.
+  The contents sidebar groups pages by the section that holds them in Kayan's own
+  navigation (`scripts/seed-entities/apps-config.ts`, entity `app_section_id`):
+  write directory rows as `Page — Section` (as HR does). Rows without a section
+  are records opened inside another record; they keep the table caption as their
+  group, under «سجلات تُفتح من داخل غيرها» / “Records opened inside others”.
 - **Explain only the numbers that need it (2026-10-22).** In a numbered key, write
   `label: explanation` only when the explanation adds meaning (a non-obvious
   effect, condition, warning, the value shown, or an ambiguous control). When the

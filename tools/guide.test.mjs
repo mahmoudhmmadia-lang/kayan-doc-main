@@ -12,19 +12,30 @@ const doc=loadDocument(root);
 const bdoc=loadDocument(path.join(root,'builder'));
 const ben=loadDocument(path.join(root,'i18n/en/builder'),{lang:'en'});
 
-test('chapter overview pilot is confined to main chapters 1–3 in both languages',()=>{
+test('every main chapter page, and only those, has a bilingual chapter overview',()=>{
  for(const lang of ['ar','en']){
   const folder=path.join(root,'site',lang);
   for(const file of fs.readdirSync(folder).filter(file=>file.endsWith('.html'))){
    const html=fs.readFileSync(path.join(folder,file),'utf8');
-   const pilot=/^c[123]\.html$/.test(file);
-   assert.equal(html.includes('class="chapter-overview"'),pilot,`${lang}/${file}: pilot scope`);
-   if(pilot){
+   const chapter=/^c[1-7]\.html$/.test(file);
+   assert.equal(html.includes('class="chapter-overview"'),chapter,`${lang}/${file}: overview scope`);
+   if(chapter){
     assert.equal((html.match(/class="overview-example"/g)||[]).length,4);
     assert.match(html,/<details class="chapter-overview" id="chapter-overview">/);
    }
   }
  }
+});
+
+test('contents sections follow Kayan navigation sections, with each page listed once',()=>{
+ const sections=(lang,file)=>[...fs.readFileSync(path.join(root,'site',lang,file),'utf8').matchAll(/class="toc-section is-(\w+)"[^>]*><summary>[^]*?class="toc-sec-title">([^<]*)</g)].map(m=>`${m[1]}:${m[2]}`).join('|');
+ assert.ok(sections('ar','c3.html').includes('app:القوى العاملة|app:الأساسية|app:الوقت|app:سلم الراتب|app:الدفع'));
+ assert.ok(sections('en','c3.html').includes('app:Workforce|app:Core|app:Time|app:Salary Scale|app:Payment'));
+ assert.ok(sections('ar','c4.html').includes('app:المهام|app:داخل المجموعة والمهمة|app:أدوات البناء'));
+ const projects=fs.readFileSync(path.join(root,'site','en','c5.html'),'utf8');
+ for(const name of ['Planning','PM Core','Portfolio &amp; Programs','Financial Management']) assert.ok(projects.includes(`class="toc-sec-title">${name}<`),name);
+ assert.ok(!projects.includes('&amp;amp;'),'Section titles are escaped once');
+ assert.ok(projects.includes('class="toc-divider"'),'Records opened inside others are labelled');
 });
 
 test('Correspondence stage one has three bilingual role-based pages and numbered evidence',()=>{

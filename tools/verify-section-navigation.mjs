@@ -24,7 +24,7 @@ try {
   await page.goto(base+'c3.html');
   if(width===390) await page.locator('[data-open-toc]').click();
   const groups=page.locator('.toc-ch.current .toc-section');
-  assert.equal(await groups.count(),4);
+  assert.equal(await groups.count(),6);
   await groups.nth(1).locator('summary').click();
   await groups.nth(1).locator('a').first().click();
   await page.waitForURL(/hr-members.html/);

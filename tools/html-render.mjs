@@ -341,7 +341,7 @@ function renderTable(b, ctx) {
     if (cards.length && cards.every(Boolean)) {
         const nav = { ...ctx, nolink: true }
         return `<figure class="page-cards reveal"${b.id ? ` id="${b.id}"` : ''}>${caption}<ol class="page-grid">${cards
-            .map(({ feature, no, section }, row) => `<li><a class="page-card" href="${link(feature.id, ctx.page, ctx.routes)}" data-toc="${feature.id}"><span class="page-card-top"><span class="page-card-no" dir="ltr">${no}</span><span class="page-card-sec">${esc(section)}</span><span class="toc-dot" aria-hidden="true"></span></span><span class="page-card-title">${inline(feature.title, nav)}</span><span class="page-card-desc">${inline(body[row].cells[1] ?? '', nav)}</span><span class="page-card-go">${esc(ctx.ui.openPage)} ${ARROW}</span></a></li>`)
+            .map(({ feature, no, section }, row) => `<li><a class="page-card" href="${link(feature.id, ctx.page, ctx.routes)}" data-toc="${feature.id}"><span class="page-card-top"><span class="page-card-no" dir="ltr">${no}</span><span class="page-card-sec">${section}</span><span class="toc-dot" aria-hidden="true"></span></span><span class="page-card-title">${inline(feature.title, nav)}</span><span class="page-card-desc">${inline(body[row].cells[1] ?? '', nav)}</span><span class="page-card-go">${esc(ctx.ui.openPage)} ${ARROW}</span></a></li>`)
             .join('')}</ol></figure>`
     }
     const tbody = `<tbody>${body.map((r) => `<tr>${r.cells.map((c, i) => `<td data-label="${esc(labels[i] ?? '')}">${inline(c, ctx)}</td>`).join('')}</tr>`).join('')}</tbody>`
@@ -687,29 +687,51 @@ export function renderSite(doc, { lang, assetsVersion = '', guide = {} }) {
     })
 
     // Keep the authored directory groups as a real chapter → section → page tree.
-    // Match titles exactly as renderTable does; keep each page once, in source order.
+    // A directory row "Page — Section" names the section that holds the page in
+    // Kayan's own navigation, so those pages are grouped by that section (kind
+    // 'app'). Tables without it (records opened inside another record) keep their
+    // caption as the group (kind 'topic'). Match titles exactly as renderTable
+    // does; keep each page once, in source order.
     const chapterGroups = new Map(chapters.map(c => {
         const groups = [], assigned = new Set()
         const overview = c.sections.filter(s => !routes[s.id])
-        if (overview.length) groups.push({ title: lang === 'ar' ? 'نظرة عامة' : 'Overview', pages: overview })
+        if (overview.length) groups.push({ title: lang === 'ar' ? 'نظرة عامة' : 'Overview', kind: 'overview', pages: overview })
         const visit = blocks => blocks.forEach(b => {
             if (/^tab:(hr|tasks|projects|builder|correspondence)-pages-/.test(b.label ?? '')) {
-                const pages = (b.rows ?? []).filter(r => !r.header).flatMap(r => {
-                    const name = plain(r.cells[0], base).split(' — ')[0].trim()
+                const topic = { title: b.caption, kind: 'topic', pages: [] }
+                ;(b.rows ?? []).filter(r => !r.header).forEach(r => {
+                    const [name, section] = plain(r.cells[0], base).split(' — ').map(x => x.trim())
                     const s = c.sections.find(s => routes[s.id] && plain(s.title, base) === name)
-                    if (!s || assigned.has(s.id)) return []
+                    if (!s || assigned.has(s.id)) return
                     assigned.add(s.id)
-                    return [s]
+                    if (!section) return topic.pages.push(s)
+                    let group = groups.find(g => g.kind === 'app' && g.title === section)
+                    if (!group) groups.push(group = { title: section, kind: 'app', html: true, pages: [] })
+                    group.pages.push(s)
                 })
-                if (pages.length) groups.push({ title: b.caption, pages })
+                if (topic.pages.length) groups.push(topic)
             }
             if (b.blocks) visit(b.blocks)
         })
         visit([...c.intro, ...overview.flatMap(s => s.blocks)])
         const remaining = c.sections.filter(s => routes[s.id] && !assigned.has(s.id))
-        if (remaining.length) groups.push({ title: lang === 'ar' ? 'صفحات الفصل' : 'Chapter pages', pages: remaining })
+        if (remaining.length) groups.push({ title: lang === 'ar' ? 'صفحات الفصل' : 'Chapter pages', kind: 'topic', pages: remaining })
         return [c.id, groups]
     }))
+    // App-section titles come from plain(), already escaped HTML.
+    const groupTitle = (group, nav) => group.html ? group.title : inline(group.title, nav)
+    const groupIcon = {
+        overview: '<circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/>',
+        app: '<rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/>',
+        topic: '<path d="m12 3 9 5-9 5-9-5 9-5Z"/><path d="m3 13 9 5 9-5"/>',
+    }
+    // Before the first "inside records" group, a quiet label explains the change.
+    const tocGroups = (groups, here, feature, page, nav) => groups.map((group, gi) => {
+        const divider = group.kind === 'topic' && gi > 0 && groups[gi - 1].kind !== 'topic' && groups.some(g => g.kind === 'app')
+            ? `<li class="toc-divider" aria-hidden="true">${lang === 'ar' ? 'سجلات تُفتح من داخل غيرها' : 'Records opened inside others'}</li>` : ''
+        const open = here && (feature ? group.pages.includes(feature) : gi === 0)
+        return `${divider}<li><details class="toc-section is-${group.kind}"${open ? ' open' : ''}><summary><svg class="ic toc-sec-icon" viewBox="0 0 24 24" aria-hidden="true">${groupIcon[group.kind]}</svg><span class="toc-sec-title">${groupTitle(group, nav)}</span><span class="section-count" dir="ltr" data-section-count>${group.pages.length}</span><svg class="ic toc-sec-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><ol class="toc-secs">${group.pages.map(s => `<li><a href="${link(s.id, page, routes)}" data-toc="${s.id}"${feature === s ? ' aria-current="page"' : ''}><span class="toc-dot" aria-hidden="true"></span><span>${inline(s.title, nav)}</span></a></li>`).join('')}</ol></details></li>`
+    }).join('')
 
     // ---- one page per chapter
     const views = chapters.flatMap((c, ci) => [{c, ci}, ...c.sections.filter(s => routes[s.id]).map(feature => ({c, ci, feature}))])
@@ -722,7 +744,7 @@ export function renderSite(doc, { lang, assetsVersion = '', guide = {} }) {
                 const here = x === c
                 return `<li class="toc-ch${here ? ' current' : ''}">
 <a class="toc-ch-link" href="${here && !feature ? `#${x.id}` : pageOf(x.id)}"${here && !feature ? ' aria-current="page"' : ''}><span class="toc-ch-no">${esc(x.number)}</span><span class="toc-ch-title">${inline(x.title, nav)}</span>${ring(x.id)}</a>
-<details class="toc-chapters"${here ? ' open' : ''}><summary>${lang === 'ar' ? 'أقسام الفصل' : 'Chapter sections'}<span>${chapterGroups.get(x.id).length}</span></summary><ol class="toc-groups">${chapterGroups.get(x.id).map((group, gi) => `<li><details class="toc-section"${here && (feature ? group.pages.includes(feature) : gi === 0) ? ' open' : ''}><summary><span>${inline(group.title, nav)}</span><span class="section-count">${group.pages.length}</span></summary><ol class="toc-secs">${group.pages.map(s => `<li><a href="${link(s.id, page, routes)}" data-toc="${s.id}"${feature === s ? ' aria-current="page"' : ''}><span class="toc-dot" aria-hidden="true"></span><span>${inline(s.title, nav)}</span></a></li>`).join('')}</ol></details></li>`).join('')}</ol></details>
+<details class="toc-chapters${chapterGroups.get(x.id).length < 2 ? ' is-single' : ''}"${here ? ' open' : ''}><summary><span>${lang === 'ar' ? 'أقسام الفصل' : 'Chapter sections'}</span><span class="toc-chapters-count" dir="ltr">${chapterGroups.get(x.id).length}</span><svg class="ic toc-sec-chevron" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary><ol class="toc-groups">${tocGroups(chapterGroups.get(x.id), here, feature, page, nav)}</ol></details>
 </li>`
             })
             .join('')
@@ -779,7 +801,7 @@ export function renderSite(doc, { lang, assetsVersion = '', guide = {} }) {
           <summary><span class="chapter-picker-icon" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="2"/><rect x="14" y="3" width="7" height="7" rx="2"/><rect x="3" y="14" width="7" height="7" rx="2"/><rect x="14" y="14" width="7" height="7" rx="2"/></svg></span><span class="chapter-picker-label"><span>${esc(ui.chapterNav)}</span><strong>${inline(c.title, nav)}</strong></span><span class="chapter-picker-count" dir="ltr">${ci + 1} / ${chapters.length}</span><svg class="ic chapter-picker-chevron" aria-hidden="true" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></svg></summary>
           <nav class="ch-tabs" aria-label="${esc(ui.chapterNav)}">${tabs}</nav>
         </details>
-        <div class="chapter-kicker reveal"><span class="chip">${esc(c.kicker)}</span>${currentGroup ? `<span class="section-context">${inline(currentGroup.title, nav)}</span>` : `<span class="chapter-meta">${chapterGroups.get(c.id).length} ${lang === 'ar' ? 'أقسام' : 'sections'} · ${c.sections.length} ${esc(ui.steps)}</span>`}</div>
+        <div class="chapter-kicker reveal"><span class="chip">${esc(c.kicker)}</span>${currentGroup ? `<span class="section-context">${groupTitle(currentGroup, nav)}</span>` : `<span class="chapter-meta">${chapterGroups.get(c.id).length} ${lang === 'ar' ? 'أقسام' : 'sections'} · ${c.sections.length} ${esc(ui.steps)}</span>`}</div>
         <h1 id="${c.id}-h" class="chapter-title reveal">${inline(feature?.title ?? c.title, ctx)}</h1>
         <div class="chapter-progress" aria-hidden="true"><span data-chapter-bar="${c.id}"></span></div>
       </header>

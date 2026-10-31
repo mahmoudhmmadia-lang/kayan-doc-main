@@ -1,0 +1,50 @@
+Passed ar chapter 1, 1440px, dark
+Passed ar chapter 1, 1440px, light
+Passed ar chapter 1, 390px, dark
+Passed ar chapter 1, 390px, light
+Passed ar chapter 2, 1440px, dark
+Passed ar chapter 2, 1440px, light
+Passed ar chapter 2, 390px, dark
+Passed ar chapter 2, 390px, light
+Passed ar chapter 3, 1440px, dark
+Passed ar chapter 3, 1440px, light
+Passed ar chapter 3, 390px, dark
+Passed ar chapter 3, 390px, light
+Passed ar chapter 4, 1440px, dark
+Passed ar chapter 4, 1440px, light
+Passed ar chapter 4, 390px, dark
+Passed ar chapter 4, 390px, light
+Passed ar chapter 5, 1440px, dark
+Passed ar chapter 5, 1440px, light
+Passed ar chapter 5, 390px, dark
+Passed ar chapter 5, 390px, light
+Passed ar chapter 6, 1440px, dark
+Passed ar chapter 6, 1440px, light
+Passed ar chapter 6, 390px, dark
+Passed ar chapter 6, 390px, light
+Passed ar chapter 7, 1440px, dark
+Passed ar chapter 7, 1440px, light
+Passed ar chapter 7, 390px, dark
+Passed ar chapter 7, 390px, light
+Passed en chapter 1, 1440px, dark
+Passed en chapter 1, 1440px, light
+Passed en chapter 1, 390px, dark
+Passed en chapter 1, 390px, light
+Passed en chapter 2, 1440px, dark
+Passed en chapter 2, 1440px, light
+Passed en chapter 2, 390px, dark
+Passed en chapter 2, 390px, light
+Passed en chapter 3, 1440px, dark
+Passed en chapter 3, 1440px, light
+Passed en chapter 3, 390px, dark
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+page.evaluate: Target crashed 
+    at D:\stuff\right-code\taskflow\kayanos-guide\tools\verify-chapter-overviews.mjs:76:18 {
+  log: [],
+  name: 'Error'
+}
+
+Node.js v24.19.0

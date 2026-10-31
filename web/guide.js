@@ -137,6 +137,14 @@
       $('[data-done]', s).setAttribute('aria-pressed', String(on));
     }
     $$('[data-toc]').forEach((a) => a.classList.toggle('done', !!state.done[a.dataset.toc]));
+    // Each contents section counts its own finished pages.
+    $$('.toc-section').forEach((sec) => {
+      const links = $$('.toc-secs [data-toc]', sec);
+      const n = links.filter((a) => state.done[a.dataset.toc]).length;
+      const count = $('[data-section-count]', sec);
+      if (count) count.textContent = n ? `${n}/${links.length}` : String(links.length);
+      sec.classList.toggle('is-complete', !!links.length && n === links.length);
+    });
     for (const c of data.chapters) {
       const own = all.filter((s) => s.c === c.id);
       const n = own.filter((s) => state.done[s.id]).length;

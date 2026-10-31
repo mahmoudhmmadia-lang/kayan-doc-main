@@ -20,7 +20,7 @@ const errors = [];
 let count = 0;
 const visibleSteps = page => page.evaluate(() => [...document.querySelectorAll('.chapter > .step, .chapter > .chapter-intro')].filter(el => el.getClientRects().length).length);
 try {
-  for (const lang of ['ar', 'en']) for (const chapter of [1, 2, 3]) for (const width of [1440, 390]) for (const theme of ['dark', 'light']) {
+  for (const lang of ['ar', 'en']) for (const chapter of [1, 2, 3, 4, 5, 6, 7]) for (const width of [1440, 390]) for (const theme of ['dark', 'light']) {
     const context = await browser.newContext({ viewport: { width, height: width === 390 ? 844 : 900 }, reducedMotion: 'reduce' });
     await context.addInitScript(theme => localStorage.setItem('kos-guide-theme', theme), theme);
     const page = await context.newPage();
@@ -135,7 +135,7 @@ try {
     assert.ok(await page.locator(`#c${chapter}-s1`).isVisible());
     // Opening this chapter must not open another chapter's overview.
     await page.locator('.chapter-overview > summary').click();
-    await page.goto(`${base}/${lang}/c${chapter === 3 ? 1 : chapter + 1}.html`, { waitUntil: 'domcontentloaded' });
+    await page.goto(`${base}/${lang}/c${chapter === 7 ? 1 : chapter + 1}.html`, { waitUntil: 'domcontentloaded' });
     assert.equal(await page.locator('.chapter-overview').getAttribute('open'), null);
     await context.close();
     count++;

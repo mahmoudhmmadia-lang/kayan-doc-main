@@ -1,5 +1,6 @@
-// Editorial summaries of the first three main-guide chapters only.
+// Editorial summaries of the main-guide chapters.
 // Keep each idea grounded in its linked source section, in both languages.
+// A step is [title, idea, Horizon example, target label, optional path in Kayan].
 export const chapterOverviews = {
   'ch:intro': {
     en: {
@@ -55,10 +56,10 @@ export const chapterOverviews = {
       intro: 'Example: Horizon. Sarah prepares the team’s records; Omar follows his working day. Payroll is handled by the payroll team when needed.',
       result: 'People are linked to their positions, working time is reviewable, and payroll can use the prepared records when needed.',
       steps: [
-        ['Connect a person to a position', 'Create the member and position first. An assignment connects them; a department and location add context.', 'Sarah links Omar Haddad to the Operations Coordinator position at the Aleppo branch.', 'sec:hr-feature-assignments'],
-        ['Set working time', 'Prepare shifts and check which shift applies to each employee.', 'Horizon uses Office Hours, Sunday–Thursday, 09:00–17:00.', 'sec:hr-feature-shifts'],
-        ['Review the working day', 'Employees check attendance; HR reviews the team’s working time, corrections and leave.', 'Omar checks his recorded attendance; Sarah reviews the team’s attendance and leave.', 'sec:hr-feature-timesheets'],
-        ['Calculate pay when needed', 'Prepare pay data and monthly inputs, review salary slips, then build payroll from approved slips.', 'Horizon’s payroll team reviews Omar’s monthly inputs and salary slip before including it in payroll.', 'sec:hr-feature-payrolls'],
+        ['Connect a person to a position', 'Create the member and position first. An assignment connects them; a department and location add context.', 'Sarah links Omar Haddad to the Operations Coordinator position at the Aleppo branch.', 'sec:hr-feature-assignments', 'HR › Workforce › Assignments'],
+        ['Set working time', 'Prepare shifts and check which shift applies to each employee.', 'Horizon uses Office Hours, Sunday–Thursday, 09:00–17:00.', 'sec:hr-feature-shifts', 'HR › Time › Shifts'],
+        ['Review the working day', 'Employees check attendance; HR reviews the team’s working time, corrections and leave.', 'Omar checks his recorded attendance; Sarah reviews the team’s attendance and leave.', 'sec:hr-feature-timesheets', 'HR › Time › Timesheets'],
+        ['Calculate pay when needed', 'Prepare pay data and monthly inputs, review salary slips, then build payroll from approved slips.', 'Horizon’s payroll team reviews Omar’s monthly inputs and salary slip before including it in payroll.', 'sec:hr-feature-payrolls', 'HR › Payment › Payrolls'],
       ],
     },
     ar: {
@@ -66,10 +67,106 @@ export const chapterOverviews = {
       intro: 'مثال: شركة الأفق. تُعدّ سارة سجلات الفريق، ويتابع عمر يوم عمله، ويتولى فريق الرواتب احتساب المستحقات عند الحاجة.',
       result: 'يرتبط الموظفون بمناصبهم، ويمكن مراجعة دوامهم، ثم استخدام البيانات المجهّزة للرواتب عند الحاجة.',
       steps: [
-        ['اربط الموظف بالمنصب', 'أنشئ العضو والمنصب أولاً، ثم اربطهما بتعيين. ويمكن إضافة القسم والموقع لتوضيح مكان العمل.', 'تربط سارة عمر حداد بمنصب منسق عمليات في فرع حلب.', 'sec:hr-feature-assignments'],
-        ['حدّد وقت العمل', 'جهّز الورديات وتحقّق من الوردية المطبّقة على كل موظف.', 'تستخدم الأفق الدوام الإداري من الأحد إلى الخميس، 09:00–17:00.', 'sec:hr-feature-shifts'],
-        ['راجع يوم العمل', 'يراجع الموظف حضوره، وتتابع الموارد البشرية دوام الفريق وتصحيحاته وإجازاته.', 'يراجع عمر حضوره المسجّل، وتتابع سارة حضور الفريق وإجازاته.', 'sec:hr-feature-timesheets'],
-        ['احتسب الرواتب عند الحاجة', 'جهّز بيانات الأجر ومدخلات الشهر، وراجع القسائم، ثم أعدّ كشف الرواتب من القسائم المعتمدة.', 'يراجع فريق الرواتب مدخلات عمر وقسيمته الشهرية قبل إدراجها في الكشف.', 'sec:hr-feature-payrolls'],
+        ['اربط الموظف بالمنصب', 'أنشئ العضو والمنصب أولاً، ثم اربطهما بتعيين. ويمكن إضافة القسم والموقع لتوضيح مكان العمل.', 'تربط سارة عمر حداد بمنصب منسق عمليات في فرع حلب.', 'sec:hr-feature-assignments', 'الموارد البشرية › القوى العاملة › التعيينات'],
+        ['حدّد وقت العمل', 'جهّز الورديات وتحقّق من الوردية المطبّقة على كل موظف.', 'تستخدم الأفق الدوام الإداري من الأحد إلى الخميس، 09:00–17:00.', 'sec:hr-feature-shifts', 'الموارد البشرية › الوقت › الورديات'],
+        ['راجع يوم العمل', 'يراجع الموظف حضوره، وتتابع الموارد البشرية دوام الفريق وتصحيحاته وإجازاته.', 'يراجع عمر حضوره المسجّل، وتتابع سارة حضور الفريق وإجازاته.', 'sec:hr-feature-timesheets', 'الموارد البشرية › الوقت › جداول الدوام'],
+        ['احتسب الرواتب عند الحاجة', 'جهّز بيانات الأجر ومدخلات الشهر، وراجع القسائم، ثم أعدّ كشف الرواتب من القسائم المعتمدة.', 'يراجع فريق الرواتب مدخلات عمر وقسيمته الشهرية قبل إدراجها في الكشف.', 'sec:hr-feature-payrolls', 'الموارد البشرية › الدفع › كشوف الرواتب'],
+      ],
+    },
+  },
+  'ch:tasks': {
+    en: {
+      title: 'Turn a request into a clear task',
+      intro: 'Example: Horizon. Sarah Al-Khatib coordinates preparation for the Aleppo branch visit; Omar Haddad prepares the visit checklist.',
+      result: 'Each piece of work has an owner, a due date and a current status, so the team can see what is done and what is blocking it.',
+      steps: [
+        ['Gather the work in a collection', 'A collection holds the tasks of one piece of work. It can be shared with the team or personal to you.', 'Sarah uses a “Horizon visits” collection for visit preparation, and Omar finds his work there.', 'sec:tasks-feature-collections', 'Tasks › Collections'],
+        ['Create a task with an owner', 'Write a specific title, then set who handles it, when it is due and what is needed to act.', 'Sarah creates “Prepare visit checklist” and assigns it to Omar before the visit.', 'sec:tasks-feature-details', 'Tasks › collection › Add Task'],
+        ['Record progress and blockers', 'Record what you did and what is blocking you, and keep the status current so others need not guess.', 'Omar records his checklist work and notes that the site address is still missing; Sarah sets the next step.', 'sec:tasks-feature-follow-up', 'Open the task'],
+        ['Agree the stages of the work', 'A status template sets a task’s stages and the moves between them. An administrator prepares it in Builder.', 'The administrator reviews the visit-task template with Sarah: execution first, then result review.', 'sec:tasks-feature-statuses', 'Builder › Status templates'],
+      ],
+    },
+    ar: {
+      title: 'حوّل الطلب إلى مهمة واضحة',
+      intro: 'مثال: شركة الأفق. تتابع سارة الخطيب تجهيز زيارة فرع حلب، ويُعدّ عمر حداد قائمة الزيارة.',
+      result: 'لكل عمل مسؤول وموعد وحالة محدّثة، فيعرف الفريق ما أُنجز وما يعيق العمل.',
+      steps: [
+        ['اجمع العمل في مجموعة', 'تضم المجموعة مهام العمل الواحد، وقد تكون مشتركة لعمل الفريق أو شخصية لعملك الخاص.', 'تخصص سارة مجموعة «زيارات الأفق» لمهام التحضير، فيجد عمر عمله فيها.', 'sec:tasks-feature-collections', 'المهام › المجموعات'],
+        ['أنشئ مهمة لها مسؤول', 'اكتب عنواناً محدداً، ثم حدّد من يتولاها وموعدها وما يلزم لتنفيذها.', 'تنشئ سارة مهمة «تجهيز قائمة الزيارة» وتسندها إلى عمر قبل موعد الزيارة.', 'sec:tasks-feature-details', 'المهام › مجموعة › إضافة مهمة'],
+        ['سجّل التقدم والعوائق', 'سجّل ما أنجزته وما يعيقك، وحدّث الحالة حتى يتابع زميلك العمل دون تخمين.', 'يسجّل عمر ما أعدّه، ويذكر أن عنوان الموقع لم يصل بعد، فتحدد سارة الخطوة التالية.', 'sec:tasks-feature-follow-up', 'افتح المهمة'],
+        ['وحّد مراحل العمل', 'يحدد قالب الحالات مراحل المهمة والانتقال بينها، ويهيّئه المسؤول من أدوات البناء.', 'يراجع المسؤول مع سارة قالب مهام الزيارات: التنفيذ أولاً، ثم مراجعة النتيجة.', 'sec:tasks-feature-statuses', 'أدوات البناء › قوالب الحالات'],
+      ],
+    },
+  },
+  'ch:projects': {
+    en: {
+      title: 'From an intended result to a reviewed project',
+      intro: 'Example: Horizon. Sarah Al-Khatib plans better visit readiness and tracks the project preparing the Aleppo branch visit; Omar Haddad prepares the visit pack.',
+      result: 'Larger work has a result, an owner and a budget, and its deliverables are reviewed before it is treated as complete.',
+      steps: [
+        ['Set the result in a plan', 'A plan brings together the intended result, the accountable target and the working period. Start here when you set a direction.', 'Sarah creates the plan “Improve Aleppo branch readiness” and selects the target responsible for visits.', 'sec:projects-feature-plans', 'Projects › Planning › Plans'],
+        ['Define the project and its charter', 'Work with a defined scope becomes a project with a manager and an intended result. Its charter comes before detailed planning.', 'Sarah creates HZN-PRJ-01 to prepare the Aleppo branch visit and states its result in the charter.', 'sec:projects-feature-projects', 'Projects › PM Core › Projects'],
+        ['Plan the cost', 'A budget holds cost lines, funding sources and expenditures, so you can compare planned and recorded amounts.', 'The finance owner records the travel line for the Aleppo visit, then compares it with recorded expenditures.', 'sec:projects-feature-budgets', 'Projects › Financial Management › Budgets'],
+        ['Deliver and review the result', 'Define each deliverable, its date and acceptance criteria, then review delivery and acceptance separately.', 'Omar prepares the visit pack; Sarah reviews the deliverable at handover before treating preparation as complete.', 'sec:projects-feature-deliverables', 'Project › Execution › Deliverables / Products'],
+      ],
+    },
+    ar: {
+      title: 'من نتيجة مطلوبة إلى مشروع تُراجَع نتائجه',
+      intro: 'مثال: شركة الأفق. تضع سارة الخطيب خطة لتحسين جاهزية الزيارات، وتتابع مشروع تجهيز زيارة فرع حلب، ويُعدّ عمر حداد ملف الزيارة.',
+      result: 'لكل عمل كبير نتيجة ومسؤول وميزانية، وتُراجَع مخرجاته قبل اعتباره مكتملاً.',
+      steps: [
+        ['حدّد النتيجة في خطة', 'تجمع الخطة النتيجة المطلوبة والجهة المسؤولة والفترة. ابدأ بها عندما تحدد توجهاً.', 'تضع سارة خطة «تحسين جاهزية فرع حلب» وتختار الجهة المسؤولة عن الزيارات.', 'sec:projects-feature-plans', 'المشاريع › التخطيط › الخطط'],
+        ['عرّف المشروع وميثاقه', 'العمل المحدد النطاق مشروع له مدير ونتيجة مطلوبة، ويسبق ميثاقُه التخطيطَ التفصيلي.', 'تنشئ سارة المشروع HZN-PRJ-01 لتجهيز زيارة فرع حلب، وتكتب نتيجته في الميثاق.', 'sec:projects-feature-projects', 'المشاريع › أساسيات إدارة المشاريع › المشاريع'],
+        ['خطّط التكلفة', 'تجمع الميزانية بنود التكلفة ومصادر التمويل والمصروفات، فتقارن المبلغ المخطط بما سُجّل فعلاً.', 'يسجّل المسؤول المالي بند الانتقال لزيارة حلب، ثم يقارنه بالمصروفات المسجّلة.', 'sec:projects-feature-budgets', 'المشاريع › الإدارة المالية › الميزانيات'],
+        ['سلّم النتيجة وراجعها', 'حدّد كل مخرج وموعده ومعيار قبوله، ثم راجع التسليم والقبول كلاً على حدة.', 'يُعدّ عمر ملف الزيارة، وتراجع سارة المخرج عند التسليم قبل اعتبار التحضير مكتملاً.', 'sec:projects-feature-deliverables', 'مشروع › التنفيذ › المخرجات / المنتجات'],
+      ],
+    },
+  },
+  'ch:builder': {
+    en: {
+      title: 'Build an app that fits your work',
+      intro: 'Example: Horizon. Its system administrator builds the record type “Visit requests”; Omar Haddad submits the Aleppo branch visit request and Sarah Al-Khatib reviews it.',
+      result: 'The team works in a published app, and you add forms, documents and reports to it when the work needs them.',
+      steps: [
+        ['Start with the record type', 'Decide what one record represents and add its fields. Every other tool works on the record type.', 'The administrator builds “Visit requests”, with fields such as the visit date.', 'sec:builder-map'],
+        ['Try it, then publish', 'Every change stays a draft the team cannot see until you publish it, so try it with a real record first.', 'The administrator submits a trial visit request before publishing “Visit requests” to the team.', 'tab:builder-terms'],
+        ['Put it in front of the team', 'After publishing, show it in navigation inside an app so members can reach it.', 'The administrator places “Visit requests” in the “Branch services” app.', 'fig:builder-overview-flow'],
+        ['Add what the work needs', 'Later, add a request form, an approval path, documents and a dashboard. Each tool has a chapter in the Builder guide.', 'When Omar needs a form to submit requests, the administrator opens the “Forms” chapter.', 'sec:builder-pages'],
+      ],
+    },
+    ar: {
+      title: 'ابنِ تطبيقاً يناسب عملك',
+      intro: 'مثال: شركة الأفق. يبني مسؤول النظام نوع سجلات «طلبات الزيارة»، يرفع فيه عمر حداد طلب زيارة فرع حلب، وتراجعه سارة الخطيب.',
+      result: 'يعمل الفريق في تطبيق منشور، وتضيف إليه النماذج والمستندات والتقارير عندما يحتاج إليها العمل.',
+      steps: [
+        ['ابدأ بنوع السجلات', 'حدّد ما يمثله السجل الواحد وأضف حقوله؛ فكل أداة أخرى تعمل على نوع السجلات.', 'يبني المسؤول «طلبات الزيارة» بحقول مثل تاريخ الزيارة.', 'sec:builder-map'],
+        ['جرّب ثم انشر', 'يبقى كل تعديل مسودة لا يراها الفريق حتى تنشره، لذلك جرّبه بسجل فعلي أولاً.', 'يرفع المسؤول طلب زيارة تجريبياً قبل أن ينشر «طلبات الزيارة» للفريق.', 'tab:builder-terms'],
+        ['ضعه أمام الفريق', 'بعد النشر، أظهره في التنقل ضمن تطبيق حتى يصل إليه الأعضاء.', 'يضع المسؤول «طلبات الزيارة» في تطبيق «خدمات الفروع».', 'fig:builder-overview-flow'],
+        ['أضف ما يحتاجه العمل', 'أضف لاحقاً نموذج طلب ومسار اعتماد ومستندات ولوحة أرقام، ولكل أداة فصل في دليل أدوات البناء.', 'عندما يحتاج عمر إلى نموذج يرفع منه الطلب، يفتح المسؤول فصل «النماذج».', 'sec:builder-pages'],
+      ],
+    },
+  },
+  'ch:correspondence': {
+    en: {
+      title: 'Know your capacity and find your work',
+      intro: 'Example: Horizon. Omar Haddad prepares a request to coordinate the Aleppo branch visit; Sarah Al-Khatib reviews it if assigned to do so.',
+      result: 'You act in the right capacity, find the letter that concerns you, and know its status before you take any action.',
+      steps: [
+        ['Start from your responsibility', 'Home brings work destinations together. Your assigned work decides where you start: preparing, reviewing, approving or receiving.', 'Omar opens the tray to continue his draft; Sarah uses “Awaiting my approval” when a request reaches her.', 'sec:correspondence-feature-home', 'Correspondence'],
+        ['Choose your capacity', 'Your capacity is the position you act as. Switching it does not grant you any new permission.', 'Omar selects his “Operations Coordinator” position, then opens “Drafts” to follow his visit request.', 'sec:correspondence-feature-capacity', 'Correspondence › Acting as'],
+        ['Find the letter', 'The correspondence tray groups your work into folders. Search and filter to reach the letter.', 'Sarah opens “Inbox” and searches for the subject of the Aleppo branch visit.', 'sec:correspondence-feature-tray', 'Correspondence › Correspondence tray'],
+        ['Check the status before acting', 'A folder helps you find work; the status tells you the letter’s stage. Opening a letter does not approve it.', 'Before acting, Sarah checks the visit request’s status, not just the folder where she found it.', 'fig:correspondence-start'],
+      ],
+    },
+    ar: {
+      title: 'اعرف صفتك وجد عملك',
+      intro: 'مثال: شركة الأفق. يُعدّ عمر حداد طلب تنسيق زيارة فرع حلب، وتراجعه سارة الخطيب إذا أُسندت إليها المراجعة.',
+      result: 'تعمل باسم الصفة الصحيحة، وتجد المراسلة التي تخصك، وتعرف حالتها قبل أي إجراء.',
+      steps: [
+        ['ابدأ من مسؤوليتك', 'تجمع الرئيسية مداخل العمل، ويحدد العمل المسند إليك نقطة بدايتك: الإعداد أو المراجعة أو الاعتماد أو الاستلام.', 'يفتح عمر الصندوق ليستكمل مسودته، وتستخدم سارة «بانتظار اعتمادي» إذا وصلها طلب اعتماد.', 'sec:correspondence-feature-home', 'المراسلات'],
+        ['اختر صفتك', 'الصفة هي المنصب الذي تعمل باسمه، وتغييرها لا يمنحك صلاحية جديدة.', 'يختار عمر منصبه «منسق عمليات»، ثم يفتح «المسودات» ليتابع طلب الزيارة.', 'sec:correspondence-feature-capacity', 'المراسلات › أعمل بصفتي'],
+        ['جد المراسلة', 'يجمع «صندوق المراسلات» عملك في مجلدات؛ ابحث فيه وصفِّ النتائج لتصل إلى المراسلة.', 'تفتح سارة «الواردة» وتبحث عن موضوع زيارة فرع حلب.', 'sec:correspondence-feature-tray', 'المراسلات › صندوق المراسلات'],
+        ['افحص الحالة قبل أي إجراء', 'يساعدك المجلد على العثور على العمل، أما الحالة فتصف مرحلة المراسلة. وفتح الكتاب لا يعني اعتماده.', 'قبل أن تتصرف سارة، تتحقق من حالة طلب الزيارة، لا من المجلد الذي وجدته فيه.', 'fig:correspondence-start'],
       ],
     },
   },
@@ -85,10 +182,12 @@ export function renderChapterOverview(label, lang, resolve, esc) {
   if (!content) return ''
   const ar = lang === 'ar'
   const t = ar
-    ? { title: 'الفصل في مخطط', sub: 'أهم الأفكار مع مثال الأفق، دون بقية الفصل', on: 'مفعّل', off: 'متوقف', eyebrow: 'مثال: شركة الأفق', ideas: `${content.steps.length} أفكار رئيسية`, at: 'في الأفق', read: 'اقرأ الشرح', result: 'النتيجة', note: 'المختصر مفعّل، ونخفي بقية الفصل. اقرأ شرح أي فكرة من زرها، أو اعرض الفصل كاملاً.', full: 'اعرض الفصل كاملاً', close: 'إغلاق', prev: 'الفكرة السابقة', next: 'الفكرة التالية', open: 'افتحه في الفصل', loading: 'جارٍ تحميل الشرح…' }
-    : { title: 'Chapter at a glance', sub: 'Key ideas through the Horizon example, without the rest of the chapter', on: 'On', off: 'Off', eyebrow: 'Example: Horizon', ideas: `${content.steps.length} key ideas`, at: 'At Horizon', read: 'Read the explanation', result: 'The result', note: 'Shorthand is on, so the rest of the chapter is hidden. Read any idea from its button, or show the full chapter.', full: 'Show the full chapter', close: 'Close', prev: 'Previous idea', next: 'Next idea', open: 'Open it in the chapter', loading: 'Loading the explanation…' }
+    ? { title: 'الفصل في مخطط', sub: 'أهم الأفكار مع مثال الأفق، دون بقية الفصل', on: 'مفعّل', off: 'متوقف', eyebrow: 'مثال: شركة الأفق', ideas: `${content.steps.length} أفكار رئيسية`, at: 'في الأفق', where: 'مكانها في كيان', read: 'اقرأ الشرح', result: 'النتيجة', note: 'المختصر مفعّل، ونخفي بقية الفصل. اقرأ شرح أي فكرة من زرها، أو اعرض الفصل كاملاً.', full: 'اعرض الفصل كاملاً', close: 'إغلاق', prev: 'الفكرة السابقة', next: 'الفكرة التالية', open: 'افتحه في الفصل', loading: 'جارٍ تحميل الشرح…' }
+    : { title: 'Chapter at a glance', sub: 'Key ideas through the Horizon example, without the rest of the chapter', on: 'On', off: 'Off', eyebrow: 'Example: Horizon', ideas: `${content.steps.length} key ideas`, at: 'At Horizon', where: 'Where in Kayan', read: 'Read the explanation', result: 'The result', note: 'Shorthand is on, so the rest of the chapter is hidden. Read any idea from its button, or show the full chapter.', full: 'Show the full chapter', close: 'Close', prev: 'Previous idea', next: 'Next idea', open: 'Open it in the chapter', loading: 'Loading the explanation…' }
   const id = 'chapter-overview'
-  const steps = content.steps.map(([title, idea, example, target], i) => `<li class="overview-step"><span class="overview-node" aria-hidden="true">${i + 1}</span><article class="overview-card"><h3>${esc(title)}</h3><div class="overview-card-grid"><p class="overview-idea">${esc(idea)}</p><p class="overview-example"><span>${icon('<path d="M4 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"/><path d="M16 9h2a2 2 0 0 1 2 2v10M2 21h20M8 7h4M8 11h4M8 15h4"/>')}${esc(t.at)}</span>${esc(example)}</p></div><a class="overview-more" href="${esc(resolve(target))}" data-overview-open="${i}" data-title="${esc(title)}">${esc(t.read)}${icon('<path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>')}<span class="sr-only">: ${esc(title)}</span></a></article></li>`).join('')
+  // The path is split on "›" so each part is a crumb, in reading order.
+  const where = path => path ? `<p class="overview-where"><span class="sr-only">${esc(t.where)}: </span>${icon('<path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/>')}${path.split('›').map(p => `<span>${esc(p.trim())}</span>`).join('<i aria-hidden="true">›</i>')}</p>` : ''
+  const steps = content.steps.map(([title, idea, example, target, path], i) => `<li class="overview-step"><span class="overview-node" aria-hidden="true">${i + 1}</span><article class="overview-card"><h3>${esc(title)}</h3>${where(path)}<p class="overview-idea">${esc(idea)}</p><p class="overview-example"><span>${icon('<path d="M4 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"/><path d="M16 9h2a2 2 0 0 1 2 2v10M2 21h20M8 7h4M8 11h4M8 15h4"/>')}${esc(t.at)}</span>${esc(example)}</p><a class="overview-more" href="${esc(resolve(target))}" data-overview-open="${i}" data-title="${esc(title)}">${esc(t.read)}${icon('<path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>')}<span class="sr-only">: ${esc(title)}</span></a></article></li>`).join('')
   return `<details class="chapter-overview" id="${id}">
     <summary aria-controls="${id}-body"><span class="overview-symbol" aria-hidden="true">${icon('<rect x="3" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="16" width="7" height="5" rx="1.5"/><path d="M6.5 8v4.5a2 2 0 0 0 2 2h7a2 2 0 0 1 2 2"/>')}</span><span class="overview-label"><strong>${t.title}</strong><small>${t.sub}</small></span><span class="overview-switch" aria-hidden="true"><span class="overview-switch-text" data-on="${t.on}" data-off="${t.off}"></span><span class="overview-switch-track"><span class="overview-switch-thumb"></span></span></span></summary>
     <div class="overview-body" id="${id}-body">
