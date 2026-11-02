@@ -5,7 +5,7 @@ import fs from 'node:fs';
 import { open, go, ready } from './lib.mjs';
 
 const GUIDE = 'D:/stuff/right-code/taskflow/kayanos-guide';
-const MANIFEST = `${GUIDE}/review/fullpage-manifest.json`;
+const MANIFEST = process.env.KOS_MANIFEST || `${GUIDE}/review/fullpage-manifest.json`;
 
 
 // Draws numbered markers on the live page. Each mark finds the smallest visible element whose

@@ -1,0 +1,140 @@
+\chapter{Settings}
+\label{ch:settings}
+
+\section{What you will achieve}
+
+The Settings app holds the decisions that apply to the whole organization: its identity, who can get in, what applicants are told, and the channels it uses. These pages usually belong to the system administrator; employees do not need them for daily work. Some pages appear only to people allowed to manage them.
+
+\begin{rcnote}[Example: Horizon]
+Horizon’s system administrator reviews the organization settings every three months. When Sarah Al-Khatib asks for two-step verification, the administrator opens the page under “Access and security”, changes the setting, and confirms its effect before telling the team.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {Choose the group and page};
+\node[stepBox,below=of a] (b) {Change one value and save it};
+\node[stepBox,below=of b] (c) {Open the page it affects};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\end{tikzpicture}
+\rclegend
+\caption{Changing a setting safely}
+\label{fig:settings-change-flow}
+\shotnote{A setting affects the whole organization, not only your account. Change one value at a time, then open the page it affects and confirm the result before the next change. If a problem appears, you will know its cause and can undo it easily.}
+\end{figure}
+
+\section{Settings page directory}
+\label{sec:settings-pages}
+The pages follow the eight groups on the Settings page, in the same order. Start with “Organization” and “Access and security”, then move to the groups your organization uses. If you have no public portal, for example, skip its pages.
+
+\begin{table}[H]
+\centering
+\caption{Organization}
+\label{tab:settings-pages-organization}
+\begin{tabularx}{\linewidth}{R{4.2cm} Y}
+\rcHeaderRow
+\thh{Page and section} & \thh{What this page offers}\\
+Organization settings — Organization & Update the organization’s identity and defaults.\\
+Notification defaults — Organization & Set notification preferences for the whole organization.\\
+Export jobs — Organization & Review and download data export files.\\
+Reports — Organization & The periods, currency view, sending and keys every report starts with.\\
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Access and security}
+\label{tab:settings-pages-access}
+\begin{tabularx}{\linewidth}{R{4.2cm} Y}
+\rcHeaderRow
+\thh{Page and section} & \thh{What this page offers}\\
+Roles — Access and security & Define what each member can see and do.\\
+Two-step verification — Access and security & Require a second sign-in step and track who has set it up.\\
+Sessions \& devices — Access and security & Session length, inactivity sign-out and new-device alerts.\\
+Member Keys — Access and security & Manage members’ registered signing keys.\\
+Issue Enrollment Token — Access and security & Issue enrollment tokens for members’ signing keys.\\
+Audit Log — Access and security & Review enrollment and usage events for member keys.\\
+API \& integrations — Access and security & Manage API tokens and the rules for other systems connecting to the organization.\\
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Public portal}
+\label{tab:settings-pages-portal}
+\begin{tabularx}{\linewidth}{R{4.2cm} Y}
+\rcHeaderRow
+\thh{Page and section} & \thh{What this page offers}\\
+Public portal — Public portal & Configure the organization’s public portal.\\
+Portal content — Public portal & Audiences, pages, frequently asked questions and announcements.\\
+Applicant accounts — Public portal & Choose the profile details applicants give and how they are verified.\\
+Messages — Public portal & What applicants are told about their requests, and over which channels.\\
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Forms and publishing}
+\label{tab:settings-pages-forms}
+\begin{tabularx}{\linewidth}{R{4.2cm} Y}
+\rcHeaderRow
+\thh{Page and section} & \thh{What this page offers}\\
+Publishing \& approval — Forms and publishing & Which changes need approval before they go live, and who approves them.\\
+Form assignments — Forms and publishing & Reminders, escalation, working days and the usual cap per person.\\
+Check categories — Forms and publishing & Categories that group quality checks for reviewers and dashboards.\\
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Channels}
+\label{tab:settings-pages-channels}
+\begin{tabularx}{\linewidth}{R{4.2cm} Y}
+\rcHeaderRow
+\thh{Page and section} & \thh{What this page offers}\\
+Email domains — Channels & Manage verified domains for organization email.\\
+Email signatures — Channels & Design and assign organization email signatures.\\
+Short link domains — Channels & Manage custom domains for short links.\\
+WhatsApp accounts — Channels & Connect and manage WhatsApp accounts.\\
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{AI}
+\label{tab:settings-pages-ai}
+\begin{tabularx}{\linewidth}{R{4.2cm} Y}
+\rcHeaderRow
+\thh{Page and section} & \thh{What this page offers}\\
+AI availability — AI & Choose where AI is available, for everyone or for chosen members.\\
+AI limits — AI & Set the organization’s usage limits for AI features.\\
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Languages, currencies and units}
+\label{tab:settings-pages-languages}
+\begin{tabularx}{\linewidth}{R{4.2cm} Y}
+\rcHeaderRow
+\thh{Page and section} & \thh{What this page offers}\\
+Languages — Languages, currencies and units & Manage the organization’s languages.\\
+Currencies — Languages, currencies and units & Manage the organization’s currencies.\\
+Units of measurement — Languages, currencies and units & The units offered in questions and record fields, and how they convert.\\
+\end{tabularx}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Management}
+\label{tab:settings-pages-management}
+\begin{tabularx}{\linewidth}{R{4.2cm} Y}
+\rcHeaderRow
+\thh{Page and section} & \thh{What this page offers}\\
+Approval routes — Management & Saved approval routes with names and versions, used in several places.\\
+Evaluation templates — Management & Reusable scorecards: criteria, a scoring model and bands.\\
+Follow-up — Management & Stuck reasons and other shared words used on follow-up boards.\\
+Record keeping — Management & Retention rules, holds, disposition reviews and integrity.\\
+\end{tabularx}
+\end{table}

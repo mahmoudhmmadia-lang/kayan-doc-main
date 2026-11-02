@@ -71,7 +71,7 @@ Omar selects his “Operations Coordinator” position at ①, then opens “Dra
 \section{The tray and the letter lifecycle}
 \label{sec:correspondence-feature-tray}
 
-The “Correspondence tray” groups available work into folders. A folder helps you find work, while a status describes the letter’s stage. “Awaiting my approval” is a personal work view, and issuance does not by itself prove delivery or completion.
+The “Correspondence tray” groups available work into folders. A folder helps you find work, while a status describes the letter’s stage. “Awaiting my approval” is a personal work view, and issuance does not by itself prove delivery or completion. “Signing folder” opens a view of official documents awaiting your signature, not a list of letters.
 
 \begin{rcnote}[Example: Horizon]
 Sarah opens “Inbox” at ① to find a letter about the Aleppo branch visit, then searches for its subject at ②. She uses “Filters” at ③ if she needs to narrow the results and reloads with ④ before checking the result.
@@ -108,3 +108,1413 @@ Deadline & Helps identify work needing attention; check the due date and whether
 \end{enumerate}
 
 \textbf{Practice and check:} Switch from “Inbox” to “Drafts” and back, then search and clear the search. Confirm the folder changes and the list returns. If it is empty, record that observation rather than concluding the organization has no letters. If “The folder could not be loaded” appears, use “Try again”; a loading error is not an empty search result.
+
+\clearpage
+\section{Starting a new letter}
+\label{sec:correspondence-feature-compose}
+
+“New letter” creates a letter in the name of the position selected in “Acting as”. You write the text directly on the letter sheet and set its details in the panels beside it, so you can see its look and type before sending it. A letter starts unsaved and cannot be saved until its subject and addressees are complete.
+
+\begin{rcnote}[Example: Horizon]
+Omar opens “New letter” at ① and reviews the type at ②, confidentiality at ③ and priority at ④. He then writes the subject “Aleppo Branch visit coordination request” at ⑤ and the request text at ⑥.
+\end{rcnote}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-compose-en.png}
+\caption{The New letter page before saving}
+\label{fig:correspondence-compose-screen}
+\shotnote{The image shows a blank letter that has not been saved; its starting values come from the selected type and the test organization’s settings. Review them on every letter rather than assuming they suit its subject. ① “New letter”. ② “Type”: changing it resets confidentiality and priority to the new type’s values. ③ “Confidentiality”. ④ “Priority”. ⑤ “Subject”: at least five characters. ⑥ The letter text, written directly on the sheet.}
+\end{figure}
+
+
+\begin{table}[H]
+\centering
+\caption{What do you record in the letter details?}
+\label{tab:correspondence-compose-fields}
+\begin{tabularx}{\linewidth}{R{4.2cm} Y}
+\rcHeaderRow
+\thh{Field} & \thh{What do you record?}\\
+“Type” & The letter’s classification, from the types your organization configured. The type sets the numbering series and whether approval is required.\\
+“Confidentiality” & Who may see the letter. Levels the type does not allow are disabled, and from “Secret” upward the letter goes to positions only.\\
+“Letter language” & The language of the sheet and its labels. It does not change your interface language.\\
+“Priority” and “Urgent letter” & A level from “Low” to “Very urgent”, plus a separate switch that marks the letter as urgent.\\
+“Subject” & A clear title that reflects the content, up to 500 characters.\\
+“Reply deadline” & Turn on “I expect a reply from the recipient” when you await a reply, then choose the period and reminder. The period counts working days.\\
+\end{tabularx}
+\end{table}
+
+\begin{enumerate}
+\item Open “Correspondence tray”, press “New letter”, and check the position in “Acting as”.
+\item Choose “Type” first, then review “Confidentiality” and “Priority”; changing the type later resets both values.
+\item Write the “Subject”, then write the text on the sheet.
+\item For similar letters, press “Another letter with the same properties” to open a new tab with the same properties. You can open 20 letters at a time.
+\end{enumerate}
+
+\textbf{Check:} The subject and text appear on the sheet, and the status at the bottom stays “Saved automatically once the subject and addressees are complete” until you add an addressee. If “No letter types are active — ask the administrator” appears, you cannot start until the administrator activates at least one type.
+
+\clearpage
+\section{Addressees and the approval chain}
+\label{sec:correspondence-feature-recipients}
+
+“Addressees” sets where the letter goes, while “Approval chain” sets who reviews, approves or signs it before it is issued. The two serve different purposes, so do not add an approver to “To” just because they will agree to the letter.
+
+\begin{rcnote}[Example: Horizon]
+Omar adds Aleppo Branch at ① and leaves ② and ③ unchanged so the letter passes through the registry. He then reads the route at ④ and adds the General Manager at ⑤ to sign the letter.
+\end{rcnote}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-recipients-en.png}
+\caption{Addressees and approval chain on a test draft}
+\label{fig:correspondence-recipients-screen}
+\shotnote{The image shows a test draft with one addressee and two manually added stages. Together, the two panels show where the letter goes and who agrees to it, so review both before sending. ① “To”: search for a body, position or group, or type an external body’s name. ② “Copy for information”. ③ “Send directly without the registry”: for one internal position only. ④ “Expected routing”: the letter’s way to the addressee, not its approval stages. ⑤ The “Approval chain” stages: only the last stage signs.}
+\end{figure}
+
+
+\begin{enumerate}
+\item Type part of the name in “To” and choose the right result from the list. A position shows its unit and holders to help you tell similar names apart.
+\item In “Copy for information”, add anyone who needs to see the letter without being asked to act.
+\item Read “Expected routing”. Turn on direct sending only when the letter goes to one internal position.
+\item Press “Add a stage” and search for the position. The first stage becomes “Signature”, each later stage goes before it as “Approval”, and you can change a role from its list.
+\item If the type requires approval and you leave the chain empty, the system sets it on first save: the unit head approves, then their superior signs. So save the letter, then read the resulting stages.
+\end{enumerate}
+
+\textbf{Check and recover:} Each addressee appears in its field, and “Approval chain” holds the required stages after saving. If the chain stays empty, do not rely on the “Send for approval” button label: a letter with no stages is issued when sent. Add the required stage or ask the administrator before sending.
+
+\clearpage
+\section{Attachments, letterhead and the body file}
+\label{sec:correspondence-feature-attachments}
+
+Attachments are files that accompany the letter, while the letterhead sets the official look of its sheet. If the letter’s text is already in a file, you can make that file the letter’s body instead of writing it in the editor.
+
+\begin{rcnote}[Example: Horizon]
+Omar attaches the visit schedule at ① and confirms it appears at ②. He then keeps the default letterhead at ③ and stays on “Write the text” at ④ because he is writing the request directly.
+\end{rcnote}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-attachments-en.png}
+\caption{Attachments, letterhead and how the text is made}
+\label{fig:correspondence-attachments-screen}
+\shotnote{The image shows a test draft with one PDF file, whose count also appears under “Attachments” on the sheet. That number helps you compare what the text mentions with what is actually attached. ① The drop area and “Choose”: up to 10 files, 20 MB each. ② The attached file, removed with the button on its row. ③ “Letterhead”: shown when more than one letterhead is available. ④ “Write the text” and “Body as a file”.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-attachments-file-en.png}
+\caption{Body as a file before a file is chosen}
+\label{fig:correspondence-attachments-file-screen}
+\shotnote{The image shows the mode in which a file replaces the editor; the red line is a reminder that no file has been chosen yet. The margin sizes come from the template used in testing, so they may differ in your organization. ① “Body as a file”: body variables are not available with it. ② “Choose a file”: a PDF or Word file in docx format, up to 20 MB. ③ The space to leave blank so the system can stamp its additions there.}
+\end{figure}
+
+
+\begin{enumerate}
+\item Press “Choose” under “Attachments and references” or drop files in the same area, and wait for the file to appear in the list. Saving and sending wait while “Uploading attachments…” shows.
+\item Choose the “Letterhead” if its list appears, review “Letter language” beside it, and check the result on the sheet.
+\item Add only images inside the letter text; add other files as attachments.
+\item If the text is already in a file, choose “Body as a file”, then “Choose a file”, and wait for the file name and page count. Use “Preview” to read it, “Replace” to change it and “Remove” to take it out.
+\item Review “References” if they appear; they list letters linked to this one, such as the letter you are replying to.
+\end{enumerate}
+
+\textbf{Check:} “Attachments” on the sheet matches the number of files you added, and the body file’s name appears if you used one. When you go back to “Write the text”, the app asks you to confirm with “Remove the file”; press “Cancel” to keep the file.
+
+\clearpage
+\section{Saving, preview and the pre-send check}
+\label{sec:correspondence-feature-check-save}
+
+The app saves the draft automatically about 30 seconds after the first unsaved change, provided the subject and addressees are complete. The sheet itself serves as the preview, showing the letter as you prepare it; only a body file has a separate preview button. “Check now” saves the draft and lists findings to help your review, but it does not stop you from sending.
+
+\begin{rcnote}[Example: Horizon]
+Omar reviews the sheet at ①, reads the save status at ② and presses “Check now” at ③. If the findings at ④ warn him about a schedule he mentioned but did not attach, he attaches it and presses “Save as draft” at ⑤.
+\end{rcnote}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-check-save-en.png}
+\caption{The pre-send check on a test draft}
+\label{fig:correspondence-check-save-screen}
+\shotnote{The image shows the check result for a test draft whose text mentions an attachment that is not there. The duplicate finding appears because another test draft has the same subject, and generated findings may vary in wording and level between checks. ① The letter sheet: review the addressee, subject, attachment count and signer. ② The status line. ③ “Check now”. ④ Findings, ordered by risk. ⑤ “Save as draft”: saves the letter and takes you to “Drafts”.}
+\end{figure}
+
+
+\begin{table}[H]
+\centering
+\caption{How do you read the status line?}
+\label{tab:correspondence-save-states}
+\begin{tabularx}{\linewidth}{R{6.2cm} Y}
+\rcHeaderRow
+\thh{Message} & \thh{What it means}\\
+“Not saved yet” & A new letter you have not started changing.\\
+“Saved automatically once the subject and addressees are complete” & The letter is still incomplete, so it will not be saved yet.\\
+“Unsaved changes” & The letter is complete and will be saved automatically or when you press “Save as draft”.\\
+“Draft saved moments ago” & Your latest edits reached the draft; the save time appears after a minute.\\
+“Saving failed — …” & The edits were not saved; read the stated reason before leaving the page.\\
+\end{tabularx}
+\end{table}
+
+\begin{enumerate}
+\item Review the sheet: addressee, subject, text, attachment count and signer’s name.
+\item Read the status line, and do not leave the page if “Saving failed” appears.
+\item Press “Check now” and read the findings. The check compares what the text says about attachments with the number of files, reviews addressing and confidentiality rules, and may add Kayan assistant findings and suggestions when available for this draft.
+\item Make any changes, then check again. A line starting “Rules checked only” means the AI check did not run and the result covers the rules alone.
+\item You can turn on “Check automatically on send”, a personal preference. When there are findings you choose “Send anyway” or “Back to editing”; this does not apply to “Send all”.
+\item Press “Save as draft”. Do not use the send button in this exercise; sending is explained in ef{sec:correspondence-feature-approvals}.
+\end{enumerate}
+
+\textbf{Check and recover:} “Saved in “Drafts”” appears and the draft opens in the folder. If “Write a subject of at least 5 characters” or “Add at least one addressee” appears, complete that field and save. “Close” keeps a complete letter as a draft; a new incomplete letter is not saved.
+
+\clearpage
+\section{Drafts and drafting tasks}
+\label{sec:correspondence-feature-drafts}
+
+The “Drafts” folder holds letters saved but not sent, and letters returned for changes. They show no number because no outgoing number has been assigned yet. The “Drafts and drafting tasks” entry opens this folder, while “Drafting reviews” is a separate page for drafts pushed for review, explained in the review and approval stage.
+
+\begin{rcnote}[Example: Horizon]
+Omar opens “Drafts” at ①, selects the Aleppo Branch visit coordination request at ② and presses “Continue editing” at ③ to finish his work. He does not use the menu at ④ to delete the draft while the request stands.
+\end{rcnote}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-drafts-en.png}
+\caption{A saved test draft in the Drafts folder}
+\label{fig:correspondence-drafts-screen}
+\shotnote{The image shows a test draft opened after saving, and the count shown belongs to test data. Being here means the draft is saved, not that it was sent to anyone. ① “Drafts”. ② The draft’s row: shows the addressee, subject and attachment count. ③ “Continue editing”. ④ “More actions”: includes “Delete draft” and “Copy as draft”.}
+\end{figure}
+
+
+\begin{enumerate}
+\item Open “Correspondence tray”, then “Drafts”, and check “Acting as” because the folder follows the selected position.
+\item Press the draft’s row and read the letter, plus its “Attachments” and “Route” tabs if needed.
+\item Press “Continue editing”. The draft opens in a tab named after its subject inside the “New letter” page, with its saved values unchanged.
+\item If the draft is no longer needed, press “More actions”, then “Delete draft”, and confirm. This cannot be undone, and the draft and its attachments are removed.
+\end{enumerate}
+
+\textbf{Practice and check:} Do what Omar does: prepare the visit coordination request draft, add one addressee and press “Save as draft”. Close the browser, sign in again, open the draft and press “Continue editing”. Compare the subject, text, addressee, type, priority, confidentiality and attachments with what you entered. If the draft is missing, check “Acting as” first, then remember that a new incomplete letter is not saved.
+
+\clearpage
+\section{Drafting reviews}
+\label{sec:correspondence-feature-drafting-review}
+
+“Drafting reviews” lets a preparer show a draft to another position before sending it for approval. This review is about the wording; it is not final approval, and it neither issues the letter nor gives it a number. A request starts from a saved draft (\ref{sec:correspondence-feature-drafts}), and the draft stays locked while the request is with the reviewer.
+
+\begin{rcnote}[Example: Horizon]
+Omar opens the “Aleppo Branch visit coordination request” draft, picks Sarah Al-Khatib as reviewer at ① in the push dialog, writes his instructions at ② and pushes the draft with ④. Sarah finds the request in “Assigned to me”, and Omar follows it in “Assigned by me”.
+\end{rcnote}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-drafting-review-push-en.png}
+\caption{Pushing a draft for review}
+\label{fig:correspondence-drafting-review-push-screen}
+\shotnote{This dialog sets who reviews the draft and what is asked of them; the system proposes the unit head as default reviewer when there is one. It was opened on a test draft and closed without sending, and its button stays disabled until the details are complete. ① Choose the “Reviewer”: one position other than yours. ② “Instructions”: required. ③ “Files for the reviewer”: up to ten files. ④ “Push for review”.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-drafting-review-en.png}
+\caption{The Drafting reviews page}
+\label{fig:correspondence-drafting-review-screen}
+\shotnote{The page gathers review requests from both sides and shows no overall total. The list is empty in the test environment, so the image teaches the tabs, not request rows. ① “Assigned to me”: what awaits your review. ② “Assigned by me”: what you asked to have reviewed. ③ “Pending”: the state shown by default, beside the other states.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Decisions on a review request}
+\label{tab:correspondence-review-decisions}
+\begin{tabularx}{\linewidth}{R{3.2cm} R{3.2cm} Y}
+\rcHeaderRow
+\thh{Decision} & \thh{Who takes it?} & \thh{What happens?}\\
+“Accept” & Reviewer & The draft moves to the reviewer’s position and becomes theirs, and the default approval route is worked out from that position. The preparer then reaches it from “Assigned by me”.\\
+“Return” & Reviewer & The draft goes back to its preparer with the “Return comments”, who edits it and decides the next step. Write at least five characters.\\
+“Withdraw” & Requester & Ends their request; the draft comes back for editing.\\
+“Cancel” & Either side & Ends the request with an optional note; the draft stays with its owner.\\
+\end{tabularx}
+\end{table}
+
+\begin{enumerate}
+\item Open the saved draft and press “Push for review”, then choose the reviewer, write the instructions and confirm.
+\item As reviewer, open “Drafting reviews”, then “Assigned to me”, and press the row to read the draft.
+\item Choose “Accept”, “Return” or “Cancel” from the row or from the bar above the draft.
+\item As requester, open “Assigned by me” and change the state to follow the result. The preparer also sees the reason for a return above the draft.
+\end{enumerate}
+
+\textbf{Check:} The request moves from “Pending” to its new state, such as “Accepted” or “Returned”. If you cannot edit your draft, look for the bar saying it is with the reviewer, then withdraw the request or wait for the decision.
+
+\clearpage
+\section{Awaiting my approval}
+\label{sec:correspondence-feature-approvals}
+
+The “Awaiting my approval” folder lists letters whose current approval stage has reached your position. The route shows who prepared the letter, who approved it and whose turn it is now. Changing a letter, agreeing to it and refusing it are different decisions, so understand each button before pressing it.
+
+\begin{rcnote}[Example: Horizon]
+The General Manager opens the Aleppo visit request from ① and confirms at ② that it is his turn. If the visit date is missing he chooses ④ and says what is needed; if the letter is complete he signs it with ③. He would choose ⑤ only if the visit itself were unacceptable.
+\end{rcnote}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-approvals-en.png}
+\caption{The approval route at the position holder’s turn}
+\label{fig:correspondence-approvals-screen}
+\shotnote{The image shows a test letter at its signature stage after preparation and approval. Decision buttons appear only when the turn belongs to the position you are acting as. ① “Awaiting my approval”. ② The route title: “your turn now” means the decision is yours. ③ “Approve and sign”: shown at signature; an approval stage shows “Approve”. ④ “Return for changes”. ⑤ “Reject”.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{How approval decisions differ}
+\label{tab:correspondence-approval-decisions}
+\begin{tabularx}{\linewidth}{R{3.4cm} Y R{3.4cm}}
+\rcHeaderRow
+\thh{Decision} & \thh{What happens?} & \thh{Who owns the next step?}\\
+“Approve” & Your stage closes and the letter moves to the next stage. The note is optional. & The next stage’s holder\\
+“Approve and sign” & The letter is signed, numbered and issued, its text and letterhead are frozen, and it is distributed. & The recipients, and the registry when an outside body is among them\\
+“Return for changes” & The status becomes “Returned for changes” and your notes reach the preparer. The route starts again when the letter is sent again. & The letter’s preparer\\
+“Reject” & The status becomes “Rejected” and the reason is recorded as a red note. The letter cannot go back to editing or be sent again. & Nobody; this letter’s route ends\\
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-approvals-return-en.png}
+\caption{Asking the preparer for changes}
+\label{fig:correspondence-approvals-return-screen}
+\shotnote{This dialog asks what must change; it does not end the letter. It was opened and closed without sending. ① “Your notes for the drafter”: at least five characters, ideally naming the exact change needed. ② “Return for changes”.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-approvals-sign-en.png}
+\caption{Approving and signing}
+\label{fig:correspondence-approvals-sign-screen}
+\shotnote{The dialog gathers your last checks before issue. The number shown is expected and is taken only on signing; the dialog was opened and closed without signing. ① The expected number. ② “Stamp”. ③ “Approval note (optional)”. ④ “Approve and sign”: the letter’s text cannot be changed after this.}
+\end{figure}
+
+\begin{enumerate}
+\item Choose the required position in “Acting as”, open “Awaiting my approval” and select the letter. You can use “Reading mode” to focus on the text.
+\item Read the letter, its attachments and the route, and use “Compare edits” if it appears.
+\item For a direct correction press “Edit the draft”; the earlier version is kept and earlier approvals stand, marked “Edited after your approval”.
+\item If you need information press “Ask a question”. Approval and signature wait until the answer arrives or you withdraw the question.
+\item Take your decision from the buttons, complete the dialog and confirm.
+\end{enumerate}
+
+\textbf{Check:} After your decision the letter leaves “Awaiting my approval”, and its status or current stage holder changes. If the type requires a member-key signature and you have no active key you cannot sign; see “Signature management”. If the buttons are missing, check your capacity and whether the turn has reached you.
+
+\clearpage
+\section{Reading a letter}
+\label{sec:correspondence-feature-reader}
+
+Opening a letter shows its information, actions and sections on one page. The buttons depend on what you may do on this letter now, not on the folder you opened it from, so two people can see the same letter with different buttons.
+
+\begin{rcnote}[Example: Horizon]
+Aleppo Branch opens letter en{HZN/2026/0012}, confirms its status and priority at ① and sees its available work at ②. It looks for less common commands at ③, moves between sections at ④ and reviews its deadline at ⑤.
+\end{rcnote}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-reader-en.png}
+\caption{The parts of a letter page}
+\label{fig:correspondence-reader-screen}
+\shotnote{The image shows a test memo assigned for action with an overdue deadline, so the full set of handling buttons appears. Start from the information before any action. ① Type, number, status, confidentiality and priority. ② The action bar: the first coloured button is the main available action. ③ “More actions”: such as “Consultation session”, “Suspend” and “Redirect”. ④ The letter’s sections. ⑤ “Completion deadline”: counted in business days only.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Letter sections}
+\label{tab:correspondence-reader-tabs}
+\begin{tabularx}{\linewidth}{R{3.6cm} Y}
+\rcHeaderRow
+\thh{Section} & \thh{What do you find there?}\\
+“Letter” & The paper and its margins. After issue you can switch between “Paper” and “Pages”.\\
+“Route” & The letter’s journey after issue, who holds it now, each party’s state and the time taken.\\
+“Action log” & Everything done on the letter with time and actor; the log cannot be edited.\\
+“Attachments” & The files and their view buttons. “Sign the attachment” or “Request signatures” may appear, depending on your rights.\\
+“References” & Linked letters, “Follow-up tasks”, “Consultation sessions”, dossiers and the chats that mention the letter.\\
+“Signatures” & The letter’s signatures, the kind of each and who signed.\\
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-reader-route-en.png}
+\caption{A letter’s route after issue}
+\label{fig:correspondence-reader-route-screen}
+\shotnote{This section traces the letter’s stations after signature and issue and shows each recipient’s purpose and state. It tells you where the work stands and who it rests with. ① “Route”.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-reader-signatures-en.png}
+\caption{The letter’s signatures}
+\label{fig:correspondence-reader-signatures-screen}
+\shotnote{This section shows who signed the letter and at what level; here, a final recorded signature on a test memo. ① “Signatures”.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-reader-attachments-en.png}
+\caption{The letter’s attachments}
+\label{fig:correspondence-reader-attachments-screen}
+\shotnote{This section lists the letter’s files and the actions allowed on each. The file shown was not signed and no signature request was sent. ① “Attachments”: the number beside the name counts the files.}
+\end{figure}
+
+\begin{enumerate}
+\item Open the letter from its folder, then read its information, subject and sender.
+\item Read the “Letter” section and open “Attachments” if there are any.
+\item Review “Route” and “Action log” to learn what happened before it reached you.
+\item Choose an action from the bar, or open “More actions” if you do not find it.
+\end{enumerate}
+
+\textbf{Check:} State the letter’s status, your deadline and the current step’s owner before acting. If an expected action is missing, check your capacity; the letter may have reached you for information only. An issued letter opens a “Verification page” available without sign-in, which withholds the letter’s text when its confidentiality requires it.
+
+\clearpage
+\section{Referrals, margin notes and follow-up}
+\label{sec:correspondence-feature-referral}
+
+A referral sends a letter that reached you to a position or unit, with a note saying what is needed. A margin note is a comment shown on the letter or in its margin, and it moves work to nobody. Choose the action that matches your intent: do you want to move the work, comment on it or postpone it?
+
+\begin{rcnote}[Example: Horizon]
+The Aleppo Branch manager refers the letter to the branch coordinator at ①, writes “Prepare the reply” at ②, keeps the five-day deadline at ③ and confirms with ⑤ without turning on ④. The manager keeps following, and is notified when the work finishes.
+\end{rcnote}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-referral-en.png}
+\caption{Referring a letter}
+\label{fig:correspondence-referral-screen}
+\shotnote{The dialog gathers who receives the work, what is needed and by when. Each recipient has a purpose: “For action” moves the work, “For information” keeps it with you. It was opened and closed without referring. ① Choose the recipients. ② The note text: required, and it can start from a ready directive. ③ “Completion deadline for the recipients”: applies to those receiving for action. ④ “Hide earlier notes from the recipients”. ⑤ “Refer”.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-referral-notes-en.png}
+\caption{Margin notes beside the letter}
+\label{fig:correspondence-referral-notes-screen}
+\shotnote{Notes appear beside the letter with their author and date, keeping directives with the letter itself. The display can vary with the organization’s settings. The texts shown are test data. ① The notes in referral order.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Which action should you choose?}
+\label{tab:correspondence-referral-actions}
+\begin{tabularx}{\linewidth}{R{3.4cm} Y}
+\rcHeaderRow
+\thh{Action} & \thh{When do you use it and what does it do?}\\
+“Refer” & To assign work to a party or inform it. Referring “For action” moves your work to the recipients, and you are told when they finish. Referring only “For information” keeps the work with you.\\
+“Note” & To add a comment without changing who owns the work. It is not available before the letter is submitted.\\
+“Redirect” & To hand over work that reached you by mistake or belongs elsewhere. Its result does not come back to you, and it is unavailable while you have an open inquiry.\\
+“Suspend” & To postpone work to a “Follow-up date” with a reason. The letter does not count as overdue during suspension, and it resumes automatically or through “Resume”.\\
+“Follow as a task” & To create a task linked to the letter, shown under “Follow-up tasks” in “References”.\\
+\end{tabularx}
+\end{table}
+
+\begin{enumerate}
+\item Open the letter and press “Refer”.
+\item Search for the position or unit, and set “For action” or “For information” for each.
+\item Pick a ready directive or write the note, then set the ink colour and the deadline.
+\item Press “Refer” in the dialog.
+\end{enumerate}
+
+\textbf{Check:} Open “Route”: the referral station, its recipients and each one’s state appear, and the note shows on the letter. The “Refer” button is absent if you have no open work on the letter, and it stops being available after you move your work for action. If you referred to the wrong party, follow up with them or use the action available to them; the log keeps what happened.
+
+\clearpage
+\section{Inquiries and consultations}
+\label{sec:correspondence-feature-inquiries}
+
+An inquiry is a formal question addressed to one or more positions and recorded on the letter. A “Consultation session” is a conversation about the letter in Chat with positions you choose. Use an inquiry when your handling depends on an answer, and a session when the matter needs discussion.
+
+\begin{rcnote}[Example: Horizon]
+The Aleppo Branch coordinator asks the accounts officer about the visit’s cost: he picks the officer at ① in the inquiry dialog and writes the question at ②. The officer finds it under “Inquiries” at ① of the folder image and sends an answer.
+\end{rcnote}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-inquiries-en.png}
+\caption{The Inquiries folder}
+\label{fig:correspondence-inquiries-screen}
+\shotnote{This folder lists questions waiting for your own answer, not questions you asked. It is empty in the test environment, which does not indicate a fault. ① “Inquiries”.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-inquiries-ask-en.png}
+\caption{Requesting an inquiry}
+\label{fig:correspondence-inquiries-ask-screen}
+\shotnote{This dialog sends a question to the chosen positions; it does not accept units. You cannot complete or redirect your work while the question is open. It was opened and closed without sending. ① Choose the positions. ② The question text. ③ “Send the inquiry”.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-inquiries-consult-en.png}
+\caption{Consultation sessions in References}
+\label{fig:correspondence-inquiries-consult-screen}
+\shotnote{The image shows a closed test session previously opened on the letter, with its minutes still available. This area gathers what was discussed around the letter, outside its text. ① “References”. ② “Consultation sessions”. ③ “Open in chat”. ④ “Session minutes”.}
+\end{figure}
+
+\begin{enumerate}
+\item To ask, press “Inquiry”, choose the position, write your question and press “Send the inquiry”.
+\item To answer, open “Inquiries” and then the letter, press “Answer”, write your reply and press “Send the answer”.
+\item If you no longer need the question, press “Withdraw the question” in the bar above the letter.
+\item To open a discussion, open “More actions”, then “Consultation session”, write a subject of \en{3–200} characters and choose one to twenty positions.
+\item The session’s creator manages its participants and closes it. Participants open the chat from “References”.
+\end{enumerate}
+
+\textbf{Check:} The waiting bar disappears once the answer arrives or the question is withdrawn, and the event is recorded in “Action log”. Do not look for an answer you requested in the “Inquiries” folder; open the letter itself. If a session cannot be opened, check that the letter is past the draft stage and that you hold work on it or a role in approving or sending it.
+
+\clearpage
+\section{Replying and completing}
+\label{sec:correspondence-feature-reply-complete}
+
+Your work on a letter ends in one of two ways: “Reply” creates a new letter linked to the original, and “Complete and file” closes your work with no new letter. Completing your work does not always complete the whole letter; it completes when no party has open or suspended work left on it.
+
+\begin{rcnote}[Example: Horizon]
+Aleppo Branch only needs to carry out the coordination, so it writes the completion note at ①, keeps the default filing place at ② and presses ③. If the letter needed a formal answer, it would choose “Reply” instead.
+\end{rcnote}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-reply-complete-en.png}
+\caption{Completing and filing a letter}
+\label{fig:correspondence-reply-complete-screen}
+\shotnote{This dialog closes your work and records why. A suggested text appears and can be edited. It was opened and closed without completing. ① “Completion note”. ② “Filing”: the official copy is always filed, and you can choose a place for an extra copy. ③ “Complete and file”.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{How do you close your work?}
+\label{tab:correspondence-closing-work}
+\begin{tabularx}{\linewidth}{R{4.2cm} R{3.2cm} Y}
+\rcHeaderRow
+\thh{What reached you} & \thh{Action} & \thh{Result}\\
+Work needing an answering letter & “Reply” & A draft linked to the original opens (\ref{sec:correspondence-feature-drafts}), and your work closes when the reply is issued, not when the draft is saved.\\
+Work needing no letter & “Complete and file” & Your work closes, and whoever referred it to you is told if you keep that option on.\\
+A copy for information & “Acknowledge” & Your reading is recorded; you have no completion button.\\
+A question addressed to you & “Answer” & The answer reaches the person who asked and the question closes.\\
+\end{tabularx}
+\end{table}
+
+\begin{enumerate}
+\item Make sure you have no open inquiry; it prevents completion.
+\item If a letter is needed, press “Reply”, finish the draft and send it for approval or issue according to its type.
+\item If the work is finished without a letter, press “Complete and file”, edit the note and confirm.
+\item If you completed the work too early, use “Reopen” in “More actions” if it appears, and write the reason.
+\end{enumerate}
+
+\textbf{Practice and check:} Open a draft or a letter in its approval route and write down three things: your remark on the wording, the right decision, and who owns the next step. If you are asking for changes to the text, the decision is “Return” in a drafting review or “Return for changes” in the approval route, and the preparer owns the next step. If the text is sound, the decision is “Accept” by the reviewer or “Approve” by the stage holder, and the next step belongs to the reviewer after accepting or to the next stage after approving. Carry out the decision on work actually assigned to you, then check the step’s owner in the approval route or in “Route”. If the status is still “In progress” after you complete your work, review “Route”; another party may still be working.
+
+\clearpage
+\section{The registry office}
+\label{sec:correspondence-feature-registry}
+
+The registry office controls the movement of letters between the organization and outside parties: it registers what arrives, sends what leaves, and keeps a numbered register for each year. The “Registry office” page therefore gathers its queues and registers in one place. No entry is ever deleted; corrections and voiding carry a recorded reason. The page is for registry clerks only, and a clerk who serves several offices picks one at the top of the page.
+
+\begin{rcnote}[Example: Horizon]
+Horizon's registry clerk starts the day at ① to see what awaits registration, then at ② to see whether the Aleppo Branch visit coordination request awaits dispatch. The clerk reviews ④ before opening ⑤ at the end of the day.
+\end{rcnote}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-registry-en.png}
+\caption{The Registry office page}
+\label{fig:correspondence-registry-screen}
+\shotnote{The page shows the office's position at a glance: brief indicators first, then the list you choose. The numbers and cards here are test data. ① “Awaiting registration”. ② “Awaiting dispatch”. ③ “Incoming register”. ④ “Sequence check”: shows whether the year's numbers have gaps. ⑤ “Daily closing report”.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{What does each view show?}
+\label{tab:correspondence-registry-views}
+\begin{tabularx}{\linewidth}{R{4.2cm} Y}
+\rcHeaderRow
+\thh{View} & \thh{What do you find there?}\\
+“Awaiting registration” & What reached the office without a number yet, such as paper intake, the official mailbox and form submissions. The page opens here when something is waiting.\\
+“Awaiting dispatch” & Letters to outside parties whose dispatch has not been recorded yet.\\
+“Incoming register”, “Outgoing register” and “Decisions” & The numbered registers, each with its own year, sort order and search.\\
+“Other registers” & “Completed”, “Paper”, “Paper copies” and “All”.\\
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-registry-filters-en.png}
+\caption{Searching and filtering a register}
+\label{fig:correspondence-registry-filters-screen}
+\shotnote{The register tools narrow the list without changing the entries, and the party buttons limit it to one party. A voided entry stays with its number struck through, because entries are never deleted. ① The search field. ② “Filter the register”: by type, priority, confidentiality, attachments, paper original and deadline. ③ “Print the list”: prints the loaded list with its filters named. ④ “Other registers”.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-registry-report-en.png}
+\caption{The report of a closed day}
+\label{fig:correspondence-registry-report-screen}
+\shotnote{The report summarizes one day's work. Its totals stay frozen after closing even if entries change later, as the notice on this test day shows. ① “Day”: chooses the day. ② The closing line: says who closed the day and when. ③ “PDF file”. ④ “Print”.}
+\end{figure}
+
+\begin{enumerate}
+\item Open “Registry office”, and choose your office if a list of offices appears.
+\item Read the indicators, then move to the view your work needs.
+\item In a register, use the search or “Filter the register”, or choose a party from the “Parties” buttons.
+\item Use “Export” to export a register, and “Daily closing report” to see the day's work.
+\item At the end of the day review the report, then press “Close the day” and “Confirm closing”. The button does not appear on a day already closed.
+\end{enumerate}
+
+\textbf{Check:} “Sequence check” should read “Sound”, and the lists should return after you clear the search and filters. If gaps appear, review the numbers shown before closing. If the page is missing or you are returned to the tray, ask the administrator to check that you belong to a registry office. An entry registered for a closed day is recorded as late, with its reason.
+
+\clearpage
+\section{Registering incoming letters and numbering}
+\label{sec:correspondence-feature-incoming}
+
+Registering an incoming letter turns a letter from outside the organization into a numbered record that reaches the people who will handle it. The system assigns the number from the incoming series, then delivers the letter to the positions or units you choose. The number shown before saving is only expected, and it may change if another entry comes first. The same dialog can record a paper outgoing letter or a decision, and its fields then follow the classification.
+
+\begin{rcnote}[Example: Horizon]
+Horizon's registry clerk leaves the classification on “Incoming” at ①, reads the expected number at ②, then types at ③ the party that confirmed the Aleppo Branch visit date. The clerk chooses Omar's position at ④ and presses ⑤.
+\end{rcnote}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-incoming-en.png}
+\caption{The Register incoming dialog}
+\label{fig:correspondence-incoming-screen}
+\shotnote{The dialog gathers the letter's data and the decision about who receives it, and shows the completion deadline before saving. It was opened for this image and closed without registering. ① “Entry type”: sets the series and the required fields. ② The expected number. ③ “Sending party”. ④ The search under “Distribute to”: mark each position or unit “For action” or “For information”. ⑤ “Register and distribute”.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{What do you record when registering?}
+\label{tab:correspondence-incoming-fields}
+\begin{tabularx}{\linewidth}{R{4.2cm} Y}
+\rcHeaderRow
+\thh{Information} & \thh{What to know}\\
+“Sending party” & \req{} Type the name or choose an earlier party. The system warns you when the same letter number was registered before.\\
+“Subject” & \req{} At least three characters.\\
+“Distribute to” & \req{} At least one position or unit. Letters marked “Secret” or above go to positions only.\\
+“Letter type”, “Confidentiality” and “Priority” & These settle the handling and the deadline. The chosen type may not allow a given confidentiality.\\
+“In reply to our letter no.” & \opt{} Links the arrival to an outgoing letter, which ends the wait for a reply to it.\\
+“Received on” & Starts on the registration day and refuses a future date. If that day is closed, “Reason for the late entry” is required.\\
+“Registry note” & \opt{} Shown on the letter as the registry office's note.\\
+\end{tabularx}
+\end{table}
+
+\begin{enumerate}
+\item In “Registry office” press “Register incoming”, or “Register and distribute” on a card in “Awaiting registration”.
+\item Confirm “Entry type” and fill in the required fields.
+\item Choose who receives the letter, and mark each “For action” or “For information”.
+\item Read the completion deadline, then press “Register and distribute”. “Save and register another” moves on to the next letter.
+\item Read the number in the success message: it is the real number, not the expected one. “Undo” stays visible for about five seconds, and recipients are told only after the undo window ends.
+\end{enumerate}
+
+\textbf{Check:} Search for the number in “Incoming register” and confirm the party, subject and status. “Entry actions” opens the “Receipt notice” for printing, and “Hand over the paper original” records who took the original. If you undo a registration, the number stays listed as “Voided — undone” and is not reused.
+
+\clearpage
+\section{Paper intake}
+\label{sec:correspondence-feature-paper-intake}
+
+“Paper intake” is used when a letter arrives on paper and should enter the registry from its scan. An arrival saved here has no number and reaches nobody: it waits in “Awaiting registration” until a clerk reviews it. There are two ways in: “Paper intake” to type the data yourself, and “Register from a scan” to have the automatic reader read the letter when the organization allows it. The “Paper intake” menu entry opens the scan dialog when it is available, and otherwise the manual dialog.
+
+\begin{rcnote}[Example: Horizon]
+Horizon's registry clerk photographs a paper letter about the Aleppo Branch visit and uploads it at ②. Because its data will be completed later, the clerk presses ④ rather than ⑤, and the letter stays unnumbered until the clerk returns to it.
+\end{rcnote}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-paper-intake-en.png}
+\caption{The Paper intake dialog}
+\label{fig:correspondence-paper-intake-screen}
+\shotnote{The letter's scan or file is enough to save the arrival; the other fields can be completed now or at registration. ① “Addressed to”: one party that helps at distribution, without delivering the letter to it. ② “Scan and files”. ③ “Paper original”: one file recording the original. ④ “Save to awaiting registration”. ⑤ “Register now”: saves, then opens the registration dialog.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-paper-intake-scan-en.png}
+\caption{The scan intake dialog}
+\label{fig:correspondence-paper-intake-scan-screen}
+\shotnote{The files are recorded as an arrival waiting at the office, then read automatically when the confidentiality level and the organization's settings allow it. The clerk still reviews everything before registering. Automatic reading was not tested for this guide. ① “Choose”: up to five files of 10 MB each. ② “Expected confidentiality”. ③ “Or enter the letter's data by hand”. ④ “Read the letter”.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-paper-intake-queue-en.png}
+\caption{A saved arrival awaiting registration}
+\label{fig:correspondence-paper-intake-queue-screen}
+\shotnote{The card shows a test letter saved this way: it has the sender's number and a file count, but no entry number yet. ① The source: “Paper intake”. ② “Arrival actions”: holds “Put on hold”, and “Forward to another registry office” when another exists. ③ “Register and distribute”. ④ “Refuse at the registry”: removes the arrival from the list with a reason, without a number.}
+\end{figure}
+
+\begin{enumerate}
+\item In “Registry office” press “Paper intake” or “Register from a scan”.
+\item Upload the letter's scan or file, then type what you know of its data.
+\item Press “Save to awaiting registration” to return later, or “Register now” to finish straight away.
+\item Open “Awaiting registration”, search by a word of the subject or by number, or filter by source and date.
+\item Choose the action that fits: “Register and distribute”, “Refuse at the registry”, or “Put on hold” with a follow-up date and a reason.
+\end{enumerate}
+
+\textbf{Check:} After saving, the message “Saved — awaiting registration” appears, “Awaiting registration” rises by one, and “Last incoming number” does not change. If saving is refused because no file was given, attach the letter's scan. If the automatic reading does not finish, enter the data by hand; the arrival stays in the list.
+
+\clearpage
+\section{Outgoing letters: numbering, dispatch and delivery}
+\label{sec:correspondence-feature-outgoing-dispatch}
+
+An issued letter has not necessarily arrived. A letter takes its number at the final signature, and it reaches recipients inside the organization at once. Outside parties receive nothing at that moment: the letter moves to “Awaiting dispatch” at the registry office serving the sending unit. A clerk therefore follows three separate stages.
+
+\begin{table}[H]
+\centering
+\caption{The difference between issuing, dispatch and delivery}
+\label{tab:correspondence-issue-send-deliver}
+\begin{tabularx}{\linewidth}{R{2.6cm} R{3.4cm} Y}
+\rcHeaderRow
+\thh{Stage} & \thh{Who does it} & \thh{What does it prove?}\\
+Issuing & The signer, at final approval & The letter has its number, its content is fixed, and internal recipients have it.\\
+Dispatch & The registry clerk & The letter left the office for the outside party by a recorded channel. This does not prove it reached the recipient.\\
+Delivery & The registry clerk, in a paper or courier batch & The letter was handed over at a recorded time, and the receiver's name can be recorded.\\
+\end{tabularx}
+\end{table}
+
+\begin{rcnote}[Example: Horizon]
+After the General Manager signs, the Aleppo Branch visit coordination request takes the number \en{HZN/2026/0012}. Because this example records the branch as an outside party, the registry clerk finds the letter at ① and presses ④ to record its paper dispatch.
+\end{rcnote}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-outgoing-dispatch-en.png}
+\caption{The Awaiting dispatch list}
+\label{fig:correspondence-outgoing-dispatch-screen}
+\shotnote{Each card is a letter that was issued and is waiting to leave the office, with the sending unit, the outside party and the confidentiality. These are test cards, and none was dispatched for this guide. ① “Awaiting dispatch”. ② “Dispatch batches”. ③ “Refuse dispatch”: needs a reason and tells the sending side. ④ “Record dispatch”.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-outgoing-dispatch-dialog-en.png}
+\caption{The Record the dispatch dialog}
+\label{fig:correspondence-outgoing-dispatch-dialog-screen}
+\shotnote{This dialog records what actually happened; it carries the letter to the party itself only for email. It was closed here with “Cancel”. ① The party it is sent to. ② “Dispatch channel”: choosing “Email” turns the button into “Send by email now”, which sends from the office mailbox. ③ “Note (optional)”. ④ “Confirm dispatch”.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-outgoing-entry-menu-en.png}
+\caption{Actions on a paper outgoing entry}
+\label{fig:correspondence-outgoing-entry-menu-screen}
+\shotnote{The menu follows the entry and its state. Registry actions appear for an entry the office created, such as this paper test entry, and not for a letter issued by its sender, which is recalled from the sender's side. ① “Correct the entry”: needs a reason, and the subject can change only before a recipient opens the letter. ② “Void the entry”.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-outgoing-void-en.png}
+\caption{The Void the entry dialog}
+\label{fig:correspondence-outgoing-void-screen}
+\shotnote{Voiding does not erase the number: it stays in the register marked “Voided”, open work is cancelled and those concerned are told. The dialog was closed here without voiding. ① “Reason for voiding”: at least five characters. ② “Void the entry”: the button that acts. ③ “Cancel”: closes the dialog and changes nothing.}
+\end{figure}
+
+\begin{enumerate}
+\item Open “Awaiting dispatch” and review the party, subject and confidentiality.
+\item If the letter should not go out, press “Refuse dispatch” and give the reason. The letter stays live and its sender can deal with it.
+\item Once the letter has left, press “Record dispatch”, choose the “Dispatch channel”, then press “Confirm dispatch”.
+\item When you choose “Email”, press “Send by email now” and read each party's result in the dialog before closing it.
+\item To group several letters, use “Dispatch batches” instead of recording each letter alone.
+\end{enumerate}
+
+\textbf{Check:} The card changes to “Dispatched” with its channel, leaves the list on refresh, and counts under “Dispatched” in the day's report. If an entry the office created is wrong, use “Correct the entry” or “Void the entry” rather than a new entry. Once a recipient has acted, voiding needs an application administrator, and a dispatched letter can no longer be recalled.
+
+\clearpage
+\section{Dispatch batches and delivery tracking}
+\label{sec:correspondence-feature-batches}
+
+A batch groups outgoing letters that leave by one channel, so a clerk checks them together, sends them, and follows each item. A letter becomes one item for each outside party it addresses. An email batch is sent from the office mailbox, while paper and courier batches are handed over and the clerk records each item's delivery.
+
+\begin{rcnote}[Example: Horizon]
+Horizon's registry clerk presses ① to create a paper batch for the week's letters, opens it at ④, and adds the visit request \en{HZN/2026/0012}. The batch stays under ② until it ends, then the system lists it under ③.
+\end{rcnote}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-batches-en.png}
+\caption{The Dispatch batches list}
+\label{fig:correspondence-batches-screen}
+\shotnote{The card shows the batch's state, channel and letter count, then its progress after sending. The batch shown is empty and was created for testing only. ① “New batch”. ② “Active”. ③ “Finished”. ④ “Contents”.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-batches-new-en.png}
+\caption{The New batch dialog}
+\label{fig:correspondence-batches-new-screen}
+\shotnote{A batch starts empty, and its channel decides how all its items leave. Creating a batch sends nothing. ① “Batch name”. ② “Channel”: “Email”, “Paper”, “Courier” or “Gov link”. ③ “Create the batch”.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-batches-contents-en.png}
+\caption{A batch's contents before sending}
+\label{fig:correspondence-batches-contents-screen}
+\shotnote{Work runs from the contents panel, whose buttons become active in turn. That is why the check and send buttons are disabled in this empty batch. ① “Add letters”. ② “Check eligibility”: shows what can go and why the rest cannot. ③ “Send the batch”: becomes active once an item is eligible. ④ “Cancel the rest”: releases unsent items so they can join another batch.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-batches-add-en.png}
+\caption{Adding letters to a batch}
+\label{fig:correspondence-batches-add-screen}
+\shotnote{This dialog reads the same “Awaiting dispatch” queue, so no separate list is needed. The letters shown are test letters, and the dialog was closed without adding any. ① The letter's checkbox. ② “Add”.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{How to read the Delivery column}
+\label{tab:correspondence-batch-delivery}
+\begin{tabularx}{\linewidth}{R{4.2cm} Y}
+\rcHeaderRow
+\thh{State} & \thh{Meaning}\\
+“Ready to go” & The item passed the check and waits to be sent or delivered.\\
+“Being sent” & An email item is being sent.\\
+“Sent” & The mail left the office mailbox; it can later return to “Failed” if it bounces.\\
+“Delivered” & The clerk recorded the hand delivery of a paper or courier item.\\
+“Failed” & The reason appears beside the state. Use “Retry” in an email batch.\\
+“Not sent” & The item was left out or cancelled, and the letter can join another batch.\\
+\end{tabularx}
+\end{table}
+
+\begin{enumerate}
+\item Open “Dispatch batches” and press “New batch”, then type the name, choose the “Channel” and press “Create the batch”.
+\item In the contents panel press “Add letters”, select the letters, then press “Add”.
+\item Press “Check eligibility”, then deal with anything marked “Not eligible” or leave it out.
+\item Press “Send the batch”. Ineligible items do not go out and can join another batch.
+\item In a paper or courier batch use “Print the manifest”, then press “Deliver” for each item and enter the “Receiver’s name” when you know it.
+\end{enumerate}
+
+\textbf{Check:} The bar shows the batch's progress. Once its items end, it moves to “Finished” as “Completed”, “Partly completed” or “Failed”. The “Delivered” counter also includes emails that were sent, so read each item's state. If “Sending not confirmed” appears, check the office mailbox's sent folder first, then choose “Record as sent” or “Send again”; sending again may deliver a second copy to the party.
+
+\clearpage
+\section{Circulars and read acknowledgement}
+\label{sec:correspondence-feature-circulars}
+
+A circular is a letter addressed to an audience inside the organization, such as everyone, certain units or groups. It is not delivered as a task to each person like an ordinary letter: it appears on the “Circulars” page for those it covers, and each is asked to acknowledge reading it. Because publishing is final and cannot be undone, creating a circular needs the permission to publish circulars, and it is prepared from the composing screen.
+
+\begin{rcnote}[Example: Horizon]
+Omar opens the “Branch visit instructions” circular at ④ and reads it, then presses ③ to record his acknowledgement. At ② he sees how far the acknowledgements have progressed.
+\end{rcnote}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-circulars-en.png}
+\caption{The Circulars page}
+\label{fig:correspondence-circulars-screen}
+\shotnote{Each card shows a circular addressed to you, with its number, issuing unit and how many have acknowledged it. These are test circulars, and what you see depends on the audiences you belong to. ① “New circular”: appears for those who may publish. ② The acknowledgement bar. ③ “Acknowledge”: changes to “You acknowledged”. ④ “View circular”.}
+\end{figure}
+
+\begin{enumerate}
+\item Open “Circulars” from the “Coordination” section.
+\item Press “View circular” and read it in full.
+\item Return to “Circulars” and press “Acknowledge” on the same circular's card.
+\item If you may publish, use “New circular” and review the audience and text carefully before publishing.
+\end{enumerate}
+
+\textbf{Check:} The message “Your acknowledgement of the circular was recorded” appears, the button changes to “You acknowledged”, and the acknowledged count rises by one. An empty page means no circulars are addressed to you, not that the organization published none.
+
+\textbf{Practice and check:} Trace one letter from registration to distribution: choose an entry in “Incoming register” and state its number and who received it, then choose a letter in “Outgoing register” and look for it in “Awaiting dispatch” or in a batch. Then explain the difference in your own words: issuing gives the letter its number and fixes it, dispatch records that it left for the outside party, and delivery documents its hand-over. If the letter is in neither list, check its state: it may have been dispatched or refused, or it may have no outside recipient.
+
+\clearpage
+\section{Dossiers}
+\label{sec:correspondence-feature-dossiers}
+
+A dossier is a numbered file that keeps the letters of one subject together within a unit, so you find them in one place instead of searching for each letter. You open a dossier for a unit where you hold a position, and the system numbers it. Sharing shows only the dossier and its list and gives no access to the letters; a letter you may not open appears as “Restricted letter”.
+
+\begin{rcnote}[Example: Horizon]
+Omar presses “New dossier” at ① and opens the “Branch visits” dossier, then finds it in the list at ④. He then adds letter \en{HZN/2026/0012} to it from the letter’s reading screen.
+\end{rcnote}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-dossiers-en.png}
+\caption{The dossier list}
+\label{fig:correspondence-dossiers-screen}
+\shotnote{The list shows the dossiers you opened, those shared with you and those of a unit you head, each with its number, unit, state and letter count. Both rows are test records. ① “New dossier”. ② The “State” filters: the list shows open dossiers unless you choose otherwise. ③ Search the number and title. ④ The number and title: open the dossier.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-dossiers-detail-en.png}
+\caption{An open dossier and its letters}
+\label{fig:correspondence-dossiers-detail-screen}
+\shotnote{This page combines the dossier’s details with the letters filed in it. The management buttons appear only for its opener and for shares with management rights; a unit head can view but not manage. ① “Share”: sets the positions or units that see the dossier. ② “Grant access”: adds an information copy to each letter under the copy rules. ③ “Close the dossier”: final and cannot be undone. ④ The letter card: opens the letter. ⑤ “Remove”: takes the letter out of the dossier without deleting it.}
+\end{figure}
+
+\begin{enumerate}
+\item Open “Dossiers” in the “Coordination” section, then press “New dossier”.
+\item Choose the “Unit”, enter the “Title” and, if needed, the “Description”, then press “Open the dossier”.
+\item Open the letter, choose “Add to a dossier” from “More actions”, select the dossier and press “Add”.
+\item If needed, press “Share”, add positions or units, turn on “Can manage” for those who help manage it, then press “Save”.
+\item When the subject is finished, press “Close the dossier”, then “Confirm”.
+\end{enumerate}
+
+\textbf{Check:} Open the dossier and confirm the letter appears and the letter count rose, then confirm “In dossiers” appears on the letter’s reading screen. If “New dossier” is disabled, check that you are assigned to a position in a unit. The interface offers no way to delete a dossier, so review the title before opening one, because closing cannot be undone.
+
+\clearpage
+\section{Delegation}
+\label{sec:correspondence-feature-delegation}
+
+Delegation lets another position act in your position’s name for a set period, for example to approve, sign or follow up incoming mail while you are away. Creating a delegation does not start it: the delegate must acknowledge it first and sees no correspondence until then. Actions stay recorded as taken by delegation.
+
+\begin{rcnote}[Example: Horizon]
+The General Manager presses “New delegation” at ① and delegates to Sarah for one week with “Approve and sign only”. Sarah finds the request in “Delegations granted to me” at ② and acknowledges it, and the manager follows it in “Delegations I granted” at ③.
+\end{rcnote}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-delegation-en.png}
+\caption{The Delegation page}
+\label{fig:correspondence-delegation-screen}
+\shotnote{The page separates what was granted to you from what you granted. It is empty here because the test created no delegation, so delegation cards and their buttons do not appear. ① “New delegation”. ② “Delegations granted to me”: holds “Acknowledge delegation”, then the “On behalf of” mailbox once it applies. ③ “Delegations I granted”: holds “Edit scope” and “Revoke”. ④ The delegation rules.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-delegation-form-en.png}
+\caption{The New delegation form}
+\label{fig:correspondence-delegation-form-screen}
+\shotnote{The form sets who is delegated and the limits of what they can do; the values shown are the starting values before any choice. The form was closed in the test without creating a delegation. ① “Delegate”: one position. ② “Scope”. ③ “Powers”. ④ “Show my inbox to the delegate”: turns off automatically with “Approve and sign only”. ⑤ “From” and “To”: whole days, at most 90 days.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{What do you set in a delegation?}
+\label{tab:correspondence-delegation-terms}
+\begin{tabularx}{\linewidth}{R{4.2cm} Y}
+\rcHeaderRow
+\thh{Term} & \thh{What does it mean?}\\
+Delegating position & One of your own positions; you cannot delegate a position you do not hold.\\
+Scope & “Full — all correspondence”, or “Limited — selected units” that you choose.\\
+Powers & “Full access and action”, “Approve and sign only” or “Refer and follow up only”.\\
+Up to confidentiality & The highest confidentiality level the delegation covers.\\
+Excluded letter types & Letter types the delegation does not cover.\\
+\end{tabularx}
+\end{table}
+
+\begin{enumerate}
+\item Open “Delegation”, press “New delegation” and choose the “Delegating position” if you hold more than one.
+\item Search for the “Delegate” and select them. If a warning says they are in another unit, make sure the delegation is appropriate; the warning does not block creation.
+\item Set the “Scope”, “Powers” and period, then “Up to confidentiality” and “Excluded letter types”, and press “Create delegation”.
+\item The delegate opens “Delegations granted to me”, presses “Acknowledge delegation” and then works from the “On behalf of” mailbox.
+\item To change the terms press “Edit scope”. To stop the delegation press “Revoke”, add a reason if you wish, then press “Confirm revocation”.
+\end{enumerate}
+
+\textbf{Check:} Confirm the delegation card shows “Active · acknowledged” before relying on it. “Awaiting acknowledgement” means work has not started, and widening the scope, powers, confidentiality or window asks for a new acknowledgement. A second delegation between the same two positions in an overlapping period is refused. A delegation disappears from both lists once revoked or ended, while its actions stay in “Delegation history”.
+
+\clearpage
+\section{Archive}
+\label{sec:correspondence-feature-archive}
+
+Completing a letter creates its archive record. If archive approval is on, an archivist reviews the record’s details and submits it, then an approver decides; otherwise the record becomes final at once with its archive number. This page is for archivists and archive approvers, and anyone else sees a message saying so.
+
+\begin{rcnote}[Example: Horizon]
+After letter \en{HZN/2026/0012} is completed, Horizon’s archivist opens the “Awaiting review” tab at ② and the record at ④, reviews its details and submits it for approval. The archive approver then opens it and reads “History” before deciding.
+\end{rcnote}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-archive-en.png}
+\caption{The correspondence archive}
+\label{fig:correspondence-archive-screen}
+\shotnote{The page groups archive records by stage, so you can see what awaits review and what awaits your decision. The counts and records shown are test data. ① The counters: each opens its tab. ② The tabs. ③ The filters, including “Search the text” and “Tag”. ④ The title: opens the archive record.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-archive-record-en.png}
+\caption{An archive record awaiting approval}
+\label{fig:correspondence-archive-record-screen}
+\shotnote{The record shows the letter’s paper beside its archive details, so the approver can compare them before deciding. This test record was opened for reading and no action was taken; the archive number stays empty until the record is final. ① “History”. ② “Approve as final”: not offered to the person who submitted the record. ③ “Return for completion”: needs a comment. ④ “Reject”: needs a comment.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{What do the record states mean?}
+\label{tab:correspondence-archive-states}
+\begin{tabularx}{\linewidth}{R{4.2cm} Y}
+\rcHeaderRow
+\thh{State} & \thh{What does it mean?}\\
+Awaiting review & The archivist can save the details and tags, then submit.\\
+Returned & The approver returned it with a comment; the archivist completes and resubmits it.\\
+Awaiting approval & The record waits for the approver’s decision.\\
+Final & The record has its archive number and does not change again.\\
+Rejected & The archive record was rejected with a comment; the letter stays completed.\\
+\end{tabularx}
+\end{table}
+
+\begin{enumerate}
+\item Open “Archive” in the “Oversight and administration” section, then choose the tab for your work.
+\item Narrow the list if needed, then press the record’s title.
+\item As an archivist, review the fields and tags, then press “Save” and “Submit for approval”.
+\item As an approver, compare the details with the paper, then choose “Approve as final”, “Return for completion” or “Reject”. The last two need a comment of at least five characters.
+\end{enumerate}
+
+\textbf{Check:} Open the next tab and confirm the record moved there, and that a final record has an archive number. “Restricted letter” means its details are not available to you. If “Approve as final” is missing on a record you submitted yourself, ask another approver.
+
+\clearpage
+\section{Search, filters and saved views}
+\label{sec:correspondence-feature-search-views}
+
+The “Correspondence tray” tools help you reach a specific letter in the open folder. Search shows what matches your words, and filters narrow the list by type, confidentiality, sender and period. If you need the same set repeatedly, save it as a view and return to it with one press. These tools change no letter’s status and never show what you may not read.
+
+\begin{rcnote}[Example: Horizon]
+Sarah types “@subject visit” at ① after checking the operators at ②, then presses “Overdue” at ⑤ to see which visit letters are late. She opens “Filters” at ③ to save this as a view, which then appears at ④.
+\end{rcnote}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-search-views-en.png}
+\caption{Search, quick filters and a saved view}
+\label{fig:correspondence-search-views-screen}
+\shotnote{The image shows a search result in the “Drafts” folder and a saved view created for the test. Search works inside the open folder, so an empty result may only mean the letter is in another folder. ① The search field. ② “Search operators”: lists “@from”, “@number”, “@subject”, “@to”, “@member” and “@position”. ③ “Filters”. ④ The saved view: applies its conditions when pressed, and its menu offers “Rename” and “Delete”. ⑤ “Overdue”: one of the quick filters.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-search-filters-en.png}
+\caption{The filters window and saving a view}
+\label{fig:correspondence-search-filters-screen}
+\shotnote{The window holds the four filter conditions, which you can apply once or save under a name. A view keeps the folder, search, filters and sort, but not the open letter. ① “Filters”. ② “Type”, beside “Confidentiality”, “Sender” and “Period”. ③ “Save as view”. ④ “Apply”.}
+\end{figure}
+
+\begin{enumerate}
+\item Open “Correspondence tray” and choose a folder; you can choose “All” to search everything available to you.
+\item Type in the search field, or press a quick filter: “Unread”, “Urgent”, “Overdue”, “Direct” or “Via registry”.
+\item Press “Filters”, choose the conditions, then press “Apply”. “Clear” returns the list without these conditions.
+\item To keep the current state press “Save as view”, enter the “View name”, then press “Save”.
+\item Press the view later to apply it, or open its menu to rename or delete it.
+\end{enumerate}
+
+\textbf{Check:} Press the saved view and confirm the folder and filters return as saved. Each user can keep up to 20 views, and a name is at most 40 characters and cannot repeat. If an expected letter is missing, clear the search and filters and check the folder and capacity before concluding it does not exist.
+
+\clearpage
+\section{Performance and deadlines}
+\label{sec:correspondence-feature-performance}
+
+This page shows how well deadlines are met and what needs follow-up. Every member sees their own performance and alerts, while unit heads and holders of the performance-viewing permission also see unit results. Use the figures as a starting point for follow-up, not as a complete judgement of a unit or an employee.
+
+\begin{rcnote}[Example: Horizon]
+Omar opens “My performance” at ①, chooses “30 days” at ②, reads “My score” at ③ and reviews “Activity” at ④ before following up the Aleppo Branch letters.
+\end{rcnote}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-performance-en.png}
+\caption{My performance}
+\label{fig:correspondence-performance-screen}
+\shotnote{“My performance” combines your result, its trend and your activity over the chosen period; the figures shown belong to the test account. The score comes from four axes with the weights shown. ① “My performance”. ② The period. ③ “My score”: “Not enough data” appears when too few items were decided. ④ “Activity”.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-performance-overview-en.png}
+\caption{The unit performance overview}
+\label{fig:correspondence-performance-overview-screen}
+\shotnote{The overview shows the chosen unit’s indicators and a list of what needs follow-up. This test unit completed no deadline items in the period, so some indicators are empty even though overdue items exist. ① “Overview”. ② The unit. ③ “Overdue now”. ④ “Export”: saves the data to an \en{Excel} file.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{What does each view offer?}
+\label{tab:correspondence-performance-views}
+\begin{tabularx}{\linewidth}{R{4.2cm} Y}
+\rcHeaderRow
+\thh{View} & \thh{What does it offer, and to whom?}\\
+Overview & The unit’s indicators, score and watch list, for unit heads and holders of the performance-viewing permission.\\
+My performance & Your score, trend, activity and circulars, for every member.\\
+Units report & Units ranked by delay ratio and the employees report, for unit heads and holders of the performance-viewing permission.\\
+Problem lists & Lists such as “Returned drafts” and “Suspended items”, for unit heads and holders of the performance-viewing permission.\\
+Statistics & Yearly counts by status, month, unit and registry office, for holders of the performance-viewing or correspondence administration permission.\\
+Alerts & Indicators that crossed their thresholds in your scope, with “Acknowledge” when available to you.\\
+\end{tabularx}
+\end{table}
+
+\begin{enumerate}
+\item Open “Performance and deadlines” in the “Oversight and administration” section.
+\item Choose the view, then the period “7 days”, “30 days” or “90 days” when shown, and the unit if you follow more than one.
+\item Read the indicators, then open what needs follow-up from the watch list or “Problem lists”.
+\end{enumerate}
+
+\textbf{Check:} Deadlines are counted in business hours, and suspended periods are excluded. “No access to open it” on a row means the data is metadata only and the row will not open. If “Overview” is missing, your scope is limited to “My performance” and “Alerts”.
+
+\clearpage
+\section{Organisation correspondence}
+\label{sec:correspondence-feature-oversight}
+
+“Organisation correspondence” is a metadata list of the letters in your oversight scope, excluding drafts. An auditor sees the whole organization, and a unit head sees their unit and the units below it. The list grants no reading rights: a letter opens only for those with access to it, and its subject may be withheld.
+
+\begin{rcnote}[Example: Horizon]
+The General Manager chooses the “Overdue” tab at ① and enters \en{HZN/2026/0012} in “Number or subject” at ②. He then looks at the number at ④ to see whether he can open the letter, and exports the list from ③ if needed.
+\end{rcnote}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-oversight-en.png}
+\caption{Organisation correspondence}
+\label{fig:correspondence-oversight-screen}
+\shotnote{The image shows the “Void” tab because its list is short, and all rows are test records. The list helps you follow status and delay without entering each letter. ① The status tabs: each shows its letter count. ② The filters. ③ “Export”: saves up to 5000 rows to an \en{Excel} file with the same masking. ④ The number: a link when you have access; otherwise “No access to open it” appears beneath it.}
+\end{figure}
+
+\begin{enumerate}
+\item Open “Organisation correspondence” in the “Oversight and administration” section.
+\item Choose “All”, “Open”, “Overdue”, “Completed” or “Void”.
+\item Use “Type”, “Priority”, “Level”, “Sending unit”, “Receiving unit”, the period and “Number or subject” to narrow the list.
+\item Read “Status”, “Date” and the “Reply overdue” mark if shown, then open the number if it is a link.
+\end{enumerate}
+
+\textbf{Check:} Match the tab’s count to the purpose of your review, and do not treat “Subject withheld” as an error; it means your access does not cover reading the subject. If “For auditors and unit heads” appears, this page is outside your permissions. If a warning says only part of the rows was exported, narrow the filters and export the rest.
+
+\clearpage
+\section{Audit log}
+\label{sec:correspondence-feature-audit}
+
+The “Audit log” shows who did what and when across correspondence, the registry and settings. Every member sees “My activity”: what this account did, delegated acts included. Holders of the audit permission also see “All activity”. The log provides metadata and grants no access to letter content.
+
+\begin{rcnote}[Example: Horizon]
+Sarah opens “My activity” at ② to confirm what she did on the visit request, then opens the letter from ⑤. She follows “Route” at ① and “Action log” at ② in the next image.
+\end{rcnote}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-audit-en.png}
+\caption{The audit log filtered to dossiers}
+\label{fig:correspondence-audit-screen}
+\shotnote{The image shows the “Dossiers” category for a test account with the audit permission. Each row names the actor, anyone acted for, the event and the letter. ① “All activity”. ② “My activity”. ③ “Export to Excel”: offered, with “Signature ledger”, only in “All activity”. ④ The filters: the period, “Category”, “Event”, “Actor”, “Unit” and “Letter number”. ⑤ The letter link: shown when you have access; otherwise “Restricted letter” appears.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-audit-letterlog-en.png}
+\caption{The action log inside a letter}
+\label{fig:correspondence-audit-letterlog-screen}
+\shotnote{Unlike the “Audit log” page, this log belongs to one letter; here it is a test draft that was added to a dossier. The log cannot be edited. ① “Route”: shows the letter’s journey after approval, so it is empty for a draft. ② “Action log”: gives the time, actor, action and details.}
+\end{figure}
+
+\begin{enumerate}
+\item Open “Audit log” in the “Oversight and administration” section, and choose “My activity”, or “All activity” if available to you.
+\item Set the period, “Category” or “Event”, or enter the “Letter number”. “Clear filters” restores the full list.
+\item Read “Actor”, “On behalf of”, “Event” and “Details”, then open the letter if its link is available.
+\item To read one letter’s details, open it and choose “Route” and “Action log”.
+\end{enumerate}
+
+\textbf{Practice and check:} Choose one subject, search for its letters with the “@subject” operator, then add those available to you to a dossier you manage. Open one letter, identify its due date and any delay, read “Route”, then confirm the “Added to a dossier” event appears in “Action log”. The exercise is complete when you can state who holds the next action and whether the deadline has passed, staying within your permissions. If you cannot open a letter or manage no dossier, record that and ask the responsible person for access; do not use another position to get around it.
+
+\clearpage
+\section{Correspondence settings: types, deadlines and numbering}
+\label{sec:correspondence-feature-settings-types}
+
+“Correspondence settings” define the rules the app works by in your organization. The app administrator manages them, and other readers can skip these pages: anyone without the administer permission sees “Correspondence settings are for the app administrator only” and returns to the tray. This page starts with three questions: which kinds of letter exist, what are their deadlines, and how are they numbered?
+
+\begin{rcnote}[Example: Horizon]
+Horizon’s system administrator opens, at ①, the letter type to be used for the Aleppo Branch visit request, confirming that “Approval” at ③ is required and that “Route” at ④ goes through the registry. He then sets the outgoing pattern so a number such as \en{HZN/2026/0012} is issued.
+\end{rcnote}
+
+\begin{table}[H]
+\centering
+\caption{Where is each section explained?}
+\label{tab:correspondence-settings-map}
+\begin{tabularx}{\linewidth}{R{4.2cm} Y}
+\rcHeaderRow
+\thh{Page} & \thh{Sections it explains}\\
+This page & “Letter types”, “Deadlines and holidays” and “Numbering”.\\
+\ref{sec:correspondence-feature-settings-registry} & “Registry offices”, “Register fields” and “Entry classifications”, with where confidentiality is set.\\
+\ref{sec:correspondence-feature-settings-templates} & “Letterheads and stamps”.\\
+\ref{sec:correspondence-feature-settings-bodies} & “External bodies”, “Addressing rules” and “Auto-forwarding”.\\
+\ref{sec:correspondence-feature-settings-policies} & “Archive and printing”, “Ready directives”, “Performance”, “Artificial intelligence” and “Roles and permissions”.\\
+\end{tabularx}
+\end{table}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-settings-types-en.png}
+\caption{Letter types}
+\label{fig:correspondence-settings-types-screen}
+\shotnote{The table summarizes how each type behaves before anyone starts writing, and the types shown are test data. Compare them before adding a new one, since an existing type may already fit. ① “Letter types”. ② “Add type”. ③ “Approval”: “Required” means the letter needs approval from someone other than the sender. ④ “Route”: “Via registry” or “Direct”. ⑤ The edit button.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{What do you record in a letter type?}
+\label{tab:correspondence-settings-type-fields}
+\begin{tabularx}{\linewidth}{R{4.2cm} Y}
+\rcHeaderRow
+\thh{Field} & \thh{What does it do?}\\
+“Name”, “Key” and “Prefix” & Users see the name, and the key cannot change after the type is created. Do not rely on the prefix to change a letter’s number; the number pattern is set under “Numbering”.\\
+“Default priority” and confidentiality & “Default confidentiality” and “Highest allowed confidentiality” set the type’s levels; the first cannot exceed the second.\\
+“Deadline (working days)” & From 1 to 365 working days; leave it empty when the type has no deadline.\\
+“Signature level” & Chooses “Recorded signature” or “Member key”.\\
+“Number series” & “By direction” keeps the number tied to the letter’s direction, or you can tie it to the “Decisions” or “Circulars” series.\\
+Route options & “Needs an approval route”, “Goes through the registry (registration and numbering)”, “Requires receipt confirmation” and “Type in use”.\\
+“Archive approval” & “As the organisation” follows the organization’s setting; “Required” and “Not required” override it for this type.\\
+“Fixed recipient (optional)” & Every letter of this type is addressed to the chosen position.\\
+“Letterhead” & Sets the type’s letterhead; when none is set, the unit or organization default applies.\\
+“Issuing from records” & Allows the type to be issued from record actions, ladders and work paths, and holds the paper, batch signing and number voiding options.\\
+\end{tabularx}
+\end{table}
+
+“Deadlines and holidays” comes after types because a default deadline is not always enough. “Deadline policies” give a finer deadline in business hours for a specific type, priority and level.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-settings-types-calendar-en.png}
+\caption{Deadlines and holidays}
+\label{fig:correspondence-settings-types-calendar-screen}
+\shotnote{This section gathers what determines a deadline: the policies, each type’s default, then the working calendar. Changes to working days and hours apply to new deadlines only, while holidays recompute the running deadlines they touch. ① “Deadlines and holidays”. ② “Add a policy”. ③ Working days: select each day by pressing it. ④ “Manage holidays”: goes to the holiday group’s page. ⑤ “Save working days and holidays”: available after a change.}
+\end{figure}
+
+“Numbering” gives each registry office five independent series that restart every year. “Sample” appears beside a number when the series has issued none this year.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-settings-types-numbering-en.png}
+\caption{Number series per registry office}
+\label{fig:correspondence-settings-types-numbering-screen}
+\shotnote{The table shows each registry office’s series, so you can read the pattern, the number that comes next and whether there are gaps. The numbers shown belong to test offices. ① “Numbering”. ② “Pattern”. ③ “Next number”. ④ The pattern edit button: opens “Number pattern”, and what you save there applies only to numbers issued after saving.}
+\end{figure}
+
+\begin{enumerate}
+\item Open “Correspondence settings”, choose “Letter types”, then press the edit button beside the type, or “Add type” for a new one.
+\item Complete the fields, then press “Save type”. Changes apply to new letters only.
+\item Open “Deadlines and holidays”, add a policy when needed, set the working days, “Working hours”, “Holiday group” and “Reopen window (business days)”, then save. A value of 0 turns reopening off.
+\item Open “Numbering”, press the edit button beside the series, set “Prefix”, “Digits” and “Year in the number”, then press “Save pattern”.
+\end{enumerate}
+
+\textbf{Check:} Reopen the type and confirm its values remain, and review “Next number” after saving a pattern. Keep the year in the number; without it, numbers repeat every year because the sequence restarts. If a pattern goes wrong, use “Restore default”.
+
+\clearpage
+\section{Registry offices, register fields and classifications}
+\label{sec:correspondence-feature-settings-registry}
+
+A registry office is the unit that registers incoming letters, numbers outgoing ones and dispatches them. Creating the office is not enough for someone to work in it: a clerk needs the register permission and a position inside the office’s unit or a unit below it. “Register fields” and “Entry classifications” define what is recorded in the register dialog.
+
+\begin{rcnote}[Example: Horizon]
+Horizon’s system administrator confirms at ① that its registry office is active, and links its official mailbox at ② if the company wants to receive incoming mail there. He turns on “Manual book” at ③ only if the registry clerk keeps a paper book.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-settings-registry-en.png}
+\caption{Registry offices}
+\label{fig:correspondence-settings-registry-screen}
+\shotnote{Each card shows an office’s number patterns, its mailbox and what is enabled for it, and the “Active” switch runs or stops the office. ① “Registry offices”. ② “Link a mailbox”: offers “Receive mail as arrivals awaiting registration”. ③ “Manual book”: shows the book number in the register dialog and prints it on the receipt and in the export. ④ “Sign registry acts electronically”: clerks sign registrations, refusals, corrections and voids with their member keys. ⑤ “Add office”: available after choosing the unit.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-settings-registry-fields-en.png}
+\caption{Register fields}
+\label{fig:correspondence-settings-registry-fields-screen}
+\shotnote{This section adds fields to the register dialog for each entry type, after the basic ones. A basic field’s label, order and visibility are all that can change, and a field marked “Basic, mandatory” cannot be hidden. ① “Register fields”. ② “Incoming”: choose between it, “Outgoing” and “Decisions”. ③ “New field”. ④ The field edit button.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-settings-registry-classifications-en.png}
+\caption{Entry classifications}
+\label{fig:correspondence-settings-registry-classifications-screen}
+\shotnote{A classification is a label that helps the registry tell entries apart; it creates no new number series, because the entry type decides the flow and the series. A basic classification stays active and serves every registry office. ① “Entry classifications”. ② “Incoming”. ③ “New classification”. ④ The classification edit button, with arrows beside it that change the order.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{Where is confidentiality set?}
+\label{tab:correspondence-settings-confidentiality}
+\begin{tabularx}{\linewidth}{R{4.2cm} Y}
+\rcHeaderRow
+\thh{Place} & \thh{What is set there?}\\
+“Letter types” & “Default confidentiality” and “Highest allowed confidentiality” for each type.\\
+“Deadlines and holidays” & The level a deadline policy applies to.\\
+“Auto-forwarding” & The “Highest level” that may be forwarded.\\
+“Archive and printing” & “Copy and print protection from”.\\
+“Artificial intelligence” & “AI confidentiality limit”.\\
+\end{tabularx}
+\end{table}
+
+No section edits the confidentiality levels themselves: there are six, from “Public” to “Most secret”, and the table only shows where they are used.
+
+\begin{enumerate}
+\item Open “Registry offices”, pick a unit from “Choose a unit”, then press “Add office”. The office starts active with the default number series.
+\item Review the switches on the office’s card, and add a mailbox through “Link a mailbox” when needed.
+\item Open “Register fields”, choose the entry type, press “New field”, write the “Key” and “Label”, choose the “Type”, then press “Save”.
+\item Open “Entry classifications”, press “New classification”, write the “Name”, set the “Entry type” and “Registry offices”, then press “Save”.
+\end{enumerate}
+
+\textbf{Check:} Ask a registry clerk to open the register dialog and confirm the field and classification appear. If a clerk cannot see the registry, check the register permission and where the position sits in the structure. The “Key” is fixed once created, so choose it carefully; if a classification was created by mistake, change its state rather than leaving it active.
+
+\clearpage
+\section{Letterheads and stamps}
+\label{sec:correspondence-feature-settings-templates}
+
+A letterhead defines the header and footer of a printed letter, and a stamp adds an approved image for a specific unit. Letterheads are shared with print templates, so the same headers and footers print on letters and on printed documents. Open this section from “Letterheads and stamps”.
+
+\begin{rcnote}[Example: Horizon]
+Horizon’s system administrator creates the company letterhead at ① and makes it the default, keeping the verification code on at ②. He then adds the registry’s stamp at ④ and uploads its image; if the stamp’s design changes later, he replaces it at ⑤.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-settings-templates-en.png}
+\caption{Letterheads, unit letterheads and stamps}
+\label{fig:correspondence-settings-templates-screen}
+\shotnote{This section gathers what appears on a printed letter, and its badges show the scope: “No header in:” means a language has no letterhead yet. The letterheads and stamps shown are test data. ① “New letterhead”. ② The verification code: letters issued from now on carry a code that opens their public verification page. ③ “Add unit”: links a unit to its own letterhead. ④ “New stamp”. ⑤ “Replace the image”: adds a new version without changing the stamp on earlier letters.}
+\end{figure}
+
+\begin{table}[H]
+\centering
+\caption{What do you record in a letterhead and a stamp?}
+\label{tab:correspondence-settings-templates}
+\begin{tabularx}{\linewidth}{R{4.2cm} Y}
+\rcHeaderRow
+\thh{Item} & \thh{What does it do?}\\
+“Letterhead” and “Footer” & Each is written per language, and typing / inserts variables that are filled in from each letter.\\
+“Organisation default” & Used when a unit has no letterhead, and always available to everyone. It cannot be archived until another letterhead becomes the default.\\
+“Available to” & Sets the units, positions and groups that may use the letterhead.\\
+“Company identity” & Fills the identity name, subtitle, details and logo of the letterhead.\\
+“Note layout” & Places notes “In the margin” or “In the letter”.\\
+“Unit letterheads” & A unit without a letterhead uses its nearest ancestor’s, then the organization default.\\
+“Authorised positions” & Sets who may use the stamp.\\
+“Default for” & Chooses the stamp’s use: “Signing”, “Registration” or “Dispatch”. Each unit has one default stamp per use.\\
+\end{tabularx}
+\end{table}
+
+\begin{enumerate}
+\item Press “New letterhead”, write the “Name” and the letterhead in at least one language, set who it is available to, then press “Save”.
+\item Link the units that need their own letterhead through “Add unit”.
+\item Press “New stamp”, write the “Stamp name” and choose the “Unit”, “Authorised positions” and “Default for”.
+\item Choose a transparent en{PNG} image of at least 200 px and up to 2 MB, then press “Save”.
+\end{enumerate}
+
+\textbf{Check:} Confirm the expected badges appear, and that the stamp’s card shows its version and “Default for”. A default stamp is not applied until its image is added. Use “Disable” only when a stamp is no longer needed: disabling is permanent, although earlier letters keep their stamp. A unit’s stamp does not pass automatically to the units below it.
+
+\clearpage
+\section{External bodies, addressing and auto-forwarding}
+\label{sec:correspondence-feature-settings-bodies}
+
+“External bodies” keeps the directory of bodies your organization writes to, reducing duplicate names and spelling differences. “Addressing rules” set which bodies each unit may write to. “Auto-forwarding” sends what reaches a unit to a chosen position without waiting for its head.
+
+\begin{rcnote}[Example: Horizon]
+The Aleppo Branch visit request is an internal letter, so it does not need this directory. Horizon’s system administrator still adds the transport company serving the visits at ②, restricts “Aleppo Branch” to it when needed, then creates a temporary forwarding rule for the visit period.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-settings-bodies-en.png}
+\caption{The external bodies directory}
+\label{fig:correspondence-settings-bodies-screen}
+\shotnote{The directory shows each body’s other names, email, kind and state, and the names shown are test data. “Other names” help match different spellings of one body. ① “External bodies”. ② “New body”. ③ “Search bodies”. ④ “Merge duplicates”: available after selecting bodies, and a merge cannot be undone.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-settings-bodies-addressing-en.png}
+\caption{The start of the addressing rules list}
+\label{fig:correspondence-settings-bodies-addressing-screen}
+\shotnote{The image shows the start of a long list of organization units, each row holding one unit’s rule. A unit without a rule follows its nearest parent that has one, and under a restriction the app refuses a body outside the list. ① “Addressing rules”. ② The unit’s row. ③ “Unrestricted” and “Restricted”: the restriction starts when the first body is added.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-settings-bodies-forward-en.png}
+\caption{Auto-forwarding rules}
+\label{fig:correspondence-settings-bodies-forward-screen}
+\shotnote{A rule applies to letters addressed to the unit for action that arrive after saving: the work moves to the chosen position, and the unit head keeps an information copy. The two rules shown are inactive and do not run. ① “Auto-forwarding”. ② “New rule”. ③ “Highest level”: anything above it is not forwarded. ④ “Period”. ⑤ The rule edit button.}
+\end{figure}
+
+\begin{enumerate}
+\item Press “New body”, write the “Name”, “Other names” and “Emails” with one value per line, choose the “Kind”, then press “Save”.
+\item For duplicates, select them, press “Merge duplicates” and choose the “Body to keep”. The merged bodies’ letters and rules move to it, and the others are deactivated.
+\item Open “Addressing rules”, choose “Restricted” for the unit, then add the allowed bodies. “Follow the parent's rule” returns a unit with its own rule to its parent’s rule.
+\item Open “Auto-forwarding”, press “New rule”, choose the “Unit”, “Forward to”, “Letter types”, “Highest level” and the period, then press “Save”. Choose a position that does not head the unit itself.
+\end{enumerate}
+
+\textbf{Check:} Search for the body in the directory, confirm the unit’s state in “Addressing rules”, and confirm the rule shows “Active” in “Auto-forwarding”. If the app refuses a body in a draft, review the rule of the sender’s unit, and remember a draft does not accept a deactivated body. Forwarding does not run when the chosen position is the letter’s sender or already holds it, and it does not cover letters addressed to a specific position; it applies to what is addressed to the unit.
+
+\clearpage
+\section{Archiving, directives, performance, AI and roles}
+\label{sec:correspondence-feature-settings-policies}
+
+This page covers the sections that set general organization policy: protecting and archiving letters, ready-made texts, performance measurement, AI limits and who holds the special permissions. “Deadline policies” are under “Deadlines and holidays” (\ref{sec:correspondence-feature-settings-types}). Change these settings carefully, because each one affects the whole organization.
+
+\begin{rcnote}[Example: Horizon]
+Horizon’s system administrator starts at ①, sets at ② the level from which letters cannot be copied or printed, and turns on “Archive approval” at ③ so the archivist reviews a letter’s record before it is final. This settles what happens to the Aleppo Branch visit request when it is archived.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-settings-policies-en.png}
+\caption{Archive and printing}
+\label{fig:correspondence-settings-policies-screen}
+\shotnote{This section sets how letters are protected, approved and numbered in the archive. Each setting has its own save button, so saving one does not save another. ① “Archive and printing”. ② “Copy and print protection from”: this level and those above cannot be copied or printed except through the official export. ③ “Archive approval”. ④ “Change the format”: the format must include the year. ⑤ “Employee verification QR”: the signer’s code appears beside the letter’s code.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-settings-policies-directives-en.png}
+\caption{Ready directives}
+\label{fig:correspondence-settings-policies-directives-screen}
+\shotnote{This list provides standard wording that members see under “Organisation directives” in the refer and note dialogs, and each member also keeps a list of their own. ① “Ready directives”. ② The directives box: one directive per line, up to 30. ③ “Restore the default directives”.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-settings-policies-performance-en.png}
+\caption{Performance settings}
+\label{fig:correspondence-settings-policies-performance-screen}
+\shotnote{The weights set how the performance score is calculated, and the thresholds set when an alert is raised, so this section controls the measures shown under “Performance and deadlines”. ① “Performance”. ② “Weights”: they must add up to 1. ③ “Alert thresholds”. ④ “Unit overrides”: a unit without an override inherits from the unit above, then from the organization.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-settings-policies-ai-en.png}
+\caption{The AI confidentiality limit}
+\label{fig:correspondence-settings-policies-ai-screen}
+\shotnote{This limit stops the content of letters above it from reaching any AI model; it restricts use and grants no new permission. The app checks the saved letter’s level before each use. ① “Artificial intelligence”. ② “AI confidentiality limit”.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.95\linewidth,height=0.72\textheight,keepaspectratio]{figures/screens/ch07-settings-policies-roles-en.png}
+\caption{Roles and permissions}
+\label{fig:correspondence-settings-policies-roles-screen}
+\shotnote{This section explains permissions without editing them: the position owns the mailbox and the permission, and an active position is enough for basic work. The last card states that administering gives no access to letter content. ① “Roles and permissions”. ② “Manage roles”: goes to the roles page. ③ “Registry clerk”: also needs a position inside the registry office’s unit. ④ “Correspondence administrator”.}
+\end{figure}
+
+\begin{enumerate}
+\item Open the section, change one value, then press its own “Save”.
+\item In “Ready directives”, write one directive per line, or press “Restore the default directives”.
+\item In “Performance”, set the weights until the “Sum” is 1, then set the thresholds. Leaving an optional backlog cap empty sends no alert for that backlog.
+\item To grant a special permission, press “Manage roles” and assign it on the roles page.
+\end{enumerate}
+
+\textbf{Check:} Reopen the section and confirm the value remains. Do not use “Move files now” to experiment; it moves letter files from public to private storage in the background. If you raise or lower the protection limit, remember that letters already filed keep their Library copies as they are. If AI is not offered for a letter, compare its level with the limit before asking for a change.
+
+\clearpage
+\section{Final exercise: from draft to archive}
+\label{sec:correspondence-feature-practice}
+
+This exercise ties the whole chapter into one path. The system administrator first reviews the settings the path needs, then each reader runs the part for their role. Use a training environment if your organization has one, and do not send a real letter to an external body for practice.
+
+\begin{rcnote}[Example: Horizon]
+Omar prepares the “Aleppo Branch visit coordination request”, Sarah reviews its drafting, and the General Manager approves and signs it. Horizon’s registry clerk registers and dispatches it as \en{HZN/2026/0012}; Aleppo Branch receives and handles it, and it is then filed in the “Branch visits” dossier and archived.
+\end{rcnote}
+
+\begin{figure}[H]
+\centering
+\begin{tikzpicture}[node distance=0.5cm]
+\node[stepBox] (a) {System administrator reviews settings};
+\node[stepBox,below=of a] (b) {Preparer saves the draft};
+\node[stepBox,below=of b] (c) {Draft reviewer reviews the text};
+\node[stepBox,below=of c] (d) {Approver approves and signs};
+\node[stepBox,below=of d] (e) {Registry clerk registers, numbers, dispatches};
+\node[stepBox,below=of e] (f) {Recipient handles the letter};
+\node[stepBox,below=of f] (g) {The letter is filed and archived};
+\draw[flowsTo] (a) -- (b);
+\draw[flowsTo] (b) -- (c);
+\draw[flowsTo] (c) -- (d);
+\draw[flowsTo] (d) -- (e);
+\draw[flowsTo] (e) -- (f);
+\draw[flowsTo] (f) -- (g);
+\end{tikzpicture}
+\rclegend
+\caption{The exercise path from settings to archive}
+\label{fig:correspondence-practice-screen}
+\shotnote{The diagram shows who takes the work at each stage; it does not mean the next stage starts by itself, because each move is an action by its owner. Some stages change with the type’s settings: a direct type, for example, does not pass through the registry.}
+\end{figure}
+
+\begin{enumerate}
+\item Review “Letter types”: confirm the type is in use and that its approval and route suit the scenario.
+\item Review “Registry offices” and “Numbering”: confirm the office is active and “Next number” is as expected.
+\item Review “Letterheads and stamps”: confirm there is a default letterhead and a stamp with an image.
+\item Review “Roles and permissions”: confirm the registry clerk has the permission and a suitable position.
+\item Review “Archive and printing”: decide whether the record needs “Archive approval”.
+\end{enumerate}
+
+\begin{table}[H]
+\centering
+\caption{The final exercise by role}
+\label{tab:correspondence-practice}
+\begin{tabularx}{\linewidth}{R{4.2cm} Y}
+\rcHeaderRow
+\thh{Role} & \thh{What do you do, and where do you review it?}\\
+Preparer & Create a draft, attach a document and save it, then reopen it from “Drafts” (\ref{sec:correspondence-feature-compose} and \ref{sec:correspondence-feature-drafts}).\\
+Draft reviewer & Open the draft pushed to you, review its text, then record your review result (\ref{sec:correspondence-feature-drafting-review}).\\
+Approver & Open “Awaiting my approval”, and distinguish asking for changes from approving and signing (\ref{sec:correspondence-feature-approvals}).\\
+Registry clerk & Register the letter, read its number, then follow its dispatch and delivery (\ref{sec:correspondence-feature-registry} and \ref{sec:correspondence-feature-outgoing-dispatch}).\\
+Recipient & Read the letter, refer it or reply, then complete it (\ref{sec:correspondence-feature-reader} and \ref{sec:correspondence-feature-reply-complete}).\\
+Archivist and follow-up & File the letter in its dossier, and review the archive and audit log within your permissions (\ref{sec:correspondence-feature-dossiers}, \ref{sec:correspondence-feature-archive} and \ref{sec:correspondence-feature-audit}).\\
+\end{tabularx}
+\end{table}
+
+\textbf{Practice and check:} Run your role’s row in the table, then write down three things: the status the letter reached, who owns the next step, and the evidence you saw on screen. If the path stops, check your capacity, then your permission, then the type’s settings before repeating the action. You have mastered the chapter when you can state these three things without looking at the example.

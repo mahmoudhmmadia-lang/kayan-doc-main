@@ -6,6 +6,9 @@ set. `progress.md` is the live status log; this file is the standing brief.
 
 ## Current direction — web only (2026-10-16; supersedes legacy output rules below)
 
+- **Settings complete for review (2026-11-01).** Chapter 8 has an overview and 31 pages, one source file per group (`chapters/08-settings-<group>.tex`), checked with `node tools/check-settings-chapter.mjs <group>`. Browser check: `tools/verify-settings.mjs`. Stop the dev server before any browser check or `guide.test.mjs`, because its rebuilds rewrite `site/` mid-run, and wrap long checks in `timeout`. `KOS_ALLOW_MISSING_SHOTS=1` builds text-only pages and lists gaps in `review/missing-screenshots.txt`; the normal build stops on a missing image.
+- **All chapters await review; Settings authorized (2026-11-01).** Every existing chapter (1–8 and Builder) is under review and waits for the user; none is approved. Chapter 8 is Settings: one page per `/settings` card, grouped as the app groups them. Use the test2 launcher, not the seed list, to decide which apps remain.
+- **Official Correspondence complete for review (2026-10-31).** All six outline stages are written: overview plus 33 pages in both languages. Review, approval, issuing and dispatch flows are source-backed only; see `review/correspondence-source-coverage.md`.
 - **Official Correspondence stage 1 authorized (2026-10-21).** The user approved
   the recommended next app. The approved outline is
   `review/correspondence-outline.md`; its first stage is chapter 7, with a

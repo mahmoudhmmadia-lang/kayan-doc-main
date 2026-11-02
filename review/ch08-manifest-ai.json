@@ -1,0 +1,164 @@
+{
+  "ch08-ai-availability-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-ai-availability-ar.png",
+    "url": "https://test2.kayanos.app/settings/ai-availability",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1770,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:33:33.506Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "اختيار العضو"
+      },
+      {
+        "n": 2,
+        "label": "متوقف افتراضيًا"
+      },
+      {
+        "n": 3,
+        "label": "تعيين قواعد للمحددين"
+      },
+      {
+        "n": 4,
+        "label": "تعديل القواعد"
+      }
+    ]
+  },
+  "ch08-ai-availability-member-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-ai-availability-member-ar.png",
+    "url": "https://test2.kayanos.app/settings/ai-availability",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1035,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:33:51.145Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "افتراضي"
+      },
+      {
+        "n": 2,
+        "label": "إلغاء"
+      },
+      {
+        "n": 3,
+        "label": "حفظ"
+      }
+    ]
+  },
+  "ch08-ai-limits-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-ai-limits-ar.png",
+    "url": "https://test2.kayanos.app/settings/ai-limits",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1894,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:34:06.623Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "0.00"
+      },
+      {
+        "n": 2,
+        "label": "الاستخدام حسب الميزة"
+      },
+      {
+        "n": 3,
+        "label": "0.00"
+      },
+      {
+        "n": 4,
+        "label": "تطبيق الحد"
+      },
+      {
+        "n": 5,
+        "label": "كل الحالات"
+      }
+    ]
+  },
+  "ch08-ai-availability-en": {
+    "file": "kayanos-guide/figures/screens/ch08-ai-availability-en.png",
+    "url": "https://test2.kayanos.app/settings/ai-availability",
+    "lang": "en",
+    "width": 1440,
+    "height": 1770,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:34:41.913Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Member's choice"
+      },
+      {
+        "n": 2,
+        "label": "Off by default"
+      },
+      {
+        "n": 3,
+        "label": "Set rules for selected"
+      },
+      {
+        "n": 4,
+        "label": "Edit rules"
+      }
+    ]
+  },
+  "ch08-ai-availability-member-en": {
+    "file": "kayanos-guide/figures/screens/ch08-ai-availability-member-en.png",
+    "url": "https://test2.kayanos.app/settings/ai-availability",
+    "lang": "en",
+    "width": 1440,
+    "height": 1035,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:34:59.446Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Default"
+      },
+      {
+        "n": 2,
+        "label": "Cancel"
+      },
+      {
+        "n": 3,
+        "label": "Save"
+      }
+    ]
+  },
+  "ch08-ai-limits-en": {
+    "file": "kayanos-guide/figures/screens/ch08-ai-limits-en.png",
+    "url": "https://test2.kayanos.app/settings/ai-limits",
+    "lang": "en",
+    "width": 1440,
+    "height": 1894,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:35:14.899Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "0.00"
+      },
+      {
+        "n": 2,
+        "label": "Usage by feature"
+      },
+      {
+        "n": 3,
+        "label": "0.00"
+      },
+      {
+        "n": 4,
+        "label": "Apply limit"
+      },
+      {
+        "n": 5,
+        "label": "All statuses"
+      }
+    ]
+  }
+}

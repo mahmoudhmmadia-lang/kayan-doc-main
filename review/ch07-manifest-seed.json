@@ -1,0 +1,666 @@
+{
+  "ch07-settings-templates-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-settings-templates-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/settings",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1625,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:37:44.950Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "ترويسة جديدة"
+      },
+      {
+        "n": 2,
+        "label": "رمز QR للتحقق على الكتب الصادرة"
+      },
+      {
+        "n": 3,
+        "label": "إضافة وحدة"
+      },
+      {
+        "n": 4,
+        "label": "ختم جديد"
+      },
+      {
+        "n": 5,
+        "label": "استبدال الصورة"
+      }
+    ]
+  },
+  "ch07-recipients-en": {
+    "file": "kayanos-guide/figures/screens/ch07-recipients-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/compose?drafts=d65a06usi2aqx42mvk2qn",
+    "lang": "en",
+    "width": 1440,
+    "height": 1805,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:43:09.080Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Director of Human Resources"
+      },
+      {
+        "n": 2,
+        "label": ""
+      },
+      {
+        "n": 3,
+        "label": "Send directly without the registry (internal, one recipient)"
+      },
+      {
+        "n": 4,
+        "label": "Expected routing asd Diwan of asd Director of Human Resource"
+      },
+      {
+        "n": 5,
+        "label": "Approval stages"
+      }
+    ]
+  },
+  "ch07-attachments-en": {
+    "file": "kayanos-guide/figures/screens/ch07-attachments-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/compose?drafts=d65a06usi2aqx42mvk2qn",
+    "lang": "en",
+    "width": 1440,
+    "height": 1805,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:43:28.329Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Drag files here or Choose PDF · Word · Excel · images · Up t"
+      },
+      {
+        "n": 2,
+        "label": "Attachments"
+      },
+      {
+        "n": 3,
+        "label": "Letterhead"
+      },
+      {
+        "n": 4,
+        "label": "Write the text Body as a file"
+      }
+    ]
+  },
+  "ch07-attachments-file-en": {
+    "file": "kayanos-guide/figures/screens/ch07-attachments-file-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/compose?drafts=d65a06usi2aqx42mvk2qn",
+    "lang": "en",
+    "width": 1440,
+    "height": 1805,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:43:49.548Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Write the text Body as a file Body variables are not availab"
+      },
+      {
+        "n": 2,
+        "label": "Choose a file"
+      },
+      {
+        "n": 3,
+        "label": "Please leave the top 60 mm of the first page and the bottom "
+      }
+    ]
+  },
+  "ch07-check-save-en": {
+    "file": "kayanos-guide/figures/screens/ch07-check-save-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/compose?drafts=dz75_q2bim0vu_5l_chaq",
+    "lang": "en",
+    "width": 1440,
+    "height": 1965,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:48:47.962Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Digital Transformation Directorate No. Assigned on approval "
+      },
+      {
+        "n": 2,
+        "label": "Draft saved"
+      },
+      {
+        "n": 3,
+        "label": "Check now"
+      },
+      {
+        "n": 4,
+        "label": "Medium The text mentions attachments but none is attached Me"
+      },
+      {
+        "n": 5,
+        "label": "Save as draft"
+      }
+    ]
+  },
+  "ch07-drafts-en": {
+    "file": "kayanos-guide/figures/screens/ch07-drafts-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=drafts&id=d65a06usi2aqx42mvk2qn",
+    "lang": "en",
+    "width": 1440,
+    "height": 1241,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:44:42.902Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Drafts 10"
+      },
+      {
+        "n": 2,
+        "label": "HR — no number — Today 09:41 To: Human Resources Directorate"
+      },
+      {
+        "n": 3,
+        "label": "Continue editing"
+      },
+      {
+        "n": 4,
+        "label": "More actions"
+      }
+    ]
+  },
+  "ch07-recipients-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-recipients-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/compose?drafts=pqs7ixwp79wha7gdphfvw",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1769,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:45:22.541Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "مدير الموارد البشرية"
+      },
+      {
+        "n": 2,
+        "label": ""
+      },
+      {
+        "n": 3,
+        "label": "إرسال مباشر دون المرور بالديوان (داخلي، مستلم واحد)"
+      },
+      {
+        "n": 4,
+        "label": "مسار التوجيه المتوقع asd ديوان asd مدير الموارد البشرية"
+      },
+      {
+        "n": 5,
+        "label": "مراحل الاعتماد"
+      }
+    ]
+  },
+  "ch07-attachments-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-attachments-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/compose?drafts=pqs7ixwp79wha7gdphfvw",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1769,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:45:41.525Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إفلات الملفات هنا أو اختيار ملف PDF · Word · Excel · صور · ح"
+      },
+      {
+        "n": 2,
+        "label": "المرفقات"
+      },
+      {
+        "n": 3,
+        "label": "الترويسة"
+      },
+      {
+        "n": 4,
+        "label": "تحرير النص نص الكتاب ملف"
+      }
+    ]
+  },
+  "ch07-attachments-file-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-attachments-file-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/compose?drafts=pqs7ixwp79wha7gdphfvw",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1769,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:46:02.730Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "تحرير النص نص الكتاب ملف متغيرات النص غير متاحة مع نص الكتاب"
+      },
+      {
+        "n": 2,
+        "label": "اختيار ملف"
+      },
+      {
+        "n": 3,
+        "label": "يُرجى ترك أعلى الصفحة الأولى (60 مم) وأسفل الصفحة الأخيرة (7"
+      }
+    ]
+  },
+  "ch07-check-save-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-check-save-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/compose?drafts=qxk6em7c_dts1lxlyprv9",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1921,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:46:40.890Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "مديرية التحول الرقمي يُخصَّص عند الاعتماد 02/11/2026 الرقم ي"
+      },
+      {
+        "n": 2,
+        "label": "المسودة محفوظة"
+      },
+      {
+        "n": 3,
+        "label": "فحص الآن"
+      },
+      {
+        "n": 4,
+        "label": "متوسطة يذكر النص مرفقات ولا توجد مرفقات متوسطة احتمال تكرار "
+      },
+      {
+        "n": 5,
+        "label": "حفظ كمسودة"
+      }
+    ]
+  },
+  "ch07-drafts-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-drafts-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=drafts&id=pqs7ixwp79wha7gdphfvw",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1277,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:47:01.472Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "المسودات 10"
+      },
+      {
+        "n": 2,
+        "label": "مم — بلا رقم — اليوم 09:42 إلى: مديرية الموارد البشرية GUIDE"
+      },
+      {
+        "n": 3,
+        "label": "متابعة التحرير"
+      },
+      {
+        "n": 4,
+        "label": "إجراءات أخرى"
+      }
+    ]
+  },
+  "ch07-dossiers-detail-en": {
+    "file": "kayanos-guide/figures/screens/ch07-dossiers-detail-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/dossiers?state=open&dossier=41b77d06a01740ae9d87673ae543ecc2",
+    "lang": "en",
+    "width": 1440,
+    "height": 524,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:50:31.777Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Share"
+      },
+      {
+        "n": 2,
+        "label": "Grant access"
+      },
+      {
+        "n": 3,
+        "label": "Close the dossier"
+      },
+      {
+        "n": 4,
+        "label": "م/2026/0020 Official letter In progress 3 Oct 2026 اختبار نص"
+      },
+      {
+        "n": 5,
+        "label": "Remove"
+      }
+    ]
+  },
+  "ch07-paper-intake-queue-en": {
+    "file": "kayanos-guide/figures/screens/ch07-paper-intake-queue-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/registry?tab=arrivals&arrivalQ=QA-B2",
+    "lang": "en",
+    "width": 1440,
+    "height": 784,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:50:34.814Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Paper intake"
+      },
+      {
+        "n": 2,
+        "label": "Arrival actions"
+      },
+      {
+        "n": 3,
+        "label": "Register and distribute"
+      },
+      {
+        "n": 4,
+        "label": "Refuse at the registry"
+      }
+    ]
+  },
+  "ch07-search-views-en": {
+    "file": "kayanos-guide/figures/screens/ch07-search-views-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=drafts&q=GUIDE-QA+S5",
+    "lang": "en",
+    "width": 1440,
+    "height": 1105,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:50:46.831Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Search… or @from @number @subject @to @member @position"
+      },
+      {
+        "n": 2,
+        "label": "Search operators"
+      },
+      {
+        "n": 3,
+        "label": "Filters"
+      },
+      {
+        "n": 4,
+        "label": "GUIDE-QA overdue view"
+      },
+      {
+        "n": 5,
+        "label": "Overdue"
+      }
+    ]
+  },
+  "ch07-batches-en": {
+    "file": "kayanos-guide/figures/screens/ch07-batches-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/batches?state=active",
+    "lang": "en",
+    "width": 1440,
+    "height": 468,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:50:49.622Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "New batch"
+      },
+      {
+        "n": 2,
+        "label": "Active"
+      },
+      {
+        "n": 3,
+        "label": "Finished"
+      },
+      {
+        "n": 4,
+        "label": "Contents"
+      }
+    ]
+  },
+  "ch07-batches-contents-en": {
+    "file": "kayanos-guide/figures/screens/ch07-batches-contents-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/batches?state=active&batch=zr4m2u23m_w1ib0obs04y",
+    "lang": "en",
+    "width": 1440,
+    "height": 718,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:51:04.390Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Add letters"
+      },
+      {
+        "n": 2,
+        "label": "Check eligibility"
+      },
+      {
+        "n": 3,
+        "label": "Send the batch"
+      },
+      {
+        "n": 4,
+        "label": "Cancel the rest"
+      }
+    ]
+  },
+  "ch07-dossiers-detail-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-dossiers-detail-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/dossiers?state=open&dossier=41b77d06a01740ae9d87673ae543ecc2",
+    "lang": "ar",
+    "width": 1440,
+    "height": 524,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:51:14.291Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "مشاركة"
+      },
+      {
+        "n": 2,
+        "label": "منح اطلاع"
+      },
+      {
+        "n": 3,
+        "label": "إغلاق الإضبارة"
+      },
+      {
+        "n": 4,
+        "label": "م/2026/0020 كتاب رسمي قيد المعالجة 3 تشرين الأول 2026 اختبار"
+      },
+      {
+        "n": 5,
+        "label": "إزالة"
+      }
+    ]
+  },
+  "ch07-batches-add-en": {
+    "file": "kayanos-guide/figures/screens/ch07-batches-add-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/batches?state=active&batch=zr4m2u23m_w1ib0obs04y",
+    "lang": "en",
+    "width": 1440,
+    "height": 808,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:51:23.243Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Select: ص/2026/0002"
+      },
+      {
+        "n": 2,
+        "label": "Add"
+      }
+    ]
+  },
+  "ch07-search-views-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-search-views-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=drafts&q=GUIDE-QA+S5",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1105,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:51:29.616Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "بحث… أو ‎@من ‎@رقم ‎@موضوع ‎@إلى ‎@الموظف ‎@الوظيفة"
+      },
+      {
+        "n": 2,
+        "label": "عوامل البحث"
+      },
+      {
+        "n": 3,
+        "label": "فلاتر"
+      },
+      {
+        "n": 4,
+        "label": "GUIDE-QA overdue view"
+      },
+      {
+        "n": 5,
+        "label": "متأخرة"
+      }
+    ]
+  },
+  "ch07-paper-intake-queue-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-paper-intake-queue-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/registry?tab=arrivals&arrivalQ=QA-B2",
+    "lang": "ar",
+    "width": 1440,
+    "height": 766,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:51:53.598Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "قيد ورقي"
+      },
+      {
+        "n": 2,
+        "label": "إجراءات الوارد"
+      },
+      {
+        "n": 3,
+        "label": "قيد وتوزيع"
+      },
+      {
+        "n": 4,
+        "label": "رفض في الديوان"
+      }
+    ]
+  },
+  "ch07-settings-templates-en": {
+    "file": "kayanos-guide/figures/screens/ch07-settings-templates-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/settings",
+    "lang": "en",
+    "width": 1440,
+    "height": 1645,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:52:00.446Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "New letterhead"
+      },
+      {
+        "n": 2,
+        "label": "Verification QR code on outgoing letters"
+      },
+      {
+        "n": 3,
+        "label": "Add unit"
+      },
+      {
+        "n": 4,
+        "label": "New stamp"
+      },
+      {
+        "n": 5,
+        "label": "Replace the image"
+      }
+    ]
+  },
+  "ch07-batches-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-batches-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/batches?state=active",
+    "lang": "ar",
+    "width": 1440,
+    "height": 468,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:52:08.395Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "حقيبة جديدة"
+      },
+      {
+        "n": 2,
+        "label": "نشطة"
+      },
+      {
+        "n": 3,
+        "label": "منتهية"
+      },
+      {
+        "n": 4,
+        "label": "المحتوى"
+      }
+    ]
+  },
+  "ch07-batches-contents-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-batches-contents-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/batches?state=active&batch=zr4m2u23m_w1ib0obs04y",
+    "lang": "ar",
+    "width": 1440,
+    "height": 718,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:52:23.221Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إضافة كتب"
+      },
+      {
+        "n": 2,
+        "label": "تحقق من الأهلية"
+      },
+      {
+        "n": 3,
+        "label": "إرسال الحقيبة"
+      },
+      {
+        "n": 4,
+        "label": "إلغاء المتبقي"
+      }
+    ]
+  },
+  "ch07-batches-add-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-batches-add-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/batches?state=active&batch=zr4m2u23m_w1ib0obs04y",
+    "lang": "ar",
+    "width": 1440,
+    "height": 808,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:52:42.154Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "تحديد: ص/2026/0002"
+      },
+      {
+        "n": 2,
+        "label": "إضافة"
+      }
+    ]
+  }
+}

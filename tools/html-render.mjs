@@ -337,7 +337,7 @@ function renderTable(b, ctx) {
             })
             .join('')}</ol><p class="guide-open"><a class="btn btn-primary" href="${linked.home}">${esc(ctx.ui.openGuide)} ${esc(linked.title)} ${ARROW}</a></p></figure>`
     }
-    const cards = /^tab:(hr|tasks|projects|builder|correspondence)-pages-/.test(b.label ?? '') ? body.map((r) => featureOf(r.cells[0])) : []
+    const cards = /^tab:(hr|tasks|projects|builder|correspondence|settings)-pages-/.test(b.label ?? '') ? body.map((r) => featureOf(r.cells[0])) : []
     if (cards.length && cards.every(Boolean)) {
         const nav = { ...ctx, nolink: true }
         return `<figure class="page-cards reveal"${b.id ? ` id="${b.id}"` : ''}>${caption}<ol class="page-grid">${cards
@@ -531,10 +531,10 @@ export function renderSite(doc, { lang, assetsVersion = '', guide = {} }) {
     const { home = 'index.html', prefix = 'c', store = 'kos-guide-progress', parent = null, linked = {}, extra = null, out = null } = guide
     const ui = { ...UI[lang] }
     const { chapters, ids } = structure(doc, prefix)
-    const features = chapters.flatMap(c => c.sections).filter(s => /^sec:(hr|tasks|projects|builder|correspondence)-feature-/.test(s.label ?? ''))
+    const features = chapters.flatMap(c => c.sections).filter(s => /^sec:(hr|tasks|projects|builder|correspondence|settings)-feature-/.test(s.label ?? ''))
     const routes = {}
     for (const s of features) {
-        const [, app, slug] = s.label.match(/^sec:(hr|tasks|projects|builder|correspondence)-feature-(.+)$/)
+        const [, app, slug] = s.label.match(/^sec:(hr|tasks|projects|builder|correspondence|settings)-feature-(.+)$/)
         const page = `${app}-${slug}.html`
         routes[s.id] = page
         const visit = blocks => blocks.forEach(b => { if (b.id) routes[b.id] = page; if (b.blocks) visit(b.blocks) })
@@ -697,7 +697,7 @@ export function renderSite(doc, { lang, assetsVersion = '', guide = {} }) {
         const overview = c.sections.filter(s => !routes[s.id])
         if (overview.length) groups.push({ title: lang === 'ar' ? 'نظرة عامة' : 'Overview', kind: 'overview', pages: overview })
         const visit = blocks => blocks.forEach(b => {
-            if (/^tab:(hr|tasks|projects|builder|correspondence)-pages-/.test(b.label ?? '')) {
+            if (/^tab:(hr|tasks|projects|builder|correspondence|settings)-pages-/.test(b.label ?? '')) {
                 const topic = { title: b.caption, kind: 'topic', pages: [] }
                 ;(b.rows ?? []).filter(r => !r.header).forEach(r => {
                     const [name, section] = plain(r.cells[0], base).split(' — ').map(x => x.trim())

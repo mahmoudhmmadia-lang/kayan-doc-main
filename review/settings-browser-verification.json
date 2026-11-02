@@ -1,0 +1,1807 @@
+{
+  "checks": [
+    "256 page/language/width/theme cases",
+    "directory card opens feature",
+    "no horizontal overflow",
+    "images decode",
+    "completion persists after reload",
+    "language switching",
+    "search opens two-step page",
+    "image lightbox opens/closes"
+  ],
+  "evidence": [
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "c8",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-organization",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-notifications",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-export-jobs",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-reports",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-roles",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-two-step",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-sessions",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-member-keys",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-key-enrollments",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-key-audit",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-api",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-public-portal",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-portal-content",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-applicant-profile",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-messages",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-publishing-approval",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-form-assignments",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-check-categories",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-email-domains",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-email-signatures",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-short-links",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-whatsapp",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-ai-availability",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-ai-limits",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-languages",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-currencies",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-units",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-approval-routes",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-evaluation-templates",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-followup",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-record-keeping",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "c8",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-organization",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-notifications",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-export-jobs",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-reports",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-roles",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-two-step",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-sessions",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-member-keys",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-key-enrollments",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-key-audit",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-api",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-public-portal",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-portal-content",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-applicant-profile",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-messages",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-publishing-approval",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-form-assignments",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-check-categories",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-email-domains",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-email-signatures",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-short-links",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-whatsapp",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-ai-availability",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-ai-limits",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-languages",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-currencies",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-units",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-approval-routes",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-evaluation-templates",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-followup",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-record-keeping",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "c8",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-organization",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-notifications",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-export-jobs",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-reports",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-roles",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-two-step",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-sessions",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-member-keys",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-key-enrollments",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-key-audit",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-api",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-public-portal",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-portal-content",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-applicant-profile",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-messages",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-publishing-approval",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-form-assignments",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-check-categories",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-email-domains",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-email-signatures",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-short-links",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-whatsapp",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-ai-availability",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-ai-limits",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-languages",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-currencies",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-units",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-approval-routes",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-evaluation-templates",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-followup",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-record-keeping",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "c8",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-organization",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-notifications",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-export-jobs",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-reports",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-roles",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-two-step",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-sessions",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-member-keys",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-key-enrollments",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-key-audit",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-api",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-public-portal",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-portal-content",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-applicant-profile",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-messages",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-publishing-approval",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-form-assignments",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-check-categories",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-email-domains",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-email-signatures",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-short-links",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-whatsapp",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-ai-availability",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-ai-limits",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-languages",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-currencies",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-units",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-approval-routes",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-evaluation-templates",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-followup",
+      "passed": true
+    },
+    {
+      "lang": "ar",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-record-keeping",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "c8",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-organization",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-notifications",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-export-jobs",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-reports",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-roles",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-two-step",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-sessions",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-member-keys",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-key-enrollments",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-key-audit",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-api",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-public-portal",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-portal-content",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-applicant-profile",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-messages",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-publishing-approval",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-form-assignments",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-check-categories",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-email-domains",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-email-signatures",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-short-links",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-whatsapp",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-ai-availability",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-ai-limits",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-languages",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-currencies",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-units",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-approval-routes",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-evaluation-templates",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-followup",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "dark",
+      "file": "settings-record-keeping",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "c8",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-organization",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-notifications",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-export-jobs",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-reports",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-roles",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-two-step",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-sessions",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-member-keys",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-key-enrollments",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-key-audit",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-api",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-public-portal",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-portal-content",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-applicant-profile",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-messages",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-publishing-approval",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-form-assignments",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-check-categories",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-email-domains",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-email-signatures",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-short-links",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-whatsapp",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-ai-availability",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-ai-limits",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-languages",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-currencies",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-units",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-approval-routes",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-evaluation-templates",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-followup",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 1440,
+      "theme": "light",
+      "file": "settings-record-keeping",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "c8",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-organization",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-notifications",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-export-jobs",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-reports",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-roles",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-two-step",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-sessions",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-member-keys",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-key-enrollments",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-key-audit",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-api",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-public-portal",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-portal-content",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-applicant-profile",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-messages",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-publishing-approval",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-form-assignments",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-check-categories",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-email-domains",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-email-signatures",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-short-links",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-whatsapp",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-ai-availability",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-ai-limits",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-languages",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-currencies",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-units",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-approval-routes",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-evaluation-templates",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-followup",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "dark",
+      "file": "settings-record-keeping",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "c8",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-organization",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-notifications",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-export-jobs",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-reports",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-roles",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-two-step",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-sessions",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-member-keys",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-key-enrollments",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-key-audit",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-api",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-public-portal",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-portal-content",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-applicant-profile",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-messages",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-publishing-approval",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-form-assignments",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-check-categories",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-email-domains",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-email-signatures",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-short-links",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-whatsapp",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-ai-availability",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-ai-limits",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-languages",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-currencies",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-units",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-approval-routes",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-evaluation-templates",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-followup",
+      "passed": true
+    },
+    {
+      "lang": "en",
+      "width": 390,
+      "theme": "light",
+      "file": "settings-record-keeping",
+      "passed": true
+    }
+  ],
+  "errors": []
+}

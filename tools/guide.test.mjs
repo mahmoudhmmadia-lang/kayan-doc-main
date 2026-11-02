@@ -17,12 +17,32 @@ test('every main chapter page, and only those, has a bilingual chapter overview'
   const folder=path.join(root,'site',lang);
   for(const file of fs.readdirSync(folder).filter(file=>file.endsWith('.html'))){
    const html=fs.readFileSync(path.join(folder,file),'utf8');
-   const chapter=/^c[1-7]\.html$/.test(file);
+   const chapter=/^c[1-8]\.html$/.test(file);
    assert.equal(html.includes('class="chapter-overview"'),chapter,`${lang}/${file}: overview scope`);
    if(chapter){
     assert.equal((html.match(/class="overview-example"/g)||[]).length,4);
     assert.match(html,/<details class="chapter-overview" id="chapter-overview">/);
    }
+  }
+ }
+});
+
+test('Settings chapter has all 31 bilingual pages in the app\'s eight groups, with numbered screenshots',()=>{
+ const manifest=JSON.parse(fs.readFileSync(path.join(root,'review/fullpage-manifest.json'),'utf8'));
+ const slugs=['organization','notifications','export-jobs','reports','roles','two-step','sessions','member-keys','key-enrollments','key-audit','api','public-portal','portal-content','applicant-profile','messages','publishing-approval','form-assignments','check-categories','email-domains','email-signatures','short-links','whatsapp','ai-availability','ai-limits','languages','currencies','units','approval-routes','evaluation-templates','followup','record-keeping'];
+ for(const lang of ['ar','en']){
+  const folder=path.join(root,'site',lang);
+  const overview=fs.readFileSync(path.join(folder,'c8.html'),'utf8');
+  const data=JSON.parse(overview.match(/<script id="guide-data" type="application\/json">([^]*?)<\/script>/)[1]);
+  assert.deepEqual(data.steps.filter(s=>s.p.startsWith('settings-')).map(s=>s.p),slugs.map(s=>`settings-${s}.html`));
+  assert.equal((overview.match(/class="page-card"/g)||[]).length,31);
+  assert.equal((overview.slice(overview.lastIndexOf('class="toc-chapter')).match(/class="toc-section is-app"/g)||[]).length,8);
+  for(const slug of slugs){
+   const html=fs.readFileSync(path.join(folder,`settings-${slug}.html`),'utf8');
+   assert.ok(html.indexOf(lang==='ar'?'مثال: شركة الأفق':'Example: Horizon')<html.indexOf('<figure'),slug);
+   const shots=[...html.matchAll(/assets\/screens\/(ch08-[\w-]+)\.png/g)].map(m=>m[1]);
+   assert.ok(shots.length,`${slug}: needs a screenshot`);
+   for(const shot of shots) assert.ok(manifest[shot]?.marks?.length,`${shot}: no markers recorded`);
   }
  }
 });
@@ -38,25 +58,27 @@ test('contents sections follow Kayan navigation sections, with each page listed 
  assert.ok(projects.includes('class="toc-divider"'),'Records opened inside others are labelled');
 });
 
-test('Correspondence stage one has three bilingual role-based pages and numbered evidence',()=>{
+test('Correspondence chapter has all 33 bilingual pages and numbered evidence for the first three',()=>{
  const manifest=JSON.parse(fs.readFileSync(path.join(root,'review/fullpage-manifest.json'),'utf8'));
  for(const lang of ['ar','en']){
   const folder=path.join(root,'site',lang);
   const overview=fs.readFileSync(path.join(folder,'c7.html'),'utf8');
   const data=JSON.parse(overview.match(/<script id="guide-data" type="application\/json">([^]*?)<\/script>/)[1]);
   const features=data.steps.filter(s=>s.p.startsWith('correspondence-'));
-  assert.deepEqual(features.map(s=>s.p),['home','capacity','tray'].map(s=>`correspondence-${s}.html`));
-  assert.equal((overview.match(/class="page-card"/g)||[]).length,3);
+  assert.deepEqual(features.map(s=>s.p),['home','capacity','tray','compose','recipients','attachments','check-save','drafts','drafting-review','approvals','reader','referral','inquiries','reply-complete','registry','incoming','paper-intake','outgoing-dispatch','batches','circulars','dossiers','delegation','archive','search-views','performance','oversight','audit','settings-types','settings-registry','settings-templates','settings-bodies','settings-policies','practice'].map(s=>`correspondence-${s}.html`));
+  assert.equal((overview.match(/class="page-card"/g)||[]).length,33);
   for(const [index,feature] of features.entries()){
    const html=fs.readFileSync(path.join(folder,feature.p),'utf8');
    assert.ok(overview.includes(`href="${feature.p}#${feature.id}"`));
    assert.equal(data.routes[feature.id],feature.p);
    assert.ok(data.search.some(s=>s.p===feature.p&&s.x.length>100));
    assert.ok(html.indexOf(lang==='ar'?'مثال: شركة الأفق':'Example: Horizon')<html.indexOf('<figure'));
-   const slug=['home','capacity','tray'][index];
-   const marks=manifest[`ch07-${slug}-${lang}`]?.marks;
-   assert.equal(marks?.length,[3,2,4][index]);
-   for(const n of '①②③④'.slice(0,marks.length))assert.ok(html.includes(n));
+   if(index<3){
+    const slug=['home','capacity','tray'][index];
+    const marks=manifest[`ch07-${slug}-${lang}`]?.marks;
+    assert.equal(marks?.length,[3,2,4][index]);
+    for(const n of '①②③④'.slice(0,marks.length))assert.ok(html.includes(n));
+   }
    assert.ok(html.includes(`../${lang==='ar'?'en':'ar'}/${feature.p}`));
   }
  }
@@ -356,11 +378,11 @@ test('built HTML site: chapter and feature pages, language, direction and workin
   const pages=Object.fromEntries(fs.readdirSync(folder).filter(f=>f.endsWith('.html')).map(f=>[f,fs.readFileSync(path.join(folder,f),'utf8')]));
   const sourceDoc=lang==='ar'?doc:en;
   const sideDoc=lang==='ar'?bdoc:ben;
-  const featuresOf=d=>d.blocks.filter(b=>/^sec:(hr|tasks|projects|builder|correspondence)-feature-/.test(b.label??'')).map(b=>b.label.replace(/^sec:(hr|tasks|projects|builder|correspondence)-feature-/,'$1-')+'.html');
+  const featuresOf=d=>d.blocks.filter(b=>/^sec:(hr|tasks|projects|builder|correspondence|settings)-feature-/.test(b.label??'')).map(b=>b.label.replace(/^sec:(hr|tasks|projects|builder|correspondence|settings)-feature-/,'$1-')+'.html');
   const featureFiles=featuresOf(sourceDoc), builderFiles=featuresOf(sideDoc);
-  assert.equal(featureFiles.length,34+JSON.parse(fs.readFileSync(path.join(root,'review/projects-source-inventory.json'),'utf8')).pages.length);
+  assert.equal(featureFiles.length,95+JSON.parse(fs.readFileSync(path.join(root,'review/projects-source-inventory.json'),'utf8')).pages.length);
   assert.equal(builderFiles.length,BUILDER_CHAPTERS.flat().length);
-  assert.deepEqual(Object.keys(pages).sort(),['c1.html','c2.html','c3.html','c4.html','c5.html','c6.html','c7.html','index.html',...featureFiles,'builder.html',...BUILDER_CHAPTERS.map((_,i)=>`b${i+1}.html`),...builderFiles].sort());
+  assert.deepEqual(Object.keys(pages).sort(),['c1.html','c2.html','c3.html','c4.html','c5.html','c6.html','c7.html','c8.html','index.html',...featureFiles,'builder.html',...BUILDER_CHAPTERS.map((_,i)=>`b${i+1}.html`),...builderFiles].sort());
   const ids=Object.fromEntries(Object.entries(pages).map(([f,h])=>[f,new Set([...h.matchAll(/\sid="([^"]+)"/g)].map(m=>m[1]))]));
   let diagrams=0;
   for(const [file,html] of Object.entries(pages)){

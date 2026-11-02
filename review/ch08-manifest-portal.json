@@ -1,0 +1,291 @@
+{
+  "ch08-public-portal-home-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-public-portal-home-ar.png",
+    "url": "https://test2.kayanos.app/settings/public-portal?tab=home",
+    "lang": "ar",
+    "width": 1440,
+    "height": 2324,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:33:37.112Z",
+    "marks": [
+      {
+        "n": 2,
+        "label": "أقسام الصفحة الرئيسية اسحب لإعادة الترتيب أو استخدم الأسهم، "
+      },
+      {
+        "n": 3,
+        "label": "معاينة البوابة"
+      },
+      {
+        "n": 4,
+        "label": "نشر التغييرات"
+      }
+    ]
+  },
+  "ch08-public-portal-identity-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-public-portal-identity-ar.png",
+    "url": "https://test2.kayanos.app/settings/public-portal?tab=identity",
+    "lang": "ar",
+    "width": 1440,
+    "height": 935,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:33:56.338Z",
+    "marks": [
+      {
+        "n": 2,
+        "label": "استبدال"
+      },
+      {
+        "n": 3,
+        "label": "رفع"
+      },
+      {
+        "n": 4,
+        "label": "مثل ألوان التطبيق"
+      }
+    ]
+  },
+  "ch08-public-portal-contact-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-public-portal-contact-ar.png",
+    "url": "https://test2.kayanos.app/settings/public-portal?tab=contact",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:34:15.209Z",
+    "marks": [
+      {
+        "n": 2,
+        "label": "الهاتف"
+      },
+      {
+        "n": 3,
+        "label": "إضافة مجموعة"
+      },
+      {
+        "n": 4,
+        "label": "إضافة رابط"
+      }
+    ]
+  },
+  "ch08-public-portal-languages-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-public-portal-languages-ar.png",
+    "url": "https://test2.kayanos.app/settings/public-portal?tab=languages",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:34:34.070Z",
+    "marks": [
+      {
+        "n": 2,
+        "label": "اللغة الافتراضية"
+      },
+      {
+        "n": 3,
+        "label": "إدارة كيان اللغات"
+      },
+      {
+        "n": 4,
+        "label": "رمز الدولة الافتراضي للهاتف"
+      }
+    ]
+  },
+  "ch08-portal-content-audience-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-portal-content-audience-ar.png",
+    "url": "https://test2.kayanos.app/settings/public-portal/content?tab=audience",
+    "lang": "ar",
+    "width": 1440,
+    "height": 440,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:35:37.998Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الفئات المستهدفة 1"
+      },
+      {
+        "n": 2,
+        "label": "إضافة فئة"
+      },
+      {
+        "n": 3,
+        "label": "إظهار مواطن أو مقيم"
+      },
+      {
+        "n": 4,
+        "label": "تعديل مواطن أو مقيم"
+      }
+    ]
+  },
+  "ch08-portal-content-page-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-portal-content-page-ar.png",
+    "url": "https://test2.kayanos.app/settings/public-portal/content?tab=page",
+    "lang": "ar",
+    "width": 1440,
+    "height": 381,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:35:54.637Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الصفحات 1"
+      },
+      {
+        "n": 2,
+        "label": "إضافة صفحة"
+      },
+      {
+        "n": 3,
+        "label": "إظهار سياسة الخصوصية في التذييل"
+      },
+      {
+        "n": 4,
+        "label": "تعديل سياسة الخصوصية"
+      }
+    ]
+  },
+  "ch08-portal-content-faq-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-portal-content-faq-ar.png",
+    "url": "https://test2.kayanos.app/settings/public-portal/content?tab=faq",
+    "lang": "ar",
+    "width": 1440,
+    "height": 438,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:36:11.516Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الأسئلة الشائعة 2"
+      },
+      {
+        "n": 2,
+        "label": "إضافة سؤال"
+      },
+      {
+        "n": 3,
+        "label": "بحث في الأسئلة الشائعة"
+      },
+      {
+        "n": 4,
+        "label": "تعديل هل يمكنني حفظ الطلب وإكماله لاحقاً؟"
+      }
+    ]
+  },
+  "ch08-portal-content-announcement-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-portal-content-announcement-ar.png",
+    "url": "https://test2.kayanos.app/settings/public-portal/content?tab=announcement",
+    "lang": "ar",
+    "width": 1440,
+    "height": 996,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:36:31.175Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الإعلانات 2"
+      },
+      {
+        "n": 2,
+        "label": "شريط في كل الصفحات يظهر شريطاً أعلى جميع الصفحات"
+      },
+      {
+        "n": 3,
+        "label": ""
+      },
+      {
+        "n": 4,
+        "label": "منشور"
+      }
+    ]
+  },
+  "ch08-applicant-profile-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-applicant-profile-ar.png",
+    "url": "https://test2.kayanos.app/settings/applicant-profile",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1018,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:36:47.991Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "ملف الفرد"
+      },
+      {
+        "n": 2,
+        "label": "إضافة حقل"
+      },
+      {
+        "n": 3,
+        "label": "طريقة التحقق"
+      },
+      {
+        "n": 4,
+        "label": "كما يراها المتعامل"
+      },
+      {
+        "n": 5,
+        "label": "إضافة مستوى"
+      }
+    ]
+  },
+  "ch08-applicant-profile-field-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-applicant-profile-field-ar.png",
+    "url": "https://test2.kayanos.app/settings/applicant-profile",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1229,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:37:07.353Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "حقل جديد في الملف الشخصي"
+      },
+      {
+        "n": 2,
+        "label": "متى يُطلب"
+      },
+      {
+        "n": 3,
+        "label": "مراجعة الموظف"
+      },
+      {
+        "n": 4,
+        "label": "يُقفل الحقل بعد التحقق"
+      }
+    ]
+  },
+  "ch08-applicant-company-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-applicant-company-ar.png",
+    "url": "https://test2.kayanos.app/settings/company-profile",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1512,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:37:23.900Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "ملف الشركة"
+      },
+      {
+        "n": 2,
+        "label": "تفعيل ملفات الشركات"
+      },
+      {
+        "n": 3,
+        "label": "إضافة حقل"
+      },
+      {
+        "n": 4,
+        "label": "كيف يرتبط الشخص بشركة"
+      },
+      {
+        "n": 5,
+        "label": "بانتظار التوثيق (0)"
+      }
+    ]
+  }
+}

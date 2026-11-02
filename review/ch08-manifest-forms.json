@@ -1,0 +1,126 @@
+{
+  "ch08-publishing-approval-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-publishing-approval-ar.png",
+    "url": "https://test2.kayanos.app/settings/publishing-approval",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1772,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:36:40.027Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "لكل النماذج"
+      },
+      {
+        "n": 2,
+        "label": "أدخل النص"
+      },
+      {
+        "n": 3,
+        "label": "إضافة مرحلة"
+      },
+      {
+        "n": 4,
+        "label": "القواعد"
+      },
+      {
+        "n": 5,
+        "label": "حفظ"
+      }
+    ]
+  },
+  "ch08-publishing-approval-record-types-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-publishing-approval-record-types-ar.png",
+    "url": "https://test2.kayanos.app/settings/publishing-approval?tab=recordTypes",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1033,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:36:56.496Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "لأنواع محددة"
+      },
+      {
+        "n": 2,
+        "label": "الأنواع المشمولة"
+      },
+      {
+        "n": 3,
+        "label": "المراجعون"
+      },
+      {
+        "n": 4,
+        "label": "أنواع لها إعدادات أشد"
+      },
+      {
+        "n": 5,
+        "label": "حفظ"
+      }
+    ]
+  },
+  "ch08-publishing-approval-procedure-cards-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-publishing-approval-procedure-cards-ar.png",
+    "url": "https://test2.kayanos.app/settings/publishing-approval?tab=procedureCards",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1142,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:37:11.472Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إصدارات البطاقات تحتاج اعتماداً"
+      },
+      {
+        "n": 2,
+        "label": "إضافة مرحلة"
+      },
+      {
+        "n": 3,
+        "label": "+ owner"
+      },
+      {
+        "n": 4,
+        "label": "فصل المهام"
+      },
+      {
+        "n": 5,
+        "label": "النشر الطارئ"
+      }
+    ]
+  },
+  "ch08-form-assignments-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-form-assignments-ar.png",
+    "url": "https://test2.kayanos.app/settings/form-assignments",
+    "lang": "ar",
+    "width": 1440,
+    "height": 818,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:37:26.466Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "تتبع هذه الإعدادات 13 خطط نشطة. · 1 منها بخطوات تذكير خاصة ع"
+      },
+      {
+        "n": 2,
+        "label": "التذكير والتصعيد"
+      },
+      {
+        "n": 3,
+        "label": "أيام العمل السبت الأحد الاثنين الثلاثاء الأربعاء الخميس الجم"
+      },
+      {
+        "n": 4,
+        "label": "الحد الافتراضي لكل شخص"
+      },
+      {
+        "n": 5,
+        "label": "حفظ"
+      }
+    ]
+  }
+}

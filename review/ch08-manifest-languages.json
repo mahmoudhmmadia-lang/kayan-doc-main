@@ -1,0 +1,203 @@
+{
+  "ch08-languages-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-languages-ar.png",
+    "url": "https://test2.kayanos.app/settings/languages",
+    "lang": "ar",
+    "width": 1440,
+    "height": 935,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:35:43.880Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إضافة"
+      },
+      {
+        "n": 2,
+        "label": "نشط"
+      },
+      {
+        "n": 3,
+        "label": "غير نشط"
+      },
+      {
+        "n": 4,
+        "label": "المزيد من الخيارات"
+      }
+    ]
+  },
+  "ch08-languages-form-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-languages-form-ar.png",
+    "url": "https://test2.kayanos.app/settings/languages",
+    "lang": "ar",
+    "width": 1440,
+    "height": 935,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:36:01.210Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": ""
+      },
+      {
+        "n": 2,
+        "label": ""
+      },
+      {
+        "n": 3,
+        "label": ""
+      },
+      {
+        "n": 4,
+        "label": "من اليسار إلى اليمين"
+      },
+      {
+        "n": 5,
+        "label": "نشط"
+      }
+    ]
+  },
+  "ch08-currencies-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-currencies-ar.png",
+    "url": "https://test2.kayanos.app/settings/currencies",
+    "lang": "ar",
+    "width": 1440,
+    "height": 738,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:36:16.291Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "العملات 130"
+      },
+      {
+        "n": 2,
+        "label": "إضافة عملة"
+      },
+      {
+        "n": 3,
+        "label": "الأساسية · SYP"
+      },
+      {
+        "n": 4,
+        "label": "سعر السوق ← SYP"
+      },
+      {
+        "n": 5,
+        "label": "الحالة"
+      }
+    ]
+  },
+  "ch08-currencies-rates-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-currencies-rates-ar.png",
+    "url": "https://test2.kayanos.app/settings/currencies?tab=rates",
+    "lang": "ar",
+    "width": 1440,
+    "height": 753,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:36:31.300Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "أسعار الصرف"
+      },
+      {
+        "n": 2,
+        "label": "إضافة سعر"
+      },
+      {
+        "n": 3,
+        "label": "استيراد أسعار"
+      },
+      {
+        "n": 4,
+        "label": "الأزواج · آخر سعر"
+      },
+      {
+        "n": 5,
+        "label": "السجل"
+      }
+    ]
+  },
+  "ch08-currencies-bulletins-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-currencies-bulletins-ar.png",
+    "url": "https://test2.kayanos.app/settings/currencies?tab=bulletins",
+    "lang": "ar",
+    "width": 1440,
+    "height": 476,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:36:46.010Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "النشرات"
+      },
+      {
+        "n": 2,
+        "label": "نشرة جديدة"
+      },
+      {
+        "n": 3,
+        "label": "استيراد نشرة"
+      },
+      {
+        "n": 4,
+        "label": "QA-301/2026"
+      }
+    ]
+  },
+  "ch08-currencies-rate-types-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-currencies-rate-types-ar.png",
+    "url": "https://test2.kayanos.app/settings/currencies?tab=rateTypes",
+    "lang": "ar",
+    "width": 1440,
+    "height": 514,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:37:00.763Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "أنواع الأسعار 3"
+      },
+      {
+        "n": 2,
+        "label": "إضافة نوع سعر"
+      },
+      {
+        "n": 3,
+        "label": "افتراضي"
+      },
+      {
+        "n": 4,
+        "label": "التواتر"
+      }
+    ]
+  },
+  "ch08-currencies-settings-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-currencies-settings-ar.png",
+    "url": "https://test2.kayanos.app/settings/currencies?tab=settings",
+    "lang": "ar",
+    "width": 1440,
+    "height": 723,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:37:15.540Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "العملة الأساسية والتقريب"
+      },
+      {
+        "n": 2,
+        "label": "مقفلة · 9 مبلغاً له مكافئ بـSYP"
+      },
+      {
+        "n": 3,
+        "label": "طريقة التقريب"
+      },
+      {
+        "n": 4,
+        "label": "مرحلة التقريب"
+      }
+    ]
+  }
+}

@@ -2,6 +2,46 @@
 
 الحالات: لم يبدأ · مسودة · قيد المراجعة · معتمد
 
+## Screenshots restored for chapters 7 and 8 — 2026-11-02 — under review
+
+- All 308 chapter 7 and 8 images (136 and 172, both languages) were recaptured from test2. Each image's marker count matches the numbered key in its note (308 checked, 0 mismatches). The normal build, which stops on any missing image, passed.
+- Verification: 20 tests passed, 2 archived print checks skipped; `verify-settings.mjs` 256 cases and `verify-correspondence.mjs` 272 cases passed; chapter overviews for chapters 7 and 8 and section navigation passed. The automated marker test covers the Builder guide only, so chapters 7 and 8 were checked with a separate comparison.
+- Images were sampled, not all opened one by one. Known small issues: `ch07-archive-record` has grey space at the bottom; `ch07-search-filters` shows an empty list; `ch07-paper-intake-queue` uses existing arrival `QA-B2-BULK-4`, whose "Hold ended" chip the note does not mention; `ch07-audit-letterlog` shows the deleted test draft as void.
+- test2 changed since the text was written: some buttons are now links, so a few marker selectors were updated; Settings shows “Add a field” and “Who links a person to a company”, which the notes already use; correspondence settings gained a 16th section, «قواعد فتح المعاملات» / “Case opening rules”, which chapter 7 does not cover yet.
+- test2 data: drafts and a saved view were created for the images and deleted. A cancelled, empty batch `GUIDE-QA test batch` remains, because batches cannot be deleted. Record ids in `shots-ch07-s4.mjs` and `shots-ch07-s5.mjs` were updated.
+- At the user's request, every existing chapter (1–8 and Builder) is under review; none is approved.
+
+## Recovery after a reset — 2026-11-01
+
+- After a reset removed the uncommitted work, the guide was rebuilt on GitHub commit `c08c003`. Chapter 8 text was rebuilt from a full read in the session log plus a replay of the review edits, and it matched the recorded sizes and edit counts exactly. Chapter 7's final text came from the Oct 31 review's full read and matches the recorded line counts.
+
+## Chapter 8 Settings for review — 2026-11-01 — under review
+
+- Overview plus 31 pages in Arabic and English, in the eight groups and order of the `/settings` page, with 172 numbered test2 screenshots (86 per language). One file per group: `chapters/08-settings-<group>.tex`. Check one group without building: `node tools/check-settings-chapter.mjs <group>`.
+- Final verification on the reviewed text: HTML build passed; 20 tests passed, 2 archived print checks skipped; all 8 group checks passed; `tools/verify-settings.mjs` passed 256 browser cases (32 pages × 2 languages × 2 widths × 2 themes) with 0 page errors; chapter 8 overview passed 8 combinations plus no-JavaScript.
+- Earlier the same day, before chapter 8 existed in the site: `verify-correspondence.mjs` passed 272 cases; overviews passed for chapters 1–7; section navigation passed. That clears the open reruns in the chapter 7 entry. The independent review of chapter 7's screenshots and Arabic still has no recorded result.
+- Tool fixes: run browser checks with the dev server stopped, because its rebuilds during a run are the likely cause of the crashes on chapters 1–2 (not confirmed; they did not recur once it was stopped). Chapter 3 was a separate check bug: decoding every full-page image at once crashed the tab, and the check then hung; it now decodes only visible images. Always use `timeout`.
+- Live on test2, and removed afterwards: check category, role (with a permission saved and reopened), unit group and unit, follow-up reason. Nothing else was saved. Shared settings (security, portal, domains, WhatsApp, AI, currencies, approval routes, record keeping) were only opened. So results after Save on those pages are source-backed, not tested. Details per page: `review/ch08-<group>-coverage.md`.
+- Sources: the local checkout was 132 commits behind `origin/production` at the end. Some writers read the local copy. Commits touching Settings looked like shared tooltip and link changes from their titles and file list; this was not reviewed line by line. An independent review checked quoted UI labels against `origin/production`.
+- Not recaptured: small marker clipping or empty space on some images, listed in the final review (`ch08-two-step-en`, `ch08-reports-en`, `ch08-organization-en`, `ch08-units-form-en`, `ch08-api-policy-ar`, `ch08-record-keeping-holds-en`, `ch08-applicant-company-en`).
+- To confirm before release: `ch08-email-signatures-designer` shows the test account's name and phone number; portal images show test2's branding; `ch08-roles-ar` shows a test role with raw JSON as its title; `ch08-whatsapp-link-en` shows an internal account id.
+
+## Chapter statuses and chapter 8 start — 2026-11-01
+
+- Later the same day the user asked that every existing chapter wait for their review, so chapters 1–8 and the Builder guide are all under review («قيد المراجعة»). No chapter is approved. An earlier note marking chapters 1–3 approved no longer applies.
+- The user asked for the next chapter. Settings is chapter 8, the first in the remaining list. The test2 launcher was read live in both languages; it lists more apps than the earlier log or `scripts/seed-entities/apps-config.ts`, so the table now follows the launcher.
+
+## Chapter 7 finished for review — 2026-10-31 — under review
+
+- At the user's request, stages 2–6 of Official Correspondence are written: the chapter now has an overview and 33 pages in Arabic and English (5 preparing, 6 review and approval, 6 registry, 7 organizing and follow-up, 6 setup and final exercise, plus the 3 from stage 1). The directory, sidebar sections, "Chapter at a glance", tests and `tools/verify-correspondence.mjs` were updated. Stage 1 screenshots were recaptured; a sentence on «ملف التوقيع» was added to the tray page.
+- Sources: `origin/production` at `e8db3c79b0`. The local checkout is 1672 commits behind; do not trust `../src` for this chapter without checking.
+- Verification before the final small edits: HTML build passed; 19 tests passed, 2 archived print checks skipped; `verify-correspondence.mjs` passed 272 local browser cases (34 pages × 2 languages × 2 widths × 2 themes); section navigation passed 8 combinations; chapter overviews passed 8 combinations plus no-JavaScript for chapter 7 only. The all-chapter overview run crashed or timed out on chapters 1 and 3 with about 4 GB of memory free, so it is not a pass. `KOS_CHAPTERS=7` limits that script to one chapter.
+- Not yet rerun after the last edits (the approval-page link, recaptured stage 1 images and any review fixes). An independent review of every chapter 7 screenshot and the Arabic text was still running when this entry was written.
+- Live on test2: drafts created, saved, reopened and deleted; dossier and saved-view flows; paper intake refused; empty batch cancelled; all 15 settings sections opened with nothing saved. Nothing left test2.
+- Source-backed only, not executed: review, approval, signing, referral, reply and completion; registering, issuing and dispatch; delegation creation; saved effects of settings; the final exercise end to end. These steps email by default. To test them, the user must accept email to the test account or authorize turning those preferences off.
+- Left on test2, not removable through the app: closed dossier `DOS-2026-0002`, a cancelled empty batch, a refused arrival on the 2026-10-31 report, and this account's acknowledgement on circular ت/2026/002.
+- Details by stage: `review/correspondence-source-coverage.md` and `review/ch07-s{2..6}-integration.md`.
+
 ## Chapter shorthand fixes (chapters 1–3) — 2026-10-28 — under review
 
 - The `+` glyph is replaced by an On/Off switch in the panel header. Turning it on now hides every chapter section and the step bar, leaving the title, the diagram and the pager; a note under the diagram offers "Show the full chapter".
@@ -124,14 +164,17 @@
 | # | الجزء | الملف | الحالة | ملاحظات |
 | --- | --- | --- | --- | --- |
 | 0 | عينة التصميم وإعدادات التنسيق | `design-sample.tex`, `preamble.tex` | معتمد | اعتُمدت 2026-10-13 مع الاختلافات الأربعة المقترحة |
-| 1 | مقدمة سريعة | `chapters/01-introduction.tex` | قيد المراجعة | حُوّلت المخططات إلى أشجار رأسية وأُضيف شرح قراءتها 2026-10-13 |
-| 2 | إنشاء المؤسسة والتهيئة الأولية | `chapters/02-organization-setup.tex` | قيد المراجعة | كُتب 2026-10-13؛ لم يُختبر إنشاء مؤسسة ولا شاشة الاستيراد عملياً |
-| 3 | الموارد البشرية | `chapters/03-hr.tex` | قيد المراجعة | كُتب بإذن المستخدم بعد تحديث المخططات؛ يشمل الورديات والدوام والإجازات والرواتب |
+| 1 | مقدمة سريعة | `chapters/01-introduction.tex` | قيد المراجعة | بانتظار مراجعة المستخدم 2026-11-01 |
+| 2 | إنشاء المؤسسة والتهيئة الأولية | `chapters/02-organization-setup.tex` | قيد المراجعة | بانتظار مراجعة المستخدم 2026-11-01 |
+| 3 | الموارد البشرية | `chapters/03-hr.tex` | قيد المراجعة | بانتظار مراجعة المستخدم 2026-11-01 |
 | 4 | المهام | `chapters/04-tasks.tex` و`chapters/04-tasks-features.tex` | قيد المراجعة | نظرة عامة وعشر صفحات بكل لغة؛ تحقق الويب وقيود اختبار التطبيق موثقة في تحديث 2026-10-17 |
-| 5 | المشاريع والتخطيط | — | لم يبدأ | |
-| 6 | التطبيقات الأخرى (فصل لكل تطبيق) | — | لم يبدأ | |
-| 7 | سيناريوهات مترابطة | — | لم يبدأ | |
-| 8 | قوائم التحقق والمراجع | — | لم يبدأ | |
+| 5 | المشاريع والتخطيط | `chapters/05-projects.tex` و`chapters/05-projects-features.tex` | قيد المراجعة | نظرة عامة و82 صفحة؛ لا تزال صور السجلات المتخصصة واختبار مسارات الاعتماد ناقصة |
+| 6 | أدوات البناء | `chapters/06-builder.tex` و`builder/` | قيد المراجعة | نظرة عامة ودليل مستقل من 8 فصول و101 صفحة |
+| 7 | المراسلات الرسمية | `chapters/07-correspondence.tex` و`chapters/07-correspondence-features.tex` | قيد المراجعة | نظرة عامة و33 صفحة؛ مسارات الاعتماد والإصدار والإرسال مستندة إلى المصدر ولم تُنفذ على test2 |
+| 8 | الإعدادات | `chapters/08-settings.tex` و`chapters/08-settings-*.tex` | قيد المراجعة | نظرة عامة و31 صفحة في ثماني مجموعات؛ أغلب نتائج الحفظ مستندة إلى المصدر لأن الإعدادات المشتركة لم تُغيَّر على test2 |
+| — | التطبيقات الأخرى (فصل لكل تطبيق) | — | لم يبدأ | من مشغّل التطبيقات في test2 بتاريخ 2026-11-01: الطلبات، طلبات الموافقة، البريد الإلكتروني، المحادثات، التقويم، مكتبة الملفات، إدارة المكتبة، خطط التكليف، دليل الإجراءات، تقييماتي، نتائج الذكاء الاصطناعي، الخدمات العامة، العمليات، متفرقات. تطبيقات qa اختبارية، والمرصد الصناعي له دليله المستقل |
+| — | سيناريوهات مترابطة | — | لم يبدأ | |
+| — | قوائم التحقق والمراجع | — | لم يبدأ | |
 | أ | ملحق مراجع المصادر التقنية | `references/sources.tex` | مرجع داخلي فقط | أُزيل من مخرجات الدليل العربية والإنجليزية بطلب المستخدم 2026-10-14 |
 
 ## الدليل بصيغة HTML — 2026-10-14

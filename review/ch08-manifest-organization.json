@@ -1,0 +1,374 @@
+{
+  "ch08-organization-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-organization-ar.png",
+    "url": "https://test2.kayanos.app/settings/organization",
+    "lang": "ar",
+    "width": 1440,
+    "height": 2012,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:32:46.601Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "شعارات التطبيق"
+      },
+      {
+        "n": 2,
+        "label": "اللون الأساسي"
+      },
+      {
+        "n": 3,
+        "label": "اللون الرمادي"
+      },
+      {
+        "n": 4,
+        "label": "صور واجهة الصفحة الرئيسية"
+      },
+      {
+        "n": 5,
+        "label": "حفظ صور الواجهة"
+      }
+    ]
+  },
+  "ch08-organization-info-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-organization-info-ar.png",
+    "url": "https://test2.kayanos.app/settings/organization",
+    "lang": "ar",
+    "width": 1440,
+    "height": 2827,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:33:05.097Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "test2"
+      },
+      {
+        "n": 2,
+        "label": "معلومات المؤسسة"
+      },
+      {
+        "n": 3,
+        "label": "ضوابط الملفات"
+      },
+      {
+        "n": 4,
+        "label": "حفظ ضوابط الملفات"
+      },
+      {
+        "n": 5,
+        "label": "حفظ التغييرات"
+      }
+    ]
+  },
+  "ch08-notifications-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-notifications-ar.png",
+    "url": "https://test2.kayanos.app/settings/notifications",
+    "lang": "ar",
+    "width": 1440,
+    "height": 917,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:33:23.289Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "البحث عن إشعار"
+      },
+      {
+        "n": 2,
+        "label": "البريد"
+      },
+      {
+        "n": 3,
+        "label": ""
+      },
+      {
+        "n": 4,
+        "label": "تم إسناد مهمة: البريد: مفعّل صراحةً"
+      },
+      {
+        "n": 5,
+        "label": "حفظ"
+      }
+    ]
+  },
+  "ch08-export-jobs-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-export-jobs-ar.png",
+    "url": "https://test2.kayanos.app/settings/export-jobs",
+    "lang": "ar",
+    "width": 1440,
+    "height": 621,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:33:40.454Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "تصدير جديد"
+      },
+      {
+        "n": 2,
+        "label": "تحديث"
+      },
+      {
+        "n": 3,
+        "label": "مكتملة"
+      },
+      {
+        "n": 4,
+        "label": "تنتهي في"
+      },
+      {
+        "n": 5,
+        "label": "تنزيل"
+      }
+    ]
+  },
+  "ch08-export-jobs-create-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-export-jobs-create-ar.png",
+    "url": "https://test2.kayanos.app/settings/export-jobs",
+    "lang": "ar",
+    "width": 1440,
+    "height": 782,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:33:59.893Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "بحث"
+      },
+      {
+        "n": 2,
+        "label": "Activity QA cases actqa_cases"
+      },
+      {
+        "n": 3,
+        "label": "تاريخ الإنشاء"
+      },
+      {
+        "n": 4,
+        "label": "مقروء"
+      },
+      {
+        "n": 5,
+        "label": "إنشاء المهمة"
+      }
+    ]
+  },
+  "ch08-reports-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-reports-ar.png",
+    "url": "https://test2.kayanos.app/settings/reports",
+    "lang": "ar",
+    "width": 1440,
+    "height": 733,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:34:17.109Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "لا شيء · سنوات ميلادية"
+      },
+      {
+        "n": 2,
+        "label": "الأساسية · SYP"
+      },
+      {
+        "n": 3,
+        "label": "رابط آمن"
+      },
+      {
+        "n": 4,
+        "label": "10 سنوات"
+      },
+      {
+        "n": 5,
+        "label": "حفظ"
+      }
+    ]
+  },
+  "ch08-organization-en": {
+    "file": "kayanos-guide/figures/screens/ch08-organization-en.png",
+    "url": "https://test2.kayanos.app/settings/organization",
+    "lang": "en",
+    "width": 1440,
+    "height": 2012,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:34:45.797Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Application logos"
+      },
+      {
+        "n": 2,
+        "label": "Primary color"
+      },
+      {
+        "n": 3,
+        "label": "Gray color"
+      },
+      {
+        "n": 4,
+        "label": "Homepage hero images"
+      },
+      {
+        "n": 5,
+        "label": "Save hero images"
+      }
+    ]
+  },
+  "ch08-organization-info-en": {
+    "file": "kayanos-guide/figures/screens/ch08-organization-info-en.png",
+    "url": "https://test2.kayanos.app/settings/organization",
+    "lang": "en",
+    "width": 1440,
+    "height": 2827,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:35:01.347Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "test2"
+      },
+      {
+        "n": 2,
+        "label": "Organization info"
+      },
+      {
+        "n": 3,
+        "label": "File limits"
+      },
+      {
+        "n": 4,
+        "label": "Save file limits"
+      },
+      {
+        "n": 5,
+        "label": "Save Changes"
+      }
+    ]
+  },
+  "ch08-notifications-en": {
+    "file": "kayanos-guide/figures/screens/ch08-notifications-en.png",
+    "url": "https://test2.kayanos.app/settings/notifications",
+    "lang": "en",
+    "width": 1440,
+    "height": 937,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:35:19.300Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Find a notification"
+      },
+      {
+        "n": 2,
+        "label": "Email"
+      },
+      {
+        "n": 3,
+        "label": ""
+      },
+      {
+        "n": 4,
+        "label": "Task assigned: Email: Explicitly enabled"
+      },
+      {
+        "n": 5,
+        "label": "Save"
+      }
+    ]
+  },
+  "ch08-export-jobs-en": {
+    "file": "kayanos-guide/figures/screens/ch08-export-jobs-en.png",
+    "url": "https://test2.kayanos.app/settings/export-jobs",
+    "lang": "en",
+    "width": 1440,
+    "height": 621,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:35:34.248Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "New export"
+      },
+      {
+        "n": 2,
+        "label": "Refresh"
+      },
+      {
+        "n": 3,
+        "label": "Completed"
+      },
+      {
+        "n": 4,
+        "label": "Expires"
+      },
+      {
+        "n": 5,
+        "label": "Download"
+      }
+    ]
+  },
+  "ch08-export-jobs-create-en": {
+    "file": "kayanos-guide/figures/screens/ch08-export-jobs-create-en.png",
+    "url": "https://test2.kayanos.app/settings/export-jobs",
+    "lang": "en",
+    "width": 1440,
+    "height": 782,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:35:52.219Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Search"
+      },
+      {
+        "n": 2,
+        "label": "Activity QA cases actqa_cases"
+      },
+      {
+        "n": 3,
+        "label": "Created"
+      },
+      {
+        "n": 4,
+        "label": "Readable"
+      },
+      {
+        "n": 5,
+        "label": "Create job"
+      }
+    ]
+  },
+  "ch08-reports-en": {
+    "file": "kayanos-guide/figures/screens/ch08-reports-en.png",
+    "url": "https://test2.kayanos.app/settings/reports",
+    "lang": "en",
+    "width": 1440,
+    "height": 748,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:36:07.166Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "None · calendar years"
+      },
+      {
+        "n": 2,
+        "label": "Base · SYP"
+      },
+      {
+        "n": 3,
+        "label": "Secure link"
+      },
+      {
+        "n": 4,
+        "label": "10 years"
+      },
+      {
+        "n": 5,
+        "label": "Save"
+      }
+    ]
+  }
+}

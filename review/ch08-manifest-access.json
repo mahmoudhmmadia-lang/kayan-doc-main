@@ -1,0 +1,176 @@
+{
+  "ch08-roles-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-roles-ar.png",
+    "url": "https://test2.kayanos.app/settings/roles",
+    "lang": "ar",
+    "width": 1440,
+    "height": 2955,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:33:48.969Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إضافة الدور"
+      },
+      {
+        "n": 2,
+        "label": "المنح"
+      },
+      {
+        "n": 3,
+        "label": "المنظمات (19)"
+      },
+      {
+        "n": 4,
+        "label": "Administrator"
+      },
+      {
+        "n": 5,
+        "label": "النماذج (256)"
+      }
+    ]
+  },
+  "ch08-roles-permissions-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-roles-permissions-ar.png",
+    "url": "https://test2.kayanos.app/settings/roles/organizations/api_token_creators",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1391,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:34:10.574Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "عنوان الدور"
+      },
+      {
+        "n": 2,
+        "label": "يمكن اختياره كجمهور"
+      },
+      {
+        "n": 3,
+        "label": "الصلاحيات"
+      },
+      {
+        "n": 4,
+        "label": "بحث"
+      },
+      {
+        "n": 5,
+        "label": "عناوين بريد جهات اتصال دفتر العناوين"
+      }
+    ]
+  },
+  "ch08-roles-assignees-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-roles-assignees-ar.png",
+    "url": "https://test2.kayanos.app/settings/roles/organizations/api_token_creators",
+    "lang": "ar",
+    "width": 1440,
+    "height": 757,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:34:29.044Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "المسؤولين"
+      },
+      {
+        "n": 2,
+        "label": "تعيين الأعضاء والمناصب والعقد"
+      },
+      {
+        "n": 3,
+        "label": "الكيانات المعينة"
+      }
+    ]
+  },
+  "ch08-roles-grants-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-roles-grants-ar.png",
+    "url": "https://test2.kayanos.app/settings/roles/grants",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1163,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:34:46.041Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "لا يُمنح دور إلا لمن يملك صلاحياته"
+      },
+      {
+        "n": 2,
+        "label": "قوائم المنح"
+      },
+      {
+        "n": 3,
+        "label": "تقييد دور"
+      },
+      {
+        "n": 4,
+        "label": "تسجيل المحاولات المرفوضة"
+      }
+    ]
+  },
+  "ch08-two-step-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-two-step-ar.png",
+    "url": "https://test2.kayanos.app/settings/two-step-verification",
+    "lang": "ar",
+    "width": 1440,
+    "height": 733,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:35:02.902Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "اشتراط التحقق بخطوتين"
+      },
+      {
+        "n": 2,
+        "label": "14 يومًا"
+      },
+      {
+        "n": 3,
+        "label": "تطبيق المصادقة (TOTP)"
+      },
+      {
+        "n": 4,
+        "label": "30 يومًا"
+      },
+      {
+        "n": 5,
+        "label": "نسبة التفعيل"
+      }
+    ]
+  },
+  "ch08-sessions-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-sessions-ar.png",
+    "url": "https://test2.kayanos.app/settings/sessions",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1426,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:35:19.884Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "30 يومًا"
+      },
+      {
+        "n": 2,
+        "label": "7 أيام"
+      },
+      {
+        "n": 3,
+        "label": "تنبيهات الأجهزة الجديدة"
+      },
+      {
+        "n": 4,
+        "label": "ما سيختبره الأعضاء"
+      },
+      {
+        "n": 5,
+        "label": "إنهاء جميع جلسات التطبيق"
+      }
+    ]
+  }
+}

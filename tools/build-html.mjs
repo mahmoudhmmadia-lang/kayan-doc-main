@@ -64,10 +64,20 @@ export function buildHtml(root) {
     pages.push(`site/${lang}/{${Object.keys(files).join(',')}}`);
   }
   // Screenshots are shared by both languages; paths are relative to the guide root.
+  const missingShots = [];
   for (const img of used) {
     const src = path.join(root, img);
-    if (!fs.existsSync(src)) throw new Error(`Missing screenshot: ${img}`);
+    if (!fs.existsSync(src)) {
+      // KOS_ALLOW_MISSING_SHOTS=1 builds text-only pages while screenshots are being restored.
+      if (!process.env.KOS_ALLOW_MISSING_SHOTS) throw new Error(`Missing screenshot: ${img}`);
+      missingShots.push(img);
+      continue;
+    }
     fs.copyFileSync(src, path.join(assets, 'screens', path.basename(img)));
+  }
+  if (missingShots.length) {
+    fs.writeFileSync(path.join(root, 'review/missing-screenshots.txt'), missingShots.join('\n') + '\n');
+    console.log(`Missing screenshots: ${missingShots.length} (see review/missing-screenshots.txt)`);
   }
   fs.writeFileSync(path.join(site, 'index.html'), `<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">

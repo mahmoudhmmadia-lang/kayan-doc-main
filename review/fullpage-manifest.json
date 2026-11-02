@@ -9026,9 +9026,9 @@
     "url": "https://test2.kayanos.app/official-correspondence",
     "lang": "en",
     "width": 1440,
-    "height": 1986,
+    "height": 2033,
     "scale": 2,
-    "capturedAt": "2026-10-28T09:23:21.637Z",
+    "capturedAt": "2026-11-01T20:13:29.406Z",
     "marks": [
       {
         "n": 1,
@@ -9049,9 +9049,9 @@
     "url": "https://test2.kayanos.app/official-correspondence/tray?folder=drafts",
     "lang": "en",
     "width": 1440,
-    "height": 1209,
+    "height": 580,
     "scale": 2,
-    "capturedAt": "2026-10-28T09:23:43.598Z",
+    "capturedAt": "2026-11-01T20:13:47.508Z",
     "marks": [
       {
         "n": 1,
@@ -9070,7 +9070,7 @@
     "width": 1440,
     "height": 1097,
     "scale": 2,
-    "capturedAt": "2026-10-28T09:23:59.172Z",
+    "capturedAt": "2026-11-01T20:14:04.834Z",
     "marks": [
       {
         "n": 1,
@@ -9097,7 +9097,7 @@
     "width": 1440,
     "height": 1986,
     "scale": 2,
-    "capturedAt": "2026-10-28T09:22:14.578Z",
+    "capturedAt": "2026-11-01T19:57:53.250Z",
     "marks": [
       {
         "n": 1,
@@ -9120,7 +9120,7 @@
     "width": 1440,
     "height": 1209,
     "scale": 2,
-    "capturedAt": "2026-10-28T09:22:32.089Z",
+    "capturedAt": "2026-11-01T19:58:28.942Z",
     "marks": [
       {
         "n": 1,
@@ -9139,7 +9139,7 @@
     "width": 1440,
     "height": 1097,
     "scale": 2,
-    "capturedAt": "2026-10-28T09:22:47.865Z",
+    "capturedAt": "2026-11-01T19:58:44.289Z",
     "marks": [
       {
         "n": 1,
@@ -9156,6 +9156,8184 @@
       {
         "n": 4,
         "label": "تحديث"
+      }
+    ]
+  },
+  "ch08-organization-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-organization-ar.png",
+    "url": "https://test2.kayanos.app/settings/organization",
+    "lang": "ar",
+    "width": 1440,
+    "height": 2012,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:32:46.601Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "شعارات التطبيق"
+      },
+      {
+        "n": 2,
+        "label": "اللون الأساسي"
+      },
+      {
+        "n": 3,
+        "label": "اللون الرمادي"
+      },
+      {
+        "n": 4,
+        "label": "صور واجهة الصفحة الرئيسية"
+      },
+      {
+        "n": 5,
+        "label": "حفظ صور الواجهة"
+      }
+    ]
+  },
+  "ch08-organization-info-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-organization-info-ar.png",
+    "url": "https://test2.kayanos.app/settings/organization",
+    "lang": "ar",
+    "width": 1440,
+    "height": 2827,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:33:05.097Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "test2"
+      },
+      {
+        "n": 2,
+        "label": "معلومات المؤسسة"
+      },
+      {
+        "n": 3,
+        "label": "ضوابط الملفات"
+      },
+      {
+        "n": 4,
+        "label": "حفظ ضوابط الملفات"
+      },
+      {
+        "n": 5,
+        "label": "حفظ التغييرات"
+      }
+    ]
+  },
+  "ch08-notifications-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-notifications-ar.png",
+    "url": "https://test2.kayanos.app/settings/notifications",
+    "lang": "ar",
+    "width": 1440,
+    "height": 917,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:33:23.289Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "البحث عن إشعار"
+      },
+      {
+        "n": 2,
+        "label": "البريد"
+      },
+      {
+        "n": 3,
+        "label": ""
+      },
+      {
+        "n": 4,
+        "label": "تم إسناد مهمة: البريد: مفعّل صراحةً"
+      },
+      {
+        "n": 5,
+        "label": "حفظ"
+      }
+    ]
+  },
+  "ch08-export-jobs-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-export-jobs-ar.png",
+    "url": "https://test2.kayanos.app/settings/export-jobs",
+    "lang": "ar",
+    "width": 1440,
+    "height": 621,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:33:40.454Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "تصدير جديد"
+      },
+      {
+        "n": 2,
+        "label": "تحديث"
+      },
+      {
+        "n": 3,
+        "label": "مكتملة"
+      },
+      {
+        "n": 4,
+        "label": "تنتهي في"
+      },
+      {
+        "n": 5,
+        "label": "تنزيل"
+      }
+    ]
+  },
+  "ch08-export-jobs-create-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-export-jobs-create-ar.png",
+    "url": "https://test2.kayanos.app/settings/export-jobs",
+    "lang": "ar",
+    "width": 1440,
+    "height": 782,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:33:59.893Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "بحث"
+      },
+      {
+        "n": 2,
+        "label": "Activity QA cases actqa_cases"
+      },
+      {
+        "n": 3,
+        "label": "تاريخ الإنشاء"
+      },
+      {
+        "n": 4,
+        "label": "مقروء"
+      },
+      {
+        "n": 5,
+        "label": "إنشاء المهمة"
+      }
+    ]
+  },
+  "ch08-reports-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-reports-ar.png",
+    "url": "https://test2.kayanos.app/settings/reports",
+    "lang": "ar",
+    "width": 1440,
+    "height": 733,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:34:17.109Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "لا شيء · سنوات ميلادية"
+      },
+      {
+        "n": 2,
+        "label": "الأساسية · SYP"
+      },
+      {
+        "n": 3,
+        "label": "رابط آمن"
+      },
+      {
+        "n": 4,
+        "label": "10 سنوات"
+      },
+      {
+        "n": 5,
+        "label": "حفظ"
+      }
+    ]
+  },
+  "ch08-organization-en": {
+    "file": "kayanos-guide/figures/screens/ch08-organization-en.png",
+    "url": "https://test2.kayanos.app/settings/organization",
+    "lang": "en",
+    "width": 1440,
+    "height": 2012,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:34:45.797Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Application logos"
+      },
+      {
+        "n": 2,
+        "label": "Primary color"
+      },
+      {
+        "n": 3,
+        "label": "Gray color"
+      },
+      {
+        "n": 4,
+        "label": "Homepage hero images"
+      },
+      {
+        "n": 5,
+        "label": "Save hero images"
+      }
+    ]
+  },
+  "ch08-organization-info-en": {
+    "file": "kayanos-guide/figures/screens/ch08-organization-info-en.png",
+    "url": "https://test2.kayanos.app/settings/organization",
+    "lang": "en",
+    "width": 1440,
+    "height": 2827,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:35:01.347Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "test2"
+      },
+      {
+        "n": 2,
+        "label": "Organization info"
+      },
+      {
+        "n": 3,
+        "label": "File limits"
+      },
+      {
+        "n": 4,
+        "label": "Save file limits"
+      },
+      {
+        "n": 5,
+        "label": "Save Changes"
+      }
+    ]
+  },
+  "ch08-notifications-en": {
+    "file": "kayanos-guide/figures/screens/ch08-notifications-en.png",
+    "url": "https://test2.kayanos.app/settings/notifications",
+    "lang": "en",
+    "width": 1440,
+    "height": 937,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:35:19.300Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Find a notification"
+      },
+      {
+        "n": 2,
+        "label": "Email"
+      },
+      {
+        "n": 3,
+        "label": ""
+      },
+      {
+        "n": 4,
+        "label": "Task assigned: Email: Explicitly enabled"
+      },
+      {
+        "n": 5,
+        "label": "Save"
+      }
+    ]
+  },
+  "ch08-export-jobs-en": {
+    "file": "kayanos-guide/figures/screens/ch08-export-jobs-en.png",
+    "url": "https://test2.kayanos.app/settings/export-jobs",
+    "lang": "en",
+    "width": 1440,
+    "height": 621,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:35:34.248Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "New export"
+      },
+      {
+        "n": 2,
+        "label": "Refresh"
+      },
+      {
+        "n": 3,
+        "label": "Completed"
+      },
+      {
+        "n": 4,
+        "label": "Expires"
+      },
+      {
+        "n": 5,
+        "label": "Download"
+      }
+    ]
+  },
+  "ch08-export-jobs-create-en": {
+    "file": "kayanos-guide/figures/screens/ch08-export-jobs-create-en.png",
+    "url": "https://test2.kayanos.app/settings/export-jobs",
+    "lang": "en",
+    "width": 1440,
+    "height": 782,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:35:52.219Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Search"
+      },
+      {
+        "n": 2,
+        "label": "Activity QA cases actqa_cases"
+      },
+      {
+        "n": 3,
+        "label": "Created"
+      },
+      {
+        "n": 4,
+        "label": "Readable"
+      },
+      {
+        "n": 5,
+        "label": "Create job"
+      }
+    ]
+  },
+  "ch08-reports-en": {
+    "file": "kayanos-guide/figures/screens/ch08-reports-en.png",
+    "url": "https://test2.kayanos.app/settings/reports",
+    "lang": "en",
+    "width": 1440,
+    "height": 748,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:36:07.166Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "None · calendar years"
+      },
+      {
+        "n": 2,
+        "label": "Base · SYP"
+      },
+      {
+        "n": 3,
+        "label": "Secure link"
+      },
+      {
+        "n": 4,
+        "label": "10 years"
+      },
+      {
+        "n": 5,
+        "label": "Save"
+      }
+    ]
+  },
+  "ch08-roles-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-roles-ar.png",
+    "url": "https://test2.kayanos.app/settings/roles",
+    "lang": "ar",
+    "width": 1440,
+    "height": 2955,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:33:48.969Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إضافة الدور"
+      },
+      {
+        "n": 2,
+        "label": "المنح"
+      },
+      {
+        "n": 3,
+        "label": "المنظمات (19)"
+      },
+      {
+        "n": 4,
+        "label": "Administrator"
+      },
+      {
+        "n": 5,
+        "label": "النماذج (256)"
+      }
+    ]
+  },
+  "ch08-roles-permissions-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-roles-permissions-ar.png",
+    "url": "https://test2.kayanos.app/settings/roles/organizations/api_token_creators",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1391,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:34:10.574Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "عنوان الدور"
+      },
+      {
+        "n": 2,
+        "label": "يمكن اختياره كجمهور"
+      },
+      {
+        "n": 3,
+        "label": "الصلاحيات"
+      },
+      {
+        "n": 4,
+        "label": "بحث"
+      },
+      {
+        "n": 5,
+        "label": "عناوين بريد جهات اتصال دفتر العناوين"
+      }
+    ]
+  },
+  "ch08-roles-assignees-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-roles-assignees-ar.png",
+    "url": "https://test2.kayanos.app/settings/roles/organizations/api_token_creators",
+    "lang": "ar",
+    "width": 1440,
+    "height": 757,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:34:29.044Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "المسؤولين"
+      },
+      {
+        "n": 2,
+        "label": "تعيين الأعضاء والمناصب والعقد"
+      },
+      {
+        "n": 3,
+        "label": "الكيانات المعينة"
+      }
+    ]
+  },
+  "ch08-roles-grants-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-roles-grants-ar.png",
+    "url": "https://test2.kayanos.app/settings/roles/grants",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1163,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:34:46.041Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "لا يُمنح دور إلا لمن يملك صلاحياته"
+      },
+      {
+        "n": 2,
+        "label": "قوائم المنح"
+      },
+      {
+        "n": 3,
+        "label": "تقييد دور"
+      },
+      {
+        "n": 4,
+        "label": "تسجيل المحاولات المرفوضة"
+      }
+    ]
+  },
+  "ch08-two-step-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-two-step-ar.png",
+    "url": "https://test2.kayanos.app/settings/two-step-verification",
+    "lang": "ar",
+    "width": 1440,
+    "height": 733,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:35:02.902Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "اشتراط التحقق بخطوتين"
+      },
+      {
+        "n": 2,
+        "label": "14 يومًا"
+      },
+      {
+        "n": 3,
+        "label": "تطبيق المصادقة (TOTP)"
+      },
+      {
+        "n": 4,
+        "label": "30 يومًا"
+      },
+      {
+        "n": 5,
+        "label": "نسبة التفعيل"
+      }
+    ]
+  },
+  "ch08-sessions-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-sessions-ar.png",
+    "url": "https://test2.kayanos.app/settings/sessions",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1426,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:35:19.884Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "30 يومًا"
+      },
+      {
+        "n": 2,
+        "label": "7 أيام"
+      },
+      {
+        "n": 3,
+        "label": "تنبيهات الأجهزة الجديدة"
+      },
+      {
+        "n": 4,
+        "label": "ما سيختبره الأعضاء"
+      },
+      {
+        "n": 5,
+        "label": "إنهاء جميع جلسات التطبيق"
+      }
+    ]
+  },
+  "ch08-public-portal-home-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-public-portal-home-ar.png",
+    "url": "https://test2.kayanos.app/settings/public-portal?tab=home",
+    "lang": "ar",
+    "width": 1440,
+    "height": 2324,
+    "scale": 2,
+    "capturedAt": "2026-11-02T07:00:33.554Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الرئيسية"
+      },
+      {
+        "n": 2,
+        "label": "أقسام الصفحة الرئيسية اسحب لإعادة الترتيب أو استخدم الأسهم، "
+      },
+      {
+        "n": 3,
+        "label": "معاينة البوابة"
+      },
+      {
+        "n": 4,
+        "label": "نشر التغييرات"
+      }
+    ]
+  },
+  "ch08-public-portal-identity-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-public-portal-identity-ar.png",
+    "url": "https://test2.kayanos.app/settings/public-portal?tab=identity",
+    "lang": "ar",
+    "width": 1440,
+    "height": 935,
+    "scale": 2,
+    "capturedAt": "2026-11-02T07:00:52.454Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الهوية"
+      },
+      {
+        "n": 2,
+        "label": "استبدال"
+      },
+      {
+        "n": 3,
+        "label": "رفع"
+      },
+      {
+        "n": 4,
+        "label": "مثل ألوان التطبيق"
+      }
+    ]
+  },
+  "ch08-public-portal-contact-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-public-portal-contact-ar.png",
+    "url": "https://test2.kayanos.app/settings/public-portal?tab=contact",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-11-02T07:01:11.326Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "التواصل"
+      },
+      {
+        "n": 2,
+        "label": "الهاتف"
+      },
+      {
+        "n": 3,
+        "label": "إضافة مجموعة"
+      },
+      {
+        "n": 4,
+        "label": "إضافة رابط"
+      }
+    ]
+  },
+  "ch08-public-portal-languages-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-public-portal-languages-ar.png",
+    "url": "https://test2.kayanos.app/settings/public-portal?tab=languages",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-11-02T07:01:30.048Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "اللغات"
+      },
+      {
+        "n": 2,
+        "label": "اللغة الافتراضية"
+      },
+      {
+        "n": 3,
+        "label": "إدارة كيان اللغات"
+      },
+      {
+        "n": 4,
+        "label": "رمز الدولة الافتراضي للهاتف"
+      }
+    ]
+  },
+  "ch08-portal-content-audience-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-portal-content-audience-ar.png",
+    "url": "https://test2.kayanos.app/settings/public-portal/content?tab=audience",
+    "lang": "ar",
+    "width": 1440,
+    "height": 440,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:35:37.998Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الفئات المستهدفة 1"
+      },
+      {
+        "n": 2,
+        "label": "إضافة فئة"
+      },
+      {
+        "n": 3,
+        "label": "إظهار مواطن أو مقيم"
+      },
+      {
+        "n": 4,
+        "label": "تعديل مواطن أو مقيم"
+      }
+    ]
+  },
+  "ch08-portal-content-page-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-portal-content-page-ar.png",
+    "url": "https://test2.kayanos.app/settings/public-portal/content?tab=page",
+    "lang": "ar",
+    "width": 1440,
+    "height": 381,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:35:54.637Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الصفحات 1"
+      },
+      {
+        "n": 2,
+        "label": "إضافة صفحة"
+      },
+      {
+        "n": 3,
+        "label": "إظهار سياسة الخصوصية في التذييل"
+      },
+      {
+        "n": 4,
+        "label": "تعديل سياسة الخصوصية"
+      }
+    ]
+  },
+  "ch08-portal-content-faq-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-portal-content-faq-ar.png",
+    "url": "https://test2.kayanos.app/settings/public-portal/content?tab=faq",
+    "lang": "ar",
+    "width": 1440,
+    "height": 438,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:36:11.516Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الأسئلة الشائعة 2"
+      },
+      {
+        "n": 2,
+        "label": "إضافة سؤال"
+      },
+      {
+        "n": 3,
+        "label": "بحث في الأسئلة الشائعة"
+      },
+      {
+        "n": 4,
+        "label": "تعديل هل يمكنني حفظ الطلب وإكماله لاحقاً؟"
+      }
+    ]
+  },
+  "ch08-portal-content-announcement-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-portal-content-announcement-ar.png",
+    "url": "https://test2.kayanos.app/settings/public-portal/content?tab=announcement",
+    "lang": "ar",
+    "width": 1440,
+    "height": 996,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:36:31.175Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الإعلانات 2"
+      },
+      {
+        "n": 2,
+        "label": "شريط في كل الصفحات يظهر شريطاً أعلى جميع الصفحات"
+      },
+      {
+        "n": 3,
+        "label": ""
+      },
+      {
+        "n": 4,
+        "label": "منشور"
+      }
+    ]
+  },
+  "ch08-applicant-profile-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-applicant-profile-ar.png",
+    "url": "https://test2.kayanos.app/settings/applicant-profile",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1018,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:36:47.991Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "ملف الفرد"
+      },
+      {
+        "n": 2,
+        "label": "إضافة حقل"
+      },
+      {
+        "n": 3,
+        "label": "طريقة التحقق"
+      },
+      {
+        "n": 4,
+        "label": "كما يراها المتعامل"
+      },
+      {
+        "n": 5,
+        "label": "إضافة مستوى"
+      }
+    ]
+  },
+  "ch08-applicant-profile-field-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-applicant-profile-field-ar.png",
+    "url": "https://test2.kayanos.app/settings/applicant-profile",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1229,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:37:07.353Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "حقل جديد في الملف الشخصي"
+      },
+      {
+        "n": 2,
+        "label": "متى يُطلب"
+      },
+      {
+        "n": 3,
+        "label": "مراجعة الموظف"
+      },
+      {
+        "n": 4,
+        "label": "يُقفل الحقل بعد التحقق"
+      }
+    ]
+  },
+  "ch08-applicant-company-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-applicant-company-ar.png",
+    "url": "https://test2.kayanos.app/settings/company-profile",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1512,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:37:23.900Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "ملف الشركة"
+      },
+      {
+        "n": 2,
+        "label": "تفعيل ملفات الشركات"
+      },
+      {
+        "n": 3,
+        "label": "إضافة حقل"
+      },
+      {
+        "n": 4,
+        "label": "كيف يرتبط الشخص بشركة"
+      },
+      {
+        "n": 5,
+        "label": "بانتظار التوثيق (0)"
+      }
+    ]
+  },
+  "ch08-publishing-approval-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-publishing-approval-ar.png",
+    "url": "https://test2.kayanos.app/settings/publishing-approval",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1772,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:36:40.027Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "لكل النماذج"
+      },
+      {
+        "n": 2,
+        "label": "أدخل النص"
+      },
+      {
+        "n": 3,
+        "label": "إضافة مرحلة"
+      },
+      {
+        "n": 4,
+        "label": "القواعد"
+      },
+      {
+        "n": 5,
+        "label": "حفظ"
+      }
+    ]
+  },
+  "ch08-publishing-approval-record-types-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-publishing-approval-record-types-ar.png",
+    "url": "https://test2.kayanos.app/settings/publishing-approval?tab=recordTypes",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1033,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:36:56.496Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "لأنواع محددة"
+      },
+      {
+        "n": 2,
+        "label": "الأنواع المشمولة"
+      },
+      {
+        "n": 3,
+        "label": "المراجعون"
+      },
+      {
+        "n": 4,
+        "label": "أنواع لها إعدادات أشد"
+      },
+      {
+        "n": 5,
+        "label": "حفظ"
+      }
+    ]
+  },
+  "ch08-publishing-approval-procedure-cards-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-publishing-approval-procedure-cards-ar.png",
+    "url": "https://test2.kayanos.app/settings/publishing-approval?tab=procedureCards",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1142,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:37:11.472Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إصدارات البطاقات تحتاج اعتماداً"
+      },
+      {
+        "n": 2,
+        "label": "إضافة مرحلة"
+      },
+      {
+        "n": 3,
+        "label": "+ owner"
+      },
+      {
+        "n": 4,
+        "label": "فصل المهام"
+      },
+      {
+        "n": 5,
+        "label": "النشر الطارئ"
+      }
+    ]
+  },
+  "ch08-form-assignments-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-form-assignments-ar.png",
+    "url": "https://test2.kayanos.app/settings/form-assignments",
+    "lang": "ar",
+    "width": 1440,
+    "height": 818,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:37:26.466Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "تتبع هذه الإعدادات 13 خطط نشطة. · 1 منها بخطوات تذكير خاصة ع"
+      },
+      {
+        "n": 2,
+        "label": "التذكير والتصعيد"
+      },
+      {
+        "n": 3,
+        "label": "أيام العمل السبت الأحد الاثنين الثلاثاء الأربعاء الخميس الجم"
+      },
+      {
+        "n": 4,
+        "label": "الحد الافتراضي لكل شخص"
+      },
+      {
+        "n": 5,
+        "label": "حفظ"
+      }
+    ]
+  },
+  "ch08-ai-availability-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-ai-availability-ar.png",
+    "url": "https://test2.kayanos.app/settings/ai-availability",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1770,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:33:33.506Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "اختيار العضو"
+      },
+      {
+        "n": 2,
+        "label": "متوقف افتراضيًا"
+      },
+      {
+        "n": 3,
+        "label": "تعيين قواعد للمحددين"
+      },
+      {
+        "n": 4,
+        "label": "تعديل القواعد"
+      }
+    ]
+  },
+  "ch08-ai-availability-member-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-ai-availability-member-ar.png",
+    "url": "https://test2.kayanos.app/settings/ai-availability",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1035,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:33:51.145Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "افتراضي"
+      },
+      {
+        "n": 2,
+        "label": "إلغاء"
+      },
+      {
+        "n": 3,
+        "label": "حفظ"
+      }
+    ]
+  },
+  "ch08-ai-limits-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-ai-limits-ar.png",
+    "url": "https://test2.kayanos.app/settings/ai-limits",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1894,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:34:06.623Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "0.00"
+      },
+      {
+        "n": 2,
+        "label": "الاستخدام حسب الميزة"
+      },
+      {
+        "n": 3,
+        "label": "0.00"
+      },
+      {
+        "n": 4,
+        "label": "تطبيق الحد"
+      },
+      {
+        "n": 5,
+        "label": "كل الحالات"
+      }
+    ]
+  },
+  "ch08-ai-availability-en": {
+    "file": "kayanos-guide/figures/screens/ch08-ai-availability-en.png",
+    "url": "https://test2.kayanos.app/settings/ai-availability",
+    "lang": "en",
+    "width": 1440,
+    "height": 1770,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:34:41.913Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Member's choice"
+      },
+      {
+        "n": 2,
+        "label": "Off by default"
+      },
+      {
+        "n": 3,
+        "label": "Set rules for selected"
+      },
+      {
+        "n": 4,
+        "label": "Edit rules"
+      }
+    ]
+  },
+  "ch08-ai-availability-member-en": {
+    "file": "kayanos-guide/figures/screens/ch08-ai-availability-member-en.png",
+    "url": "https://test2.kayanos.app/settings/ai-availability",
+    "lang": "en",
+    "width": 1440,
+    "height": 1035,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:34:59.446Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Default"
+      },
+      {
+        "n": 2,
+        "label": "Cancel"
+      },
+      {
+        "n": 3,
+        "label": "Save"
+      }
+    ]
+  },
+  "ch08-ai-limits-en": {
+    "file": "kayanos-guide/figures/screens/ch08-ai-limits-en.png",
+    "url": "https://test2.kayanos.app/settings/ai-limits",
+    "lang": "en",
+    "width": 1440,
+    "height": 1894,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:35:14.899Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "0.00"
+      },
+      {
+        "n": 2,
+        "label": "Usage by feature"
+      },
+      {
+        "n": 3,
+        "label": "0.00"
+      },
+      {
+        "n": 4,
+        "label": "Apply limit"
+      },
+      {
+        "n": 5,
+        "label": "All statuses"
+      }
+    ]
+  },
+  "ch08-languages-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-languages-ar.png",
+    "url": "https://test2.kayanos.app/settings/languages",
+    "lang": "ar",
+    "width": 1440,
+    "height": 935,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:35:43.880Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إضافة"
+      },
+      {
+        "n": 2,
+        "label": "نشط"
+      },
+      {
+        "n": 3,
+        "label": "غير نشط"
+      },
+      {
+        "n": 4,
+        "label": "المزيد من الخيارات"
+      }
+    ]
+  },
+  "ch08-languages-form-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-languages-form-ar.png",
+    "url": "https://test2.kayanos.app/settings/languages",
+    "lang": "ar",
+    "width": 1440,
+    "height": 935,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:36:01.210Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": ""
+      },
+      {
+        "n": 2,
+        "label": ""
+      },
+      {
+        "n": 3,
+        "label": ""
+      },
+      {
+        "n": 4,
+        "label": "من اليسار إلى اليمين"
+      },
+      {
+        "n": 5,
+        "label": "نشط"
+      }
+    ]
+  },
+  "ch08-currencies-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-currencies-ar.png",
+    "url": "https://test2.kayanos.app/settings/currencies",
+    "lang": "ar",
+    "width": 1440,
+    "height": 738,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:36:16.291Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "العملات 130"
+      },
+      {
+        "n": 2,
+        "label": "إضافة عملة"
+      },
+      {
+        "n": 3,
+        "label": "الأساسية · SYP"
+      },
+      {
+        "n": 4,
+        "label": "سعر السوق ← SYP"
+      },
+      {
+        "n": 5,
+        "label": "الحالة"
+      }
+    ]
+  },
+  "ch08-currencies-rates-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-currencies-rates-ar.png",
+    "url": "https://test2.kayanos.app/settings/currencies?tab=rates",
+    "lang": "ar",
+    "width": 1440,
+    "height": 753,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:36:31.300Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "أسعار الصرف"
+      },
+      {
+        "n": 2,
+        "label": "إضافة سعر"
+      },
+      {
+        "n": 3,
+        "label": "استيراد أسعار"
+      },
+      {
+        "n": 4,
+        "label": "الأزواج · آخر سعر"
+      },
+      {
+        "n": 5,
+        "label": "السجل"
+      }
+    ]
+  },
+  "ch08-currencies-bulletins-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-currencies-bulletins-ar.png",
+    "url": "https://test2.kayanos.app/settings/currencies?tab=bulletins",
+    "lang": "ar",
+    "width": 1440,
+    "height": 476,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:36:46.010Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "النشرات"
+      },
+      {
+        "n": 2,
+        "label": "نشرة جديدة"
+      },
+      {
+        "n": 3,
+        "label": "استيراد نشرة"
+      },
+      {
+        "n": 4,
+        "label": "QA-301/2026"
+      }
+    ]
+  },
+  "ch08-currencies-rate-types-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-currencies-rate-types-ar.png",
+    "url": "https://test2.kayanos.app/settings/currencies?tab=rateTypes",
+    "lang": "ar",
+    "width": 1440,
+    "height": 514,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:37:00.763Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "أنواع الأسعار 3"
+      },
+      {
+        "n": 2,
+        "label": "إضافة نوع سعر"
+      },
+      {
+        "n": 3,
+        "label": "افتراضي"
+      },
+      {
+        "n": 4,
+        "label": "التواتر"
+      }
+    ]
+  },
+  "ch08-currencies-settings-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-currencies-settings-ar.png",
+    "url": "https://test2.kayanos.app/settings/currencies?tab=settings",
+    "lang": "ar",
+    "width": 1440,
+    "height": 723,
+    "scale": 2,
+    "capturedAt": "2026-11-01T15:37:15.540Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "العملة الأساسية والتقريب"
+      },
+      {
+        "n": 2,
+        "label": "مقفلة · 9 مبلغاً له مكافئ بـSYP"
+      },
+      {
+        "n": 3,
+        "label": "طريقة التقريب"
+      },
+      {
+        "n": 4,
+        "label": "مرحلة التقريب"
+      }
+    ]
+  },
+  "ch07-compose-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-compose-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/compose",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1656,
+    "scale": 2,
+    "capturedAt": "2026-11-01T19:50:30.413Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "مراسلة جديدة"
+      },
+      {
+        "n": 2,
+        "label": "النوع"
+      },
+      {
+        "n": 3,
+        "label": "السرية"
+      },
+      {
+        "n": 4,
+        "label": "الأولوية"
+      },
+      {
+        "n": 5,
+        "label": "موضوع الكتاب (5 أحرف على الأقل)"
+      },
+      {
+        "n": 6,
+        "label": ""
+      }
+    ]
+  },
+  "ch07-recipients-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-recipients-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/compose?drafts=pqs7ixwp79wha7gdphfvw",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1769,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:45:22.541Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "مدير الموارد البشرية"
+      },
+      {
+        "n": 2,
+        "label": ""
+      },
+      {
+        "n": 3,
+        "label": "إرسال مباشر دون المرور بالديوان (داخلي، مستلم واحد)"
+      },
+      {
+        "n": 4,
+        "label": "مسار التوجيه المتوقع asd ديوان asd مدير الموارد البشرية"
+      },
+      {
+        "n": 5,
+        "label": "مراحل الاعتماد"
+      }
+    ]
+  },
+  "ch07-attachments-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-attachments-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/compose?drafts=pqs7ixwp79wha7gdphfvw",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1769,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:45:41.525Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إفلات الملفات هنا أو اختيار ملف PDF · Word · Excel · صور · ح"
+      },
+      {
+        "n": 2,
+        "label": "المرفقات"
+      },
+      {
+        "n": 3,
+        "label": "الترويسة"
+      },
+      {
+        "n": 4,
+        "label": "تحرير النص نص الكتاب ملف"
+      }
+    ]
+  },
+  "ch07-outgoing-void-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-outgoing-void-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/registry?tab=outgoing&q=QA-B2+S4",
+    "lang": "ar",
+    "width": 1440,
+    "height": 608,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:00:42.863Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": ""
+      },
+      {
+        "n": 2,
+        "label": "إلغاء القيد"
+      },
+      {
+        "n": 3,
+        "label": "إلغاء"
+      }
+    ]
+  },
+  "ch07-batches-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-batches-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/batches?state=active",
+    "lang": "ar",
+    "width": 1440,
+    "height": 468,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:52:08.395Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "حقيبة جديدة"
+      },
+      {
+        "n": 2,
+        "label": "نشطة"
+      },
+      {
+        "n": 3,
+        "label": "منتهية"
+      },
+      {
+        "n": 4,
+        "label": "المحتوى"
+      }
+    ]
+  },
+  "ch07-batches-new-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-batches-new-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/batches?state=active",
+    "lang": "ar",
+    "width": 1440,
+    "height": 670,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:01:18.809Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": ""
+      },
+      {
+        "n": 2,
+        "label": "القناة"
+      },
+      {
+        "n": 3,
+        "label": "إنشاء الحقيبة"
+      }
+    ]
+  },
+  "ch07-batches-contents-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-batches-contents-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/batches?state=active&batch=zr4m2u23m_w1ib0obs04y",
+    "lang": "ar",
+    "width": 1440,
+    "height": 718,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:52:23.221Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إضافة كتب"
+      },
+      {
+        "n": 2,
+        "label": "تحقق من الأهلية"
+      },
+      {
+        "n": 3,
+        "label": "إرسال الحقيبة"
+      },
+      {
+        "n": 4,
+        "label": "إلغاء المتبقي"
+      }
+    ]
+  },
+  "ch07-circulars-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-circulars-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/circulars",
+    "lang": "ar",
+    "width": 1440,
+    "height": 456,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:02:46.544Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "تعميم جديد"
+      },
+      {
+        "n": 2,
+        "label": "نسبة الإقرار 6%"
+      },
+      {
+        "n": 3,
+        "label": "إقرار"
+      },
+      {
+        "n": 4,
+        "label": "عرض التعميم"
+      }
+    ]
+  },
+  "ch07-settings-policies-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-settings-policies-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/settings",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1108,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:05:43.948Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الأرشيف والطباعة"
+      },
+      {
+        "n": 2,
+        "label": "3 — سري"
+      },
+      {
+        "n": 3,
+        "label": "اعتماد الأرشيف"
+      },
+      {
+        "n": 4,
+        "label": "تغيير الصيغة"
+      },
+      {
+        "n": 5,
+        "label": "رمز التحقق من الموظف"
+      }
+    ]
+  },
+  "ch07-settings-policies-directives-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-settings-policies-directives-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/settings",
+    "lang": "ar",
+    "width": 1440,
+    "height": 821,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:06:01.278Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "التأشيرات الجاهزة"
+      },
+      {
+        "n": 2,
+        "label": "للاطلاع لإجراء اللازم للدراسة وإبداء الرأي للتنفيذ حسب الأصو"
+      },
+      {
+        "n": 3,
+        "label": "استعادة التأشيرات الافتراضية"
+      }
+    ]
+  },
+  "ch07-settings-policies-performance-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-settings-policies-performance-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/settings",
+    "lang": "ar",
+    "width": 1440,
+    "height": 922,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:06:18.819Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الأداء"
+      },
+      {
+        "n": 2,
+        "label": "0.4"
+      },
+      {
+        "n": 3,
+        "label": "80"
+      },
+      {
+        "n": 4,
+        "label": "اختيار وحدة"
+      }
+    ]
+  },
+  "ch07-settings-policies-ai-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-settings-policies-ai-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/settings",
+    "lang": "ar",
+    "width": 1440,
+    "height": 821,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:06:36.202Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الذكاء الاصطناعي"
+      },
+      {
+        "n": 2,
+        "label": "2 — سري محدود"
+      }
+    ]
+  },
+  "ch07-settings-policies-roles-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-settings-policies-roles-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/settings",
+    "lang": "ar",
+    "width": 1440,
+    "height": 821,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:06:53.543Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الأدوار والصلاحيات"
+      },
+      {
+        "n": 2,
+        "label": "إدارة الأدوار"
+      },
+      {
+        "n": 3,
+        "label": "كاتب الديوان"
+      },
+      {
+        "n": 4,
+        "label": "مدير المراسلات"
+      }
+    ]
+  },
+  "ch08-approval-routes-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-approval-routes-ar.png",
+    "url": "https://test2.kayanos.app/settings/approval-routes",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1076,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:12:29.442Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "مسار جديد"
+      },
+      {
+        "n": 2,
+        "label": "استيراد"
+      },
+      {
+        "n": 3,
+        "label": "الإعدادات"
+      },
+      {
+        "n": 4,
+        "label": "قيد الاستخدام 9"
+      },
+      {
+        "n": 5,
+        "label": "الطلبات الجارية"
+      }
+    ]
+  },
+  "ch08-approval-routes-editor-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-approval-routes-editor-ar.png",
+    "url": "https://test2.kayanos.app/settings/approval-routes/ministry_of_finance_budget_approval",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1285,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:13:02.800Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "المراحل"
+      },
+      {
+        "n": 2,
+        "label": "محاكاة"
+      },
+      {
+        "n": 3,
+        "label": "الإصدارات"
+      },
+      {
+        "n": 4,
+        "label": "لا شيء للنشر: المسودة مطابقة للإصدار 1."
+      },
+      {
+        "n": 5,
+        "label": "النمط"
+      }
+    ]
+  },
+  "ch08-approval-routes-settings-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-approval-routes-settings-ar.png",
+    "url": "https://test2.kayanos.app/settings/approval-routes/settings",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1005,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:13:19.631Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "مفعّلة لهذه الجهة"
+      },
+      {
+        "n": 2,
+        "label": "أيام العمل"
+      },
+      {
+        "n": 3,
+        "label": "مجموعة العطل"
+      },
+      {
+        "n": 4,
+        "label": "أطول مدة للتفويض"
+      },
+      {
+        "n": 5,
+        "label": "تحقّق من تاريخ"
+      }
+    ]
+  },
+  "ch07-registry-en": {
+    "file": "kayanos-guide/figures/screens/ch07-registry-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/registry?tab=arrivals",
+    "lang": "en",
+    "width": 1440,
+    "height": 784,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:15:42.253Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Awaiting registration (1)"
+      },
+      {
+        "n": 2,
+        "label": "Awaiting dispatch (8)"
+      },
+      {
+        "n": 3,
+        "label": "Incoming register"
+      },
+      {
+        "n": 4,
+        "label": "Sequence check Sound No gaps or duplicates in 2026"
+      },
+      {
+        "n": 5,
+        "label": "Daily closing report"
+      }
+    ]
+  },
+  "ch07-registry-filters-en": {
+    "file": "kayanos-guide/figures/screens/ch07-registry-filters-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/registry?tab=incoming",
+    "lang": "en",
+    "width": 1440,
+    "height": 1546,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:16:04.291Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Search the register"
+      },
+      {
+        "n": 2,
+        "label": "Filter the register"
+      },
+      {
+        "n": 3,
+        "label": "Print the list"
+      },
+      {
+        "n": 4,
+        "label": "Other registers Other registers"
+      }
+    ]
+  },
+  "ch07-registry-report-en": {
+    "file": "kayanos-guide/figures/screens/ch07-registry-report-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/registry?report=2026-10-01",
+    "lang": "en",
+    "width": 1440,
+    "height": 1264,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:16:35.102Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "10/1/2026"
+      },
+      {
+        "n": 2,
+        "label": "Closed by Mahmoud Masri — 1 Oct 2026 12:18"
+      },
+      {
+        "n": 3,
+        "label": "PDF file"
+      },
+      {
+        "n": 4,
+        "label": "Print"
+      }
+    ]
+  },
+  "ch07-incoming-en": {
+    "file": "kayanos-guide/figures/screens/ch07-incoming-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/registry?tab=pending",
+    "lang": "en",
+    "width": 1440,
+    "height": 1454,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:16:52.732Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Entry type"
+      },
+      {
+        "n": 2,
+        "label": "Expected number: و/2026/0019 — it may change if another entr"
+      },
+      {
+        "n": 3,
+        "label": "Ministry, company or organization"
+      },
+      {
+        "n": 4,
+        "label": "Search for a position or unit…"
+      },
+      {
+        "n": 5,
+        "label": "Register and distribute"
+      }
+    ]
+  },
+  "ch07-paper-intake-en": {
+    "file": "kayanos-guide/figures/screens/ch07-paper-intake-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/registry?tab=pending&intake=paper",
+    "lang": "en",
+    "width": 1440,
+    "height": 1421,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:17:07.841Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Search for a position or unit…"
+      },
+      {
+        "n": 2,
+        "label": "Scan and files"
+      },
+      {
+        "n": 3,
+        "label": "Paper original"
+      },
+      {
+        "n": 4,
+        "label": "Save to awaiting registration"
+      },
+      {
+        "n": 5,
+        "label": "Register now"
+      }
+    ]
+  },
+  "ch07-paper-intake-scan-en": {
+    "file": "kayanos-guide/figures/screens/ch07-paper-intake-scan-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/registry?tab=pending&intake=scan",
+    "lang": "en",
+    "width": 1440,
+    "height": 824,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:17:22.896Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Choose"
+      },
+      {
+        "n": 2,
+        "label": "Expected confidentiality"
+      },
+      {
+        "n": 3,
+        "label": "Or enter the letter's data by hand"
+      },
+      {
+        "n": 4,
+        "label": "Read the letter"
+      }
+    ]
+  },
+  "ch07-paper-intake-queue-en": {
+    "file": "kayanos-guide/figures/screens/ch07-paper-intake-queue-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/registry?tab=arrivals&arrivalQ=QA-B2",
+    "lang": "en",
+    "width": 1440,
+    "height": 784,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:50:34.814Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Paper intake"
+      },
+      {
+        "n": 2,
+        "label": "Arrival actions"
+      },
+      {
+        "n": 3,
+        "label": "Register and distribute"
+      },
+      {
+        "n": 4,
+        "label": "Refuse at the registry"
+      }
+    ]
+  },
+  "ch07-outgoing-dispatch-en": {
+    "file": "kayanos-guide/figures/screens/ch07-outgoing-dispatch-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/registry?tab=pending",
+    "lang": "en",
+    "width": 1440,
+    "height": 1041,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:47:17.355Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Awaiting dispatch (8)"
+      },
+      {
+        "n": 2,
+        "label": "Dispatch batches"
+      },
+      {
+        "n": 3,
+        "label": "Refuse dispatch"
+      },
+      {
+        "n": 4,
+        "label": "Record dispatch"
+      }
+    ]
+  },
+  "ch07-outgoing-dispatch-dialog-en": {
+    "file": "kayanos-guide/figures/screens/ch07-outgoing-dispatch-dialog-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/registry?tab=pending",
+    "lang": "en",
+    "width": 1440,
+    "height": 837,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:18:15.753Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "QA-B2 هيئة الاختبار الأولى"
+      },
+      {
+        "n": 2,
+        "label": "Dispatch channel"
+      },
+      {
+        "n": 3,
+        "label": ""
+      },
+      {
+        "n": 4,
+        "label": "Confirm dispatch"
+      }
+    ]
+  },
+  "ch07-outgoing-entry-menu-en": {
+    "file": "kayanos-guide/figures/screens/ch07-outgoing-entry-menu-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/registry?tab=outgoing&q=QA-B2+S4",
+    "lang": "en",
+    "width": 1440,
+    "height": 705,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:18:38.381Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Correct the entry"
+      },
+      {
+        "n": 2,
+        "label": "Void the entry"
+      }
+    ]
+  },
+  "ch08-languages-en": {
+    "file": "kayanos-guide/figures/screens/ch08-languages-en.png",
+    "url": "https://test2.kayanos.app/settings/languages",
+    "lang": "en",
+    "width": 1440,
+    "height": 935,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:21:03.282Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Add"
+      },
+      {
+        "n": 2,
+        "label": "Active"
+      },
+      {
+        "n": 3,
+        "label": "Inactive"
+      },
+      {
+        "n": 4,
+        "label": "More options"
+      }
+    ]
+  },
+  "ch08-languages-form-en": {
+    "file": "kayanos-guide/figures/screens/ch08-languages-form-en.png",
+    "url": "https://test2.kayanos.app/settings/languages",
+    "lang": "en",
+    "width": 1440,
+    "height": 935,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:21:20.654Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": ""
+      },
+      {
+        "n": 2,
+        "label": ""
+      },
+      {
+        "n": 3,
+        "label": ""
+      },
+      {
+        "n": 4,
+        "label": "LTR"
+      },
+      {
+        "n": 5,
+        "label": "Active"
+      }
+    ]
+  },
+  "ch08-currencies-en": {
+    "file": "kayanos-guide/figures/screens/ch08-currencies-en.png",
+    "url": "https://test2.kayanos.app/settings/currencies",
+    "lang": "en",
+    "width": 1440,
+    "height": 738,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:21:57.653Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Currencies 130"
+      },
+      {
+        "n": 2,
+        "label": "Add currency"
+      },
+      {
+        "n": 3,
+        "label": "Base · SYP"
+      },
+      {
+        "n": 4,
+        "label": "Market → SYP"
+      },
+      {
+        "n": 5,
+        "label": "Status"
+      }
+    ]
+  },
+  "ch08-currencies-rates-en": {
+    "file": "kayanos-guide/figures/screens/ch08-currencies-rates-en.png",
+    "url": "https://test2.kayanos.app/settings/currencies?tab=rates",
+    "lang": "en",
+    "width": 1440,
+    "height": 637,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:22:18.520Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Exchange rates"
+      },
+      {
+        "n": 2,
+        "label": "Add rate"
+      },
+      {
+        "n": 3,
+        "label": "Import rates"
+      },
+      {
+        "n": 4,
+        "label": "Pairs · latest rate"
+      },
+      {
+        "n": 5,
+        "label": "History"
+      }
+    ]
+  },
+  "ch08-currencies-bulletins-en": {
+    "file": "kayanos-guide/figures/screens/ch08-currencies-bulletins-en.png",
+    "url": "https://test2.kayanos.app/settings/currencies?tab=bulletins",
+    "lang": "en",
+    "width": 1440,
+    "height": 476,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:22:41.313Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Bulletins"
+      },
+      {
+        "n": 2,
+        "label": "New bulletin"
+      },
+      {
+        "n": 3,
+        "label": "Import bulletin"
+      },
+      {
+        "n": 4,
+        "label": "QA-301/2026"
+      }
+    ]
+  },
+  "ch08-currencies-rate-types-en": {
+    "file": "kayanos-guide/figures/screens/ch08-currencies-rate-types-en.png",
+    "url": "https://test2.kayanos.app/settings/currencies?tab=rateTypes",
+    "lang": "en",
+    "width": 1440,
+    "height": 514,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:22:56.050Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Rate types 3"
+      },
+      {
+        "n": 2,
+        "label": "Add rate type"
+      },
+      {
+        "n": 3,
+        "label": "default"
+      },
+      {
+        "n": 4,
+        "label": "Frequency"
+      }
+    ]
+  },
+  "ch08-currencies-settings-en": {
+    "file": "kayanos-guide/figures/screens/ch08-currencies-settings-en.png",
+    "url": "https://test2.kayanos.app/settings/currencies?tab=settings",
+    "lang": "en",
+    "width": 1440,
+    "height": 723,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:23:12.884Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Base & rounding"
+      },
+      {
+        "n": 2,
+        "label": "Locked · 9 amounts have SYP equivalents"
+      },
+      {
+        "n": 3,
+        "label": "Rounding mode"
+      },
+      {
+        "n": 4,
+        "label": "Rounding stage"
+      }
+    ]
+  },
+  "ch08-currencies-settings-display-en": {
+    "file": "kayanos-guide/figures/screens/ch08-currencies-settings-display-en.png",
+    "url": "https://test2.kayanos.app/settings/currencies?tab=settings",
+    "lang": "en",
+    "width": 1440,
+    "height": 818,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:23:30.231Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Display"
+      },
+      {
+        "n": 2,
+        "label": "Digits in print"
+      },
+      {
+        "n": 3,
+        "label": "Negative amounts"
+      },
+      {
+        "n": 4,
+        "label": "Preview"
+      }
+    ]
+  },
+  "ch08-currencies-settings-rates-en": {
+    "file": "kayanos-guide/figures/screens/ch08-currencies-settings-rates-en.png",
+    "url": "https://test2.kayanos.app/settings/currencies?tab=settings",
+    "lang": "en",
+    "width": 1440,
+    "height": 810,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:23:47.697Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Rates"
+      },
+      {
+        "n": 2,
+        "label": "Default rate type"
+      },
+      {
+        "n": 3,
+        "label": "Rate of the day"
+      },
+      {
+        "n": 4,
+        "label": "Stale after"
+      }
+    ]
+  },
+  "ch08-currencies-settings-overrides-en": {
+    "file": "kayanos-guide/figures/screens/ch08-currencies-settings-overrides-en.png",
+    "url": "https://test2.kayanos.app/settings/currencies?tab=settings",
+    "lang": "en",
+    "width": 1440,
+    "height": 728,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:24:05.054Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Overrides & expressions"
+      },
+      {
+        "n": 2,
+        "label": "Allow rate overrides"
+      },
+      {
+        "n": 3,
+        "label": "Reason required"
+      }
+    ]
+  },
+  "ch08-public-portal-home-en": {
+    "file": "kayanos-guide/figures/screens/ch08-public-portal-home-en.png",
+    "url": "https://test2.kayanos.app/settings/public-portal?tab=home",
+    "lang": "en",
+    "width": 1440,
+    "height": 2589,
+    "scale": 2,
+    "capturedAt": "2026-11-02T07:00:32.597Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Home"
+      },
+      {
+        "n": 2,
+        "label": "Home page sections Drag to reorder or use the arrows, and hi"
+      },
+      {
+        "n": 3,
+        "label": "Preview portal"
+      },
+      {
+        "n": 4,
+        "label": "Publish changes"
+      }
+    ]
+  },
+  "ch08-public-portal-identity-en": {
+    "file": "kayanos-guide/figures/screens/ch08-public-portal-identity-en.png",
+    "url": "https://test2.kayanos.app/settings/public-portal?tab=identity",
+    "lang": "en",
+    "width": 1440,
+    "height": 935,
+    "scale": 2,
+    "capturedAt": "2026-11-02T07:00:51.369Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Identity"
+      },
+      {
+        "n": 2,
+        "label": "Replace"
+      },
+      {
+        "n": 3,
+        "label": "Upload"
+      },
+      {
+        "n": 4,
+        "label": "Same as the app theme"
+      }
+    ]
+  },
+  "ch08-public-portal-contact-en": {
+    "file": "kayanos-guide/figures/screens/ch08-public-portal-contact-en.png",
+    "url": "https://test2.kayanos.app/settings/public-portal?tab=contact",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-11-02T07:01:10.190Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Contact"
+      },
+      {
+        "n": 2,
+        "label": "Phone"
+      },
+      {
+        "n": 3,
+        "label": "Add a group"
+      },
+      {
+        "n": 4,
+        "label": "Add a link"
+      }
+    ]
+  },
+  "ch08-public-portal-languages-en": {
+    "file": "kayanos-guide/figures/screens/ch08-public-portal-languages-en.png",
+    "url": "https://test2.kayanos.app/settings/public-portal?tab=languages",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-11-02T07:01:28.967Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Languages"
+      },
+      {
+        "n": 2,
+        "label": "Default language"
+      },
+      {
+        "n": 3,
+        "label": "Manage languages"
+      },
+      {
+        "n": 4,
+        "label": "Default phone country code"
+      }
+    ]
+  },
+  "ch08-portal-content-audience-en": {
+    "file": "kayanos-guide/figures/screens/ch08-portal-content-audience-en.png",
+    "url": "https://test2.kayanos.app/settings/public-portal/content?tab=audience",
+    "lang": "en",
+    "width": 1440,
+    "height": 440,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:28:01.564Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Audiences 1"
+      },
+      {
+        "n": 2,
+        "label": "Add audience"
+      },
+      {
+        "n": 3,
+        "label": "Show مواطن أو مقيم"
+      },
+      {
+        "n": 4,
+        "label": "Edit مواطن أو مقيم"
+      }
+    ]
+  },
+  "ch08-portal-content-page-en": {
+    "file": "kayanos-guide/figures/screens/ch08-portal-content-page-en.png",
+    "url": "https://test2.kayanos.app/settings/public-portal/content?tab=page",
+    "lang": "en",
+    "width": 1440,
+    "height": 381,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:28:18.335Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Pages 1"
+      },
+      {
+        "n": 2,
+        "label": "Add page"
+      },
+      {
+        "n": 3,
+        "label": "Show سياسة الخصوصية in the footer"
+      },
+      {
+        "n": 4,
+        "label": "Edit سياسة الخصوصية"
+      }
+    ]
+  },
+  "ch08-portal-content-faq-en": {
+    "file": "kayanos-guide/figures/screens/ch08-portal-content-faq-en.png",
+    "url": "https://test2.kayanos.app/settings/public-portal/content?tab=faq",
+    "lang": "en",
+    "width": 1440,
+    "height": 438,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:28:35.022Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "FAQ 2"
+      },
+      {
+        "n": 2,
+        "label": "Add question"
+      },
+      {
+        "n": 3,
+        "label": "Search FAQ"
+      },
+      {
+        "n": 4,
+        "label": "Edit هل يمكنني حفظ الطلب وإكماله لاحقاً؟"
+      }
+    ]
+  },
+  "ch08-portal-content-announcement-en": {
+    "file": "kayanos-guide/figures/screens/ch08-portal-content-announcement-en.png",
+    "url": "https://test2.kayanos.app/settings/public-portal/content?tab=announcement",
+    "lang": "en",
+    "width": 1440,
+    "height": 996,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:28:54.394Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Announcements 2"
+      },
+      {
+        "n": 2,
+        "label": "Strip on every page Shows as a strip at the top of every pag"
+      },
+      {
+        "n": 3,
+        "label": ""
+      },
+      {
+        "n": 4,
+        "label": "Published"
+      }
+    ]
+  },
+  "ch08-applicant-profile-en": {
+    "file": "kayanos-guide/figures/screens/ch08-applicant-profile-en.png",
+    "url": "https://test2.kayanos.app/settings/applicant-profile",
+    "lang": "en",
+    "width": 1440,
+    "height": 1058,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:29:11.264Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Person"
+      },
+      {
+        "n": 2,
+        "label": "Add field"
+      },
+      {
+        "n": 3,
+        "label": "Verification"
+      },
+      {
+        "n": 4,
+        "label": "As applicants see it"
+      },
+      {
+        "n": 5,
+        "label": "Add level"
+      }
+    ]
+  },
+  "ch08-form-assignments-ladder-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-form-assignments-ladder-ar.png",
+    "url": "https://test2.kayanos.app/settings/form-assignments",
+    "lang": "ar",
+    "width": 1440,
+    "height": 638,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:35:19.250Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "قبل الموعد"
+      },
+      {
+        "n": 2,
+        "label": "الأيام، الخطوة 1"
+      },
+      {
+        "n": 3,
+        "label": "المكلَّف"
+      },
+      {
+        "n": 4,
+        "label": "إضافة خطوة"
+      }
+    ]
+  },
+  "ch08-check-categories-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-check-categories-ar.png",
+    "url": "https://test2.kayanos.app/settings/check-categories",
+    "lang": "ar",
+    "width": 1440,
+    "height": 738,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:35:47.512Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "أدخل النص"
+      },
+      {
+        "n": 2,
+        "label": "اللون"
+      },
+      {
+        "n": 3,
+        "label": "حذف التصنيف"
+      },
+      {
+        "n": 4,
+        "label": "إضافة تصنيف"
+      },
+      {
+        "n": 5,
+        "label": "حفظ"
+      }
+    ]
+  },
+  "ch08-evaluation-templates-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-evaluation-templates-ar.png",
+    "url": "https://test2.kayanos.app/settings/evaluation-templates",
+    "lang": "ar",
+    "width": 1440,
+    "height": 752,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:38:36.413Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "قالب جديد"
+      },
+      {
+        "n": 2,
+        "label": "حزمة المشتريات 4"
+      },
+      {
+        "n": 3,
+        "label": "اعرض الموقوفة"
+      },
+      {
+        "n": 4,
+        "label": "آخر إصدار"
+      },
+      {
+        "n": 5,
+        "label": "إجراءات طلب منحة — مبادرات صغيرة"
+      }
+    ]
+  },
+  "ch08-evaluation-templates-criteria-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-evaluation-templates-criteria-ar.png",
+    "url": "https://test2.kayanos.app/settings/evaluation-templates/tender_technical_goods",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1122,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:38:53.108Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "المعايير"
+      },
+      {
+        "n": 2,
+        "label": "إضافة معيار"
+      },
+      {
+        "n": 3,
+        "label": "إضافة مجموعة"
+      },
+      {
+        "n": 4,
+        "label": "نشر الإصدار 2"
+      }
+    ]
+  },
+  "ch08-evaluation-templates-scoring-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-evaluation-templates-scoring-ar.png",
+    "url": "https://test2.kayanos.app/settings/evaluation-templates/tender_technical_goods",
+    "lang": "ar",
+    "width": 1440,
+    "height": 738,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:39:10.541Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الدرجات"
+      },
+      {
+        "n": 2,
+        "label": "نموذج الدرجات"
+      },
+      {
+        "n": 3,
+        "label": "حد القبول"
+      },
+      {
+        "n": 4,
+        "label": "أحكام الشروط الإلزامية"
+      }
+    ]
+  },
+  "ch08-evaluation-templates-bands-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-evaluation-templates-bands-ar.png",
+    "url": "https://test2.kayanos.app/settings/evaluation-templates/supplier_performance",
+    "lang": "ar",
+    "width": 1440,
+    "height": 719,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:39:28.015Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الفئات"
+      },
+      {
+        "n": 2,
+        "label": "إضافة فئة"
+      },
+      {
+        "n": 3,
+        "label": "عند عدم استيفاء معيار إلزامي"
+      }
+    ]
+  },
+  "ch08-followup-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-followup-ar.png",
+    "url": "https://test2.kayanos.app/settings/followup",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:39:48.635Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "أسباب التعطل"
+      },
+      {
+        "n": 2,
+        "label": "سبب جديد"
+      },
+      {
+        "n": 3,
+        "label": "تعديل الفئات"
+      }
+    ]
+  },
+  "ch08-record-keeping-ledger-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-record-keeping-ledger-ar.png",
+    "url": "https://test2.kayanos.app/settings/record-keeping/ledger",
+    "lang": "ar",
+    "width": 1440,
+    "height": 505,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:41:51.676Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "سلامة السجل الإثباتي"
+      },
+      {
+        "n": 2,
+        "label": "فحص السلسلة"
+      },
+      {
+        "n": 3,
+        "label": "تحقق مجددًا"
+      }
+    ]
+  },
+  "ch08-record-keeping-storage-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-record-keeping-storage-ar.png",
+    "url": "https://test2.kayanos.app/settings/record-keeping/storage",
+    "lang": "ar",
+    "width": 1440,
+    "height": 451,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:42:10.538Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "التخزين والثبات"
+      },
+      {
+        "n": 2,
+        "label": "قفل الكائنات"
+      },
+      {
+        "n": 3,
+        "label": "فحص الثبات"
+      }
+    ]
+  },
+  "ch08-record-keeping-roles-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-record-keeping-roles-ar.png",
+    "url": "https://test2.kayanos.app/settings/record-keeping/roles",
+    "lang": "ar",
+    "width": 1440,
+    "height": 495,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:42:29.432Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "أدوار السجلات"
+      },
+      {
+        "n": 2,
+        "label": "التغيير في الأدوار"
+      },
+      {
+        "n": 3,
+        "label": "مسؤول السجلات"
+      },
+      {
+        "n": 4,
+        "label": "معتمدو الإتلاف"
+      }
+    ]
+  },
+  "ch07-drafts-en": {
+    "file": "kayanos-guide/figures/screens/ch07-drafts-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=drafts&id=d65a06usi2aqx42mvk2qn",
+    "lang": "en",
+    "width": 1440,
+    "height": 1241,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:44:42.902Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Drafts 10"
+      },
+      {
+        "n": 2,
+        "label": "HR — no number — Today 09:41 To: Human Resources Directorate"
+      },
+      {
+        "n": 3,
+        "label": "Continue editing"
+      },
+      {
+        "n": 4,
+        "label": "More actions"
+      }
+    ]
+  },
+  "ch07-circulars-en": {
+    "file": "kayanos-guide/figures/screens/ch07-circulars-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/circulars",
+    "lang": "en",
+    "width": 1440,
+    "height": 477,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:48:35.318Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "New circular"
+      },
+      {
+        "n": 2,
+        "label": "Acknowledged by 6%"
+      },
+      {
+        "n": 3,
+        "label": "Acknowledge"
+      },
+      {
+        "n": 4,
+        "label": "View circular"
+      }
+    ]
+  },
+  "ch07-settings-registry-classifications-en": {
+    "file": "kayanos-guide/figures/screens/ch07-settings-registry-classifications-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/settings",
+    "lang": "en",
+    "width": 1440,
+    "height": 841,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:50:45.677Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Entry classifications"
+      },
+      {
+        "n": 2,
+        "label": "Incoming"
+      },
+      {
+        "n": 3,
+        "label": "New classification"
+      },
+      {
+        "n": 4,
+        "label": "Edit Incoming"
+      }
+    ]
+  },
+  "ch07-settings-templates-en": {
+    "file": "kayanos-guide/figures/screens/ch07-settings-templates-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/settings",
+    "lang": "en",
+    "width": 1440,
+    "height": 1645,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:52:00.446Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "New letterhead"
+      },
+      {
+        "n": 2,
+        "label": "Verification QR code on outgoing letters"
+      },
+      {
+        "n": 3,
+        "label": "Add unit"
+      },
+      {
+        "n": 4,
+        "label": "New stamp"
+      },
+      {
+        "n": 5,
+        "label": "Replace the image"
+      }
+    ]
+  },
+  "ch07-settings-bodies-en": {
+    "file": "kayanos-guide/figures/screens/ch07-settings-bodies-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/settings",
+    "lang": "en",
+    "width": 1440,
+    "height": 1193,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:51:21.156Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "External bodies"
+      },
+      {
+        "n": 2,
+        "label": "New body"
+      },
+      {
+        "n": 3,
+        "label": ""
+      },
+      {
+        "n": 4,
+        "label": "Merge duplicates"
+      }
+    ]
+  },
+  "ch07-settings-bodies-addressing-en": {
+    "file": "kayanos-guide/figures/screens/ch07-settings-bodies-addressing-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/settings",
+    "lang": "en",
+    "width": 1440,
+    "height": 864,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:51:38.712Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Addressing rules"
+      },
+      {
+        "n": 2,
+        "label": "asd - asd Unrestricted Restricted"
+      },
+      {
+        "n": 3,
+        "label": "asd - asd"
+      }
+    ]
+  },
+  "ch07-settings-bodies-forward-en": {
+    "file": "kayanos-guide/figures/screens/ch07-settings-bodies-forward-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/settings",
+    "lang": "en",
+    "width": 1440,
+    "height": 841,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:51:56.202Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Auto-forwarding"
+      },
+      {
+        "n": 2,
+        "label": "New rule"
+      },
+      {
+        "n": 3,
+        "label": "Highest level"
+      },
+      {
+        "n": 4,
+        "label": "Period"
+      },
+      {
+        "n": 5,
+        "label": "Edit the rule of Cycle B4 - cycle-b-004"
+      }
+    ]
+  },
+  "ch07-drafting-review-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-drafting-review-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/drafting",
+    "lang": "ar",
+    "width": 1440,
+    "height": 455,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:32:23.222Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "المُسندة إليّ"
+      },
+      {
+        "n": 2,
+        "label": "التي أسندتُها"
+      },
+      {
+        "n": 3,
+        "label": "بانتظار المراجعة"
+      }
+    ]
+  },
+  "ch07-drafting-review-push-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-drafting-review-push-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=drafts&tab=letter&id=i49tihnlnqpx6jfcee_nz",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1123,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:32:51.120Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "البحث عن منصب أو وحدة…"
+      },
+      {
+        "n": 2,
+        "label": ""
+      },
+      {
+        "n": 3,
+        "label": "مرفقات للمراجِع"
+      },
+      {
+        "n": 4,
+        "label": "دفع للمراجعة"
+      }
+    ]
+  },
+  "ch07-approvals-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-approvals-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=approvals&id=hvgputwlq1fxsn46tkfo1",
+    "lang": "ar",
+    "width": 1440,
+    "height": 825,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:33:11.514Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "بانتظار اعتمادي 4"
+      },
+      {
+        "n": 2,
+        "label": "مسار الاعتماد — دورك الآن"
+      },
+      {
+        "n": 3,
+        "label": "اعتماد وتوقيع"
+      },
+      {
+        "n": 4,
+        "label": "إعادة للتعديل"
+      },
+      {
+        "n": 5,
+        "label": "رفض"
+      }
+    ]
+  },
+  "ch07-reader-route-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-reader-route-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=inbox&id=t5tq2_u2tbo6xwnl54m8a&tab=route",
+    "lang": "ar",
+    "width": 1440,
+    "height": 990,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:33:54.865Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "المسار"
+      }
+    ]
+  },
+  "ch07-reader-signatures-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-reader-signatures-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=inbox&id=t5tq2_u2tbo6xwnl54m8a&tab=signatures",
+    "lang": "ar",
+    "width": 1440,
+    "height": 714,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:34:14.927Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "التواقيع"
+      }
+    ]
+  },
+  "ch07-reader-attachments-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-reader-attachments-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=inbox&id=mln2swcgo7mf3pdqf4z2l&tab=attachments",
+    "lang": "ar",
+    "width": 1440,
+    "height": 709,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:34:35.462Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "المرفقات 1"
+      }
+    ]
+  },
+  "ch08-email-signatures-personal-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-email-signatures-personal-ar.png",
+    "url": "https://test2.kayanos.app/settings/email-signatures?personal=true",
+    "lang": "ar",
+    "width": 1440,
+    "height": 564,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:35:17.915Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "توقيع جديد"
+      },
+      {
+        "n": 2,
+        "label": "افتراضي المؤسسة بدون"
+      },
+      {
+        "n": 3,
+        "label": "افتراضي المؤسسة بدون"
+      }
+    ]
+  },
+  "ch08-short-links-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-short-links-ar.png",
+    "url": "https://test2.kayanos.app/settings/short-link-domains",
+    "lang": "ar",
+    "width": 1440,
+    "height": 526,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:35:35.913Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "links.example.com"
+      },
+      {
+        "n": 2,
+        "label": "إضافة نطاق"
+      },
+      {
+        "n": 3,
+        "label": "قيد الانتظار"
+      },
+      {
+        "n": 4,
+        "label": "تحقق من النطاق"
+      },
+      {
+        "n": 5,
+        "label": "حذف النطاق"
+      }
+    ]
+  },
+  "ch08-email-signatures-designer-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-email-signatures-designer-ar.png",
+    "url": "https://test2.kayanos.app/settings/email-signatures",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1108,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:35:56.474Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": ""
+      },
+      {
+        "n": 2,
+        "label": "الشعار الاسم · عربي وإنجليزي × المسمى الوظيفي × فاصل × هاتف "
+      },
+      {
+        "n": 3,
+        "label": "معاينة باسم"
+      },
+      {
+        "n": 4,
+        "label": "نشر v1…"
+      }
+    ]
+  },
+  "ch08-public-portal-spaces-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-public-portal-spaces-ar.png",
+    "url": "https://test2.kayanos.app/settings/public-portal?tab=spaces",
+    "lang": "ar",
+    "width": 1440,
+    "height": 465,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:36:26.748Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "البوابة العامة"
+      },
+      {
+        "n": 2,
+        "label": "مساحة جديدة"
+      },
+      {
+        "n": 3,
+        "label": "بوابة عملاء QA F10 · QA F10 customers portal"
+      },
+      {
+        "n": 4,
+        "label": "منشورة · الإصدار 9"
+      }
+    ]
+  },
+  "ch07-approvals-return-en": {
+    "file": "kayanos-guide/figures/screens/ch07-approvals-return-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=approvals&id=hvgputwlq1fxsn46tkfo1",
+    "lang": "en",
+    "width": 1440,
+    "height": 1117,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:37:03.578Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": ""
+      },
+      {
+        "n": 2,
+        "label": "Return for changes"
+      }
+    ]
+  },
+  "ch07-approvals-sign-en": {
+    "file": "kayanos-guide/figures/screens/ch07-approvals-sign-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=approvals&id=hvgputwlq1fxsn46tkfo1",
+    "lang": "en",
+    "width": 1440,
+    "height": 1240,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:37:26.913Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Letter number: ص/2026/0016 (expected)"
+      },
+      {
+        "n": 2,
+        "label": "Stamp"
+      },
+      {
+        "n": 3,
+        "label": "Example: No objection — send as per procedure"
+      },
+      {
+        "n": 4,
+        "label": "Approve and sign"
+      }
+    ]
+  },
+  "ch07-reader-en": {
+    "file": "kayanos-guide/figures/screens/ch07-reader-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=inbox&id=t5tq2_u2tbo6xwnl54m8a",
+    "lang": "en",
+    "width": 1440,
+    "height": 1486,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:37:46.594Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Internal memo م/2026/0012 In progress Internal Very urgent"
+      },
+      {
+        "n": 2,
+        "label": "Letter actions"
+      },
+      {
+        "n": 3,
+        "label": "More actions"
+      },
+      {
+        "n": 4,
+        "label": "Letter sections"
+      },
+      {
+        "n": 5,
+        "label": "Completion deadline"
+      }
+    ]
+  },
+  "ch07-referral-en": {
+    "file": "kayanos-guide/figures/screens/ch07-referral-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=inbox&id=t5tq2_u2tbo6xwnl54m8a",
+    "lang": "en",
+    "width": 1440,
+    "height": 1531,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:38:23.755Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Search for a position or unit…"
+      },
+      {
+        "n": 2,
+        "label": "Write your directive…"
+      },
+      {
+        "n": 3,
+        "label": "5 days"
+      },
+      {
+        "n": 4,
+        "label": "Hide earlier notes from the recipients"
+      },
+      {
+        "n": 5,
+        "label": "Refer"
+      }
+    ]
+  },
+  "ch08-roles-grants-en": {
+    "file": "kayanos-guide/figures/screens/ch08-roles-grants-en.png",
+    "url": "https://test2.kayanos.app/settings/roles/grants",
+    "lang": "en",
+    "width": 1440,
+    "height": 1163,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:40:03.327Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "A role is only given by someone who holds its permissions"
+      },
+      {
+        "n": 2,
+        "label": "Grant lists"
+      },
+      {
+        "n": 3,
+        "label": "Limit a role"
+      },
+      {
+        "n": 4,
+        "label": "Log refused attempts"
+      }
+    ]
+  },
+  "ch08-two-step-en": {
+    "file": "kayanos-guide/figures/screens/ch08-two-step-en.png",
+    "url": "https://test2.kayanos.app/settings/two-step-verification",
+    "lang": "en",
+    "width": 1440,
+    "height": 733,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:40:20.275Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Require two-step verification"
+      },
+      {
+        "n": 2,
+        "label": "14 days"
+      },
+      {
+        "n": 3,
+        "label": "Authenticator app (TOTP)"
+      },
+      {
+        "n": 4,
+        "label": "30 days"
+      },
+      {
+        "n": 5,
+        "label": "Enrollment"
+      }
+    ]
+  },
+  "ch08-sessions-en": {
+    "file": "kayanos-guide/figures/screens/ch08-sessions-en.png",
+    "url": "https://test2.kayanos.app/settings/sessions",
+    "lang": "en",
+    "width": 1440,
+    "height": 1446,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:40:37.575Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "30 days"
+      },
+      {
+        "n": 2,
+        "label": "7 days"
+      },
+      {
+        "n": 3,
+        "label": "New-device alerts"
+      },
+      {
+        "n": 4,
+        "label": "What members will experience"
+      },
+      {
+        "n": 5,
+        "label": "Sign out all app sessions"
+      }
+    ]
+  },
+  "ch08-key-audit-en": {
+    "file": "kayanos-guide/figures/screens/ch08-key-audit-en.png",
+    "url": "https://test2.kayanos.app/settings/member-keys/audit-log",
+    "lang": "en",
+    "width": 1440,
+    "height": 715,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:41:15.284Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Member"
+      },
+      {
+        "n": 2,
+        "label": "Refresh"
+      },
+      {
+        "n": 3,
+        "label": "Event"
+      },
+      {
+        "n": 4,
+        "label": "Actor"
+      }
+    ]
+  },
+  "ch08-api-tokens-en": {
+    "file": "kayanos-guide/figures/screens/ch08-api-tokens-en.png",
+    "url": "https://test2.kayanos.app/settings/api",
+    "lang": "en",
+    "width": 1440,
+    "height": 889,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:41:32.262Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Tokens"
+      },
+      {
+        "n": 2,
+        "label": "Create token"
+      },
+      {
+        "n": 3,
+        "label": "My tokens"
+      },
+      {
+        "n": 4,
+        "label": "Organization tokens"
+      },
+      {
+        "n": 5,
+        "label": "Access"
+      }
+    ]
+  },
+  "ch08-api-create-en": {
+    "file": "kayanos-guide/figures/screens/ch08-api-create-en.png",
+    "url": "https://test2.kayanos.app/settings/api",
+    "lang": "en",
+    "width": 1440,
+    "height": 637,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:41:51.881Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Production integration"
+      },
+      {
+        "n": 2,
+        "label": "What the integration does and who runs it"
+      },
+      {
+        "n": 3,
+        "label": "Owner"
+      }
+    ]
+  },
+  "ch08-api-service-accounts-en": {
+    "file": "kayanos-guide/figures/screens/ch08-api-service-accounts-en.png",
+    "url": "https://test2.kayanos.app/settings/api?tab=serviceAccounts",
+    "lang": "en",
+    "width": 1440,
+    "height": 473,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:42:19.849Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Service accounts"
+      },
+      {
+        "n": 2,
+        "label": "New service account"
+      },
+      {
+        "n": 3,
+        "label": "Role"
+      },
+      {
+        "n": 4,
+        "label": "Managers"
+      }
+    ]
+  },
+  "ch08-api-activity-en": {
+    "file": "kayanos-guide/figures/screens/ch08-api-activity-en.png",
+    "url": "https://test2.kayanos.app/settings/api?tab=activity",
+    "lang": "en",
+    "width": 1440,
+    "height": 670,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:42:36.741Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Activity"
+      },
+      {
+        "n": 2,
+        "label": "All requests"
+      },
+      {
+        "n": 3,
+        "label": "Request ID"
+      }
+    ]
+  },
+  "ch08-api-policy-en": {
+    "file": "kayanos-guide/figures/screens/ch08-api-policy-en.png",
+    "url": "https://test2.kayanos.app/settings/api?tab=policy",
+    "lang": "en",
+    "width": 1440,
+    "height": 1410,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:42:53.728Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Enable the public API"
+      },
+      {
+        "n": 2,
+        "label": "Allow personal tokens"
+      },
+      {
+        "n": 3,
+        "label": "Maximum lifetime"
+      },
+      {
+        "n": 4,
+        "label": "Revoke all tokens…"
+      },
+      {
+        "n": 5,
+        "label": "Audit trail"
+      }
+    ]
+  },
+  "ch08-whatsapp-en": {
+    "file": "kayanos-guide/figures/screens/ch08-whatsapp-en.png",
+    "url": "https://test2.kayanos.app/settings/whatsapp-accounts",
+    "lang": "en",
+    "width": 1440,
+    "height": 542,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:43:28.816Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Link WhatsApp"
+      },
+      {
+        "n": 2,
+        "label": "All"
+      },
+      {
+        "n": 3,
+        "label": "Search WhatsApp accounts"
+      },
+      {
+        "n": 4,
+        "label": "Expired 3"
+      },
+      {
+        "n": 5,
+        "label": "Media status"
+      }
+    ]
+  },
+  "ch08-whatsapp-link-en": {
+    "file": "kayanos-guide/figures/screens/ch08-whatsapp-link-en.png",
+    "url": "https://test2.kayanos.app/settings/whatsapp-accounts",
+    "lang": "en",
+    "width": 1440,
+    "height": 542,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:43:51.301Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "QR code"
+      },
+      {
+        "n": 2,
+        "label": "Phone number"
+      },
+      {
+        "n": 3,
+        "label": "WhatsApp"
+      },
+      {
+        "n": 4,
+        "label": "Personal"
+      }
+    ]
+  },
+  "ch08-email-signatures-designer-en": {
+    "file": "kayanos-guide/figures/screens/ch08-email-signatures-designer-en.png",
+    "url": "https://test2.kayanos.app/settings/email-signatures",
+    "lang": "en",
+    "width": 1440,
+    "height": 1106,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:44:14.388Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": ""
+      },
+      {
+        "n": 2,
+        "label": "Logo Name · Arabic + English × Position title × Divider × Wo"
+      },
+      {
+        "n": 3,
+        "label": "Preview as"
+      },
+      {
+        "n": 4,
+        "label": "Publish v1…"
+      }
+    ]
+  },
+  "ch08-public-portal-spaces-en": {
+    "file": "kayanos-guide/figures/screens/ch08-public-portal-spaces-en.png",
+    "url": "https://test2.kayanos.app/settings/public-portal?tab=spaces",
+    "lang": "en",
+    "width": 1440,
+    "height": 465,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:44:47.207Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Public portal"
+      },
+      {
+        "n": 2,
+        "label": "New space"
+      },
+      {
+        "n": 3,
+        "label": "QA F10 customers portal · بوابة عملاء QA F10"
+      },
+      {
+        "n": 4,
+        "label": "Published v9"
+      }
+    ]
+  },
+  "ch08-applicant-profile-field-en": {
+    "file": "kayanos-guide/figures/screens/ch08-applicant-profile-field-en.png",
+    "url": "https://test2.kayanos.app/settings/applicant-profile",
+    "lang": "en",
+    "width": 1440,
+    "height": 1269,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:45:06.693Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "New profile field"
+      },
+      {
+        "n": 2,
+        "label": "When it’s asked for"
+      },
+      {
+        "n": 3,
+        "label": "Staff review"
+      },
+      {
+        "n": 4,
+        "label": "Lock the field after verification"
+      }
+    ]
+  },
+  "ch08-applicant-company-en": {
+    "file": "kayanos-guide/figures/screens/ch08-applicant-company-en.png",
+    "url": "https://test2.kayanos.app/settings/company-profile",
+    "lang": "en",
+    "width": 1440,
+    "height": 1532,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:47:45.111Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Company"
+      },
+      {
+        "n": 2,
+        "label": "Turn on company profiles"
+      },
+      {
+        "n": 3,
+        "label": "Add a field"
+      },
+      {
+        "n": 4,
+        "label": "Who links a person to a company"
+      },
+      {
+        "n": 5,
+        "label": "Awaiting verification (0)"
+      }
+    ]
+  },
+  "ch08-messages-log-en": {
+    "file": "kayanos-guide/figures/screens/ch08-messages-log-en.png",
+    "url": "https://test2.kayanos.app/settings/messages?tab=log",
+    "lang": "en",
+    "width": 1440,
+    "height": 692,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:46:00.228Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Log"
+      },
+      {
+        "n": 2,
+        "label": "Search recipient, record…"
+      },
+      {
+        "n": 3,
+        "label": "Export CSV"
+      },
+      {
+        "n": 4,
+        "label": "Skipped"
+      }
+    ]
+  },
+  "ch07-attachments-file-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-attachments-file-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/compose?drafts=pqs7ixwp79wha7gdphfvw",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1769,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:46:02.730Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "تحرير النص نص الكتاب ملف متغيرات النص غير متاحة مع نص الكتاب"
+      },
+      {
+        "n": 2,
+        "label": "اختيار ملف"
+      },
+      {
+        "n": 3,
+        "label": "يُرجى ترك أعلى الصفحة الأولى (60 مم) وأسفل الصفحة الأخيرة (7"
+      }
+    ]
+  },
+  "ch07-check-save-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-check-save-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/compose?drafts=qxk6em7c_dts1lxlyprv9",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1921,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:46:40.890Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "مديرية التحول الرقمي يُخصَّص عند الاعتماد 02/11/2026 الرقم ي"
+      },
+      {
+        "n": 2,
+        "label": "المسودة محفوظة"
+      },
+      {
+        "n": 3,
+        "label": "فحص الآن"
+      },
+      {
+        "n": 4,
+        "label": "متوسطة يذكر النص مرفقات ولا توجد مرفقات متوسطة احتمال تكرار "
+      },
+      {
+        "n": 5,
+        "label": "حفظ كمسودة"
+      }
+    ]
+  },
+  "ch07-drafts-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-drafts-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=drafts&id=pqs7ixwp79wha7gdphfvw",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1277,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:47:01.472Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "المسودات 10"
+      },
+      {
+        "n": 2,
+        "label": "مم — بلا رقم — اليوم 09:42 إلى: مديرية الموارد البشرية GUIDE"
+      },
+      {
+        "n": 3,
+        "label": "متابعة التحرير"
+      },
+      {
+        "n": 4,
+        "label": "إجراءات أخرى"
+      }
+    ]
+  },
+  "ch07-dossiers-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-dossiers-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/dossiers?state=all",
+    "lang": "ar",
+    "width": 1440,
+    "height": 435,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:02:30.261Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إضبارة جديدة"
+      },
+      {
+        "n": 2,
+        "label": "الكل"
+      },
+      {
+        "n": 3,
+        "label": "بحث في الرقم والعنوان"
+      },
+      {
+        "n": 4,
+        "label": "DOS-2026-0002 GUIDE-QA S5 sample dossier"
+      }
+    ]
+  },
+  "ch07-dossiers-detail-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-dossiers-detail-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/dossiers?state=open&dossier=41b77d06a01740ae9d87673ae543ecc2",
+    "lang": "ar",
+    "width": 1440,
+    "height": 524,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:51:14.291Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "مشاركة"
+      },
+      {
+        "n": 2,
+        "label": "منح اطلاع"
+      },
+      {
+        "n": 3,
+        "label": "إغلاق الإضبارة"
+      },
+      {
+        "n": 4,
+        "label": "م/2026/0020 كتاب رسمي قيد المعالجة 3 تشرين الأول 2026 اختبار"
+      },
+      {
+        "n": 5,
+        "label": "إزالة"
+      }
+    ]
+  },
+  "ch07-delegation-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-delegation-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/delegation",
+    "lang": "ar",
+    "width": 1440,
+    "height": 501,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:02:59.903Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "تفويض جديد"
+      },
+      {
+        "n": 2,
+        "label": "تفويضات ممنوحة لي"
+      },
+      {
+        "n": 3,
+        "label": "تفويضات منحتُها"
+      },
+      {
+        "n": 4,
+        "label": "قواعد التفويض"
+      }
+    ]
+  },
+  "ch07-delegation-form-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-delegation-form-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/delegation",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1146,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:03:17.367Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "البحث عن منصب أو وحدة…"
+      },
+      {
+        "n": 2,
+        "label": "النطاق"
+      },
+      {
+        "n": 3,
+        "label": "الصلاحية"
+      },
+      {
+        "n": 4,
+        "label": "إظهار واردي للمفوَّض إليه عند الإيقاف يرى المفوَّض إليه مراح"
+      },
+      {
+        "n": 5,
+        "label": "من 2‏/11‏/2026 إلى 9‏/11‏/2026"
+      }
+    ]
+  },
+  "ch07-archive-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-archive-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/archive",
+    "lang": "ar",
+    "width": 1440,
+    "height": 785,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:03:34.237Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "عدّادات الأرشيف"
+      },
+      {
+        "n": 2,
+        "label": "بانتظار المراجعة"
+      },
+      {
+        "n": 3,
+        "label": "عوامل التصفية"
+      },
+      {
+        "n": 4,
+        "label": "وثيقة تأمين الممتلكات والمعدات لعام 2027"
+      }
+    ]
+  },
+  "ch07-archive-record-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-archive-record-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/archive?tab=in_approval&letter=n866vvu20_or1_ndnu1dt",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1157,
+    "scale": 2,
+    "capturedAt": "2026-11-02T07:02:44.529Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "السجل التاريخي"
+      },
+      {
+        "n": 2,
+        "label": "اعتماد نهائي"
+      },
+      {
+        "n": 3,
+        "label": "إعادة للاستكمال"
+      },
+      {
+        "n": 4,
+        "label": "رفض"
+      }
+    ]
+  },
+  "ch07-search-views-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-search-views-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=drafts&q=GUIDE-QA+S5",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1105,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:51:29.616Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "بحث… أو ‎@من ‎@رقم ‎@موضوع ‎@إلى ‎@الموظف ‎@الوظيفة"
+      },
+      {
+        "n": 2,
+        "label": "عوامل البحث"
+      },
+      {
+        "n": 3,
+        "label": "فلاتر"
+      },
+      {
+        "n": 4,
+        "label": "GUIDE-QA overdue view"
+      },
+      {
+        "n": 5,
+        "label": "متأخرة"
+      }
+    ]
+  },
+  "ch07-search-filters-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-search-filters-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=drafts&q=GUIDE-QA%20S5",
+    "lang": "ar",
+    "width": 1440,
+    "height": 580,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:04:31.441Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "فلاتر"
+      },
+      {
+        "n": 2,
+        "label": "النوع الكل"
+      },
+      {
+        "n": 3,
+        "label": "حفظ كعرض"
+      },
+      {
+        "n": 4,
+        "label": "تطبيق"
+      }
+    ]
+  },
+  "ch07-performance-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-performance-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/performance?tab=me",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1026,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:04:52.385Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "أدائي"
+      },
+      {
+        "n": 2,
+        "label": "الفترة 7 أيام 30 يوماً 90 يوماً"
+      },
+      {
+        "n": 3,
+        "label": "نقاط أدائي 61 من 100 متوسط الالتزام بالمهل ×0.4 100 الإنتاجي"
+      },
+      {
+        "n": 4,
+        "label": "النشاط"
+      }
+    ]
+  },
+  "ch07-performance-overview-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-performance-overview-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/performance?tab=overview",
+    "lang": "ar",
+    "width": 1440,
+    "height": 2142,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:05:07.468Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "نظرة عامة"
+      },
+      {
+        "n": 2,
+        "label": "الوحدة الأمانة العامة"
+      },
+      {
+        "n": 3,
+        "label": "متأخرة الآن 12 ⁦+12⁩ عن الفترة السابقة"
+      },
+      {
+        "n": 4,
+        "label": "تصدير"
+      }
+    ]
+  },
+  "ch08-email-domains-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-email-domains-ar.png",
+    "url": "https://test2.kayanos.app/settings/email-domains",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1048,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:08:01.439Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "example.com"
+      },
+      {
+        "n": 2,
+        "label": "إضافة نطاق"
+      },
+      {
+        "n": 3,
+        "label": "نشط"
+      },
+      {
+        "n": 4,
+        "label": "تحقق من النطاق"
+      },
+      {
+        "n": 5,
+        "label": "غير موجود"
+      }
+    ]
+  },
+  "ch08-email-signatures-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-email-signatures-ar.png",
+    "url": "https://test2.kayanos.app/settings/email-signatures",
+    "lang": "ar",
+    "width": 1440,
+    "height": 762,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:10:01.788Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "القوالب"
+      },
+      {
+        "n": 2,
+        "label": "قالب جديد"
+      },
+      {
+        "n": 3,
+        "label": "الأعضاء المشمولون 0 / 68"
+      },
+      {
+        "n": 4,
+        "label": "بيانات ناقصة 0مراجعة"
+      }
+    ]
+  },
+  "ch08-email-signatures-assignment-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-email-signatures-assignment-ar.png",
+    "url": "https://test2.kayanos.app/settings/email-signatures",
+    "lang": "ar",
+    "width": 1440,
+    "height": 469,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:10:22.055Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "التعيين"
+      },
+      {
+        "n": 2,
+        "label": "إضافة قاعدة"
+      }
+    ]
+  },
+  "ch08-email-signatures-disclaimer-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-email-signatures-disclaimer-ar.png",
+    "url": "https://test2.kayanos.app/settings/email-signatures",
+    "lang": "ar",
+    "width": 1440,
+    "height": 866,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:10:42.527Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إخلاء المسؤولية"
+      },
+      {
+        "n": 2,
+        "label": "تضمين البريد الداخلي"
+      },
+      {
+        "n": 3,
+        "label": "اتركه فارغاً لتطبيقه على جميع نطاقات المؤسسة."
+      }
+    ]
+  },
+  "ch07-referral-notes-en": {
+    "file": "kayanos-guide/figures/screens/ch07-referral-notes-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=inbox&id=iicq9rd_jc7oaquqwibn7",
+    "lang": "en",
+    "width": 1440,
+    "height": 1524,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:14:18.046Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Margin notes"
+      }
+    ]
+  },
+  "ch07-inquiries-en": {
+    "file": "kayanos-guide/figures/screens/ch07-inquiries-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=inquiries",
+    "lang": "en",
+    "width": 1440,
+    "height": 924,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:14:37.300Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Inquiries"
+      }
+    ]
+  },
+  "ch07-inquiries-ask-en": {
+    "file": "kayanos-guide/figures/screens/ch07-inquiries-ask-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=inbox&id=t5tq2_u2tbo6xwnl54m8a",
+    "lang": "en",
+    "width": 1440,
+    "height": 1162,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:15:00.434Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Search for a position or unit…"
+      },
+      {
+        "n": 2,
+        "label": ""
+      },
+      {
+        "n": 3,
+        "label": "Send the inquiry"
+      }
+    ]
+  },
+  "ch07-inquiries-consult-en": {
+    "file": "kayanos-guide/figures/screens/ch07-inquiries-consult-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=inbox&id=pjyb45qe76nt4kajef0sb&tab=links",
+    "lang": "en",
+    "width": 1440,
+    "height": 1449,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:15:27.153Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "References"
+      },
+      {
+        "n": 2,
+        "label": "Consultation sessions"
+      },
+      {
+        "n": 3,
+        "label": "Open in chat"
+      },
+      {
+        "n": 4,
+        "label": "Session minutes"
+      }
+    ]
+  },
+  "ch07-reply-complete-en": {
+    "file": "kayanos-guide/figures/screens/ch07-reply-complete-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=inbox&id=t5tq2_u2tbo6xwnl54m8a",
+    "lang": "en",
+    "width": 1440,
+    "height": 1078,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:15:52.175Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Done — for filing"
+      },
+      {
+        "n": 2,
+        "label": "Filing"
+      },
+      {
+        "n": 3,
+        "label": "Complete and file"
+      }
+    ]
+  },
+  "ch08-email-domains-en": {
+    "file": "kayanos-guide/figures/screens/ch08-email-domains-en.png",
+    "url": "https://test2.kayanos.app/settings/email-domains",
+    "lang": "en",
+    "width": 1440,
+    "height": 1056,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:21:41.172Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "example.com"
+      },
+      {
+        "n": 2,
+        "label": "Add domain"
+      },
+      {
+        "n": 3,
+        "label": "Active"
+      },
+      {
+        "n": 4,
+        "label": "Verify domain"
+      },
+      {
+        "n": 5,
+        "label": "Missing"
+      }
+    ]
+  },
+  "ch08-email-signatures-en": {
+    "file": "kayanos-guide/figures/screens/ch08-email-signatures-en.png",
+    "url": "https://test2.kayanos.app/settings/email-signatures",
+    "lang": "en",
+    "width": 1440,
+    "height": 762,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:22:41.506Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Templates"
+      },
+      {
+        "n": 2,
+        "label": "New template"
+      },
+      {
+        "n": 3,
+        "label": "Members covered 0 / 68"
+      },
+      {
+        "n": 4,
+        "label": "Missing details 0Review"
+      }
+    ]
+  },
+  "ch08-email-signatures-assignment-en": {
+    "file": "kayanos-guide/figures/screens/ch08-email-signatures-assignment-en.png",
+    "url": "https://test2.kayanos.app/settings/email-signatures",
+    "lang": "en",
+    "width": 1440,
+    "height": 469,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:23:01.723Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Assignment"
+      },
+      {
+        "n": 2,
+        "label": "Add rule"
+      }
+    ]
+  },
+  "ch08-email-signatures-disclaimer-en": {
+    "file": "kayanos-guide/figures/screens/ch08-email-signatures-disclaimer-en.png",
+    "url": "https://test2.kayanos.app/settings/email-signatures",
+    "lang": "en",
+    "width": 1440,
+    "height": 866,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:23:22.123Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Disclaimer"
+      },
+      {
+        "n": 2,
+        "label": "Include internal mail"
+      },
+      {
+        "n": 3,
+        "label": "Leave empty for all organization domains."
+      }
+    ]
+  },
+  "ch08-email-signatures-personal-en": {
+    "file": "kayanos-guide/figures/screens/ch08-email-signatures-personal-en.png",
+    "url": "https://test2.kayanos.app/settings/email-signatures?personal=true",
+    "lang": "en",
+    "width": 1440,
+    "height": 564,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:23:41.938Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "New signature"
+      },
+      {
+        "n": 2,
+        "label": "Organization default None"
+      },
+      {
+        "n": 3,
+        "label": "Organization default None"
+      }
+    ]
+  },
+  "ch08-short-links-en": {
+    "file": "kayanos-guide/figures/screens/ch08-short-links-en.png",
+    "url": "https://test2.kayanos.app/settings/short-link-domains",
+    "lang": "en",
+    "width": 1440,
+    "height": 526,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:24:03.673Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "links.example.com"
+      },
+      {
+        "n": 2,
+        "label": "Add domain"
+      },
+      {
+        "n": 3,
+        "label": "Pending"
+      },
+      {
+        "n": 4,
+        "label": "Verify domain"
+      },
+      {
+        "n": 5,
+        "label": "Delete domain"
+      }
+    ]
+  },
+  "ch08-api-policy-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-api-policy-ar.png",
+    "url": "https://test2.kayanos.app/settings/api?tab=policy",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1390,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:34:55.713Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "تشغيل الواجهة البرمجية العامة"
+      },
+      {
+        "n": 2,
+        "label": "السماح بالرموز الشخصية"
+      },
+      {
+        "n": 3,
+        "label": "أقصى مدة صلاحية"
+      },
+      {
+        "n": 4,
+        "label": "إلغاء كل الرموز…"
+      },
+      {
+        "n": 5,
+        "label": "سجل التدقيق"
+      }
+    ]
+  },
+  "ch08-currencies-settings-display-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-currencies-settings-display-ar.png",
+    "url": "https://test2.kayanos.app/settings/currencies?tab=settings",
+    "lang": "ar",
+    "width": 1440,
+    "height": 818,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:38:02.135Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "العرض"
+      },
+      {
+        "n": 2,
+        "label": "الأرقام في الطباعة"
+      },
+      {
+        "n": 3,
+        "label": "عرض المبالغ السالبة"
+      },
+      {
+        "n": 4,
+        "label": "معاينة"
+      }
+    ]
+  },
+  "ch08-currencies-settings-rates-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-currencies-settings-rates-ar.png",
+    "url": "https://test2.kayanos.app/settings/currencies?tab=settings",
+    "lang": "ar",
+    "width": 1440,
+    "height": 794,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:38:19.549Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الأسعار"
+      },
+      {
+        "n": 2,
+        "label": "نوع السعر الافتراضي"
+      },
+      {
+        "n": 3,
+        "label": "سعر اليوم المعتمد"
+      },
+      {
+        "n": 4,
+        "label": "يُعدّ السعر قديماً بعد"
+      }
+    ]
+  },
+  "ch08-currencies-settings-overrides-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-currencies-settings-overrides-ar.png",
+    "url": "https://test2.kayanos.app/settings/currencies?tab=settings",
+    "lang": "ar",
+    "width": 1440,
+    "height": 728,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:38:36.928Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "التعديل والتعابير"
+      },
+      {
+        "n": 2,
+        "label": "السماح بتعديل السعر"
+      },
+      {
+        "n": 3,
+        "label": "سبب التعديل إلزامي"
+      }
+    ]
+  },
+  "ch08-units-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-units-ar.png",
+    "url": "https://test2.kayanos.app/settings/units",
+    "lang": "ar",
+    "width": 1440,
+    "height": 2183,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:39:32.332Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "مجموعة"
+      },
+      {
+        "n": 2,
+        "label": "إضافة وحدة"
+      },
+      {
+        "n": 3,
+        "label": "إجراءات أخرى"
+      },
+      {
+        "n": 4,
+        "label": "الأساس: كيلوغرام"
+      },
+      {
+        "n": 5,
+        "label": "المزيد من الخيارات"
+      }
+    ]
+  },
+  "ch08-units-group-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-units-group-ar.png",
+    "url": "https://test2.kayanos.app/settings/units",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1032,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:39:50.018Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "تتحول إلى وحدة أساس كل وحدة تتحول إلى الأساس (1 طن = 1000 كي"
+      },
+      {
+        "n": 2,
+        "label": "بلا تحويل مثل عبوة وكرتونة حين لا يُعرف وزنها: كل وحدة تُجمع"
+      },
+      {
+        "n": 3,
+        "label": "وحدة الأساس"
+      },
+      {
+        "n": 4,
+        "label": "حفظ"
+      }
+    ]
+  },
+  "ch08-messages-templates-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-messages-templates-ar.png",
+    "url": "https://test2.kayanos.app/settings/messages?tab=templates&group=applicant",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1455,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:42:34.300Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "أحداث مقدّمي الطلبات 19"
+      },
+      {
+        "n": 2,
+        "label": "مطلوب منك إجراء"
+      },
+      {
+        "n": 3,
+        "label": "رسالة نصية"
+      },
+      {
+        "n": 4,
+        "label": "إدراج متغير"
+      },
+      {
+        "n": 5,
+        "label": "حفظ التغييرات"
+      }
+    ]
+  },
+  "ch08-messages-followup-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-messages-followup-ar.png",
+    "url": "https://test2.kayanos.app/settings/messages?tab=templates&group=followUp",
+    "lang": "ar",
+    "width": 1440,
+    "height": 514,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:42:57.139Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "قوالب المتابعة 1"
+      },
+      {
+        "n": 2,
+        "label": "ابحث في القوالب"
+      },
+      {
+        "n": 3,
+        "label": "قالب جديد"
+      }
+    ]
+  },
+  "ch08-messages-channels-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-messages-channels-ar.png",
+    "url": "https://test2.kayanos.app/settings/messages?tab=channels",
+    "lang": "ar",
+    "width": 1440,
+    "height": 978,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:43:17.505Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "القنوات والقواعد"
+      },
+      {
+        "n": 2,
+        "label": "واتساب · الرقم الرسمي"
+      },
+      {
+        "n": 3,
+        "label": "الرد إلى"
+      },
+      {
+        "n": 4,
+        "label": "ساعات الهدوء"
+      },
+      {
+        "n": 5,
+        "label": "الاحتفاظ بمحتوى الرسائل لمدة"
+      }
+    ]
+  },
+  "ch08-messages-log-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-messages-log-ar.png",
+    "url": "https://test2.kayanos.app/settings/messages?tab=log",
+    "lang": "ar",
+    "width": 1440,
+    "height": 692,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:43:44.814Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "سجل الإرسال"
+      },
+      {
+        "n": 2,
+        "label": "ابحث عن مستلم، سجل…"
+      },
+      {
+        "n": 3,
+        "label": "تصدير CSV"
+      },
+      {
+        "n": 4,
+        "label": "متخطّى"
+      }
+    ]
+  },
+  "ch07-outgoing-void-en": {
+    "file": "kayanos-guide/figures/screens/ch07-outgoing-void-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/registry?tab=outgoing&q=QA-B2+S4",
+    "lang": "en",
+    "width": 1440,
+    "height": 608,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:47:37.967Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": ""
+      },
+      {
+        "n": 2,
+        "label": "Void the entry"
+      },
+      {
+        "n": 3,
+        "label": "Cancel"
+      }
+    ]
+  },
+  "ch07-batches-en": {
+    "file": "kayanos-guide/figures/screens/ch07-batches-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/batches?state=active",
+    "lang": "en",
+    "width": 1440,
+    "height": 468,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:50:49.622Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "New batch"
+      },
+      {
+        "n": 2,
+        "label": "Active"
+      },
+      {
+        "n": 3,
+        "label": "Finished"
+      },
+      {
+        "n": 4,
+        "label": "Contents"
+      }
+    ]
+  },
+  "ch07-batches-new-en": {
+    "file": "kayanos-guide/figures/screens/ch07-batches-new-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/batches?state=active",
+    "lang": "en",
+    "width": 1440,
+    "height": 688,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:48:12.039Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": ""
+      },
+      {
+        "n": 2,
+        "label": "Channel"
+      },
+      {
+        "n": 3,
+        "label": "Create the batch"
+      }
+    ]
+  },
+  "ch07-batches-contents-en": {
+    "file": "kayanos-guide/figures/screens/ch07-batches-contents-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/batches?state=active&batch=zr4m2u23m_w1ib0obs04y",
+    "lang": "en",
+    "width": 1440,
+    "height": 718,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:51:04.390Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Add letters"
+      },
+      {
+        "n": 2,
+        "label": "Check eligibility"
+      },
+      {
+        "n": 3,
+        "label": "Send the batch"
+      },
+      {
+        "n": 4,
+        "label": "Cancel the rest"
+      }
+    ]
+  },
+  "ch07-settings-types-en": {
+    "file": "kayanos-guide/figures/screens/ch07-settings-types-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/settings",
+    "lang": "en",
+    "width": 1440,
+    "height": 969,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:50:32.401Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Letter types"
+      },
+      {
+        "n": 2,
+        "label": "Add type"
+      },
+      {
+        "n": 3,
+        "label": "Approval"
+      },
+      {
+        "n": 4,
+        "label": "Route"
+      },
+      {
+        "n": 5,
+        "label": "Edit Official letter"
+      }
+    ]
+  },
+  "ch07-settings-types-calendar-en": {
+    "file": "kayanos-guide/figures/screens/ch07-settings-types-calendar-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/settings",
+    "lang": "en",
+    "width": 1440,
+    "height": 1482,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:50:49.929Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Deadlines and holidays"
+      },
+      {
+        "n": 2,
+        "label": "Add a policy"
+      },
+      {
+        "n": 3,
+        "label": "Sunday"
+      },
+      {
+        "n": 4,
+        "label": "Manage holidays"
+      },
+      {
+        "n": 5,
+        "label": "Save working days and holidays"
+      }
+    ]
+  },
+  "ch07-settings-types-numbering-en": {
+    "file": "kayanos-guide/figures/screens/ch07-settings-types-numbering-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/settings",
+    "lang": "en",
+    "width": 1440,
+    "height": 1341,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:51:07.713Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Numbering"
+      },
+      {
+        "n": 2,
+        "label": "و/{YYYY}/{####}"
+      },
+      {
+        "n": 3,
+        "label": "و/2026/0019"
+      },
+      {
+        "n": 4,
+        "label": "Edit the Incoming pattern"
+      }
+    ]
+  },
+  "ch07-settings-registry-en": {
+    "file": "kayanos-guide/figures/screens/ch07-settings-registry-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/settings",
+    "lang": "en",
+    "width": 1440,
+    "height": 878,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:51:25.141Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Registry offices"
+      },
+      {
+        "n": 2,
+        "label": "Link a mailbox"
+      },
+      {
+        "n": 3,
+        "label": "Manual book"
+      },
+      {
+        "n": 4,
+        "label": "Sign registry acts electronically"
+      },
+      {
+        "n": 5,
+        "label": "Add office"
+      }
+    ]
+  },
+  "ch07-settings-registry-fields-en": {
+    "file": "kayanos-guide/figures/screens/ch07-settings-registry-fields-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/settings",
+    "lang": "en",
+    "width": 1440,
+    "height": 841,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:51:42.642Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Register fields"
+      },
+      {
+        "n": 2,
+        "label": "Incoming"
+      },
+      {
+        "n": 3,
+        "label": "New field"
+      },
+      {
+        "n": 4,
+        "label": "Edit Sending party"
+      }
+    ]
+  },
+  "ch07-approvals-return-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-approvals-return-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=approvals&id=hvgputwlq1fxsn46tkfo1",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1107,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:32:31.344Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": ""
+      },
+      {
+        "n": 2,
+        "label": "إعادة للتعديل"
+      }
+    ]
+  },
+  "ch07-approvals-sign-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-approvals-sign-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=approvals&id=hvgputwlq1fxsn46tkfo1",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1230,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:32:55.529Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "رقم الكتاب: ص/2026/0016 (متوقع)"
+      },
+      {
+        "n": 2,
+        "label": "الختم"
+      },
+      {
+        "n": 3,
+        "label": "مثال: لا مانع — يُرسل حسب الأصول"
+      },
+      {
+        "n": 4,
+        "label": "اعتماد وتوقيع"
+      }
+    ]
+  },
+  "ch07-reader-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-reader-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=inbox&id=t5tq2_u2tbo6xwnl54m8a",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1466,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:33:16.236Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "مذكرة داخلية م/2026/0012 قيد المعالجة داخلي عاجل جداً"
+      },
+      {
+        "n": 2,
+        "label": "إجراءات المراسلة"
+      },
+      {
+        "n": 3,
+        "label": "إجراءات أخرى"
+      },
+      {
+        "n": 4,
+        "label": "أقسام المراسلة"
+      },
+      {
+        "n": 5,
+        "label": "مهلة الإنجاز"
+      }
+    ]
+  },
+  "ch07-referral-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-referral-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=inbox&id=t5tq2_u2tbo6xwnl54m8a",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1514,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:34:01.789Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "البحث عن منصب أو وحدة…"
+      },
+      {
+        "n": 2,
+        "label": "نص التوجيه…"
+      },
+      {
+        "n": 3,
+        "label": "5 أيام"
+      },
+      {
+        "n": 4,
+        "label": "إخفاء الحواشي السابقة عن المحال إليهم"
+      },
+      {
+        "n": 5,
+        "label": "إحالة"
+      }
+    ]
+  },
+  "ch08-whatsapp-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-whatsapp-ar.png",
+    "url": "https://test2.kayanos.app/settings/whatsapp-accounts",
+    "lang": "ar",
+    "width": 1440,
+    "height": 542,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:35:50.143Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "ربط WhatsApp"
+      },
+      {
+        "n": 2,
+        "label": "الكل"
+      },
+      {
+        "n": 3,
+        "label": "ابحث في حسابات WhatsApp"
+      },
+      {
+        "n": 4,
+        "label": "منتهي الصلاحية 3"
+      },
+      {
+        "n": 5,
+        "label": "حالة الوسائط"
+      }
+    ]
+  },
+  "ch08-whatsapp-link-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-whatsapp-link-ar.png",
+    "url": "https://test2.kayanos.app/settings/whatsapp-accounts",
+    "lang": "ar",
+    "width": 1440,
+    "height": 542,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:36:12.023Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "رمز QR"
+      },
+      {
+        "n": 2,
+        "label": "رقم الهاتف"
+      },
+      {
+        "n": 3,
+        "label": "WhatsApp"
+      },
+      {
+        "n": 4,
+        "label": "شخصي"
+      }
+    ]
+  },
+  "ch07-drafting-review-en": {
+    "file": "kayanos-guide/figures/screens/ch07-drafting-review-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/drafting",
+    "lang": "en",
+    "width": 1440,
+    "height": 455,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:36:42.824Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Assigned to me"
+      },
+      {
+        "n": 2,
+        "label": "Assigned by me"
+      },
+      {
+        "n": 3,
+        "label": "Pending"
+      }
+    ]
+  },
+  "ch07-drafting-review-push-en": {
+    "file": "kayanos-guide/figures/screens/ch07-drafting-review-push-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=drafts&tab=letter&id=i49tihnlnqpx6jfcee_nz",
+    "lang": "en",
+    "width": 1440,
+    "height": 1123,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:37:09.524Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Search for a position or unit…"
+      },
+      {
+        "n": 2,
+        "label": ""
+      },
+      {
+        "n": 3,
+        "label": "Files for the reviewer"
+      },
+      {
+        "n": 4,
+        "label": "Push for review"
+      }
+    ]
+  },
+  "ch07-approvals-en": {
+    "file": "kayanos-guide/figures/screens/ch07-approvals-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=approvals&id=hvgputwlq1fxsn46tkfo1",
+    "lang": "en",
+    "width": 1440,
+    "height": 845,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:37:29.173Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Awaiting my approval 4"
+      },
+      {
+        "n": 2,
+        "label": "Approval route — your turn now"
+      },
+      {
+        "n": 3,
+        "label": "Approve and sign"
+      },
+      {
+        "n": 4,
+        "label": "Return for changes"
+      },
+      {
+        "n": 5,
+        "label": "Reject"
+      }
+    ]
+  },
+  "ch07-reader-route-en": {
+    "file": "kayanos-guide/figures/screens/ch07-reader-route-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=inbox&id=t5tq2_u2tbo6xwnl54m8a&tab=route",
+    "lang": "en",
+    "width": 1440,
+    "height": 1010,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:38:01.316Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Route"
+      }
+    ]
+  },
+  "ch07-reader-signatures-en": {
+    "file": "kayanos-guide/figures/screens/ch07-reader-signatures-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=inbox&id=t5tq2_u2tbo6xwnl54m8a&tab=signatures",
+    "lang": "en",
+    "width": 1440,
+    "height": 790,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:38:20.571Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Signatures"
+      }
+    ]
+  },
+  "ch07-reader-attachments-en": {
+    "file": "kayanos-guide/figures/screens/ch07-reader-attachments-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=inbox&id=mln2swcgo7mf3pdqf4z2l&tab=attachments",
+    "lang": "en",
+    "width": 1440,
+    "height": 729,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:38:39.768Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Attachments 1"
+      }
+    ]
+  },
+  "ch08-roles-en": {
+    "file": "kayanos-guide/figures/screens/ch08-roles-en.png",
+    "url": "https://test2.kayanos.app/settings/roles",
+    "lang": "en",
+    "width": 1440,
+    "height": 3078,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:39:13.216Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Add Role"
+      },
+      {
+        "n": 2,
+        "label": "Grants"
+      },
+      {
+        "n": 3,
+        "label": "Organizations (22)"
+      },
+      {
+        "n": 4,
+        "label": "Administrator"
+      },
+      {
+        "n": 5,
+        "label": "Forms (256)"
+      }
+    ]
+  },
+  "ch08-roles-permissions-en": {
+    "file": "kayanos-guide/figures/screens/ch08-roles-permissions-en.png",
+    "url": "https://test2.kayanos.app/settings/roles/organizations/api_token_creators",
+    "lang": "en",
+    "width": 1440,
+    "height": 1391,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:39:40.972Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Role Title"
+      },
+      {
+        "n": 2,
+        "label": "Can be picked as an audience"
+      },
+      {
+        "n": 3,
+        "label": "Permissions"
+      },
+      {
+        "n": 4,
+        "label": "Search"
+      },
+      {
+        "n": 5,
+        "label": "Address Book Contact Emails"
+      }
+    ]
+  },
+  "ch08-roles-assignees-en": {
+    "file": "kayanos-guide/figures/screens/ch08-roles-assignees-en.png",
+    "url": "https://test2.kayanos.app/settings/roles/organizations/api_token_creators",
+    "lang": "en",
+    "width": 1440,
+    "height": 757,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:40:00.567Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Assignees"
+      },
+      {
+        "n": 2,
+        "label": "Assign members, positions, nodes"
+      },
+      {
+        "n": 3,
+        "label": "Assigned Entities"
+      }
+    ]
+  },
+  "ch08-member-keys-en": {
+    "file": "kayanos-guide/figures/screens/ch08-member-keys-en.png",
+    "url": "https://test2.kayanos.app/settings/member-keys",
+    "lang": "en",
+    "width": 1440,
+    "height": 410,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:43:31.686Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Member"
+      },
+      {
+        "n": 2,
+        "label": "Refresh"
+      },
+      {
+        "n": 3,
+        "label": "Active"
+      },
+      {
+        "n": 4,
+        "label": "Revoke"
+      }
+    ]
+  },
+  "ch08-key-enrollments-en": {
+    "file": "kayanos-guide/figures/screens/ch08-key-enrollments-en.png",
+    "url": "https://test2.kayanos.app/settings/member-keys/enrollments",
+    "lang": "en",
+    "width": 1440,
+    "height": 382,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:43:46.575Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Member"
+      },
+      {
+        "n": 2,
+        "label": "Create"
+      },
+      {
+        "n": 3,
+        "label": "Tokens expire after 15 minutes and can only be used once by "
+      }
+    ]
+  },
+  "ch08-key-member-en": {
+    "file": "kayanos-guide/figures/screens/ch08-key-member-en.png",
+    "url": "https://test2.kayanos.app/signature-management",
+    "lang": "en",
+    "width": 1440,
+    "height": 611,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:44:01.438Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Signature Management"
+      },
+      {
+        "n": 2,
+        "label": "Create Signature"
+      }
+    ]
+  },
+  "ch08-units-en": {
+    "file": "kayanos-guide/figures/screens/ch08-units-en.png",
+    "url": "https://test2.kayanos.app/settings/units",
+    "lang": "en",
+    "width": 1440,
+    "height": 2203,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:44:31.932Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Group"
+      },
+      {
+        "n": 2,
+        "label": "Add unit"
+      },
+      {
+        "n": 3,
+        "label": "More actions"
+      },
+      {
+        "n": 4,
+        "label": "Base: kg"
+      },
+      {
+        "n": 5,
+        "label": "More options"
+      }
+    ]
+  },
+  "ch08-units-form-en": {
+    "file": "kayanos-guide/figures/screens/ch08-units-form-en.png",
+    "url": "https://test2.kayanos.app/settings/units",
+    "lang": "en",
+    "width": 1440,
+    "height": 1052,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:44:49.487Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Symbol"
+      },
+      {
+        "n": 2,
+        "label": "Key"
+      },
+      {
+        "n": 3,
+        "label": "Conversion"
+      },
+      {
+        "n": 4,
+        "label": "Decimal places"
+      },
+      {
+        "n": 5,
+        "label": "Save"
+      }
+    ]
+  },
+  "ch08-units-group-en": {
+    "file": "kayanos-guide/figures/screens/ch08-units-group-en.png",
+    "url": "https://test2.kayanos.app/settings/units",
+    "lang": "en",
+    "width": 1440,
+    "height": 1052,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:45:07.094Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Converts to a base unit Each unit converts to the base (1 to"
+      },
+      {
+        "n": 2,
+        "label": "No conversion Like packs and cartons whose weight isn’t know"
+      },
+      {
+        "n": 3,
+        "label": "Base unit"
+      },
+      {
+        "n": 4,
+        "label": "Save"
+      }
+    ]
+  },
+  "ch08-messages-templates-en": {
+    "file": "kayanos-guide/figures/screens/ch08-messages-templates-en.png",
+    "url": "https://test2.kayanos.app/settings/messages?tab=templates&group=applicant",
+    "lang": "en",
+    "width": 1440,
+    "height": 1507,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:45:36.156Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Applicant events 19"
+      },
+      {
+        "n": 2,
+        "label": "Action needed from you"
+      },
+      {
+        "n": 3,
+        "label": "SMS"
+      },
+      {
+        "n": 4,
+        "label": "Insert a variable"
+      },
+      {
+        "n": 5,
+        "label": "Save changes"
+      }
+    ]
+  },
+  "ch08-messages-followup-en": {
+    "file": "kayanos-guide/figures/screens/ch08-messages-followup-en.png",
+    "url": "https://test2.kayanos.app/settings/messages?tab=templates&group=followUp",
+    "lang": "en",
+    "width": 1440,
+    "height": 514,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:45:59.052Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Follow-up templates 1"
+      },
+      {
+        "n": 2,
+        "label": "Search templates"
+      },
+      {
+        "n": 3,
+        "label": "New template"
+      }
+    ]
+  },
+  "ch08-messages-channels-en": {
+    "file": "kayanos-guide/figures/screens/ch08-messages-channels-en.png",
+    "url": "https://test2.kayanos.app/settings/messages?tab=channels",
+    "lang": "en",
+    "width": 1440,
+    "height": 978,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:46:19.946Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Channels & rules"
+      },
+      {
+        "n": 2,
+        "label": "WhatsApp · official number"
+      },
+      {
+        "n": 3,
+        "label": "Reply-to"
+      },
+      {
+        "n": 4,
+        "label": "Quiet hours"
+      },
+      {
+        "n": 5,
+        "label": "Keep message content for"
+      }
+    ]
+  },
+  "ch07-registry-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-registry-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/registry?tab=arrivals",
+    "lang": "ar",
+    "width": 1440,
+    "height": 766,
+    "scale": 2,
+    "capturedAt": "2026-11-01T19:58:56.441Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "بانتظار القيد (1)"
+      },
+      {
+        "n": 2,
+        "label": "بانتظار الإرسال (8)"
+      },
+      {
+        "n": 3,
+        "label": "سجل الوارد"
+      },
+      {
+        "n": 4,
+        "label": "تدقيق التسلسل سليم لا فجوات ولا تكرار في 2026"
+      },
+      {
+        "n": 5,
+        "label": "محضر الإقفال اليومي"
+      }
+    ]
+  },
+  "ch07-registry-filters-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-registry-filters-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/registry?tab=incoming",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1529,
+    "scale": 2,
+    "capturedAt": "2026-11-01T19:59:14.219Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "بحث في السجل"
+      },
+      {
+        "n": 2,
+        "label": "تصفية السجل"
+      },
+      {
+        "n": 3,
+        "label": "طباعة القائمة"
+      },
+      {
+        "n": 4,
+        "label": "سجلات أخرى سجلات أخرى"
+      }
+    ]
+  },
+  "ch07-registry-report-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-registry-report-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/registry?report=2026-10-01",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1264,
+    "scale": 2,
+    "capturedAt": "2026-11-01T19:59:29.173Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "1‏/10‏/2026"
+      },
+      {
+        "n": 2,
+        "label": "أُقفل بواسطة Mahmoud Masri — 1 تشرين الأول 2026 12:18"
+      },
+      {
+        "n": 3,
+        "label": "ملف PDF"
+      },
+      {
+        "n": 4,
+        "label": "طباعة"
+      }
+    ]
+  },
+  "ch07-incoming-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-incoming-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/registry?tab=pending",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1418,
+    "scale": 2,
+    "capturedAt": "2026-11-01T19:59:46.875Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "تصنيف القيد"
+      },
+      {
+        "n": 2,
+        "label": "الرقم المتوقع: و/2026/0019 — قد يتغيّر إن سبقه قيد آخر"
+      },
+      {
+        "n": 3,
+        "label": "وزارة أو شركة أو جهة"
+      },
+      {
+        "n": 4,
+        "label": "البحث عن منصب أو وحدة…"
+      },
+      {
+        "n": 5,
+        "label": "قيد وتوزيع"
+      }
+    ]
+  },
+  "ch07-paper-intake-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-paper-intake-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/registry?tab=pending&intake=paper",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1421,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:00:01.941Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "البحث عن منصب أو وحدة…"
+      },
+      {
+        "n": 2,
+        "label": "الصورة والمرفقات"
+      },
+      {
+        "n": 3,
+        "label": "النسخة الورقية الأصلية"
+      },
+      {
+        "n": 4,
+        "label": "حفظ بانتظار القيد"
+      },
+      {
+        "n": 5,
+        "label": "قيد الآن"
+      }
+    ]
+  },
+  "ch07-paper-intake-scan-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-paper-intake-scan-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/registry?tab=pending&intake=scan",
+    "lang": "ar",
+    "width": 1440,
+    "height": 815,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:00:17.003Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "اختيار ملف"
+      },
+      {
+        "n": 2,
+        "label": "درجة السرية المتوقعة"
+      },
+      {
+        "n": 3,
+        "label": "أو إدخال بيانات الكتاب يدوياً"
+      },
+      {
+        "n": 4,
+        "label": "قراءة الكتاب"
+      }
+    ]
+  },
+  "ch07-paper-intake-queue-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-paper-intake-queue-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/registry?tab=arrivals&arrivalQ=QA-B2",
+    "lang": "ar",
+    "width": 1440,
+    "height": 766,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:51:53.598Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "قيد ورقي"
+      },
+      {
+        "n": 2,
+        "label": "إجراءات الوارد"
+      },
+      {
+        "n": 3,
+        "label": "قيد وتوزيع"
+      },
+      {
+        "n": 4,
+        "label": "رفض في الديوان"
+      }
+    ]
+  },
+  "ch07-outgoing-dispatch-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-outgoing-dispatch-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/registry?tab=pending",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1023,
+    "scale": 2,
+    "capturedAt": "2026-11-02T07:00:30.634Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "بانتظار الإرسال (8)"
+      },
+      {
+        "n": 2,
+        "label": "حقائب الإرسال"
+      },
+      {
+        "n": 3,
+        "label": "رفض الإرسال"
+      },
+      {
+        "n": 4,
+        "label": "تسجيل الإرسال"
+      }
+    ]
+  },
+  "ch07-outgoing-dispatch-dialog-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-outgoing-dispatch-dialog-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/registry?tab=pending",
+    "lang": "ar",
+    "width": 1440,
+    "height": 828,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:01:05.557Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "QA-B2 هيئة الاختبار الأولى"
+      },
+      {
+        "n": 2,
+        "label": "وسيلة الإرسال"
+      },
+      {
+        "n": 3,
+        "label": ""
+      },
+      {
+        "n": 4,
+        "label": "تأكيد الإرسال"
+      }
+    ]
+  },
+  "ch07-outgoing-entry-menu-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-outgoing-entry-menu-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/registry?tab=outgoing&q=QA-B2+S4",
+    "lang": "ar",
+    "width": 1440,
+    "height": 688,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:01:25.416Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "تصحيح القيد"
+      },
+      {
+        "n": 2,
+        "label": "إلغاء القيد"
+      }
+    ]
+  },
+  "ch07-settings-types-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-settings-types-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/settings",
+    "lang": "ar",
+    "width": 1440,
+    "height": 903,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:04:15.086Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "أنواع المراسلات"
+      },
+      {
+        "n": 2,
+        "label": "إضافة نوع"
+      },
+      {
+        "n": 3,
+        "label": "اعتماد"
+      },
+      {
+        "n": 4,
+        "label": "المسار"
+      },
+      {
+        "n": 5,
+        "label": "تعديل كتاب رسمي"
+      }
+    ]
+  },
+  "ch07-settings-types-calendar-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-settings-types-calendar-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/settings",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1462,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:04:32.719Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "المهل والعطل"
+      },
+      {
+        "n": 2,
+        "label": "إضافة سياسة"
+      },
+      {
+        "n": 3,
+        "label": "الأحد"
+      },
+      {
+        "n": 4,
+        "label": "إدارة العطل"
+      },
+      {
+        "n": 5,
+        "label": "حفظ أيام العمل والعطل"
+      }
+    ]
+  },
+  "ch07-settings-types-numbering-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-settings-types-numbering-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/settings",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1321,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:04:50.283Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الترقيم"
+      },
+      {
+        "n": 2,
+        "label": "و/{YYYY}/{####}"
+      },
+      {
+        "n": 3,
+        "label": "و/2026/0019"
+      },
+      {
+        "n": 4,
+        "label": "تعديل نمط الوارد"
+      }
+    ]
+  },
+  "ch07-settings-registry-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-settings-registry-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/settings",
+    "lang": "ar",
+    "width": 1440,
+    "height": 859,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:05:07.767Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "مكاتب الديوان"
+      },
+      {
+        "n": 2,
+        "label": "ربط حساب بريد"
+      },
+      {
+        "n": 3,
+        "label": "الدفتر اليدوي"
+      },
+      {
+        "n": 4,
+        "label": "توقيع إجراءات الديوان إلكترونياً"
+      },
+      {
+        "n": 5,
+        "label": "إضافة مكتب"
+      }
+    ]
+  },
+  "ch07-settings-registry-fields-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-settings-registry-fields-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/settings",
+    "lang": "ar",
+    "width": 1440,
+    "height": 821,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:05:25.084Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "حقول السجل"
+      },
+      {
+        "n": 2,
+        "label": "الوارد"
+      },
+      {
+        "n": 3,
+        "label": "حقل جديد"
+      },
+      {
+        "n": 4,
+        "label": "تعديل الجهة المرسلة"
+      }
+    ]
+  },
+  "ch07-settings-registry-classifications-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-settings-registry-classifications-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/settings",
+    "lang": "ar",
+    "width": 1440,
+    "height": 821,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:05:42.349Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "تصنيفات القيد"
+      },
+      {
+        "n": 2,
+        "label": "الوارد"
+      },
+      {
+        "n": 3,
+        "label": "تصنيف جديد"
+      },
+      {
+        "n": 4,
+        "label": "تعديل وارد"
+      }
+    ]
+  },
+  "ch07-settings-templates-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-settings-templates-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/settings",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1625,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:37:44.950Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "ترويسة جديدة"
+      },
+      {
+        "n": 2,
+        "label": "رمز QR للتحقق على الكتب الصادرة"
+      },
+      {
+        "n": 3,
+        "label": "إضافة وحدة"
+      },
+      {
+        "n": 4,
+        "label": "ختم جديد"
+      },
+      {
+        "n": 5,
+        "label": "استبدال الصورة"
+      }
+    ]
+  },
+  "ch07-settings-bodies-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-settings-bodies-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/settings",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1157,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:06:19.237Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الجهات الخارجية"
+      },
+      {
+        "n": 2,
+        "label": "جهة جديدة"
+      },
+      {
+        "n": 3,
+        "label": ""
+      },
+      {
+        "n": 4,
+        "label": "دمج المكررات"
+      }
+    ]
+  },
+  "ch07-settings-bodies-addressing-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-settings-bodies-addressing-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/settings",
+    "lang": "ar",
+    "width": 1440,
+    "height": 844,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:06:36.632Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "قواعد المخاطبة"
+      },
+      {
+        "n": 2,
+        "label": "الأمانة العامة - DEMO-SG بلا قيود مقيّدة"
+      },
+      {
+        "n": 3,
+        "label": "الأمانة العامة - DEMO-SG"
+      }
+    ]
+  },
+  "ch07-settings-bodies-forward-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-settings-bodies-forward-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/settings",
+    "lang": "ar",
+    "width": 1440,
+    "height": 821,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:06:54.025Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "التحويل الآلي"
+      },
+      {
+        "n": 2,
+        "label": "قاعدة جديدة"
+      },
+      {
+        "n": 3,
+        "label": "أعلى درجة سرية"
+      },
+      {
+        "n": 4,
+        "label": "الفترة"
+      },
+      {
+        "n": 5,
+        "label": "تعديل قاعدة الدورة B4 - cycle-b-004"
+      }
+    ]
+  },
+  "ch08-followup-interventions-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-followup-interventions-ar.png",
+    "url": "https://test2.kayanos.app/settings/followup",
+    "lang": "ar",
+    "width": 1440,
+    "height": 864,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:13:01.610Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "التدخلات"
+      },
+      {
+        "n": 2,
+        "label": "موعد القرار"
+      },
+      {
+        "n": 3,
+        "label": "إضافة نتيجة"
+      },
+      {
+        "n": 4,
+        "label": "إضافة مستوى"
+      }
+    ]
+  },
+  "ch08-record-keeping-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-record-keeping-ar.png",
+    "url": "https://test2.kayanos.app/settings/record-keeping",
+    "lang": "ar",
+    "width": 1440,
+    "height": 759,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:13:23.130Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "نظرة عامة"
+      },
+      {
+        "n": 2,
+        "label": "بانتظار قرار"
+      },
+      {
+        "n": 3,
+        "label": "أنواع السجلات التي تستخدم حفظ السجلات"
+      },
+      {
+        "n": 4,
+        "label": "يحتاج إلى انتباه"
+      }
+    ]
+  },
+  "ch07-dossiers-en": {
+    "file": "kayanos-guide/figures/screens/ch07-dossiers-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/dossiers?state=all",
+    "lang": "en",
+    "width": 1440,
+    "height": 435,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:17:12.417Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "New dossier"
+      },
+      {
+        "n": 2,
+        "label": "All"
+      },
+      {
+        "n": 3,
+        "label": "Search the number and title"
+      },
+      {
+        "n": 4,
+        "label": "DOS-2026-0002 GUIDE-QA S5 sample dossier"
+      }
+    ]
+  },
+  "ch07-dossiers-detail-en": {
+    "file": "kayanos-guide/figures/screens/ch07-dossiers-detail-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/dossiers?state=open&dossier=41b77d06a01740ae9d87673ae543ecc2",
+    "lang": "en",
+    "width": 1440,
+    "height": 524,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:50:31.777Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Share"
+      },
+      {
+        "n": 2,
+        "label": "Grant access"
+      },
+      {
+        "n": 3,
+        "label": "Close the dossier"
+      },
+      {
+        "n": 4,
+        "label": "م/2026/0020 Official letter In progress 3 Oct 2026 اختبار نص"
+      },
+      {
+        "n": 5,
+        "label": "Remove"
+      }
+    ]
+  },
+  "ch07-delegation-form-en": {
+    "file": "kayanos-guide/figures/screens/ch07-delegation-form-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/delegation",
+    "lang": "en",
+    "width": 1440,
+    "height": 1174,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:18:31.636Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Search for a position or unit…"
+      },
+      {
+        "n": 2,
+        "label": "Scope"
+      },
+      {
+        "n": 3,
+        "label": "Powers"
+      },
+      {
+        "n": 4,
+        "label": "Show my inbox to the delegate When off, the delegate sees on"
+      },
+      {
+        "n": 5,
+        "label": "From 11/2/2026 To 11/9/2026"
+      }
+    ]
+  },
+  "ch07-archive-en": {
+    "file": "kayanos-guide/figures/screens/ch07-archive-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/archive",
+    "lang": "en",
+    "width": 1440,
+    "height": 801,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:18:47.094Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Archive counters"
+      },
+      {
+        "n": 2,
+        "label": "Awaiting review"
+      },
+      {
+        "n": 3,
+        "label": "Filters"
+      },
+      {
+        "n": 4,
+        "label": "وثيقة تأمين الممتلكات والمعدات لعام 2027"
+      }
+    ]
+  },
+  "ch07-archive-record-en": {
+    "file": "kayanos-guide/figures/screens/ch07-archive-record-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/archive?tab=in_approval&letter=n866vvu20_or1_ndnu1dt",
+    "lang": "en",
+    "width": 1440,
+    "height": 1157,
+    "scale": 2,
+    "capturedAt": "2026-11-02T07:03:31.989Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "History"
+      },
+      {
+        "n": 2,
+        "label": "Approve as final"
+      },
+      {
+        "n": 3,
+        "label": "Return for completion"
+      },
+      {
+        "n": 4,
+        "label": "Reject"
+      }
+    ]
+  },
+  "ch07-search-views-en": {
+    "file": "kayanos-guide/figures/screens/ch07-search-views-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=drafts&q=GUIDE-QA+S5",
+    "lang": "en",
+    "width": 1440,
+    "height": 1105,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:50:46.831Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Search… or @from @number @subject @to @member @position"
+      },
+      {
+        "n": 2,
+        "label": "Search operators"
+      },
+      {
+        "n": 3,
+        "label": "Filters"
+      },
+      {
+        "n": 4,
+        "label": "GUIDE-QA overdue view"
+      },
+      {
+        "n": 5,
+        "label": "Overdue"
+      }
+    ]
+  },
+  "ch07-search-filters-en": {
+    "file": "kayanos-guide/figures/screens/ch07-search-filters-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=drafts&q=GUIDE-QA%20S5",
+    "lang": "en",
+    "width": 1440,
+    "height": 580,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:19:40.230Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Filters"
+      },
+      {
+        "n": 2,
+        "label": "Type All"
+      },
+      {
+        "n": 3,
+        "label": "Save as view"
+      },
+      {
+        "n": 4,
+        "label": "Apply"
+      }
+    ]
+  },
+  "ch07-performance-en": {
+    "file": "kayanos-guide/figures/screens/ch07-performance-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/performance?tab=me",
+    "lang": "en",
+    "width": 1440,
+    "height": 1046,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:19:59.143Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "My performance"
+      },
+      {
+        "n": 2,
+        "label": "Period 7 days 30 days 90 days"
+      },
+      {
+        "n": 3,
+        "label": "My score 61 of 100 Average Deadlines ×0.4 100 Throughput ×0."
+      },
+      {
+        "n": 4,
+        "label": "Activity"
+      }
+    ]
+  },
+  "ch08-approval-routes-en": {
+    "file": "kayanos-guide/figures/screens/ch08-approval-routes-en.png",
+    "url": "https://test2.kayanos.app/settings/approval-routes",
+    "lang": "en",
+    "width": 1440,
+    "height": 1004,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:22:24.201Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "New route"
+      },
+      {
+        "n": 2,
+        "label": "Import"
+      },
+      {
+        "n": 3,
+        "label": "Settings"
+      },
+      {
+        "n": 4,
+        "label": "In use 9"
+      },
+      {
+        "n": 5,
+        "label": "Live runs"
+      }
+    ]
+  },
+  "ch08-approval-routes-editor-en": {
+    "file": "kayanos-guide/figures/screens/ch08-approval-routes-editor-en.png",
+    "url": "https://test2.kayanos.app/settings/approval-routes/ministry_of_finance_budget_approval",
+    "lang": "en",
+    "width": 1440,
+    "height": 1305,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:22:49.359Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Stages"
+      },
+      {
+        "n": 2,
+        "label": "Simulate"
+      },
+      {
+        "n": 3,
+        "label": "Versions"
+      },
+      {
+        "n": 4,
+        "label": "Nothing to publish: the draft matches v1."
+      },
+      {
+        "n": 5,
+        "label": "Mode"
+      }
+    ]
+  },
+  "ch08-approval-routes-settings-en": {
+    "file": "kayanos-guide/figures/screens/ch08-approval-routes-settings-en.png",
+    "url": "https://test2.kayanos.app/settings/approval-routes/settings",
+    "lang": "en",
+    "width": 1440,
+    "height": 1025,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:23:05.974Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "On for this organization"
+      },
+      {
+        "n": 2,
+        "label": "Working days"
+      },
+      {
+        "n": 3,
+        "label": "Holiday group"
+      },
+      {
+        "n": 4,
+        "label": "Longest delegation"
+      },
+      {
+        "n": 5,
+        "label": "Check a date"
+      }
+    ]
+  },
+  "ch08-evaluation-templates-en": {
+    "file": "kayanos-guide/figures/screens/ch08-evaluation-templates-en.png",
+    "url": "https://test2.kayanos.app/settings/evaluation-templates",
+    "lang": "en",
+    "width": 1440,
+    "height": 756,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:23:22.964Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "New template"
+      },
+      {
+        "n": 2,
+        "label": "Procurement pack 4"
+      },
+      {
+        "n": 3,
+        "label": "Show retired"
+      },
+      {
+        "n": 4,
+        "label": "Latest version"
+      },
+      {
+        "n": 5,
+        "label": "Actions for Grant application — small initiatives"
+      }
+    ]
+  },
+  "ch08-evaluation-templates-criteria-en": {
+    "file": "kayanos-guide/figures/screens/ch08-evaluation-templates-criteria-en.png",
+    "url": "https://test2.kayanos.app/settings/evaluation-templates/tender_technical_goods",
+    "lang": "en",
+    "width": 1440,
+    "height": 1122,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:23:41.486Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Criteria"
+      },
+      {
+        "n": 2,
+        "label": "Add criterion"
+      },
+      {
+        "n": 3,
+        "label": "Add group"
+      },
+      {
+        "n": 4,
+        "label": "Publish v2"
+      }
+    ]
+  },
+  "ch08-evaluation-templates-scoring-en": {
+    "file": "kayanos-guide/figures/screens/ch08-evaluation-templates-scoring-en.png",
+    "url": "https://test2.kayanos.app/settings/evaluation-templates/tender_technical_goods",
+    "lang": "en",
+    "width": 1440,
+    "height": 738,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:23:58.890Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Scoring"
+      },
+      {
+        "n": 2,
+        "label": "Scoring model"
+      },
+      {
+        "n": 3,
+        "label": "Pass threshold"
+      },
+      {
+        "n": 4,
+        "label": "Mandatory verdicts"
+      }
+    ]
+  },
+  "ch08-evaluation-templates-bands-en": {
+    "file": "kayanos-guide/figures/screens/ch08-evaluation-templates-bands-en.png",
+    "url": "https://test2.kayanos.app/settings/evaluation-templates/supplier_performance",
+    "lang": "en",
+    "width": 1440,
+    "height": 719,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:24:16.338Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Bands"
+      },
+      {
+        "n": 2,
+        "label": "Add band"
+      },
+      {
+        "n": 3,
+        "label": "When a mandatory criterion is not met"
+      }
+    ]
+  },
+  "ch08-followup-en": {
+    "file": "kayanos-guide/figures/screens/ch08-followup-en.png",
+    "url": "https://test2.kayanos.app/settings/followup",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:24:38.865Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Stuck reasons"
+      },
+      {
+        "n": 2,
+        "label": "New reason"
+      },
+      {
+        "n": 3,
+        "label": "Edit categories"
+      }
+    ]
+  },
+  "ch08-followup-reason-en": {
+    "file": "kayanos-guide/figures/screens/ch08-followup-reason-en.png",
+    "url": "https://test2.kayanos.app/settings/followup",
+    "lang": "en",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:24:55.905Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Key"
+      },
+      {
+        "n": 2,
+        "label": "Category"
+      },
+      {
+        "n": 3,
+        "label": "Stops the clock"
+      },
+      {
+        "n": 4,
+        "label": "Add reason"
+      }
+    ]
+  },
+  "ch08-followup-blockers-en": {
+    "file": "kayanos-guide/figures/screens/ch08-followup-blockers-en.png",
+    "url": "https://test2.kayanos.app/settings/followup",
+    "lang": "en",
+    "width": 1440,
+    "height": 606,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:25:13.147Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Blocker types"
+      },
+      {
+        "n": 2,
+        "label": "New blocker type"
+      }
+    ]
+  },
+  "ch08-key-audit-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-key-audit-ar.png",
+    "url": "https://test2.kayanos.app/settings/member-keys/audit-log",
+    "lang": "ar",
+    "width": 1440,
+    "height": 775,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:34:05.777Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "العضو"
+      },
+      {
+        "n": 2,
+        "label": "تحديث"
+      },
+      {
+        "n": 3,
+        "label": "الحدث"
+      },
+      {
+        "n": 4,
+        "label": "المنفذ"
+      }
+    ]
+  },
+  "ch08-api-tokens-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-api-tokens-ar.png",
+    "url": "https://test2.kayanos.app/settings/api",
+    "lang": "ar",
+    "width": 1440,
+    "height": 889,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:34:40.811Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الرموز"
+      },
+      {
+        "n": 2,
+        "label": "إنشاء رمز"
+      },
+      {
+        "n": 3,
+        "label": "رموزي"
+      },
+      {
+        "n": 4,
+        "label": "رموز المؤسسة"
+      },
+      {
+        "n": 5,
+        "label": "الوصول"
+      }
+    ]
+  },
+  "ch08-api-create-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-api-create-ar.png",
+    "url": "https://test2.kayanos.app/settings/api",
+    "lang": "ar",
+    "width": 1440,
+    "height": 637,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:35:00.466Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "تكامل الإنتاج"
+      },
+      {
+        "n": 2,
+        "label": "ما يفعله التكامل ومن يشغّله"
+      },
+      {
+        "n": 3,
+        "label": "المالك"
+      }
+    ]
+  },
+  "ch08-api-service-accounts-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-api-service-accounts-ar.png",
+    "url": "https://test2.kayanos.app/settings/api?tab=serviceAccounts",
+    "lang": "ar",
+    "width": 1440,
+    "height": 473,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:35:17.537Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "حسابات الخدمة"
+      },
+      {
+        "n": 2,
+        "label": "حساب خدمة جديد"
+      },
+      {
+        "n": 3,
+        "label": "الدور"
+      },
+      {
+        "n": 4,
+        "label": "المسؤولون"
+      }
+    ]
+  },
+  "ch08-api-activity-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-api-activity-ar.png",
+    "url": "https://test2.kayanos.app/settings/api?tab=activity",
+    "lang": "ar",
+    "width": 1440,
+    "height": 790,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:35:38.370Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "النشاط"
+      },
+      {
+        "n": 2,
+        "label": "كل الطلبات"
+      },
+      {
+        "n": 3,
+        "label": "معرّف الطلب"
+      }
+    ]
+  },
+  "ch08-units-form-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-units-form-ar.png",
+    "url": "https://test2.kayanos.app/settings/units",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1032,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:39:18.235Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الرمز"
+      },
+      {
+        "n": 2,
+        "label": "المفتاح"
+      },
+      {
+        "n": 3,
+        "label": "التحويل"
+      },
+      {
+        "n": 4,
+        "label": "الخانات العشرية"
+      },
+      {
+        "n": 5,
+        "label": "حفظ"
+      }
+    ]
+  },
+  "ch08-followup-reason-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-followup-reason-ar.png",
+    "url": "https://test2.kayanos.app/settings/followup",
+    "lang": "ar",
+    "width": 1440,
+    "height": 900,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:41:04.904Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "المفتاح"
+      },
+      {
+        "n": 2,
+        "label": "الفئة"
+      },
+      {
+        "n": 3,
+        "label": "يوقف الساعة"
+      },
+      {
+        "n": 4,
+        "label": "إضافة السبب"
+      }
+    ]
+  },
+  "ch08-followup-blockers-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-followup-blockers-ar.png",
+    "url": "https://test2.kayanos.app/settings/followup",
+    "lang": "ar",
+    "width": 1440,
+    "height": 566,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:41:22.194Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "أنواع العوائق"
+      },
+      {
+        "n": 2,
+        "label": "نوع عائق جديد"
+      }
+    ]
+  },
+  "ch08-record-keeping-rules-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-record-keeping-rules-ar.png",
+    "url": "https://test2.kayanos.app/settings/record-keeping/retention-rules",
+    "lang": "ar",
+    "width": 1440,
+    "height": 821,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:41:41.088Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "قواعد الاحتفاظ"
+      },
+      {
+        "n": 2,
+        "label": "قاعدة جديدة"
+      },
+      {
+        "n": 3,
+        "label": "تعديل كإصدار 4"
+      },
+      {
+        "n": 4,
+        "label": "إعادة التطبيق…"
+      },
+      {
+        "n": 5,
+        "label": "إيقاف"
+      }
+    ]
+  },
+  "ch08-record-keeping-holds-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-record-keeping-holds-ar.png",
+    "url": "https://test2.kayanos.app/settings/record-keeping/holds",
+    "lang": "ar",
+    "width": 1440,
+    "height": 451,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:42:03.920Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "التجميد"
+      },
+      {
+        "n": 2,
+        "label": "تجميد جديد"
+      },
+      {
+        "n": 3,
+        "label": "الأثر"
+      },
+      {
+        "n": 4,
+        "label": "LH-2026-001"
+      }
+    ]
+  },
+  "ch08-record-keeping-disposition-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-record-keeping-disposition-ar.png",
+    "url": "https://test2.kayanos.app/settings/record-keeping/disposition",
+    "lang": "ar",
+    "width": 1440,
+    "height": 451,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:42:18.669Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "مراجعات الإتلاف"
+      },
+      {
+        "n": 2,
+        "label": "اقترح الآن"
+      },
+      {
+        "n": 3,
+        "label": "DR-2026-001"
+      },
+      {
+        "n": 4,
+        "label": "الاعتمادات"
+      }
+    ]
+  },
+  "ch07-compose-en": {
+    "file": "kayanos-guide/figures/screens/ch07-compose-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/compose",
+    "lang": "en",
+    "width": 1440,
+    "height": 1712,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:46:04.254Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "New letter"
+      },
+      {
+        "n": 2,
+        "label": "Type"
+      },
+      {
+        "n": 3,
+        "label": "Confidentiality"
+      },
+      {
+        "n": 4,
+        "label": "Priority"
+      },
+      {
+        "n": 5,
+        "label": "Subject of the letter (at least 5 characters)"
+      },
+      {
+        "n": 6,
+        "label": ""
+      }
+    ]
+  },
+  "ch07-recipients-en": {
+    "file": "kayanos-guide/figures/screens/ch07-recipients-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/compose?drafts=d65a06usi2aqx42mvk2qn",
+    "lang": "en",
+    "width": 1440,
+    "height": 1805,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:43:09.080Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Director of Human Resources"
+      },
+      {
+        "n": 2,
+        "label": ""
+      },
+      {
+        "n": 3,
+        "label": "Send directly without the registry (internal, one recipient)"
+      },
+      {
+        "n": 4,
+        "label": "Expected routing asd Diwan of asd Director of Human Resource"
+      },
+      {
+        "n": 5,
+        "label": "Approval stages"
+      }
+    ]
+  },
+  "ch07-attachments-en": {
+    "file": "kayanos-guide/figures/screens/ch07-attachments-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/compose?drafts=d65a06usi2aqx42mvk2qn",
+    "lang": "en",
+    "width": 1440,
+    "height": 1805,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:43:28.329Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Drag files here or Choose PDF · Word · Excel · images · Up t"
+      },
+      {
+        "n": 2,
+        "label": "Attachments"
+      },
+      {
+        "n": 3,
+        "label": "Letterhead"
+      },
+      {
+        "n": 4,
+        "label": "Write the text Body as a file"
+      }
+    ]
+  },
+  "ch07-attachments-file-en": {
+    "file": "kayanos-guide/figures/screens/ch07-attachments-file-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/compose?drafts=d65a06usi2aqx42mvk2qn",
+    "lang": "en",
+    "width": 1440,
+    "height": 1805,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:43:49.548Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Write the text Body as a file Body variables are not availab"
+      },
+      {
+        "n": 2,
+        "label": "Choose a file"
+      },
+      {
+        "n": 3,
+        "label": "Please leave the top 60 mm of the first page and the bottom "
+      }
+    ]
+  },
+  "ch07-check-save-en": {
+    "file": "kayanos-guide/figures/screens/ch07-check-save-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/compose?drafts=dz75_q2bim0vu_5l_chaq",
+    "lang": "en",
+    "width": 1440,
+    "height": 1965,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:48:47.962Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Digital Transformation Directorate No. Assigned on approval "
+      },
+      {
+        "n": 2,
+        "label": "Draft saved"
+      },
+      {
+        "n": 3,
+        "label": "Check now"
+      },
+      {
+        "n": 4,
+        "label": "Medium The text mentions attachments but none is attached Me"
+      },
+      {
+        "n": 5,
+        "label": "Save as draft"
+      }
+    ]
+  },
+  "ch07-delegation-en": {
+    "file": "kayanos-guide/figures/screens/ch07-delegation-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/delegation",
+    "lang": "en",
+    "width": 1440,
+    "height": 544,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:49:20.589Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "New delegation"
+      },
+      {
+        "n": 2,
+        "label": "Delegations granted to me"
+      },
+      {
+        "n": 3,
+        "label": "Delegations I granted"
+      },
+      {
+        "n": 4,
+        "label": "Delegation rules"
+      }
+    ]
+  },
+  "ch07-performance-overview-en": {
+    "file": "kayanos-guide/figures/screens/ch07-performance-overview-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/performance?tab=overview",
+    "lang": "en",
+    "width": 1440,
+    "height": 2469,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:49:35.866Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Overview"
+      },
+      {
+        "n": 2,
+        "label": "Unit General Secretariat"
+      },
+      {
+        "n": 3,
+        "label": "Overdue now 12 ⁦+12⁩ vs the previous period"
+      },
+      {
+        "n": 4,
+        "label": "Export"
+      }
+    ]
+  },
+  "ch07-audit-letterlog-en": {
+    "file": "kayanos-guide/figures/screens/ch07-audit-letterlog-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=all&id=pztvmx0vhazsisbp11ezu&tab=log",
+    "lang": "en",
+    "width": 1440,
+    "height": 848,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:49:50.805Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Route"
+      },
+      {
+        "n": 2,
+        "label": "Action log"
+      }
+    ]
+  },
+  "ch07-settings-policies-en": {
+    "file": "kayanos-guide/figures/screens/ch07-settings-policies-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/settings",
+    "lang": "en",
+    "width": 1440,
+    "height": 1125,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:52:17.563Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Archive and printing"
+      },
+      {
+        "n": 2,
+        "label": "3 — Secret"
+      },
+      {
+        "n": 3,
+        "label": "Archive approval"
+      },
+      {
+        "n": 4,
+        "label": "Change the format"
+      },
+      {
+        "n": 5,
+        "label": "Employee verification QR"
+      }
+    ]
+  },
+  "ch07-settings-policies-directives-en": {
+    "file": "kayanos-guide/figures/screens/ch07-settings-policies-directives-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/settings",
+    "lang": "en",
+    "width": 1440,
+    "height": 841,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:52:34.902Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Ready directives"
+      },
+      {
+        "n": 2,
+        "label": "For information Take the necessary action For study and opin"
+      },
+      {
+        "n": 3,
+        "label": "Restore the default directives"
+      }
+    ]
+  },
+  "ch07-settings-policies-performance-en": {
+    "file": "kayanos-guide/figures/screens/ch07-settings-policies-performance-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/settings",
+    "lang": "en",
+    "width": 1440,
+    "height": 958,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:52:52.251Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Performance"
+      },
+      {
+        "n": 2,
+        "label": "0.4"
+      },
+      {
+        "n": 3,
+        "label": "80"
+      },
+      {
+        "n": 4,
+        "label": "Choose a unit"
+      }
+    ]
+  },
+  "ch07-settings-policies-ai-en": {
+    "file": "kayanos-guide/figures/screens/ch07-settings-policies-ai-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/settings",
+    "lang": "en",
+    "width": 1440,
+    "height": 841,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:53:09.569Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Artificial intelligence"
+      },
+      {
+        "n": 2,
+        "label": "2 — Restricted"
+      }
+    ]
+  },
+  "ch07-settings-policies-roles-en": {
+    "file": "kayanos-guide/figures/screens/ch07-settings-policies-roles-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/settings",
+    "lang": "en",
+    "width": 1440,
+    "height": 841,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:53:26.916Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Roles and permissions"
+      },
+      {
+        "n": 2,
+        "label": "Manage roles"
+      },
+      {
+        "n": 3,
+        "label": "Registry clerk"
+      },
+      {
+        "n": 4,
+        "label": "Correspondence administrator"
+      }
+    ]
+  },
+  "ch07-referral-notes-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-referral-notes-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=inbox&id=iicq9rd_jc7oaquqwibn7",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1524,
+    "scale": 2,
+    "capturedAt": "2026-11-01T19:59:11.860Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الحواشي"
+      }
+    ]
+  },
+  "ch07-inquiries-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-inquiries-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=inquiries",
+    "lang": "ar",
+    "width": 1440,
+    "height": 924,
+    "scale": 2,
+    "capturedAt": "2026-11-01T19:59:33.170Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "الاستفسارات"
+      }
+    ]
+  },
+  "ch07-inquiries-ask-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-inquiries-ask-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=inbox&id=t5tq2_u2tbo6xwnl54m8a",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1153,
+    "scale": 2,
+    "capturedAt": "2026-11-01T19:59:55.558Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "البحث عن منصب أو وحدة…"
+      },
+      {
+        "n": 2,
+        "label": ""
+      },
+      {
+        "n": 3,
+        "label": "إرسال الاستفسار"
+      }
+    ]
+  },
+  "ch07-inquiries-consult-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-inquiries-consult-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=inbox&id=pjyb45qe76nt4kajef0sb&tab=links",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1266,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:00:15.039Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "المراجع"
+      },
+      {
+        "n": 2,
+        "label": "جلسات التشاور"
+      },
+      {
+        "n": 3,
+        "label": "فتح في المحادثات"
+      },
+      {
+        "n": 4,
+        "label": "محضر الجلسة"
+      }
+    ]
+  },
+  "ch07-reply-complete-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-reply-complete-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=inbox&id=t5tq2_u2tbo6xwnl54m8a",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1069,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:00:39.551Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "أُنجز — للحفظ"
+      },
+      {
+        "n": 2,
+        "label": "الحفظ في الأرشيف"
+      },
+      {
+        "n": 3,
+        "label": "إنجاز وحفظ"
+      }
+    ]
+  },
+  "ch07-oversight-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-oversight-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/oversight?tab=void",
+    "lang": "ar",
+    "width": 1440,
+    "height": 1506,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:02:43.790Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "حالات المراسلات الكل (125) قيد المعالجة (63) متأخرة (41) منج"
+      },
+      {
+        "n": 2,
+        "label": "عوامل التصفية"
+      },
+      {
+        "n": 3,
+        "label": "تصدير"
+      },
+      {
+        "n": 4,
+        "label": "دون رقم"
+      }
+    ]
+  },
+  "ch07-audit-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-audit-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/audit?category=dossiers",
+    "lang": "ar",
+    "width": 1440,
+    "height": 854,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:03:06.702Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "كل النشاط"
+      },
+      {
+        "n": 2,
+        "label": "نشاطي"
+      },
+      {
+        "n": 3,
+        "label": "تصدير Excel"
+      },
+      {
+        "n": 4,
+        "label": "عوامل التصفية"
+      },
+      {
+        "n": 5,
+        "label": "فتح المراسلة"
+      }
+    ]
+  },
+  "ch07-audit-letterlog-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-audit-letterlog-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/tray?folder=all&id=pztvmx0vhazsisbp11ezu&tab=log",
+    "lang": "ar",
+    "width": 1440,
+    "height": 848,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:03:29.620Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "المسار"
+      },
+      {
+        "n": 2,
+        "label": "سجل الإجراءات"
+      }
+    ]
+  },
+  "ch08-member-keys-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-member-keys-ar.png",
+    "url": "https://test2.kayanos.app/settings/member-keys",
+    "lang": "ar",
+    "width": 1440,
+    "height": 410,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:08:39.553Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "العضو"
+      },
+      {
+        "n": 2,
+        "label": "تحديث"
+      },
+      {
+        "n": 3,
+        "label": "نشط"
+      },
+      {
+        "n": 4,
+        "label": "إلغاء"
+      }
+    ]
+  },
+  "ch08-key-enrollments-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-key-enrollments-ar.png",
+    "url": "https://test2.kayanos.app/settings/member-keys/enrollments",
+    "lang": "ar",
+    "width": 1440,
+    "height": 382,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:08:54.261Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "العضو"
+      },
+      {
+        "n": 2,
+        "label": "إنشاء"
+      },
+      {
+        "n": 3,
+        "label": "تنتهي صلاحية الرموز بعد 15 دقيقة ولا يمكن استخدامها إلا مرة "
+      }
+    ]
+  },
+  "ch08-key-member-ar": {
+    "file": "kayanos-guide/figures/screens/ch08-key-member-ar.png",
+    "url": "https://test2.kayanos.app/signature-management",
+    "lang": "ar",
+    "width": 1440,
+    "height": 611,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:09:17.055Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "إدارة التوقيع"
+      },
+      {
+        "n": 2,
+        "label": "إنشاء توقيع"
+      }
+    ]
+  },
+  "ch07-oversight-en": {
+    "file": "kayanos-guide/figures/screens/ch07-oversight-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/oversight?tab=void",
+    "lang": "en",
+    "width": 1440,
+    "height": 1536,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:17:11.278Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Letter states All (125) Open (63) Overdue (41) Completed (34"
+      },
+      {
+        "n": 2,
+        "label": "Filters"
+      },
+      {
+        "n": 3,
+        "label": "Export"
+      },
+      {
+        "n": 4,
+        "label": "No number"
+      }
+    ]
+  },
+  "ch07-audit-en": {
+    "file": "kayanos-guide/figures/screens/ch07-audit-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/audit?category=dossiers",
+    "lang": "en",
+    "width": 1440,
+    "height": 829,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:17:36.351Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "All activity"
+      },
+      {
+        "n": 2,
+        "label": "My activity"
+      },
+      {
+        "n": 3,
+        "label": "Export to Excel"
+      },
+      {
+        "n": 4,
+        "label": "Filters"
+      },
+      {
+        "n": 5,
+        "label": "Open the letter"
+      }
+    ]
+  },
+  "ch08-publishing-approval-en": {
+    "file": "kayanos-guide/figures/screens/ch08-publishing-approval-en.png",
+    "url": "https://test2.kayanos.app/settings/publishing-approval",
+    "lang": "en",
+    "width": 1440,
+    "height": 1772,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:21:00.349Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "For all forms"
+      },
+      {
+        "n": 2,
+        "label": "Enter text"
+      },
+      {
+        "n": 3,
+        "label": "Add stage"
+      },
+      {
+        "n": 4,
+        "label": "Rules"
+      },
+      {
+        "n": 5,
+        "label": "Save"
+      }
+    ]
+  },
+  "ch08-publishing-approval-record-types-en": {
+    "file": "kayanos-guide/figures/screens/ch08-publishing-approval-record-types-en.png",
+    "url": "https://test2.kayanos.app/settings/publishing-approval?tab=recordTypes",
+    "lang": "en",
+    "width": 1440,
+    "height": 1033,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:21:21.472Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "For some types"
+      },
+      {
+        "n": 2,
+        "label": "Types covered"
+      },
+      {
+        "n": 3,
+        "label": "Reviewers"
+      },
+      {
+        "n": 4,
+        "label": "Types with their own stricter settings"
+      },
+      {
+        "n": 5,
+        "label": "Save"
+      }
+    ]
+  },
+  "ch08-publishing-approval-procedure-cards-en": {
+    "file": "kayanos-guide/figures/screens/ch08-publishing-approval-procedure-cards-en.png",
+    "url": "https://test2.kayanos.app/settings/publishing-approval?tab=procedureCards",
+    "lang": "en",
+    "width": 1440,
+    "height": 1142,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:21:41.077Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Card versions need approval"
+      },
+      {
+        "n": 2,
+        "label": "Add a stage"
+      },
+      {
+        "n": 3,
+        "label": "+ owner"
+      },
+      {
+        "n": 4,
+        "label": "Separation of duties"
+      },
+      {
+        "n": 5,
+        "label": "Emergency publishing"
+      }
+    ]
+  },
+  "ch08-form-assignments-en": {
+    "file": "kayanos-guide/figures/screens/ch08-form-assignments-en.png",
+    "url": "https://test2.kayanos.app/settings/form-assignments",
+    "lang": "en",
+    "width": 1440,
+    "height": 842,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:22:18.578Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "13 active plans follow these settings. · 1 use their own rem"
+      },
+      {
+        "n": 2,
+        "label": "Reminders and escalation"
+      },
+      {
+        "n": 3,
+        "label": "Working days Saturday Sunday Monday Tuesday Wednesday Thursd"
+      },
+      {
+        "n": 4,
+        "label": "Default cap per person"
+      },
+      {
+        "n": 5,
+        "label": "Save"
+      }
+    ]
+  },
+  "ch08-form-assignments-ladder-en": {
+    "file": "kayanos-guide/figures/screens/ch08-form-assignments-ladder-en.png",
+    "url": "https://test2.kayanos.app/settings/form-assignments",
+    "lang": "en",
+    "width": 1440,
+    "height": 682,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:22:39.928Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Before the due date"
+      },
+      {
+        "n": 2,
+        "label": "Days, step 1"
+      },
+      {
+        "n": 3,
+        "label": "The holder"
+      },
+      {
+        "n": 4,
+        "label": "Add a step"
+      }
+    ]
+  },
+  "ch08-check-categories-en": {
+    "file": "kayanos-guide/figures/screens/ch08-check-categories-en.png",
+    "url": "https://test2.kayanos.app/settings/check-categories",
+    "lang": "en",
+    "width": 1440,
+    "height": 738,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:23:10.030Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Enter text"
+      },
+      {
+        "n": 2,
+        "label": "Colour"
+      },
+      {
+        "n": 3,
+        "label": "Remove category"
+      },
+      {
+        "n": 4,
+        "label": "Add category"
+      },
+      {
+        "n": 5,
+        "label": "Save"
+      }
+    ]
+  },
+  "ch08-followup-interventions-en": {
+    "file": "kayanos-guide/figures/screens/ch08-followup-interventions-en.png",
+    "url": "https://test2.kayanos.app/settings/followup",
+    "lang": "en",
+    "width": 1440,
+    "height": 864,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:25:03.566Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Interventions"
+      },
+      {
+        "n": 2,
+        "label": "Decision due"
+      },
+      {
+        "n": 3,
+        "label": "Add outcome"
+      },
+      {
+        "n": 4,
+        "label": "Add level"
+      }
+    ]
+  },
+  "ch08-record-keeping-en": {
+    "file": "kayanos-guide/figures/screens/ch08-record-keeping-en.png",
+    "url": "https://test2.kayanos.app/settings/record-keeping",
+    "lang": "en",
+    "width": 1440,
+    "height": 799,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:25:20.447Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Overview"
+      },
+      {
+        "n": 2,
+        "label": "Waiting for a decision"
+      },
+      {
+        "n": 3,
+        "label": "Record types using record keeping"
+      },
+      {
+        "n": 4,
+        "label": "Needs attention"
+      }
+    ]
+  },
+  "ch08-record-keeping-rules-en": {
+    "file": "kayanos-guide/figures/screens/ch08-record-keeping-rules-en.png",
+    "url": "https://test2.kayanos.app/settings/record-keeping/retention-rules",
+    "lang": "en",
+    "width": 1440,
+    "height": 851,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:25:35.273Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Retention rules"
+      },
+      {
+        "n": 2,
+        "label": "New rule"
+      },
+      {
+        "n": 3,
+        "label": "Edit as v4"
+      },
+      {
+        "n": 4,
+        "label": "Re-apply…"
+      },
+      {
+        "n": 5,
+        "label": "Retire"
+      }
+    ]
+  },
+  "ch08-record-keeping-holds-en": {
+    "file": "kayanos-guide/figures/screens/ch08-record-keeping-holds-en.png",
+    "url": "https://test2.kayanos.app/settings/record-keeping/holds",
+    "lang": "en",
+    "width": 1440,
+    "height": 451,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:25:51.966Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Holds"
+      },
+      {
+        "n": 2,
+        "label": "New hold"
+      },
+      {
+        "n": 3,
+        "label": "Effect"
+      },
+      {
+        "n": 4,
+        "label": "LH-2026-001"
+      }
+    ]
+  },
+  "ch08-record-keeping-disposition-en": {
+    "file": "kayanos-guide/figures/screens/ch08-record-keeping-disposition-en.png",
+    "url": "https://test2.kayanos.app/settings/record-keeping/disposition",
+    "lang": "en",
+    "width": 1440,
+    "height": 451,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:26:06.657Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Disposition reviews"
+      },
+      {
+        "n": 2,
+        "label": "Propose now"
+      },
+      {
+        "n": 3,
+        "label": "DR-2026-001"
+      },
+      {
+        "n": 4,
+        "label": "Approvals"
+      }
+    ]
+  },
+  "ch08-record-keeping-ledger-en": {
+    "file": "kayanos-guide/figures/screens/ch08-record-keeping-ledger-en.png",
+    "url": "https://test2.kayanos.app/settings/record-keeping/ledger",
+    "lang": "en",
+    "width": 1440,
+    "height": 537,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:26:23.438Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Ledger integrity"
+      },
+      {
+        "n": 2,
+        "label": "Chain check"
+      },
+      {
+        "n": 3,
+        "label": "Verify again"
+      }
+    ]
+  },
+  "ch08-record-keeping-storage-en": {
+    "file": "kayanos-guide/figures/screens/ch08-record-keeping-storage-en.png",
+    "url": "https://test2.kayanos.app/settings/record-keeping/storage",
+    "lang": "en",
+    "width": 1440,
+    "height": 451,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:26:40.184Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Storage & fixity"
+      },
+      {
+        "n": 2,
+        "label": "Object lock"
+      },
+      {
+        "n": 3,
+        "label": "Fixity check"
+      }
+    ]
+  },
+  "ch08-record-keeping-roles-en": {
+    "file": "kayanos-guide/figures/screens/ch08-record-keeping-roles-en.png",
+    "url": "https://test2.kayanos.app/settings/record-keeping/roles",
+    "lang": "en",
+    "width": 1440,
+    "height": 495,
+    "scale": 2,
+    "capturedAt": "2026-11-01T20:26:54.960Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Records roles"
+      },
+      {
+        "n": 2,
+        "label": "Change in Roles"
+      },
+      {
+        "n": 3,
+        "label": "Records officer"
+      },
+      {
+        "n": 4,
+        "label": "Disposition approvers"
+      }
+    ]
+  },
+  "ch07-batches-add-en": {
+    "file": "kayanos-guide/figures/screens/ch07-batches-add-en.png",
+    "url": "https://test2.kayanos.app/official-correspondence/batches?state=active&batch=zr4m2u23m_w1ib0obs04y",
+    "lang": "en",
+    "width": 1440,
+    "height": 808,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:51:23.243Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "Select: ص/2026/0002"
+      },
+      {
+        "n": 2,
+        "label": "Add"
+      }
+    ]
+  },
+  "ch07-batches-add-ar": {
+    "file": "kayanos-guide/figures/screens/ch07-batches-add-ar.png",
+    "url": "https://test2.kayanos.app/official-correspondence/batches?state=active&batch=zr4m2u23m_w1ib0obs04y",
+    "lang": "ar",
+    "width": 1440,
+    "height": 808,
+    "scale": 2,
+    "capturedAt": "2026-11-02T06:52:42.154Z",
+    "marks": [
+      {
+        "n": 1,
+        "label": "تحديد: ص/2026/0002"
+      },
+      {
+        "n": 2,
+        "label": "إضافة"
       }
     ]
   }

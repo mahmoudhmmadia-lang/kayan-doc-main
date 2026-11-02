@@ -20,14 +20,14 @@ try{
  for(const lang of ['ar','en'])for(const width of [1440,390])for(const theme of ['dark','light']){
   const ctx=await browser.newContext({viewport:{width,height:width===390?844:900},colorScheme:theme,reducedMotion:'reduce'});
   const page=await ctx.newPage();page.on('pageerror',e=>errors.push(e.message));
-  for(const file of screenshotsOnly?[]:['c7','correspondence-home','correspondence-capacity','correspondence-tray']){
+  for(const file of screenshotsOnly?[]:['c7',...['home','capacity','tray','compose','recipients','attachments','check-save','drafts','drafting-review','approvals','reader','referral','inquiries','reply-complete','registry','incoming','paper-intake','outgoing-dispatch','batches','circulars','dossiers','delegation','archive','search-views','performance','oversight','audit','settings-types','settings-registry','settings-templates','settings-bodies','settings-policies','practice'].map(s=>`correspondence-${s}`)]){
    await page.goto(`${base}/${lang}/${file}.html`);
    await page.evaluate(()=>document.fonts.ready);
    for(const img of await page.locator('main img').all()){await img.scrollIntoViewIfNeeded();await img.evaluate(e=>e.decode());}
    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`${lang} ${file} ${width} overflow`);
    assert.ok((await page.locator('main').innerText()).includes(lang==='ar'?'مثال: شركة الأفق':'Example: Horizon'));
    if(file==='c7'){
-    assert.equal(await page.locator('.page-card').count(),3);
+    assert.equal(await page.locator('.page-card').count(),33);
     await page.locator('.page-card').first().click();
     assert.ok(page.url().includes('correspondence-home.html'));
    }
@@ -60,6 +60,6 @@ try{
   await ctx.close();
  }
  assert.deepEqual(errors,[]);
- if(!screenshotsOnly)fs.writeFileSync(path.join(root,'review/correspondence-browser-verification.json'),JSON.stringify({checks:['32 page/language/width/theme cases','directory card opens feature','no horizontal overflow','images decode','completion persists after reload','language switching','search opens capacity page','image lightbox opens/closes'],evidence,errors},null,2));
+ if(!screenshotsOnly)fs.writeFileSync(path.join(root,'review/correspondence-browser-verification.json'),JSON.stringify({checks:[`${evidence.length} page/language/width/theme cases`,'directory card opens feature','no horizontal overflow','images decode','completion persists after reload','language switching','search opens capacity page','image lightbox opens/closes'],evidence,errors},null,2));
  console.log('PASS',screenshotsOnly?'8 final screenshots, image decoding and overflow checks':`${evidence.length} page cases and guide interactions`);
 }finally{await browser.close();server.close();}
