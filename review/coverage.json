@@ -1,0 +1,58 @@
+{
+  "apps": {
+    "home": {
+      "chapters": [
+        "main:1",
+        "main:2"
+      ],
+      "status": "approved",
+      "note": "Introduction and organization setup"
+    },
+    "human_resources": {
+      "chapters": [
+        "main:3"
+      ],
+      "status": "under-review"
+    },
+    "tasks": {
+      "chapters": [
+        "main:4"
+      ],
+      "status": "under-review"
+    },
+    "projects": {
+      "chapters": [
+        "main:5"
+      ],
+      "status": "under-review"
+    },
+    "builder": {
+      "chapters": [
+        "main:6",
+        "builder:1",
+        "builder:2",
+        "builder:3",
+        "builder:4",
+        "builder:5",
+        "builder:6",
+        "builder:7",
+        "builder:8"
+      ],
+      "status": "under-review"
+    },
+    "correspondence": {
+      "chapters": [
+        "main:7"
+      ],
+      "status": "under-review"
+    },
+    "settings": {
+      "chapters": [
+        "main:8"
+      ],
+      "status": "under-review"
+    }
+  },
+  "chapters": {},
+  "updatedAt": "2026-11-10T06:34:05.625Z"
+}

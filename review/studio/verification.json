@@ -1,0 +1,21 @@
+{
+  "at": "2026-11-08T08:50:08.264Z",
+  "drafts": [
+    "c7e615de-82cf-4fd9-bf35-812677ac91f1",
+    "5e3b9d0e-9ce8-4da8-971d-69add5ad1582"
+  ],
+  "results": [
+    "Progress lists the product’s launcher apps with coverage status and chapter table",
+    "Real GitHub fetch and check: 313 sections to review, 222 suggestions",
+    "Health filters issues and selects affected pages for a draft",
+    "Whole-chapter selection",
+    "Bilingual edit, draft isolation and actual full HTML build",
+    "Reviewable source diff",
+    "Approval and real local publication (main guide)",
+    "Publication rollback with exact source restoration",
+    "Guide switcher: inspection progress shows its chapter, health and status",
+    "Arabic-only guide: edit, build, publish and restore",
+    "Mobile progress, suggestions and health, dark/light appearance, no horizontal overflow"
+  ],
+  "errors": []
+}

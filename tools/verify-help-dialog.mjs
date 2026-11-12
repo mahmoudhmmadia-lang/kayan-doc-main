@@ -4,8 +4,8 @@ import http from 'node:http';
 import assert from 'node:assert/strict';
 import { chromium } from 'playwright-core';
 
-const root = path.resolve(import.meta.dirname, '../..');
-const shots = path.join(root, 'kayanos-guide/review/html/help-dialog');
+const root = path.resolve(import.meta.dirname, '../../..');
+const shots = path.join(root, 'guides/main/review/html/help-dialog');
 fs.mkdirSync(shots, { recursive: true });
 const server = http.createServer((req, res) => {
   const file = path.resolve(root, '.' + decodeURIComponent(new URL(req.url, 'http://localhost').pathname));
@@ -18,7 +18,7 @@ const browser = await chromium.launch({ channel: 'msedge', headless: true });
 const errors = [];
 let checks = 0;
 try {
-  for (const [guide, lang, file] of [['industrial-observatory-guide', 'ar', 'c1'], ['kayanos-guide', 'ar', 'index'], ['kayanos-guide', 'en', 'c1'], ['kayanos-guide', 'ar', 'b1']]) {
+  for (const [guide, lang, file] of [['guides/observatory', 'ar', 'c1'], ['guides/main', 'ar', 'index'], ['guides/main', 'en', 'c1'], ['guides/main', 'ar', 'b1']]) {
     for (const width of [1440, 390]) for (const theme of ['light', 'dark']) {
       const context = await browser.newContext({ viewport: { width, height: 844 }, reducedMotion: 'reduce', colorScheme: theme });
       const page = await context.newPage();

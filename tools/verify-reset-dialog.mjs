@@ -4,8 +4,8 @@ import http from 'node:http';
 import assert from 'node:assert/strict';
 import { chromium } from 'playwright-core';
 
-const workspace = path.resolve(import.meta.dirname, '../..');
-const review = path.join(workspace, 'kayanos-guide/review/reset-dialog');
+const workspace = path.resolve(import.meta.dirname, '../../..');
+const review = path.join(workspace, 'guides/main/review/reset-dialog');
 fs.mkdirSync(review, { recursive: true });
 const server = http.createServer((req, res) => {
   const url = new URL(req.url, 'http://localhost');
@@ -21,9 +21,9 @@ const browser = await chromium.launch({ channel: 'msedge', headless: true });
 const errors = [], results = [];
 try {
   for (const [guide, lang, file] of [
-    ['kayanos-guide', 'ar', 'index.html'], ['kayanos-guide', 'en', 'index.html'],
-    ['kayanos-guide', 'ar', 'builder.html'], ['kayanos-guide', 'en', 'builder.html'],
-    ['industrial-observatory-guide', 'ar', 'index.html'],
+    ['guides/main', 'ar', 'index.html'], ['guides/main', 'en', 'index.html'],
+    ['guides/main', 'ar', 'builder.html'], ['guides/main', 'en', 'builder.html'],
+    ['guides/observatory', 'ar', 'index.html'],
   ]) for (const width of [1440, 390]) for (const theme of ['dark', 'light']) {
     const ctx = await browser.newContext({ viewport: { width, height: 900 }, colorScheme: theme, reducedMotion: 'reduce' });
     const page = await ctx.newPage();

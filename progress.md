@@ -2,6 +2,23 @@
 
 الحالات: لم يبدأ · مسودة · قيد المراجعة · معتمد
 
+## Guide Studio: suggestions, health, progress and new chapters — 2026-11-08 — under review
+
+- Studio now serves both guides (main and `guides/inspection`) and adds: exact label-rename and removed-label suggestions from the product's locale files, new app/section/area detection, an AI impact review per page (current → proposed, no editing), a deterministic health audit, app coverage progress from the product launcher catalog (`review/coverage.json`), and a confined AI chapter author (outline → your approval → write → screenshots → preview → publish). Details: `../studio/README.md`.
+- Coverage today: 7 of 17 launcher apps written (all under review), 10 not started; 31% weighted. Health: 0 errors, 0 warnings, 346 screenshots older than 14 days.
+- Against `origin/production~300` the check found exact renames still quoted by the guide, e.g. «انتظار إجراء على مهمة» → «انتظار إجراء المهمة» (`sec:builder-feature-isop-people`) and “The first in a status” → “The first with a status or choice” (`sec:builder-feature-work-navigation-context`). Not edited yet; they are waiting in Studio. No guide page has a verified baseline, so the live inbox is an initial audit until one is set.
+- Renderer: Arabic count agreement in chapter meta and page cards («قسم واحد»، «4 أقسام»، «12 خطوة»). HTML build and 20 tests passed (2 archived skipped).
+- A Meetings outline (11 pages, `09-meetings`) was researched in a Studio draft. It is not approved or written; its open questions need the user.
+
+## Guide Studio workspace — 2026-11-05 — under review
+
+- Added `studio/` inside this guide; the original repository-level `guide-studio/` is unchanged. Start with `node kayanos-guide/studio/server.mjs` and open `http://127.0.0.1:4331`.
+- GitHub checks use the existing origin/production connection and per-section verified baselines. The library finds 313 bilingual sections across 16 main/Builder chapters. Select features, a filtered chapter, all affected sections, or the entire guide; choose content, screenshots, or both. Source mappings show confidence and retain unmapped paths for review. Optional scheduled checks run while the server is open.
+- Updates are isolated drafts with a bilingual LaTeX editor, source diffs, before/after screenshots, capture recipe editing, HTML preview, explicit update approval, local publication, and restore. Publishing updates this guide and its generated site; it does not push to GitHub or deploy hosting. No chapter approval status changes.
+- Verification: focused tests passed for real Git history comparison, draft isolation, bilingual scope, concurrent edits, local request protection and deployment gating. Real Edge flow passed chapter/feature selection, manual bilingual editing, source diff, full HTML preview, publication, verification in the generated guide, and restoring the original source files. Desktop/mobile and dark/light evidence: `review/studio/`; browser results: `review/studio/verification.json`.
+- Two separate read-only test2 captures of Languages passed in Arabic and English, four markers each with none missing. Quoted Edit/Delete labels were correctly reported as absent from the unopened row menus. These diagnostic captures were not published and are not asserted to match a source commit. Normal draft capture requires a user-confirmed test2 commit equal to the draft target; no reliable automatic deployment lookup is configured.
+- AI drafting could not complete because the installed Claude Code CLI is logged out. Studio reports the setup requirement; manual editing, preview and publication work. Source matching is conservative, excerpts are bounded, and new pages/chapters still require authoring and review. Setup and operational limits are in `studio/README.md`.
+
 ## Screenshots restored for chapters 7 and 8 — 2026-11-02 — under review
 
 - All 308 chapter 7 and 8 images (136 and 172, both languages) were recaptured from test2. Each image's marker count matches the numbered key in its note (308 checked, 0 mismatches). The normal build, which stops on any missing image, passed.

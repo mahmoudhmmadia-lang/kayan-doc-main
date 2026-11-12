@@ -10,6 +10,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { loadDocument } from './latex-parse.mjs';
 import { renderSite } from './html-render.mjs';
+import { loadVideos, attachVideos, copyVideos } from './guide-videos.mjs';
 
 export const LANGS = { ar: '.', en: 'i18n/en' };
 
@@ -47,22 +48,25 @@ export function buildHtml(root) {
   fs.mkdirSync(path.join(assets, 'screens'), { recursive: true });
 
   for (const f of ['guide.css', 'guide.js', 'kayanos-mark.svg', 'favicon.svg']) {
-    fs.copyFileSync(path.join(root, 'web', f), path.join(assets, f));
+    fs.copyFileSync(path.join(fs.existsSync(path.join(root, 'web')) ? path.join(root, 'web') : path.resolve(import.meta.dirname, '../../shared/web'), f), path.join(assets, f));
   }
   const version = `?v=${Date.now().toString(36)}`;
   const used = new Set();
   const pages = [];
+  const videos = loadVideos(root), usedVideos = new Set();
   for (const [lang, dir] of Object.entries(LANGS)) {
     const doc = loadDocument(path.join(root, dir), { lang });
     const builderDoc = loadDocument(path.join(root, dir, 'builder'), { lang });
     const walk = (bs) => bs.forEach((b) => { if (b.image) used.add(b.image); if (b.blocks) walk(b.blocks); });
     walk(doc.blocks);
     walk(builderDoc.blocks);
+    for (const d of [doc, builderDoc]) for (const file of attachVideos(d.blocks, videos, lang)) usedVideos.add(file);
     fs.mkdirSync(path.join(site, lang), { recursive: true });
     const files = renderGuides(doc, builderDoc, { lang, assetsVersion: version });
     for (const [file, html] of Object.entries(files)) fs.writeFileSync(path.join(site, lang, file), html);
     pages.push(`site/${lang}/{${Object.keys(files).join(',')}}`);
   }
+  copyVideos(root, site, usedVideos);
   // Screenshots are shared by both languages; paths are relative to the guide root.
   const missingShots = [];
   for (const img of used) {

@@ -1,3 +1,7 @@
+# Workspace layout (2026-11-08)
+
+This guide now lives in `guides/main/`. Shared reader assets moved from `web/` to `../shared/web/`; edit that single theme source. Studio lives in `../studio/`. Repository source references formerly starting with `../src`, `../common`, `../scripts` or `../docs` now need `../../`. Existing chapter content and review status are unchanged. See `../README.md` for workspace commands.
+
 # AGENTS.md — KayanOS Arabic Guide
 
 Read this before touching anything in `kayanos-guide/`. It tells you what this

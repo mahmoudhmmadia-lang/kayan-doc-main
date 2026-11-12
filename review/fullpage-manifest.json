@@ -228,13 +228,13 @@
     ]
   },
   "ch01-workspaces-clear-ar": {
-    "file": "kayanos-guide/figures/screens/ch01-workspaces-clear-ar.png",
+    "file": "guides/main/figures/screens/ch01-workspaces-clear-ar.png",
     "url": "https://test2.kayanos.app/",
     "lang": "ar",
     "width": 1440,
-    "height": 2454,
+    "height": 1778,
     "scale": 2,
-    "capturedAt": "2026-10-28T07:54:53.882Z",
+    "capturedAt": "2026-11-11T07:37:17.988Z",
     "marks": [
       {
         "n": 1,
@@ -248,16 +248,17 @@
         "n": 3,
         "label": "افتح دليل التطبيقات"
       }
-    ]
+    ],
+    "sourceSha": null
   },
   "ch01-apps-clear-ar": {
-    "file": "kayanos-guide/figures/screens/ch01-apps-clear-ar.png",
+    "file": "guides/main/figures/screens/ch01-apps-clear-ar.png",
     "url": "https://test2.kayanos.app/",
     "lang": "ar",
     "width": 1440,
-    "height": 2454,
+    "height": 1778,
     "scale": 2,
-    "capturedAt": "2026-10-28T07:55:12.779Z",
+    "capturedAt": "2026-11-11T07:37:36.429Z",
     "marks": [
       {
         "n": 1,
@@ -271,7 +272,8 @@
         "n": 3,
         "label": "ادوات البناء"
       }
-    ]
+    ],
+    "sourceSha": null
   },
   "ch02-create-org-ar": {
     "file": "kayanos-guide/figures/screens/ch02-create-org-ar.png",
@@ -772,13 +774,13 @@
     ]
   },
   "ch01-workspaces-clear-en": {
-    "file": "kayanos-guide/figures/screens/ch01-workspaces-clear-en.png",
+    "file": "guides/main/figures/screens/ch01-workspaces-clear-en.png",
     "url": "https://test2.kayanos.app/",
     "lang": "en",
     "width": 1440,
-    "height": 2454,
+    "height": 3651,
     "scale": 2,
-    "capturedAt": "2026-10-28T07:55:45.017Z",
+    "capturedAt": "2026-11-11T07:38:09.069Z",
     "marks": [
       {
         "n": 1,
@@ -792,16 +794,17 @@
         "n": 3,
         "label": "Open the app directory"
       }
-    ]
+    ],
+    "sourceSha": null
   },
   "ch01-apps-clear-en": {
-    "file": "kayanos-guide/figures/screens/ch01-apps-clear-en.png",
+    "file": "guides/main/figures/screens/ch01-apps-clear-en.png",
     "url": "https://test2.kayanos.app/",
     "lang": "en",
     "width": 1440,
-    "height": 2454,
+    "height": 3651,
     "scale": 2,
-    "capturedAt": "2026-10-28T07:56:03.764Z",
+    "capturedAt": "2026-11-11T07:38:27.695Z",
     "marks": [
       {
         "n": 1,
@@ -815,7 +818,8 @@
         "n": 3,
         "label": "Builder"
       }
-    ]
+    ],
+    "sourceSha": null
   },
   "ch02-create-org-en": {
     "file": "kayanos-guide/figures/screens/ch02-create-org-en.png",

@@ -1,3 +1,5 @@
+> Workspace: this guide is in `guides/main/`. Reader theme: `../shared/web/`. Editing workspace: `../studio/`. See [workspace commands](../README.md).
+
 # KayanOS web guide
 
 Chapter 5, Projects & planning, now has an Arabic/English draft: `c5.html` and

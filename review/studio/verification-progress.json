@@ -1,0 +1,9 @@
+{
+  "at": "2026-11-08T08:46:26.422Z",
+  "results": [
+    "Product check followed live through fetch → match; finished snapshot has 4 done stages",
+    "Draft preview followed in its progress card; the finished run is kept in Run history",
+    "Arabic operation bar with translated steps, desktop and mobile without overflow"
+  ],
+  "errors": []
+}

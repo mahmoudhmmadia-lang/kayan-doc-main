@@ -1,8 +1,9 @@
 // Appends a numbered key to the \shotnote of every figure that uses a given screenshot.
 // Usage: node addkeys.mjs keys-chNN.mjs
 import fs from 'node:fs';
+import path from 'node:path';
 const { KEYS } = await import(`./${process.argv[2]}`);
-process.chdir('D:/stuff/right-code/taskflow/kayanos-guide');
+process.chdir(path.resolve(import.meta.dirname, '../..'));
 const files = { ar: fs.readdirSync('chapters').map((f) => `chapters/${f}`), en: fs.readdirSync('i18n/en/chapters').map((f) => `i18n/en/chapters/${f}`) };
 
 // Index of the brace that closes the group opened at `open`.

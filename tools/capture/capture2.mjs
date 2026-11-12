@@ -2,9 +2,10 @@
 // and records each capture in the guide's fullpage-manifest.json.
 // Usage: node capture.mjs <ar|en> [name ...]
 import fs from 'node:fs';
+import path from 'node:path';
 import { open, go, ready } from './lib.mjs';
 
-const GUIDE = 'D:/stuff/right-code/taskflow/kayanos-guide';
+const GUIDE = path.resolve(import.meta.dirname, '../..');
 const MANIFEST = process.env.KOS_MANIFEST || `${GUIDE}/review/fullpage-manifest.json`;
 
 

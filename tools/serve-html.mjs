@@ -10,6 +10,7 @@ import http from 'node:http';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath, pathToFileURL } from 'node:url';
+import { localizeGuideLinks } from './guide-links.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const SITE = path.join(ROOT, 'site');
@@ -45,15 +46,15 @@ http.createServer((req, res) => {
   if (!fs.existsSync(file)) { res.writeHead(404).end('Not found'); return; }
   const ext = path.extname(file);
   let body = fs.readFileSync(file);
-  if (ext === '.html') body = body.toString().replace('</body>', `${RELOAD}</body>`);
+  if (ext === '.html') body = localizeGuideLinks(body.toString()).replace('</body>', `${RELOAD}</body>`);
   res.writeHead(200, { 'Content-Type': TYPES[ext] ?? 'application/octet-stream', 'Cache-Control': 'no-store' }).end(body);
-}).listen(PORT, () => console.log(`KayanOS guide → http://localhost:${PORT}/  (ar: /ar/, en: /en/)`));
+}).listen(PORT, () => console.log(`KayanOS guide → http://127.0.0.1:${PORT}/  (ar: /ar/, en: /en/)`));
 
 let timer;
 const watch = (dir) => fs.watch(path.join(ROOT, dir), { recursive: true }, (_e, f) => {
   if (f && (!/\.(tex|css|js|mjs|svg|png)$/.test(f) || /node_modules|capture/.test(f))) return;
   clearTimeout(timer); timer = setTimeout(build, 150);
 });
-['chapters', 'references', 'i18n', 'web', 'figures', 'tools'].forEach((d) => { if (fs.existsSync(path.join(ROOT, d))) watch(d); });
+['chapters', 'references', 'i18n', '../shared/web', 'figures', 'tools'].forEach((d) => { if (fs.existsSync(path.join(ROOT, d))) watch(d); });
 fs.watch(ROOT, (_e, f) => { if (f === 'main.tex') { clearTimeout(timer); timer = setTimeout(build, 150); } });
 build();
