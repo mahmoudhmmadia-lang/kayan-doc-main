@@ -251,6 +251,11 @@ export function structure(doc, prefix = 'c') {
                     b.id = `${c.id}-f${++c.figures}`
                     if (b.label) ids.set(b.label, b.id)
                 }
+                if (b.type === 'shotflow') {
+                    c.flows = (c.flows ?? 0) + 1
+                    b.id = `${c.id}-flow${c.flows}`
+                    if (b.label) ids.set(b.label, b.id)
+                }
                 if (b.blocks) walk(b.blocks)
             })
         walk(all)
@@ -401,6 +406,37 @@ function renderFigure(b, ctx) {
     return ''
 }
 
+// A journey told with real screenshots (rcshotflow). A rail of numbered steps, each naming who acts, opens one
+// step at a time: its zoomable screenshot beside the explanation, a link to the full step, previous and next.
+// Without JavaScript every step is listed in order, each with its screenshot, so nothing is hidden.
+const SHOTFLOW_UI = {
+    ar: { eyebrow: 'مخطط بالصور', steps: (n) => `${n} خطوات`, step: (i, n) => `الخطوة ${i} من ${n}`, read: 'اقرأ الخطوة كاملة', prev: 'السابق', next: 'التالي', result: 'النتيجة', rail: 'خطوات المخطط' },
+    en: { eyebrow: 'Flow in screenshots', steps: (n) => `${n} steps`, step: (i, n) => `Step ${i} of ${n}`, read: 'Read the full step', prev: 'Previous', next: 'Next', result: 'The result', rail: 'Flow steps' },
+}
+function renderShotflow(b, ctx) {
+    const t = SHOTFLOW_UI[ctx.lang] ?? SHOTFLOW_UI.ar
+    const n = b.steps.length
+    const base = b.id ?? `flow${++diagramSeq}`
+    const nav = { ...ctx, nolink: true }
+    const rail = b.steps.map((s, i) => `<li><button class="shotflow-tab" type="button" role="tab" id="${base}-tab${i + 1}" aria-controls="${base}-p${i + 1}" aria-selected="${i === 0}" tabindex="${i === 0 ? 0 : -1}" data-flow-tab="${i}"><span class="shotflow-no" dir="ltr">${i + 1}</span><span class="shotflow-tab-text"><span class="shotflow-tab-title">${inline(s.title, nav)}</span><span class="shotflow-tab-actor">${inline(s.actor, nav)}</span></span></button></li>`).join('')
+    const panels = b.steps.map((s, i) => {
+        const file = s.image.split('/').pop()
+        const target = s.target && ctx.ids.get(s.target)
+        const more = target ? `<a class="shotflow-more" href="${link(target, ctx.page, ctx.routes)}">${esc(t.read)} ${ARROW}</a>` : ''
+        return `<section class="shotflow-panel" role="tabpanel" id="${base}-p${i + 1}" aria-labelledby="${base}-tab${i + 1}" data-flow-panel="${i}">
+<button class="shotflow-shot shot-btn" type="button" data-zoom aria-label="${esc(ctx.ui.zoom)}"><img src="../assets/screens/${esc(file)}" alt="${esc(plain(s.title, ctx))}" loading="lazy" decoding="async"><span class="shot-zoom">${icon('zoom')}</span></button>
+<div class="shotflow-text"><div class="shotflow-meta"><span class="shotflow-count">${esc(t.step(i + 1, n))}</span><span class="shotflow-actor">${inline(s.actor, ctx)}</span></div><h4 class="shotflow-title">${inline(s.title, ctx)}</h4><p>${inline(s.text, ctx)}</p>${more}
+<div class="shotflow-nav"><button class="btn" type="button" data-flow-step="-1"${i === 0 ? ' disabled' : ''}>${esc(t.prev)}</button><button class="btn btn-primary" type="button" data-flow-step="1"${i === n - 1 ? ' disabled' : ''}>${esc(t.next)}</button></div></div>
+</section>`
+    }).join('')
+    const intro = b.intro ? `<p class="shotflow-intro">${inline(b.intro, ctx)}</p>` : ''
+    const result = b.result ? `<footer class="shotflow-result"><span class="shotflow-result-icon" aria-hidden="true">${icon('tick')}</span><p><strong>${esc(t.result)}:</strong> ${inline(b.result, ctx)}</p></footer>` : ''
+    return `<figure class="shotflow reveal"${b.id ? ` id="${b.id}"` : ''} data-shotflow>
+<header class="shotflow-head"><div class="shotflow-chips"><span>${esc(t.eyebrow)}</span><span>${esc(t.steps(n))}</span></div><h3 class="shotflow-heading">${inline(b.title, ctx)}</h3>${intro}</header>
+<ol class="shotflow-rail" role="tablist" aria-label="${esc(t.rail)}">${rail}</ol>
+<div class="shotflow-panels">${panels}</div>${result}</figure>`
+}
+
 // Examples stay visible in short mode: callouts titled «مثال…»/«تطبيق المثال»/«Example…»
 // and paragraphs that open with a bold «تطبيق المثال:».
 const EXAMPLE = /^\s*(?:\\textbf\{)?\s*(?:تطبيق المثال|مثال|Example|Applying the example)/
@@ -417,6 +453,8 @@ function renderBlock(b, ctx) {
             return renderTable(b, ctx)
         case 'figure':
             return renderFigure(b, ctx)
+        case 'shotflow':
+            return renderShotflow(b, ctx)
         case 'video':
             // A recorded walkthrough placed under its section heading (tools/guide-videos.mjs).
             return `<figure class="guide-video reveal"><video controls preload="metadata" playsinline src="../assets/videos/${esc(b.file.split('/').pop())}"></video>${b.title ? `<figcaption>${esc(b.title)}</figcaption>` : ''}</figure>`
@@ -444,10 +482,13 @@ const ring = (id) =>
 // practical app builds one real workflow and names the parts of Kayan it makes
 // clearer. Addresses come from guide-links.mjs.
 const APPS_UI = {
-    ar: { title: 'تطبيقات الدليل', heading: 'اختر ما تريد أن تفهمه', here: 'أنت هنا', soon: 'قريباً', deepens: 'يعمّق فهمك لـ', groups: { reference: ['المرجع', 'يشرح كل صفحة في كيان'], practice: ['تطبيقات عملية', 'تفهم الأدوات وأنت تبني بها مساراً كاملاً'] } },
-    en: { title: 'Guide apps', heading: 'Choose what you want to understand', here: 'You are here', soon: 'Coming soon', deepens: 'Deepens', groups: { reference: ['Reference', 'Explains every page in Kayan'], practice: ['Practical apps', 'Understand the tools by building a full workflow with them'] } },
+    ar: { title: 'تطبيقات الدليل', heading: 'اختر ما تريد أن تفهمه', here: 'أنت هنا', soon: 'قريباً', deepens: 'يعمّق فهمك لـ', groups: { training: ['التدريب', 'ابدأ من هنا إن كنت جديداً على كيان'], reference: ['المرجع', 'يشرح كل صفحة في كيان'], practice: ['تطبيقات عملية', 'تفهم الأدوات وأنت تبني بها مساراً كاملاً'] } },
+    en: { title: 'Guide apps', heading: 'Choose what you want to understand', here: 'You are here', soon: 'Coming soon', deepens: 'Deepens', groups: { training: ['Training', 'Start here if you are new to Kayan'], reference: ['Reference', 'Explains every page in Kayan'], practice: ['Practical apps', 'Understand the tools by building a full workflow with them'] } },
 }
 const GUIDE_APPS = [
+    { id: 'training', group: 'training', icon: '<path d="M3 9.5 12 5l9 4.5-9 4.5z"/><path d="M7 11.5v4c0 1.4 2.2 2.5 5 2.5s5-1.1 5-2.5v-4M21 9.5V15"/>',
+      ar: ['الحقيبة التدريبية', 'تعرّف على كيان في وحدات قصيرة: لماذا كيان، وأدوات العمل اليومي، وتطبيقات المؤسسة، وأدوات البناء، وكيف تنقل عمل مؤسستك إليه.', ['كل الأدلة']],
+      en: ['Training kit', 'Get to know Kayan in short units: why Kayan, ready-made apps, builder tools and moving your work into it.', ['All guides']] },
     { id: 'main', group: 'reference', icon: '<path d="M5 4h10a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3z"/><path d="M5 17a3 3 0 0 1 3-3h10M9 8h5"/>',
       ar: ['الدليل الرئيسي', 'المرجع الكامل لتطبيقات كيان: الموارد البشرية والمهام والمشاريع والمراسلات والإعدادات.'],
       en: ['Main guide', 'The full reference for Kayan apps: HR, tasks, projects, correspondence and settings.'] },
@@ -460,6 +501,9 @@ const GUIDE_APPS = [
     { id: 'correspondence', group: 'practice', icon: '<rect x="3" y="6" width="18" height="13" rx="2"/><path d="m3 8 9 6 9-6"/>',
       ar: ['المراسلات', 'تتابع دورة كتاب رسمي من إنشائه إلى أرشفته: الوارد والإحالة والرد والصادر.', ['المراسلات الرسمية', 'الموارد البشرية']],
       en: ['Correspondence', 'Follow an official letter from drafting to archive: incoming, referral, reply and outgoing.', ['Official correspondence', 'HR']] },
+    { id: 'sop', group: 'practice', icon: '<circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="12" r="2.5"/><circle cx="6" cy="18" r="2.5"/><path d="M8.5 6H12a3 3 0 0 1 3 3v.5M8.5 18H12a3 3 0 0 0 3-3v-.5"/>',
+      ar: ['الإجراءات الداخلية', 'تبني إجراءً يعتمد ويكلّف وحده، ثم تتابع به مهلة تسوية ضبط حقيقية.', ['الإجراءات الداخلية', 'الكيانات']],
+      en: ['Internal SOPs', 'Build an SOP that approves and assigns on its own, then follow a real settlement deadline with it.', ['Internal SOPs', 'Entities']] },
 ]
 function guideApps(lang, currentId, home) {
     const t = APPS_UI[lang]
@@ -474,7 +518,7 @@ function guideApps(lang, currentId, home) {
 }
 
 // Head, top bar, search palette, lightbox and data shared by every page.
-function shell({ ui, lang, page, home = 'index.html', title, description, body, data, assetsVersion }) {
+function shell({ ui, lang, page, home = 'index.html', title, description, body, data, assetsVersion, bodyClass = '' }) {
     return `<!doctype html>
 <html lang="${lang}" dir="${ui.dir}" data-theme="dark">
 <head>
@@ -491,12 +535,12 @@ function shell({ ui, lang, page, home = 'index.html', title, description, body, 
 <script>try{var t=localStorage.getItem('kos-guide-theme');if(!t)t=matchMedia('(prefers-color-scheme: light)').matches?'light':'dark';document.documentElement.dataset.theme=t;if(localStorage.getItem('kos-guide-short')==='on')document.documentElement.dataset.short='on';localStorage.setItem('kos-guide-lang','${lang}')}catch(e){}</script>
 <link rel="stylesheet" href="../assets/guide.css${assetsVersion}">
 </head>
-<body class="${page === home ? 'page-home' : 'page-chapter'}">
+<body class="${page === home ? 'page-home' : 'page-chapter'}${bodyClass ? ` ${bodyClass}` : ''}">
 <a class="skip" href="#main">${esc(ui.start)}</a>
 <div class="read-progress" aria-hidden="true"><span></span></div>
 <header class="topbar">
   <div class="topbar-in">
-    ${page === home ? '' : `<button class="icon-btn menu-btn" type="button" data-open-toc aria-label="${esc(ui.menu)}"><svg class="ic" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg></button>`}
+    ${page === home || bodyClass.includes('page-flow') ? '' : `<button class="icon-btn menu-btn" type="button" data-open-toc aria-label="${esc(ui.menu)}"><svg class="ic" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg></button>`}
     <a class="brand" href="${home}" aria-label="${esc(ui.brand)}"><img src="../assets/kayanos-mark.svg" alt="" width="34" height="23"><span class="brand-name">Kayan<b>OS</b></span><span class="brand-sep"></span><span class="brand-sub">${esc(ui.brand)}</span></a>
     <button class="apps-btn" type="button" data-open-apps aria-haspopup="dialog" aria-controls="guide-apps" aria-label="${esc(APPS_UI[lang].title)}" title="${esc(APPS_UI[lang].title)}"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1.5"/><rect x="14" y="4" width="6" height="6" rx="1.5"/><rect x="4" y="14" width="6" height="6" rx="1.5"/><rect x="14" y="14" width="6" height="6" rx="1.5"/></svg><span>${esc(APPS_UI[lang].title)}</span></button>
     <button class="search-btn" type="button" data-open-search><svg class="ic" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><span>${esc(ui.search)}</span><kbd dir="ltr">Ctrl K</kbd></button>
@@ -544,6 +588,230 @@ ${body}
 </body>
 </html>
 `
+}
+
+// ---------------------------------------------------------------- flow site
+// A walkthrough told as an app (renderFlowSite): the home page offers one card per example (chapter), and each
+// example is one page that shows a single step at a time. A step names who acts (person and the position chosen
+// in «أعمل بصفتي»), where (the path as chips), the actions, what to note down and the result. Two buttons open
+// dialogs: «البيانات» (the values to enter, and the text of documents to prepare) and «ما فائدتها؟» (two lines on
+// what the step achieves). A rail lists the example's steps by phase. Without JavaScript the steps read in order.
+const FLOW_ICONS = {
+    where: '<path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/>',
+    log: '<path d="M8 4h8l3 3v13H5V4z"/><path d="M9 12h6M9 16h4"/>',
+    data: '<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M9 10v10"/>',
+    why: '<circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/>',
+    copy: '<rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/>',
+    close: '<path d="m6 6 12 12M18 6 6 18"/>',
+}
+const flowIcon = (name) => `<svg class="ic" viewBox="0 0 24 24" aria-hidden="true">${FLOW_ICONS[name]}</svg>`
+const FLOW_UI = {
+    ar: {
+        example: (n) => `المثال ${n}`, examples: 'اختر المثال', steps: (n) => `${n} خطوة`, start: 'ابدأ المثال', cont: 'تابع من حيث توقفت',
+        who: 'من؟', where: 'أين؟', log: 'سجّل', result: 'النتيجة', data: 'البيانات', why: 'ما فائدتها؟',
+        dataTitle: 'البيانات التي تدخلها', whyTitle: 'ما فائدة هذه الخطوة؟', field: 'الحقل', value: 'القيمة', note: 'ملاحظة',
+        doc: 'نموذج جاهز للنسخ', screen: 'الشاشة كما تظهر في كيان', copy: 'نسخ النص', copied: 'نُسخ النص', all: 'كل الخطوات', step: (i, n) => `الخطوة ${i} من ${n}`,
+        nextExample: 'انتقل إلى المثال التالي', finish: 'أنهيت المثال — العودة إلى الرئيسية', home: 'الرئيسية', more: 'تعمّق أكثر', take: 'الخلاصة:', answer: 'اعرض الإجابة', rightIs: 'الإجابة الصحيحة:',
+    },
+    en: {
+        example: (n) => `Example ${n}`, examples: 'Choose an example', steps: (n) => `${n} steps`, start: 'Start the example', cont: 'Continue where you stopped',
+        who: 'Who?', where: 'Where?', log: 'Note down', result: 'Result', data: 'Data', why: 'Why?',
+        dataTitle: 'The data you enter', whyTitle: 'What does this step give you?', field: 'Field', value: 'Value', note: 'Note',
+        doc: 'Template to copy', screen: 'The screen as Kayan shows it', copy: 'Copy text', copied: 'Text copied', all: 'All steps', step: (i, n) => `Step ${i} of ${n}`,
+        nextExample: 'Go to the next example', finish: 'Example done — back to home', home: 'Home', more: 'Go deeper', take: 'Takeaway:', answer: 'Show the answer', rightIs: 'Right answer:',
+    },
+}
+
+// Links to the guide pages that explain a step in depth; a new tab keeps the step open.
+function flowLinks(q, ctx, f) {
+    return q.links?.length ? `<div class="quick-card-foot quick-links"><small>${esc(f.more)}</small>${q.links.map((l) => `<a class="quick-more" href="${esc(guideUrl(l.guide) + l.page)}" target="_blank" rel="noopener" data-guide-link="${esc(l.guide)}">${inline(l.label, { ...ctx, nolink: true })}<svg class="ic flip" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></a>`).join('')}</div>` : ''
+}
+
+// Icons for concept-slide cards (\scard{icon}{title}{text}); an unknown name draws a dot.
+const SLIDE_ICONS = {
+    mail: '<rect x="3" y="6" width="18" height="13" rx="2"/><path d="m3 8 9 6 9-6"/>',
+    chat: '<path d="M21 12a8 8 0 0 1-11.6 7.1L4 20l1-4.6A8 8 0 1 1 21 12z"/>',
+    sheet: '<rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 10h16M4 15h16M10 4v16"/>',
+    paper: '<path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h4"/>',
+    people: '<circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><circle cx="17" cy="9" r="2.5"/><path d="M16 14a5 5 0 0 1 5 6"/>',
+    tasks: '<path d="m4 7 2 2 3-3M4 15l2 2 3-3M12 8h8M12 16h8"/>',
+    projects: '<path d="M4 5h9M7 10h11M5 15h8M10 20h10"/>',
+    chart: '<path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/>',
+    entity: '<ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v12c0 1.7 3.1 3 7 3s7-1.3 7-3V6M5 12c0 1.7 3.1 3 7 3s7-1.3 7-3"/>',
+    form: '<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M9 3v2h6V3M9 10h6M9 14h6M9 18h3"/>',
+    flow: '<circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="12" r="2.5"/><circle cx="6" cy="18" r="2.5"/><path d="M8.5 6H12a3 3 0 0 1 3 3v.5M8.5 18H12a3 3 0 0 0 3-3v-.5"/>',
+    ai: '<path d="M12 3v4M12 17v4M3 12h4M17 12h4"/><path d="m12 8 1.3 2.7L16 12l-2.7 1.3L12 16l-1.3-2.7L8 12l2.7-1.3z"/>',
+    lock: '<rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/>',
+    gov: '<path d="M3 10 12 4l9 6M5 10v8M9.5 10v8M14.5 10v8M19 10v8M3 21h18"/>',
+    heart: '<path d="M12 20s-8-4.6-8-10.2A4.3 4.3 0 0 1 12 7a4.3 4.3 0 0 1 8 2.8C20 15.4 12 20 12 20z"/>',
+    building: '<rect x="5" y="3" width="14" height="18" rx="1.5"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2M11 21v-3h2v3"/>',
+    link: '<path d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1"/><path d="M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/>',
+}
+const slideIcon = (name) => `<svg class="ic" viewBox="0 0 24 24" aria-hidden="true">${SLIDE_ICONS[name] ?? '<circle cx="12" cy="12" r="3"/>'}</svg>`
+
+// A concept slide (rcslide): the idea in a title and one line, then its visual parts in the order written, a
+// takeaway and links. It keeps the quick-card hooks (data-quick-card, .quick-title), so navigation, the step rail
+// and progress work unchanged.
+function renderSlideCard(s, q, i, n, ctx, f) {
+    const items = (src) => src.split(/\\\\/).map((t) => t.trim()).filter(Boolean).map((t) => `<li>${inline(t, ctx)}</li>`).join('')
+    const groups = []
+    for (const part of q.parts) {
+        const last = groups.at(-1)
+        if (last && last.kind === part.kind && ['card', 'metric', 'quiz'].includes(part.kind)) last.list.push(part.args)
+        else groups.push({ kind: part.kind, list: [part.args] })
+    }
+    const body = groups.map(({ kind, list }) => {
+        if (kind === 'quote') return list.map(([t]) => `<blockquote class="slide-quote"><p>${inline(t, ctx)}</p></blockquote>`).join('')
+        if (kind === 'compare') return list.map(([bt, b, at, a]) => `<div class="slide-compare"><section class="slide-side slide-before"><h3>${inline(bt, ctx)}</h3><ul>${items(b)}</ul></section><span class="slide-vs" aria-hidden="true"></span><section class="slide-side slide-after"><h3>${inline(at, ctx)}</h3><ul>${items(a)}</ul></section></div>`).join('')
+        if (kind === 'card') return `<div class="slide-cards" style="--n:${Math.min(list.length, 4)}">${list.map(([ic, t, x]) => `<div class="slide-tile"><span class="slide-ic">${slideIcon(ic)}</span><strong>${inline(t, ctx)}</strong>${x ? `<span>${inline(x, ctx)}</span>` : ''}</div>`).join('')}</div>`
+        if (kind === 'chain') return list.map(([t]) => `<ol class="slide-chain">${t.split('←').map((p) => `<li>${inline(p.trim(), ctx)}</li>`).join('')}</ol>`).join('')
+        // A self-check question: the options, then the answer and why behind a native disclosure (works without JS).
+        if (kind === 'quiz') return list.map(([q, opts, right, why], qi) => `<div class="slide-quiz"><p class="slide-quiz-q"><span class="slide-quiz-no">${qi + 1}</span>${inline(q, ctx)}</p><ol class="slide-quiz-opts">${opts.split(/\\\\/).map((o) => o.trim()).filter(Boolean).map((o, oi) => `<li${oi + 1 === Number(right) ? ' data-right' : ''}>${inline(o, ctx)}</li>`).join('')}</ol><details class="slide-quiz-a"><summary>${esc(f.answer)}</summary><p><strong>${esc(f.rightIs)} ${esc(String(right))}.</strong> ${inline(why, ctx)}</p></details></div>`).join('')
+        if (kind === 'metric') return `<div class="slide-metrics">${list.map(([l, b, a]) => `<div class="slide-metric"><small>${inline(l, ctx)}</small><span class="slide-m-before">${inline(b, ctx)}</span><span class="slide-m-arrow" aria-hidden="true"></span><strong class="slide-m-after">${inline(a, ctx)}</strong></div>`).join('')}</div>`
+        return ''
+    }).join('')
+    const phase = q.phase ? `<span class="quick-chip">${inline(q.phase, ctx)}</span>` : '<span></span>'
+    return `<article class="quick-card slide-card" id="${s.id}" data-quick-card="${i}" aria-labelledby="${s.id}-h">
+<header class="quick-card-head">${phase}<span class="quick-count">${esc(f.step(i + 1, n))}</span></header>
+<h2 id="${s.id}-h" class="quick-title slide-title">${inline(q.title, ctx)}</h2>
+${q.lead ? `<p class="slide-lead">${inline(q.lead, ctx)}</p>` : ''}
+<div class="slide-body">${body}</div>
+${q.take ? `<p class="slide-take">${slideIcon('ai')}<span><strong>${esc(f.take)}</strong> ${inline(q.take, ctx)}</span></p>` : ''}${flowLinks(q, ctx, f)}
+</article>`
+}
+
+function renderFlowCard(s, q, i, n, ctx, ui, f) {
+    if (q.type === 'slide') return renderSlideCard(s, q, i, n, ctx, f)
+    const initial = q.who ? plain(q.who.name, ctx).trim().charAt(0) : ''
+    const who = q.who ? `<div class="quick-who"><span class="quick-avatar" aria-hidden="true">${esc(initial)}</span><div><small>${esc(f.who)}</small><strong>${inline(q.who.name, ctx)}</strong><span>${inline(q.who.role, ctx)}</span></div></div>` : ''
+    const where = q.where ? `<div class="quick-where"><small>${flowIcon('where')}${esc(f.where)}</small><ol>${q.where.split('←').map((p) => `<li>${inline(p.trim(), ctx)}</li>`).join('')}</ol></div>` : ''
+    const steps = q.steps.length ? `<ol class="quick-do">${q.steps.map((d) => `<li>${inline(d, ctx)}</li>`).join('')}</ol>` : ''
+    const log = q.log ? `<p class="quick-log">${flowIcon('log')}<span><strong>${esc(f.log)}:</strong> ${inline(q.log, ctx)}</span></p>` : ''
+    const result = q.result ? `<p class="quick-result">${icon('tick')}<span><strong>${esc(f.result)}:</strong> ${inline(q.result, ctx)}</span></p>` : ''
+    const links = flowLinks(q, ctx, f)
+    const phase = q.phase ? `<span class="quick-chip">${inline(q.phase, ctx)}</span>` : '<span></span>'
+    const dialog = (kind, title, body) => `<dialog class="flow-dialog" id="${s.id}-${kind}" aria-labelledby="${s.id}-${kind}-h">
+<header class="flow-dialog-head"><div><small>${inline(q.title, ctx)}</small><h3 id="${s.id}-${kind}-h">${flowIcon(kind)}${esc(title)}</h3></div><form method="dialog"><button class="icon-btn" aria-label="${esc(ui.close)}">${flowIcon('close')}</button></form></header>
+<div class="flow-dialog-body">${body}</div></dialog>`
+    const table = q.data.length ? `<div class="flow-table-wrap"><table class="flow-table"><thead><tr><th>${esc(f.field)}</th><th>${esc(f.value)}</th><th>${esc(f.note)}</th></tr></thead><tbody>${q.data.map((r) => `<tr><th scope="row">${inline(r.field, ctx)}</th><td>${inline(r.value, ctx)}</td><td>${inline(r.note, ctx)}</td></tr>`).join('')}</tbody></table></div>` : ''
+    const docs = q.docs.map((d) => `<section class="flow-doc"><header><span>${esc(f.doc)}: ${inline(d.title, ctx)}</span><button class="btn btn-ghost flow-copy" type="button" data-flow-copy data-copied="${esc(f.copied)}">${flowIcon('copy')}<span>${esc(f.copy)}</span></button></header><div class="flow-doc-text">${d.text.split(/\\\\|\n\s*\n/).map((p) => p.trim()).filter(Boolean).map((p) => `<p>${inline(p, ctx)}</p>`).join('')}</div></section>`).join('')
+    // The real screen with its numbered markers; its key explains each number (①: label).
+    const shots = (q.shots ?? []).map((sh) => `<figure class="flow-shot"><figcaption>${esc(f.screen)}</figcaption><a class="flow-shot-img" href="../assets/screens/${esc(sh.image.split('/').pop())}" target="_blank" rel="noopener" title="${esc(ui.original)}"><img src="../assets/screens/${esc(sh.image.split('/').pop())}" alt="${esc(plain(q.title, ctx))}" loading="lazy" decoding="async"></a>${sh.noteText ? `<p class="flow-shot-desc">${inline(sh.noteText, ctx)}</p>` : ''}${sh.noteKeys?.length ? `<ol class="flow-shot-keys">${sh.noteKeys.map((k) => `<li><span class="flow-shot-no">${k.n}</span><span>${inline(k.text, ctx)}</span></li>`).join('')}</ol>` : ''}</figure>`).join('')
+    const hasData = table || docs || shots
+    const tools = `<div class="flow-tools">${hasData ? `<button class="flow-btn" type="button" data-flow-dialog="${s.id}-data" aria-haspopup="dialog">${flowIcon('data')}<span>${esc(f.data)}</span></button>` : ''}${q.why ? `<button class="flow-btn flow-btn-why" type="button" data-flow-dialog="${s.id}-why" aria-haspopup="dialog">${flowIcon('why')}<span>${esc(f.why)}</span></button>` : ''}</div>`
+    return `<article class="quick-card" id="${s.id}" data-quick-card="${i}" aria-labelledby="${s.id}-h">
+<header class="quick-card-head">${phase}<span class="quick-count">${esc(f.step(i + 1, n))}</span></header>
+<h2 id="${s.id}-h" class="quick-title">${inline(q.title, ctx)}</h2>
+${tools}
+<div class="quick-context">${who}${where}</div>
+${steps}${log}${result}${links}
+${hasData ? dialog('data', f.dataTitle, shots + table + docs) : ''}${q.why ? dialog('why', f.whyTitle, `<p class="flow-why">${inline(q.why, ctx)}</p>`) : ''}
+</article>`
+}
+
+// The screenshots used by a flow site's steps (qshot), for the build to copy into site/assets/screens.
+export function flowImages(doc) {
+    return doc.blocks.filter((b) => b.type === 'quick').flatMap((b) => (b.shots ?? []).map((s) => s.image))
+}
+
+// Returns { 'index.html': html, 'c1.html': html, … }: the examples home and one flow page per example.
+export function renderFlowSite(doc, { lang, assetsVersion = '', guide = {} }) {
+    const { home = 'index.html', store = 'kos-guide-progress' } = guide
+    const ui = { ...UI[lang] }
+    // A guide may rename the flow labels (the training kit says «الوحدة» where walkthroughs say «المثال»).
+    const f = { ...FLOW_UI[lang], ...(guide.flowUi ?? {}) }
+    const { chapters } = structure(doc, 'c')
+    const base = { ui, lang, ids: new Map(), routes: {}, features: [], linked: {}, labels: doc.labels, colors: { rcPrimary: '00696D' } }
+    const examples = chapters.map((c, ci) => {
+        const items = c.sections.map((s) => ({ s, q: s.blocks.find((b) => b.type === 'quick' || b.type === 'slide') })).filter((x) => x.q)
+        const phases = [...new Set(items.map((x) => x.q.phase).filter(Boolean))]
+        return { c, ci, page: `${c.id}.html`, items, phases, label: f.example(ci + 1) }
+    })
+    const steps = examples.flatMap((e) => e.items.map((x) => ({ id: x.s.id, p: e.page, c: e.c.id, t: text(x.q.title, base), n: '' })))
+    const search = examples.flatMap((e) => [
+        { id: e.c.id, p: e.page, c: '', t: text(e.c.title, base), n: e.label, x: '', chapter: true },
+        ...e.items.map((x) => ({ id: x.s.id, p: e.page, c: text(e.c.title, base), t: text(x.q.title, base), n: '', x: [...x.q.steps, ...x.q.data.map((r) => `${r.field} ${r.value}`)].map((t) => text(t, base)).join(' ').slice(0, 1200) })),
+    ])
+    const data = {
+        guideId: guide.id ?? 'main', readingHelp: '', lang, home, store, routes: {},
+        ui: { copied: ui.copied, noResults: ui.noResults, resetConfirm: ui.resetConfirm, chapterDone: ui.chapterDone },
+        chapters: examples.map((e) => ({ id: e.c.id, p: e.page })), legacy: {}, steps, search,
+    }
+    const title = plain(doc.coverArgs?.[1] ?? ui.brand, base)
+    const description = plain(doc.coverArgs?.[2] ?? '', base)
+    const [kicker, coverTitle, subtitle] = (doc.coverArgs ?? []).map((a) => inline(a, base))
+    const pages = {}
+    const cards = examples.map((e, i) => `<a class="flow-example reveal" style="--d:${i}" href="${e.page}" data-flow-example="${e.c.id}" data-flow-total="${e.items.length}">
+<span class="flow-ex-top"><span class="chip">${esc(e.label)}</span><span class="flow-ex-meta">${esc(f.steps(e.items.length))}</span></span>
+<span class="flow-ex-title">${inline(e.c.title, { ...base, nolink: true })}</span>
+${e.c.intro.filter((b) => b.type === 'para').map((b) => `<span class="flow-ex-desc">${inline(b.src, { ...base, nolink: true })}</span>`).join('')}
+${e.phases.length ? `<span class="flow-ex-phases">${e.phases.map((p) => `<span>${inline(p, { ...base, nolink: true })}</span>`).join('')}</span>` : ''}
+<span class="flow-ex-bar" aria-hidden="true"><span data-flow-bar="${e.c.id}"></span></span>
+<span class="btn btn-primary flow-ex-cta"><span data-flow-cta="${e.c.id}" data-start="${esc(f.start)}" data-cont="${esc(f.cont)}">${esc(f.start)}</span>${ARROW}</span>
+</a>`).join('')
+    pages[home] = shell({
+        ui, lang, page: home, home, title, description, data, assetsVersion, bodyClass: 'flow-site',
+        body: `
+<main id="main">
+<section class="hero">
+  <div class="hero-bg" aria-hidden="true"><span class="orb o1"></span><span class="orb o2"></span><span class="orb o3"></span><span class="grid"></span></div>
+  <div class="hero-in">
+    <p class="eyebrow reveal">${kicker ?? ''}</p>
+    <h1 class="hero-title reveal"><span class="grad">${coverTitle ?? ''}</span></h1>
+    <p class="hero-sub reveal">${subtitle ?? ''}</p>
+  </div>
+  <div class="paths">
+    <h2 class="paths-title reveal">${esc(f.examples)}</h2>
+    <div class="flow-examples">${cards}</div>
+  </div>
+  <div class="paths apps-home">
+    <h2 class="paths-title reveal">${esc(APPS_UI[lang].title)}</h2>
+    ${guideApps(lang, data.guideId, home)}
+  </div>
+</section>
+</main>`,
+    })
+    for (const e of examples) {
+        const page = e.page
+        const ctx = { ...base, page }
+        const nav = { ...ctx, nolink: true }
+        const n = e.items.length
+        let phase = null
+        const rail = e.items.map((x, i) => {
+            const divider = x.q.phase && x.q.phase !== phase ? `<li class="quick-phase">${inline(x.q.phase, nav)}</li>` : ''
+            if (x.q.phase) phase = x.q.phase
+            const who = x.q.who ? `<span class="quick-tab-who">${inline(x.q.who.name, nav)}</span>` : ''
+            return `${divider}<li><a class="quick-tab" href="#${x.s.id}" data-quick-tab="${i}"><span class="quick-tab-no">${i + 1}</span><span class="quick-tab-text"><span class="quick-tab-title">${inline(x.q.title, nav)}</span>${who}</span></a></li>`
+        }).join('')
+        const cards = e.items.map((x, i) => renderFlowCard(x.s, x.q, i, n, ctx, ui, f)).join('\n')
+        const next = examples[e.ci + 1]
+        const finish = next
+            ? `<a class="btn btn-primary quick-finish" href="${next.page}"><span>${esc(f.nextExample)}</span><small>${inline(next.c.title, nav)}</small>${ARROW}</a>`
+            : `<a class="btn btn-primary quick-finish" href="${home}">${icon('tick')}<span>${esc(f.finish)}</span></a>`
+        pages[page] = shell({
+            ui, lang, page, home, title: `${text(e.c.title, ctx)} · ${title}`, description, data, assetsVersion, bodyClass: 'flow-site page-flow',
+            body: `
+<main id="main" class="quick flow" data-quick data-flow="${e.c.id}">
+  <header class="quick-head">
+    <div class="quick-head-text"><nav class="crumbs" aria-label="${esc(f.home)}"><a href="${home}">${esc(f.home)}</a><span aria-hidden="true">/</span><span>${esc(e.label)}</span></nav><h1 class="quick-eyebrow">${inline(e.c.title, nav)}</h1></div>
+    <div class="quick-progress"><span class="quick-progress-count" dir="ltr" data-quick-count>1/${n}</span><span class="quick-progress-bar" aria-hidden="true"><span data-quick-bar></span></span></div>
+    <button class="btn btn-ghost quick-list-btn" type="button" data-quick-list aria-expanded="false" aria-controls="flow-rail">${esc(f.all)}</button>
+  </header>
+  <div class="quick-layout">
+    <nav class="quick-rail" id="flow-rail" aria-label="${esc(f.all)}"><ol>${rail}</ol></nav>
+    <div class="quick-stage">
+      <div class="quick-cards" aria-live="polite">${cards}</div>
+      <nav class="quick-nav" aria-label="${esc(ui.stepLabel)}">
+        <button class="btn quick-prev" type="button" data-quick-step="-1"><svg class="ic flip" viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg><span>${esc(ui.prev)}</span></button>
+        <button class="btn btn-primary quick-next" type="button" data-quick-step="1"><span>${esc(ui.next)}</span><small data-quick-next-title></small><svg class="ic flip" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg></button>
+        ${finish}
+      </nav>
+    </div>
+  </div>
+</main>`,
+        })
+    }
+    return pages
 }
 
 // Old chapter-page anchors whose content moved to a dedicated page. HR once

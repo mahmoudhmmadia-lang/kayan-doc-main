@@ -3,8 +3,8 @@
 // preview servers swap in the dev address while serving (localizeGuideLinks).
 //
 // Override any address with an environment variable:
-//   GUIDE_PROD_URL_MAIN, GUIDE_PROD_URL_INSPECTION, GUIDE_PROD_URL_CORRESPONDENCE
-//   GUIDE_DEV_URL_MAIN,  GUIDE_DEV_URL_INSPECTION,  GUIDE_DEV_URL_CORRESPONDENCE
+//   GUIDE_PROD_URL_MAIN, GUIDE_PROD_URL_INSPECTION, GUIDE_PROD_URL_CORRESPONDENCE, GUIDE_PROD_URL_SOP, GUIDE_PROD_URL_TRAINING
+//   GUIDE_DEV_URL_MAIN,  GUIDE_DEV_URL_INSPECTION,  GUIDE_DEV_URL_CORRESPONDENCE,  GUIDE_DEV_URL_SOP, GUIDE_DEV_URL_TRAINING
 // GUIDES_ENV=prod makes a local preview keep the production links.
 // The Builder guide ships inside the main deployment and shares its address.
 
@@ -23,6 +23,14 @@ export const GUIDE_URLS = {
     correspondence: {
         prod: slash(env.GUIDE_PROD_URL_CORRESPONDENCE ?? 'https://correspondence-fwqp.onrender.com/'),
         dev: slash(env.GUIDE_DEV_URL_CORRESPONDENCE ?? 'http://127.0.0.1:4324/'),
+    },
+    training: {
+        prod: slash(env.GUIDE_PROD_URL_TRAINING ?? 'https://training-kit-ne6t.onrender.com/'),
+        dev: slash(env.GUIDE_DEV_URL_TRAINING ?? 'http://127.0.0.1:4326/'),
+    },
+    sop: {
+        prod: slash(env.GUIDE_PROD_URL_SOP ?? 'https://sop-sjbx.onrender.com/'),
+        dev: slash(env.GUIDE_DEV_URL_SOP ?? 'http://127.0.0.1:4325/'),
     },
 }
 

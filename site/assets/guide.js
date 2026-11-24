@@ -118,6 +118,7 @@
   const go = (id, { flash = true } = {}) => {
     const el = document.getElementById(id);
     if (el && showInOverview?.(id, el)) { closeToc(); return; }
+    if (el?.matches('[data-quick-card]')) { dispatchEvent(new CustomEvent('flow:show', { detail: id })); return; }
     if (!el) { location.href = id.includes('-') ? `${pageOf(id)}#${id}` : pageOf(id); return; }
     closeToc();
     history.replaceState(null, '', `#${id}`);
@@ -405,6 +406,174 @@
     if (!lb.hidden && e.target.closest('.lightbox')) closeLightbox();
   });
 
+  // ---------------------------------------------------------------- flow in screenshots
+  // One step at a time: the rail selects a step, previous/next and the arrow keys move along it
+  // (mirrored in RTL), and a deep link to a step's panel opens that step.
+  $$('[data-shotflow]').forEach((flow) => {
+    const tabs = $$('[data-flow-tab]', flow);
+    const panels = $$('[data-flow-panel]', flow);
+    if (!tabs.length) return;
+    const rtl = getComputedStyle(flow).direction === 'rtl';
+    // `user` is set for the reader's own moves: only then is the chosen tab scrolled into the rail's view.
+    const show = (i, user, focus) => {
+      i = Math.max(0, Math.min(tabs.length - 1, i));
+      tabs.forEach((t, k) => {
+        t.setAttribute('aria-selected', String(k === i));
+        t.tabIndex = k === i ? 0 : -1;
+        t.parentElement.classList.toggle('is-done', k < i);
+      });
+      panels.forEach((p, k) => { p.hidden = k !== i; });
+      if (user) tabs[i].scrollIntoView({ block: 'nearest', inline: 'nearest', behavior: reduceMotion ? 'auto' : 'smooth' });
+      if (focus) tabs[i].focus({ preventScroll: true });
+    };
+    const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const current = () => tabs.findIndex((t) => t.getAttribute('aria-selected') === 'true');
+    tabs.forEach((t, k) => t.addEventListener('click', () => show(k, true)));
+    flow.addEventListener('click', (e) => {
+      const b = e.target.closest('[data-flow-step]');
+      if (b) show(current() + Number(b.dataset.flowStep), true);
+    });
+    flow.addEventListener('keydown', (e) => {
+      if (!e.target.closest('[data-flow-tab]')) return;
+      const step = { ArrowRight: rtl ? -1 : 1, ArrowLeft: rtl ? 1 : -1 }[e.key];
+      if (step) { e.preventDefault(); show(current() + step, true, true); }
+      else if (e.key === 'Home') { e.preventDefault(); show(0, true, true); }
+      else if (e.key === 'End') { e.preventDefault(); show(tabs.length - 1, true, true); }
+    });
+    flow.setAttribute('data-flow-ready', '');
+    const linked = () => panels.findIndex((p) => p.id === decodeURIComponent(location.hash.slice(1)));
+    show(Math.max(0, linked()));
+    // A link to a step on the page already open changes only the hash.
+    addEventListener('hashchange', () => { const i = linked(); if (i >= 0) show(i); });
+  });
+
+  // ---------------------------------------------------------------- flow site (an example shown as an app)
+  // One step per screen. Previous/next, the rail, the arrow keys (mirrored in RTL), [ and ] and a swipe move along
+  // the steps; the hash (#c2-s12) and this browser remember the step of each example, and seen steps are ticked.
+  // «البيانات» and «ما فائدتها؟» open the step's dialogs; «نسخ النص» copies a document template.
+  const flowKey = (id) => `${KEY}-flow-${id}`;
+  // Home: each example card shows its progress and «ابدأ» or «تابع».
+  $$('[data-flow-example]').forEach((card) => {
+    const id = card.dataset.flowExample;
+    const saved = store.get(flowKey(id), null);
+    const total = Number(card.dataset.flowTotal) || 1;
+    const bar = $(`[data-flow-bar="${id}"]`, card);
+    const cta = $(`[data-flow-cta="${id}"]`, card);
+    if (saved) {
+      bar.style.transform = `scaleX(${Math.min(1, (saved.seen?.length || 0) / total)})`;
+      cta.textContent = cta.dataset.cont;
+    }
+  });
+  const quick = $('[data-quick]');
+  if (quick) {
+    const cards = $$('[data-quick-card]', quick);
+    const tabs = $$('[data-quick-tab]', quick);
+    const rtlQ = getComputedStyle(quick).direction === 'rtl';
+    const QKEY = flowKey(quick.dataset.flow || 'all');
+    const qstate = store.get(QKEY, { at: 0, seen: [] });
+    const seen = new Set(qstate.seen);
+    const countQ = $('[data-quick-count]', quick);
+    const barQ = $('[data-quick-bar]', quick);
+    const nextTitle = $('[data-quick-next-title]', quick);
+    const prevQ = $('[data-quick-step="-1"]', quick);
+    const nextQ = $('[data-quick-step="1"]', quick);
+    const finishQ = $('.quick-finish', quick);
+    const listBtn = $('[data-quick-list]', quick);
+    let at = -1;
+    const showQ = (i, { push = true, focus = false } = {}) => {
+      i = Math.max(0, Math.min(cards.length - 1, i));
+      const dir = i > at ? 1 : -1;
+      at = i;
+      seen.add(i);
+      cards.forEach((c, k) => {
+        c.hidden = k !== i;
+        if (k === i && !reduce) { c.classList.remove('enter-next', 'enter-prev'); void c.offsetWidth; c.classList.add(dir > 0 ? 'enter-next' : 'enter-prev'); }
+      });
+      tabs.forEach((t, k) => {
+        t.classList.toggle('is-current', k === i);
+        t.classList.toggle('is-seen', seen.has(k) && k !== i);
+        if (k === i) t.setAttribute('aria-current', 'step'); else t.removeAttribute('aria-current');
+      });
+      countQ.textContent = `${i + 1}/${cards.length}`;
+      barQ.style.transform = `scaleX(${(i + 1) / cards.length})`;
+      prevQ.disabled = i === 0;
+      const last = i === cards.length - 1;
+      nextQ.hidden = last;
+      finishQ.hidden = !last;
+      nextTitle.textContent = last ? '' : $('.quick-title', cards[i + 1]).textContent;
+      const tab = tabs[i];
+      const rail = $('.quick-rail', quick);
+      if (tab && rail && rail.offsetParent) {
+        const r = tab.getBoundingClientRect(), b = rail.getBoundingClientRect();
+        if (r.top < b.top + 40 || r.bottom > b.bottom - 40) rail.scrollTo({ top: rail.scrollTop + (r.top - b.top) - b.height / 3, behavior: reduce ? 'auto' : 'smooth' });
+      }
+      if (push) history.replaceState(null, '', `#${cards[i].id}`);
+      store.set(QKEY, { at: i, seen: [...seen] });
+      if (focus) $('.quick-title', cards[i]).focus({ preventScroll: true });
+      if (quick.getBoundingClientRect().top < 0) scrollTo({ top: 0, behavior: 'instant' });
+    };
+    $$('.quick-title', quick).forEach((h) => { h.tabIndex = -1; });
+    const closeList = () => { quick.classList.remove('list-open'); listBtn.setAttribute('aria-expanded', 'false'); };
+    const openDialog = () => $$('dialog[open]', quick).length > 0;
+    quick.addEventListener('click', (e) => {
+      const b = e.target.closest('[data-quick-step]');
+      if (b) { showQ(at + Number(b.dataset.quickStep), { focus: true }); return; }
+      const t = e.target.closest('[data-quick-tab]');
+      if (t) { e.preventDefault(); showQ(Number(t.dataset.quickTab), { focus: true }); closeList(); return; }
+      const d = e.target.closest('[data-flow-dialog]');
+      if (d) { document.getElementById(d.dataset.flowDialog)?.showModal(); return; }
+      const c = e.target.closest('[data-flow-copy]');
+      if (c) {
+        const textOf = $('.flow-doc-text', c.closest('.flow-doc')).innerText.trim();
+        navigator.clipboard?.writeText(textOf).then(() => say(c.dataset.copied), () => {});
+        return;
+      }
+      // A click on the dim area around an open dialog closes it.
+      const dlg = e.target.closest('dialog.flow-dialog');
+      if (dlg && e.target === dlg) {
+        const r = dlg.getBoundingClientRect();
+        if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) dlg.close();
+      }
+    });
+    listBtn.addEventListener('click', () => {
+      const open = !quick.classList.contains('list-open');
+      quick.classList.toggle('list-open', open);
+      listBtn.setAttribute('aria-expanded', String(open));
+      if (open) $('.quick-tab.is-current', quick)?.scrollIntoView({ block: 'center' });
+    });
+    // Capture phase: the guide-wide [ ] keys would otherwise look for chapter steps.
+    addEventListener('keydown', (e) => {
+      if (/INPUT|TEXTAREA|SELECT/.test(document.activeElement?.tagName) || !pal.hidden || openDialog() || e.ctrlKey || e.metaKey || e.altKey) return;
+      const d = { ArrowRight: rtlQ ? -1 : 1, ArrowLeft: rtlQ ? 1 : -1, ']': 1, '[': -1 }[e.key];
+      if (e.key === 'Escape') closeList();
+      if (!d) return;
+      e.preventDefault(); e.stopPropagation();
+      showQ(at + d, { focus: true });
+    }, true);
+    let touch = null;
+    quick.addEventListener('touchstart', (e) => { if (e.target.closest('.quick-stage') && !openDialog()) touch = [e.touches[0].clientX, e.touches[0].clientY]; }, { passive: true });
+    quick.addEventListener('touchend', (e) => {
+      if (!touch) return;
+      const dx = e.changedTouches[0].clientX - touch[0], dy = e.changedTouches[0].clientY - touch[1];
+      touch = null;
+      // RTL: the next step comes from the left, so the finger moves right to reach it.
+      if (Math.abs(dx) > 60 && Math.abs(dx) > Math.abs(dy) * 1.5) showQ(at + ((dx < 0) !== rtlQ ? 1 : -1));
+    }, { passive: true });
+    const indexOfId = (id) => cards.findIndex((c) => c.id === id);
+    const fromHash = () => indexOfId(decodeURIComponent(location.hash.slice(1)));
+    addEventListener('hashchange', () => { const i = fromHash(); if (i >= 0 && i !== at) showQ(i, { push: false }); });
+    // Search results on this page open their step (go() only replaces the hash).
+    addEventListener('flow:show', (e) => { const i = indexOfId(e.detail); if (i >= 0) showQ(i, { focus: true }); });
+    quick.setAttribute('data-quick-ready', '');
+    const start = fromHash();
+    showQ(start >= 0 ? start : Math.min(qstate.at || 0, cards.length - 1), { push: start < 0 });
+    // The browser jumps to the card's anchor; the example starts at its header (progress and list) instead.
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    const toTop = () => scrollTo({ top: 0, behavior: 'instant' });
+    requestAnimationFrame(toTop);
+    if (document.readyState !== 'complete') addEventListener('load', () => requestAnimationFrame(toTop), { once: true });
+  }
+
   // ---------------------------------------------------------------- chapter overview
   // The switch shows only the chapter's key ideas and hides the rest of it.
   // Each idea opens its full explanation in a dialog, fetched from the feature
@@ -554,7 +723,7 @@
   // A deep link reveals everything up to its target before animations switch
   // on, so nothing above it is mid-transition when the page jumps there.
   const wanted = decodeURIComponent(location.hash.slice(1));
-  const hashTarget = wanted ? document.getElementById(wanted) : null;
+  const hashTarget = wanted && !quick ? document.getElementById(wanted) : null; // the quick run shows its step itself
   if (hashTarget) {
     $$('.reveal, .reveal-step').forEach((el) => {
       if (el.compareDocumentPosition(hashTarget) & Node.DOCUMENT_POSITION_FOLLOWING || el.contains(hashTarget)) el.classList.add('in');

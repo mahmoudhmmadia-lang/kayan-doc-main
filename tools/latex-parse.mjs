@@ -208,6 +208,8 @@ export function parseInline(src, ctx, fmt = {}) {
 //  {type:'box', kind:'note'|'warn'|'check', title, blocks}
 //  {type:'table', caption, number, cols:[{width|null}], rows:[{header, cells:[src]}]}
 //  {type:'figure', caption, number, image?, imageWidth?, tikz?, note?}
+//  {type:'shotflow', title, intro?, result?, steps:[{actor, title, text, image, target}], blocks}
+//  {type:'quick', title, phase?, who:{name, role}?, where?, steps:[src], log?, result?, why?, data:[{field, value, note}], docs:[{title, text}]}
 //  {type:'pagebreak'}
 
 const ENV_BOX = { rcnote: 'note', rcwarn: 'warn', rcchecklist: 'check' };
@@ -304,6 +306,79 @@ function parseFloat_(env, body, opts) {
   return out;
 }
 
+// \begin{rcshotflow}{title} \flowintro{..} \flowstep{actor}{title}{text}{image}{label} … \flowresult{..} \end{rcshotflow}
+// A journey told with real screenshots: one step per screen, each linked to the section that explains it.
+// `blocks` lists the screenshots as image blocks, so the build copies them like any figure's image.
+function parseShotflow(title, body) {
+  const out = { type: 'shotflow', title, intro: null, result: null, steps: [] };
+  const re = /\\(flowintro|flowresult|flowstep)\{/g;
+  let m;
+  while ((m = re.exec(body))) {
+    let i = m.index + m[0].length - 1;
+    const args = [];
+    for (let n = 0; n < (m[1] === 'flowstep' ? 5 : 1); n++) { const [a, e] = readArg(body, i); args.push(a.trim()); i = e; }
+    if (m[1] === 'flowintro') out.intro = args[0];
+    else if (m[1] === 'flowresult') out.result = args[0];
+    else out.steps.push({ actor: args[0], title: args[1], text: args[2], image: args[3], target: args[4] || null });
+    re.lastIndex = i;
+  }
+  out.blocks = out.steps.map((s) => ({ type: 'flowimage', image: s.image }));
+  return out;
+}
+
+// \begin{rcquick}{short title} \qphase{..} \qwho{person}{position} \qwhere{path} \qdo{..} … \qlog{..} \qresult{..}
+//   \qwhy{..} \qdata{field}{value}{note} … \qdoc{title}{text} … \qshot{image}{numbered key} … \qlink{guide}{label}{page} … \end{rcquick}
+// One step of a walkthrough shown as an app (renderFlowSite): who acts, where, the actions in order, what to note,
+// the result, a two-line «why», and the data to enter (a table, the text of documents to prepare, and the real
+// screen with its numbered markers and key), and links to the pages of other guides that explain the step in
+// depth (\qlink: guide id from guide-links.mjs, link label, page path inside that guide such as ar/c7.html).
+const QUICK_ARGS = { qwho: 2, qdata: 3, qdoc: 2, qshot: 2, qlink: 3 };
+function parseQuick(title, body) {
+  const out = { type: 'quick', title, phase: null, who: null, where: null, steps: [], log: null, result: null, why: null, data: [], docs: [], shots: [], links: [] };
+  const re = /\\(qphase|qwho|qwhere|qdo|qlog|qresult|qwhy|qdata|qdoc|qshot|qlink)\{/g;
+  let m;
+  while ((m = re.exec(body))) {
+    let i = m.index + m[0].length - 1;
+    const args = [];
+    for (let n = 0; n < (QUICK_ARGS[m[1]] ?? 1); n++) { const [a, e] = readArg(body, i); args.push(a.trim()); i = e; }
+    if (m[1] === 'qwho') out.who = { name: args[0], role: args[1] };
+    else if (m[1] === 'qdo') out.steps.push(args[0]);
+    else if (m[1] === 'qdata') out.data.push({ field: args[0], value: args[1], note: args[2] });
+    else if (m[1] === 'qdoc') out.docs.push({ title: args[0], text: args[1] });
+    else if (m[1] === 'qlink') out.links.push({ guide: args[0], label: args[1], page: args[2] });
+    else if (m[1] === 'qshot') out.shots.push({ image: args[0], ...splitNote(args[1]) });
+    else out[m[1].slice(1)] = args[0];
+    re.lastIndex = i;
+  }
+  return out;
+}
+
+// \begin{rcslide}{title} … \end{rcslide}: a concept slide for introductions told as an app (renderFlowSite), where
+// the reader learns an idea rather than performs a step. \sphase{..} \slead{one-line message} \stake{takeaway}
+// \slink{guide}{label}{page} … and visual parts, rendered in the order written: \squote{words}
+// \scompare{before title}{item \\ item}{after title}{item \\ item}  \scard{icon}{title}{text} (consecutive cards form
+// one grid)  \schain{a ← b ← c}  \smetric{label}{before}{after} (consecutive metrics form one row)
+// \squiz{question}{option \\ option}{number of the right option}{why it is right}: a self-check question.
+const SLIDE_ARGS = { scompare: 4, scard: 3, smetric: 3, slink: 3, squiz: 4 };
+function parseSlide(title, body) {
+  const out = { type: 'slide', title, phase: null, lead: null, take: null, parts: [], links: [], steps: [], data: [] };
+  const re = /\\(sphase|slead|stake|slink|squote|scompare|scard|schain|smetric|squiz)\{/g;
+  let m;
+  while ((m = re.exec(body))) {
+    let i = m.index + m[0].length - 1;
+    const args = [];
+    for (let n = 0; n < (SLIDE_ARGS[m[1]] ?? 1); n++) { const [a, e] = readArg(body, i); args.push(a.trim()); i = e; }
+    const kind = m[1].slice(1);
+    if (kind === 'phase' || kind === 'lead' || kind === 'take') out[kind] = args[0];
+    else if (kind === 'link') out.links.push({ guide: args[0], label: args[1], page: args[2] });
+    else out.parts.push({ kind, args });
+    re.lastIndex = i;
+  }
+  // Searchable text, like a quick step's actions.
+  out.steps = [out.lead, ...out.parts.flatMap((p) => (p.kind === 'card' ? p.args.slice(1) : p.args))].filter(Boolean);
+  return out;
+}
+
 export function parseBlocks(src) {
   const blocks = [];
   let i = 0;
@@ -331,7 +406,16 @@ export function parseBlocks(src) {
       const [body, end] = findEnd(src, envName, j);
       flushPara();
       i = end;
-      if (ENV_BOX[envName]) {
+      if (envName === 'rcshotflow') {
+        const [title, b0] = readArg(body, 0);
+        blocks.push(parseShotflow(title.trim(), body.slice(b0)));
+      } else if (envName === 'rcquick') {
+        const [title, b0] = readArg(body, 0);
+        blocks.push(parseQuick(title.trim(), body.slice(b0)));
+      } else if (envName === 'rcslide') {
+        const [title, b0] = readArg(body, 0);
+        blocks.push(parseSlide(title.trim(), body.slice(b0)));
+      } else if (ENV_BOX[envName]) {
         const kind = ENV_BOX[envName];
         blocks.push({ type: 'box', kind, title: opt ?? BOX_DEFAULT_TITLE[kind], blocks: parseBlocks(body) });
       } else if (['itemize', 'enumerate', 'checklist'].includes(envName)) {
